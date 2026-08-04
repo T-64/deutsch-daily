@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch Daily — 31.07.2026</title>
+<style>
+  :root {
+    --rot: #E63946;
+    --gold: #F4A261;
+    --paper: #FFF8F0;
+    --card: #FFF0E6;
+    --vocab: #F0F7FF;
+    --text: #1A1A2E;
+    --gray: #888;
+    --accent-bg: #FFF0E6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Noto Sans SC", "Noto Sans CJK SC", "Segoe UI", sans-serif;
+    background: var(--paper);
+    color: var(--text);
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px 20px 60px;
+  }
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 24px 0 16px;
+    border-bottom: 3px solid var(--gold);
+    margin-bottom: 24px;
+  }
+  .header h1 {
+    font-size: 1.6em;
+    color: var(--rot);
+    margin-bottom: 4px;
+  }
+  .header .date {
+    color: var(--gold);
+    font-size: 0.95em;
+  }
+  .header .source-link {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: var(--gray);
+  }
+  .header .source-link a {
+    color: var(--rot);
+    text-decoration: none;
+  }
+  /* Audio player */
+  .audio-bar {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--rot);
+  }
+  .audio-bar audio { width: 100%; height: 36px; }
+  .audio-bar label {
+    font-size: 0.85em;
+    color: var(--gray);
+    display: block;
+    margin-bottom: 6px;
+  }
+  /* News section */
+  .news {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border-top: 3px solid var(--gold);
+  }
+  .news h2 {
+    color: var(--rot);
+    font-size: 1.25em;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #EEE;
+  }
+  .news h2 .num {
+    color: var(--gold);
+    margin-right: 6px;
+  }
+  /* Original text */
+  .de-text {
+    font-size: 1.02em;
+    line-height: 1.85;
+    margin-bottom: 12px;
+  }
+  .de-text p {
+    margin-bottom: 8px;
+  }
+  /* Translation */
+  .translation {
+    background: var(--accent-bg);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    font-size: 0.92em;
+    color: #444;
+    border-left: 3px solid var(--gold);
+  }
+  .translation p { margin-bottom: 4px; }
+  /* Vocab table */
+  .vocab {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+    font-size: 0.9em;
+  }
+  .vocab th {
+    background: var(--rot);
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+  }
+  .vocab th:first-child { border-radius: 6px 0 0 0; }
+  .vocab th:last-child { border-radius: 0 6px 0 0; }
+  .vocab td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #EEE;
+  }
+  .vocab tr:nth-child(even) td {
+    background: var(--vocab);
+  }
+  .vocab .de { font-weight: 600; color: var(--rot); }
+  .vocab .zh { color: #444; }
+  .vocab .ex { font-size: 0.85em; color: var(--gray); font-style: italic; }
+  /* Grammar box */
+  .grammar {
+    background: #F0F7FF;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    border-left: 3px solid #4A90D9;
+  }
+  .grammar h3 {
+    color: #4A90D9;
+    font-size: 1em;
+    margin-bottom: 8px;
+  }
+  .grammar p { font-size: 0.9em; margin-bottom: 6px; }
+  .grammar code {
+    background: #E0E8F0;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  .grammar strong { color: #2C5F8A; }
+  /* Background info */
+  .bg-info {
+    background: #F5F5F5;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.88em;
+    color: #555;
+    border-left: 3px solid var(--gray);
+  }
+  .bg-info h3 {
+    font-size: 0.95em;
+    color: var(--gray);
+    margin-bottom: 4px;
+  }
+  /* Footer */
+  .footer {
+    text-align: center;
+    color: var(--gray);
+    font-size: 0.8em;
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid #EEE;
+  }
+  /* Mobile */
+  @media (max-width: 600px) {
+    body { padding: 8px 12px 40px; }
+    .news { padding: 16px; }
+    .news h2 { font-size: 1.1em; }
+    .vocab { font-size: 0.82em; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Deutsch Daily 🇩🇪</h1>
+  <div class="date">Donnerstag, 31. Juli 2026</div>
+  <div class="source-link">
+    📺 Quelle: <a href="https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1623948.html">tagesschau in Einfacher Sprache</a>
+  </div>
+</div>
+
+<div class="audio-bar">
+  <label>🔊 Original-Audio (7 Min)</label>
+  <audio controls preload="none">
+    <source src="https://tagesschau-podcast.ard-mcdn.de/audio/2026/0731/TV-20260731-1730-2100.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<!-- ========== NEWS 1: Ceuta ========== -->
+<div class="news">
+  <h2><span class="num">1.</span> Ceuta — Viele Migranten kommen an</h2>
+
+  <div class="de-text">
+    <p>Ceuta ist eine Stadt an der Grenze zu dem Land Marokko im Norden von Afrika. Ceuta gehört aber zu Spanien in Europa. Manche Menschen aus Marokko wollen in Europa leben. Deshalb kommen sie nach Ceuta.</p>
+    <p>Jetzt kommen sehr viele Menschen an, und zwar Tausende. Die Regierung von Ceuta sagt, wir brauchen Hilfe von Spanien. Es kommen nämlich zu viele Migranten an.</p>
+    <p>Die Migranten kommen über das Meer. Die meisten sind Jugendliche und junge Erwachsene. Viele sind aus Marokko. Jetzt sind sie in Europa, deshalb freuen sie sich.</p>
+    <p>Diese Frau sagt, mir geht es gut, Gott sei Dank. Dieser Mann erzählt, ich bin lange durch das Meer geschwommen mit meinem Bruder. Und dieser Mann sagt, ich will hier arbeiten.</p>
+    <p>Manche Migranten sind auch gestorben auf dem Weg. Die Regierung von Ceuta ist überfordert. Es gibt nämlich nur wenig Platz für Migranten.</p>
+    <p>Aber warum kommen jetzt so viele Migranten nach Ceuta? Ein Gericht in Spanien hat entschieden, wenn Migranten über das Meer nach Ceuta kommen, dann dürfen die Migranten erst mal bleiben. Wahrscheinlich kommen deshalb jetzt so viele Migranten.</p>
+    <p>Das ist Pedro Sánchez. Er ist der Chef von der Regierung von Spanien. Sánchez ist auch nach Ceuta gekommen. Er sagt, es sind zu viele Migranten in Ceuta. Deshalb bringen wir jetzt schnell Migranten zurück. Die Regierung von Marokko will helfen. Auch spanische Soldaten sind in Ceuta. Sie sollen die Grenze zu Marokko schützen, damit nicht noch mehr Migranten kommen.</p>
+  </div>
+
+  <div class="translation">
+    <p><strong>中文译文</strong></p>
+    <p>休达是一座位于非洲北部摩洛哥边境的城市。但休达属于欧洲的西班牙。一些摩洛哥人想去欧洲生活，所以他们来到休达。</p>
+    <p>现在有大量的人涌来——成千上万。休达政府说，我们需要西班牙的帮助，因为来的移民太多了。</p>
+    <p>移民们从海上过来。大多数是青少年和年轻人，很多来自摩洛哥。现在他们到了欧洲，所以很开心。</p>
+    <p>一位女士说，我很好，感谢上帝。一位男士说，我和弟弟在海里游了很久。还有一位男士说，我想在这里工作。</p>
+    <p>也有一些移民在途中死去。休达政府不堪重负，因为容纳移民的地方太少了。</p>
+    <p>但为什么现在这么多移民来休达？西班牙一家法院裁定，如果移民从海上来到休达，他们可以先留下来。这可能就是现在这么多移民涌来的原因。</p>
+    <p>这是佩德罗·桑切斯，西班牙政府首脑。桑切斯也来到了休达。他说，休达的移民太多了，因此我们要迅速把移民送回去。摩洛哥政府愿意帮忙。西班牙士兵也在休达，他们要守卫与摩洛哥的边界，防止更多移民涌入。</p>
+  </div>
+
+  <table class="vocab">
+    <tr><th>德语</th><th>中文</th><th>例句</th></tr>
+    <tr><td class="de">die Grenze (-n)</td><td class="zh">边界</td><td class="ex">an der Grenze zu Marokko</td></tr>
+    <tr><td class="de">gehören zu + Dat.</td><td class="zh">属于</td><td class="ex">Ceuta gehört zu Spanien</td></tr>
+    <tr><td class="de">überfordert</td><td class="zh">不堪重负的</td><td class="ex">Die Regierung ist überfordert</td></tr>
+    <tr><td class="de">das Gericht (-e)</td><td class="zh">法院</td><td class="ex">Ein Gericht hat entschieden</td></tr>
+    <tr><td class="de">entscheiden</td><td class="zh">裁决/决定</td><td class="ex">hat entschieden</td></tr>
+    <tr><td class="de">schützen (+ Akk)</td><td class="zh">保护</td><td class="ex">die Grenze schützen</td></tr>
+    <tr><td class="de">damit</td><td class="zh">以便（目的从句）</td><td class="ex">damit nicht mehr kommen</td></tr>
+    <tr><td class="de">und zwar</td><td class="zh">确切地说</td><td class="ex">und zwar Tausende</td></tr>
+  </table>
+
+  <div class="grammar">
+    <h3>📐 语法：damit（目的从句）</h3>
+    <p><strong>Sie sollen die Grenze schützen, <code>damit</code> nicht noch mehr Migranten kommen.</strong></p>
+    <p>damit 引导目的从句，动词放句末。主语和从句主语不同时必须用 damit（不能用 um...zu）。</p>
+  </div>
+
+  <div class="bg-info">
+    <h3>🌍 背景</h3>
+    <p>Ceuta（休达）是西班牙在北非的飞地，位于摩洛哥地中海沿岸。它是欧盟在非洲大陆唯一的陆地边界。2021年和2025年曾发生大规模移民涌入事件。西班牙和摩洛哥围绕这块领土存在主权争议。</p>
+  </div>
+</div>
+
+<!-- ========== NEWS 2: Elektrogeräte ========== -->
+<div class="news">
+  <h2><span class="num">2.</span> Elektrogeräte — Recht auf Reparatur</h2>
+
+  <div class="de-text">
+    <p>Elektrogeräte sind z.B. Smartphones oder Waschmaschinen. Wenn ein Elektrogerät kaputt ist, dann muss man oft ein neues kaufen. Kaputte Elektrogeräte können nämlich oft nicht repariert werden. Sie kommen dann in den Müll.</p>
+    <p>Die Europäische Union will aber weniger Müll. Deshalb gibt es jetzt ein Recht auf Reparatur. D.h. wenn ein Elektrogerät kaputt geht, dann soll es repariert werden. Der Hersteller von dem Elektrogerät muss sich dann um die Reparatur kümmern.</p>
+  </div>
+
+  <div class="translation">
+    <p><strong>中文译文</strong></p>
+    <p>电器比如智能手机或洗衣机。如果一个电器坏了，人们往往需要买新的。因为坏掉的电器通常无法维修，就被扔进垃圾。</p>
+    <p>但欧盟想要减少垃圾。因此现在有了"维修权"。也就是说，如果一个电器坏了，应该被修理。电器制造商必须负责维修。</p>
+  </div>
+
+  <table class="vocab">
+    <tr><th>德语</th><th>中文</th><th>例句</th></tr>
+    <tr><td class="de">das Elektrogerät (-e)</td><td class="zh">电器</td><td class="ex">Smartphones, Waschmaschinen</td></tr>
+    <tr><td class="de">kaputt gehen</td><td class="zh">坏掉</td><td class="ex">wenn es kaputt geht</td></tr>
+    <tr><td class="de">die Reparatur (-en)</td><td class="zh">维修</td><td class="ex">Recht auf Reparatur</td></tr>
+    <tr><td class="de">der Hersteller (-)</td><td class="zh">制造商</td><td class="ex">muss sich kümmern</td></tr>
+    <tr><td class="de">sich kümmern um</td><td class="zh">负责/照料</td><td class="ex">um die Reparatur</td></tr>
+    <tr><td class="de">der Müll</td><td class="zh">垃圾（仅单数）</td><td class="ex">in den Müll</td></tr>
+  </table>
+
+  <div class="grammar">
+    <h3>📐 语法：Werden-Passiv（被动语态）</h3>
+    <p><strong>Kaputte Elektrogeräte können oft nicht <code>repariert werden</code>.</strong></p>
+    <p>werden + 过去分词 = 被动。können + ... + werden = "能被..."（情态动词+被动）。</p>
+  </div>
+
+  <div class="bg-info">
+    <h3>🌍 背景</h3>
+    <p>EU 2024年通过"维修权指令"，要求制造商在产品售出后一定期限内提供维修服务。目标：减少电子垃圾，推动循环经济。</p>
+  </div>
+</div>
+
+<!-- ========== NEWS 3: FIFA ========== -->
+<div class="news">
+  <h2><span class="num">3.</span> Fußball — Streit über Pläne von der FIFA</h2>
+
+  <div class="de-text">
+    <p>Die FIFA ist eine große Organisation für Fußball auf der ganzen Welt. Zur FIFA gehören kleinere Organisationen, z.B. die UEFA. Das ist die Organisation für Fußball in Europa.</p>
+    <p>Die FIFA hat wichtige Aufgaben für den Fußball. Die FIFA plant z.B. die Fußball-Weltmeisterschaft. Das kurze Wort ist Fußball-WM.</p>
+    <p>Auf dem Foto ist der Chef von der FIFA, Gianni Infantino. Er hat Pläne für die FIFA. Und zwar, Infantino will Teile von der Weltmeisterschaft verkaufen. Die UEFA und andere Organisationen sind gegen die Pläne. Deshalb gibt es Streit.</p>
+    <p>Die UEFA hat entschieden, wenn die FIFA Teile von der Fußball-WM verkauft, dann spielen die Fußballteams aus Europa nicht mehr mit.</p>
+    <p>Aber was genau hat Infantino vor? Infantino will Teile von der Fußball-WM privatisieren. D.h. Menschen und Firmen können Teile von der WM kaufen und damit Geld verdienen. Auch Infantino kann dann mehr Geld verdienen.</p>
+    <p>Infantino sagt, meine Pläne sind eine Chance. Aber es sind ja nur Pläne. Die Organisationen in der FIFA stimmen noch darüber ab. Die meisten Organisationen sagen aber, wir finden Infantinos Pläne schlecht. Deshalb wollen wir dagegen stimmen.</p>
+  </div>
+
+  <div class="translation">
+    <p><strong>中文译文</strong></p>
+    <p>FIFA 是全球最大的足球组织。FIFA 下属一些较小的组织，比如 UEFA（欧洲足联），负责欧洲足球。</p>
+    <p>FIFA 负责重要事务，比如策划足球世界杯，简称 WM。</p>
+    <p>照片上是 FIFA 主席因凡蒂诺。他有关于 FIFA 的计划——他想出售世界杯的部分权益。UEFA 等组织反对这些计划，因此产生了争议。</p>
+    <p>UEFA 决定，如果 FIFA 出售世界杯的部分权益，欧洲球队将不再参加。</p>
+    <p>因凡蒂诺到底想做什么？他想将世界杯部分权益私有化——个人和公司可以购买世界杯的部分权益来赚钱。因凡蒂诺自己也能赚更多钱。</p>
+    <p>因凡蒂诺说，我的计划是一个机遇。但目前只是计划。FIFA 内部的组织还要投票表决。大多数组织表示，我们认为这些计划不好，所以要投反对票。</p>
+  </div>
+
+  <table class="vocab">
+    <tr><th>德语</th><th>中文</th><th>例句</th></tr>
+    <tr><td class="de">die Weltmeisterschaft</td><td class="zh">世界杯</td><td class="ex">Fußball-WM</td></tr>
+    <tr><td class="de">der Streit</td><td class="zh">争执（仅单数）</td><td class="ex">es gibt Streit</td></tr>
+    <tr><td class="de">verkaufen (+ Akk)</td><td class="zh">出售</td><td class="ex">Teile verkaufen</td></tr>
+    <tr><td class="de">privatisieren</td><td class="zh">私有化</td><td class="ex">WM privatisieren</td></tr>
+    <tr><td class="de">etwas vorhaben</td><td class="zh">打算/计划</td><td class="ex">was hat er vor?</td></tr>
+    <tr><td class="de">Geld verdienen</td><td class="zh">赚钱</td><td class="ex">damit Geld verdienen</td></tr>
+    <tr><td class="de">darüber abstimmen</td><td class="zh">投票表决</td><td class="ex">stimmen darüber ab</td></tr>
+    <tr><td class="de">dagegen stimmen</td><td class="zh">投反对票</td><td class="ex">wir wollen dagegen stimmen</td></tr>
+  </table>
+
+  <div class="grammar">
+    <h3>📐 语法：人名所有格 + 代副词</h3>
+    <p><strong>wir finden <code>Infantinos</code> Pläne schlecht</strong> — 人名加 -s 表示所有格</p>
+    <p><strong>stimmen noch <code>darüber</code> ab</strong> — darüber = da(r)+über，指代前面提到的计划</p>
+  </div>
+
+  <div class="bg-info">
+    <h3>🌍 背景</h3>
+    <p>FIFA 主席因凡蒂诺计划将世界杯部分权益私有化，允许私人投资者购买赛事的商业权益。UEFA 和各大洲足联强烈反对，威胁欧洲球队退出。这是国际足联内部权力斗争的最新一幕。</p>
+  </div>
+</div>
+
+<!-- ========== NEWS 4: Hamburg ========== -->
+<div class="news">
+  <h2><span class="num">4.</span> Hamburg — Neue Brücke für Züge</h2>
+
+  <div class="de-text">
+    <p>Mitten in der Stadt Hamburg, oben im Norden von Deutschland, ist die Sternbrücke. Sie ist wichtig für den Verkehr. Viele Züge fahren nämlich über die Sternbrücke. Sie ist aber sehr alt. Deshalb ist jetzt eine neue Brücke gekommen.</p>
+    <p>Die neue Brücke ist sehr groß und sehr schwer. Sie ist schon fertig gebaut. Sie muss aber noch an den richtigen Platz. Das ist schwierig. Deshalb müssen besondere Fahrzeuge die Brücke bringen. Sie fährt mitten durch die Stadt, sehr langsam und ganz nah an den Häusern vorbei. In der Nacht kommt die Brücke dann an. Bauarbeiter machen sie jetzt fest. Dann können bald Züge über die Brücke fahren.</p>
+  </div>
+
+  <div class="translation">
+    <p><strong>中文译文</strong></p>
+    <p>在德国北部城市汉堡的中心，有一座星桥。它对交通很重要，因为很多火车要从星桥上驶过。但它已经非常老旧了，所以现在有了一座新桥。</p>
+    <p>新桥又大又重。它已经建造完成了，但还需要运到正确的位置。这很困难，需要特种车辆来运输。它穿过城市中心，非常缓慢地紧挨着房屋驶过。夜里，桥终于到达。建筑工人将它固定好。很快火车就能从新桥上通过了。</p>
+  </div>
+
+  <table class="vocab">
+    <tr><th>德语</th><th>中文</th><th>例句</th></tr>
+    <tr><td class="de">die Brücke (-n)</td><td class="zh">桥</td><td class="ex">neue Brücke für Züge</td></tr>
+    <tr><td class="de">der Verkehr</td><td class="zh">交通（仅单数）</td><td class="ex">wichtig für den Verkehr</td></tr>
+    <tr><td class="de">der Bauarbeiter (-)</td><td class="zh">建筑工人</td><td class="ex">machen sie fest</td></tr>
+    <tr><td class="de">festmachen</td><td class="zh">固定</td><td class="ex">machen sie fest</td></tr>
+    <tr><td class="de">ankommen (kam an)</td><td class="zh">到达</td><td class="ex">kommt an</td></tr>
+    <tr><td class="de">vorbeifahren (fuhr vorbei)</td><td class="zh">驶过</td><td class="ex">an den Häusern vorbei</td></tr>
+    <tr><td class="de">fertig</td><td class="zh">完成的/就绪的</td><td class="ex">schon fertig gebaut</td></tr>
+  </table>
+
+  <div class="grammar">
+    <h3>📐 语法：可分动词 (Trennbare Verben)</h3>
+    <p><strong>an|kommen → kommt <code>an</code></strong>（到达）</p>
+    <p><strong>fest|machen → machen <code>fest</code></strong>（固定）</p>
+    <p><strong>vorbei|fahren → fährt ... <code>vorbei</code></strong>（驶过）</p>
+    <p>可分动词的前缀在主句中放句末。</p>
+  </div>
+
+  <div class="bg-info">
+    <h3>🌍 背景</h3>
+    <p>汉堡星桥是铁路关键节点。2025年新桥替换旧桥，整座桥体在异地预制完成后，由特种运输车（SPMT）缓慢穿越市区运到指定位置安装。</p>
+  </div>
+</div>
+
+<!-- ========== NEWS 5: Wetter ========== -->
+<div class="news">
+  <h2><span class="num">5.</span> Das Wetter</h2>
+
+  <div class="de-text">
+    <p>Unten im Süden und rechts im Osten wird es schwül. Es gibt manchmal Regen und Gewitter. Aber es wird immer schöner. Sonst scheint meistens die Sonne. Es werden 20 bis 32 Grad.</p>
+  </div>
+
+  <div class="translation">
+    <p><strong>中文译文</strong></p>
+    <p>南部和东部会变得闷热，有时有雨和雷暴。但天气会越来越好。其他地区大部分时间阳光明媚，气温20到32度。</p>
+  </div>
+
+  <table class="vocab">
+    <tr><th>德语</th><th>中文</th><th>例句</th></tr>
+    <tr><td class="de">schwül</td><td class="zh">闷热的</td><td class="ex">es wird schwül</td></tr>
+    <tr><td class="de">das Gewitter (-)</td><td class="zh">雷暴</td><td class="ex">Regen und Gewitter</td></tr>
+    <tr><td class="de">scheinen (schien, geschienen)</td><td class="zh">照耀</td><td class="ex">die Sonne scheint</td></tr>
+  </table>
+</div>
+
+<div class="footer">
+  Quelle: <a href="https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1623948.html">ARD tagesschau in Einfacher Sprache</a> · Automatisch transkribiert & aufbereitet
+</div>
+
+</body>
+</html>
