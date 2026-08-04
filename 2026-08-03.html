@@ -16,8 +16,8 @@ header h1 { font-size:1.5em; margin-bottom:8px; }
 header .date { font-size:1.1em; opacity:0.9; }
 header .source { margin-top:10px; }
 header .source a { color:white; text-decoration:underline; }
-.audio-player { text-align:center; margin:20px 0; padding:15px; background:var(--card); border-radius:8px; }
-.audio-player audio { width:100%; max-width:500px; }
+.video-player { text-align:center; margin:20px 0; padding:15px; background:var(--card); border-radius:8px; }
+.video-player audio { width:100%; max-width:500px; }
 .news { background:var(--card); border-radius:10px; padding:20px; margin-bottom:20px; border-left:4px solid var(--rot); }
 .news h2 { color:var(--rot); margin-bottom:12px; font-size:1.2em; }
 .news h2 .num { background:var(--rot); color:white; border-radius:50%; width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center; font-size:0.8em; margin-right:8px; }
@@ -45,10 +45,8 @@ nav a { color:var(--rot); text-decoration:none; }
   <div class="source">📺 <a href="https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1625334.html">Video-Quelle</a></div>
 </header>
 
-<div class="audio-player">
-  <audio controls preload="none">
-    <source src="https://tagesschau-podcast.ard-mcdn.de/audio/2026/0803/TV-20260803-1722-5300.mp3" type="audio/mpeg">
-  </audio>
+<div class="video-player">
+  <iframe src="https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1625334~player.html" width="100%" height="300" allowfullscreen frameborder="0" scrolling="no" style="border-radius:8px; max-width:640px; display:block; margin:0 auto;"></iframe>
 </div>
 
 <div class="news">
