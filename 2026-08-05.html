@@ -37,15 +37,29 @@
     overflow: hidden;
     background: #1a1a2e;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    position: relative;
   }
   .video-player video {
     display: block;
     width: 100%;
     height: auto;
   }
-  .video-player video::cue {
-    font-size: 1.1em;
+  .subtitle-overlay {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 1em;
     line-height: 1.4;
+    max-width: 85%;
+    text-align: center;
+    pointer-events: none;
+    z-index: 10;
   }
   .subtitle-toggle {
     display: flex;
@@ -178,35 +192,97 @@
 </div>
 
 <div class="video-player">
-  <video controls preload="metadata" playsinline crossorigin="anonymous">
+  <video id="player" controls preload="metadata" playsinline crossorigin="anonymous">
     <source src="https://tagesschau-progressive.ard-mcdn.de/video/2026/0805/TV-20260805-1745-4700.webxl.h264.mp4" type="video/mp4">
-    <track kind="subtitles" srclang="de" label="Deutsch" src="subtitles/2026-08-05-de.vtt" default>
-    <track kind="subtitles" srclang="zh" label="中文" src="subtitles/2026-08-05-zh.vtt">
     Ihr Browser unterstützt kein Video-Tag.
   </video>
+  <div class="subtitle-overlay" id="subOverlay"></div>
   <div class="subtitle-toggle">
     <span class="label">字幕:</span>
-    <button onclick="setSub(noneBtn, [])">Off</button>
-    <button onclick="setSub(deBtn, ['de'])" id="deBtn" class="active">DE</button>
-    <button onclick="setSub(zhBtn, ['zh'])" id="zhBtn">中文</button>
+    <button id="btnOff" class="active">Off</button>
+    <button id="btnDe">DE</button>
+    <button id="btnZh">中文</button>
   </div>
 </div>
 <script>
 (function() {
-  var v = document.querySelector('.video-player video');
-  var noneBtn = document.querySelector('button[onclick*="noneBtn"]');
-  var deBtn = document.getElementById('deBtn');
-  var zhBtn = document.getElementById('zhBtn');
-  var allBtns = [noneBtn, deBtn, zhBtn];
+  var v = document.getElementById('player');
+  var overlay = document.getElementById('subOverlay');
+  var btnOff = document.getElementById('btnOff');
+  var btnDe = document.getElementById('btnDe');
+  var btnZh = document.getElementById('btnZh');
+  var allBtns = [btnOff, btnDe, btnZh];
+  var deCues = [], zhCues = [];
+  var currentMode = 'off';
 
-  window.setSub = function(active, langs) {
-    var tracks = v.textTracks;
-    for (var i = 0; i < tracks.length; i++) {
-      tracks[i].mode = langs.indexOf(tracks[i].language) > -1 ? 'showing' : 'disabled';
+  // 自定义解析 WebVTT
+  function parseVTT(text) {
+    var cues = [];
+    var lines = text.split('\n');
+    var i = 0;
+    while (i < lines.length) {
+      var line = lines[i].trim();
+      // 找时间戳行
+      var m = line.match(/^(\d{2}:\d{2}:\d{2}[.,]\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2}[.,]\d{3})/);
+      if (m) {
+        var start = ts2sec(m[1]);
+        var end = ts2sec(m[2]);
+        var cueLines = [];
+        i++;
+        while (i < lines.length && lines[i].trim() !== '') {
+          cueLines.push(lines[i].trim());
+          i++;
+        }
+        cues.push({start: start, end: end, text: cueLines.join(' ')});
+      }
+      i++;
     }
-    allBtns.forEach(function(b) { b.classList.remove('active'); });
-    active.classList.add('active');
-  };
+    return cues;
+  }
+  function ts2sec(ts) {
+    ts = ts.replace(',', '.');
+    var p = ts.split(':');
+    return parseInt(p[0])*3600 + parseInt(p[1])*60 + parseFloat(p[2]);
+  }
+
+  // 加载 VTT 文件
+  fetch('subtitles/2026-08-05-de.vtt').then(function(r){return r.text();}).then(function(t){
+    deCues = parseVTT(t);
+    console.log('DE cues:', deCues.length);
+  }).catch(function(e){console.error('DE VTT load failed:', e);});
+  fetch('subtitles/2026-08-05-zh.vtt').then(function(r){return r.text();}).then(function(t){
+    zhCues = parseVTT(t);
+    console.log('ZH cues:', zhCues.length);
+  }).catch(function(e){console.error('ZH VTT load failed:', e);});
+
+  function findCue(cues, t) {
+    for (var i = 0; i < cues.length; i++) {
+      if (t >= cues[i].start && t <= cues[i].end) return cues[i];
+    }
+    return null;
+  }
+
+  v.addEventListener('timeupdate', function() {
+    if (currentMode === 'off') { overlay.style.display = 'none'; return; }
+    var cues = currentMode === 'de' ? deCues : zhCues;
+    var cue = findCue(cues, v.currentTime);
+    if (cue) {
+      overlay.textContent = cue.text;
+      overlay.style.display = 'block';
+    } else {
+      overlay.style.display = 'none';
+    }
+  });
+
+  function setMode(mode, btn) {
+    currentMode = mode;
+    allBtns.forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    if (mode === 'off') overlay.style.display = 'none';
+  }
+  btnOff.addEventListener('click', function(){setMode('off', btnOff);});
+  btnDe.addEventListener('click', function(){setMode('de', btnDe);});
+  btnZh.addEventListener('click', function(){setMode('zh', btnZh);});
 })();
 </script>
 
