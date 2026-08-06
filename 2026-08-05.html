@@ -35,6 +35,17 @@
     margin: 16px 0;
     border-radius: 8px;
     overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+  }
+  .video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
   .news {
     background: #FFF0E6;
@@ -139,7 +150,7 @@
 </div>
 
 <div class="video-embed">
-  <iframe src="https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1626538~player.html" width="100%" height="300" allowfullscreen frameborder="0" scrolling="no"></iframe>
+  <iframe src="https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1626538~player.html" allowfullscreen frameborder="0" scrolling="no"></iframe>
 </div>
 
 <!-- News 1: Ukraine -->
