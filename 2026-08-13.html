@@ -2,332 +2,1089 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deutsch Daily — 13. August 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Deutsch Daily — __DATE__</title>
 <style>
   :root {
-    --rot: #E63946;
-    --gold: #F4A261;
-    --paper: #FFF8F0;
-    --card: #FFF0E6;
-    --text: #1A1A2E;
-    --muted: #6B6B80;
-    --border: #E8D5C4;
+    --bg: #eef2f0;
+    --surface: #ffffff;
+    --surface-2: #f7f9f8;
+    --ink: #172127;
+    --ink-soft: #647077;
+    --line: #dce4e1;
+    --accent: #176b72;
+    --accent-strong: #0d5057;
+    --accent-soft: #dceeed;
+    --warm: #d98f39;
+    --warm-soft: #fff0d9;
+    --zh: #5f696f;
+    --danger: #b3493f;
+    --shadow: 0 18px 50px rgba(20, 46, 47, .10);
+    --shadow-soft: 0 8px 24px rgba(20, 46, 47, .07);
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [data-theme="dark"] {
+    --bg: #111719; --surface: #192124; --surface-2: #202a2d;
+    --ink: #edf3f1; --ink-soft: #a9b7b8; --line: #344145;
+    --accent: #75cbd0; --accent-strong: #99dfe2; --accent-soft: #223e40;
+    --warm: #f0b35e; --warm-soft: #3b3022; --zh: #bac5c5;
+    --shadow: 0 18px 50px rgba(0,0,0,.28); --shadow-soft: 0 8px 24px rgba(0,0,0,.22);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
   body {
-    font-family: -apple-system, "Noto Sans SC", "Segoe UI", sans-serif;
-    background: var(--paper);
-    color: var(--text);
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px 16px 60px;
-    line-height: 1.6;
+    min-height: 100vh; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, "Noto Sans SC", sans-serif;
+    transition: background .2s, color .2s;
   }
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
-    padding-bottom: 16px;
-    border-bottom: 2px solid var(--gold);
+  button, input, textarea { font: inherit; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+  button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent); outline-offset: 2px;
   }
-  .header h1 { color: var(--rot); font-size: 1.5em; margin-bottom: 4px; }
-  .header .date { color: var(--muted); font-size: 0.85em; }
-  .player-wrap {
-    margin-bottom: 24px;
-    border-radius: 10px;
-    overflow: hidden;
+  .app { width: min(1280px, calc(100% - 48px)); margin: 0 auto; padding: 24px 0 100px; }
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    min-height: 42px; margin-bottom: 34px;
   }
-  .player-wrap iframe { border: 0; display: block; }
-  .source-link {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 0.85em;
+  .brand {
+    display: inline-flex; align-items: center; gap: 10px; color: var(--ink);
+    font-weight: 800; letter-spacing: -.02em; text-decoration: none;
   }
-  .source-link a {
-    color: var(--gold);
-    text-decoration: none;
-    font-weight: 600;
+  .brand-mark {
+    display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px;
+    background: var(--accent); color: #fff; font: 800 12px/1 ui-monospace, monospace;
   }
-  .news {
-    background: var(--card);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 16px;
-    border-left: 4px solid var(--rot);
+  .top-actions { display: flex; align-items: center; gap: 8px; }
+  .icon-btn, .archive-link {
+    min-height: 38px; border: 1px solid var(--line); border-radius: 12px;
+    background: var(--surface); color: var(--ink-soft); cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center; text-decoration: none;
   }
-  .news h2 {
-    color: var(--rot);
-    font-size: 1.15em;
-    margin-bottom: 14px;
-    line-height: 1.3;
+  .icon-btn { width: 38px; }
+  .archive-link { gap: 7px; padding: 0 13px; font-size: 13px; font-weight: 700; }
+  .hero { margin-bottom: 26px; }
+  .eyebrow {
+    color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em;
+    text-transform: uppercase; margin-bottom: 9px;
   }
-  .news h2 .num {
-    background: var(--rot);
-    color: white;
-    border-radius: 50%;
-    width: 24px; height: 24px;
-    display: inline-flex;
-    align-items: center; justify-content: center;
-    font-size: 0.8em;
-    margin-right: 8px;
+  .hero h1 {
+    max-width: 720px; font: 750 clamp(29px, 4vw, 50px)/1.08 ui-serif, Georgia, serif;
+    letter-spacing: -.04em;
   }
-  .de-text {
-    background: white;
-    border-radius: 8px;
-    padding: 14px 16px;
-    margin-bottom: 12px;
-    border-left: 3px solid var(--gold);
-    font-size: 0.92em;
-    line-height: 1.7;
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 13px; color: var(--ink-soft); font-size: 14px; }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
+
+  .study-grid { display: grid; grid-template-columns: 272px minmax(0, 1fr); gap: clamp(20px, 3.2vw, 48px); align-items: start; }
+  .side {
+    position: sticky; top: 16px; max-height: calc(100vh - 24px);
+    display: flex; flex-direction: column; min-height: 0;
   }
-  .translation {
-    padding: 14px 16px;
-    margin-bottom: 12px;
-    font-size: 0.88em;
-    color: #444;
-    background: rgba(244, 162, 97, 0.08);
-    border-radius: 8px;
+  .study-panel {
+    display: flex; flex-direction: column; min-height: 0; max-height: calc(100vh - 24px);
+    border: 1px solid var(--line); border-radius: 16px;
+    background: var(--surface); box-shadow: var(--shadow-soft); overflow: hidden;
   }
-  .translation::before {
-    content: "🇨🇳 中文译文";
-    display: block;
-    font-weight: 700;
-    color: var(--muted);
-    font-size: 0.8em;
-    margin-bottom: 6px;
+  .video-card { position: relative; flex: 0 0 auto; overflow: hidden; background: #071012; }
+  .player { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #071012; }
+  .player iframe, .player video { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; background: #071012; }
+  .video-float-close {
+    display: none; border: 0; background: rgba(255,255,255,.12); color: #fff;
+    width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
   }
-  .vocab {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 12px;
-    font-size: 0.85em;
+  .rail { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+  .rail-bar { display: flex; align-items: center; gap: 8px; padding: 8px 10px 6px; }
+  .controls { display: flex; gap: 6px; flex: 0 0 auto; }
+  .controls button {
+    min-height: 28px; padding: 0 10px; border: 1px solid var(--line); border-radius: 8px;
+    background: var(--surface-2); color: var(--ink-soft); cursor: pointer; font-size: 12px; font-weight: 750;
   }
-  .vocab th {
-    background: var(--gold);
-    color: white;
-    padding: 6px 8px;
-    text-align: left;
-    font-weight: 600;
+  .controls button.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-strong); }
+  .story-pills { display: flex; flex: 1; justify-content: flex-end; flex-wrap: wrap; gap: 3px; }
+  .story-pills a {
+    display: grid; place-items: center; width: 22px; height: 22px; border-radius: 6px;
+    background: var(--surface-2); color: var(--ink-soft); text-decoration: none;
+    font: 750 11px/1 ui-monospace, ui-sans-serif, monospace;
   }
-  .vocab th:first-child { border-radius: 6px 0 0 0; }
-  .vocab th:last-child { border-radius: 0 6px 0 0; }
-  .vocab td {
-    padding: 6px 8px;
-    border-bottom: 1px solid var(--border);
-    background: white;
-    vertical-align: top;
+  .story-pills a:hover { color: var(--accent-strong); }
+  .story-pills a.on { background: var(--accent); color: #fff; }
+  .rail-now {
+    margin: 0 10px 8px; color: var(--ink-soft); font-size: 12px; line-height: 1.35;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   }
-  .vocab td:first-child { font-weight: 600; color: var(--rot); }
-  .grammar {
-    background: rgba(230, 57, 70, 0.06);
-    border-radius: 8px;
-    padding: 12px 16px;
-    margin-bottom: 12px;
-    font-size: 0.85em;
+  .hero-meta a { color: var(--accent); text-decoration: none; font-weight: 700; }
+  .hero-meta a:hover { text-decoration: underline; }
+  .study-extras {
+    min-height: 0; overflow-y: auto; padding: 0 8px 10px;
+    border-top: 1px solid var(--line);
   }
-  .grammar::before {
-    content: "🔑 Grammatik";
-    display: block;
-    font-weight: 700;
-    color: var(--rot);
-    margin-bottom: 6px;
+  .study-extras .empty-study { color: var(--ink-soft); font-size: 12px; padding: 8px 4px; }
+  .vlist { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2px; }
+  .vrow {
+    display: grid; grid-template-columns: minmax(0,1fr) 20px;
+    gap: 0 4px; align-items: center; padding: 5px 4px 6px;
+    border-bottom: 1px solid var(--line);
   }
-  .bg-info {
-    background: rgba(244, 162, 97, 0.1);
-    border-radius: 8px;
-    padding: 12px 16px;
-    font-size: 0.82em;
-    color: #555;
+  .vrow:nth-last-child(-n+2) { border-bottom: 0; }
+  .vrow .vw { overflow: hidden; grid-column: 1; color: var(--ink); font: 650 12.5px/1.25 ui-serif, Georgia, serif; text-overflow: ellipsis; white-space: nowrap; }
+  .vrow .vz { overflow: hidden; grid-column: 1; color: var(--ink-soft); font-size: 11px; line-height: 1.2; text-overflow: ellipsis; white-space: nowrap; }
+  .vadd {
+    grid-column: 2; grid-row: 1 / span 2; align-self: center;
+    width: 22px; height: 22px; border: 1px solid var(--line); border-radius: 6px;
+    background: var(--surface-2); color: var(--accent-strong); cursor: pointer;
+    font: 700 15px/1 ui-sans-serif, system-ui;
   }
-  .bg-info::before {
-    content: "💡 Hintergrund";
-    display: block;
-    font-weight: 700;
-    color: var(--gold);
-    margin-bottom: 6px;
+  .vadd:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .rail-notes { margin-top: 4px; padding-top: 2px; }
+  .rail-note { margin: 0; border: 0; background: transparent; }
+  .rail-note summary {
+    list-style: none; cursor: pointer; padding: 5px 2px; color: var(--ink-soft);
+    font-size: 12px; font-weight: 650;
   }
-  .back-link {
-    text-align: center;
-    margin-top: 24px;
+  .rail-note summary::-webkit-details-marker { display: none; }
+  .rail-note .body { padding: 0 2px 8px; color: var(--ink-soft); font-size: 12px; line-height: 1.5; }
+  @media (min-width: 841px) { .article-extras { display: none; } }
+
+  .reader { min-width: 0; }
+  .reader-tip {
+    display: flex; align-items: center; justify-content: space-between; gap: 14px;
+    margin-bottom: 14px; color: var(--ink-soft); font-size: 13px;
   }
-  .back-link a {
-    color: var(--rot);
-    text-decoration: none;
-    font-weight: 600;
+  .reader-tip button {
+    flex: 0 0 auto; border: 0; background: transparent; color: var(--accent);
+    font-weight: 750; cursor: pointer;
+  }
+  article {
+    scroll-margin-top: 24px; margin-bottom: 22px; padding: clamp(22px, 4vw, 38px);
+    border: 1px solid var(--line); border-radius: 24px; background: var(--surface);
+    box-shadow: var(--shadow-soft);
+  }
+  .n-head { display: grid; grid-template-columns: 42px minmax(0,1fr); gap: 13px; align-items: start; margin-bottom: 24px; }
+  .n-idx {
+    display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px;
+    background: var(--accent-soft); color: var(--accent-strong); font: 800 13px/1 ui-monospace, monospace;
+  }
+  .n-head h2 { padding-top: 3px; font: 750 clamp(21px, 3vw, 28px)/1.25 ui-serif, Georgia, serif; letter-spacing: -.025em; }
+  .para { margin-bottom: 23px; }
+  .para:last-of-type { margin-bottom: 10px; }
+  .de {
+    font: var(--reader-size, 18.5px)/1.82 ui-serif, Georgia, "Noto Serif", serif;
+    letter-spacing: .003em;
+  }
+  .de w {
+    cursor: pointer; border-radius: 4px; transition: background .12s, color .12s;
+    text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+    text-decoration-color: transparent;
+  }
+  .de w:hover, .de w:active { background: var(--warm-soft); text-decoration-color: var(--warm); }
+  .de w.known { text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent); }
+  .de w.ed { text-decoration-style: solid; text-decoration-thickness: 1.5px; }
+  .de w.wiki { text-decoration-style: dotted; text-decoration-color: color-mix(in srgb, var(--ink-soft) 55%, transparent); }
+  .de w.saved { color: var(--accent-strong); background: var(--accent-soft); text-decoration-color: transparent; }
+  .para { display: grid; grid-template-columns: 52px minmax(0,1fr); gap: 10px; align-items: start; }
+  .seek {
+    margin-top: 4px; border: 1px solid var(--line); border-radius: 8px;
+    background: var(--surface-2); color: var(--accent-strong);
+    padding: 4px 0; font: 750 11px/1 ui-monospace, monospace; cursor: pointer;
+  }
+  .seek:disabled { opacity: .35; cursor: default; }
+  .para.now .de { background: color-mix(in srgb, var(--accent-soft) 70%, transparent); border-radius: 6px; }
+  .zh {
+    margin-top: 9px; padding: 10px 13px; border-left: 3px solid var(--warm);
+    border-radius: 0 9px 9px 0; background: var(--surface-2); color: var(--zh);
+    font-size: 14px; line-height: 1.72;
+  }
+  body.hide-zh .zh { display: none; }
+  .article-extras details { margin-top: 10px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface-2); }
+  .article-extras details summary {
+    list-style: none; cursor: pointer; padding: 12px 14px; color: var(--ink-soft);
+    display: flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 750;
+  }
+  .article-extras details summary::before {
+    content: "+"; display: inline-grid; place-items: center; width: 20px; height: 20px;
+    border-radius: 7px; background: var(--surface); color: var(--accent); font-size: 14px;
+  }
+  .article-extras details[open] summary::before { content: "−"; }
+  .article-extras details summary::-webkit-details-marker { display: none; }
+  .article-extras details .body { padding: 2px 14px 15px 43px; color: var(--ink-soft); font-size: 13.5px; line-height: 1.75; }
+  .article-extras details .body strong { color: var(--ink); }
+  .vcard { display: grid; grid-template-columns: minmax(0,1fr) 28px; gap: 8px; align-items: start; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .vcard:last-child { border-bottom: 0; }
+  .gcard { padding: 12px 0; border-bottom: 1px dashed var(--line); }
+  .gcard:last-child { border-bottom: 0; }
+  .vcard-top, .gcard h4 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; font: 750 14.5px/1.35 ui-serif, Georgia, serif; color: var(--ink); }
+  .article-extras .vadd {
+    width: 28px; height: 28px; border: 1px solid var(--line); border-radius: 8px;
+    background: var(--surface); color: var(--accent-strong); cursor: pointer;
+    font: 700 18px/1 ui-sans-serif, system-ui;
+  }
+  .vpos { color: var(--ink-soft); font: 750 11px/1.2 ui-sans-serif, system-ui; letter-spacing: .06em; text-transform: uppercase; }
+  .vzh { margin-top: 4px; color: var(--accent-strong); font-size: 13.5px; }
+  .vex, .gex { margin-top: 6px; color: var(--ink-soft); font-size: 13px; font-style: italic; }
+  .gexzh { color: var(--zh); font-size: 12.5px; }
+  .gmore { margin-top: 8px; color: var(--ink-soft); font-size: 13px; }
+  .bg-note { margin: 0 0 8px; color: var(--ink-soft); font-size: 12px; }
+
+  .scrim { position: fixed; inset: 0; z-index: 55; display: none; background: rgba(7,16,18,.48); backdrop-filter: blur(3px); }
+  .scrim.on { display: block; }
+  #pop {
+    position: fixed; z-index: 70; display: none; width: min(360px, calc(100vw - 24px));
+    border: 1px solid var(--line); border-radius: 18px; padding: 18px;
+    background: var(--surface); color: var(--ink); box-shadow: var(--shadow);
+  }
+  #pop.open { display: block; }
+  .pop-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  #pop .pw { font: 750 21px/1.2 ui-serif, Georgia, serif; word-break: break-word; }
+  #pop .pp { margin-top: 3px; color: var(--ink-soft); font-size: 11px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+  #pop .pclose { border: 0; background: var(--surface-2); color: var(--ink-soft); width: 30px; height: 30px; border-radius: 9px; cursor: pointer; }
+  #pop .pz { margin-top: 12px; color: var(--accent-strong); font-weight: 700; }
+  #pop .pz:empty::after { content: "还没有释义，你可以自己补充"; color: var(--ink-soft); font-weight: 400; }
+  #pop .pe { margin-top: 9px; padding-top: 9px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 12.5px; font-style: italic; }
+  .pop-actions { display: flex; gap: 8px; margin-top: 14px; }
+  .pbtn, .secondary-btn, .primary-btn {
+    min-height: 40px; border-radius: 11px; padding: 0 13px; cursor: pointer; font-size: 13px; font-weight: 750;
+  }
+  .pbtn { flex: 1; border: 1px solid var(--accent); background: var(--accent); color: #fff; }
+  .pbtn.in { border-color: var(--line); background: var(--surface-2); color: var(--ink-soft); }
+  .secondary-btn { border: 1px solid var(--line); background: var(--surface); color: var(--ink-soft); }
+  .primary-btn { border: 1px solid var(--accent); background: var(--accent); color: #fff; }
+  .word-form { display: grid; gap: 11px; }
+  .word-form label { display: grid; gap: 5px; color: var(--ink-soft); font-size: 12px; font-weight: 700; }
+  .word-form input, .word-form textarea {
+    width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 9px 11px;
+    background: var(--surface-2); color: var(--ink); resize: vertical;
+  }
+  .word-form textarea { min-height: 66px; }
+  .form-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 3px; }
+
+  #basket-btn {
+    position: fixed; right: 22px; bottom: max(22px, env(safe-area-inset-bottom)); z-index: 45;
+    display: inline-flex; align-items: center; gap: 9px; min-height: 48px; padding: 0 18px;
+    border: 0; border-radius: 15px; background: var(--ink); color: var(--surface);
+    box-shadow: var(--shadow); cursor: pointer; font-weight: 800;
+  }
+  #basket-btn .cnt { min-width: 23px; padding: 2px 7px; border-radius: 99px; background: var(--warm); color: #172127; font-size: 12px; }
+  #basket {
+    position: fixed; inset: 0 0 0 auto; z-index: 65; width: min(440px, 100vw);
+    display: flex; flex-direction: column; padding: 24px 24px calc(24px + env(safe-area-inset-bottom));
+    background: var(--surface); box-shadow: -20px 0 60px rgba(7,16,18,.18);
+    transform: translateX(105%); transition: transform .22s ease;
+  }
+  #basket.open { transform: translateX(0); }
+  #basket .bhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+  #basket .bhead h3 { font-size: 22px; letter-spacing: -.02em; }
+  #basket .bhead p { margin-top: 2px; color: var(--ink-soft); font-size: 12.5px; }
+  #basket .bclose { border: 0; background: var(--surface-2); color: var(--ink-soft); width: 36px; height: 36px; border-radius: 11px; font-size: 20px; cursor: pointer; }
+  .basket-add { width: 100%; margin-bottom: 12px; }
+  #basket .blist { overflow-y: auto; flex: 1; padding-right: 4px; }
+  .bitem { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 5px 10px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+  .bitem .bw { font: 750 16px/1.3 ui-serif, Georgia, serif; }
+  .bitem .bz { grid-column: 1; color: var(--accent-strong); font-size: 13px; }
+  .bitem .be { grid-column: 1; overflow: hidden; color: var(--ink-soft); font-size: 11.5px; text-overflow: ellipsis; white-space: nowrap; }
+  .bitem-actions { grid-column: 2; grid-row: 1 / span 3; align-self: center; display: flex; gap: 3px; }
+  .bitem-actions button { border: 0; background: transparent; color: var(--ink-soft); padding: 7px; cursor: pointer; font-size: 12px; }
+  .bitem-actions .bx { color: var(--danger); }
+  #basket .bfoot { display: flex; gap: 8px; margin-top: 14px; }
+  #basket .bfoot button { flex: 1; }
+  #basket .bfoot button:disabled { opacity: .5; cursor: wait; }
+  #basket .bstatus { min-height: 18px; margin-top: 8px; color: var(--ink-soft); text-align: center; font-size: 12px; }
+  .bempty { padding: 42px 14px; color: var(--ink-soft); text-align: center; font-size: 13px; }
+  .bempty b { display: block; margin-bottom: 5px; color: var(--ink); font-size: 15px; }
+  #word-editor {
+    display: none; padding: 15px; margin-bottom: 12px; border: 1px solid var(--line);
+    border-radius: 14px; background: var(--surface-2);
+  }
+  #word-editor.open { display: block; }
+  #toast {
+    position: fixed; left: 50%; bottom: 28px; z-index: 90; display: none;
+    transform: translateX(-50%); padding: 10px 16px; border-radius: 12px;
+    background: var(--ink); color: var(--surface); box-shadow: var(--shadow); font-size: 13px; font-weight: 700;
+  }
+  @media (max-width: 840px) {
+    .app { width: min(100% - 28px, 720px); padding-top: 15px; }
+    .topbar { margin-bottom: 24px; }
+    .study-grid { display: block; }
+    .side { position: static; max-height: none; margin-bottom: 18px; }
+    .study-panel { display: contents; }
+    .video-card { border-radius: 14px; box-shadow: var(--shadow); }
+    .rail {
+      position: sticky; top: 0; z-index: 30; margin: 10px 0 18px; padding: 8px 10px;
+      border: 1px solid var(--line); border-radius: 14px; background: var(--surface);
+    }
+    .rail-bar { padding: 0; }
+    .story-pills, .rail-now, .study-extras { display: none; }
+    .video-card.floating {
+      position: fixed; z-index: 48; top: 64px; right: 10px; width: min(48vw, 210px);
+      border: 1px solid rgba(255,255,255,.2); border-radius: 13px; box-shadow: 0 18px 45px rgba(0,0,0,.28);
+    }
+    .video-card.floating .video-float-close { display: block; position: absolute; z-index: 2; top: 6px; right: 6px; }
+    .video-card.float-off { display: none; }
+    .reader-tip { margin-top: 13px; }
+    article { border-radius: 20px; }
+  }
+  @media (max-width: 560px) {
+    .app { width: 100%; padding: 12px 12px 88px; }
+    .brand span:last-child { font-size: 14px; }
+    .archive-link { width: 38px; padding: 0; font-size: 0; }
+    .archive-link svg { width: 17px; }
+    .hero { padding: 0 5px; margin-bottom: 18px; }
+    .hero h1 { font-size: 30px; }
+    .hero-meta { gap: 5px 14px; font-size: 12.5px; }
+    .video-card { border-radius: 16px; }
+    .controls { gap: 5px; }
+    .controls button { min-height: 38px; font-size: 12px; }
+    article { padding: 20px 17px; margin-bottom: 13px; border-radius: 18px; }
+    .n-head { grid-template-columns: 34px minmax(0,1fr); gap: 10px; margin-bottom: 19px; }
+    .n-idx { width: 34px; height: 34px; border-radius: 10px; font-size: 11px; }
+    .n-head h2 { padding-top: 1px; font-size: 21px; }
+    .de { font-size: var(--reader-size, 17.5px); line-height: 1.78; }
+    .zh { font-size: 13.5px; }
+    .article-extras details .body { padding-left: 14px; }
+    .para { grid-template-columns: 44px minmax(0,1fr); gap: 8px; }
+    #pop { left: 12px !important; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); top: auto !important; width: auto; }
+    #basket-btn { right: 14px; bottom: max(14px, env(safe-area-inset-bottom)); min-height: 46px; }
+    #basket { padding: 18px 17px calc(18px + env(safe-area-inset-bottom)); }
+    #basket .bfoot { flex-direction: column; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
   }
 </style>
 </head>
 <body>
-  <div class="header">
-    <h1>Deutsch Daily 🇩🇪</h1>
-    <div class="date">Mittwoch, 13. August 2026 · tagesschau in Einfacher Sprache</div>
-  </div>
+<main class="app">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="返回往期列表">
+      <span class="brand-mark">DD</span><span>Deutsch Daily</span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-btn" id="theme-btn" aria-label="切换深浅色" title="切换深浅色">◐</button>
+      <a class="archive-link" href="index.html">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M6 3h12a2 2 0 0 1 2 2v2H4V5a2 2 0 0 1 2-2Zm0 4h12v14H6V7Zm4 4h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        往期
+      </a>
+    </div>
+  </header>
 
-  <div class="player-wrap">
-    <iframe src="https://www.tagesschau.de/multimedia/sendung/tagesschau_in_einfacher_sprache/video-1630762~player.html" width="100%" height="300" allowfullscreen frameborder="0" scrolling="no"></iframe>
-  </div>
-  <div class="source-link">
-    <a href="https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1630762.html">📺 Video auf tagesschau.de</a>
-  </div>
+  <section class="hero">
+    <div class="eyebrow">Tagesschau in Einfacher Sprache</div>
+    <h1 id="hdate"></h1>
+    <div class="hero-meta">
+      <span id="story-count"></span>
+      <a id="vlink" target="_blank" rel="noopener">在 tagesschau.de 打开 ↗</a>
+    </div>
+  </section>
 
-  <!-- Nachricht 1 -->
-  <div class="news">
-    <h2><span class="num">1</span> Sonnenfinsternis: Himmel wird dunkel</h2>
-    <div class="de-text">In Europa gab es eine Sonnenfinsternis. Sie war besonders gut in Spanien zu sehen. Dort war der Himmel dunkel.<br><br>
-    Die Erde links, der Mond in der Mitte und die Sonne rechts. Sie waren in einer Linie. Der Mond hat die Sonne verdeckt. Wo der Kernschatten vom Mond auf der Erde war, war die Sonne ganz verdeckt — so wie in Spanien. Neben dem Kernschatten kam aber noch etwas Licht am Mond vorbei. Es gab einen Halbschatten — so wie in Deutschland.<br><br>
-    Der Schatten ist über Grönland und Island bis nach Spanien gezogen, auf die Balearen-Inseln. Viele Menschen in Europa wollten die Sonnenfinsternis sehen, auch in Deutschland. Hier war die Sonnenfinsternis schwächer als in Spanien.<br><br>
-    Diese Menschen sitzen auf einem Berg in der Mitte von Deutschland. Dort beobachten sie die Sonnenfinsternis. Manche haben eine extra Brille. Sie ist wichtig als Schutz gegen die Sonne. Manche haben sich einen Schutz selbst gebastelt.<br><br>
-    Und dann ist es so weit. Von der Sonne ist nur noch ein Teil zu sehen. Es wird dunkler am Himmel. Eine Frau sagt: "Als die Sonne weg war, war es kalt. Ich habe zum Glück einen warmen Pullover. Ich habe gedacht, die Sonne und der Himmel sind so groß. Und wir Menschen sind so klein."<br><br>
-    Auch in der Stadt Berlin wollten die Menschen die Sonnenfinsternis sehen. Und auch in der Stadt München waren die Menschen deshalb gekommen. Alle haben etwas Besonderes erlebt. Bis zur nächsten großen Sonnenfinsternis dauert es in Deutschland noch lange. Sie ist im Jahr 2081.</div>
-    <div class="translation">欧洲发生了一次日食。在西班牙观测效果最好，那里天空变暗了。<br><br>
-    地球在左边，月球在中间，太阳在右边。它们排成了一条直线。月球遮住了太阳。月球本影落在地球上的地方，太阳被完全遮挡——就像在西班牙。本影旁边还有一些光绕过月球，形成半影——就像在德国。<br><br>
-    阴影从格陵兰岛和冰岛一直延伸到西班牙的巴利阿里群岛。许多欧洲人想观看这次日食，德国也是如此。不过在德国，日食不如西班牙明显。<br><br>
-    这些人坐在德国中部的一座山上观测日食。有些人戴了专门的观测眼镜，这很重要，可以保护眼睛。有些人自己做了防护工具。<br><br>
-    然后那一刻到了。太阳只剩下一部分可见。天空变得更暗。一位女士说："太阳消失时变冷了，幸好我穿了暖和毛衣。我觉得太阳和天空那么大，我们人类这么渺小。"<br><br>
-    柏林和慕尼黑的人们也来观看日食。每个人都经历了特别的时刻。德国下一次大型日食要等到2081年。</div>
-    <table class="vocab">
-      <tr><th>Deutsch</th><th>中文</th><th>Beispielsatz</th></tr>
-      <tr><td>die Sonnenfinsternis</td><td>日食</td><td>In Europa gab es eine Sonnenfinsternis.</td></tr>
-      <tr><td>verdecken</td><td>遮挡</td><td>Der Mond hat die Sonne verdeckt.</td></tr>
-      <tr><td>der Kernschatten</td><td>本影</td><td>Wo der Kernschatten war, war die Sonne verdeckt.</td></tr>
-      <tr><td>der Halbschatten</td><td>半影</td><td>Es gab einen Halbschatten.</td></tr>
-      <tr><td>beobachten</td><td>观察</td><td>Dort beobachten sie die Sonnenfinsternis.</td></tr>
-      <tr><td>die Brille</td><td>眼镜</td><td>Manche haben eine extra Brille.</td></tr>
-      <tr><td>der Schutz</td><td>保护</td><td>Sie ist wichtig als Schutz gegen die Sonne.</td></tr>
-      <tr><td>basteln</td><td>手工制作</td><td>Manche haben sich einen Schutz selbst gebastelt.</td></tr>
-      <tr><td>schwach</td><td>弱的</td><td>Hier war die Sonnenfinsternis schwächer.</td></tr>
-      <tr><td>erleben</td><td>经历</td><td>Alle haben etwas Besonderes erlebt.</td></tr>
-    </table>
-    <div class="grammar">
-      <strong>1. 比较级 —schwächer als—</strong><br>
-      形容词加 -er 构成比较级，用 als 连接：schwach → schwächer。"Hier war die Sonnenfinsternis <b>schwächer als</b> in Spanien."（这里日食比西班牙更弱。）<br><br>
-      <strong>2. sich etwas basteln（反身）</strong><br>
-      sich (Dat.) etwas basteln = 给自己手工做某物。"Manche haben <b>sich</b> einen Schutz selbst <b>gebastelt</b>."（有些人给自己做了防护。）
-    </div>
-    <div class="bg-info">
-      2026年8月13日的日食全食带经过北欧和西班牙。德国大部分地区只能看到偏食。观测日食必须使用专门的日食眼镜，普通太阳镜不够安全。德国下一次能看到的日全食要等到2081年。
-    </div>
-  </div>
+  <div class="study-grid">
+    <aside class="side">
+      <div id="video-anchor"></div>
+      <div class="study-panel">
+        <div class="video-card" id="video-card">
+          <button class="video-float-close" id="video-float-close" aria-label="暂时隐藏悬浮视频">×</button>
+          <div class="player" id="player"></div>
+        </div>
+        <div class="rail">
+          <div class="rail-bar">
+            <div class="controls">
+              <button id="btn-zh" class="on" aria-pressed="true">译文</button>
+            </div>
+            <nav class="story-pills" id="topic-list" aria-label="本期新闻"></nav>
+          </div>
+          <p class="rail-now" id="rail-now"></p>
+          <div class="study-extras" id="study-extras"></div>
+        </div>
+      </div>
+    </aside>
 
-  <!-- Nachricht 2 -->
-  <div class="news">
-    <h2><span class="num">2</span> Vor 65 Jahren: Mauer in Berlin gebaut</h2>
-    <div class="de-text">In Berlin gab es früher eine Mauer. Die Mauer hat die Stadt geteilt — in Ost und West. Der westliche Teil gehörte zur BRD. Das ist das kurze Wort für Bundesrepublik Deutschland. Der östliche Teil gehörte zur DDR. Das ist das kurze Wort für Deutsche Demokratische Republik.<br><br>
-    Die DDR hat die Mauer gebaut vor 65 Jahren, am 13. August 1961. Die Regierung von der DDR hat damals gesagt: "Nur manche Menschen dürfen über die Grenze in den Westen reisen. Für die meisten Menschen sind Reisen in den Westen aber verboten." Deshalb wurden manche Familien getrennt. Und Freunde konnten sich nicht mehr besuchen.<br><br>
-    Diese Aufnahmen sind von früher, deshalb sind sie Schwarz-Weiß. Soldaten von der DDR bauen die Mauer quer durch die Stadt Berlin. Die Mauer trennt Ost und West. In der Zeitung steht: "Ost-Berlin ist abgeriegelt." Das bedeutet: niemand kann über die Grenze in den Westen.<br><br>
-    Der Mann links ist Walter Ulbricht. Er war der Chef von der DDR. Er hat gesagt: "Niemand baut eine Mauer." Das war aber gelogen.<br><br>
-    Die Mauer hat plötzlich Familien und Freunde getrennt. Viele Menschen sind aus dem Osten in den Westen geflohen. Die Flucht aus der DDR war schwierig und gefährlich. Viele Menschen sind dabei gestorben. Trotzdem haben Menschen immer wieder versucht, über die Grenze zu kommen — zum Beispiel mit einer Leiter, durch einen Tunnel, oder mit dem Auto.<br><br>
-    Die Mauer stand 28 Jahre lang. 1989 ist die Mauer gefallen. Die Menschen aus der DDR durften über die Grenze in den Westen kommen.</div>
-    <div class="translation">柏林以前有一堵墙，把城市分成东西两部分。西部属于联邦德国（BRD），东部属于民主德国（DDR）。<br><br>
-    65年前，1961年8月13日，东德修建了这堵墙。东德政府说："只有少数人可以越境去西部。对大多数人来说，去西部是被禁止的。"因此一些家庭被迫分离，朋友不能再见面。<br><br>
-    这些影像是以前的，所以是黑白的。东德士兵在柏林城中建墙。报纸上写着："东柏林已被封锁。"意思是没人能越境去西部。<br><br>
-    左边那个人是瓦尔特·乌布利希，东德的领导人。他曾说"没人要建墙"——但那是谎言。<br><br>
-    这堵墙突然将家庭和朋友分开。许多人从东部逃到西部。出逃困难而危险，许多人在此过程中丧生。尽管如此，人们还是不断尝试越境——用梯子、挖隧道或开车。<br><br>
-    墙矗立了28年。1989年柏林墙倒塌。东德人民终于可以越境来到西部。</div>
-    <table class="vocab">
-      <tr><th>Deutsch</th><th>中文</th><th>Beispielsatz</th></tr>
-      <tr><td>die Mauer</td><td>墙</td><td>In Berlin gab es früher eine Mauer.</td></tr>
-      <tr><td>teilen</td><td>分割</td><td>Die Mauer hat die Stadt geteilt.</td></tr>
-      <tr><td>gehören zu</td><td>属于</td><td>Der westliche Teil gehörte zur BRD.</td></tr>
-      <tr><td>die Grenze</td><td>边界</td><td>Niemand kann über die Grenze.</td></tr>
-      <tr><td>verboten</td><td>被禁止的</td><td>Reisen in den Westen sind verboten.</td></tr>
-      <tr><td>trennen</td><td>分离</td><td>Deshalb wurden Familien getrennt.</td></tr>
-      <tr><td>abriegeln</td><td>封锁</td><td>Ost-Berlin ist abgeriegelt.</td></tr>
-      <tr><td>fliehen</td><td>逃跑</td><td>Viele sind in den Westen geflohen.</td></tr>
-      <tr><td>die Flucht</td><td>逃跑</td><td>Die Flucht war gefährlich.</td></tr>
-      <tr><td>gefährlich</td><td>危险的</td><td>Die Flucht war gefährlich.</td></tr>
-      <tr><td>gelogen</td><td>撒谎的</td><td>Das war aber gelogen.</td></tr>
-      <tr><td>die Leiter</td><td>梯子</td><td>Zum Beispiel mit einer Leiter.</td></tr>
-      <tr><td>der Tunnel</td><td>隧道</td><td>Durch einen Tunnel.</td></tr>
-    </table>
-    <div class="grammar">
-      <strong>1. 被动语态 — wurden getrennt</strong><br>
-      werden + 过去分词 = 被动语态（过去时用 wurden）。"Deshalb <b>wurden</b> manche Familien <b>getrennt</b>."（一些家庭被分离了。）= 英语 "were separated"。<br><br>
-      <strong>2. dürfen — 允许/可以</strong><br>
-      "Nur manche Menschen <b>dürfen</b> über die Grenze reisen."（只有部分人被允许越境旅行。）dürfen 的否定 = nicht dürfen = 不被允许/禁止。
-    </div>
-    <div class="bg-info">
-      1961年8月13日，东德在一夜之间开始修建柏林墙，将柏林分为东西两部分。东德官方称其为"反法西斯防卫墙"，实际目的是阻止居民逃往西方。墙存在28年间（1961-1989），至少140人在尝试越境时死亡。1989年11月9日柏林墙倒塌。2026年8月13日恰逢建墙65周年。<br><br>
-      瓦尔特·乌布利希在1961年6月说"没人有意建墙"，两个月后墙就建了——史上最著名的谎言之一。
-    </div>
+    <section class="reader">
+      <div class="reader-tip">
+        <span>实线是本期重点词，虚线是词典结果，均可收入生词本。</span>
+        <button id="font-btn">字号 A+</button>
+      </div>
+      <div id="news"></div>
+    </section>
   </div>
+</main>
 
-  <!-- Nachricht 3 -->
-  <div class="news">
-    <h2><span class="num">3</span> Vulkan ausgebrochen: Flughafen gesperrt</h2>
-    <div class="de-text">In Italien ist vor einigen Tagen ein Vulkan ausgebrochen. Er heißt Ätna und ist auf der Insel Sizilien, im Süden von Italien. In der Nähe vom Ätna ist ein Flughafen. Er ist jetzt gesperrt. Deshalb sitzen manche Touristen auf der Insel fest. Sie müssen warten oder zu einem anderen Flughafen fahren.<br><br>
-    Das ist der Ätna von oben. Aus dem Vulkan kommen Gas und Asche. Wegen der Asche in der Luft können die Flugzeuge nicht fliegen. Aus dem Vulkan kommen auch Steine und Lava. Das ist die rote, heiße Flüssigkeit. Sie ist gefährlich für Menschen. Viele sind aber trotzdem gekommen, um den Vulkan aus der Nähe zu sehen.</div>
-    <div class="translation">几天前意大利的一座火山喷发了。它叫埃特纳火山，位于意大利南部的西西里岛。附近的机场现在已经关闭，一些游客被困在岛上，必须等待或前往其他机场。<br><br>
-    这是从上方看到的埃特纳火山。火山喷出气体和火山灰，因空气中的火山灰，飞机无法飞行。火山还喷出石头和熔岩——红色炽热的液体，对人体有危险。尽管如此，还是有很多人来近处观看火山。</div>
-    <table class="vocab">
-      <tr><th>Deutsch</th><th>中文</th><th>Beispielsatz</th></tr>
-      <tr><td>ausbrechen</td><td>喷发</td><td>Ein Vulkan ist ausgebrochen.</td></tr>
-      <tr><td>der Vulkan</td><td>火山</td><td>Er heißt Ätna und ist ein Vulkan.</td></tr>
-      <tr><td>die Insel</td><td>岛屿</td><td>Er ist auf der Insel Sizilien.</td></tr>
-      <tr><td>sperren</td><td>关闭</td><td>Der Flughafen ist gesperrt.</td></tr>
-      <tr><td>fest-sitzen</td><td>被困住</td><td>Touristen sitzen auf der Insel fest.</td></tr>
-      <tr><td>die Asche</td><td>火山灰</td><td>Aus dem Vulkan kommen Gas und Asche.</td></tr>
-      <tr><td>die Lava</td><td>熔岩</td><td>Aus dem Vulkan kommen Steine und Lava.</td></tr>
-      <tr><td>die Flüssigkeit</td><td>液体</td><td>Das ist die heiße Flüssigkeit.</td></tr>
-      <tr><td>heiß</td><td>热的</td><td>Das ist die heiße Flüssigkeit.</td></tr>
-      <tr><td>aus der Nähe</td><td>从近处</td><td>Um den Vulkan aus der Nähe zu sehen.</td></tr>
-    </table>
-    <div class="grammar">
-      <strong>1. Wegen + 第二格</strong><br>
-      "Wegen der Asche in der Luft können die Flugzeuge nicht fliegen."（因为空气中的火山灰，飞机无法飞行。）wegen = because of。<br><br>
-      <strong>2. um ... zu（目的从句）</strong><br>
-      "Viele sind gekommen, <b>um</b> den Vulkan <b>zu</b> sehen."（很多人来了，是为了看火山。）= in order to。
-    </div>
-    <div class="bg-info">
-      埃特纳火山是欧洲最高最活跃的火山，位于西西里岛东岸，海拔约3357米。附近的卡塔尼亚机场因火山灰影响飞行安全经常临时关闭。火山灰对航空发动机极其危险——2010年冰岛火山灰也曾导致欧洲大面积航班取消。
-    </div>
+<div class="scrim" id="scrim"></div>
+<div id="pop" role="dialog" aria-modal="false" aria-label="单词卡片"></div>
+<button id="basket-btn" aria-label="打开生词本">生词本<span class="cnt" id="bk-cnt">0</span></button>
+<aside id="basket" aria-label="生词本">
+  <div class="bhead">
+    <div><h3>我的生词本</h3><p>保存在当前浏览器，可复制或导出 Anki</p></div>
+    <button class="bclose" onclick="toggleBasket(false)" aria-label="关闭">×</button>
   </div>
+  <button class="secondary-btn basket-add" onclick="openWordEditor()">＋ 手动添加单词</button>
+  <div id="word-editor">
+    <form class="word-form" id="word-form">
+      <label>德语单词或短语<input id="edit-word" required autocomplete="off" placeholder="z. B. die Entscheidung"></label>
+      <label>中文释义<input id="edit-zh" required autocomplete="off" placeholder="决定"></label>
+      <label>例句（可选）<textarea id="edit-example" placeholder="Das ist eine wichtige Entscheidung."></textarea></label>
+      <div class="form-actions">
+        <button type="button" class="secondary-btn" onclick="closeWordEditor()">取消</button>
+        <button type="submit" class="primary-btn">保存单词</button>
+      </div>
+    </form>
+  </div>
+  <div class="blist" id="bk-list"></div>
+  <div class="bfoot">
+    <button class="secondary-btn" onclick="copyWords()">复制文本</button>
+    <button class="primary-btn" id="btn-apkg" onclick="exportApkg()">导出 Anki</button>
+  </div>
+  <div class="bstatus" id="bk-status"></div>
+</aside>
+<div id="toast"></div>
 
-  <!-- Nachricht 4 -->
-  <div class="news">
-    <h2><span class="num">4</span> Schwimm-EM: Medaillen für Deutsche</h2>
-    <div class="de-text">In der Hauptstadt von Frankreich, Paris, ist gerade die Schwimm-EM — die Europameisterschaft für Schwimmen. Der Mann vorne auf dem Foto ist Johannes Liebmann. Er war der Schnellste beim Schwimmen über 800 Meter. Dafür hat er eine Goldmedaille bekommen. Hinter ihm auf dem Foto ist Sven Schwarz. Er war der Zweitschnellste und hat eine Silbermedaille bekommen. Das Schwimmen war im Freistil. Die Sportler konnten sich die Schwimmtechnik selbst aussuchen, zum Beispiel Brustschwimmen.</div>
-    <div class="translation">在法国首都巴黎，正在举行游泳欧锦赛。照片前面的约翰内斯·利布曼是800米游泳中最快的选手，获得金牌。他后面的斯文·施瓦茨是第二名，获得银牌。比赛是自由泳，运动员可以自己选择泳姿，比如蛙泳。</div>
-    <table class="vocab">
-      <tr><th>Deutsch</th><th>中文</th><th>Beispielsatz</th></tr>
-      <tr><td>die EM (Europameisterschaft)</td><td>欧锦赛</td><td>In Paris ist gerade die Schwimm-EM.</td></tr>
-      <tr><td>die Medaille</td><td>奖牌</td><td>Er hat eine Goldmedaille bekommen.</td></tr>
-      <tr><td>der Schnellste</td><td>最快的人</td><td>Er war der Schnellste.</td></tr>
-      <tr><td>das Freistil</td><td>自由泳</td><td>Das Schwimmen war im Freistil.</td></tr>
-      <tr><td>aussuchen</td><td>选择</td><td>Sie konnten die Technik aussuchen.</td></tr>
-      <tr><td>das Brustschwimmen</td><td>蛙泳</td><td>Zum Beispiel Brustschwimmen.</td></tr>
-    </table>
-    <div class="grammar">
-      <strong>1. 形容词作名词 — der Schnellste</strong><br>
-      "Er war <b>der Schnellste</b>."（他是最快的人。）形容词加定冠词首字母大写即可当名词。<br><br>
-      <strong>2. sich etwas aussuchen（反身）</strong><br>
-      "Die Sportler konnten <b>sich</b> die Schwimmtechnik <b>selbst aussuchen</b>."（运动员可以自己选择游泳技术。）
-    </div>
-    <div class="bg-info">
-      2026年游泳欧锦赛在欧洲举行。德国运动员在男子800米自由泳包揽金银牌。自由泳规则允许使用任何泳姿，实际比赛中选手几乎都选择爬泳（Kraulen）。800米是长距离项目，对耐力要求极高。
-    </div>
-  </div>
+<script>
+const DATA = {"date": "2026-08-13", "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1630762.html", "embed_url": "https://www.tagesschau.de/multimedia/sendung/tagesschau_in_einfacher_sprache/video-1630762~player.html", "mp4_url": "https://tagesschau-progressive.ard-mcdn.de/video/2026/0813/TV-20260813-1739-4100.webl.h264.mp4", "duration": 468.91, "news": [{"title": "Sonnenfinsternis: Himmel wird dunkel", "paras": [{"de": "In Europa gab es eine Sonnenfinsternis. Sie war besonders gut in Spanien zu sehen. Dort war der Himmel dunkel.", "zh": "欧洲发生了一次日食。在西班牙观测效果最好，那里天空变暗了。", "start": 34.87, "end": 50.19}, {"de": "Die Erde links, der Mond in der Mitte und die Sonne rechts. Sie waren in einer Linie. Der Mond hat die Sonne verdeckt. Wo der Kernschatten vom Mond auf der Erde war, war die Sonne ganz verdeckt — so wie in Spanien. Neben dem Kernschatten kam aber noch etwas Licht am Mond vorbei. Es gab einen Halbschatten — so wie in Deutschland.", "zh": "地球在左边，月球在中间，太阳在右边。它们排成了一条直线。月球遮住了太阳。月球本影落在地球上的地方，太阳被完全遮挡——就像在西班牙。本影旁边还有一些光绕过月球，形成半影——就像在德国。", "start": 50.39, "end": 79.79}, {"de": "Der Schatten ist über Grönland und Island bis nach Spanien gezogen, auf die Balearen-Inseln. Viele Menschen in Europa wollten die Sonnenfinsternis sehen, auch in Deutschland. Hier war die Sonnenfinsternis schwächer als in Spanien.", "zh": "阴影从格陵兰岛和冰岛一直延伸到西班牙的巴利阿里群岛。许多欧洲人想观看这次日食，德国也是如此。不过在德国，日食不如西班牙明显。", "start": 80.27, "end": 96.39}, {"de": "Diese Menschen sitzen auf einem Berg in der Mitte von Deutschland. Dort beobachten sie die Sonnenfinsternis. Manche haben eine extra Brille. Sie ist wichtig als Schutz gegen die Sonne. Manche haben sich einen Schutz selbst gebastelt.", "zh": "这些人坐在德国中部的一座山上观测日食。有些人戴了专门的观测眼镜，这很重要，可以保护眼睛。有些人自己做了防护工具。", "start": 96.43, "end": 120.15}, {"de": "Und dann ist es so weit. Von der Sonne ist nur noch ein Teil zu sehen. Es wird dunkler am Himmel. Eine Frau sagt: \"Als die Sonne weg war, war es kalt. Ich habe zum Glück einen warmen Pullover. Ich habe gedacht, die Sonne und der Himmel sind so groß. Und wir Menschen sind so klein.\"", "zh": "然后那一刻到了。太阳只剩下一部分可见。天空变得更暗。一位女士说：\"太阳消失时变冷了，幸好我穿了暖和毛衣。我觉得太阳和天空那么大，我们人类这么渺小。\"", "start": 123.83, "end": 148.39}, {"de": "Auch in der Stadt Berlin wollten die Menschen die Sonnenfinsternis sehen. Und auch in der Stadt München waren die Menschen deshalb gekommen. Alle haben etwas Besonderes erlebt. Bis zur nächsten großen Sonnenfinsternis dauert es in Deutschland noch lange. Sie ist im Jahr 2081.", "zh": "柏林和慕尼黑的人们也来观看日食。每个人都经历了特别的时刻。德国下一次大型日食要等到2081年。", "start": 150.35, "end": 177.27}], "vocab": [{"lemma": "die Sonnenfinsternis", "key": "sonnenfinsternis", "forms": ["Sonnenfinsternis", "die Sonnenfinsternis"], "pos": "", "zh": "日食", "example_de": "In Europa gab es eine Sonnenfinsternis.", "example_zh": ""}, {"lemma": "verdecken", "key": "verdecken", "forms": ["verdecken"], "pos": "Verb", "zh": "遮挡", "example_de": "Der Mond hat die Sonne verdeckt.", "example_zh": ""}, {"lemma": "der Kernschatten", "key": "kernschatten", "forms": ["Kernschatten", "der Kernschatten"], "pos": "", "zh": "本影", "example_de": "Wo der Kernschatten war, war die Sonne verdeckt.", "example_zh": ""}, {"lemma": "der Halbschatten", "key": "halbschatten", "forms": ["Halbschatten", "der Halbschatten"], "pos": "", "zh": "半影", "example_de": "Es gab einen Halbschatten.", "example_zh": ""}, {"lemma": "beobachten", "key": "beobachten", "forms": ["beobachten"], "pos": "Verb", "zh": "观察", "example_de": "Dort beobachten sie die Sonnenfinsternis.", "example_zh": ""}, {"lemma": "die Brille", "key": "brille", "forms": ["Brille", "die Brille"], "pos": "", "zh": "眼镜", "example_de": "Manche haben eine extra Brille.", "example_zh": ""}, {"lemma": "der Schutz", "key": "schutz", "forms": ["Schutz", "der Schutz"], "pos": "", "zh": "保护", "example_de": "Sie ist wichtig als Schutz gegen die Sonne.", "example_zh": ""}, {"lemma": "basteln", "key": "basteln", "forms": ["basteln"], "pos": "Verb", "zh": "手工制作", "example_de": "Manche haben sich einen Schutz selbst gebastelt.", "example_zh": ""}, {"lemma": "schwach", "key": "schwach", "forms": ["schwach"], "pos": "", "zh": "弱的", "example_de": "Hier war die Sonnenfinsternis schwächer.", "example_zh": ""}, {"lemma": "erleben", "key": "erleben", "forms": ["erleben"], "pos": "Verb", "zh": "经历", "example_de": "Alle haben etwas Besonderes erlebt.", "example_zh": ""}], "grammar_points": [{"title": "比较级", "summary": "比较级 —schwächer als— 形容词加 -er 构成比较级，用 als 连接：schwach → schwächer。\"Hier war die Sonnenfinsternis schwächer als in Spanien.\"（这里日食比西班牙更弱。）", "example_de": "Hier war die Sonnenfinsternis schwächer als in Spanien.", "example_zh": ""}, {"title": "sich etwas basteln（反身）", "summary": "sich etwas basteln（反身） sich (Dat.) etwas basteln = 给自己手工做某物。\"Manche haben sich einen Schutz selbst gebastelt.\"（有些人给自己做了防护。）", "example_de": "Manche haben sich einen Schutz selbst gebastelt.", "example_zh": ""}], "background": "2026年8月13日的日食全食带经过北欧和西班牙。德国大部分地区只能看到偏食。观测日食必须使用专门的日食眼镜，普通太阳镜不够安全。德国下一次能看到的日全食要等到2081年。"}, {"title": "Vor 65 Jahren: Mauer in Berlin gebaut", "paras": [{"de": "In Berlin gab es früher eine Mauer. Die Mauer hat die Stadt geteilt — in Ost und West. Der westliche Teil gehörte zur BRD. Das ist das kurze Wort für Bundesrepublik Deutschland. Der östliche Teil gehörte zur DDR. Das ist das kurze Wort für Deutsche Demokratische Republik.", "zh": "柏林以前有一堵墙，把城市分成东西两部分。西部属于联邦德国（BRD），东部属于民主德国（DDR）。", "start": 178.51, "end": 211.67}, {"de": "Die DDR hat die Mauer gebaut vor 65 Jahren, am 13. August 1961. Die Regierung von der DDR hat damals gesagt: \"Nur manche Menschen dürfen über die Grenze in den Westen reisen. Für die meisten Menschen sind Reisen in den Westen aber verboten.\" Deshalb wurden manche Familien getrennt. Und Freunde konnten sich nicht mehr besuchen.", "zh": "65年前，1961年8月13日，东德修建了这堵墙。东德政府说：\"只有少数人可以越境去西部。对大多数人来说，去西部是被禁止的。\"因此一些家庭被迫分离，朋友不能再见面。", "start": 212.31, "end": 239.59}, {"de": "Diese Aufnahmen sind von früher, deshalb sind sie Schwarz-Weiß. Soldaten von der DDR bauen die Mauer quer durch die Stadt Berlin. Die Mauer trennt Ost und West. In der Zeitung steht: \"Ost-Berlin ist abgeriegelt.\" Das bedeutet: niemand kann über die Grenze in den Westen.", "zh": "这些影像是以前的，所以是黑白的。东德士兵在柏林城中建墙。报纸上写着：\"东柏林已被封锁。\"意思是没人能越境去西部。", "start": 239.71, "end": 267.23}, {"de": "Der Mann links ist Walter Ulbricht. Er war der Chef von der DDR. Er hat gesagt: \"Niemand baut eine Mauer.\" Das war aber gelogen.", "zh": "左边那个人是瓦尔特·乌布利希，东德的领导人。他曾说\"没人要建墙\"——但那是谎言。", "start": 267.99, "end": 279.63}, {"de": "Die Mauer hat plötzlich Familien und Freunde getrennt. Viele Menschen sind aus dem Osten in den Westen geflohen. Die Flucht aus der DDR war schwierig und gefährlich. Viele Menschen sind dabei gestorben. Trotzdem haben Menschen immer wieder versucht, über die Grenze zu kommen — zum Beispiel mit einer Leiter, durch einen Tunnel, oder mit dem Auto.", "zh": "这堵墙突然将家庭和朋友分开。许多人从东部逃到西部。出逃困难而危险，许多人在此过程中丧生。尽管如此，人们还是不断尝试越境——用梯子、挖隧道或开车。", "start": 280.15, "end": 316.75}, {"de": "Die Mauer stand 28 Jahre lang. 1989 ist die Mauer gefallen. Die Menschen aus der DDR durften über die Grenze in den Westen kommen.", "zh": "墙矗立了28年。1989年柏林墙倒塌。东德人民终于可以越境来到西部。", "start": 317.19, "end": 330.31}], "vocab": [{"lemma": "die Mauer", "key": "mauer", "forms": ["Mauer", "die Mauer"], "pos": "", "zh": "墙", "example_de": "In Berlin gab es früher eine Mauer.", "example_zh": ""}, {"lemma": "teilen", "key": "teilen", "forms": ["teilen"], "pos": "Verb", "zh": "分割", "example_de": "Die Mauer hat die Stadt geteilt.", "example_zh": ""}, {"lemma": "gehören zu", "key": "gehören-zu", "forms": ["gehören zu"], "pos": "", "zh": "属于", "example_de": "Der westliche Teil gehörte zur BRD.", "example_zh": ""}, {"lemma": "die Grenze", "key": "grenze", "forms": ["Grenze", "die Grenze"], "pos": "", "zh": "边界", "example_de": "Niemand kann über die Grenze.", "example_zh": ""}, {"lemma": "verboten", "key": "verboten", "forms": ["verboten"], "pos": "Verb", "zh": "被禁止的", "example_de": "Reisen in den Westen sind verboten.", "example_zh": ""}, {"lemma": "trennen", "key": "trennen", "forms": ["trennen"], "pos": "Verb", "zh": "分离", "example_de": "Deshalb wurden Familien getrennt.", "example_zh": ""}, {"lemma": "abriegeln", "key": "abriegeln", "forms": ["abriegeln"], "pos": "Verb", "zh": "封锁", "example_de": "Ost-Berlin ist abgeriegelt.", "example_zh": ""}, {"lemma": "fliehen", "key": "fliehen", "forms": ["fliehen"], "pos": "Verb", "zh": "逃跑", "example_de": "Viele sind in den Westen geflohen.", "example_zh": ""}, {"lemma": "die Flucht", "key": "flucht", "forms": ["Flucht", "die Flucht"], "pos": "", "zh": "逃跑", "example_de": "Die Flucht war gefährlich.", "example_zh": ""}, {"lemma": "gefährlich", "key": "gefährlich", "forms": ["gefährlich"], "pos": "", "zh": "危险的", "example_de": "Die Flucht war gefährlich.", "example_zh": ""}], "grammar_points": [{"title": "被动语态", "summary": "被动语态 — wurden getrennt werden + 过去分词 = 被动语态（过去时用 wurden）。\"Deshalb wurden manche Familien getrennt.\"（一些家庭被分离了。）= 英语 \"were separated\"。", "example_de": "Deshalb wurden manche Familien getrennt.", "example_zh": ""}, {"title": "dürfen", "summary": "dürfen — 允许/可以 \"Nur manche Menschen dürfen über die Grenze reisen.\"（只有部分人被允许越境旅行。）dürfen 的否定 = nicht dürfen = 不被允许/禁止。", "example_de": "Nur manche Menschen dürfen über die Grenze reisen.", "example_zh": ""}], "background": "1961年8月13日，东德在一夜之间开始修建柏林墙，将柏林分为东西两部分。东德官方称其为\"反法西斯防卫墙\"，实际目的是阻止居民逃往西方。墙存在28年间（1961-1989），至少140人在尝试越境时死亡。1989年11月9日柏林墙倒塌。2026年8月13日恰逢建墙65周年。\n      瓦尔特·乌布利希在1961年6月说\"没人有意建墙\"，两个月后墙就建了——史上最著名的谎言之一。"}, {"title": "Vulkan ausgebrochen: Flughafen gesperrt", "paras": [{"de": "In Italien ist vor einigen Tagen ein Vulkan ausgebrochen. Er heißt Ätna und ist auf der Insel Sizilien, im Süden von Italien. In der Nähe vom Ätna ist ein Flughafen. Er ist jetzt gesperrt. Deshalb sitzen manche Touristen auf der Insel fest. Sie müssen warten oder zu einem anderen Flughafen fahren.", "zh": "几天前意大利的一座火山喷发了。它叫埃特纳火山，位于意大利南部的西西里岛。附近的机场现在已经关闭，一些游客被困在岛上，必须等待或前往其他机场。", "start": 331.63, "end": 361.71}, {"de": "Das ist der Ätna von oben. Aus dem Vulkan kommen Gas und Asche. Wegen der Asche in der Luft können die Flugzeuge nicht fliegen. Aus dem Vulkan kommen auch Steine und Lava. Das ist die rote, heiße Flüssigkeit. Sie ist gefährlich für Menschen. Viele sind aber trotzdem gekommen, um den Vulkan aus der Nähe zu sehen.", "zh": "这是从上方看到的埃特纳火山。火山喷出气体和火山灰，因空气中的火山灰，飞机无法飞行。火山还喷出石头和熔岩——红色炽热的液体，对人体有危险。尽管如此，还是有很多人来近处观看火山。", "start": 361.87, "end": 387.35}], "vocab": [{"lemma": "ausbrechen", "key": "ausbrechen", "forms": ["ausbrechen"], "pos": "Verb", "zh": "喷发", "example_de": "Ein Vulkan ist ausgebrochen.", "example_zh": ""}, {"lemma": "der Vulkan", "key": "vulkan", "forms": ["Vulkan", "der Vulkan"], "pos": "", "zh": "火山", "example_de": "Er heißt Ätna und ist ein Vulkan.", "example_zh": ""}, {"lemma": "die Insel", "key": "insel", "forms": ["Insel", "die Insel"], "pos": "", "zh": "岛屿", "example_de": "Er ist auf der Insel Sizilien.", "example_zh": ""}, {"lemma": "sperren", "key": "sperren", "forms": ["sperren"], "pos": "Verb", "zh": "关闭", "example_de": "Der Flughafen ist gesperrt.", "example_zh": ""}, {"lemma": "fest-sitzen", "key": "fest-sitzen", "forms": ["fest-sitzen"], "pos": "", "zh": "被困住", "example_de": "Touristen sitzen auf der Insel fest.", "example_zh": ""}, {"lemma": "die Asche", "key": "asche", "forms": ["Asche", "die Asche"], "pos": "", "zh": "火山灰", "example_de": "Aus dem Vulkan kommen Gas und Asche.", "example_zh": ""}, {"lemma": "die Lava", "key": "lava", "forms": ["Lava", "die Lava"], "pos": "", "zh": "熔岩", "example_de": "Aus dem Vulkan kommen Steine und Lava.", "example_zh": ""}, {"lemma": "die Flüssigkeit", "key": "flüssigkeit", "forms": ["Flüssigkeit", "die Flüssigkeit"], "pos": "", "zh": "液体", "example_de": "Das ist die heiße Flüssigkeit.", "example_zh": ""}, {"lemma": "heiß", "key": "heiß", "forms": ["heiß"], "pos": "", "zh": "热的", "example_de": "Das ist die heiße Flüssigkeit.", "example_zh": ""}, {"lemma": "aus der Nähe", "key": "aus-der-nähe", "forms": ["aus der Nähe"], "pos": "Redewendung", "zh": "从近处", "example_de": "Um den Vulkan aus der Nähe zu sehen.", "example_zh": ""}], "grammar_points": [{"title": "Wegen + 第二格", "summary": "Wegen + 第二格 \"Wegen der Asche in der Luft können die Flugzeuge nicht fliegen.\"（因为空气中的火山灰，飞机无法飞行。）wegen = because of。", "example_de": "Wegen der Asche in der Luft können die Flugzeuge nicht fliegen.", "example_zh": ""}, {"title": "um ... zu（目的从句）", "summary": "um ... zu（目的从句） \"Viele sind gekommen, um den Vulkan zu sehen.\"（很多人来了，是为了看火山。）= in order to。", "example_de": "Viele sind gekommen, um den Vulkan zu sehen.", "example_zh": ""}], "background": "埃特纳火山是欧洲最高最活跃的火山，位于西西里岛东岸，海拔约3357米。附近的卡塔尼亚机场因火山灰影响飞行安全经常临时关闭。火山灰对航空发动机极其危险——2010年冰岛火山灰也曾导致欧洲大面积航班取消。"}, {"title": "Schwimm-EM: Medaillen für Deutsche", "paras": [{"de": "In der Hauptstadt von Frankreich, Paris, ist gerade die Schwimm-EM — die Europameisterschaft für Schwimmen. Der Mann vorne auf dem Foto ist Johannes Liebmann. Er war der Schnellste beim Schwimmen über 800 Meter. Dafür hat er eine Goldmedaille bekommen. Hinter ihm auf dem Foto ist Sven Schwarz. Er war der Zweitschnellste und hat eine Silbermedaille bekommen. Das Schwimmen war im Freistil. Die Sportler konnten sich die Schwimmtechnik selbst aussuchen, zum Beispiel Brustschwimmen.", "zh": "在法国首都巴黎，正在举行游泳欧锦赛。照片前面的约翰内斯·利布曼是800米游泳中最快的选手，获得金牌。他后面的斯文·施瓦茨是第二名，获得银牌。比赛是自由泳，运动员可以自己选择泳姿，比如蛙泳。", "start": 388.11, "end": 430.75}], "vocab": [{"lemma": "die EM (Europameisterschaft)", "key": "em", "forms": ["EM", "Europameisterschaft", "die EM (Europameisterschaft)"], "pos": "", "zh": "欧锦赛", "example_de": "In Paris ist gerade die Schwimm-EM.", "example_zh": ""}, {"lemma": "die Medaille", "key": "medaille", "forms": ["Medaille", "die Medaille"], "pos": "", "zh": "奖牌", "example_de": "Er hat eine Goldmedaille bekommen.", "example_zh": ""}, {"lemma": "der Schnellste", "key": "schnellste", "forms": ["Schnellste", "der Schnellste"], "pos": "", "zh": "最快的人", "example_de": "Er war der Schnellste.", "example_zh": ""}, {"lemma": "das Freistil", "key": "freistil", "forms": ["Freistil", "das Freistil"], "pos": "", "zh": "自由泳", "example_de": "Das Schwimmen war im Freistil.", "example_zh": ""}, {"lemma": "aussuchen", "key": "aussuchen", "forms": ["aussuchen"], "pos": "Verb", "zh": "选择", "example_de": "Sie konnten die Technik aussuchen.", "example_zh": ""}, {"lemma": "das Brustschwimmen", "key": "brustschwimmen", "forms": ["Brustschwimmen", "das Brustschwimmen"], "pos": "", "zh": "蛙泳", "example_de": "Zum Beispiel Brustschwimmen.", "example_zh": ""}], "grammar_points": [{"title": "形容词作名词", "summary": "形容词作名词 — der Schnellste \"Er war der Schnellste.\"（他是最快的人。）形容词加定冠词首字母大写即可当名词。", "example_de": "Er war der Schnellste.", "example_zh": ""}, {"title": "sich etwas aussuchen（反身）", "summary": "sich etwas aussuchen（反身） \"Die Sportler konnten sich die Schwimmtechnik selbst aussuchen.\"（运动员可以自己选择游泳技术。）", "example_de": "Die Sportler konnten sich die Schwimmtechnik selbst aussuchen.", "example_zh": ""}], "background": "2026年游泳欧锦赛在欧洲举行。德国运动员在男子800米自由泳包揽金银牌。自由泳规则允许使用任何泳姿，实际比赛中选手几乎都选择爬泳（Kraulen）。800米是长距离项目，对耐力要求极高。"}, {"title": "Das Wetter", "paras": [{"de": "Und jetzt kommt das Wetter. Die Sonne scheint. Nur oben im Norden und rechts im Westen gibt es ein paar Wolken. Es ist trocken.", "zh": "现在是天气预报。阳光明媚。只有北部上方和西部右侧有一些云。天气干燥。", "start": 450.35, "end": 460.35}], "vocab": [{"lemma": "die Sonne scheint", "key": "sonne-scheint", "forms": ["Sonne scheint", "die Sonne scheint"], "pos": "", "zh": "阳光照耀", "example_de": "Die Sonne scheint.", "example_zh": ""}, {"lemma": "die Wolke", "key": "wolke", "forms": ["Wolke", "die Wolke"], "pos": "", "zh": "云", "example_de": "Es gibt ein paar Wolken.", "example_zh": ""}, {"lemma": "trocken", "key": "trocken", "forms": ["trocken"], "pos": "Verb", "zh": "干燥的", "example_de": "Es ist trocken.", "example_zh": ""}, {"lemma": "der Norden", "key": "norden", "forms": ["Norden", "der Norden"], "pos": "", "zh": "北方", "example_de": "Oben im Norden gibt es Wolken.", "example_zh": ""}], "grammar_points": [{"title": "Es gibt + 第四格", "summary": "Es gibt + 第四格 — 有/存在 \"Es gibt ein paar Wolken.\"（有几朵云。）es gibt 永远接第四格，= there is/are。", "example_de": "Es gibt ein paar Wolken.", "example_zh": ""}], "background": ""}], "gloss": {"sonnenfinsternis": {"word": "die Sonnenfinsternis", "zh": "日食", "pos": "", "example": "In Europa gab es eine Sonnenfinsternis.", "source": "editorial"}, "verdecken": {"word": "verdecken", "zh": "遮挡", "pos": "Verb", "example": "Der Mond hat die Sonne verdeckt.", "source": "editorial"}, "kernschatten": {"word": "der Kernschatten", "zh": "本影", "pos": "", "example": "Wo der Kernschatten war, war die Sonne verdeckt.", "source": "editorial"}, "halbschatten": {"word": "der Halbschatten", "zh": "半影", "pos": "", "example": "Es gab einen Halbschatten.", "source": "editorial"}, "beobachten": {"word": "beobachten", "zh": "观察", "pos": "Verb", "example": "Dort beobachten sie die Sonnenfinsternis.", "source": "editorial"}, "brille": {"word": "die Brille", "zh": "眼镜", "pos": "", "example": "Manche haben eine extra Brille.", "source": "editorial"}, "schutz": {"word": "der Schutz", "zh": "保护", "pos": "", "example": "Sie ist wichtig als Schutz gegen die Sonne.", "source": "editorial"}, "basteln": {"word": "basteln", "zh": "手工制作", "pos": "Verb", "example": "Manche haben sich einen Schutz selbst gebastelt.", "source": "editorial"}, "schwach": {"word": "schwach", "zh": "弱的", "pos": "", "example": "Hier war die Sonnenfinsternis schwächer.", "source": "editorial"}, "erleben": {"word": "erleben", "zh": "经历", "pos": "Verb", "example": "Alle haben etwas Besonderes erlebt.", "source": "editorial"}, "mauer": {"word": "die Mauer", "zh": "墙", "pos": "", "example": "In Berlin gab es früher eine Mauer.", "source": "editorial"}, "teilen": {"word": "teilen", "zh": "分割", "pos": "Verb", "example": "Die Mauer hat die Stadt geteilt.", "source": "editorial"}, "gehören-zu": {"word": "gehören zu", "zh": "属于", "pos": "", "example": "Der westliche Teil gehörte zur BRD.", "source": "editorial"}, "grenze": {"word": "die Grenze", "zh": "边界", "pos": "", "example": "Niemand kann über die Grenze.", "source": "editorial"}, "verboten": {"word": "verboten", "zh": "被禁止的", "pos": "Verb", "example": "Reisen in den Westen sind verboten.", "source": "editorial"}, "trennen": {"word": "trennen", "zh": "分离", "pos": "Verb", "example": "Deshalb wurden Familien getrennt.", "source": "editorial"}, "abriegeln": {"word": "abriegeln", "zh": "封锁", "pos": "Verb", "example": "Ost-Berlin ist abgeriegelt.", "source": "editorial"}, "fliehen": {"word": "fliehen", "zh": "逃跑", "pos": "Verb", "example": "Viele sind in den Westen geflohen.", "source": "editorial"}, "flucht": {"word": "die Flucht", "zh": "逃跑", "pos": "", "example": "Die Flucht war gefährlich.", "source": "editorial"}, "gefährlich": {"word": "gefährlich", "zh": "危险的", "pos": "", "example": "Die Flucht war gefährlich.", "source": "editorial"}, "ausbrechen": {"word": "ausbrechen", "zh": "喷发", "pos": "Verb", "example": "Ein Vulkan ist ausgebrochen.", "source": "editorial"}, "vulkan": {"word": "der Vulkan", "zh": "火山", "pos": "", "example": "Er heißt Ätna und ist ein Vulkan.", "source": "editorial"}, "insel": {"word": "die Insel", "zh": "岛屿", "pos": "", "example": "Er ist auf der Insel Sizilien.", "source": "editorial"}, "sperren": {"word": "sperren", "zh": "关闭", "pos": "Verb", "example": "Der Flughafen ist gesperrt.", "source": "editorial"}, "fest-sitzen": {"word": "fest-sitzen", "zh": "被困住", "pos": "", "example": "Touristen sitzen auf der Insel fest.", "source": "editorial"}, "asche": {"word": "die Asche", "zh": "火山灰", "pos": "", "example": "Aus dem Vulkan kommen Gas und Asche.", "source": "editorial"}, "lava": {"word": "die Lava", "zh": "熔岩", "pos": "", "example": "Aus dem Vulkan kommen Steine und Lava.", "source": "editorial"}, "flüssigkeit": {"word": "die Flüssigkeit", "zh": "液体", "pos": "", "example": "Das ist die heiße Flüssigkeit.", "source": "editorial"}, "heiß": {"word": "heiß", "zh": "热的", "pos": "", "example": "Das ist die heiße Flüssigkeit.", "source": "editorial"}, "aus-der-nähe": {"word": "aus der Nähe", "zh": "从近处", "pos": "Redewendung", "example": "Um den Vulkan aus der Nähe zu sehen.", "source": "editorial"}, "em": {"word": "die EM (Europameisterschaft)", "zh": "欧锦赛", "pos": "", "example": "In Paris ist gerade die Schwimm-EM.", "source": "editorial"}, "medaille": {"word": "die Medaille", "zh": "奖牌", "pos": "", "example": "Er hat eine Goldmedaille bekommen.", "source": "editorial"}, "schnellste": {"word": "der Schnellste", "zh": "最快的人", "pos": "", "example": "Er war der Schnellste.", "source": "editorial"}, "freistil": {"word": "das Freistil", "zh": "自由泳", "pos": "", "example": "Das Schwimmen war im Freistil.", "source": "editorial"}, "aussuchen": {"word": "aussuchen", "zh": "选择", "pos": "Verb", "example": "Sie konnten die Technik aussuchen.", "source": "editorial"}, "brustschwimmen": {"word": "das Brustschwimmen", "zh": "蛙泳", "pos": "", "example": "Zum Beispiel Brustschwimmen.", "source": "editorial"}, "sonne-scheint": {"word": "die Sonne scheint", "zh": "阳光照耀", "pos": "", "example": "Die Sonne scheint.", "source": "editorial"}, "wolke": {"word": "die Wolke", "zh": "云", "pos": "", "example": "Es gibt ein paar Wolken.", "source": "editorial"}, "trocken": {"word": "trocken", "zh": "干燥的", "pos": "Verb", "example": "Es ist trocken.", "source": "editorial"}, "norden": {"word": "der Norden", "zh": "北方", "pos": "", "example": "Oben im Norden gibt es Wolken.", "source": "editorial"}, "gut": {"word": "gut", "zh": "良好的、合适的", "pos": "Verb", "example": "", "source": "wiktionary"}, "spanien": {"word": "Spanien", "zh": "西班牙（南歐國家）", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "sehen": {"word": "sehen", "zh": "(不及物) 看；有視力", "pos": "Verb", "example": "", "source": "wiktionary"}, "himmel": {"word": "Himmel", "zh": "天空", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "dunkel": {"word": "dunkel", "zh": "黑暗的、昏暗的", "pos": "Adverb", "example": "", "source": "wiktionary"}, "erde": {"word": "Erde", "zh": "〈不可数〉土壤", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "links": {"word": "links", "zh": "左、（政治）左派", "pos": "Präposition", "example": "", "source": "wiktionary"}, "mond": {"word": "Mond", "zh": "〈天〉衛星", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "mitte": {"word": "Mitte", "zh": "中间、中心、中间", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "und": {"word": "Und", "zh": "（表示并列关系）和…、与…", "pos": "Konjunktion", "example": "", "source": "wiktionary"}, "einer": {"word": "Einer", "zh": "(數學) 個位", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "verdeckt": {"word": "verdeckt", "zh": "隐藏的、隐蔽的、覆盖的", "pos": "Verb", "example": "", "source": "wiktionary"}, "neben": {"word": "neben", "zh": "在…旁、在…附近", "pos": "Adverb", "example": "", "source": "wiktionary"}, "kam": {"word": "kam", "zh": "kommen 的第一人稱/第三人稱單數簡單過去時", "pos": "Verb", "example": "", "source": "wiktionary"}, "aber": {"word": "Aber", "zh": "反對", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "noch": {"word": "noch", "zh": "仍然，还", "pos": "Konjunktion", "example": "", "source": "wiktionary"}, "einen": {"word": "einen", "zh": "ein 的賓格陽性單數", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "schatten": {"word": "Schatten", "zh": "阴影、暗影", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "über": {"word": "über", "zh": "（表示地点，支配與格，回答问题 wo?）", "pos": "Adverb", "example": "", "source": "wiktionary"}, "bis": {"word": "bis", "zh": "到、直到", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "nach": {"word": "nach", "zh": "nach（接第三格)", "pos": "Adverb", "example": "", "source": "wiktionary"}, "gezogen": {"word": "gezogen", "zh": "拖的、拉的、牵的", "pos": "Verb", "example": "", "source": "wiktionary"}, "viele": {"word": "viele", "zh": "多数、很多", "pos": "Pronomen", "example": "", "source": "wiktionary"}, "menschen": {"word": "Menschen", "zh": "Mensch 的賓格/與格/屬格單數", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "wollten": {"word": "wollten", "zh": "第一人稱/第三人稱複數簡單過去時", "pos": "Verb", "example": "", "source": "wiktionary"}, "hier": {"word": "Hier", "zh": "Hier 中 (強變化，屬格 Hiers，無複數)", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "diese": {"word": "diese", "zh": "dieser 的主格陰性單數", "pos": "Verb", "example": "", "source": "wiktionary"}, "sitzen": {"word": "sitzen", "zh": "(不及物) 坐；（鳥類） 棲息 [助動詞 haben或sein]", "pos": "Verb", "example": "", "source": "wiktionary"}, "einem": {"word": "einem", "zh": "ein 的與格陽性/中性單數", "pos": "Zahl", "example": "", "source": "wiktionary"}, "extra": {"word": "extra", "zh": "特别的、额外的、补充的、增加的", "pos": "Adverb", "example": "", "source": "wiktionary"}, "gegen": {"word": "gegen", "zh": "［支配宾格］对着、朝着、面对、靠、反、反对、与…相对、大约", "pos": "Präposition", "example": "", "source": "wiktionary"}, "selbst": {"word": "selbst", "zh": "連，甚至，即使", "pos": "Adverb", "example": "", "source": "wiktionary"}, "dann": {"word": "dann", "zh": "（时间）此后、然后", "pos": "Adverb", "example": "", "source": "wiktionary"}, "weit": {"word": "weit", "zh": "宽的", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "ein": {"word": "ein", "zh": "ein 陽  或  中", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "teil": {"word": "Teil", "zh": "部分", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "sagt": {"word": "sagt", "zh": "säga 的動名詞。", "pos": "Verb", "example": "", "source": "wiktionary"}, "kalt": {"word": "kalt", "zh": "鍛造", "pos": "Verb", "example": "", "source": "wiktionary"}, "ich": {"word": "Ich", "zh": "(精神分析學) 本我", "pos": "Pronomen", "example": "", "source": "wiktionary"}, "pullover": {"word": "Pullover", "zh": "毛衣，套衫", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "groß": {"word": "groß", "zh": "大的", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "wir": {"word": "wir", "zh": "（第一人稱複數主格代詞）我們", "pos": "Pronomen", "example": "", "source": "wiktionary"}, "klein": {"word": "klein", "zh": "小的，不明显的，不重要的", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "stadt": {"word": "Stadt", "zh": "城市", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "deshalb": {"word": "deshalb", "zh": "因此、为此、所以", "pos": "Adverb", "example": "", "source": "wiktionary"}, "besonderes": {"word": "besonderes", "zh": "besondere 的強變化/混合變化主格/賓格中性單數", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "erlebt": {"word": "erlebt", "zh": "erleben的过去分词和变位形式", "pos": "Verb", "example": "", "source": "wiktionary"}, "großen": {"word": "großen", "zh": "groß的变格形式", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "lange": {"word": "lange", "zh": "好久", "pos": "Adverb", "example": "", "source": "wiktionary"}, "jahr": {"word": "Jahr", "zh": "年、年头", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "geteilt": {"word": "geteilt", "zh": "分离的、分裂的、分割的、分摊的", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "west": {"word": "West", "zh": "（不加冠詞）西，西方", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "westliche": {"word": "westliche", "zh": "強變化/混合變化主格/賓格陰性單數", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "gehörte": {"word": "gehörte", "zh": "gehören 的第一人稱/第三人稱單數簡單過去時", "pos": "Verb", "example": "", "source": "wiktionary"}, "kurze": {"word": "kurze", "zh": "kurz的变格形式", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "wort": {"word": "Wort", "zh": "(複數 Wörter) 词，单词，字", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "östliche": {"word": "östliche", "zh": "強變化/混合變化主格/賓格陰性單數", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "demokratische": {"word": "demokratische", "zh": "強變化/混合變化主格/賓格陰性單數", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "republik": {"word": "Republik", "zh": "共和國", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "jahren": {"word": "Jahren", "zh": "Jahr的变格形式", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "regierung": {"word": "Regierung", "zh": "(政治) 政府，內閣", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "westen": {"word": "Westen", "zh": "西、西方", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "getrennt": {"word": "getrennt", "zh": "离散的、分离的、分开的、分隔的", "pos": "Verb", "example": "", "source": "wiktionary"}, "freunde": {"word": "Freunde", "zh": "Freund 的主格/賓格/屬格複數", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "nicht": {"word": "nicht", "zh": "不，无，没有", "pos": "Adverb", "example": "", "source": "wiktionary"}, "besuchen": {"word": "besuchen", "zh": "访问，拜访，探望，参观", "pos": "Verb", "example": "", "source": "wiktionary"}, "bauen": {"word": "bauen", "zh": "建筑，建造", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "durch": {"word": "durch", "zh": "通过、经由、根据、按照", "pos": "Präposition", "example": "", "source": "wiktionary"}, "zeitung": {"word": "Zeitung", "zh": "报纸。报章", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "steht": {"word": "steht", "zh": "第三人稱單數現在時", "pos": "Verb", "example": "", "source": "wiktionary"}, "bedeutet": {"word": "bedeutet", "zh": "第三人稱單數現在時", "pos": "Verb", "example": "", "source": "wiktionary"}, "walter": {"word": "Walter", "zh": "沃尔特，男子名/德语姓氏", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "baut": {"word": "baut", "zh": "bauen的变位形式", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "plötzlich": {"word": "plötzlich", "zh": "突然的，突如其来的", "pos": "Adverb", "example": "", "source": "wiktionary"}, "aus": {"word": "Aus", "zh": "（不幸的）结局", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "immer": {"word": "immer", "zh": "总是、每次", "pos": "Adverb", "example": "", "source": "wiktionary"}, "wieder": {"word": "wieder", "zh": "又、再次", "pos": "Adverb", "example": "", "source": "wiktionary"}, "versucht": {"word": "versucht", "zh": "企图的、尝试的、未遂的", "pos": "Verb", "example": "", "source": "wiktionary"}, "kommen": {"word": "kommen", "zh": "來；到達", "pos": "Verb", "example": "", "source": "wiktionary"}, "beispiel": {"word": "Beispiel", "zh": "例子", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "mit": {"word": "mit", "zh": "与…、同…、通过…、由于", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "oder": {"word": "oder", "zh": "或者", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "auto": {"word": "Auto", "zh": "陽/〔中〕/陰/唯複   通常 〔可數〕/不可數", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "lang": {"word": "lang", "zh": "长的", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "einigen": {"word": "einigen", "zh": "联合、统一、取得一致", "pos": "Pronomen", "example": "", "source": "wiktionary"}, "tagen": {"word": "tagen", "zh": "开会，聚集", "pos": "Verb", "example": "", "source": "wiktionary"}, "jetzt": {"word": "jetzt", "zh": "现在、目前", "pos": "Adverb", "example": "", "source": "wiktionary"}, "gesperrt": {"word": "gesperrt", "zh": "被封锁的", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "fest": {"word": "fest", "zh": "固态的；硬的，结实的", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "wegen": {"word": "Wegen", "zh": "Weg的变格形式", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "luft": {"word": "Luft", "zh": "(仅单数) 空气", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "können": {"word": "können", "zh": "能夠（做某事或成為某事物），有……的可能，可以", "pos": "Verb", "example": "", "source": "wiktionary"}, "paris": {"word": "Paris", "zh": "巴黎（法国首都）", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "gerade": {"word": "gerade", "zh": "直的，不弯的，笔直的；直接的，坦率的", "pos": "Adverb", "example": "", "source": "wiktionary"}, "foto": {"word": "Foto", "zh": "照片", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "meter": {"word": "Meter", "zh": "公尺、米", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "dafür": {"word": "dafür", "zh": "肯定答复、同意", "pos": "Adverb", "example": "", "source": "wiktionary"}, "goldmedaille": {"word": "Goldmedaille", "zh": "金牌", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "hinter": {"word": "hinter", "zh": "在…后面", "pos": "Präposition", "example": "", "source": "wiktionary"}, "schwarz": {"word": "Schwarz", "zh": "黑色", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "kommt": {"word": "kommt", "zh": "第三人稱單數", "pos": "Verb", "example": "", "source": "wiktionary"}, "wetter": {"word": "Wetter", "zh": "天氣", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "paar": {"word": "paar", "zh": "一些、几个", "pos": "Pronomen", "example": "", "source": "wiktionary"}}, "form_to_key": {"sonnenfinsternis": "sonnenfinsternis", "die sonnenfinsternis": "sonnenfinsternis", "verdecken": "verdecken", "kernschatten": "kernschatten", "der kernschatten": "kernschatten", "halbschatten": "halbschatten", "der halbschatten": "halbschatten", "beobachten": "beobachten", "brille": "brille", "die brille": "brille", "schutz": "schutz", "der schutz": "schutz", "basteln": "basteln", "schwach": "schwach", "erleben": "erleben", "mauer": "mauer", "die mauer": "mauer", "teilen": "teilen", "gehören zu": "gehören-zu", "grenze": "grenze", "die grenze": "grenze", "verboten": "verboten", "trennen": "trennen", "abriegeln": "abriegeln", "fliehen": "fliehen", "flucht": "flucht", "die flucht": "flucht", "gefährlich": "gefährlich", "ausbrechen": "ausbrechen", "vulkan": "vulkan", "der vulkan": "vulkan", "insel": "insel", "die insel": "insel", "sperren": "sperren", "fest-sitzen": "fest-sitzen", "asche": "asche", "die asche": "asche", "lava": "lava", "die lava": "lava", "flüssigkeit": "flüssigkeit", "die flüssigkeit": "flüssigkeit", "heiß": "heiß", "aus der nähe": "aus-der-nähe", "em": "em", "europameisterschaft": "em", "die em (europameisterschaft)": "em", "medaille": "medaille", "die medaille": "medaille", "schnellste": "schnellste", "der schnellste": "schnellste", "freistil": "freistil", "das freistil": "freistil", "aussuchen": "aussuchen", "brustschwimmen": "brustschwimmen", "das brustschwimmen": "brustschwimmen", "sonne scheint": "sonne-scheint", "die sonne scheint": "sonne-scheint", "wolke": "wolke", "die wolke": "wolke", "trocken": "trocken", "norden": "norden", "der norden": "norden", "gut": "gut", "spanien": "spanien", "sehen": "sehen", "himmel": "himmel", "dunkel": "dunkel", "erde": "erde", "links": "links", "mond": "mond", "mitte": "mitte", "und": "und", "einer": "einer", "verdeckt": "verdeckt", "neben": "neben", "kam": "kam", "aber": "aber", "noch": "noch", "einen": "einen", "schatten": "schatten", "über": "über", "bis": "bis", "nach": "nach", "gezogen": "gezogen", "viele": "viele", "menschen": "menschen", "wollten": "wollten", "hier": "hier", "diese": "diese", "sitzen": "sitzen", "einem": "einem", "extra": "extra", "gegen": "gegen", "selbst": "selbst", "dann": "dann", "weit": "weit", "ein": "ein", "teil": "teil", "sagt": "sagt", "kalt": "kalt", "ich": "ich", "pullover": "pullover", "groß": "groß", "wir": "wir", "klein": "klein", "stadt": "stadt", "deshalb": "deshalb", "besonderes": "besonderes", "erlebt": "erlebt", "großen": "großen", "lange": "lange", "jahr": "jahr", "geteilt": "geteilt", "west": "west", "westliche": "westliche", "gehörte": "gehörte", "kurze": "kurze", "wort": "wort", "östliche": "östliche", "demokratische": "demokratische", "republik": "republik", "jahren": "jahren", "regierung": "regierung", "westen": "westen", "getrennt": "getrennt", "freunde": "freunde", "nicht": "nicht", "besuchen": "besuchen", "bauen": "bauen", "durch": "durch", "zeitung": "zeitung", "steht": "steht", "bedeutet": "bedeutet", "walter": "walter", "baut": "baut", "plötzlich": "plötzlich", "aus": "aus", "immer": "immer", "wieder": "wieder", "versucht": "versucht", "kommen": "kommen", "beispiel": "beispiel", "mit": "mit", "oder": "oder", "auto": "auto", "lang": "lang", "einigen": "einigen", "tagen": "tagen", "jetzt": "jetzt", "gesperrt": "gesperrt", "fest": "fest", "wegen": "wegen", "luft": "luft", "können": "können", "paris": "paris", "gerade": "gerade", "foto": "foto", "meter": "meter", "dafür": "dafür", "goldmedaille": "goldmedaille", "hinter": "hinter", "schwarz": "schwarz", "kommt": "kommt", "wetter": "wetter", "paar": "paar"}, "phrases": ["die Sonnenfinsternis", "das Brustschwimmen", "die Sonne scheint", "der Halbschatten", "der Kernschatten", "die Flüssigkeit", "der Schnellste", "Sonne scheint", "aus der Nähe", "das Freistil", "die Medaille", "der Norden", "der Schutz", "der Vulkan", "die Brille", "die Flucht", "die Grenze", "gehören zu", "die Asche", "die Insel", "die Mauer", "die Wolke", "die Lava"]};
+const BK_KEY = 'dd-basket';
+const GLOSS_KEY = 'dd-user-gloss';
+const PREF_KEY = 'dd-preferences';
+function migrateBasketItem(b) {
+  return {
+    key: b.key,
+    word: b.word,
+    zh: b.zh || '',
+    pos: b.pos || '',
+    example: b.example || b.exampleDe || '',
+    exampleZh: b.exampleZh || '',
+    date: b.date || '',
+    topic: b.topic || '',
+    source: b.source || '',
+    createdAt: b.createdAt || 0
+  };
+}
+const basketData = loadStored(BK_KEY, []);
+let basket = Array.isArray(basketData) ? basketData.map(migrateBasketItem) : [];
+let userGloss = loadStored(GLOSS_KEY, {});
+const prefs = loadStored(PREF_KEY, { theme: 'light', fontStep: 0, zh: true });
+let editingKey = null;
+let popWord = null;
 
-  <!-- Nachricht 5 -->
-  <div class="news">
-    <h2><span class="num">5</span> Das Wetter</h2>
-    <div class="de-text">Und jetzt kommt das Wetter. Die Sonne scheint. Nur oben im Norden und rechts im Westen gibt es ein paar Wolken. Es ist trocken.</div>
-    <div class="translation">现在是天气预报。阳光明媚。只有北部上方和西部右侧有一些云。天气干燥。</div>
-    <table class="vocab">
-      <tr><th>Deutsch</th><th>中文</th><th>Beispielsatz</th></tr>
-      <tr><td>die Sonne scheint</td><td>阳光照耀</td><td>Die Sonne scheint.</td></tr>
-      <tr><td>die Wolke</td><td>云</td><td>Es gibt ein paar Wolken.</td></tr>
-      <tr><td>trocken</td><td>干燥的</td><td>Es ist trocken.</td></tr>
-      <tr><td>der Norden</td><td>北方</td><td>Oben im Norden gibt es Wolken.</td></tr>
-    </table>
-    <div class="grammar">
-      <strong>Es gibt + 第四格 — 有/存在</strong><br>
-      "Es <b>gibt</b> ein paar Wolken."（有几朵云。）es gibt 永远接第四格，= there is/are。
-    </div>
-  </div>
+function loadStored(key, fallback) {
+  try { return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback)); }
+  catch { return fallback; }
+}
+function saveStored(key, value) { localStorage.setItem(key, JSON.stringify(value)); }
+function getGloss(key) {
+  if (userGloss[key]) return { source: 'user', ...userGloss[key] };
+  return DATA.gloss[key] || null;
+}
+function applyPrefs() {
+  document.documentElement.dataset.theme = prefs.theme === 'dark' ? 'dark' : 'light';
+  document.body.style.setProperty('--reader-size', `${18.5 + (prefs.fontStep || 0)}px`);
+  document.body.classList.toggle('hide-zh', prefs.zh === false);
+}
+applyPrefs();
 
-  <div class="back-link">
-    <a href="index.html">← Zurück zur Übersicht</a>
-  </div>
+/* ---------- 渲染 ---------- */
+const WK_RE = /[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß-]*/g;
+const PHRASES = (DATA.phrases || []).slice().sort((a, b) => b.length - a.length);
+function lookupKey(surface) {
+  return (DATA.form_to_key && DATA.form_to_key[surface.toLowerCase()]) || surface.toLowerCase();
+}
+function wrapWord(surface, key) {
+  const g = getGloss(key);
+  const classes = [
+    g?.zh ? 'known' : '',
+    g?.source === 'editorial' ? 'ed' : '',
+    g?.source === 'wiktionary' ? 'wiki' : '',
+    basket.some(b => b.key === key) ? 'saved' : ''
+  ].filter(Boolean).join(' ');
+  return `<w data-w="${esc(key)}" class="${classes}">${esc(surface)}</w>`;
+}
+function isLetter(ch) { return /[A-Za-zÄÖÜäöüß]/.test(ch || ''); }
+function tokenizeDe(text) {
+  let html = '', i = 0;
+  const lower = text.toLowerCase();
+  while (i < text.length) {
+    let hit = '';
+    if (i === 0 || !isLetter(text[i - 1])) {
+      for (const ph of PHRASES) {
+        if (lower.startsWith(ph.toLowerCase(), i) && !isLetter(text[i + ph.length])) {
+          hit = text.slice(i, i + ph.length);
+          break;
+        }
+      }
+    }
+    if (hit) {
+      html += wrapWord(hit, lookupKey(hit));
+      i += hit.length;
+      continue;
+    }
+    if (isLetter(text[i])) {
+      let j = i + 1;
+      while (j < text.length && /[A-Za-zÄÖÜäöüß-]/.test(text[j])) j++;
+      const word = text.slice(i, j);
+      html += wrapWord(word, lookupKey(word));
+      i = j;
+    } else {
+      let j = i + 1;
+      while (j < text.length && !isLetter(text[j])) j++;
+      html += esc(text.slice(i, j));
+      i = j;
+    }
+  }
+  return html;
+}
+
+document.getElementById('hdate').textContent = fmtDate(DATA.date);
+document.getElementById('story-count').textContent = DATA.news.length + ' Themen';
+document.title = 'Deutsch Daily — ' + fmtDate(DATA.date);
+mountPlayer();
+const vlink = document.getElementById('vlink');
+if (DATA.video_page) vlink.href = DATA.video_page;
+else vlink.style.display = 'none';
+
+function storyExtras(n, compact) {
+  if (compact) {
+    const vocab = n.vocab.length ? `<div class="vlist">${
+      n.vocab.map(v => `<div class="vrow"><span class="vw" title="${esc(v.lemma)}">${esc(v.lemma)}</span><span class="vz" title="${esc(v.zh)}">${esc(v.zh)}</span><button type="button" class="vadd" data-add="${esc(v.key)}" title="加入生词本" aria-label="加入生词本">+</button></div>`).join('')
+    }</div>` : '';
+    const notes = [
+      ...n.grammar_points.map(g => `<details class="rail-note"><summary>${esc(g.title)}</summary><div class="body">${g.example_de ? `<i>${esc(g.example_de)}</i><br>` : ''}${esc(g.summary)}</div></details>`),
+      n.background ? `<details class="rail-note"><summary>背景</summary><div class="body">${esc(n.background)}</div></details>` : ''
+    ].filter(Boolean).join('');
+    if (!vocab && !notes) return '<p class="empty-study">这条没有单独的词汇或语法。</p>';
+    return vocab + (notes ? `<div class="rail-notes">${notes}</div>` : '');
+  }
+  const vocab = n.vocab.length ? `<details class="sec-vocab"><summary>重点词汇 · ${n.vocab.length}</summary><div class="body">${
+    n.vocab.map(v => `<div class="vcard"><div><div class="vcard-top">${esc(v.lemma)}${v.pos ? `<span class="vpos">${esc(v.pos)}</span>` : ''}</div><div class="vzh">${esc(v.zh)}</div>${v.example_de ? `<div class="vex">${esc(v.example_de)}</div>` : ''}</div><button type="button" class="vadd" data-add="${esc(v.key)}" title="加入生词本" aria-label="加入生词本">+</button></div>`).join('')
+  }</div></details>` : '';
+  const gram = n.grammar_points.length ? `<details class="sec-gram"><summary>语法 · ${n.grammar_points.length}</summary><div class="body">${
+    n.grammar_points.map(g => `<div class="gcard"><h4>${esc(g.title)}</h4>${g.example_de ? `<div class="gex">${esc(g.example_de)}</div>` : ''}${g.example_zh ? `<div class="gexzh">${esc(g.example_zh)}</div>` : ''}${g.summary ? `<details class="gmore"><summary>解释</summary><div>${esc(g.summary)}</div></details>` : ''}</div>`).join('')
+  }</div></details>` : '';
+  const bg = n.background ? `<details class="sec-bg"><summary>背景资料</summary><div class="body"><p class="bg-note">AI 整理，未经独立来源核验</p>${esc(n.background)}</div></details>` : '';
+  return vocab + gram + bg || '<p class="empty-study">这条没有单独的词汇或语法。</p>';
+}
+
+const newsEl = document.getElementById('news');
+DATA.news.forEach((n, i) => {
+  const paras = n.paras.map((p, pi) => {
+    const hasT = p.start != null;
+    const seek = hasT
+      ? `<button class="seek" data-start="${p.start}" type="button">${fmtClock(p.start)}</button>`
+      : `<button class="seek" type="button" disabled>—</button>`;
+    return `<div class="para" data-start="${hasT ? p.start : ''}" data-end="${p.end != null ? p.end : ''}" id="p-${i}-${pi}">${seek}<div><div class="de">${tokenizeDe(p.de)}</div>${p.zh ? `<div class="zh">${esc(p.zh)}</div>` : ''}</div></div>`;
+  }).join('');
+  newsEl.insertAdjacentHTML('beforeend',
+    `<article id="story-${i + 1}" data-idx="${i}"><div class="n-head"><span class="n-idx">${String(i+1).padStart(2,'0')}</span><h2>${esc(n.title)}</h2></div>${paras}<div class="article-extras">${storyExtras(n)}</div></article>`);
+});
+document.getElementById('topic-list').innerHTML = DATA.news.map((n, i) =>
+  `<a href="#story-${i + 1}" data-idx="${i}" title="${esc(n.title)}">${String(i + 1).padStart(2, '0')}</a>`
+).join('');
+
+let activeStory = -1;
+function setActiveStory(i, scroll) {
+  if (i < 0 || i >= DATA.news.length) return;
+  const changed = i !== activeStory;
+  activeStory = i;
+  if (changed) {
+    const n = DATA.news[i];
+    document.getElementById('study-extras').innerHTML = storyExtras(n, true);
+    document.getElementById('rail-now').textContent = String(i + 1).padStart(2, '0') + ' · ' + n.title;
+  }
+  document.querySelectorAll('#topic-list a').forEach((a, idx) => a.classList.toggle('on', idx === i));
+  if (scroll) document.getElementById('story-' + (i + 1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+setActiveStory(0);
+document.getElementById('topic-list').addEventListener('click', e => {
+  const a = e.target.closest('a[data-idx]');
+  if (!a) return;
+  e.preventDefault();
+  setActiveStory(Number(a.dataset.idx), true);
+});
+const storyWatch = new IntersectionObserver((entries) => {
+  const vis = entries.filter(x => x.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  if (vis) setActiveStory(Number(vis.target.dataset.idx));
+}, { rootMargin: '-20% 0px -55% 0px', threshold: [0.15, 0.4, 0.7] });
+document.querySelectorAll('article[data-idx]').forEach(el => storyWatch.observe(el));
+
+function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function fmtInline(s) { return esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>'); }
+function fmtDate(iso) {
+  const d = new Date(iso + 'T12:00:00');
+  return d.toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+}
+function fmtClock(sec) {
+  const s = Math.max(0, Math.floor(Number(sec) || 0));
+  return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
+}
+function mountPlayer() {
+  const box = document.getElementById('player');
+  const fallback = () => {
+    if (!DATA.embed_url) {
+      document.getElementById('video-card').style.display = 'none';
+      return;
+    }
+    box.innerHTML = `<iframe src="${esc(DATA.embed_url)}" title="Tagesschau 视频播放器" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen scrolling="no"></iframe>`;
+  };
+  if (DATA.mp4_url) {
+    box.innerHTML = `<video id="av" controls playsinline preload="metadata" src="${esc(DATA.mp4_url)}"></video>`;
+    const v = document.getElementById('av');
+    let dead = false;
+    v.addEventListener('error', () => { if (!dead) { dead = true; fallback(); } });
+    v.addEventListener('timeupdate', highlightPlaying);
+  } else {
+    fallback();
+  }
+}
+function seekTo(sec) {
+  const v = document.getElementById('av');
+  if (!v || Number.isNaN(sec)) return;
+  v.currentTime = sec;
+  v.play().catch(() => {});
+}
+function highlightPlaying() {
+  const v = document.getElementById('av');
+  if (!v) return;
+  const t = v.currentTime;
+  document.querySelectorAll('.para').forEach(el => {
+    const a = parseFloat(el.dataset.start), b = parseFloat(el.dataset.end);
+    el.classList.toggle('now', !Number.isNaN(a) && !Number.isNaN(b) && t >= a && t < b + 0.05);
+  });
+}
+
+/* ---------- 控制条 ---------- */
+const state = { zh: prefs.zh !== false };
+document.getElementById('btn-zh').classList.toggle('on', state.zh);
+document.getElementById('btn-zh').setAttribute('aria-pressed', String(state.zh));
+document.getElementById('btn-zh').onclick = () => {
+  state.zh = !state.zh;
+  prefs.zh = state.zh;
+  saveStored(PREF_KEY, prefs);
+  document.body.classList.toggle('hide-zh', !state.zh);
+  document.getElementById('btn-zh').classList.toggle('on', state.zh);
+  document.getElementById('btn-zh').setAttribute('aria-pressed', String(state.zh));
+};
+document.addEventListener('click', e => {
+  const add = e.target.closest('[data-add]');
+  if (add && (add.closest('#news') || add.closest('#study-extras'))) {
+    const key = add.dataset.add;
+    const v = DATA.news.flatMap(n => n.vocab).find(x => x.key === key);
+    const topic = DATA.news.find(n => n.vocab.some(x => x.key === key))?.title || '';
+    if (!v) return;
+    popWord = { key, word: v.lemma, zh: v.zh, pos: v.pos, example: v.example_de, topic };
+    basketAdd();
+    return;
+  }
+  const seek = e.target.closest('.seek[data-start]');
+  if (seek) seekTo(parseFloat(seek.dataset.start));
+});
+
+document.getElementById('theme-btn').onclick = () => {
+  prefs.theme = prefs.theme === 'dark' ? 'light' : 'dark';
+  saveStored(PREF_KEY, prefs);
+  applyPrefs();
+};
+document.getElementById('font-btn').onclick = () => {
+  prefs.fontStep = ((prefs.fontStep || 0) + 1) % 4;
+  saveStored(PREF_KEY, prefs);
+  applyPrefs();
+  document.getElementById('font-btn').textContent = ['字号 A+', '字号 A++', '字号 A+++', '字号 A'][prefs.fontStep];
+};
+document.getElementById('font-btn').textContent = ['字号 A+', '字号 A++', '字号 A+++', '字号 A'][prefs.fontStep || 0];
+
+const videoCard = document.getElementById('video-card');
+let floatDismissed = false;
+const videoObserver = new IntersectionObserver(([entry]) => {
+  if (innerWidth > 840) {
+    videoCard.classList.remove('floating', 'float-off');
+    return;
+  }
+  if (entry.isIntersecting) {
+    floatDismissed = false;
+    videoCard.classList.remove('floating', 'float-off');
+  } else if (!floatDismissed && DATA.embed_url) {
+    videoCard.classList.add('floating');
+  }
+}, { threshold: 0 });
+videoObserver.observe(document.getElementById('video-anchor'));
+document.getElementById('video-float-close').onclick = () => {
+  floatDismissed = true;
+  videoCard.classList.remove('floating');
+  videoCard.classList.add('float-off');
+};
+addEventListener('resize', () => {
+  if (innerWidth > 840) videoCard.classList.remove('floating', 'float-off');
+});
+
+/* ---------- 点词弹卡 ---------- */
+const pop = document.getElementById('pop');
+document.addEventListener('click', e => {
+  if (e.target.closest('#pop')) return;
+  const w = e.target.closest('w');
+  if (!w) { hidePop(); return; }
+  e.stopPropagation();
+  showPop(w);
+}, true);
+
+function showPop(wEl) {
+  const key = wEl.dataset.w;
+  const g = getGloss(key) || { word: wEl.textContent, zh: '', pos: '', example: '' };
+  popWord = { key, word: wEl.textContent, ...g };
+  const inBasket = basket.some(b => b.key === key);
+  pop.innerHTML = `
+    <div class="pop-top"><div><div class="pw">${esc(g.word || wEl.textContent)}</div>
+    <div class="pp">${esc(g.source === 'wiktionary' ? '维基词典 · 可能不准确' : (g.pos || '本期重点词汇'))}</div></div>
+    <button class="pclose" onclick="hidePop()" aria-label="关闭">×</button></div>
+    <div class="pz">${esc(g.zh || '')}</div>
+    ${g.example ? `<div class="pe">${esc(g.example)}</div>` : ''}
+    <div class="pop-actions">
+      <button class="secondary-btn" onclick="openPopEditor()">${g.zh ? '编辑' : '补充释义'}</button>
+      <button class="pbtn ${inBasket ? 'in' : ''}" onclick="basketAdd()">${inBasket ? '已在生词本' : '加入生词本'}</button>
+    </div>`;
+  const r = wEl.getBoundingClientRect();
+  pop.classList.add('open');
+  const pw = pop.offsetWidth, ph = pop.offsetHeight;
+  let x = Math.min(Math.max(12, r.left + r.width/2 - pw/2), innerWidth - pw - 12);
+  let y = r.top - ph - 10;
+  if (y < 12) y = Math.min(r.bottom + 10, innerHeight - ph - 12);
+  pop.style.left = x + 'px'; pop.style.top = y + 'px';
+}
+function openPopEditor() {
+  if (!popWord) return;
+  pop.innerHTML = `
+    <div class="pop-top"><div class="pw">${esc(popWord.word)}</div><button class="pclose" onclick="hidePop()" aria-label="关闭">×</button></div>
+    <form class="word-form" id="pop-form" style="margin-top:14px">
+      <label>显示词形<input id="pop-edit-word" required value="${esc(popWord.word)}"></label>
+      <label>中文释义<input id="pop-edit-zh" required value="${esc(popWord.zh || '')}" placeholder="输入你自己的释义"></label>
+      <label>例句（可选）<textarea id="pop-edit-example">${esc(popWord.example || '')}</textarea></label>
+      <div class="form-actions"><button type="button" class="secondary-btn" onclick="hidePop()">取消</button><button class="primary-btn" type="submit">保存并加入</button></div>
+    </form>`;
+  document.getElementById('pop-form').onsubmit = e => {
+    e.preventDefault();
+    const custom = {
+      word: document.getElementById('pop-edit-word').value.trim(),
+      zh: document.getElementById('pop-edit-zh').value.trim(),
+      pos: popWord.pos || '',
+      example: document.getElementById('pop-edit-example').value.trim()
+    };
+    if (!custom.word || !custom.zh) return;
+    userGloss[popWord.key] = custom;
+    saveStored(GLOSS_KEY, userGloss);
+    popWord = { key: popWord.key, ...custom };
+    const existing = basket.find(b => b.key === popWord.key);
+    if (existing) Object.assign(existing, custom);
+    else basket.push({ key: popWord.key, ...custom, date: DATA.date, topic: popWord.topic || '', createdAt: Date.now() });
+    saveBasket();
+    refreshWordMarks();
+    hidePop();
+    renderBasket();
+    toast('已保存到生词本');
+  };
+  setTimeout(() => document.getElementById('pop-edit-zh')?.focus(), 0);
+}
+function hidePop() { pop.classList.remove('open'); }
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    hidePop();
+    toggleBasket(false);
+  }
+});
+
+/* ---------- 生词篮 ---------- */
+renderBasket();
+
+function basketAdd() {
+  if (!popWord) return;
+  if (!popWord.zh) { openPopEditor(); return; }
+  if (basket.some(b => b.key === popWord.key)) { toast('已在生词本'); return; }
+  basket.push({
+    key: popWord.key, word: popWord.word, zh: popWord.zh, pos: popWord.pos || '',
+    example: popWord.example || '', date: DATA.date, topic: popWord.topic || '',
+    source: popWord.source || '', createdAt: Date.now()
+  });
+  saveBasket();
+  refreshWordMarks();
+  hidePop(); renderBasket(); toast('已加入生词本');
+}
+function basketDel(key) {
+  basket = basket.filter(b => b.key !== key);
+  saveBasket();
+  refreshWordMarks();
+  renderBasket();
+}
+function saveBasket() { saveStored(BK_KEY, basket); }
+function refreshWordMarks() {
+  document.querySelectorAll('w').forEach(w => {
+    w.classList.toggle('known', Boolean(getGloss(w.dataset.w)?.zh));
+    w.classList.toggle('saved', basket.some(b => b.key === w.dataset.w));
+  });
+}
+function renderBasket() {
+  const n = basket.length;
+  document.getElementById('bk-cnt').textContent = n;
+  const list = document.getElementById('bk-list');
+  if (!n) { list.innerHTML = '<div class="bempty"><b>生词本还是空的</b>点击正文中的任意德语词，或手动添加一个。</div>'; return; }
+  list.innerHTML = basket.map(b =>
+    `<div class="bitem"><span class="bw">${esc(b.word)}</span><span class="bz">${esc(b.zh || '未填写释义')}</span>${b.example ? `<span class="be">${esc(b.example)}</span>` : ''}
+      <span class="bitem-actions"><button class="bedit" data-key="${esc(b.key)}">编辑</button><button class="bx" data-key="${esc(b.key)}">删除</button></span></div>`
+  ).join('');
+}
+function toggleBasket(open) {
+  document.getElementById('basket').classList.toggle('open', open);
+  document.getElementById('scrim').classList.toggle('on', open);
+  if (!open) closeWordEditor();
+}
+document.getElementById('basket-btn').onclick = () => toggleBasket(true);
+document.getElementById('scrim').onclick = () => toggleBasket(false);
+document.getElementById('bk-list').onclick = e => {
+  const btn = e.target.closest('button[data-key]');
+  if (!btn) return;
+  if (btn.classList.contains('bx')) basketDel(btn.dataset.key);
+  else openWordEditor(btn.dataset.key);
+};
+
+function openWordEditor(key = null) {
+  editingKey = key;
+  const item = key ? basket.find(b => b.key === key) : null;
+  document.getElementById('edit-word').value = item?.word || '';
+  document.getElementById('edit-zh').value = item?.zh || '';
+  document.getElementById('edit-example').value = item?.example || '';
+  document.getElementById('word-editor').classList.add('open');
+  setTimeout(() => document.getElementById('edit-word').focus(), 0);
+}
+function closeWordEditor() {
+  editingKey = null;
+  document.getElementById('word-editor').classList.remove('open');
+  document.getElementById('word-form').reset();
+}
+document.getElementById('word-form').onsubmit = e => {
+  e.preventDefault();
+  const wasEditing = Boolean(editingKey);
+  const word = document.getElementById('edit-word').value.trim();
+  const zh = document.getElementById('edit-zh').value.trim();
+  const example = document.getElementById('edit-example').value.trim();
+  if (!word || !zh) return;
+  const key = editingKey || word.toLocaleLowerCase('de-DE');
+  const item = basket.find(b => b.key === editingKey || (!editingKey && b.key === key));
+  if (item) Object.assign(item, { word, zh, example });
+  else basket.unshift({ key, word, zh, example, date: DATA.date, manual: true });
+  userGloss[key] = { word, zh, example, pos: '' };
+  saveStored(GLOSS_KEY, userGloss);
+  saveBasket();
+  refreshWordMarks();
+  renderBasket();
+  closeWordEditor();
+  toast(wasEditing ? '单词已更新' : '已添加单词');
+};
+
+function copyWords() {
+  if (!basket.length) { toast('生词本是空的'); return; }
+  const text = basket.map(b => `${b.word}\t${b.zh}${b.example ? '\t' + b.example : ''}`).join('\n');
+  navigator.clipboard.writeText(text).then(
+    () => toast('已复制 ' + basket.length + ' 词'),
+    () => toast('复制失败')
+  );
+}
+
+/* ---------- apkg 导出 ---------- */
+const SQLJS_URL = 'https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/sql-wasm.wasm';
+const SQLJS_JS  = 'https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/sql-wasm.js';
+
+function loadScript(src) {
+  return new Promise((ok, no) => {
+    const s = document.createElement('script');
+    s.src = src; s.onload = ok; s.onerror = () => no(new Error('load fail: ' + src));
+    document.head.appendChild(s);
+  });
+}
+
+async function exportApkg() {
+  const st = document.getElementById('bk-status');
+  const btn = document.getElementById('btn-apkg');
+  if (!basket.length) { toast('篮子是空的'); return; }
+  btn.disabled = true;
+  try {
+    st.textContent = '加载 sql.js…';
+    if (!window.initSqlJs) {
+      await loadScript(SQLJS_JS);
+      window.initSqlJs = window.initSqlJs.bind({ locateFile: () => SQLJS_URL });
+    }
+    const SQL = await window.initSqlJs({ locateFile: () => SQLJS_URL });
+
+    st.textContent = '构建牌组…';
+    const db = new SQL.Database();
+
+    // apkg = collection.anki2 + media(空json) — 最小合法集
+    db.run(`CREATE TABLE col(
+      id integer primary key, crt integer, mod integer, scm integer, ver integer,
+      dty integer, usn integer, ls integer, conf text, models text, decks text,
+      dconf text, tags text)`);
+    const now = Math.floor(Date.now() / 1000);
+    const mid = Date.now();
+    const deckId = now * 1000;
+    const model = {
+      [mid]: {
+        id: mid, name: 'Deutsch Daily', type: 0, mod: now, usn: 0, sortf: 0,
+        did: deckId, tmpls: [{ name: 'Card 1', ord: 0, qfmt: '{{Front}}', afmt: '{{FrontSide}}<hr id=answer>{{Back}}', bqfmt: '', bafmt: '' }],
+        flds: [
+          { name: 'Front', ord: 0, sticky: false, rtl: false, font: 'Arial', size: 20, media: [] },
+          { name: 'Back',  ord: 1, sticky: false, rtl: false, font: 'Arial', size: 20, media: [] }
+        ],
+        css: `.card{font-family:-apple-system,'Noto Sans SC',sans-serif;font-size:20px;text-align:center;color:#1F2328;background:#FAF7F2;padding:24px}.card b{color:#B3541E}`,
+        latexPre: '\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n',
+        latexPost: '\\end{document}',
+        req: [[0, 'all', [0]]], tags: [], vers: []
+      }
+    };
+    const decks = {
+      "1": { id: 1, name: 'Default', mod: now, usn: 0, lrnToday: [0,0], revToday: [0,0], newToday: [0,0], timeToday: [0,0], collapsed: false, browserCollapsed: false, desc: '', dyn: 0, conf: 1, extendNew: 10, extendRev: 50 },
+      [deckId]: { id: deckId, name: 'Deutsch Daily', mod: now, usn: 0, lrnToday: [0,0], revToday: [0,0], newToday: [0,0], timeToday: [0,0], collapsed: false, browserCollapsed: false, desc: '', dyn: 0, conf: 1, extendNew: 10, extendRev: 50 }
+    };
+    const conf = {
+      activeDecks: [1], addToCur: true, collapseTime: 1200, curDeck: 1,
+      curModel: mid, dayLearnFirst: false, dueCounts: true, estTimes: true,
+      newSpread: 0, nextPos: 1, schedVer: 2, sched2021: true, sortBackwards: false,
+      sortType: "noteFld", timeLim: 0, creationOffset: -480
+    };
+    const dconf = {
+      "1": { id: 1, name: "Default", replayq: true, lapse: { delays: [10, 60], mult: 0, minInt: 1, leechFails: 8, leechAction: 0 }, rev: { perDay: 200, fuzz: 0.05, ivlFct: 1, maxIvl: 36500, ease4: 1.3, bury: true, minSpace: 1 }, timer: 0, maxTaken: 60, new: { separate: true, ints: [1, 4, 7], initialFactor: 2500, bury: true, order: 1 }, mod: 0, usn: 0, autoplay: true }
+    };
+    db.run(`INSERT INTO col VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)`, [
+      now, now, now * 1000, 0, 11, 0, 0, 0,
+      JSON.stringify(conf), JSON.stringify(model), JSON.stringify(decks),
+      JSON.stringify(dconf), '{}'
+    ]);
+
+    db.run(`CREATE TABLE notes(
+      id integer primary key, guid text, mid integer, mod integer, usn integer,
+      tags text, flds text, sfld text, csum integer, flags integer, data text)`);
+    db.run(`CREATE TABLE cards(
+      id integer primary key, nid integer, did integer, ord integer, mod integer,
+      usn integer, type integer, queue integer, due integer, ivl integer,
+      factor integer, reps integer, lapses integer, left integer, odue integer,
+      odid integer, flags integer, data text)`);
+    db.run(`CREATE TABLE revlog(
+      id integer primary key, cid integer, usn integer, ease integer, ivl integer,
+      lastIvl integer, factor integer, time integer, type integer)`);
+    db.run(`CREATE TABLE graves(
+      usn integer, oid integer, type integer)`);
+    db.run(`CREATE INDEX ix_notes_usn on notes (usn)`);
+    db.run(`CREATE INDEX ix_cards_usn on cards (usn)`);
+    db.run(`CREATE INDEX ix_revlog_usn on revlog (usn)`);
+    db.run(`CREATE INDEX ix_cards_nid on cards (nid)`);
+    db.run(`CREATE INDEX ix_revlog_cid on revlog (cid)`);
+    db.run(`CREATE INDEX ix_notes_csum on notes (csum)`);
+
+    const enc = new TextEncoder();
+    function csum(s) { // anki checquers field hash (java String.hashCode)
+      let h = 0;
+      for (const b of enc.encode(s)) { h = (31 * h + b) | 0; }
+      return h;
+    }
+    function guid(key) {
+      let h = 0; const s = 'dd-' + key;
+      for (const b of enc.encode(s)) { h = (31 * h + b) | 0; }
+      return 'dd' + (h >>> 0).toString(16);
+    }
+
+    let nid = now * 1000, cid = (now + 1) * 1000;
+    for (const b of basket) {
+      const front = b.word;
+      const back = `${b.zh}${b.example ? `<br><i>${b.example}</i>` : ''}`;
+      const sfld = front;
+      const flds = front.replace(/\t/g, ' ') + '\x1f' + back.replace(/\t/g, ' ');
+      db.run(`INSERT INTO notes VALUES(?,?,?,?,?,?,?,?,?,?,?)`,
+        [nid, guid(b.key), mid, now, -1, ' dd::' + (b.date || DATA.date) + ' ', flds, sfld, csum(sfld), 0, '']);
+      db.run(`INSERT INTO cards VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+        [cid, nid, deckId, 0, now, -1, 0, 0, nid, 0, 0, 0, 0, 0, 0, 0, 0, '']);
+      nid++; cid++;
+    }
+
+    st.textContent = '打包…';
+    const data = db.export();
+    // zip: meta(version2) + collection.anki2 + collection.anki21(同内容, anki26+导入器优先读) + media
+    const zip = makeZip({
+      'meta': new Uint8Array([0x08, 0x02]),
+      'collection.anki2': data,
+      'collection.anki21': data,
+      'media': new TextEncoder().encode('{}')
+    });
+    const blob = new Blob([zip], { type: 'application/apkg' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `deutsch-${basket.length}w-${Date.now()}.apkg`;
+    a.click();
+    st.textContent = `已导出 ${basket.length} 张卡 — 打开 Anki 导入即可`;
+    toast('apkg 已下载');
+  } catch (err) {
+    console.error(err);
+    st.textContent = '导出失败: ' + err.message + ' — 可先用「复制文本」';
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+/* 极简 zip (store, 无压缩) — apkg 只需合法 zip */
+function makeZip(files) {
+  const enc = new TextEncoder();
+  const chunks = [], central = [];
+  let offset = 0;
+  const CRC_TABLE = (() => {
+    const t = new Uint32Array(256);
+    for (let n = 0; n < 256; n++) {
+      let c = n;
+      for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1;
+      t[n] = c >>> 0;
+    }
+    return t;
+  })();
+  function crc32(buf) {
+    let c = 0xFFFFFFFF;
+    for (let i = 0; i < buf.length; i++) c = CRC_TABLE[(c ^ buf[i]) & 0xFF] ^ (c >>> 8);
+    return (c ^ 0xFFFFFFFF) >>> 0;
+  }
+  for (const [name, content] of Object.entries(files)) {
+    const nameB = enc.encode(name);
+    const crc = crc32(content);
+    const lh = new DataView(new ArrayBuffer(30));
+    lh.setUint32(0, 0x04034b50, true);
+    lh.setUint16(4, 20, true);       // version
+    lh.setUint16(6, 0, true);        // flags
+    lh.setUint16(8, 0, true);        // store
+    lh.setUint16(10, 0, true); lh.setUint16(12, 0x2821, true); // time/date(dos)
+    lh.setUint32(14, crc, true);
+    lh.setUint32(18, content.length, true);
+    lh.setUint32(22, content.length, true);
+    lh.setUint16(26, nameB.length, true);
+    lh.setUint16(28, 0, true);
+    chunks.push(new Uint8Array(lh.buffer), nameB, content);
+    const ch = new DataView(new ArrayBuffer(46));
+    ch.setUint32(0, 0x02014b50, true);
+    ch.setUint16(4, 20, true); ch.setUint16(6, 20, true);
+    ch.setUint16(8, 0, true); ch.setUint16(10, 0, true);
+    ch.setUint16(12, 0, true); ch.setUint16(14, 0x2821, true);
+    ch.setUint32(16, crc, true);
+    ch.setUint32(20, content.length, true); ch.setUint32(24, content.length, true);
+    ch.setUint16(28, nameB.length, true);
+    // 30..45 = 0
+    ch.setUint32(42, offset, true);
+    central.push(new Uint8Array(ch.buffer), nameB);
+    offset += 30 + nameB.length + content.length;
+  }
+  let centralSize = central.reduce((s, c) => s + c.length, 0);
+  const eocd = new DataView(new ArrayBuffer(22));
+  eocd.setUint32(0, 0x06054b50, true);
+  eocd.setUint16(8, Object.keys(files).length, true);
+  eocd.setUint16(10, Object.keys(files).length, true);
+  eocd.setUint32(12, centralSize, true);
+  eocd.setUint32(16, offset, true);
+  const total = [...chunks, ...central, new Uint8Array(eocd.buffer)];
+  const out = new Uint8Array(total.reduce((s, c) => s + c.length, 0));
+  let p = 0;
+  for (const c of total) { out.set(c, p); p += c.length; }
+  return out;
+}
+
+/* ---------- toast ---------- */
+let toastT;
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.style.display = 'block';
+  clearTimeout(toastT);
+  toastT = setTimeout(() => t.style.display = 'none', 1600);
+}
+</script>
 </body>
 </html>

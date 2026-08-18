@@ -2,83 +2,111 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Deutsch Daily</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #eef2f0; --surface: #fff; --surface-2: #f7f9f8; --ink: #172127;
+    --muted: #647077; --line: #dce4e1; --accent: #176b72; --accent-soft: #dceeed;
+    --warm: #d98f39; --shadow: 0 18px 50px rgba(20,46,47,.09);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   body {
-    font-family: -apple-system, "Noto Sans SC", sans-serif;
-    background: #FFF8F0;
-    color: #1A1A2E;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 24px 20px;
+    min-height: 100vh; padding: 24px; background:
+      radial-gradient(circle at 85% 5%, rgba(23,107,114,.12), transparent 32rem),
+      radial-gradient(circle at 5% 55%, rgba(217,143,57,.10), transparent 28rem), var(--bg);
+    color: var(--ink); font: 16px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, "Noto Sans SC", sans-serif;
   }
-  h1 { color: #E63946; margin-bottom: 6px; }
-  .subtitle { color: #F4A261; margin-bottom: 24px; font-size: 0.9em; }
-  .episode {
-    background: white;
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-bottom: 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    border-left: 4px solid #F4A261;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: transform 0.1s;
+  .wrap { width: min(1040px, 100%); margin: 0 auto; padding-bottom: 70px; }
+  nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: clamp(55px, 8vw, 100px); }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -.02em; }
+  .brand-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--accent); color: #fff; font: 800 12px/1 ui-monospace, monospace; }
+  .nav-note { color: var(--muted); font-size: 12px; }
+  header { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: end; margin-bottom: 38px; }
+  .eyebrow { margin-bottom: 10px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  h1 { max-width: 650px; font: 750 clamp(40px, 7vw, 72px)/1.02 ui-serif, Georgia, serif; letter-spacing: -.055em; }
+  .sub { max-width: 340px; color: var(--muted); font-size: 14px; }
+  .latest {
+    display: grid; grid-template-columns: 145px 1fr auto; gap: 20px; align-items: center;
+    margin-bottom: 34px; padding: 25px; border-radius: 24px; background: var(--ink);
+    color: #eff6f4; text-decoration: none; box-shadow: var(--shadow);
   }
-  .episode:hover { transform: translateX(4px); }
-  .episode .date { font-size: 1.1em; font-weight: 600; color: #E63946; }
-  .episode .themen { font-size: 0.88em; color: #666; margin-top: 4px; }
+  .latest-date { color: #9fd3d0; font: 750 13px/1.4 ui-monospace, monospace; }
+  .latest-copy small { display: block; margin-bottom: 4px; color: #9fd3d0; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .latest-copy strong { display: block; font: 700 20px/1.35 ui-serif, Georgia, serif; }
+  .latest-go { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 15px; background: var(--warm); color: var(--ink); font-size: 21px; }
+  .section-head { display: flex; align-items: baseline; justify-content: space-between; margin: 0 3px 12px; }
+  .section-head h2 { font-size: 16px; }
+  .section-head span { color: var(--muted); font-size: 12px; }
+  .list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+  a.ep {
+    display: grid; grid-template-columns: 78px minmax(0,1fr) auto; gap: 14px; align-items: center;
+    min-height: 108px; padding: 18px; border: 1px solid var(--line); border-radius: 18px;
+    background: rgba(255,255,255,.78); color: inherit; text-decoration: none; transition: transform .16s, box-shadow .16s, border-color .16s;
+  }
+  a.ep:hover { transform: translateY(-2px); border-color: #aacbc8; box-shadow: var(--shadow); }
+  .datebox { padding-right: 14px; border-right: 1px solid var(--line); text-align: center; }
+  .datebox b { display: block; color: var(--accent); font: 800 25px/1 ui-serif, Georgia, serif; }
+  .datebox span { color: var(--muted); font: 700 10px/1.4 ui-monospace, monospace; text-transform: uppercase; }
+  a.ep .t { overflow: hidden; color: var(--muted); font-size: 13px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+  a.ep .arrow { color: var(--accent); font-size: 18px; }
+  @media (max-width: 700px) {
+    body { padding: 16px 12px; }
+    nav { margin-bottom: 55px; }
+    header { display: block; }
+    .sub { margin-top: 18px; }
+    .latest { grid-template-columns: 1fr auto; padding: 20px; }
+    .latest-date { grid-column: 1 / -1; }
+    .list { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 430px) {
+    h1 { font-size: 42px; }
+    .nav-note { display: none; }
+    .latest-copy strong { font-size: 17px; }
+    a.ep { grid-template-columns: 66px minmax(0,1fr) auto; }
+  }
 </style>
 </head>
 <body>
-  <h1>Deutsch Daily 🇩🇪</h1>
-  <div class="subtitle">tagesschau in Einfacher Sprache — 德语听力学习材料</div>
-  <a class="episode" href="2026-08-17.html">
-    <div class="date">17. August 2026</div>
-    <div class="themen">Belgien Waldbrand Torf · Bundesländer Lkw sonntags erlaubt · E-Scooter Helmpflicht Diskussion · Hayden Panettiere gestorben · Wetter</div>
-  </a>
-  <a class="episode" href="2026-08-13.html">
-    <div class="date">13. August 2026</div>
-    <div class="themen">Sonnenfinsternis Europa · Berliner Mauer vor 65 Jahren · Vulkan Ätna Flughafen gesperrt · Schwimm-EM Medaillen · Wetter</div>
-  </a>
-  <a class="episode" href="2026-08-12.html">
-    <div class="date">12. August 2026</div>
-    <div class="themen">Nachrichtendienste neue Regeln · Generation Z am Arbeitsmarkt · Sonnenfinsternis Westeuropa · Wetter</div>
-  </a>
-  <a class="episode" href="2026-08-11.html">
-    <div class="date">11. August 2026</div>
-    <div class="themen">Bahn Zugbegleiter Übergriffe · Sommerhitze Rekord · Rhein Niedrigwasser · Waldbrände Spanien/Frankreich · Leichtathletik-EM Birmingham · Wetter</div>
-  </a>
-  <a class="episode" href="2026-08-10.html">
-    <div class="date">10. August 2026</div>
-    <div class="themen">Bahn Gewalt gegen Zugbegleiter · Sommerhitze Rekord · Rhein Niedrigwasser · Waldbrände Spanien/Frankreich · Leichtathletik-EM · Wetter</div>
-  </a>
-  <a class="episode" href="2026-08-07.html">
-    <div class="date">07. August 2026</div>
-    <div class="themen">Rhein Niedrigwasser · Hitze in Südeuropa · Mallorca Mittelmeer-Rekord · Wetter</div>
-  </a>
-  <a class="episode" href="2026-08-06.html">
-    <div class="date">06. August 2026</div>
-    <div class="themen">Leipzig Drohne mit Sprengstoff · München Urteil Lebenslang · Bochum Bäume gegen Hitze · Hiroshima Gedenken · Wetter</div>
-  </a>
-  <a class="episode" href="2026-08-05.html">
-    <div class="date">05. August 2026</div>
-    <div class="themen">Ukraine Raketen · Dürre Bauern · Rollstuhl am Strand · Guatemala Vulkan · Schwimm-EM Gold</div>
-  </a>
-  <a class="episode" href="2026-08-04.html">
-    <div class="date">04. August 2026</div>
-    <div class="themen">EU-Migration Ceuta · Zivildienst Pläne · Kuba Stromausfall · USA Waldbrände Spokane</div>
-  </a>
-  <a class="episode" href="2026-08-03.html">
-    <div class="date">03. August 2026</div>
-    <div class="themen">Waldbrände Griechenland · Stromkrise Rumänien/Ungarn · Ceuta Migranten · Mars-Mission Utah · Wetter</div>
-  </a>
-  <a class="episode" href="2026-07-31.html">
-    <div class="date">31. Juli 2026</div>
-    <div class="themen">Ceuta Migration · Elektrogeräte Reparatur · FIFA Streit · Hamburg Brücke · Wetter</div>
-  </a>
+<div class="wrap">
+  <nav>
+    <div class="brand"><span class="brand-mark">DD</span><span>Deutsch Daily</span></div>
+    <span class="nav-note">Einfache Nachrichten · 清晰德语输入</span>
+  </nav>
+  <header>
+    <div>
+      <div class="eyebrow">Tagesschau in Einfacher Sprache</div>
+      <h1>每日简明德语新闻</h1>
+    </div>
+    <div class="sub">Tagesschau 简易德语：视频、德中对照、点词释义、生词本。静态页面，无登录。</div>
+  </header>
+  <div id="latest"></div>
+  <div class="section-head"><h2>全部往期</h2><span id="total"></span></div>
+  <div class="list" id="list"></div>
+</div>
+<script>
+const ITEMS = [{"date": "2026-08-17", "titles": "Belgien: Kampf gegen Feuer im Wald · Bundesländer lockern Lkw-Fahrverbot am Sonntag · E-Scooter: Unfälle und Diskussion über Helmpflicht", "count": 5}, {"date": "2026-08-13", "titles": "Sonnenfinsternis: Himmel wird dunkel · Vor 65 Jahren: Mauer in Berlin gebaut · Vulkan ausgebrochen: Flughafen gesperrt", "count": 5}, {"date": "2026-08-12", "titles": "Neue Regeln für Nachrichtendienste geplant · Forscher: Junge Menschen arbeiten viel in Deutschland · Sonnenfinsternis in Teilen Westeuropas", "count": 3}, {"date": "2026-08-10", "titles": "Bahn: Mehr Gewalt gegen Zugbegleiter · Sommer: Temperaturen so hoch wie nie · Rhein: Fluss hat sehr wenig Wasser", "count": 6}, {"date": "2026-08-07", "titles": "Rhein: Wasser ist niedrig · Südeuropa: Hitze in vielen Ländern · Mallorca: Mittelmeer so warm wie nie", "count": 4}, {"date": "2026-08-06", "titles": "Flughafen Leipzig: Sprengstoff gefunden · Urteil: Lebenslange Haft wegen Anschlag · Bäume: Hilfe gegen Hitze", "count": 5}, {"date": "2026-08-05", "titles": "Ukraine — Russische Angriffe · Zu wenig Wasser — Probleme für Bauern · Urlaub mit Rollstuhl am Strand", "count": 5}, {"date": "2026-08-04", "titles": "EU-Innenminister beraten über Ceuta · Familienministerium: Pläne für Zivildienst · Kuba: Stromausfall", "count": 4}];
+const latest = ITEMS[0];
+document.getElementById('total').textContent = `${ITEMS.length} 期`;
+if (latest) {
+  document.getElementById('latest').innerHTML = `
+    <a class="latest" href="${latest.date}.html">
+      <span class="latest-date">${formatLong(latest.date)}</span>
+      <span class="latest-copy"><small>最新一期 · ${latest.count} 条新闻</small><strong>${esc(latest.titles)}</strong></span>
+      <span class="latest-go">→</span>
+    </a>`;
+}
+document.getElementById('list').innerHTML = ITEMS.map(it => {
+  const d = new Date(it.date + 'T12:00:00');
+  return `<a class="ep" href="${it.date}.html">
+    <span class="datebox"><b>${String(d.getDate()).padStart(2, '0')}</b><span>${d.toLocaleDateString('de-DE', { month: 'short' })}</span></span>
+    <span class="t">${esc(it.titles)}${it.count > 3 ? ' …' : ''}</span><span class="arrow">→</span>
+  </a>`;
+}).join('');
+function formatLong(iso) {
+  return new Date(iso + 'T12:00:00').toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+}
+function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+</script>
 </body>
 </html>

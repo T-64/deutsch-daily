@@ -2,326 +2,1089 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deutsch Daily — 06.08.2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Deutsch Daily — __DATE__</title>
 <style>
   :root {
-    --rot: #E63946;
-    --gold: #F4A261;
-    --paper: #FFF8F0;
-    --card: #FFF0E6;
-    --text: #1A1A2E;
-    --muted: #6B6B80;
+    --bg: #eef2f0;
+    --surface: #ffffff;
+    --surface-2: #f7f9f8;
+    --ink: #172127;
+    --ink-soft: #647077;
+    --line: #dce4e1;
+    --accent: #176b72;
+    --accent-strong: #0d5057;
+    --accent-soft: #dceeed;
+    --warm: #d98f39;
+    --warm-soft: #fff0d9;
+    --zh: #5f696f;
+    --danger: #b3493f;
+    --shadow: 0 18px 50px rgba(20, 46, 47, .10);
+    --shadow-soft: 0 8px 24px rgba(20, 46, 47, .07);
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [data-theme="dark"] {
+    --bg: #111719; --surface: #192124; --surface-2: #202a2d;
+    --ink: #edf3f1; --ink-soft: #a9b7b8; --line: #344145;
+    --accent: #75cbd0; --accent-strong: #99dfe2; --accent-soft: #223e40;
+    --warm: #f0b35e; --warm-soft: #3b3022; --zh: #bac5c5;
+    --shadow: 0 18px 50px rgba(0,0,0,.28); --shadow-soft: 0 8px 24px rgba(0,0,0,.22);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
   body {
-    font-family: -apple-system, "Noto Sans SC", "Noto Sans", sans-serif;
-    background: var(--paper);
-    color: var(--text);
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 20px 16px 60px;
-    line-height: 1.65;
+    min-height: 100vh; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, "Noto Sans SC", sans-serif;
+    transition: background .2s, color .2s;
   }
-  .header { text-align: center; margin-bottom: 20px; }
-  .header h1 { color: var(--rot); font-size: 1.5em; }
-  .header .date { color: var(--gold); font-size: 0.9em; margin-top: 4px; }
-  .video-link {
-    display: block; text-align: center;
-    background: var(--rot); color: white;
-    padding: 10px 20px; border-radius: 8px;
-    text-decoration: none; font-weight: 600;
-    margin-bottom: 16px;
+  button, input, textarea { font: inherit; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+  button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent); outline-offset: 2px;
   }
-  iframe { border-radius: 8px; margin-bottom: 16px; }
-  .news {
-    background: white; border-radius: 12px;
-    padding: 20px 18px; margin-bottom: 20px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    border-left: 4px solid var(--gold);
+  .app { width: min(1280px, calc(100% - 48px)); margin: 0 auto; padding: 24px 0 100px; }
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    min-height: 42px; margin-bottom: 34px;
   }
-  .news h2 { color: var(--rot); font-size: 1.15em; margin-bottom: 14px; }
-  .news h2 .num {
-    background: var(--rot); color: white;
-    border-radius: 50%; display: inline-block;
-    width: 28px; height: 28px; line-height: 28px;
-    text-align: center; font-size: 0.85em; margin-right: 6px;
+  .brand {
+    display: inline-flex; align-items: center; gap: 10px; color: var(--ink);
+    font-weight: 800; letter-spacing: -.02em; text-decoration: none;
   }
-  .section-label {
-    font-size: 0.75em; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.05em;
-    margin-bottom: 4px; margin-top: 14px;
+  .brand-mark {
+    display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px;
+    background: var(--accent); color: #fff; font: 800 12px/1 ui-monospace, monospace;
   }
-  .label-de { color: var(--rot); }
-  .label-cn { color: var(--gold); }
-  .label-vocab { color: #2A9D8F; }
-  .label-grammar { color: #8B5CF6; }
-  .label-bg { color: var(--muted); }
-  .de-text {
-    background: var(--card); padding: 12px 14px;
-    border-radius: 8px; font-size: 0.92em;
-    line-height: 1.7;
+  .top-actions { display: flex; align-items: center; gap: 8px; }
+  .icon-btn, .archive-link {
+    min-height: 38px; border: 1px solid var(--line); border-radius: 12px;
+    background: var(--surface); color: var(--ink-soft); cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center; text-decoration: none;
   }
-  .translation {
-    padding: 10px 14px; font-size: 0.88em;
-    color: #444; line-height: 1.7;
+  .icon-btn { width: 38px; }
+  .archive-link { gap: 7px; padding: 0 13px; font-size: 13px; font-weight: 700; }
+  .hero { margin-bottom: 26px; }
+  .eyebrow {
+    color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em;
+    text-transform: uppercase; margin-bottom: 9px;
   }
-  .vocab {
-    width: 100%; border-collapse: collapse;
-    font-size: 0.85em; margin-top: 4px;
+  .hero h1 {
+    max-width: 720px; font: 750 clamp(29px, 4vw, 50px)/1.08 ui-serif, Georgia, serif;
+    letter-spacing: -.04em;
   }
-  .vocab th, .vocab td {
-    padding: 6px 8px; text-align: left;
-    border-bottom: 1px solid #EEE5D8;
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 13px; color: var(--ink-soft); font-size: 14px; }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
+
+  .study-grid { display: grid; grid-template-columns: 272px minmax(0, 1fr); gap: clamp(20px, 3.2vw, 48px); align-items: start; }
+  .side {
+    position: sticky; top: 16px; max-height: calc(100vh - 24px);
+    display: flex; flex-direction: column; min-height: 0;
   }
-  .vocab th { color: var(--gold); font-weight: 600; }
-  .vocab td:first-child { font-weight: 600; color: var(--rot); white-space: nowrap; }
-  .vocab td:last-child { color: var(--muted); font-size: 0.9em; }
-  .grammar {
-    background: #F3E8FF; padding: 10px 14px;
-    border-radius: 8px; font-size: 0.85em;
-    line-height: 1.6;
+  .study-panel {
+    display: flex; flex-direction: column; min-height: 0; max-height: calc(100vh - 24px);
+    border: 1px solid var(--line); border-radius: 16px;
+    background: var(--surface); box-shadow: var(--shadow-soft); overflow: hidden;
   }
-  .grammar strong { color: #8B5CF6; }
-  .bg-info {
-    font-size: 0.82em; color: var(--muted);
-    line-height: 1.6; padding: 0 4px;
+  .video-card { position: relative; flex: 0 0 auto; overflow: hidden; background: #071012; }
+  .player { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #071012; }
+  .player iframe, .player video { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; background: #071012; }
+  .video-float-close {
+    display: none; border: 0; background: rgba(255,255,255,.12); color: #fff;
+    width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
   }
-  .nav {
-    display: flex; justify-content: space-between;
-    margin-top: 24px; font-size: 0.85em;
+  .rail { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+  .rail-bar { display: flex; align-items: center; gap: 8px; padding: 8px 10px 6px; }
+  .controls { display: flex; gap: 6px; flex: 0 0 auto; }
+  .controls button {
+    min-height: 28px; padding: 0 10px; border: 1px solid var(--line); border-radius: 8px;
+    background: var(--surface-2); color: var(--ink-soft); cursor: pointer; font-size: 12px; font-weight: 750;
   }
-  .nav a { color: var(--gold); text-decoration: none; }
-  .nav a:hover { text-decoration: underline; }
+  .controls button.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-strong); }
+  .story-pills { display: flex; flex: 1; justify-content: flex-end; flex-wrap: wrap; gap: 3px; }
+  .story-pills a {
+    display: grid; place-items: center; width: 22px; height: 22px; border-radius: 6px;
+    background: var(--surface-2); color: var(--ink-soft); text-decoration: none;
+    font: 750 11px/1 ui-monospace, ui-sans-serif, monospace;
+  }
+  .story-pills a:hover { color: var(--accent-strong); }
+  .story-pills a.on { background: var(--accent); color: #fff; }
+  .rail-now {
+    margin: 0 10px 8px; color: var(--ink-soft); font-size: 12px; line-height: 1.35;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .hero-meta a { color: var(--accent); text-decoration: none; font-weight: 700; }
+  .hero-meta a:hover { text-decoration: underline; }
+  .study-extras {
+    min-height: 0; overflow-y: auto; padding: 0 8px 10px;
+    border-top: 1px solid var(--line);
+  }
+  .study-extras .empty-study { color: var(--ink-soft); font-size: 12px; padding: 8px 4px; }
+  .vlist { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2px; }
+  .vrow {
+    display: grid; grid-template-columns: minmax(0,1fr) 20px;
+    gap: 0 4px; align-items: center; padding: 5px 4px 6px;
+    border-bottom: 1px solid var(--line);
+  }
+  .vrow:nth-last-child(-n+2) { border-bottom: 0; }
+  .vrow .vw { overflow: hidden; grid-column: 1; color: var(--ink); font: 650 12.5px/1.25 ui-serif, Georgia, serif; text-overflow: ellipsis; white-space: nowrap; }
+  .vrow .vz { overflow: hidden; grid-column: 1; color: var(--ink-soft); font-size: 11px; line-height: 1.2; text-overflow: ellipsis; white-space: nowrap; }
+  .vadd {
+    grid-column: 2; grid-row: 1 / span 2; align-self: center;
+    width: 22px; height: 22px; border: 1px solid var(--line); border-radius: 6px;
+    background: var(--surface-2); color: var(--accent-strong); cursor: pointer;
+    font: 700 15px/1 ui-sans-serif, system-ui;
+  }
+  .vadd:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .rail-notes { margin-top: 4px; padding-top: 2px; }
+  .rail-note { margin: 0; border: 0; background: transparent; }
+  .rail-note summary {
+    list-style: none; cursor: pointer; padding: 5px 2px; color: var(--ink-soft);
+    font-size: 12px; font-weight: 650;
+  }
+  .rail-note summary::-webkit-details-marker { display: none; }
+  .rail-note .body { padding: 0 2px 8px; color: var(--ink-soft); font-size: 12px; line-height: 1.5; }
+  @media (min-width: 841px) { .article-extras { display: none; } }
+
+  .reader { min-width: 0; }
+  .reader-tip {
+    display: flex; align-items: center; justify-content: space-between; gap: 14px;
+    margin-bottom: 14px; color: var(--ink-soft); font-size: 13px;
+  }
+  .reader-tip button {
+    flex: 0 0 auto; border: 0; background: transparent; color: var(--accent);
+    font-weight: 750; cursor: pointer;
+  }
+  article {
+    scroll-margin-top: 24px; margin-bottom: 22px; padding: clamp(22px, 4vw, 38px);
+    border: 1px solid var(--line); border-radius: 24px; background: var(--surface);
+    box-shadow: var(--shadow-soft);
+  }
+  .n-head { display: grid; grid-template-columns: 42px minmax(0,1fr); gap: 13px; align-items: start; margin-bottom: 24px; }
+  .n-idx {
+    display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px;
+    background: var(--accent-soft); color: var(--accent-strong); font: 800 13px/1 ui-monospace, monospace;
+  }
+  .n-head h2 { padding-top: 3px; font: 750 clamp(21px, 3vw, 28px)/1.25 ui-serif, Georgia, serif; letter-spacing: -.025em; }
+  .para { margin-bottom: 23px; }
+  .para:last-of-type { margin-bottom: 10px; }
+  .de {
+    font: var(--reader-size, 18.5px)/1.82 ui-serif, Georgia, "Noto Serif", serif;
+    letter-spacing: .003em;
+  }
+  .de w {
+    cursor: pointer; border-radius: 4px; transition: background .12s, color .12s;
+    text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+    text-decoration-color: transparent;
+  }
+  .de w:hover, .de w:active { background: var(--warm-soft); text-decoration-color: var(--warm); }
+  .de w.known { text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent); }
+  .de w.ed { text-decoration-style: solid; text-decoration-thickness: 1.5px; }
+  .de w.wiki { text-decoration-style: dotted; text-decoration-color: color-mix(in srgb, var(--ink-soft) 55%, transparent); }
+  .de w.saved { color: var(--accent-strong); background: var(--accent-soft); text-decoration-color: transparent; }
+  .para { display: grid; grid-template-columns: 52px minmax(0,1fr); gap: 10px; align-items: start; }
+  .seek {
+    margin-top: 4px; border: 1px solid var(--line); border-radius: 8px;
+    background: var(--surface-2); color: var(--accent-strong);
+    padding: 4px 0; font: 750 11px/1 ui-monospace, monospace; cursor: pointer;
+  }
+  .seek:disabled { opacity: .35; cursor: default; }
+  .para.now .de { background: color-mix(in srgb, var(--accent-soft) 70%, transparent); border-radius: 6px; }
+  .zh {
+    margin-top: 9px; padding: 10px 13px; border-left: 3px solid var(--warm);
+    border-radius: 0 9px 9px 0; background: var(--surface-2); color: var(--zh);
+    font-size: 14px; line-height: 1.72;
+  }
+  body.hide-zh .zh { display: none; }
+  .article-extras details { margin-top: 10px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface-2); }
+  .article-extras details summary {
+    list-style: none; cursor: pointer; padding: 12px 14px; color: var(--ink-soft);
+    display: flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 750;
+  }
+  .article-extras details summary::before {
+    content: "+"; display: inline-grid; place-items: center; width: 20px; height: 20px;
+    border-radius: 7px; background: var(--surface); color: var(--accent); font-size: 14px;
+  }
+  .article-extras details[open] summary::before { content: "−"; }
+  .article-extras details summary::-webkit-details-marker { display: none; }
+  .article-extras details .body { padding: 2px 14px 15px 43px; color: var(--ink-soft); font-size: 13.5px; line-height: 1.75; }
+  .article-extras details .body strong { color: var(--ink); }
+  .vcard { display: grid; grid-template-columns: minmax(0,1fr) 28px; gap: 8px; align-items: start; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .vcard:last-child { border-bottom: 0; }
+  .gcard { padding: 12px 0; border-bottom: 1px dashed var(--line); }
+  .gcard:last-child { border-bottom: 0; }
+  .vcard-top, .gcard h4 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; font: 750 14.5px/1.35 ui-serif, Georgia, serif; color: var(--ink); }
+  .article-extras .vadd {
+    width: 28px; height: 28px; border: 1px solid var(--line); border-radius: 8px;
+    background: var(--surface); color: var(--accent-strong); cursor: pointer;
+    font: 700 18px/1 ui-sans-serif, system-ui;
+  }
+  .vpos { color: var(--ink-soft); font: 750 11px/1.2 ui-sans-serif, system-ui; letter-spacing: .06em; text-transform: uppercase; }
+  .vzh { margin-top: 4px; color: var(--accent-strong); font-size: 13.5px; }
+  .vex, .gex { margin-top: 6px; color: var(--ink-soft); font-size: 13px; font-style: italic; }
+  .gexzh { color: var(--zh); font-size: 12.5px; }
+  .gmore { margin-top: 8px; color: var(--ink-soft); font-size: 13px; }
+  .bg-note { margin: 0 0 8px; color: var(--ink-soft); font-size: 12px; }
+
+  .scrim { position: fixed; inset: 0; z-index: 55; display: none; background: rgba(7,16,18,.48); backdrop-filter: blur(3px); }
+  .scrim.on { display: block; }
+  #pop {
+    position: fixed; z-index: 70; display: none; width: min(360px, calc(100vw - 24px));
+    border: 1px solid var(--line); border-radius: 18px; padding: 18px;
+    background: var(--surface); color: var(--ink); box-shadow: var(--shadow);
+  }
+  #pop.open { display: block; }
+  .pop-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  #pop .pw { font: 750 21px/1.2 ui-serif, Georgia, serif; word-break: break-word; }
+  #pop .pp { margin-top: 3px; color: var(--ink-soft); font-size: 11px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+  #pop .pclose { border: 0; background: var(--surface-2); color: var(--ink-soft); width: 30px; height: 30px; border-radius: 9px; cursor: pointer; }
+  #pop .pz { margin-top: 12px; color: var(--accent-strong); font-weight: 700; }
+  #pop .pz:empty::after { content: "还没有释义，你可以自己补充"; color: var(--ink-soft); font-weight: 400; }
+  #pop .pe { margin-top: 9px; padding-top: 9px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 12.5px; font-style: italic; }
+  .pop-actions { display: flex; gap: 8px; margin-top: 14px; }
+  .pbtn, .secondary-btn, .primary-btn {
+    min-height: 40px; border-radius: 11px; padding: 0 13px; cursor: pointer; font-size: 13px; font-weight: 750;
+  }
+  .pbtn { flex: 1; border: 1px solid var(--accent); background: var(--accent); color: #fff; }
+  .pbtn.in { border-color: var(--line); background: var(--surface-2); color: var(--ink-soft); }
+  .secondary-btn { border: 1px solid var(--line); background: var(--surface); color: var(--ink-soft); }
+  .primary-btn { border: 1px solid var(--accent); background: var(--accent); color: #fff; }
+  .word-form { display: grid; gap: 11px; }
+  .word-form label { display: grid; gap: 5px; color: var(--ink-soft); font-size: 12px; font-weight: 700; }
+  .word-form input, .word-form textarea {
+    width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 9px 11px;
+    background: var(--surface-2); color: var(--ink); resize: vertical;
+  }
+  .word-form textarea { min-height: 66px; }
+  .form-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 3px; }
+
+  #basket-btn {
+    position: fixed; right: 22px; bottom: max(22px, env(safe-area-inset-bottom)); z-index: 45;
+    display: inline-flex; align-items: center; gap: 9px; min-height: 48px; padding: 0 18px;
+    border: 0; border-radius: 15px; background: var(--ink); color: var(--surface);
+    box-shadow: var(--shadow); cursor: pointer; font-weight: 800;
+  }
+  #basket-btn .cnt { min-width: 23px; padding: 2px 7px; border-radius: 99px; background: var(--warm); color: #172127; font-size: 12px; }
+  #basket {
+    position: fixed; inset: 0 0 0 auto; z-index: 65; width: min(440px, 100vw);
+    display: flex; flex-direction: column; padding: 24px 24px calc(24px + env(safe-area-inset-bottom));
+    background: var(--surface); box-shadow: -20px 0 60px rgba(7,16,18,.18);
+    transform: translateX(105%); transition: transform .22s ease;
+  }
+  #basket.open { transform: translateX(0); }
+  #basket .bhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+  #basket .bhead h3 { font-size: 22px; letter-spacing: -.02em; }
+  #basket .bhead p { margin-top: 2px; color: var(--ink-soft); font-size: 12.5px; }
+  #basket .bclose { border: 0; background: var(--surface-2); color: var(--ink-soft); width: 36px; height: 36px; border-radius: 11px; font-size: 20px; cursor: pointer; }
+  .basket-add { width: 100%; margin-bottom: 12px; }
+  #basket .blist { overflow-y: auto; flex: 1; padding-right: 4px; }
+  .bitem { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 5px 10px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+  .bitem .bw { font: 750 16px/1.3 ui-serif, Georgia, serif; }
+  .bitem .bz { grid-column: 1; color: var(--accent-strong); font-size: 13px; }
+  .bitem .be { grid-column: 1; overflow: hidden; color: var(--ink-soft); font-size: 11.5px; text-overflow: ellipsis; white-space: nowrap; }
+  .bitem-actions { grid-column: 2; grid-row: 1 / span 3; align-self: center; display: flex; gap: 3px; }
+  .bitem-actions button { border: 0; background: transparent; color: var(--ink-soft); padding: 7px; cursor: pointer; font-size: 12px; }
+  .bitem-actions .bx { color: var(--danger); }
+  #basket .bfoot { display: flex; gap: 8px; margin-top: 14px; }
+  #basket .bfoot button { flex: 1; }
+  #basket .bfoot button:disabled { opacity: .5; cursor: wait; }
+  #basket .bstatus { min-height: 18px; margin-top: 8px; color: var(--ink-soft); text-align: center; font-size: 12px; }
+  .bempty { padding: 42px 14px; color: var(--ink-soft); text-align: center; font-size: 13px; }
+  .bempty b { display: block; margin-bottom: 5px; color: var(--ink); font-size: 15px; }
+  #word-editor {
+    display: none; padding: 15px; margin-bottom: 12px; border: 1px solid var(--line);
+    border-radius: 14px; background: var(--surface-2);
+  }
+  #word-editor.open { display: block; }
+  #toast {
+    position: fixed; left: 50%; bottom: 28px; z-index: 90; display: none;
+    transform: translateX(-50%); padding: 10px 16px; border-radius: 12px;
+    background: var(--ink); color: var(--surface); box-shadow: var(--shadow); font-size: 13px; font-weight: 700;
+  }
+  @media (max-width: 840px) {
+    .app { width: min(100% - 28px, 720px); padding-top: 15px; }
+    .topbar { margin-bottom: 24px; }
+    .study-grid { display: block; }
+    .side { position: static; max-height: none; margin-bottom: 18px; }
+    .study-panel { display: contents; }
+    .video-card { border-radius: 14px; box-shadow: var(--shadow); }
+    .rail {
+      position: sticky; top: 0; z-index: 30; margin: 10px 0 18px; padding: 8px 10px;
+      border: 1px solid var(--line); border-radius: 14px; background: var(--surface);
+    }
+    .rail-bar { padding: 0; }
+    .story-pills, .rail-now, .study-extras { display: none; }
+    .video-card.floating {
+      position: fixed; z-index: 48; top: 64px; right: 10px; width: min(48vw, 210px);
+      border: 1px solid rgba(255,255,255,.2); border-radius: 13px; box-shadow: 0 18px 45px rgba(0,0,0,.28);
+    }
+    .video-card.floating .video-float-close { display: block; position: absolute; z-index: 2; top: 6px; right: 6px; }
+    .video-card.float-off { display: none; }
+    .reader-tip { margin-top: 13px; }
+    article { border-radius: 20px; }
+  }
+  @media (max-width: 560px) {
+    .app { width: 100%; padding: 12px 12px 88px; }
+    .brand span:last-child { font-size: 14px; }
+    .archive-link { width: 38px; padding: 0; font-size: 0; }
+    .archive-link svg { width: 17px; }
+    .hero { padding: 0 5px; margin-bottom: 18px; }
+    .hero h1 { font-size: 30px; }
+    .hero-meta { gap: 5px 14px; font-size: 12.5px; }
+    .video-card { border-radius: 16px; }
+    .controls { gap: 5px; }
+    .controls button { min-height: 38px; font-size: 12px; }
+    article { padding: 20px 17px; margin-bottom: 13px; border-radius: 18px; }
+    .n-head { grid-template-columns: 34px minmax(0,1fr); gap: 10px; margin-bottom: 19px; }
+    .n-idx { width: 34px; height: 34px; border-radius: 10px; font-size: 11px; }
+    .n-head h2 { padding-top: 1px; font-size: 21px; }
+    .de { font-size: var(--reader-size, 17.5px); line-height: 1.78; }
+    .zh { font-size: 13.5px; }
+    .article-extras details .body { padding-left: 14px; }
+    .para { grid-template-columns: 44px minmax(0,1fr); gap: 8px; }
+    #pop { left: 12px !important; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); top: auto !important; width: auto; }
+    #basket-btn { right: 14px; bottom: max(14px, env(safe-area-inset-bottom)); min-height: 46px; }
+    #basket { padding: 18px 17px calc(18px + env(safe-area-inset-bottom)); }
+    #basket .bfoot { flex-direction: column; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+  }
 </style>
 </head>
 <body>
+<main class="app">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="返回往期列表">
+      <span class="brand-mark">DD</span><span>Deutsch Daily</span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-btn" id="theme-btn" aria-label="切换深浅色" title="切换深浅色">◐</button>
+      <a class="archive-link" href="index.html">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M6 3h12a2 2 0 0 1 2 2v2H4V5a2 2 0 0 1 2-2Zm0 4h12v14H6V7Zm4 4h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        往期
+      </a>
+    </div>
+  </header>
 
-<div class="header">
-  <h1>Deutsch Daily 🇩🇪</h1>
-  <div class="date">06. August 2026 · Mittwoch</div>
-</div>
+  <section class="hero">
+    <div class="eyebrow">Tagesschau in Einfacher Sprache</div>
+    <h1 id="hdate"></h1>
+    <div class="hero-meta">
+      <span id="story-count"></span>
+      <a id="vlink" target="_blank" rel="noopener">在 tagesschau.de 打开 ↗</a>
+    </div>
+  </section>
 
-<a class="video-link" href="https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1627096.html">📺 原始视频（tagesschau.de）</a>
+  <div class="study-grid">
+    <aside class="side">
+      <div id="video-anchor"></div>
+      <div class="study-panel">
+        <div class="video-card" id="video-card">
+          <button class="video-float-close" id="video-float-close" aria-label="暂时隐藏悬浮视频">×</button>
+          <div class="player" id="player"></div>
+        </div>
+        <div class="rail">
+          <div class="rail-bar">
+            <div class="controls">
+              <button id="btn-zh" class="on" aria-pressed="true">译文</button>
+            </div>
+            <nav class="story-pills" id="topic-list" aria-label="本期新闻"></nav>
+          </div>
+          <p class="rail-now" id="rail-now"></p>
+          <div class="study-extras" id="study-extras"></div>
+        </div>
+      </div>
+    </aside>
 
-<iframe src="https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1627096~player.html" width="100%" height="300" allowfullscreen frameborder="0" scrolling="no"></iframe>
-
-<!-- ===== NEWS 1: Leipzig Drohne ===== -->
-<div class="news">
-  <h2><span class="num">1</span> Flughafen Leipzig: Sprengstoff gefunden</h2>
-
-  <div class="section-label label-de">🇩🇪 德语原文</div>
-  <div class="de-text">
-    Auf dem Flughafen Leipzig im Osten von Deutschland wurde eine Drohne mit Sprengstoff gefunden. Drohnen sind Flugroboter. Sprengstoff kann explodieren. Er ist deshalb sehr gefährlich.<br><br>
-    Der Sprengstoff auf dem Flughafen ist nicht explodiert. Mitarbeiter haben die Drohne nämlich gesehen und die Polizei gerufen. Die Polizei hat den Sprengstoff entschärft.<br><br>
-    Viele Menschen in Deutschland haben jetzt Fragen: Wie ist die Drohne auf den Flughafen gekommen? Und wie sicher ist Deutschland?<br><br>
-    Polizei und Feuerwehr finden die Drohne in der Nähe von Flugzeugen aus der Ukraine. Die Polizei entschärft mit einem Roboter den Sprengstoff und bringt ihn weg.<br><br>
-    Olaf Hoppe von der Polizei: Auf dem Flughafen konnten mehrere Stunden lang keine Flugzeuge landen oder starten. Einige Flugzeuge sind deshalb zu anderen Flughäfen geflogen.<br><br>
-    Innenminister Alexander Dobrindt: Das ist eine sehr ernste Bedrohung für die Sicherheit. Wir hatten schon früher unbekannte Drohnen an Flughäfen. Aber eine bewaffnete Drohne mit Sprengstoff auf einem Flughafen, das ist neu.<br><br>
-    Auch Frachtflugzeuge starten und landen in Leipzig. Diese Flugzeuge bringen Waffen in die Ukraine. Vielleicht hat Russland die Drohne geschickt. Vielleicht war es aber auch jemand anderes. Wir wissen es nicht. Die Polizei will jetzt herausfinden, wem die Drohne gehört und wer sie gesteuert hat.
+    <section class="reader">
+      <div class="reader-tip">
+        <span>实线是本期重点词，虚线是词典结果，均可收入生词本。</span>
+        <button id="font-btn">字号 A+</button>
+      </div>
+      <div id="news"></div>
+    </section>
   </div>
+</main>
 
-  <div class="section-label label-cn">🇨🇳 中文译文</div>
-  <div class="translation">
-    在德国东部的莱比锡机场发现了一架载有炸药的无人机。无人机是飞行机器人，炸药会爆炸，因此非常危险。<br><br>
-    机场上的炸药没有爆炸——员工看到了无人机并报警。警方拆除了炸药。<br><br>
-    许多人都在问：这架无人机怎么来到机场的？德国到底有多安全？<br><br>
-    警察和消防员在乌克兰来的飞机附近找到了这架无人机。警方用机器人拆除炸药并运走。<br><br>
-    警方表示机场连续数小时无法起降，部分飞机改飞其他机场。<br><br>
-    内政部长 Dobrindt 称这是对安全的严重威胁——德国之前出现过不明无人机，但携带炸药的武装无人机出现在机场，这是首次。<br><br>
-    莱比锡机场也起降向乌克兰运送武器的货机。也许是俄罗斯派来了这架无人机，也许是其他人。警方现在要查清这架无人机属于谁、谁在操控。
+<div class="scrim" id="scrim"></div>
+<div id="pop" role="dialog" aria-modal="false" aria-label="单词卡片"></div>
+<button id="basket-btn" aria-label="打开生词本">生词本<span class="cnt" id="bk-cnt">0</span></button>
+<aside id="basket" aria-label="生词本">
+  <div class="bhead">
+    <div><h3>我的生词本</h3><p>保存在当前浏览器，可复制或导出 Anki</p></div>
+    <button class="bclose" onclick="toggleBasket(false)" aria-label="关闭">×</button>
   </div>
-
-  <div class="section-label label-vocab">📖 核心词汇</div>
-  <table class="vocab">
-    <tr><th>德语</th><th>中文</th><th>例句</th></tr>
-    <tr><td>die Drohne</td><td>无人机</td><td>Eine Drohne mit Sprengstoff</td></tr>
-    <tr><td>der Sprengstoff</td><td>炸药</td><td>Der Sprengstoff kann explodieren</td></tr>
-    <tr><td>explodieren</td><td>爆炸</td><td>ist nicht explodiert</td></tr>
-    <tr><td>entschärfen</td><td>拆除（炸弹）</td><td>Die Polizei hat den Sprengstoff entschärft</td></tr>
-    <tr><td>die Bedrohung</td><td>威胁</td><td>eine sehr ernste Bedrohung</td></tr>
-    <tr><td>bewaffnet</td><td>武装的</td><td>eine bewaffnete Drohne</td></tr>
-    <tr><td>steuern</td><td>操控、驾驶</td><td>Wer hat die Drohne gesteuert?</td></tr>
-    <tr><td>das Frachtflugzeug</td><td>货机</td><td>Frachtflugzeuge transportieren Waffen</td></tr>
-  </table>
-
-  <div class="section-label label-grammar">🔑 语法要点</div>
-  <div class="grammar">
-    <strong>werden + 过去分词 = 被动语态</strong><br>
-    Eine Drohne <strong>wurde</strong> ... <strong>gefunden</strong> = 一架无人机<strong>被</strong>发现<br>
-    结构：werden（变位）+ 过去分词。wurde 是 werden 的过去时。被动语态在新闻中极为常用——强调"发生了什么"而非"谁做的"。
+  <button class="secondary-btn basket-add" onclick="openWordEditor()">＋ 手动添加单词</button>
+  <div id="word-editor">
+    <form class="word-form" id="word-form">
+      <label>德语单词或短语<input id="edit-word" required autocomplete="off" placeholder="z. B. die Entscheidung"></label>
+      <label>中文释义<input id="edit-zh" required autocomplete="off" placeholder="决定"></label>
+      <label>例句（可选）<textarea id="edit-example" placeholder="Das ist eine wichtige Entscheidung."></textarea></label>
+      <div class="form-actions">
+        <button type="button" class="secondary-btn" onclick="closeWordEditor()">取消</button>
+        <button type="submit" class="primary-btn">保存单词</button>
+      </div>
+    </form>
   </div>
-
-  <div class="section-label label-bg">💡 背景知识</div>
-  <div class="bg-info">
-    莱比锡-哈雷机场是德国第二大货运机场、DHL 欧洲枢纽。因承担向乌克兰运送军事物资的任务，炸药无人机引发俄方破坏的猜测，但调查仍在进行。内政部长称这是首次在德国机场发现携带炸药的武装无人机。
+  <div class="blist" id="bk-list"></div>
+  <div class="bfoot">
+    <button class="secondary-btn" onclick="copyWords()">复制文本</button>
+    <button class="primary-btn" id="btn-apkg" onclick="exportApkg()">导出 Anki</button>
   </div>
-</div>
+  <div class="bstatus" id="bk-status"></div>
+</aside>
+<div id="toast"></div>
 
-<!-- ===== NEWS 2: München Urteil ===== -->
-<div class="news">
-  <h2><span class="num">2</span> Urteil: Lebenslange Haft wegen Anschlag</h2>
+<script>
+const DATA = {"date": "2026-08-06", "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1627096.html", "embed_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1627096~player.html", "mp4_url": "https://tagesschau-progressive.ard-mcdn.de/video/2026/0806/TV-20260806-1732-1700.webl.h264.mp4", "duration": 515.03, "news": [{"title": "Flughafen Leipzig: Sprengstoff gefunden", "paras": [{"de": "Auf dem Flughafen Leipzig im Osten von Deutschland wurde eine Drohne mit Sprengstoff gefunden. Drohnen sind Flugroboter. Sprengstoff kann explodieren. Er ist deshalb sehr gefährlich.", "zh": "在德国东部的莱比锡机场发现了一架载有炸药的无人机。无人机是飞行机器人，炸药会爆炸，因此非常危险。", "start": 30.47, "end": 56.51}, {"de": "Der Sprengstoff auf dem Flughafen ist nicht explodiert. Mitarbeiter haben die Drohne nämlich gesehen und die Polizei gerufen. Die Polizei hat den Sprengstoff entschärft.", "zh": "机场上的炸药没有爆炸——员工看到了无人机并报警。警方拆除了炸药。", "start": 57.27, "end": 72.11}, {"de": "Viele Menschen in Deutschland haben jetzt Fragen: Wie ist die Drohne auf den Flughafen gekommen? Und wie sicher ist Deutschland?", "zh": "许多人都在问：这架无人机怎么来到机场的？德国到底有多安全？", "start": 72.35, "end": 82.63}, {"de": "Polizei und Feuerwehr finden die Drohne in der Nähe von Flugzeugen aus der Ukraine. Die Polizei entschärft mit einem Roboter den Sprengstoff und bringt ihn weg.", "zh": "警察和消防员在乌克兰来的飞机附近找到了这架无人机。警方用机器人拆除炸药并运走。", "start": 85.03, "end": 105.51}, {"de": "Olaf Hoppe von der Polizei: Auf dem Flughafen konnten mehrere Stunden lang keine Flugzeuge landen oder starten. Einige Flugzeuge sind deshalb zu anderen Flughäfen geflogen.", "zh": "警方表示机场连续数小时无法起降，部分飞机改飞其他机场。", "start": 105.75, "end": 122.15}, {"de": "Innenminister Alexander Dobrindt: Das ist eine sehr ernste Bedrohung für die Sicherheit. Wir hatten schon früher unbekannte Drohnen an Flughäfen. Aber eine bewaffnete Drohne mit Sprengstoff auf einem Flughafen, das ist neu.", "zh": "内政部长 Dobrindt 称这是对安全的严重威胁——德国之前出现过不明无人机，但携带炸药的武装无人机出现在机场，这是首次。", "start": 122.75, "end": 151.67}, {"de": "Auch Frachtflugzeuge starten und landen in Leipzig. Diese Flugzeuge bringen Waffen in die Ukraine. Vielleicht hat Russland die Drohne geschickt. Vielleicht war es aber auch jemand anderes. Wir wissen es nicht. Die Polizei will jetzt herausfinden, wem die Drohne gehört und wer sie gesteuert hat.", "zh": "莱比锡机场也起降向乌克兰运送武器的货机。也许是俄罗斯派来了这架无人机，也许是其他人。警方现在要查清这架无人机属于谁、谁在操控。", "start": 153.27, "end": 189.03}], "vocab": [{"lemma": "die Drohne", "key": "drohne", "forms": ["Drohne", "die Drohne"], "pos": "", "zh": "无人机", "example_de": "Eine Drohne mit Sprengstoff", "example_zh": ""}, {"lemma": "der Sprengstoff", "key": "sprengstoff", "forms": ["Sprengstoff", "der Sprengstoff"], "pos": "", "zh": "炸药", "example_de": "Der Sprengstoff kann explodieren", "example_zh": ""}, {"lemma": "explodieren", "key": "explodieren", "forms": ["explodieren"], "pos": "Verb", "zh": "爆炸", "example_de": "ist nicht explodiert", "example_zh": ""}, {"lemma": "entschärfen", "key": "entschärfen", "forms": ["entschärfen"], "pos": "Verb", "zh": "拆除（炸弹）", "example_de": "Die Polizei hat den Sprengstoff entschärft", "example_zh": ""}, {"lemma": "die Bedrohung", "key": "bedrohung", "forms": ["Bedrohung", "die Bedrohung"], "pos": "", "zh": "威胁", "example_de": "eine sehr ernste Bedrohung", "example_zh": ""}, {"lemma": "bewaffnet", "key": "bewaffnet", "forms": ["bewaffnet"], "pos": "", "zh": "武装的", "example_de": "eine bewaffnete Drohne", "example_zh": ""}, {"lemma": "steuern", "key": "steuern", "forms": ["steuern"], "pos": "Verb", "zh": "操控、驾驶", "example_de": "Wer hat die Drohne gesteuert?", "example_zh": ""}, {"lemma": "das Frachtflugzeug", "key": "frachtflugzeug", "forms": ["Frachtflugzeug", "das Frachtflugzeug"], "pos": "", "zh": "货机", "example_de": "Frachtflugzeuge transportieren Waffen", "example_zh": ""}], "grammar_points": [{"title": "werden + 过去分词 = 被动语态", "summary": "werden + 过去分词 = 被动语态 Eine Drohne wurde ... gefunden = 一架无人机被发现 结构：werden（变位）+ 过去分词。wurde 是 werden 的过去时。被动语态在新闻中极为常用——强调\"发生了什么\"而非\"谁做的\"。", "example_de": "发生了什么", "example_zh": ""}], "background": "莱比锡-哈雷机场是德国第二大货运机场、DHL 欧洲枢纽。因承担向乌克兰运送军事物资的任务，炸药无人机引发俄方破坏的猜测，但调查仍在进行。内政部长称这是首次在德国机场发现携带炸药的武装无人机。"}, {"title": "Urteil: Lebenslange Haft wegen Anschlag", "paras": [{"de": "Der Mann auf dem Foto hat vor einem Jahr einen Anschlag gemacht. Er ist mit einem Auto in eine Demonstration in der Stadt München gefahren. Eine Frau und ihre Tochter sind dabei gestorben. Viele Menschen wurden verletzt.", "zh": "照片上的这个男人一年前制造了一起袭击事件。他开车冲进了慕尼黑的一场示威游行。一名女子和她的女儿因此丧生，许多人受伤。", "start": 190.15, "end": 213.91}, {"de": "Ein Gericht in München hat den Mann jetzt zu lebenslanger Haft verurteilt. Das heißt, er muss für mindestens 15 Jahre ins Gefängnis.", "zh": "慕尼黑一家法院现在判处该男子终身监禁——这意味着他至少要服刑 15 年。", "start": 213.95, "end": 225.39}], "vocab": [{"lemma": "der Anschlag", "key": "anschlag", "forms": ["Anschlag", "der Anschlag"], "pos": "", "zh": "袭击事件", "example_de": "Er hat einen Anschlag gemacht", "example_zh": ""}, {"lemma": "die Demonstration", "key": "demonstration", "forms": ["Demonstration", "die Demonstration"], "pos": "", "zh": "示威游行", "example_de": "in eine Demonstration gefahren", "example_zh": ""}, {"lemma": "sterben (starb, gestorben)", "key": "sterben-starb", "forms": ["sterben", "starb", "gestorben", "sterben (starb, gestorben)"], "pos": "Redewendung", "zh": "死亡", "example_de": "Sie sind dabei gestorben", "example_zh": ""}, {"lemma": "sich verletzen", "key": "verletzen", "forms": ["verletzen", "sich verletzen"], "pos": "Substantiv", "zh": "受伤", "example_de": "Viele Menschen wurden verletzt", "example_zh": ""}, {"lemma": "das Gericht", "key": "gericht", "forms": ["Gericht", "das Gericht"], "pos": "", "zh": "法院", "example_de": "Ein Gericht in München", "example_zh": ""}, {"lemma": "die lebenslange Haft", "key": "lebenslange-haft", "forms": ["lebenslange Haft", "die lebenslange Haft"], "pos": "", "zh": "终身监禁", "example_de": "zu lebenslanger Haft verurteilt", "example_zh": ""}, {"lemma": "verurteilen", "key": "verurteilen", "forms": ["verurteilen"], "pos": "Verb", "zh": "判决", "example_de": "hat den Mann verurteilt", "example_zh": ""}, {"lemma": "das Gefängnis", "key": "gefängnis", "forms": ["Gefängnis", "das Gefängnis"], "pos": "", "zh": "监狱", "example_de": "Er muss ins Gefängnis", "example_zh": ""}], "grammar_points": [{"title": "zu + 第三格名词 = \"被判处…\"", "summary": "zu + 第三格名词 = \"被判处…\" zu lebenslanger Haft verurteilt = 被判处终身监禁 法律新闻高频结构：zu + Dativ + verurteilen。 • zu Geldstrafe verurteilt（被判罚款） • zu drei Jahren verurteilt（被判三年）", "example_de": "被判处…", "example_zh": ""}], "background": "2025年2月，一名阿富汗寻求庇护者驾车冲入慕尼黑工会示威活动，造成两人死亡、数十人受伤。此案曾引发德国移民政策激烈讨论，法院最终判处终身监禁。"}, {"title": "Bäume: Hilfe gegen Hitze", "paras": [{"de": "In vielen Städten wird es im Sommer sehr heiß. Die Menschen suchen dann Schatten. Hitze ist nämlich anstrengend und für manche Menschen ist sie gefährlich — zum Beispiel für alte oder kranke Menschen.", "zh": "许多城市夏天很热。人们寻找阴凉处。炎热令人疲惫，对老人和病人来说特别危险。", "start": 226.63, "end": 254.47}, {"de": "Die Behörden überlegen: Was kann man tun gegen Hitze? Wie wird die Stadt im Sommer kühler?", "zh": "城市当局在考虑：怎样对抗酷热？怎样让城市更凉爽？", "start": 254.51, "end": 265.47}, {"de": "Die Stadt Bochum hat eine Lösung gefunden: Bäume pflanzen. In der Allee-Straße wird ein Loch gegraben, viel Erde kommt hinein. Wenn es regnet, fließt Wasser von der Straße ins Loch. Die Erde speichert das Wasser, die Bäume bekommen dadurch auch dann Wasser, wenn es nicht regnet.", "zh": "波鸿市找到了一个方案：种树。在马路中间挖坑、填土。下雨时水从路面流进坑里，泥土储存水分，即使不下雨树木也能得到水。", "start": 266.67, "end": 319.87}, {"de": "Große Bäume verdunsten Wasser über die Blätter. Die Luft wird so kühler. Eine schon umgebaute Straße: Unter den Gräsern ist ein tiefes Loch mit Erde. Regenwasser fließt durch die Lücken im Bordstein hinein. Das ist gut für die Umwelt und für die Menschen.", "zh": "大树通过叶片蒸发水分，让空气变凉。在已改造的街道上，草地下方有蓄水土坑，雨水通过路缘石缝隙流入。这对环境和人都有好处。", "start": 319.91, "end": 356.51}, {"de": "Bochum will noch mehr Parks und Straßen umbauen und mehr Bäume pflanzen.", "zh": "波鸿还想改造更多公园和街道，种更多树。", "start": 374.31, "end": 390.51}], "vocab": [{"lemma": "die Hitze", "key": "hitze", "forms": ["Hitze", "die Hitze"], "pos": "", "zh": "酷热", "example_de": "Hitze ist für alte Menschen gefährlich", "example_zh": ""}, {"lemma": "der Schatten", "key": "schatten", "forms": ["Schatten", "der Schatten"], "pos": "", "zh": "阴凉处", "example_de": "Menschen suchen Schatten", "example_zh": ""}, {"lemma": "anstrengend", "key": "anstrengend", "forms": ["anstrengend"], "pos": "", "zh": "令人疲惫的", "example_de": "Hitze ist anstrengend", "example_zh": ""}, {"lemma": "pflanzen", "key": "pflanzen", "forms": ["pflanzen"], "pos": "Verb", "zh": "种植", "example_de": "Bochum pflanzt Bäume", "example_zh": ""}, {"lemma": "die Erde", "key": "erde", "forms": ["Erde", "die Erde"], "pos": "", "zh": "泥土", "example_de": "Die Erde kann Wasser speichern", "example_zh": ""}, {"lemma": "speichern", "key": "speichern", "forms": ["speichern"], "pos": "Verb", "zh": "储存", "example_de": "Die Erde speichert Wasser", "example_zh": ""}, {"lemma": "verdunsten", "key": "verdunsten", "forms": ["verdunsten"], "pos": "Verb", "zh": "蒸发", "example_de": "Bäume verdunsten Wasser über die Blätter", "example_zh": ""}, {"lemma": "umbauen", "key": "umbauen", "forms": ["umbauen"], "pos": "Verb", "zh": "改造", "example_de": "Straßen umbauen", "example_zh": ""}], "grammar_points": [{"title": "方向介词：durch / über / in + Akkusativ", "summary": "方向介词：durch / über / in + Akkusativ • Wasser fließt durch die Lücken → 水穿过缝隙（durch = 穿透过程） • Sie verdunsten Wasser über die Blätter → 通过叶片蒸发（über = 覆盖表面） • Wasser fließt in das Loch → 水流进坑里（in + Akk = 向内运动）", "example_de": "", "example_zh": ""}], "background": "波鸿的做法属于\"海绵城市\"（Schwammstadt）理念——道路下方挖蓄水坑收集雨水，干旱时供给树木。树木蒸腾作用可降温 2-5°C，这种城市改造方式正被越来越多德国城市采用。"}, {"title": "Gedenken: Atombombe in Hiroshima", "paras": [{"de": "Hiroshima ist eine Stadt in Japan. In Hiroshima ist im Zweiten Weltkrieg eine Atombombe explodiert. Die Atombombe war von den USA. Sehr viele Menschen sind gestorben und wurden schwer verletzt.", "zh": "广岛是日本的一座城市。二战期间一颗原子弹在这里爆炸——是美国投下的。无数人丧生，无数人受重伤。", "start": 392.71, "end": 423.59}, {"de": "Schulkinder in Hiroshima läuten die Friedensglocke. Tausende Menschen aus vielen Ländern sind zur Gedenkveranstaltung gekommen. Sie schweigen gemeinsam für eine Minute und bringen Blumen zum Mahnmal für die Opfer.", "zh": "广岛的学童敲响和平钟。来自许多国家的数千人参加纪念仪式，集体默哀一分钟，向遇难者纪念碑献花。", "start": 427.87, "end": 447.91}, {"de": "Der Bürgermeister von Hiroshima sagt: Auch heute drohen einige Länder mit Atomwaffen. Das ist gefährlich. Atomwaffen machen die Welt unsicher. Nie wieder darf ein Land Atomwaffen einsetzen.", "zh": "广岛市长说：即使在今天，一些国家也以核武器相威胁。这很危险。核武器让世界不安全。任何国家都不许再次使用核武器。", "start": 449.47, "end": 468.15}], "vocab": [{"lemma": "die Atombombe", "key": "atombombe", "forms": ["Atombombe", "die Atombombe"], "pos": "", "zh": "原子弹", "example_de": "Eine Atombombe ist explodiert", "example_zh": ""}, {"lemma": "die Friedensglocke", "key": "friedensglocke", "forms": ["Friedensglocke", "die Friedensglocke"], "pos": "", "zh": "和平钟", "example_de": "Schulkinder läuten die Friedensglocke", "example_zh": ""}, {"lemma": "die Gedenkveranstaltung", "key": "gedenkveranstaltung", "forms": ["Gedenkveranstaltung", "die Gedenkveranstaltung"], "pos": "", "zh": "纪念仪式", "example_de": "zur Gedenkveranstaltung gekommen", "example_zh": ""}, {"lemma": "schweigen (schwieg)", "key": "schweigen", "forms": ["schweigen", "schwieg", "schweigen (schwieg)"], "pos": "", "zh": "沉默", "example_de": "Sie schweigen für eine Minute", "example_zh": ""}, {"lemma": "das Mahnmal", "key": "mahnmal", "forms": ["Mahnmal", "das Mahnmal"], "pos": "", "zh": "纪念碑", "example_de": "Blumen zum Mahnmal bringen", "example_zh": ""}, {"lemma": "das Opfer", "key": "opfer", "forms": ["Opfer", "das Opfer"], "pos": "", "zh": "遇难者", "example_de": "für die Opfer von der Atombombe", "example_zh": ""}, {"lemma": "die Atomwaffe", "key": "atomwaffe", "forms": ["Atomwaffe", "die Atomwaffe"], "pos": "", "zh": "核武器", "example_de": "Einige Länder drohen mit Atomwaffen", "example_zh": ""}, {"lemma": "einsetzen", "key": "einsetzen", "forms": ["einsetzen"], "pos": "Verb", "zh": "使用（武器）", "example_de": "Atomwaffen einsetzen", "example_zh": ""}], "grammar_points": [{"title": "dürfen 否定 = 禁止性表达", "summary": "dürfen 否定 = 禁止性表达 Nie wieder darf ein Land Atomwaffen einsetzen. = 任何国家不许再次使用核武器。 dürfen 表\"被允许\"，否定后即\"不许/不得\"，在新闻和官方声明中比 nicht sollen 更正式、更有分量。", "example_de": "被允许", "example_zh": ""}], "background": "1945年8月6日，美军在广岛投下人类历史上第一颗实战原子弹\"小男孩\"，当场约8万人死亡，后续因辐射死亡超14万人。每年8月6日广岛和平纪念公园举行仪式，2026年是81周年。"}, {"title": "Das Wetter", "paras": [{"de": "Im Norden ist es oft stark bewölkt. Auch ganz unten im Süden ist es wolkig. Manchmal mit Regenschauern oder Gewittern. 19 bis 31 Grad.", "zh": "北部经常云层厚重。最南端也是多云。有时伴有阵雨或雷暴。气温 19 到 31 度。", "start": 490.59, "end": 507.67}], "vocab": [{"lemma": "bewölkt", "key": "bewölkt", "forms": ["bewölkt"], "pos": "", "zh": "多云的", "example_de": "stark bewölkt", "example_zh": ""}, {"lemma": "der Regenschauer", "key": "regenschauer", "forms": ["Regenschauer", "der Regenschauer"], "pos": "", "zh": "阵雨", "example_de": "mit Regenschauern", "example_zh": ""}, {"lemma": "das Gewitter", "key": "gewitter", "forms": ["Gewitter", "das Gewitter"], "pos": "", "zh": "雷暴", "example_de": "oder Gewittern", "example_zh": ""}], "grammar_points": [], "background": ""}], "gloss": {"drohne": {"word": "die Drohne", "zh": "无人机", "pos": "", "example": "Eine Drohne mit Sprengstoff", "source": "editorial"}, "sprengstoff": {"word": "der Sprengstoff", "zh": "炸药", "pos": "", "example": "Der Sprengstoff kann explodieren", "source": "editorial"}, "explodieren": {"word": "explodieren", "zh": "爆炸", "pos": "Verb", "example": "ist nicht explodiert", "source": "editorial"}, "entschärfen": {"word": "entschärfen", "zh": "拆除（炸弹）", "pos": "Verb", "example": "Die Polizei hat den Sprengstoff entschärft", "source": "editorial"}, "bedrohung": {"word": "die Bedrohung", "zh": "威胁", "pos": "", "example": "eine sehr ernste Bedrohung", "source": "editorial"}, "bewaffnet": {"word": "bewaffnet", "zh": "武装的", "pos": "", "example": "eine bewaffnete Drohne", "source": "editorial"}, "steuern": {"word": "steuern", "zh": "操控、驾驶", "pos": "Verb", "example": "Wer hat die Drohne gesteuert?", "source": "editorial"}, "frachtflugzeug": {"word": "das Frachtflugzeug", "zh": "货机", "pos": "", "example": "Frachtflugzeuge transportieren Waffen", "source": "editorial"}, "anschlag": {"word": "der Anschlag", "zh": "袭击事件", "pos": "", "example": "Er hat einen Anschlag gemacht", "source": "editorial"}, "demonstration": {"word": "die Demonstration", "zh": "示威游行", "pos": "", "example": "in eine Demonstration gefahren", "source": "editorial"}, "sterben-starb": {"word": "sterben (starb, gestorben)", "zh": "死亡", "pos": "Redewendung", "example": "Sie sind dabei gestorben", "source": "editorial"}, "verletzen": {"word": "sich verletzen", "zh": "受伤", "pos": "Substantiv", "example": "Viele Menschen wurden verletzt", "source": "editorial"}, "gericht": {"word": "das Gericht", "zh": "法院", "pos": "", "example": "Ein Gericht in München", "source": "editorial"}, "lebenslange-haft": {"word": "die lebenslange Haft", "zh": "终身监禁", "pos": "", "example": "zu lebenslanger Haft verurteilt", "source": "editorial"}, "verurteilen": {"word": "verurteilen", "zh": "判决", "pos": "Verb", "example": "hat den Mann verurteilt", "source": "editorial"}, "gefängnis": {"word": "das Gefängnis", "zh": "监狱", "pos": "", "example": "Er muss ins Gefängnis", "source": "editorial"}, "hitze": {"word": "die Hitze", "zh": "酷热", "pos": "", "example": "Hitze ist für alte Menschen gefährlich", "source": "editorial"}, "schatten": {"word": "der Schatten", "zh": "阴凉处", "pos": "", "example": "Menschen suchen Schatten", "source": "editorial"}, "anstrengend": {"word": "anstrengend", "zh": "令人疲惫的", "pos": "", "example": "Hitze ist anstrengend", "source": "editorial"}, "pflanzen": {"word": "pflanzen", "zh": "种植", "pos": "Verb", "example": "Bochum pflanzt Bäume", "source": "editorial"}, "erde": {"word": "die Erde", "zh": "泥土", "pos": "", "example": "Die Erde kann Wasser speichern", "source": "editorial"}, "speichern": {"word": "speichern", "zh": "储存", "pos": "Verb", "example": "Die Erde speichert Wasser", "source": "editorial"}, "verdunsten": {"word": "verdunsten", "zh": "蒸发", "pos": "Verb", "example": "Bäume verdunsten Wasser über die Blätter", "source": "editorial"}, "umbauen": {"word": "umbauen", "zh": "改造", "pos": "Verb", "example": "Straßen umbauen", "source": "editorial"}, "atombombe": {"word": "die Atombombe", "zh": "原子弹", "pos": "", "example": "Eine Atombombe ist explodiert", "source": "editorial"}, "friedensglocke": {"word": "die Friedensglocke", "zh": "和平钟", "pos": "", "example": "Schulkinder läuten die Friedensglocke", "source": "editorial"}, "gedenkveranstaltung": {"word": "die Gedenkveranstaltung", "zh": "纪念仪式", "pos": "", "example": "zur Gedenkveranstaltung gekommen", "source": "editorial"}, "schweigen": {"word": "schweigen (schwieg)", "zh": "沉默", "pos": "", "example": "Sie schweigen für eine Minute", "source": "editorial"}, "mahnmal": {"word": "das Mahnmal", "zh": "纪念碑", "pos": "", "example": "Blumen zum Mahnmal bringen", "source": "editorial"}, "opfer": {"word": "das Opfer", "zh": "遇难者", "pos": "", "example": "für die Opfer von der Atombombe", "source": "editorial"}, "atomwaffe": {"word": "die Atomwaffe", "zh": "核武器", "pos": "", "example": "Einige Länder drohen mit Atomwaffen", "source": "editorial"}, "einsetzen": {"word": "einsetzen", "zh": "使用（武器）", "pos": "Verb", "example": "Atomwaffen einsetzen", "source": "editorial"}, "bewölkt": {"word": "bewölkt", "zh": "多云的", "pos": "", "example": "stark bewölkt", "source": "editorial"}, "regenschauer": {"word": "der Regenschauer", "zh": "阵雨", "pos": "", "example": "mit Regenschauern", "source": "editorial"}, "gewitter": {"word": "das Gewitter", "zh": "雷暴", "pos": "", "example": "oder Gewittern", "source": "editorial"}, "mit": {"word": "mit", "zh": "与…、同…、通过…、由于", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "gefunden": {"word": "gefunden", "zh": "找到的、发现的", "pos": "Verb", "example": "", "source": "wiktionary"}, "deshalb": {"word": "deshalb", "zh": "因此、为此、所以", "pos": "Adverb", "example": "", "source": "wiktionary"}, "sehr": {"word": "sehr", "zh": "很、非常、极其", "pos": "Adverb", "example": "", "source": "wiktionary"}, "gefährlich": {"word": "gefährlich", "zh": "危險的，冒險的，嚴重的", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "nicht": {"word": "nicht", "zh": "不，无，没有", "pos": "Adverb", "example": "", "source": "wiktionary"}, "mitarbeiter": {"word": "Mitarbeiter", "zh": "同事、雇员、工人", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "nämlich": {"word": "nämlich", "zh": "即、也就是说", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "und": {"word": "Und", "zh": "（表示并列关系）和…、与…", "pos": "Konjunktion", "example": "", "source": "wiktionary"}, "viele": {"word": "viele", "zh": "多数、很多", "pos": "Pronomen", "example": "", "source": "wiktionary"}, "menschen": {"word": "Menschen", "zh": "Mensch 的賓格/與格/屬格單數", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "jetzt": {"word": "jetzt", "zh": "现在、目前", "pos": "Adverb", "example": "", "source": "wiktionary"}, "fragen": {"word": "fragen", "zh": "提问、询问", "pos": "Verb", "example": "", "source": "wiktionary"}, "feuerwehr": {"word": "Feuerwehr", "zh": "消防队、消防队员、消防车、救火车", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "aus": {"word": "Aus", "zh": "（不幸的）结局", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "einem": {"word": "einem", "zh": "ein 的與格陽性/中性單數", "pos": "Zahl", "example": "", "source": "wiktionary"}, "stunden": {"word": "stunden", "zh": "stund 的定指單數", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "lang": {"word": "lang", "zh": "长的", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "landen": {"word": "landen", "zh": "強/〔弱〕/混合   〔及物〕/不及物/反身   可分離/〔不可分離〕", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "oder": {"word": "oder", "zh": "或者", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "starten": {"word": "starten", "zh": "动词：开始、创立", "pos": "Verb", "example": "", "source": "wiktionary"}, "einige": {"word": "einige", "zh": "一些、几个", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "wir": {"word": "wir", "zh": "（第一人稱複數主格代詞）我們", "pos": "Pronomen", "example": "", "source": "wiktionary"}, "hatten": {"word": "hatten", "zh": "haben 的第一人稱/第三人稱複數簡單過去時", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "schon": {"word": "schon", "zh": "已经", "pos": "Verb", "example": "", "source": "wiktionary"}, "unbekannte": {"word": "unbekannte", "zh": "強變化/混合變化主格/賓格陰性單數", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "aber": {"word": "Aber", "zh": "反對", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "diese": {"word": "diese", "zh": "dieser 的主格陰性單數", "pos": "Verb", "example": "", "source": "wiktionary"}, "bringen": {"word": "bringen", "zh": "带来、拿来", "pos": "Verb", "example": "", "source": "wiktionary"}, "vielleicht": {"word": "vielleicht", "zh": "或許，可能，說不定", "pos": "Adverb", "example": "", "source": "wiktionary"}, "jemand": {"word": "jemand", "zh": "某人、有人、一个人", "pos": "Pronomen", "example": "", "source": "wiktionary"}, "herausfinden": {"word": "herausfinden", "zh": "發現，探明，查明", "pos": "Verb", "example": "", "source": "wiktionary"}, "gehört": {"word": "gehört", "zh": "gehören 的第三人稱單數現在時", "pos": "Verb", "example": "", "source": "wiktionary"}, "foto": {"word": "Foto", "zh": "照片", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "jahr": {"word": "Jahr", "zh": "年、年头", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "einen": {"word": "einen", "zh": "ein 的賓格陽性單數", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "auto": {"word": "Auto", "zh": "陽/〔中〕/陰/唯複   通常 〔可數〕/不可數", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "stadt": {"word": "Stadt", "zh": "城市", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "ein": {"word": "ein", "zh": "ein 陽  或  中", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "lebenslanger": {"word": "lebenslanger", "zh": "強變化/混合變化主格陽性單數", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "haft": {"word": "Haft", "zh": "捕拿、逮、逮捕、拘捕", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "städten": {"word": "Städten", "zh": "Stadt 的與格/複數", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "suchen": {"word": "suchen", "zh": "搜索、寻找（后也可接nach）", "pos": "Verb", "example": "", "source": "wiktionary"}, "dann": {"word": "dann", "zh": "（时间）此后、然后", "pos": "Adverb", "example": "", "source": "wiktionary"}, "beispiel": {"word": "Beispiel", "zh": "例子", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "kranke": {"word": "Kranke", "zh": "Kranker 的陰性等價詞：女病人，女病患", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "überlegen": {"word": "überlegen", "zh": "占上风的，更厉害的，更好的，更优的", "pos": "Verb", "example": "", "source": "wiktionary"}, "tun": {"word": "tun", "zh": "做、干、表现、执行、创造", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "gegen": {"word": "gegen", "zh": "［支配宾格］对着、朝着、面对、靠、反、反对、与…相对、大约", "pos": "Präposition", "example": "", "source": "wiktionary"}, "lösung": {"word": "Lösung", "zh": "解決辦法，答案", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "bäume": {"word": "Bäume", "zh": "Baum 的主格/屬格/賓格複數", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "loch": {"word": "Loch", "zh": "陽/〔中〕/陰/唯複   通常 〔可數〕/不可數", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "kommt": {"word": "kommt", "zh": "第三人稱單數", "pos": "Verb", "example": "", "source": "wiktionary"}, "hinein": {"word": "hinein", "zh": "进去、进入、到", "pos": "Adverb", "example": "", "source": "wiktionary"}, "wenn": {"word": "Wenn", "zh": "(正式) 如果", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "regnet": {"word": "regnet", "zh": "regn 的定指單數", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "fließt": {"word": "fließt", "zh": "第二人稱/第三人稱單數現在時", "pos": "Verb", "example": "", "source": "wiktionary"}, "wasser": {"word": "Wasser", "zh": "(不可數) 水", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "straße": {"word": "Straße", "zh": "陽/中/〔陰〕/唯複   通常 〔可數〕/不可數", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "dadurch": {"word": "dadurch", "zh": "通过…", "pos": "Konjunktion", "example": "", "source": "wiktionary"}, "große": {"word": "Große", "zh": "Großer 的陰性等價詞", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "über": {"word": "über", "zh": "（表示地点，支配與格，回答问题 wo?）", "pos": "Adverb", "example": "", "source": "wiktionary"}, "luft": {"word": "Luft", "zh": "(仅单数) 空气", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "unter": {"word": "unter", "zh": "在…下面", "pos": "Adjektiv", "example": "", "source": "wiktionary"}, "durch": {"word": "durch", "zh": "通过、经由、根据、按照", "pos": "Präposition", "example": "", "source": "wiktionary"}, "gut": {"word": "gut", "zh": "良好的、合适的", "pos": "Verb", "example": "", "source": "wiktionary"}, "umwelt": {"word": "Umwelt", "zh": "周遭，周圍，四周", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "noch": {"word": "noch", "zh": "仍然，还", "pos": "Konjunktion", "example": "", "source": "wiktionary"}, "gemeinsam": {"word": "gemeinsam", "zh": "共同的，相同的，一起的", "pos": "Adverb", "example": "", "source": "wiktionary"}, "minute": {"word": "Minute", "zh": "分，分鐘；一會", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "blumen": {"word": "Blumen", "zh": "Blume的变格形式", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "bürgermeister": {"word": "Bürgermeister", "zh": "市長 （男性或未指定性別）", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "sagt": {"word": "sagt", "zh": "säga 的動名詞。", "pos": "Verb", "example": "", "source": "wiktionary"}, "drohen": {"word": "drohen", "zh": "強/〔弱〕/混合   〔及物〕/不及物/反身   可分離/〔不可分離〕", "pos": "Verb", "example": "", "source": "wiktionary"}, "länder": {"word": "Länder", "zh": "Land的变格形式", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "machen": {"word": "machen", "zh": "(及物) 製作，製造，創造（物體、安排、情況等）", "pos": "Verb", "example": "", "source": "wiktionary"}, "wieder": {"word": "wieder", "zh": "又、再次", "pos": "Adverb", "example": "", "source": "wiktionary"}, "norden": {"word": "Norden", "zh": "北方", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "unten": {"word": "unten", "zh": "下面、在…之下、向下", "pos": "Adverb", "example": "", "source": "wiktionary"}, "bis": {"word": "bis", "zh": "到、直到", "pos": "Substantiv", "example": "", "source": "wiktionary"}, "grad": {"word": "Grad", "zh": "度、程度、等级、强度、级", "pos": "Substantiv", "example": "", "source": "wiktionary"}}, "form_to_key": {"drohne": "drohne", "die drohne": "drohne", "sprengstoff": "sprengstoff", "der sprengstoff": "sprengstoff", "explodieren": "explodieren", "entschärfen": "entschärfen", "bedrohung": "bedrohung", "die bedrohung": "bedrohung", "bewaffnet": "bewaffnet", "steuern": "steuern", "frachtflugzeug": "frachtflugzeug", "das frachtflugzeug": "frachtflugzeug", "anschlag": "anschlag", "der anschlag": "anschlag", "demonstration": "demonstration", "die demonstration": "demonstration", "sterben": "sterben-starb", "starb": "sterben-starb", "gestorben": "sterben-starb", "sterben (starb, gestorben)": "sterben-starb", "verletzen": "verletzen", "sich verletzen": "verletzen", "gericht": "gericht", "das gericht": "gericht", "lebenslange haft": "lebenslange-haft", "die lebenslange haft": "lebenslange-haft", "verurteilen": "verurteilen", "gefängnis": "gefängnis", "das gefängnis": "gefängnis", "hitze": "hitze", "die hitze": "hitze", "schatten": "schatten", "der schatten": "schatten", "anstrengend": "anstrengend", "pflanzen": "pflanzen", "erde": "erde", "die erde": "erde", "speichern": "speichern", "verdunsten": "verdunsten", "umbauen": "umbauen", "atombombe": "atombombe", "die atombombe": "atombombe", "friedensglocke": "friedensglocke", "die friedensglocke": "friedensglocke", "gedenkveranstaltung": "gedenkveranstaltung", "die gedenkveranstaltung": "gedenkveranstaltung", "schweigen": "schweigen", "schwieg": "schweigen", "schweigen (schwieg)": "schweigen", "mahnmal": "mahnmal", "das mahnmal": "mahnmal", "opfer": "opfer", "das opfer": "opfer", "atomwaffe": "atomwaffe", "die atomwaffe": "atomwaffe", "einsetzen": "einsetzen", "bewölkt": "bewölkt", "regenschauer": "regenschauer", "der regenschauer": "regenschauer", "gewitter": "gewitter", "das gewitter": "gewitter", "mit": "mit", "gefunden": "gefunden", "deshalb": "deshalb", "sehr": "sehr", "gefährlich": "gefährlich", "nicht": "nicht", "mitarbeiter": "mitarbeiter", "nämlich": "nämlich", "und": "und", "viele": "viele", "menschen": "menschen", "jetzt": "jetzt", "fragen": "fragen", "feuerwehr": "feuerwehr", "aus": "aus", "einem": "einem", "stunden": "stunden", "lang": "lang", "landen": "landen", "oder": "oder", "starten": "starten", "einige": "einige", "wir": "wir", "hatten": "hatten", "schon": "schon", "unbekannte": "unbekannte", "aber": "aber", "diese": "diese", "bringen": "bringen", "vielleicht": "vielleicht", "jemand": "jemand", "herausfinden": "herausfinden", "gehört": "gehört", "foto": "foto", "jahr": "jahr", "einen": "einen", "auto": "auto", "stadt": "stadt", "ein": "ein", "lebenslanger": "lebenslanger", "haft": "haft", "städten": "städten", "suchen": "suchen", "dann": "dann", "beispiel": "beispiel", "kranke": "kranke", "überlegen": "überlegen", "tun": "tun", "gegen": "gegen", "lösung": "lösung", "bäume": "bäume", "loch": "loch", "kommt": "kommt", "hinein": "hinein", "wenn": "wenn", "regnet": "regnet", "fließt": "fließt", "wasser": "wasser", "straße": "straße", "dadurch": "dadurch", "große": "große", "über": "über", "luft": "luft", "unter": "unter", "durch": "durch", "gut": "gut", "umwelt": "umwelt", "noch": "noch", "gemeinsam": "gemeinsam", "minute": "minute", "blumen": "blumen", "bürgermeister": "bürgermeister", "sagt": "sagt", "drohen": "drohen", "länder": "länder", "machen": "machen", "wieder": "wieder", "norden": "norden", "unten": "unten", "bis": "bis", "grad": "grad"}, "phrases": ["die Gedenkveranstaltung", "die lebenslange Haft", "das Frachtflugzeug", "die Friedensglocke", "die Demonstration", "der Regenschauer", "lebenslange Haft", "der Sprengstoff", "sich verletzen", "das Gefängnis", "die Atombombe", "die Atomwaffe", "die Bedrohung", "das Gewitter", "der Anschlag", "der Schatten", "das Gericht", "das Mahnmal", "die Drohne", "das Opfer", "die Hitze", "die Erde"]};
+const BK_KEY = 'dd-basket';
+const GLOSS_KEY = 'dd-user-gloss';
+const PREF_KEY = 'dd-preferences';
+function migrateBasketItem(b) {
+  return {
+    key: b.key,
+    word: b.word,
+    zh: b.zh || '',
+    pos: b.pos || '',
+    example: b.example || b.exampleDe || '',
+    exampleZh: b.exampleZh || '',
+    date: b.date || '',
+    topic: b.topic || '',
+    source: b.source || '',
+    createdAt: b.createdAt || 0
+  };
+}
+const basketData = loadStored(BK_KEY, []);
+let basket = Array.isArray(basketData) ? basketData.map(migrateBasketItem) : [];
+let userGloss = loadStored(GLOSS_KEY, {});
+const prefs = loadStored(PREF_KEY, { theme: 'light', fontStep: 0, zh: true });
+let editingKey = null;
+let popWord = null;
 
-  <div class="section-label label-de">🇩🇪 德语原文</div>
-  <div class="de-text">
-    Der Mann auf dem Foto hat vor einem Jahr einen Anschlag gemacht. Er ist mit einem Auto in eine Demonstration in der Stadt München gefahren. Eine Frau und ihre Tochter sind dabei gestorben. Viele Menschen wurden verletzt.<br><br>
-    Ein Gericht in München hat den Mann jetzt zu lebenslanger Haft verurteilt. Das heißt, er muss für mindestens 15 Jahre ins Gefängnis.
-  </div>
+function loadStored(key, fallback) {
+  try { return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback)); }
+  catch { return fallback; }
+}
+function saveStored(key, value) { localStorage.setItem(key, JSON.stringify(value)); }
+function getGloss(key) {
+  if (userGloss[key]) return { source: 'user', ...userGloss[key] };
+  return DATA.gloss[key] || null;
+}
+function applyPrefs() {
+  document.documentElement.dataset.theme = prefs.theme === 'dark' ? 'dark' : 'light';
+  document.body.style.setProperty('--reader-size', `${18.5 + (prefs.fontStep || 0)}px`);
+  document.body.classList.toggle('hide-zh', prefs.zh === false);
+}
+applyPrefs();
 
-  <div class="section-label label-cn">🇨🇳 中文译文</div>
-  <div class="translation">
-    照片上的这个男人一年前制造了一起袭击事件。他开车冲进了慕尼黑的一场示威游行。一名女子和她的女儿因此丧生，许多人受伤。<br><br>
-    慕尼黑一家法院现在判处该男子终身监禁——这意味着他至少要服刑 15 年。
-  </div>
+/* ---------- 渲染 ---------- */
+const WK_RE = /[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß-]*/g;
+const PHRASES = (DATA.phrases || []).slice().sort((a, b) => b.length - a.length);
+function lookupKey(surface) {
+  return (DATA.form_to_key && DATA.form_to_key[surface.toLowerCase()]) || surface.toLowerCase();
+}
+function wrapWord(surface, key) {
+  const g = getGloss(key);
+  const classes = [
+    g?.zh ? 'known' : '',
+    g?.source === 'editorial' ? 'ed' : '',
+    g?.source === 'wiktionary' ? 'wiki' : '',
+    basket.some(b => b.key === key) ? 'saved' : ''
+  ].filter(Boolean).join(' ');
+  return `<w data-w="${esc(key)}" class="${classes}">${esc(surface)}</w>`;
+}
+function isLetter(ch) { return /[A-Za-zÄÖÜäöüß]/.test(ch || ''); }
+function tokenizeDe(text) {
+  let html = '', i = 0;
+  const lower = text.toLowerCase();
+  while (i < text.length) {
+    let hit = '';
+    if (i === 0 || !isLetter(text[i - 1])) {
+      for (const ph of PHRASES) {
+        if (lower.startsWith(ph.toLowerCase(), i) && !isLetter(text[i + ph.length])) {
+          hit = text.slice(i, i + ph.length);
+          break;
+        }
+      }
+    }
+    if (hit) {
+      html += wrapWord(hit, lookupKey(hit));
+      i += hit.length;
+      continue;
+    }
+    if (isLetter(text[i])) {
+      let j = i + 1;
+      while (j < text.length && /[A-Za-zÄÖÜäöüß-]/.test(text[j])) j++;
+      const word = text.slice(i, j);
+      html += wrapWord(word, lookupKey(word));
+      i = j;
+    } else {
+      let j = i + 1;
+      while (j < text.length && !isLetter(text[j])) j++;
+      html += esc(text.slice(i, j));
+      i = j;
+    }
+  }
+  return html;
+}
 
-  <div class="section-label label-vocab">📖 核心词汇</div>
-  <table class="vocab">
-    <tr><th>德语</th><th>中文</th><th>例句</th></tr>
-    <tr><td>der Anschlag</td><td>袭击事件</td><td>Er hat einen Anschlag gemacht</td></tr>
-    <tr><td>die Demonstration</td><td>示威游行</td><td>in eine Demonstration gefahren</td></tr>
-    <tr><td>sterben (starb, gestorben)</td><td>死亡</td><td>Sie sind dabei gestorben</td></tr>
-    <tr><td>sich verletzen</td><td>受伤</td><td>Viele Menschen wurden verletzt</td></tr>
-    <tr><td>das Gericht</td><td>法院</td><td>Ein Gericht in München</td></tr>
-    <tr><td>die lebenslange Haft</td><td>终身监禁</td><td>zu lebenslanger Haft verurteilt</td></tr>
-    <tr><td>verurteilen</td><td>判决</td><td>hat den Mann verurteilt</td></tr>
-    <tr><td>das Gefängnis</td><td>监狱</td><td>Er muss ins Gefängnis</td></tr>
-  </table>
+document.getElementById('hdate').textContent = fmtDate(DATA.date);
+document.getElementById('story-count').textContent = DATA.news.length + ' Themen';
+document.title = 'Deutsch Daily — ' + fmtDate(DATA.date);
+mountPlayer();
+const vlink = document.getElementById('vlink');
+if (DATA.video_page) vlink.href = DATA.video_page;
+else vlink.style.display = 'none';
 
-  <div class="section-label label-grammar">🔑 语法要点</div>
-  <div class="grammar">
-    <strong>zu + 第三格名词 = "被判处…"</strong><br>
-    zu <strong>lebenslanger Haft</strong> verurteilt = 被判处终身监禁<br>
-    法律新闻高频结构：zu + Dativ + verurteilen。<br>
-    • zu <strong>Geldstrafe</strong> verurteilt（被判罚款）<br>
-    • zu <strong>drei Jahren</strong> verurteilt（被判三年）
-  </div>
+function storyExtras(n, compact) {
+  if (compact) {
+    const vocab = n.vocab.length ? `<div class="vlist">${
+      n.vocab.map(v => `<div class="vrow"><span class="vw" title="${esc(v.lemma)}">${esc(v.lemma)}</span><span class="vz" title="${esc(v.zh)}">${esc(v.zh)}</span><button type="button" class="vadd" data-add="${esc(v.key)}" title="加入生词本" aria-label="加入生词本">+</button></div>`).join('')
+    }</div>` : '';
+    const notes = [
+      ...n.grammar_points.map(g => `<details class="rail-note"><summary>${esc(g.title)}</summary><div class="body">${g.example_de ? `<i>${esc(g.example_de)}</i><br>` : ''}${esc(g.summary)}</div></details>`),
+      n.background ? `<details class="rail-note"><summary>背景</summary><div class="body">${esc(n.background)}</div></details>` : ''
+    ].filter(Boolean).join('');
+    if (!vocab && !notes) return '<p class="empty-study">这条没有单独的词汇或语法。</p>';
+    return vocab + (notes ? `<div class="rail-notes">${notes}</div>` : '');
+  }
+  const vocab = n.vocab.length ? `<details class="sec-vocab"><summary>重点词汇 · ${n.vocab.length}</summary><div class="body">${
+    n.vocab.map(v => `<div class="vcard"><div><div class="vcard-top">${esc(v.lemma)}${v.pos ? `<span class="vpos">${esc(v.pos)}</span>` : ''}</div><div class="vzh">${esc(v.zh)}</div>${v.example_de ? `<div class="vex">${esc(v.example_de)}</div>` : ''}</div><button type="button" class="vadd" data-add="${esc(v.key)}" title="加入生词本" aria-label="加入生词本">+</button></div>`).join('')
+  }</div></details>` : '';
+  const gram = n.grammar_points.length ? `<details class="sec-gram"><summary>语法 · ${n.grammar_points.length}</summary><div class="body">${
+    n.grammar_points.map(g => `<div class="gcard"><h4>${esc(g.title)}</h4>${g.example_de ? `<div class="gex">${esc(g.example_de)}</div>` : ''}${g.example_zh ? `<div class="gexzh">${esc(g.example_zh)}</div>` : ''}${g.summary ? `<details class="gmore"><summary>解释</summary><div>${esc(g.summary)}</div></details>` : ''}</div>`).join('')
+  }</div></details>` : '';
+  const bg = n.background ? `<details class="sec-bg"><summary>背景资料</summary><div class="body"><p class="bg-note">AI 整理，未经独立来源核验</p>${esc(n.background)}</div></details>` : '';
+  return vocab + gram + bg || '<p class="empty-study">这条没有单独的词汇或语法。</p>';
+}
 
-  <div class="section-label label-bg">💡 背景知识</div>
-  <div class="bg-info">
-    2025年2月，一名阿富汗寻求庇护者驾车冲入慕尼黑工会示威活动，造成两人死亡、数十人受伤。此案曾引发德国移民政策激烈讨论，法院最终判处终身监禁。
-  </div>
-</div>
+const newsEl = document.getElementById('news');
+DATA.news.forEach((n, i) => {
+  const paras = n.paras.map((p, pi) => {
+    const hasT = p.start != null;
+    const seek = hasT
+      ? `<button class="seek" data-start="${p.start}" type="button">${fmtClock(p.start)}</button>`
+      : `<button class="seek" type="button" disabled>—</button>`;
+    return `<div class="para" data-start="${hasT ? p.start : ''}" data-end="${p.end != null ? p.end : ''}" id="p-${i}-${pi}">${seek}<div><div class="de">${tokenizeDe(p.de)}</div>${p.zh ? `<div class="zh">${esc(p.zh)}</div>` : ''}</div></div>`;
+  }).join('');
+  newsEl.insertAdjacentHTML('beforeend',
+    `<article id="story-${i + 1}" data-idx="${i}"><div class="n-head"><span class="n-idx">${String(i+1).padStart(2,'0')}</span><h2>${esc(n.title)}</h2></div>${paras}<div class="article-extras">${storyExtras(n)}</div></article>`);
+});
+document.getElementById('topic-list').innerHTML = DATA.news.map((n, i) =>
+  `<a href="#story-${i + 1}" data-idx="${i}" title="${esc(n.title)}">${String(i + 1).padStart(2, '0')}</a>`
+).join('');
 
-<!-- ===== NEWS 3: Bäume gegen Hitze ===== -->
-<div class="news">
-  <h2><span class="num">3</span> Bäume: Hilfe gegen Hitze</h2>
+let activeStory = -1;
+function setActiveStory(i, scroll) {
+  if (i < 0 || i >= DATA.news.length) return;
+  const changed = i !== activeStory;
+  activeStory = i;
+  if (changed) {
+    const n = DATA.news[i];
+    document.getElementById('study-extras').innerHTML = storyExtras(n, true);
+    document.getElementById('rail-now').textContent = String(i + 1).padStart(2, '0') + ' · ' + n.title;
+  }
+  document.querySelectorAll('#topic-list a').forEach((a, idx) => a.classList.toggle('on', idx === i));
+  if (scroll) document.getElementById('story-' + (i + 1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+setActiveStory(0);
+document.getElementById('topic-list').addEventListener('click', e => {
+  const a = e.target.closest('a[data-idx]');
+  if (!a) return;
+  e.preventDefault();
+  setActiveStory(Number(a.dataset.idx), true);
+});
+const storyWatch = new IntersectionObserver((entries) => {
+  const vis = entries.filter(x => x.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  if (vis) setActiveStory(Number(vis.target.dataset.idx));
+}, { rootMargin: '-20% 0px -55% 0px', threshold: [0.15, 0.4, 0.7] });
+document.querySelectorAll('article[data-idx]').forEach(el => storyWatch.observe(el));
 
-  <div class="section-label label-de">🇩🇪 德语原文</div>
-  <div class="de-text">
-    In vielen Städten wird es im Sommer sehr heiß. Die Menschen suchen dann Schatten. Hitze ist nämlich anstrengend und für manche Menschen ist sie gefährlich — zum Beispiel für alte oder kranke Menschen.<br><br>
-    Die Behörden überlegen: Was kann man tun gegen Hitze? Wie wird die Stadt im Sommer kühler?<br><br>
-    Die Stadt Bochum hat eine Lösung gefunden: Bäume pflanzen. In der Allee-Straße wird ein Loch gegraben, viel Erde kommt hinein. Wenn es regnet, fließt Wasser von der Straße ins Loch. Die Erde speichert das Wasser, die Bäume bekommen dadurch auch dann Wasser, wenn es nicht regnet.<br><br>
-    Große Bäume verdunsten Wasser über die Blätter. Die Luft wird so kühler. Eine schon umgebaute Straße: Unter den Gräsern ist ein tiefes Loch mit Erde. Regenwasser fließt durch die Lücken im Bordstein hinein. Das ist gut für die Umwelt und für die Menschen.<br><br>
-    Bochum will noch mehr Parks und Straßen umbauen und mehr Bäume pflanzen.
-  </div>
+function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function fmtInline(s) { return esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>'); }
+function fmtDate(iso) {
+  const d = new Date(iso + 'T12:00:00');
+  return d.toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+}
+function fmtClock(sec) {
+  const s = Math.max(0, Math.floor(Number(sec) || 0));
+  return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
+}
+function mountPlayer() {
+  const box = document.getElementById('player');
+  const fallback = () => {
+    if (!DATA.embed_url) {
+      document.getElementById('video-card').style.display = 'none';
+      return;
+    }
+    box.innerHTML = `<iframe src="${esc(DATA.embed_url)}" title="Tagesschau 视频播放器" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen scrolling="no"></iframe>`;
+  };
+  if (DATA.mp4_url) {
+    box.innerHTML = `<video id="av" controls playsinline preload="metadata" src="${esc(DATA.mp4_url)}"></video>`;
+    const v = document.getElementById('av');
+    let dead = false;
+    v.addEventListener('error', () => { if (!dead) { dead = true; fallback(); } });
+    v.addEventListener('timeupdate', highlightPlaying);
+  } else {
+    fallback();
+  }
+}
+function seekTo(sec) {
+  const v = document.getElementById('av');
+  if (!v || Number.isNaN(sec)) return;
+  v.currentTime = sec;
+  v.play().catch(() => {});
+}
+function highlightPlaying() {
+  const v = document.getElementById('av');
+  if (!v) return;
+  const t = v.currentTime;
+  document.querySelectorAll('.para').forEach(el => {
+    const a = parseFloat(el.dataset.start), b = parseFloat(el.dataset.end);
+    el.classList.toggle('now', !Number.isNaN(a) && !Number.isNaN(b) && t >= a && t < b + 0.05);
+  });
+}
 
-  <div class="section-label label-cn">🇨🇳 中文译文</div>
-  <div class="translation">
-    许多城市夏天很热。人们寻找阴凉处。炎热令人疲惫，对老人和病人来说特别危险。<br><br>
-    城市当局在考虑：怎样对抗酷热？怎样让城市更凉爽？<br><br>
-    波鸿市找到了一个方案：种树。在马路中间挖坑、填土。下雨时水从路面流进坑里，泥土储存水分，即使不下雨树木也能得到水。<br><br>
-    大树通过叶片蒸发水分，让空气变凉。在已改造的街道上，草地下方有蓄水土坑，雨水通过路缘石缝隙流入。这对环境和人都有好处。<br><br>
-    波鸿还想改造更多公园和街道，种更多树。
-  </div>
+/* ---------- 控制条 ---------- */
+const state = { zh: prefs.zh !== false };
+document.getElementById('btn-zh').classList.toggle('on', state.zh);
+document.getElementById('btn-zh').setAttribute('aria-pressed', String(state.zh));
+document.getElementById('btn-zh').onclick = () => {
+  state.zh = !state.zh;
+  prefs.zh = state.zh;
+  saveStored(PREF_KEY, prefs);
+  document.body.classList.toggle('hide-zh', !state.zh);
+  document.getElementById('btn-zh').classList.toggle('on', state.zh);
+  document.getElementById('btn-zh').setAttribute('aria-pressed', String(state.zh));
+};
+document.addEventListener('click', e => {
+  const add = e.target.closest('[data-add]');
+  if (add && (add.closest('#news') || add.closest('#study-extras'))) {
+    const key = add.dataset.add;
+    const v = DATA.news.flatMap(n => n.vocab).find(x => x.key === key);
+    const topic = DATA.news.find(n => n.vocab.some(x => x.key === key))?.title || '';
+    if (!v) return;
+    popWord = { key, word: v.lemma, zh: v.zh, pos: v.pos, example: v.example_de, topic };
+    basketAdd();
+    return;
+  }
+  const seek = e.target.closest('.seek[data-start]');
+  if (seek) seekTo(parseFloat(seek.dataset.start));
+});
 
-  <div class="section-label label-vocab">📖 核心词汇</div>
-  <table class="vocab">
-    <tr><th>德语</th><th>中文</th><th>例句</th></tr>
-    <tr><td>die Hitze</td><td>酷热</td><td>Hitze ist für alte Menschen gefährlich</td></tr>
-    <tr><td>der Schatten</td><td>阴凉处</td><td>Menschen suchen Schatten</td></tr>
-    <tr><td>anstrengend</td><td>令人疲惫的</td><td>Hitze ist anstrengend</td></tr>
-    <tr><td>pflanzen</td><td>种植</td><td>Bochum pflanzt Bäume</td></tr>
-    <tr><td>die Erde</td><td>泥土</td><td>Die Erde kann Wasser speichern</td></tr>
-    <tr><td>speichern</td><td>储存</td><td>Die Erde speichert Wasser</td></tr>
-    <tr><td>verdunsten</td><td>蒸发</td><td>Bäume verdunsten Wasser über die Blätter</td></tr>
-    <tr><td>umbauen</td><td>改造</td><td>Straßen umbauen</td></tr>
-  </table>
+document.getElementById('theme-btn').onclick = () => {
+  prefs.theme = prefs.theme === 'dark' ? 'light' : 'dark';
+  saveStored(PREF_KEY, prefs);
+  applyPrefs();
+};
+document.getElementById('font-btn').onclick = () => {
+  prefs.fontStep = ((prefs.fontStep || 0) + 1) % 4;
+  saveStored(PREF_KEY, prefs);
+  applyPrefs();
+  document.getElementById('font-btn').textContent = ['字号 A+', '字号 A++', '字号 A+++', '字号 A'][prefs.fontStep];
+};
+document.getElementById('font-btn').textContent = ['字号 A+', '字号 A++', '字号 A+++', '字号 A'][prefs.fontStep || 0];
 
-  <div class="section-label label-grammar">🔑 语法要点</div>
-  <div class="grammar">
-    <strong>方向介词：durch / über / in + Akkusativ</strong><br>
-    • Wasser fließt <strong>durch</strong> die Lücken → 水<strong>穿过</strong>缝隙（durch = 穿透过程）<br>
-    • Sie verdunsten Wasser <strong>über</strong> die Blätter → 通过叶片蒸发（über = 覆盖表面）<br>
-    • Wasser fließt <strong>in</strong> das Loch → 水流<strong>进</strong>坑里（in + Akk = 向内运动）
-  </div>
+const videoCard = document.getElementById('video-card');
+let floatDismissed = false;
+const videoObserver = new IntersectionObserver(([entry]) => {
+  if (innerWidth > 840) {
+    videoCard.classList.remove('floating', 'float-off');
+    return;
+  }
+  if (entry.isIntersecting) {
+    floatDismissed = false;
+    videoCard.classList.remove('floating', 'float-off');
+  } else if (!floatDismissed && DATA.embed_url) {
+    videoCard.classList.add('floating');
+  }
+}, { threshold: 0 });
+videoObserver.observe(document.getElementById('video-anchor'));
+document.getElementById('video-float-close').onclick = () => {
+  floatDismissed = true;
+  videoCard.classList.remove('floating');
+  videoCard.classList.add('float-off');
+};
+addEventListener('resize', () => {
+  if (innerWidth > 840) videoCard.classList.remove('floating', 'float-off');
+});
 
-  <div class="section-label label-bg">💡 背景知识</div>
-  <div class="bg-info">
-    波鸿的做法属于"海绵城市"（Schwammstadt）理念——道路下方挖蓄水坑收集雨水，干旱时供给树木。树木蒸腾作用可降温 2-5°C，这种城市改造方式正被越来越多德国城市采用。
-  </div>
-</div>
+/* ---------- 点词弹卡 ---------- */
+const pop = document.getElementById('pop');
+document.addEventListener('click', e => {
+  if (e.target.closest('#pop')) return;
+  const w = e.target.closest('w');
+  if (!w) { hidePop(); return; }
+  e.stopPropagation();
+  showPop(w);
+}, true);
 
-<!-- ===== NEWS 4: Hiroshima ===== -->
-<div class="news">
-  <h2><span class="num">4</span> Gedenken: Atombombe in Hiroshima</h2>
+function showPop(wEl) {
+  const key = wEl.dataset.w;
+  const g = getGloss(key) || { word: wEl.textContent, zh: '', pos: '', example: '' };
+  popWord = { key, word: wEl.textContent, ...g };
+  const inBasket = basket.some(b => b.key === key);
+  pop.innerHTML = `
+    <div class="pop-top"><div><div class="pw">${esc(g.word || wEl.textContent)}</div>
+    <div class="pp">${esc(g.source === 'wiktionary' ? '维基词典 · 可能不准确' : (g.pos || '本期重点词汇'))}</div></div>
+    <button class="pclose" onclick="hidePop()" aria-label="关闭">×</button></div>
+    <div class="pz">${esc(g.zh || '')}</div>
+    ${g.example ? `<div class="pe">${esc(g.example)}</div>` : ''}
+    <div class="pop-actions">
+      <button class="secondary-btn" onclick="openPopEditor()">${g.zh ? '编辑' : '补充释义'}</button>
+      <button class="pbtn ${inBasket ? 'in' : ''}" onclick="basketAdd()">${inBasket ? '已在生词本' : '加入生词本'}</button>
+    </div>`;
+  const r = wEl.getBoundingClientRect();
+  pop.classList.add('open');
+  const pw = pop.offsetWidth, ph = pop.offsetHeight;
+  let x = Math.min(Math.max(12, r.left + r.width/2 - pw/2), innerWidth - pw - 12);
+  let y = r.top - ph - 10;
+  if (y < 12) y = Math.min(r.bottom + 10, innerHeight - ph - 12);
+  pop.style.left = x + 'px'; pop.style.top = y + 'px';
+}
+function openPopEditor() {
+  if (!popWord) return;
+  pop.innerHTML = `
+    <div class="pop-top"><div class="pw">${esc(popWord.word)}</div><button class="pclose" onclick="hidePop()" aria-label="关闭">×</button></div>
+    <form class="word-form" id="pop-form" style="margin-top:14px">
+      <label>显示词形<input id="pop-edit-word" required value="${esc(popWord.word)}"></label>
+      <label>中文释义<input id="pop-edit-zh" required value="${esc(popWord.zh || '')}" placeholder="输入你自己的释义"></label>
+      <label>例句（可选）<textarea id="pop-edit-example">${esc(popWord.example || '')}</textarea></label>
+      <div class="form-actions"><button type="button" class="secondary-btn" onclick="hidePop()">取消</button><button class="primary-btn" type="submit">保存并加入</button></div>
+    </form>`;
+  document.getElementById('pop-form').onsubmit = e => {
+    e.preventDefault();
+    const custom = {
+      word: document.getElementById('pop-edit-word').value.trim(),
+      zh: document.getElementById('pop-edit-zh').value.trim(),
+      pos: popWord.pos || '',
+      example: document.getElementById('pop-edit-example').value.trim()
+    };
+    if (!custom.word || !custom.zh) return;
+    userGloss[popWord.key] = custom;
+    saveStored(GLOSS_KEY, userGloss);
+    popWord = { key: popWord.key, ...custom };
+    const existing = basket.find(b => b.key === popWord.key);
+    if (existing) Object.assign(existing, custom);
+    else basket.push({ key: popWord.key, ...custom, date: DATA.date, topic: popWord.topic || '', createdAt: Date.now() });
+    saveBasket();
+    refreshWordMarks();
+    hidePop();
+    renderBasket();
+    toast('已保存到生词本');
+  };
+  setTimeout(() => document.getElementById('pop-edit-zh')?.focus(), 0);
+}
+function hidePop() { pop.classList.remove('open'); }
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    hidePop();
+    toggleBasket(false);
+  }
+});
 
-  <div class="section-label label-de">🇩🇪 德语原文</div>
-  <div class="de-text">
-    Hiroshima ist eine Stadt in Japan. In Hiroshima ist im Zweiten Weltkrieg eine Atombombe explodiert. Die Atombombe war von den USA. Sehr viele Menschen sind gestorben und wurden schwer verletzt.<br><br>
-    Schulkinder in Hiroshima läuten die Friedensglocke. Tausende Menschen aus vielen Ländern sind zur Gedenkveranstaltung gekommen. Sie schweigen gemeinsam für eine Minute und bringen Blumen zum Mahnmal für die Opfer.<br><br>
-    Der Bürgermeister von Hiroshima sagt: Auch heute drohen einige Länder mit Atomwaffen. Das ist gefährlich. Atomwaffen machen die Welt unsicher. Nie wieder darf ein Land Atomwaffen einsetzen.
-  </div>
+/* ---------- 生词篮 ---------- */
+renderBasket();
 
-  <div class="section-label label-cn">🇨🇳 中文译文</div>
-  <div class="translation">
-    广岛是日本的一座城市。二战期间一颗原子弹在这里爆炸——是美国投下的。无数人丧生，无数人受重伤。<br><br>
-    广岛的学童敲响和平钟。来自许多国家的数千人参加纪念仪式，集体默哀一分钟，向遇难者纪念碑献花。<br><br>
-    广岛市长说：即使在今天，一些国家也以核武器相威胁。这很危险。核武器让世界不安全。任何国家都不许再次使用核武器。
-  </div>
+function basketAdd() {
+  if (!popWord) return;
+  if (!popWord.zh) { openPopEditor(); return; }
+  if (basket.some(b => b.key === popWord.key)) { toast('已在生词本'); return; }
+  basket.push({
+    key: popWord.key, word: popWord.word, zh: popWord.zh, pos: popWord.pos || '',
+    example: popWord.example || '', date: DATA.date, topic: popWord.topic || '',
+    source: popWord.source || '', createdAt: Date.now()
+  });
+  saveBasket();
+  refreshWordMarks();
+  hidePop(); renderBasket(); toast('已加入生词本');
+}
+function basketDel(key) {
+  basket = basket.filter(b => b.key !== key);
+  saveBasket();
+  refreshWordMarks();
+  renderBasket();
+}
+function saveBasket() { saveStored(BK_KEY, basket); }
+function refreshWordMarks() {
+  document.querySelectorAll('w').forEach(w => {
+    w.classList.toggle('known', Boolean(getGloss(w.dataset.w)?.zh));
+    w.classList.toggle('saved', basket.some(b => b.key === w.dataset.w));
+  });
+}
+function renderBasket() {
+  const n = basket.length;
+  document.getElementById('bk-cnt').textContent = n;
+  const list = document.getElementById('bk-list');
+  if (!n) { list.innerHTML = '<div class="bempty"><b>生词本还是空的</b>点击正文中的任意德语词，或手动添加一个。</div>'; return; }
+  list.innerHTML = basket.map(b =>
+    `<div class="bitem"><span class="bw">${esc(b.word)}</span><span class="bz">${esc(b.zh || '未填写释义')}</span>${b.example ? `<span class="be">${esc(b.example)}</span>` : ''}
+      <span class="bitem-actions"><button class="bedit" data-key="${esc(b.key)}">编辑</button><button class="bx" data-key="${esc(b.key)}">删除</button></span></div>`
+  ).join('');
+}
+function toggleBasket(open) {
+  document.getElementById('basket').classList.toggle('open', open);
+  document.getElementById('scrim').classList.toggle('on', open);
+  if (!open) closeWordEditor();
+}
+document.getElementById('basket-btn').onclick = () => toggleBasket(true);
+document.getElementById('scrim').onclick = () => toggleBasket(false);
+document.getElementById('bk-list').onclick = e => {
+  const btn = e.target.closest('button[data-key]');
+  if (!btn) return;
+  if (btn.classList.contains('bx')) basketDel(btn.dataset.key);
+  else openWordEditor(btn.dataset.key);
+};
 
-  <div class="section-label label-vocab">📖 核心词汇</div>
-  <table class="vocab">
-    <tr><th>德语</th><th>中文</th><th>例句</th></tr>
-    <tr><td>die Atombombe</td><td>原子弹</td><td>Eine Atombombe ist explodiert</td></tr>
-    <tr><td>die Friedensglocke</td><td>和平钟</td><td>Schulkinder läuten die Friedensglocke</td></tr>
-    <tr><td>die Gedenkveranstaltung</td><td>纪念仪式</td><td>zur Gedenkveranstaltung gekommen</td></tr>
-    <tr><td>schweigen (schwieg)</td><td>沉默</td><td>Sie schweigen für eine Minute</td></tr>
-    <tr><td>das Mahnmal</td><td>纪念碑</td><td>Blumen zum Mahnmal bringen</td></tr>
-    <tr><td>das Opfer</td><td>遇难者</td><td>für die Opfer von der Atombombe</td></tr>
-    <tr><td>die Atomwaffe</td><td>核武器</td><td>Einige Länder drohen mit Atomwaffen</td></tr>
-    <tr><td>einsetzen</td><td>使用（武器）</td><td>Atomwaffen einsetzen</td></tr>
-  </table>
+function openWordEditor(key = null) {
+  editingKey = key;
+  const item = key ? basket.find(b => b.key === key) : null;
+  document.getElementById('edit-word').value = item?.word || '';
+  document.getElementById('edit-zh').value = item?.zh || '';
+  document.getElementById('edit-example').value = item?.example || '';
+  document.getElementById('word-editor').classList.add('open');
+  setTimeout(() => document.getElementById('edit-word').focus(), 0);
+}
+function closeWordEditor() {
+  editingKey = null;
+  document.getElementById('word-editor').classList.remove('open');
+  document.getElementById('word-form').reset();
+}
+document.getElementById('word-form').onsubmit = e => {
+  e.preventDefault();
+  const wasEditing = Boolean(editingKey);
+  const word = document.getElementById('edit-word').value.trim();
+  const zh = document.getElementById('edit-zh').value.trim();
+  const example = document.getElementById('edit-example').value.trim();
+  if (!word || !zh) return;
+  const key = editingKey || word.toLocaleLowerCase('de-DE');
+  const item = basket.find(b => b.key === editingKey || (!editingKey && b.key === key));
+  if (item) Object.assign(item, { word, zh, example });
+  else basket.unshift({ key, word, zh, example, date: DATA.date, manual: true });
+  userGloss[key] = { word, zh, example, pos: '' };
+  saveStored(GLOSS_KEY, userGloss);
+  saveBasket();
+  refreshWordMarks();
+  renderBasket();
+  closeWordEditor();
+  toast(wasEditing ? '单词已更新' : '已添加单词');
+};
 
-  <div class="section-label label-grammar">🔑 语法要点</div>
-  <div class="grammar">
-    <strong>dürfen 否定 = 禁止性表达</strong><br>
-    Nie wieder <strong>darf</strong> ein Land Atomwaffen einsetzen. = 任何国家<strong>不许</strong>再次使用核武器。<br>
-    dürfen 表"被允许"，否定后即"不许/不得"，在新闻和官方声明中比 nicht sollen 更正式、更有分量。
-  </div>
+function copyWords() {
+  if (!basket.length) { toast('生词本是空的'); return; }
+  const text = basket.map(b => `${b.word}\t${b.zh}${b.example ? '\t' + b.example : ''}`).join('\n');
+  navigator.clipboard.writeText(text).then(
+    () => toast('已复制 ' + basket.length + ' 词'),
+    () => toast('复制失败')
+  );
+}
 
-  <div class="section-label label-bg">💡 背景知识</div>
-  <div class="bg-info">
-    1945年8月6日，美军在广岛投下人类历史上第一颗实战原子弹"小男孩"，当场约8万人死亡，后续因辐射死亡超14万人。每年8月6日广岛和平纪念公园举行仪式，2026年是81周年。
-  </div>
-</div>
+/* ---------- apkg 导出 ---------- */
+const SQLJS_URL = 'https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/sql-wasm.wasm';
+const SQLJS_JS  = 'https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/sql-wasm.js';
 
-<!-- ===== NEWS 5: Wetter ===== -->
-<div class="news">
-  <h2><span class="num">5</span> Das Wetter</h2>
+function loadScript(src) {
+  return new Promise((ok, no) => {
+    const s = document.createElement('script');
+    s.src = src; s.onload = ok; s.onerror = () => no(new Error('load fail: ' + src));
+    document.head.appendChild(s);
+  });
+}
 
-  <div class="section-label label-de">🇩🇪 德语原文</div>
-  <div class="de-text">
-    Im Norden ist es oft stark bewölkt. Auch ganz unten im Süden ist es wolkig. Manchmal mit Regenschauern oder Gewittern. 19 bis 31 Grad.
-  </div>
+async function exportApkg() {
+  const st = document.getElementById('bk-status');
+  const btn = document.getElementById('btn-apkg');
+  if (!basket.length) { toast('篮子是空的'); return; }
+  btn.disabled = true;
+  try {
+    st.textContent = '加载 sql.js…';
+    if (!window.initSqlJs) {
+      await loadScript(SQLJS_JS);
+      window.initSqlJs = window.initSqlJs.bind({ locateFile: () => SQLJS_URL });
+    }
+    const SQL = await window.initSqlJs({ locateFile: () => SQLJS_URL });
 
-  <div class="section-label label-cn">🇨🇳 中文译文</div>
-  <div class="translation">
-    北部经常云层厚重。最南端也是多云。有时伴有阵雨或雷暴。气温 19 到 31 度。
-  </div>
+    st.textContent = '构建牌组…';
+    const db = new SQL.Database();
 
-  <div class="section-label label-vocab">📖 核心词汇</div>
-  <table class="vocab">
-    <tr><th>德语</th><th>中文</th><th>例句</th></tr>
-    <tr><td>bewölkt</td><td>多云的</td><td>stark bewölkt</td></tr>
-    <tr><td>der Regenschauer</td><td>阵雨</td><td>mit Regenschauern</td></tr>
-    <tr><td>das Gewitter</td><td>雷暴</td><td>oder Gewittern</td></tr>
-  </table>
-</div>
+    // apkg = collection.anki2 + media(空json) — 最小合法集
+    db.run(`CREATE TABLE col(
+      id integer primary key, crt integer, mod integer, scm integer, ver integer,
+      dty integer, usn integer, ls integer, conf text, models text, decks text,
+      dconf text, tags text)`);
+    const now = Math.floor(Date.now() / 1000);
+    const mid = Date.now();
+    const deckId = now * 1000;
+    const model = {
+      [mid]: {
+        id: mid, name: 'Deutsch Daily', type: 0, mod: now, usn: 0, sortf: 0,
+        did: deckId, tmpls: [{ name: 'Card 1', ord: 0, qfmt: '{{Front}}', afmt: '{{FrontSide}}<hr id=answer>{{Back}}', bqfmt: '', bafmt: '' }],
+        flds: [
+          { name: 'Front', ord: 0, sticky: false, rtl: false, font: 'Arial', size: 20, media: [] },
+          { name: 'Back',  ord: 1, sticky: false, rtl: false, font: 'Arial', size: 20, media: [] }
+        ],
+        css: `.card{font-family:-apple-system,'Noto Sans SC',sans-serif;font-size:20px;text-align:center;color:#1F2328;background:#FAF7F2;padding:24px}.card b{color:#B3541E}`,
+        latexPre: '\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n',
+        latexPost: '\\end{document}',
+        req: [[0, 'all', [0]]], tags: [], vers: []
+      }
+    };
+    const decks = {
+      "1": { id: 1, name: 'Default', mod: now, usn: 0, lrnToday: [0,0], revToday: [0,0], newToday: [0,0], timeToday: [0,0], collapsed: false, browserCollapsed: false, desc: '', dyn: 0, conf: 1, extendNew: 10, extendRev: 50 },
+      [deckId]: { id: deckId, name: 'Deutsch Daily', mod: now, usn: 0, lrnToday: [0,0], revToday: [0,0], newToday: [0,0], timeToday: [0,0], collapsed: false, browserCollapsed: false, desc: '', dyn: 0, conf: 1, extendNew: 10, extendRev: 50 }
+    };
+    const conf = {
+      activeDecks: [1], addToCur: true, collapseTime: 1200, curDeck: 1,
+      curModel: mid, dayLearnFirst: false, dueCounts: true, estTimes: true,
+      newSpread: 0, nextPos: 1, schedVer: 2, sched2021: true, sortBackwards: false,
+      sortType: "noteFld", timeLim: 0, creationOffset: -480
+    };
+    const dconf = {
+      "1": { id: 1, name: "Default", replayq: true, lapse: { delays: [10, 60], mult: 0, minInt: 1, leechFails: 8, leechAction: 0 }, rev: { perDay: 200, fuzz: 0.05, ivlFct: 1, maxIvl: 36500, ease4: 1.3, bury: true, minSpace: 1 }, timer: 0, maxTaken: 60, new: { separate: true, ints: [1, 4, 7], initialFactor: 2500, bury: true, order: 1 }, mod: 0, usn: 0, autoplay: true }
+    };
+    db.run(`INSERT INTO col VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)`, [
+      now, now, now * 1000, 0, 11, 0, 0, 0,
+      JSON.stringify(conf), JSON.stringify(model), JSON.stringify(decks),
+      JSON.stringify(dconf), '{}'
+    ]);
 
-<div class="nav">
-  <a href="index.html">← 所有期次</a>
-  <a href="2026-08-05.html">上一期 →</a>
-</div>
+    db.run(`CREATE TABLE notes(
+      id integer primary key, guid text, mid integer, mod integer, usn integer,
+      tags text, flds text, sfld text, csum integer, flags integer, data text)`);
+    db.run(`CREATE TABLE cards(
+      id integer primary key, nid integer, did integer, ord integer, mod integer,
+      usn integer, type integer, queue integer, due integer, ivl integer,
+      factor integer, reps integer, lapses integer, left integer, odue integer,
+      odid integer, flags integer, data text)`);
+    db.run(`CREATE TABLE revlog(
+      id integer primary key, cid integer, usn integer, ease integer, ivl integer,
+      lastIvl integer, factor integer, time integer, type integer)`);
+    db.run(`CREATE TABLE graves(
+      usn integer, oid integer, type integer)`);
+    db.run(`CREATE INDEX ix_notes_usn on notes (usn)`);
+    db.run(`CREATE INDEX ix_cards_usn on cards (usn)`);
+    db.run(`CREATE INDEX ix_revlog_usn on revlog (usn)`);
+    db.run(`CREATE INDEX ix_cards_nid on cards (nid)`);
+    db.run(`CREATE INDEX ix_revlog_cid on revlog (cid)`);
+    db.run(`CREATE INDEX ix_notes_csum on notes (csum)`);
 
+    const enc = new TextEncoder();
+    function csum(s) { // anki checquers field hash (java String.hashCode)
+      let h = 0;
+      for (const b of enc.encode(s)) { h = (31 * h + b) | 0; }
+      return h;
+    }
+    function guid(key) {
+      let h = 0; const s = 'dd-' + key;
+      for (const b of enc.encode(s)) { h = (31 * h + b) | 0; }
+      return 'dd' + (h >>> 0).toString(16);
+    }
+
+    let nid = now * 1000, cid = (now + 1) * 1000;
+    for (const b of basket) {
+      const front = b.word;
+      const back = `${b.zh}${b.example ? `<br><i>${b.example}</i>` : ''}`;
+      const sfld = front;
+      const flds = front.replace(/\t/g, ' ') + '\x1f' + back.replace(/\t/g, ' ');
+      db.run(`INSERT INTO notes VALUES(?,?,?,?,?,?,?,?,?,?,?)`,
+        [nid, guid(b.key), mid, now, -1, ' dd::' + (b.date || DATA.date) + ' ', flds, sfld, csum(sfld), 0, '']);
+      db.run(`INSERT INTO cards VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+        [cid, nid, deckId, 0, now, -1, 0, 0, nid, 0, 0, 0, 0, 0, 0, 0, 0, '']);
+      nid++; cid++;
+    }
+
+    st.textContent = '打包…';
+    const data = db.export();
+    // zip: meta(version2) + collection.anki2 + collection.anki21(同内容, anki26+导入器优先读) + media
+    const zip = makeZip({
+      'meta': new Uint8Array([0x08, 0x02]),
+      'collection.anki2': data,
+      'collection.anki21': data,
+      'media': new TextEncoder().encode('{}')
+    });
+    const blob = new Blob([zip], { type: 'application/apkg' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `deutsch-${basket.length}w-${Date.now()}.apkg`;
+    a.click();
+    st.textContent = `已导出 ${basket.length} 张卡 — 打开 Anki 导入即可`;
+    toast('apkg 已下载');
+  } catch (err) {
+    console.error(err);
+    st.textContent = '导出失败: ' + err.message + ' — 可先用「复制文本」';
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+/* 极简 zip (store, 无压缩) — apkg 只需合法 zip */
+function makeZip(files) {
+  const enc = new TextEncoder();
+  const chunks = [], central = [];
+  let offset = 0;
+  const CRC_TABLE = (() => {
+    const t = new Uint32Array(256);
+    for (let n = 0; n < 256; n++) {
+      let c = n;
+      for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1;
+      t[n] = c >>> 0;
+    }
+    return t;
+  })();
+  function crc32(buf) {
+    let c = 0xFFFFFFFF;
+    for (let i = 0; i < buf.length; i++) c = CRC_TABLE[(c ^ buf[i]) & 0xFF] ^ (c >>> 8);
+    return (c ^ 0xFFFFFFFF) >>> 0;
+  }
+  for (const [name, content] of Object.entries(files)) {
+    const nameB = enc.encode(name);
+    const crc = crc32(content);
+    const lh = new DataView(new ArrayBuffer(30));
+    lh.setUint32(0, 0x04034b50, true);
+    lh.setUint16(4, 20, true);       // version
+    lh.setUint16(6, 0, true);        // flags
+    lh.setUint16(8, 0, true);        // store
+    lh.setUint16(10, 0, true); lh.setUint16(12, 0x2821, true); // time/date(dos)
+    lh.setUint32(14, crc, true);
+    lh.setUint32(18, content.length, true);
+    lh.setUint32(22, content.length, true);
+    lh.setUint16(26, nameB.length, true);
+    lh.setUint16(28, 0, true);
+    chunks.push(new Uint8Array(lh.buffer), nameB, content);
+    const ch = new DataView(new ArrayBuffer(46));
+    ch.setUint32(0, 0x02014b50, true);
+    ch.setUint16(4, 20, true); ch.setUint16(6, 20, true);
+    ch.setUint16(8, 0, true); ch.setUint16(10, 0, true);
+    ch.setUint16(12, 0, true); ch.setUint16(14, 0x2821, true);
+    ch.setUint32(16, crc, true);
+    ch.setUint32(20, content.length, true); ch.setUint32(24, content.length, true);
+    ch.setUint16(28, nameB.length, true);
+    // 30..45 = 0
+    ch.setUint32(42, offset, true);
+    central.push(new Uint8Array(ch.buffer), nameB);
+    offset += 30 + nameB.length + content.length;
+  }
+  let centralSize = central.reduce((s, c) => s + c.length, 0);
+  const eocd = new DataView(new ArrayBuffer(22));
+  eocd.setUint32(0, 0x06054b50, true);
+  eocd.setUint16(8, Object.keys(files).length, true);
+  eocd.setUint16(10, Object.keys(files).length, true);
+  eocd.setUint32(12, centralSize, true);
+  eocd.setUint32(16, offset, true);
+  const total = [...chunks, ...central, new Uint8Array(eocd.buffer)];
+  const out = new Uint8Array(total.reduce((s, c) => s + c.length, 0));
+  let p = 0;
+  for (const c of total) { out.set(c, p); p += c.length; }
+  return out;
+}
+
+/* ---------- toast ---------- */
+let toastT;
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.style.display = 'block';
+  clearTimeout(toastT);
+  toastT = setTimeout(() => t.style.display = 'none', 1600);
+}
+</script>
 </body>
 </html>
