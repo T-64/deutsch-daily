@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.000" end="00:00:04.000">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:04.320" end="00:00:07.040">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:10.760" end="00:00:13.600">
+        <tt:span style="textWhite">Willkommen zur Tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:13.640" end="00:00:17.440">
+        <tt:span style="textWhite">Ich bin Susanne Holst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:34.400" end="00:00:36.480">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:41.040" end="00:00:44.160">
+        <tt:span style="textWhite">Belgien ist ein Nachbarland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:44.880" end="00:00:48.240">
+        <tt:span style="textWhite">In einem Gebiet an der Grenze brennt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">es im Wald.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:48.640" end="00:00:50.400">
+        <tt:span style="textWhite">Das Feuer ist sehr groß.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:51.080" end="00:00:54.440">
+        <tt:span style="textWhite">Die Feuerwehr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">konnte den Brand noch nicht löschen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:54.480" end="00:00:57.000">
+        <tt:span style="textWhite">Deshalb haben viele Menschen Angst.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:00:57.120" end="00:01:00.280">
+        <tt:span style="textWhite">Was, wenn das Feuer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ihre Häuser erreicht?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:01:00.920" end="00:01:03.360">
+        <tt:span style="textWhite">Jetzt bekommt die Feuerwehr Hilfe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:03.840" end="00:01:05.160">
+        <tt:span style="textWhite">Es regnet nämlich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:06.000" end="00:01:07.840">
+        <tt:span style="textWhite">Dazu kommt jetzt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:08.520" end="00:01:11.080">
+        <tt:span style="textWhite">Endlich gibt es etwas Regen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:11.280" end="00:01:15.960">
+        <tt:span style="textWhite">Die Feuerwehrleute und die Bewohner</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Region sind froh.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:16.440" end="00:01:20.360">
+        <tt:span style="textWhite">Sie hoffen, vielleicht kann der Regen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das Feuer stoppen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:20.680" end="00:01:24.040">
+        <tt:span style="textWhite">Dieser Feuerwehrmann</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sagt, der Regen ist gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:24.080" end="00:01:26.880">
+        <tt:span style="textWhite">Auch der Wind weht nicht mehr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">so stark.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:27.320" end="00:01:30.240">
+        <tt:span style="textWhite">Das Feuer kann gerade nicht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">größer werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:30.720" end="00:01:34.360">
+        <tt:span style="textWhite">Aber der Regen kann das Feuer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nicht ganz löschen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:34.920" end="00:01:37.440">
+        <tt:span style="textWhite">Die Erde ist hier nämlich aus Torf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:37.880" end="00:01:40.480">
+        <tt:span style="textWhite">Das wurde früher zum Heizen benutzt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:41.280" end="00:01:42.920">
+        <tt:span style="textWhite">Torf brennt sehr gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:43.640" end="00:01:46.000">
+        <tt:span style="textWhite">Deshalb brennt es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch unter der Erde.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:46.040" end="00:01:48.720">
+        <tt:span style="textWhite">Da kann die Feuerwehr nicht löschen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:49.960" end="00:01:53.280">
+        <tt:span style="textWhite">Wegen dem Feuer gibt es auch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sehr viel Rauch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:01:54.120" end="00:01:57.880">
+        <tt:span style="textWhite">Einige Menschen mussten deshalb</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ihre Häuser verlassen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:01:57.920" end="00:01:59.480">
+        <tt:span style="textWhite">Zur Sicherheit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:02:00.000" end="00:02:03.840">
+        <tt:span style="textWhite">Dieser Feuerwehrmann sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wir gehen auf Nummer sicher.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:02:04.160" end="00:02:07.880">
+        <tt:span style="textWhite">In der Nähe gibt es nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch einen Nadelwald.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:08.480" end="00:02:10.920">
+        <tt:span style="textWhite">Ein Nadelwald brennt sehr schnell.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:11.360" end="00:02:15.640">
+        <tt:span style="textWhite">Deswegen haben wir die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">lieber in Sicherheit gebracht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:15.680" end="00:02:18.400">
+        <tt:span style="textWhite">In einem Nachbarort können</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Menschen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:18.440" end="00:02:20.960">
+        <tt:span style="textWhite">schon wieder in ihre Häuser zurück.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:21.040" end="00:02:24.240">
+        <tt:span style="textWhite">Das Feuer ist für sie</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nicht mehr gefährlich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:26.000" end="00:02:29.160">
+        <tt:span style="textWhite">Dieser Mann sagt, wir</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind wieder zu Hause.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:29.560" end="00:02:31.000">
+        <tt:span style="textWhite">Ich bin erleichtert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:31.360" end="00:02:34.360">
+        <tt:span style="textWhite">Wir hatten Angst,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dass unser Haus abbrennt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:34.680" end="00:02:37.360">
+        <tt:span style="textWhite">Ich möchte der Feuerwehr Danke sagen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:38.480" end="00:02:41.800">
+        <tt:span style="textWhite">Die Feuerwehr hat</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nämlich Tag und Nacht gearbeitet</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:41.840" end="00:02:44.280">
+        <tt:span style="textWhite">und gegen das Feuer gekämpft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:45.600" end="00:02:47.800">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:02:52.280" end="00:02:55.680">
+        <tt:span style="textWhite">Es gibt zurzeit zu wenig Regen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:02:56.080" end="00:02:58.120">
+        <tt:span style="textWhite">Deshalb ist es sehr trocken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:02:58.400" end="00:03:01.400">
+        <tt:span style="textWhite">Und in vielen Flüssen ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nur wenig Wasser.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:03:01.800" end="00:03:05.560">
+        <tt:span style="textWhite">Schiffe können nicht viel Fracht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und Ladung mitnehmen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:03:05.600" end="00:03:07.880">
+        <tt:span style="textWhite">Für manche Firmen ist das</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ein Problem.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:03:07.920" end="00:03:11.440">
+        <tt:span style="textWhite">Sie brauchen nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Lieferung von der Fracht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:03:11.600" end="00:03:13.200">
+        <tt:span style="textWhite">Z.B. für ihre Fabrik.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:14.280" end="00:03:18.160">
+        <tt:span style="textWhite">Wegen diesem Problem sagt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Regierung in vielen Bundesländern</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:18.200" end="00:03:22.320">
+        <tt:span style="textWhite">von Deutschland, die Fracht soll</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit Lastwagen transportiert werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:22.360" end="00:03:25.000">
+        <tt:span style="textWhite">Das ist jetzt auch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">am Sonntag erlaubt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:25.600" end="00:03:28.920">
+        <tt:span style="textWhite">Bisher durften Lastwagen nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nicht am Sonntag fahren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:28.960" end="00:03:31.080">
+        <tt:span style="textWhite">Dazu kommt jetzt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:33.440" end="00:03:36.080">
+        <tt:span style="textWhite">In diesem Hafen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in dem Bundesland Bayern</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:36.120" end="00:03:37.800">
+        <tt:span style="textWhite">ist nichts los.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:38.040" end="00:03:40.520">
+        <tt:span style="textWhite">Es gibt zu wenig Wasser im Fluss.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:03:41.040" end="00:03:42.560">
+        <tt:span style="textWhite">Schiffe fahren nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:03:42.600" end="00:03:46.080">
+        <tt:span style="textWhite">Die Container können</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">jetzt nur mit Lastwagen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:03:46.120" end="00:03:47.640">
+        <tt:span style="textWhite">transportiert werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:03:48.080" end="00:03:53.320">
+        <tt:span style="textWhite">Joachim Herrmann von der CSU ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Minister in der Regierung von Bayern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:03:53.360" end="00:03:56.640">
+        <tt:span style="textWhite">Er sagt, wir ändern das Gesetz.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:03:57.280" end="00:04:00.480">
+        <tt:span style="textWhite">Lastwagen dürfen jetzt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch am Sonntag fahren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:04:01.080" end="00:04:04.880">
+        <tt:span style="textWhite">Aber an diesem Sonntag sind kaum</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Lastwagen unterwegs.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:04:05.440" end="00:04:08.480">
+        <tt:span style="textWhite">Viele Lastwagen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">stehen auf dem Rastplatz.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:04:09.120" end="00:04:12.040">
+        <tt:span style="textWhite">Die Fahrer müssen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nämlich Pause machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:04:12.520" end="00:04:13.880">
+        <tt:span style="textWhite">Das ist ein Gesetz.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:14.800" end="00:04:16.960">
+        <tt:span style="textWhite">Viele Fahrer wissen gar nicht,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:17.080" end="00:04:19.360">
+        <tt:span style="textWhite">dass sie jetzt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">am Sonntag fahren dürfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:20.400" end="00:04:24.840">
+        <tt:span style="textWhite">Dieser Fahrer sagt, heute ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Sonntag, da darf ich nicht</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:24.880" end="00:04:26.080">
+        <tt:span style="textWhite">Lastwagen fahren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:26.360" end="00:04:28.800">
+        <tt:span style="textWhite">Alle Fahrer haben am Sonntag frei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:30.400" end="00:04:32.040">
+        <tt:span style="textWhite">Und dieser Fahrer sagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:04:32.360" end="00:04:35.280">
+        <tt:span style="textWhite">ich fahre erst am Montagmorgen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wieder los.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:04:36.880" end="00:04:41.600">
+        <tt:span style="textWhite">Für viele Firmen mit Lastwagen ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die neue Regel nicht so einfach.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:04:41.960" end="00:04:45.080">
+        <tt:span style="textWhite">Dieser Mann vertritt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Lastwagenfirmen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:04:45.120" end="00:04:46.360">
+        <tt:span style="textWhite">Er sagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:04:46.920" end="00:04:51.280">
+        <tt:span style="textWhite">die Firmen haben komplizierte Pläne</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gemacht für ihre Lastwagen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:04:51.320" end="00:04:52.760">
+        <tt:span style="textWhite">und für ihre Fahrer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:04:53.000" end="00:04:56.160">
+        <tt:span style="textWhite">Die Pläne können sie nicht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">so schnell ändern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:04:56.480" end="00:05:00.360">
+        <tt:span style="textWhite">Lastwagen fahren am Sonntag nicht,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">obwohl sie dürfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:05:01.200" end="00:05:05.520">
+        <tt:span style="textWhite">Diese Autofahrerin sagt, wir</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben kaum Lastwagen gesehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:05:06.040" end="00:05:10.480">
+        <tt:span style="textWhite">Der Minister aus Bayern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">findet die neue Regel trotzdem gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:10.520" end="00:05:14.920">
+        <tt:span style="textWhite">Er sagt, wir</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">schränken die Firmen nicht mehr ein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:15.240" end="00:05:19.080">
+        <tt:span style="textWhite">Sie dürfen jetzt auch am Sonntag</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Fracht transportieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:19.160" end="00:05:20.480">
+        <tt:span style="textWhite">Ob sie das auch machen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:20.520" end="00:05:23.240">
+        <tt:span style="textWhite">das muss jede Firma selbst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">entscheiden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:23.920" end="00:05:27.000">
+        <tt:span style="textWhite">Aber die Regel soll nicht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für immer bleiben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:27.320" end="00:05:31.280">
+        <tt:span style="textWhite">Wenn Schiffe wieder fahren können,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dann müssen die Lastwagen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:31.320" end="00:05:33.880">
+        <tt:span style="textWhite">auch am Sonntag wieder Pause machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:05:34.680" end="00:05:36.880">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:05:41.200" end="00:05:44.520">
+        <tt:span style="textWhite">E-Scooter ist englisch für E-Roller.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:05:45.080" end="00:05:47.480">
+        <tt:span style="textWhite">Das E steht für Elektro.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:05:48.120" end="00:05:51.560">
+        <tt:span style="textWhite">Die Roller fahren nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit einem Elektromotor,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:05:51.720" end="00:05:53.800">
+        <tt:span style="textWhite">mit Strom aus einer Batterie.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:05:54.040" end="00:05:56.720">
+        <tt:span style="textWhite">Vor allem junge Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">fahren E-Scooter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:05:56.760" end="00:05:59.400">
+        <tt:span style="textWhite">Aber E-Scooter können</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gefährlich sein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:05:59.480" end="00:06:02.120">
+        <tt:span style="textWhite">Es gibt sehr viele Unfälle</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit E-Scootern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:06:02.160" end="00:06:04.880">
+        <tt:span style="textWhite">Viele Fahrer von E-Scootern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">tragen nämlich</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:06:04.920" end="00:06:06.720">
+        <tt:span style="textWhite">keinen Helm auf dem Kopf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:06:07.280" end="00:06:11.920">
+        <tt:span style="textWhite">E-Scooter fahren und einen Helm</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf dem Kopf tragen, ist sicherer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:06:12.520" end="00:06:16.680">
+        <tt:span style="textWhite">Deshalb gibt es jetzt eine Diskussion</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über die Helmpflicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:17.200" end="00:06:20.200">
+        <tt:span style="textWhite">Das heißt, sollen alle Fahrer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit dem E-Scooter</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:20.240" end="00:06:22.040">
+        <tt:span style="textWhite">einen Helm tragen müssen?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:22.080" end="00:06:23.920">
+        <tt:span style="textWhite">Dazu kommt jetzt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:06:25.760" end="00:06:29.280">
+        <tt:span style="textWhite">Viele Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">finden E-Scooter praktisch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:06:29.320" end="00:06:32.960">
+        <tt:span style="textWhite">Aber bei manchen Fahrten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit dem E-Scooter</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:06:33.000" end="00:06:34.840">
+        <tt:span style="textWhite">gibt es einen Unfall.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:06:35.440" end="00:06:40.000">
+        <tt:span style="textWhite">In diesem Krankenhaus arbeitet</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Arzt Michael Zyskowski.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:06:40.400" end="00:06:43.800">
+        <tt:span style="textWhite">Er behandelt viele Unfälle</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit E-Scootern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:06:44.680" end="00:06:50.360">
+        <tt:span style="textWhite">Der Arzt sagt, die Menschen haben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Verletzungen am Kopf und am Gehirn.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:06:50.400" end="00:06:55.160">
+        <tt:span style="textWhite">Wenn ein Knochen gebrochen ist,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dann kann ich das operieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:06:55.760" end="00:06:59.600">
+        <tt:span style="textWhite">Aber wenn das Gehirn verletzt ist,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dann geht das nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub114" style="textCenter" region="bottom" begin="00:06:59.800" end="00:07:02.800">
+        <tt:span style="textWhite">Ein Unfall kann</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sehr schlimme Folgen haben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub115" style="textCenter" region="bottom" begin="00:07:03.760" end="00:07:08.760">
+        <tt:span style="textWhite">In einigen Ländern müssen alle Fahrer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von E-Scootern einen Helm tragen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub116" style="textCenter" region="bottom" begin="00:07:08.840" end="00:07:10.440">
+        <tt:span style="textWhite">In Deutschland nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub117" style="textCenter" region="bottom" begin="00:07:10.480" end="00:07:14.400">
+        <tt:span style="textWhite">Es gibt Firmen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die verleihen E-Scooter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub118" style="textCenter" region="bottom" begin="00:07:14.840" end="00:07:17.960">
+        <tt:span style="textWhite">Diese Firmen wollen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">keine Helmpflicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub119" style="textCenter" region="bottom" begin="00:07:18.400" end="00:07:23.360">
+        <tt:span style="textWhite">Die Firmen sagen nämlich,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine Helmpflicht ist zu kompliziert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub120" style="textCenter" region="bottom" begin="00:07:23.840" end="00:07:28.760">
+        <tt:span style="textWhite">Wir glauben, dann mieten weniger</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Menschen spontan einen E-Scooter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub121" style="textCenter" region="bottom" begin="00:07:28.920" end="00:07:31.360">
+        <tt:span style="textWhite">Das ist schlecht fürs Geschäft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub122" style="textCenter" region="bottom" begin="00:07:32.600" end="00:07:36.000">
+        <tt:span style="textWhite">In dem Land Israel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gibt es eine Helmpflicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub123" style="textCenter" region="bottom" begin="00:07:36.040" end="00:07:40.400">
+        <tt:span style="textWhite">Dort mietet man einen E-Scooter</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und einen Helm dazu.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub124" style="textCenter" region="bottom" begin="00:07:40.960" end="00:07:42.440">
+        <tt:span style="textWhite">Dieser Mann sagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub125" style="textCenter" region="bottom" begin="00:07:43.080" end="00:07:47.040">
+        <tt:span style="textWhite">das Mieten geht einfach</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über eine App auf dem Smartphone.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub126" style="textCenter" region="bottom" begin="00:07:47.080" end="00:07:49.640">
+        <tt:span style="textWhite">Aber manchmal fehlt der Helm auch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub127" style="textCenter" region="bottom" begin="00:07:50.000" end="00:07:52.560">
+        <tt:span style="textWhite">Dann kann man nicht mit Helm fahren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub128" style="textCenter" region="bottom" begin="00:07:53.240" end="00:07:56.120">
+        <tt:span style="textWhite">Der Arzt Michael Zyskowski meint,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub129" style="textCenter" region="bottom" begin="00:07:56.560" end="00:07:59.360">
+        <tt:span style="textWhite">E-Scooter fahren mit Helm</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist sicherer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub130" style="textCenter" region="bottom" begin="00:07:59.760" end="00:08:02.080">
+        <tt:span style="textWhite">Das müssen die Menschen verstehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub131" style="textCenter" region="bottom" begin="00:08:02.120" end="00:08:05.960">
+        <tt:span style="textWhite">Das Verstehen ist besser</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">als eine Helmpflicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub132" style="textCenter" region="bottom" begin="00:08:07.400" end="00:08:09.600">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub133" style="textCenter" region="bottom" begin="00:08:13.400" end="00:08:17.680">
+        <tt:span style="textWhite">Die Frau auf dem Foto ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Schauspielerin Hayden Panettiere.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub134" style="textCenter" region="bottom" begin="00:08:17.960" end="00:08:20.960">
+        <tt:span style="textWhite">Hayden Panettiere war</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">schon als Kind berühmt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub135" style="textCenter" region="bottom" begin="00:08:21.080" end="00:08:24.000">
+        <tt:span style="textWhite">Sie hat auch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in vielen Serien mitgespielt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub136" style="textCenter" region="bottom" begin="00:08:24.520" end="00:08:27.080">
+        <tt:span style="textWhite">Jetzt ist Hayden Panettiere</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gestorben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub137" style="textCenter" region="bottom" begin="00:08:27.160" end="00:08:29.320">
+        <tt:span style="textWhite">Sie wurde nur 36 Jahre alt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub138" style="textCenter" region="bottom" begin="00:08:30.240" end="00:08:33.040">
+        <tt:span style="textWhite">Warum sie gestorben ist,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das weiß man noch nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub139" style="textCenter" region="bottom" begin="00:08:33.080" end="00:08:36.320">
+        <tt:span style="textWhite">Viele Fans,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">andere Schauspieler und Künstler</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub140" style="textCenter" region="bottom" begin="00:08:36.360" end="00:08:39.840">
+        <tt:span style="textWhite">sind traurig über den Tod</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von Hayden Panettiere.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub141" style="textCenter" region="bottom" begin="00:08:42.040" end="00:08:44.160">
+        <tt:span style="textWhite">Das waren unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub142" style="textCenter" region="bottom" begin="00:09:00.440" end="00:09:02.440">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub143" style="textCenter" region="bottom" begin="00:09:03.520" end="00:09:09.080">
+        <tt:span style="textWhite">Rechts im Osten und unten im Südosten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gibt es viel Sonne.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub144" style="textCenter" region="bottom" begin="00:09:09.360" end="00:09:12.160">
+        <tt:span style="textWhite">Wenige Wolken</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und es ist meist trocken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub145" style="textCenter" region="bottom" begin="00:09:12.480" end="00:09:15.480">
+        <tt:span style="textWhite">Sonst gibt es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einen Mix aus Sonne und Wolken</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub146" style="textCenter" region="bottom" begin="00:09:15.520" end="00:09:17.880">
+        <tt:span style="textWhite">und einzelne Schauer und Gewitter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub147" style="textCenter" region="bottom" begin="00:09:17.920" end="00:09:21.280">
+        <tt:span style="textWhite">Es werden 21 bis 39 Grad.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub148" style="textCenter" region="bottom" begin="00:09:23.080" end="00:09:26.160">
+        <tt:span style="textWhite">Das war die tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub149" style="textCenter" region="bottom" begin="00:09:26.200" end="00:09:28.360">
+        <tt:span style="textWhite">Tschüss, bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub150" style="textCenter" region="bottom" begin="00:09:32.360" end="00:09:34.760">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>

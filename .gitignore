@@ -1,2 +1,13 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# local artifacts, not the site
+pdf/
 *.pdf
 *.wav
+
+# third-party dictionary dumps + built sqlite (see data/dict/README.md)
+data/dict/*.sqlite3
+data/dict/*.sqlite
+data/dict/*.jsonl

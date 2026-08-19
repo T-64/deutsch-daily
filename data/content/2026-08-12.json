@@ -1,0 +1,356 @@
+{
+ "date": "2026-08-12",
+ "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1630140.html",
+ "embed_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1630140~player.html",
+ "news": [
+  {
+   "title": "Neue Regeln für Nachrichtendienste geplant",
+   "paragraphs": [
+    "In Deutschland gibt es mehrere Nachrichtendienste. Nachrichtendienste sind Behörden. Sie kümmern sich um die Sicherheit in Deutschland. Sie versuchen z.B. herauszufinden: Ist ein Anschlag geplant? Oder spioniert jemand in Deutschland? Die Nachrichtendienste in Deutschland dürfen diese Informationen sammeln. Aber sie dürfen selbst nichts gegen Verdächtige tun.",
+    "Das will die Bundesregierung ändern. Sie plant neue Regeln für die Nachrichtendienste. Eine Attacke mit Sprengstoff am Flughafen in Leipzig vor ein paar Tagen. Die Gefahr für solche Angriffe ist größer geworden, sagt die Politik. Deshalb sollen die Nachrichtendienste mehr dagegen tun können.",
+    "Das ist Innenminister Alexander Dobrindt. Er ist für die Sicherheit in Deutschland zuständig und sagt: Die Nachrichtendienste müssen Gefahren besser abwehren können als bisher. Auch im Internet. Die Nachrichtendienste sollen bald mehr dürfen. Nicht nur Informationen sammeln wie jetzt, sondern auch aktiv etwas gegen Gefahren tun. Z.B. Computer von Angreifern stören.",
+    "Es gibt aber auch Kritik von anderen Politikern. Konstantin von Notz von der Partei Die Grünen sagt, die Nachrichtendienste arbeiten dann wie die Polizei. Auch gegen Menschen. Aber die Arbeit von den Nachrichtendiensten kann nicht so gut kontrolliert werden wie bei der Polizei. Auch die Parteien AfD und Linke sind gegen die neuen Regeln. Sie sagen, es könnte zu viel Überwachung geben."
+   ],
+   "translations": [
+    "德国有多家情报机构。情报机构是政府机关，负责维护德国的安全。它们试图查明：是否有人正在策划袭击？是否有人在德国从事间谍活动？情报机构被允许收集这类信息，但不允许自行对嫌疑人采取行动。",
+    "联邦政府想要改变这一点，正在为情报机构制定新规。几天前莱比锡机场发生了爆炸袭击。政界表示，此类攻击的危险性增大了，因此情报机构应该能够做更多应对工作。",
+    "这是内政部长亚历山大·多布林特。他负责德国的安全事务，表示：情报机构必须比以往更好地抵御威胁，也包括在网络空间。情报机构很快应该拥有更多权限——不仅像现在这样收集信息，还要主动应对威胁，比如干扰攻击者的电脑。",
+    "但也有来自其他政客的批评。绿党议员康斯坦丁·冯·诺茨表示，情报机构届时会像警察一样行事，甚至针对个人。但情报机构的工作无法像警察那样受到良好的监督。选择党和左翼党也反对新规，认为可能导致过度监控。"
+   ],
+   "vocab": [
+    {
+     "lemma": "der Nachrichtendienst",
+     "key": "nachrichtendienst",
+     "forms": [
+      "Nachrichtendienst"
+     ],
+     "pos": "",
+     "zh": "情报机构",
+     "example_de": "Der Nachrichtendienst sammelt Informationen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Behörde (-n)",
+     "key": "behörde",
+     "forms": [
+      "Behörde"
+     ],
+     "pos": "",
+     "zh": "政府机关",
+     "example_de": "Das Finanzamt ist eine Behörde.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Anschlag (-äe)",
+     "key": "anschlag",
+     "forms": [
+      "Anschlag"
+     ],
+     "pos": "",
+     "zh": "袭击",
+     "example_de": "Sie versuchen z.B. herauszufinden: Ist ein Anschlag geplant?",
+     "example_zh": ""
+    },
+    {
+     "lemma": "spionieren",
+     "key": "spionieren",
+     "forms": [
+      "spionieren"
+     ],
+     "pos": "Verb",
+     "zh": "从事间谍活动",
+     "example_de": "Jemand spioniert in der Firma.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Verdächtige (-n)",
+     "key": "verdächtige",
+     "forms": [
+      "Verdächtige"
+     ],
+     "pos": "",
+     "zh": "嫌疑人",
+     "example_de": "Aber sie dürfen selbst nichts gegen Verdächtige tun.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Überwachung",
+     "key": "überwachung",
+     "forms": [
+      "Überwachung"
+     ],
+     "pos": "",
+     "zh": "监控",
+     "example_de": "Sie sagen, es könnte zu viel Überwachung geben.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "zuständig (für)",
+     "key": "zuständig",
+     "forms": [
+      "zuständig",
+      "für"
+     ],
+     "pos": "",
+     "zh": "负责的",
+     "example_de": "Sie plant neue Regeln für die Nachrichtendienste.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Kritik",
+     "key": "kritik",
+     "forms": [
+      "Kritik"
+     ],
+     "pos": "",
+     "zh": "批评",
+     "example_de": "Es gibt aber auch Kritik von anderen Politikern.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "Modalverb dürfen",
+     "summary": "Modalverb dürfen — 允许/禁止 dürfen 表示\"被允许做某事\"，用法和 können/müssen 一样，主要动词放句末。 Die Nachrichtendienste dürfen Informationen sammeln.（情报机构被允许收集信息。） 否定形式 nicht dürfen = 禁止：Sie dürfen selbst nichts tun.（他们不允许自行采取行动。） 直觉：dürfen 就是\"有没有许可\"，和 können（有没有能力）是两回事。",
+     "example_de": "被允许做某事",
+     "example_zh": ""
+    }
+   ],
+   "background": "德国有三大情报机构：联邦情报局（BND，对外）、联邦宪法保卫局（BfV，国内）和军事反间谍局（MAD，军事）。现行法律严格区分情报收集（Aufklärung）和执法行动（Eingriff）——情报机构只负责收集信息，不能像警察一样搜查、逮捕。2026年8月莱比锡机场爆炸事件后，内政部长多布林特推动扩大情报机构权限，允许其进行\"主动防御\"（如网络干扰），引发关于国家监控权力边界的激烈辩论。"
+  },
+  {
+   "title": "Forscher: Junge Menschen arbeiten viel in Deutschland",
+   "paragraphs": [
+    "Generation Z ist ein Name für eine Gruppe von Menschen. Die Menschen aus der Generation Z sind heute ungefähr zwischen 15 und 30 Jahre alt. Viele Menschen sagen, die Generation Z ist faul. Die jungen Menschen wollen nicht so viel arbeiten. Sie wollen lieber viel frei haben. Jetzt haben Forscher herausgefunden, das stimmt nicht. Es arbeiten so viele junge Menschen wie noch nie in Deutschland.",
+    "Das ist Moritz Rappen. Er studiert Maschinenbau. Und er arbeitet auch bei einer Firma in der Stadt Köln. Er sagt, es ist sehr viel. Die Woche ist sehr voll. Ich muss auch einiges am Wochenende machen.",
+    "Junge Menschen zwischen 20 und 24 Jahren arbeiten öfter als früher. Das zeigen auch Daten von Forschern. Dieser Forscher sagt, die Generation Z hat einen Rekord aufgestellt. Es gab zwar schon mal viele junge Arbeiter vor mehr als 30 Jahren. Aber damals haben die jungen Menschen viel seltener studiert.",
+    "Das ist Sarah Alfa-Lachy. Sie arbeitet auch bei der Firma in Köln und studiert. So will sie Geld und Erfahrung im Job bekommen. Aber das ist nicht alles für sie. Sie sagt, auch Gesundheit ist sehr wichtig. Um gut arbeiten zu können, muss man auch ein gutes Leben haben.",
+    "Diese Beispiele zeigen: Junge Menschen wollen zwar nicht nur arbeiten, aber sie sind auch nicht faul."
+   ],
+   "translations": [
+    "\"Z世代\"是一类人群的名称。Z世代的人目前大约在15到30岁之间。很多人说Z世代懒惰，年轻人不想多干活，宁愿有很多空闲时间。但研究人员发现事实并非如此——德国工作的年轻人比以往任何时候都多。",
+    "莫里茨·拉彭在科隆的一家企业工作，同时学习机械工程。他说，事情太多了，一周排得很满，周末也得干活。",
+    "研究数据显示，20至24岁年轻人的工作比例高于过去。这位研究员说，Z世代创下了纪录。虽然30多年前也有过很多年轻劳动者，但那时的年轻人很少上大学。",
+    "萨拉·阿尔法-拉奇也在科隆的同一家公司工作和学习。她希望借此获得收入和工作经验。但这对她来说不是全部。她说，健康也很重要——要能好好工作，就必须有好的生活。",
+    "这些例子说明：年轻人虽然不想只工作，但也绝不懒惰。"
+   ],
+   "vocab": [
+    {
+     "lemma": "die Generation (-en)",
+     "key": "generation",
+     "forms": [
+      "Generation"
+     ],
+     "pos": "",
+     "zh": "一代人",
+     "example_de": "Generation Z ist ein Name für eine Gruppe von Menschen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "faul",
+     "key": "faul",
+     "forms": [
+      "faul"
+     ],
+     "pos": "",
+     "zh": "懒惰的",
+     "example_de": "Viele Menschen sagen, die Generation Z ist faul.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Rekord (-e)",
+     "key": "rekord",
+     "forms": [
+      "Rekord"
+     ],
+     "pos": "",
+     "zh": "纪录",
+     "example_de": "Dieser Forscher sagt, die Generation Z hat einen Rekord aufgestellt.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "frei haben",
+     "key": "frei-haben",
+     "forms": [
+      "frei haben",
+      "frei"
+     ],
+     "pos": "Redewendung",
+     "zh": "有空闲",
+     "example_de": "Sie wollen lieber viel frei haben.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Erfahrung (-en)",
+     "key": "erfahrung",
+     "forms": [
+      "Erfahrung"
+     ],
+     "pos": "",
+     "zh": "经验",
+     "example_de": "So will sie Geld und Erfahrung im Job bekommen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Gesundheit",
+     "key": "gesundheit",
+     "forms": [
+      "Gesundheit"
+     ],
+     "pos": "",
+     "zh": "健康",
+     "example_de": "Sie sagt, auch Gesundheit ist sehr wichtig.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "herausfinden (hat herausgefunden)",
+     "key": "herausfinden",
+     "forms": [
+      "herausfinden",
+      "herausgefunden"
+     ],
+     "pos": "Redewendung",
+     "zh": "查明/发现",
+     "example_de": "Jetzt haben Forscher herausgefunden, das stimmt nicht.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "seltener",
+     "key": "seltener",
+     "forms": [
+      "seltener"
+     ],
+     "pos": "",
+     "zh": "更少地",
+     "example_de": "Aber damals haben die jungen Menschen viel seltener studiert.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "Comparison: lieber / öfter / seltener",
+     "summary": "Comparison: lieber / öfter / seltener — 形容词比较级 德语比较级规则：词尾加 -er。 • gern → lieber（更喜欢）：Sie wollen lieber viel frei haben. • oft → öfter（更频繁）：Sie arbeiten öfter als früher. • selten → seltener（更罕见）：Sie haben seltener studiert. 直觉：用 -er 就是比较级，和英语的 -er 完全一样。",
+     "example_de": "",
+     "example_zh": ""
+    }
+   ],
+   "background": "Z世代指1997-2012年间出生的一代人，常被贴上\"懒惰\"\"不愿吃苦\"的标签。但德国劳工市场研究显示，这一代年轻人（尤其是20-24岁）的就业率达到历史新高。与30年前不同的是，当今年轻人更多采用\"双轨制\"（Duales Studium）——边工作边学习。他们重视工作与生活平衡（Work-Life-Balance），但这并不等于不工作。"
+  },
+  {
+   "title": "Sonnenfinsternis in Teilen Westeuropas",
+   "paragraphs": [
+    "Am Mittwochabend kann man am Himmel etwas ganz Besonderes sehen. Dann gibt es nämlich eine Sonnenfinsternis. Bei einer Sonnenfinsternis ist der Mond für eine Zeit lang zwischen der Erde und der Sonne. Dann verdeckt der Mond die Sonne, so wie auf dem Foto. Deshalb ist es auf der Erde dann kurz dunkler.",
+    "Das war die letzte totale Sonnenfinsternis in Deutschland. Das ist schon fast 30 Jahre her. Damals konnte man die Sonnenfinsternis nicht so gut sehen. Es war nämlich schlechtes Wetter. Dieses Mal soll das Wetter viel besser sein.",
+    "Wann die Sonnenfinsternis anfängt, das ist in jedem Ort in Deutschland etwas anders. Sie beginnt um 19.15 Uhr. Der Mond kommt von rechts unten vor die Sonne. Am dunkelsten ist es in Hamburg, oben im Norden, um 20.07 Uhr. In Berlin, rechts im Osten, um 20.08 Uhr. In Köln, links im Westen, um 20.10 Uhr. Und in München, unten im Süden, um 20.15 Uhr.",
+    "Dieses Mal gibt es in Deutschland aber keine totale Sonnenfinsternis. Das heißt, der Mond ist nur zu einem Teil vor der Sonne, nicht komplett. Deshalb wird es nicht richtig dunkel. Aber die Farben sind nicht mehr so deutlich. Schatten können stärker sein. Und es wird etwas kälter.",
+    "Wenn man die Sonnenfinsternis ansehen will, dann braucht man so eine besondere Brille. Sonst können die Augen kaputt gehen."
+   ],
+   "translations": [
+    "周三傍晚，天空将出现一道奇观——日食。日食发生时，月球短暂地位于地球和太阳之间，遮挡住太阳。因此地球会短暂变暗。",
+    "上一次德国可见的日全食已经是将近30年前的事了。当时因为天气不好，观测效果不佳。这次天气应该会好得多。",
+    "日食开始的时间在德国各地略有不同，大约从19:15开始。月球从太阳右下方逐渐移入。最暗的时刻因城市而异：北部汉堡约20:07，东部柏林约20:08，西部科隆约20:10，南部慕尼黑约20:15。",
+    "不过这次在德国看不到日全食，月球只遮挡太阳的一部分。因此天不会完全变黑，但颜色会变得不太鲜明，阴影可能更明显，气温也会略微下降。",
+    "如果要观测日食，需要佩戴专用的日食眼镜，否则可能损伤眼睛。"
+   ],
+   "vocab": [
+    {
+     "lemma": "die Sonnenfinsternis (-se)",
+     "key": "sonnenfinsternis",
+     "forms": [
+      "Sonnenfinsternis"
+     ],
+     "pos": "",
+     "zh": "日食",
+     "example_de": "Dann gibt es nämlich eine Sonnenfinsternis.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Mond (-e)",
+     "key": "mond",
+     "forms": [
+      "Mond"
+     ],
+     "pos": "",
+     "zh": "月球",
+     "example_de": "Bei einer Sonnenfinsternis ist der Mond für eine Zeit lang zwischen der Erde und der Sonne.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "verdecken",
+     "key": "verdecken",
+     "forms": [
+      "verdecken"
+     ],
+     "pos": "Verb",
+     "zh": "遮挡",
+     "example_de": "Der Mond verdeckt die Sonne.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "dunkel → dunkler",
+     "key": "dunkel-dunkler",
+     "forms": [
+      "dunkel → dunkler"
+     ],
+     "pos": "Redewendung",
+     "zh": "暗的→更暗",
+     "example_de": "Es wird kurz dunkler.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Brille (-n)",
+     "key": "brille",
+     "forms": [
+      "Brille"
+     ],
+     "pos": "",
+     "zh": "眼镜",
+     "example_de": "Wenn man die Sonnenfinsternis ansehen will, dann braucht man so eine besondere Brille.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "kaputtgehen",
+     "key": "kaputtgehen",
+     "forms": [
+      "kaputtgehen"
+     ],
+     "pos": "Verb",
+     "zh": "损坏",
+     "example_de": "Die Augen können kaputtgehen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "deutlich",
+     "key": "deutlich",
+     "forms": [
+      "deutlich"
+     ],
+     "pos": "",
+     "zh": "清晰的",
+     "example_de": "Aber die Farben sind nicht mehr so deutlich.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Schatten (-)",
+     "key": "schatten",
+     "forms": [
+      "Schatten"
+     ],
+     "pos": "",
+     "zh": "影子",
+     "example_de": "Schatten können stärker sein.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "Weil / Denn / Deshalb",
+     "summary": "Weil / Denn / Deshalb — 因果关系的三种表达 德语中有三种方式表达\"因为/所以\"： ① Weil（因为）——从句，动词放最后：Weil der Mond vor der Sonne ist, wird es dunkler. ② Denn（因为）——并列句，语序正常：Es ist dunkler, denn der Mond verdeckt die Sonne. ③ Deshalb（因此）——倒装语序（动词提前）：Der Mond verdeckt die Sonne, deshalb wird es dunkler. 直觉：weil 把原因放前面/后面都行；denn 像英语 for；deshalb = so/therefore，后面跟主谓。",
+     "example_de": "因为/所以",
+     "example_zh": ""
+    }
+   ],
+   "background": "日食（Sonnenfinsternis）发生在新月（Neumond）期间，月球运行到太阳和地球之间。这次是日偏食（partielle Sonnenfinsternis），月球只遮挡太阳的一部分。德国上一次日全食（totale Sonnenfinsternis）是1999年8月11日。观测日食必须使用专用眼镜（Sonnenfinsternis-Brille），普通太阳镜或裸眼直视都可能导致不可逆的视网膜损伤。"
+  }
+ ]
+}

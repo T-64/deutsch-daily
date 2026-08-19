@@ -1,0 +1,595 @@
+{
+ "date": "2026-08-13",
+ "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1630762.html",
+ "embed_url": "https://www.tagesschau.de/multimedia/sendung/tagesschau_in_einfacher_sprache/video-1630762~player.html",
+ "news": [
+  {
+   "title": "Sonnenfinsternis: Himmel wird dunkel",
+   "paragraphs": [
+    "In Europa gab es eine Sonnenfinsternis. Sie war besonders gut in Spanien zu sehen. Dort war der Himmel dunkel.",
+    "Die Erde links, der Mond in der Mitte und die Sonne rechts. Sie waren in einer Linie. Der Mond hat die Sonne verdeckt. Wo der Kernschatten vom Mond auf der Erde war, war die Sonne ganz verdeckt — so wie in Spanien. Neben dem Kernschatten kam aber noch etwas Licht am Mond vorbei. Es gab einen Halbschatten — so wie in Deutschland.",
+    "Der Schatten ist über Grönland und Island bis nach Spanien gezogen, auf die Balearen-Inseln. Viele Menschen in Europa wollten die Sonnenfinsternis sehen, auch in Deutschland. Hier war die Sonnenfinsternis schwächer als in Spanien.",
+    "Diese Menschen sitzen auf einem Berg in der Mitte von Deutschland. Dort beobachten sie die Sonnenfinsternis. Manche haben eine extra Brille. Sie ist wichtig als Schutz gegen die Sonne. Manche haben sich einen Schutz selbst gebastelt.",
+    "Und dann ist es so weit. Von der Sonne ist nur noch ein Teil zu sehen. Es wird dunkler am Himmel. Eine Frau sagt: \"Als die Sonne weg war, war es kalt. Ich habe zum Glück einen warmen Pullover. Ich habe gedacht, die Sonne und der Himmel sind so groß. Und wir Menschen sind so klein.\"",
+    "Auch in der Stadt Berlin wollten die Menschen die Sonnenfinsternis sehen. Und auch in der Stadt München waren die Menschen deshalb gekommen. Alle haben etwas Besonderes erlebt. Bis zur nächsten großen Sonnenfinsternis dauert es in Deutschland noch lange. Sie ist im Jahr 2081."
+   ],
+   "translations": [
+    "欧洲发生了一次日食。在西班牙观测效果最好，那里天空变暗了。",
+    "地球在左边，月球在中间，太阳在右边。它们排成了一条直线。月球遮住了太阳。月球本影落在地球上的地方，太阳被完全遮挡——就像在西班牙。本影旁边还有一些光绕过月球，形成半影——就像在德国。",
+    "阴影从格陵兰岛和冰岛一直延伸到西班牙的巴利阿里群岛。许多欧洲人想观看这次日食，德国也是如此。不过在德国，日食不如西班牙明显。",
+    "这些人坐在德国中部的一座山上观测日食。有些人戴了专门的观测眼镜，这很重要，可以保护眼睛。有些人自己做了防护工具。",
+    "然后那一刻到了。太阳只剩下一部分可见。天空变得更暗。一位女士说：\"太阳消失时变冷了，幸好我穿了暖和毛衣。我觉得太阳和天空那么大，我们人类这么渺小。\"",
+    "柏林和慕尼黑的人们也来观看日食。每个人都经历了特别的时刻。德国下一次大型日食要等到2081年。"
+   ],
+   "vocab": [
+    {
+     "lemma": "die Sonnenfinsternis",
+     "key": "sonnenfinsternis",
+     "forms": [
+      "Sonnenfinsternis"
+     ],
+     "pos": "",
+     "zh": "日食",
+     "example_de": "In Europa gab es eine Sonnenfinsternis.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "verdecken",
+     "key": "verdecken",
+     "forms": [
+      "verdecken"
+     ],
+     "pos": "Verb",
+     "zh": "遮挡",
+     "example_de": "Der Mond hat die Sonne verdeckt.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Kernschatten",
+     "key": "kernschatten",
+     "forms": [
+      "Kernschatten"
+     ],
+     "pos": "",
+     "zh": "本影",
+     "example_de": "Wo der Kernschatten vom Mond auf der Erde war, war die Sonne ganz verdeckt — so wie in Spanien.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Halbschatten",
+     "key": "halbschatten",
+     "forms": [
+      "Halbschatten"
+     ],
+     "pos": "",
+     "zh": "半影",
+     "example_de": "Es gab einen Halbschatten — so wie in Deutschland.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "beobachten",
+     "key": "beobachten",
+     "forms": [
+      "beobachten"
+     ],
+     "pos": "Verb",
+     "zh": "观察",
+     "example_de": "Dort beobachten sie die Sonnenfinsternis.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Brille",
+     "key": "brille",
+     "forms": [
+      "Brille"
+     ],
+     "pos": "",
+     "zh": "眼镜",
+     "example_de": "Manche haben eine extra Brille.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Schutz",
+     "key": "schutz",
+     "forms": [
+      "Schutz"
+     ],
+     "pos": "",
+     "zh": "保护",
+     "example_de": "Sie ist wichtig als Schutz gegen die Sonne.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "basteln",
+     "key": "basteln",
+     "forms": [
+      "basteln"
+     ],
+     "pos": "Verb",
+     "zh": "手工制作",
+     "example_de": "Manche haben sich einen Schutz selbst gebastelt.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "schwach",
+     "key": "schwach",
+     "forms": [
+      "schwach"
+     ],
+     "pos": "",
+     "zh": "弱的",
+     "example_de": "Hier war die Sonnenfinsternis schwächer.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "erleben",
+     "key": "erleben",
+     "forms": [
+      "erleben"
+     ],
+     "pos": "Verb",
+     "zh": "经历",
+     "example_de": "Alle haben etwas Besonderes erlebt.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "比较级",
+     "summary": "比较级 —schwächer als— 形容词加 -er 构成比较级，用 als 连接：schwach → schwächer。\"Hier war die Sonnenfinsternis schwächer als in Spanien.\"（这里日食比西班牙更弱。）",
+     "example_de": "Hier war die Sonnenfinsternis schwächer als in Spanien.",
+     "example_zh": ""
+    },
+    {
+     "title": "sich etwas basteln（反身）",
+     "summary": "sich etwas basteln（反身） sich (Dat.) etwas basteln = 给自己手工做某物。\"Manche haben sich einen Schutz selbst gebastelt.\"（有些人给自己做了防护。）",
+     "example_de": "Manche haben sich einen Schutz selbst gebastelt.",
+     "example_zh": ""
+    }
+   ],
+   "background": "2026年8月13日的日食全食带经过北欧和西班牙。德国大部分地区只能看到偏食。观测日食必须使用专门的日食眼镜，普通太阳镜不够安全。德国下一次能看到的日全食要等到2081年。"
+  },
+  {
+   "title": "Vor 65 Jahren: Mauer in Berlin gebaut",
+   "paragraphs": [
+    "In Berlin gab es früher eine Mauer. Die Mauer hat die Stadt geteilt — in Ost und West. Der westliche Teil gehörte zur BRD. Das ist das kurze Wort für Bundesrepublik Deutschland. Der östliche Teil gehörte zur DDR. Das ist das kurze Wort für Deutsche Demokratische Republik.",
+    "Die DDR hat die Mauer gebaut vor 65 Jahren, am 13. August 1961. Die Regierung von der DDR hat damals gesagt: \"Nur manche Menschen dürfen über die Grenze in den Westen reisen. Für die meisten Menschen sind Reisen in den Westen aber verboten.\" Deshalb wurden manche Familien getrennt. Und Freunde konnten sich nicht mehr besuchen.",
+    "Diese Aufnahmen sind von früher, deshalb sind sie Schwarz-Weiß. Soldaten von der DDR bauen die Mauer quer durch die Stadt Berlin. Die Mauer trennt Ost und West. In der Zeitung steht: \"Ost-Berlin ist abgeriegelt.\" Das bedeutet: niemand kann über die Grenze in den Westen.",
+    "Der Mann links ist Walter Ulbricht. Er war der Chef von der DDR. Er hat gesagt: \"Niemand baut eine Mauer.\" Das war aber gelogen.",
+    "Die Mauer hat plötzlich Familien und Freunde getrennt. Viele Menschen sind aus dem Osten in den Westen geflohen. Die Flucht aus der DDR war schwierig und gefährlich. Viele Menschen sind dabei gestorben. Trotzdem haben Menschen immer wieder versucht, über die Grenze zu kommen — zum Beispiel mit einer Leiter, durch einen Tunnel, oder mit dem Auto.",
+    "Die Mauer stand 28 Jahre lang. 1989 ist die Mauer gefallen. Die Menschen aus der DDR durften über die Grenze in den Westen kommen."
+   ],
+   "translations": [
+    "柏林以前有一堵墙，把城市分成东西两部分。西部属于联邦德国（BRD），东部属于民主德国（DDR）。",
+    "65年前，1961年8月13日，东德修建了这堵墙。东德政府说：\"只有少数人可以越境去西部。对大多数人来说，去西部是被禁止的。\"因此一些家庭被迫分离，朋友不能再见面。",
+    "这些影像是以前的，所以是黑白的。东德士兵在柏林城中建墙。报纸上写着：\"东柏林已被封锁。\"意思是没人能越境去西部。",
+    "左边那个人是瓦尔特·乌布利希，东德的领导人。他曾说\"没人要建墙\"——但那是谎言。",
+    "这堵墙突然将家庭和朋友分开。许多人从东部逃到西部。出逃困难而危险，许多人在此过程中丧生。尽管如此，人们还是不断尝试越境——用梯子、挖隧道或开车。",
+    "墙矗立了28年。1989年柏林墙倒塌。东德人民终于可以越境来到西部。"
+   ],
+   "vocab": [
+    {
+     "lemma": "die Mauer",
+     "key": "mauer",
+     "forms": [
+      "Mauer"
+     ],
+     "pos": "",
+     "zh": "墙",
+     "example_de": "In Berlin gab es früher eine Mauer.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "teilen",
+     "key": "teilen",
+     "forms": [
+      "teilen"
+     ],
+     "pos": "Verb",
+     "zh": "分割",
+     "example_de": "Die Mauer hat die Stadt geteilt.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "gehören zu",
+     "key": "gehören-zu",
+     "forms": [
+      "gehören zu"
+     ],
+     "pos": "",
+     "zh": "属于",
+     "example_de": "Der westliche Teil gehörte zur BRD.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Grenze",
+     "key": "grenze",
+     "forms": [
+      "Grenze"
+     ],
+     "pos": "",
+     "zh": "边界",
+     "example_de": "Die Regierung von der DDR hat damals gesagt: \"Nur manche Menschen dürfen über die Grenze in den Westen reisen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "verboten",
+     "key": "verboten",
+     "forms": [
+      "verboten"
+     ],
+     "pos": "Verb",
+     "zh": "被禁止的",
+     "example_de": "Für die meisten Menschen sind Reisen in den Westen aber verboten.\" Deshalb wurden manche Familien getrennt.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "trennen",
+     "key": "trennen",
+     "forms": [
+      "trennen"
+     ],
+     "pos": "Verb",
+     "zh": "分离",
+     "example_de": "Deshalb wurden Familien getrennt.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "abriegeln",
+     "key": "abriegeln",
+     "forms": [
+      "abriegeln"
+     ],
+     "pos": "Verb",
+     "zh": "封锁",
+     "example_de": "Ost-Berlin ist abgeriegelt.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "fliehen",
+     "key": "fliehen",
+     "forms": [
+      "fliehen"
+     ],
+     "pos": "Verb",
+     "zh": "逃跑",
+     "example_de": "Viele sind in den Westen geflohen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Flucht",
+     "key": "flucht",
+     "forms": [
+      "Flucht"
+     ],
+     "pos": "",
+     "zh": "逃跑",
+     "example_de": "Die Flucht aus der DDR war schwierig und gefährlich.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "gefährlich",
+     "key": "gefährlich",
+     "forms": [
+      "gefährlich"
+     ],
+     "pos": "",
+     "zh": "危险的",
+     "example_de": "Die Flucht aus der DDR war schwierig und gefährlich.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "被动语态",
+     "summary": "被动语态 — wurden getrennt werden + 过去分词 = 被动语态（过去时用 wurden）。\"Deshalb wurden manche Familien getrennt.\"（一些家庭被分离了。）= 英语 \"were separated\"。",
+     "example_de": "Deshalb wurden manche Familien getrennt.",
+     "example_zh": ""
+    },
+    {
+     "title": "dürfen",
+     "summary": "dürfen — 允许/可以 \"Nur manche Menschen dürfen über die Grenze reisen.\"（只有部分人被允许越境旅行。）dürfen 的否定 = nicht dürfen = 不被允许/禁止。",
+     "example_de": "Nur manche Menschen dürfen über die Grenze reisen.",
+     "example_zh": ""
+    }
+   ],
+   "background": "1961年8月13日，东德在一夜之间开始修建柏林墙，将柏林分为东西两部分。东德官方称其为\"反法西斯防卫墙\"，实际目的是阻止居民逃往西方。墙存在28年间（1961-1989），至少140人在尝试越境时死亡。1989年11月9日柏林墙倒塌。2026年8月13日恰逢建墙65周年。\n      瓦尔特·乌布利希在1961年6月说\"没人有意建墙\"，两个月后墙就建了——史上最著名的谎言之一。"
+  },
+  {
+   "title": "Vulkan ausgebrochen: Flughafen gesperrt",
+   "paragraphs": [
+    "In Italien ist vor einigen Tagen ein Vulkan ausgebrochen. Er heißt Ätna und ist auf der Insel Sizilien, im Süden von Italien. In der Nähe vom Ätna ist ein Flughafen. Er ist jetzt gesperrt. Deshalb sitzen manche Touristen auf der Insel fest. Sie müssen warten oder zu einem anderen Flughafen fahren.",
+    "Das ist der Ätna von oben. Aus dem Vulkan kommen Gas und Asche. Wegen der Asche in der Luft können die Flugzeuge nicht fliegen. Aus dem Vulkan kommen auch Steine und Lava. Das ist die rote, heiße Flüssigkeit. Sie ist gefährlich für Menschen. Viele sind aber trotzdem gekommen, um den Vulkan aus der Nähe zu sehen."
+   ],
+   "translations": [
+    "几天前意大利的一座火山喷发了。它叫埃特纳火山，位于意大利南部的西西里岛。附近的机场现在已经关闭，一些游客被困在岛上，必须等待或前往其他机场。",
+    "这是从上方看到的埃特纳火山。火山喷出气体和火山灰，因空气中的火山灰，飞机无法飞行。火山还喷出石头和熔岩——红色炽热的液体，对人体有危险。尽管如此，还是有很多人来近处观看火山。"
+   ],
+   "vocab": [
+    {
+     "lemma": "ausbrechen",
+     "key": "ausbrechen",
+     "forms": [
+      "ausbrechen"
+     ],
+     "pos": "Verb",
+     "zh": "喷发",
+     "example_de": "Ein Vulkan ist ausgebrochen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Vulkan",
+     "key": "vulkan",
+     "forms": [
+      "Vulkan"
+     ],
+     "pos": "",
+     "zh": "火山",
+     "example_de": "In Italien ist vor einigen Tagen ein Vulkan ausgebrochen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Insel",
+     "key": "insel",
+     "forms": [
+      "Insel"
+     ],
+     "pos": "",
+     "zh": "岛屿",
+     "example_de": "Er heißt Ätna und ist auf der Insel Sizilien, im Süden von Italien.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "sperren",
+     "key": "sperren",
+     "forms": [
+      "sperren"
+     ],
+     "pos": "Verb",
+     "zh": "关闭",
+     "example_de": "Der Flughafen ist gesperrt.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "fest-sitzen",
+     "key": "fest-sitzen",
+     "forms": [
+      "fest-sitzen"
+     ],
+     "pos": "",
+     "zh": "被困住",
+     "example_de": "Touristen sitzen auf der Insel fest.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Asche",
+     "key": "asche",
+     "forms": [
+      "Asche"
+     ],
+     "pos": "",
+     "zh": "火山灰",
+     "example_de": "Aus dem Vulkan kommen Gas und Asche.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Lava",
+     "key": "lava",
+     "forms": [
+      "Lava"
+     ],
+     "pos": "",
+     "zh": "熔岩",
+     "example_de": "Aus dem Vulkan kommen auch Steine und Lava.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Flüssigkeit",
+     "key": "flüssigkeit",
+     "forms": [
+      "Flüssigkeit"
+     ],
+     "pos": "",
+     "zh": "液体",
+     "example_de": "Das ist die rote, heiße Flüssigkeit.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "heiß",
+     "key": "heiß",
+     "forms": [
+      "heiß"
+     ],
+     "pos": "",
+     "zh": "热的",
+     "example_de": "Das ist die heiße Flüssigkeit.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "aus der Nähe",
+     "key": "aus-der-nähe",
+     "forms": [
+      "aus der Nähe"
+     ],
+     "pos": "Redewendung",
+     "zh": "从近处",
+     "example_de": "Viele sind aber trotzdem gekommen, um den Vulkan aus der Nähe zu sehen.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "Wegen + 第二格",
+     "summary": "Wegen + 第二格 \"Wegen der Asche in der Luft können die Flugzeuge nicht fliegen.\"（因为空气中的火山灰，飞机无法飞行。）wegen = because of。",
+     "example_de": "Wegen der Asche in der Luft können die Flugzeuge nicht fliegen.",
+     "example_zh": ""
+    },
+    {
+     "title": "um ... zu（目的从句）",
+     "summary": "um ... zu（目的从句） \"Viele sind gekommen, um den Vulkan zu sehen.\"（很多人来了，是为了看火山。）= in order to。",
+     "example_de": "Viele sind gekommen, um den Vulkan zu sehen.",
+     "example_zh": ""
+    }
+   ],
+   "background": "埃特纳火山是欧洲最高最活跃的火山，位于西西里岛东岸，海拔约3357米。附近的卡塔尼亚机场因火山灰影响飞行安全经常临时关闭。火山灰对航空发动机极其危险——2010年冰岛火山灰也曾导致欧洲大面积航班取消。"
+  },
+  {
+   "title": "Schwimm-EM: Medaillen für Deutsche",
+   "paragraphs": [
+    "In der Hauptstadt von Frankreich, Paris, ist gerade die Schwimm-EM — die Europameisterschaft für Schwimmen. Der Mann vorne auf dem Foto ist Johannes Liebmann. Er war der Schnellste beim Schwimmen über 800 Meter. Dafür hat er eine Goldmedaille bekommen. Hinter ihm auf dem Foto ist Sven Schwarz. Er war der Zweitschnellste und hat eine Silbermedaille bekommen. Das Schwimmen war im Freistil. Die Sportler konnten sich die Schwimmtechnik selbst aussuchen, zum Beispiel Brustschwimmen."
+   ],
+   "translations": [
+    "在法国首都巴黎，正在举行游泳欧锦赛。照片前面的约翰内斯·利布曼是800米游泳中最快的选手，获得金牌。他后面的斯文·施瓦茨是第二名，获得银牌。比赛是自由泳，运动员可以自己选择泳姿，比如蛙泳。"
+   ],
+   "vocab": [
+    {
+     "lemma": "die EM (Europameisterschaft)",
+     "key": "em",
+     "forms": [
+      "EM",
+      "Europameisterschaft"
+     ],
+     "pos": "",
+     "zh": "欧锦赛",
+     "example_de": "In der Hauptstadt von Frankreich, Paris, ist gerade die Schwimm-EM — die Europameisterschaft für Schwimmen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Medaille",
+     "key": "medaille",
+     "forms": [
+      "Medaille"
+     ],
+     "pos": "",
+     "zh": "奖牌",
+     "example_de": "Er hat eine Goldmedaille bekommen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Schnellste",
+     "key": "schnellste",
+     "forms": [
+      "Schnellste"
+     ],
+     "pos": "",
+     "zh": "最快的人",
+     "example_de": "Er war der Schnellste beim Schwimmen über 800 Meter.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "das Freistil",
+     "key": "freistil",
+     "forms": [
+      "Freistil"
+     ],
+     "pos": "",
+     "zh": "自由泳",
+     "example_de": "Das Schwimmen war im Freistil.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "aussuchen",
+     "key": "aussuchen",
+     "forms": [
+      "aussuchen"
+     ],
+     "pos": "Verb",
+     "zh": "选择",
+     "example_de": "Die Sportler konnten sich die Schwimmtechnik selbst aussuchen, zum Beispiel Brustschwimmen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "das Brustschwimmen",
+     "key": "brustschwimmen",
+     "forms": [
+      "Brustschwimmen"
+     ],
+     "pos": "",
+     "zh": "蛙泳",
+     "example_de": "Die Sportler konnten sich die Schwimmtechnik selbst aussuchen, zum Beispiel Brustschwimmen.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "形容词作名词",
+     "summary": "形容词作名词 — der Schnellste \"Er war der Schnellste.\"（他是最快的人。）形容词加定冠词首字母大写即可当名词。",
+     "example_de": "Er war der Schnellste.",
+     "example_zh": ""
+    },
+    {
+     "title": "sich etwas aussuchen（反身）",
+     "summary": "sich etwas aussuchen（反身） \"Die Sportler konnten sich die Schwimmtechnik selbst aussuchen.\"（运动员可以自己选择游泳技术。）",
+     "example_de": "Die Sportler konnten sich die Schwimmtechnik selbst aussuchen.",
+     "example_zh": ""
+    }
+   ],
+   "background": "2026年游泳欧锦赛在欧洲举行。德国运动员在男子800米自由泳包揽金银牌。自由泳规则允许使用任何泳姿，实际比赛中选手几乎都选择爬泳（Kraulen）。800米是长距离项目，对耐力要求极高。"
+  },
+  {
+   "title": "Das Wetter",
+   "paragraphs": [
+    "Und jetzt kommt das Wetter. Die Sonne scheint. Nur oben im Norden und rechts im Westen gibt es ein paar Wolken. Es ist trocken."
+   ],
+   "translations": [
+    "现在是天气预报。阳光明媚。只有北部上方和西部右侧有一些云。天气干燥。"
+   ],
+   "vocab": [
+    {
+     "lemma": "die Sonne scheint",
+     "key": "sonne-scheint",
+     "forms": [
+      "Sonne scheint",
+      "die Sonne scheint"
+     ],
+     "pos": "",
+     "zh": "阳光照耀",
+     "example_de": "Die Sonne scheint.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Wolke",
+     "key": "wolke",
+     "forms": [
+      "Wolke"
+     ],
+     "pos": "",
+     "zh": "云",
+     "example_de": "Es gibt ein paar Wolken.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "trocken",
+     "key": "trocken",
+     "forms": [
+      "trocken"
+     ],
+     "pos": "Verb",
+     "zh": "干燥的",
+     "example_de": "Es ist trocken.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Norden",
+     "key": "norden",
+     "forms": [
+      "Norden"
+     ],
+     "pos": "",
+     "zh": "北方",
+     "example_de": "Nur oben im Norden und rechts im Westen gibt es ein paar Wolken.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "Es gibt + 第四格",
+     "summary": "Es gibt + 第四格 — 有/存在 \"Es gibt ein paar Wolken.\"（有几朵云。）es gibt 永远接第四格，= there is/are。",
+     "example_de": "Es gibt ein paar Wolken.",
+     "example_zh": ""
+    }
+   ],
+   "background": ""
+  }
+ ]
+}

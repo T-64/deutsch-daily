@@ -1,0 +1,414 @@
+{
+ "date": "2026-08-07",
+ "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1627708.html",
+ "embed_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1627708~player.html",
+ "news": [
+  {
+   "title": "Rhein: Wasser ist niedrig",
+   "paragraphs": [
+    "Auf dem Rhein fahren jeden Tag viele Schiffe. Die Schiffe transportieren Sachen für Unternehmen. Momentan können viele Schiffe aber nicht fahren. Das Wasser im Rhein ist nämlich niedrig. Es ist viel niedriger als sonst.",
+    "Das ist der Rhein in Duisburg, links im Westen von Deutschland. Das Wasser ist niedriger als normalerweise. Wenn das Wasser niedrig ist, dann können die Schiffe nicht so viele Sachen laden. Sonst sind sie zu schwer und fahren sich auf dem Boden fest.",
+    "Auch in Köln ist das Wasser im Rhein niedrig. Dieses Schiff kann nur wenig Ladung aufnehmen. Markus Neumann von einer Kölner Behörde sagt: Es lohnt sich für das Schiff gar nicht zu fahren. Der Sprit ist wahrscheinlich zu teuer bei so wenig Ladung.",
+    "Die Politik sucht eine Lösung. Der Minister für Verkehr, Steffen Bilger, schlägt vor: Lkw könnten ausnahmsweise auch an Sonntagen und Feiertagen fahren. Und man könnte den Rhein tiefer machen. Bilger sagt: Wenn der Fluss tiefer ist, können wir wieder mehr auf die Schiffe laden. Das ist wichtig für die Wirtschaft. Aber nicht jeder findet die Idee gut. Neumann sagt: Wenn wir den Fluss tiefer machen, dann bekommen wir trotzdem nicht mehr Wasser.",
+    "Fachleute sagen, das Wasser im Rhein könnte noch ein paar Wochen niedrig bleiben."
+   ],
+   "translations": [
+    "莱茵河上每天都有很多船只航行，这些船为企业运输货物。但现在很多船无法航行了，因为莱茵河水位太低了，比平时低很多。",
+    "这是杜伊斯堡的莱茵河段，位于德国西部。水位低于正常水平。水位低的时候船只不能装载太多货物，否则太重会搁浅。",
+    "科隆的莱茵河水位也很低。这艘船只能装载少量货物。科隆一位官员 Markus Neumann 说：船只根本不值得开航，在这么少的载货量下油费可能太贵了。",
+    "政府正在寻找解决办法。交通部长 Steffen Bilger 提议：卡车可以例外地在周日和节假日也上路行驶。还可以把莱茵河挖深。Bilger 说：如果河道更深，就能重新装载更多货物，这对经济很重要。但并非所有人都认同。Neumann 说：即使把河挖深，也不会得到更多水。",
+    "专家表示，莱茵河水位可能还会持续偏低几周。"
+   ],
+   "vocab": [
+    {
+     "lemma": "Wasser ist niedrig",
+     "key": "wasser-niedrig",
+     "forms": [
+      "Wasser ist niedrig"
+     ],
+     "pos": "Redewendung",
+     "zh": "水位低",
+     "example_de": "Das Wasser ist niedriger als normalerweise.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "transportieren",
+     "key": "transportieren",
+     "forms": [
+      "transportieren"
+     ],
+     "pos": "Verb",
+     "zh": "运输",
+     "example_de": "Die Schiffe transportieren Sachen für Unternehmen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Ladung",
+     "key": "ladung",
+     "forms": [
+      "Ladung"
+     ],
+     "pos": "",
+     "zh": "货物/载货",
+     "example_de": "Dieses Schiff kann nur wenig Ladung aufnehmen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "sich festfahren",
+     "key": "festfahren",
+     "forms": [
+      "festfahren"
+     ],
+     "pos": "Substantiv",
+     "zh": "搁浅",
+     "example_de": "Sie fahren sich auf dem Boden fest.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "sich lohnen",
+     "key": "lohnen",
+     "forms": [
+      "lohnen"
+     ],
+     "pos": "Substantiv",
+     "zh": "值得",
+     "example_de": "Es lohnt sich nicht zu fahren.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Sprit",
+     "key": "sprit",
+     "forms": [
+      "Sprit"
+     ],
+     "pos": "",
+     "zh": "燃油（口语）",
+     "example_de": "Der Sprit ist wahrscheinlich zu teuer bei so wenig Ladung.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "ausnahmsweise",
+     "key": "ausnahmsweise",
+     "forms": [
+      "ausnahmsweise"
+     ],
+     "pos": "",
+     "zh": "破例地",
+     "example_de": "Der Minister für Verkehr, Steffen Bilger, schlägt vor: Lkw könnten ausnahmsweise auch an Sonntagen und Feiertagen fahren.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Wirtschaft",
+     "key": "wirtschaft",
+     "forms": [
+      "Wirtschaft"
+     ],
+     "pos": "",
+     "zh": "经济",
+     "example_de": "Das ist wichtig für die Wirtschaft.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Fachleute",
+     "key": "fachleute",
+     "forms": [
+      "Fachleute"
+     ],
+     "pos": "",
+     "zh": "专家",
+     "example_de": "Fachleute sagen, das Wasser im Rhein könnte noch ein paar Wochen niedrig bleiben.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "sich festfahren",
+     "summary": "sich festfahren — 反身动词 + 可分前缀。fest(卡住) + fahren(行驶) = 搁浅。反身代词 sich 表示动作作用回主语本身：\"船把自己开卡了\"。",
+     "example_de": "船把自己开卡了",
+     "example_zh": ""
+    },
+    {
+     "title": "es lohnt sich",
+     "summary": "es lohnt sich — 值得（固定表达）。结构：es lohnt sich (für A), zu + Inf.",
+     "example_de": "",
+     "example_zh": ""
+    }
+   ],
+   "background": "莱茵河是欧洲最繁忙的内河航道，每年运输约2亿吨货物。2018年也曾因干旱导致水位骤降，引发供应链危机。低水位反映气候变化对欧洲水路运输的长期威胁。"
+  },
+  {
+   "title": "Südeuropa: Hitze in vielen Ländern",
+   "paragraphs": [
+    "In vielen Ländern im Süden von Europa ist es gerade sehr warm. Es wird manchmal sogar über 40 Grad. Die Hitze ist gefährlich für die Menschen. Sie können Probleme mit der Gesundheit bekommen. Und die Hitze ist auch ein Problem für die Natur und die Wirtschaft.",
+    "Das ist in der Stadt Mailand in Italien. In den letzten Tagen war es dort sehr heiß und schwül. Fast überall in Italien war das Wetter so. Deswegen haben die Behörden eine Warnung gemacht. Die Behörden sagen den Menschen: Passt auf euch auf, das Wetter ist gefährlich. Auch junge Menschen können Probleme bekommen.",
+    "In vielen Ländern im Süden von Europa ist es warm, zum Beispiel auch in Österreich. In Wien war es manchmal über 40 Grad. Und auch in Ungarn ist es sehr heiß. Die Menschen versuchen, sich abzukühlen.",
+    "Weil es so heiß ist und wenig regnet, ist auch wenig Wasser in dem Fluss Donau. Das ist ein Problem für dieses Atomkraftwerk. Ohne Wasser aus dem Fluss kann es nicht gekühlt werden. Und ohne Kühlung kann es nicht viel Strom machen. Deshalb sind in Budapest gerade viele Lichter an Gebäuden abends aus, um Strom zu sparen."
+   ],
+   "translations": [
+    "南欧许多国家现在非常炎热，有时气温甚至超过40度。高温对人们来说很危险，可能引发健康问题，而且对自然和经济也是一大问题。",
+    "意大利米兰近几天非常炎热闷湿，几乎整个意大利的天气都是如此。意大利政府发布了预警，告诉人们：注意安全，天气很危险，即使是年轻人也可能出现健康问题。",
+    "南欧许多国家都在经历高温，比如奥地利。首都维也纳近几天气温有时超过40度。匈牙利也非常炎热，人们想方设法降温。",
+    "由于天热少雨，多瑙河水量也很少，这给一座核电站带来了问题。没有河水就无法冷却，没有冷却就无法大量发电。因此在布达佩斯，许多建筑晚上都关灯以节省电力。"
+   ],
+   "vocab": [
+    {
+     "lemma": "die Hitze",
+     "key": "hitze",
+     "forms": [
+      "Hitze"
+     ],
+     "pos": "",
+     "zh": "高温/酷热",
+     "example_de": "Die Hitze ist gefährlich für die Menschen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "schwül",
+     "key": "schwül",
+     "forms": [
+      "schwül"
+     ],
+     "pos": "",
+     "zh": "闷热潮湿的",
+     "example_de": "In den letzten Tagen war es dort sehr heiß und schwül.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Warnung",
+     "key": "warnung",
+     "forms": [
+      "Warnung"
+     ],
+     "pos": "",
+     "zh": "警告",
+     "example_de": "Deswegen haben die Behörden eine Warnung gemacht.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "aufpassen auf (Akk.)",
+     "key": "aufpassen-auf",
+     "forms": [
+      "aufpassen auf"
+     ],
+     "pos": "Redewendung",
+     "zh": "注意/小心",
+     "example_de": "Passt auf euch auf!",
+     "example_zh": ""
+    },
+    {
+     "lemma": "sich abkühlen",
+     "key": "abkühlen",
+     "forms": [
+      "abkühlen"
+     ],
+     "pos": "Substantiv",
+     "zh": "降温",
+     "example_de": "Die Menschen versuchen, sich abzukühlen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Kühlung",
+     "key": "kühlung",
+     "forms": [
+      "Kühlung"
+     ],
+     "pos": "",
+     "zh": "冷却",
+     "example_de": "Und ohne Kühlung kann es nicht viel Strom machen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Strom",
+     "key": "strom",
+     "forms": [
+      "Strom"
+     ],
+     "pos": "",
+     "zh": "电力",
+     "example_de": "Und ohne Kühlung kann es nicht viel Strom machen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "Strom sparen",
+     "key": "strom-sparen",
+     "forms": [
+      "Strom sparen"
+     ],
+     "pos": "",
+     "zh": "节电",
+     "example_de": "Lichter aus, um Strom zu sparen.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "um … zu",
+     "summary": "um … zu — 目的从句：um + zu + Inf. = \"为了……\"。例：viele Lichter sind aus, um Strom zu sparen。",
+     "example_de": "为了……",
+     "example_zh": ""
+    },
+    {
+     "title": "模态被动 kann … werden：können + Partizip II + werden。例：es kann nicht gekühlt werden ",
+     "summary": "模态被动 kann … werden：können + Partizip II + werden。例：es kann nicht gekühlt werden = \"无法被冷却\"。新闻高频结构。",
+     "example_de": "无法被冷却",
+     "example_zh": ""
+    }
+   ],
+   "background": "2026年夏季南欧持续热浪。匈牙利 Paks 核电站因多瑙河水位下降影响冷却能力，必须降低发电功率。欧洲近年来高温事件频率和强度持续上升，与气候变化直接相关。"
+  },
+  {
+   "title": "Mallorca: Mittelmeer so warm wie nie",
+   "paragraphs": [
+    "Mallorca ist eine Insel im Mittelmeer, unten im Süden von Europa. Mallorca gehört zu Spanien. Das Wasser im Mittelmeer bei Mallorca war jetzt so warm wie noch nie in Spanien. Es war nämlich 33 Grad warm.",
+    "Das warme Wasser ist gefährlich für Fische und Pflanzen im Mittelmeer. Und wenn das Wetter jetzt so warm ist, dann kann es im Herbst heftige Stürme geben.",
+    "Forscher sagen, das warme Wasser kommt vom Klimawandel. Klimawandel heißt, auf der Erde wird es wärmer. Das ist gefährlich für die Natur und für die Menschen."
+   ],
+   "translations": [
+    "马略卡岛是地中海中的一座岛屿，位于欧洲南部，属于西班牙。马略卡附近地中海的水温现在达到了西班牙有记录以来的最高值——33度。",
+    "温暖的海水对地中海的鱼类和植物很危险。如果天气持续这么热，秋季可能出现猛烈的暴风雨。",
+    "研究人员表示，海水变暖是气候变化造成的。气候变化意味着地球正在变暖，这对自然和人类都是危险的。"
+   ],
+   "vocab": [
+    {
+     "lemma": "die Insel",
+     "key": "insel",
+     "forms": [
+      "Insel"
+     ],
+     "pos": "",
+     "zh": "岛屿",
+     "example_de": "Mallorca ist eine Insel im Mittelmeer, unten im Süden von Europa.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "das Mittelmeer",
+     "key": "mittelmeer",
+     "forms": [
+      "Mittelmeer"
+     ],
+     "pos": "",
+     "zh": "地中海",
+     "example_de": "Mallorca ist eine Insel im Mittelmeer, unten im Süden von Europa.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "gehören zu (Dat.)",
+     "key": "gehören-zu",
+     "forms": [
+      "gehören zu"
+     ],
+     "pos": "Redewendung",
+     "zh": "属于",
+     "example_de": "Mallorca gehört zu Spanien.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "so … wie noch nie",
+     "key": "so-wie-noch-nie",
+     "forms": [
+      "so … wie noch nie"
+     ],
+     "pos": "Redewendung",
+     "zh": "史无前例",
+     "example_de": "so warm wie noch nie",
+     "example_zh": ""
+    },
+    {
+     "lemma": "heftig",
+     "key": "heftig",
+     "forms": [
+      "heftig"
+     ],
+     "pos": "",
+     "zh": "猛烈的",
+     "example_de": "heftige Stürme geben",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Sturm (Stürme)",
+     "key": "sturm",
+     "forms": [
+      "Sturm",
+      "Stürme"
+     ],
+     "pos": "",
+     "zh": "暴风雨",
+     "example_de": "Und wenn das Wetter jetzt so warm ist, dann kann es im Herbst heftige Stürme geben.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Klimawandel",
+     "key": "klimawandel",
+     "forms": [
+      "Klimawandel"
+     ],
+     "pos": "",
+     "zh": "气候变化",
+     "example_de": "Forscher sagen, das warme Wasser kommt vom Klimawandel.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "so … wie",
+     "summary": "so … wie — 同级比较：so + Adj. + wie = \"和……一样\"。加 noch nie = \"前所未有\" → so warm wie noch nie = \"从没这么热过\"。口语化的最高级表达。",
+     "example_de": "和……一样",
+     "example_zh": ""
+    },
+    {
+     "title": "es gibt",
+     "summary": "es gibt — 存在/有：es gibt + Akkusativ，永远第三人称单数。加情态动词 → kann … geben。",
+     "example_de": "",
+     "example_zh": ""
+    }
+   ],
+   "background": "2026年地中海海表温度创历史新高，马略卡近海33°C。海洋升温导致珊瑚白化、鱼类迁徙，以及秋季地中海飓风（Medicane）强度增加。"
+  },
+  {
+   "title": "Das Wetter",
+   "paragraphs": [
+    "Und jetzt kommt das Wetter. Es ist sonnig und trocken. Oben an der Küste und unten an den Bergen kann es ein paar Wolken geben. Es werden 20 bis 34 Grad."
+   ],
+   "translations": [
+    "现在播报天气。天气晴朗干燥，北部沿海和南部山区可能有少量云，最高气温20到34度。"
+   ],
+   "vocab": [
+    {
+     "lemma": "sonnig",
+     "key": "sonnig",
+     "forms": [
+      "sonnig"
+     ],
+     "pos": "",
+     "zh": "晴朗的",
+     "example_de": "Es ist sonnig und trocken.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "trocken",
+     "key": "trocken",
+     "forms": [
+      "trocken"
+     ],
+     "pos": "Verb",
+     "zh": "干燥的",
+     "example_de": "Es ist sonnig und trocken.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Wolke (-n)",
+     "key": "wolke",
+     "forms": [
+      "Wolke"
+     ],
+     "pos": "",
+     "zh": "云",
+     "example_de": "Es kann ein paar Wolken geben.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [],
+   "background": ""
+  }
+ ]
+}

@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.710" end="00:00:04.710">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:05.230" end="00:00:07.950">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:11.270" end="00:00:14.550">
+        <tt:span style="textWhite">Willkommen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zur tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:14.630" end="00:00:18.430">
+        <tt:span style="textWhite">Ich bin Susanne Holst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:34.870" end="00:00:36.830">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:40.910" end="00:00:43.990">
+        <tt:span style="textWhite">In Europa gab es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine Sonnenfinsternis.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:44.270" end="00:00:46.990">
+        <tt:span style="textWhite">Sie war besonders gut</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Spanien zu sehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:47.030" end="00:00:50.190">
+        <tt:span style="textWhite">Dort war der Himmel dunkel,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wie auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:50.390" end="00:00:51.590">
+        <tt:span style="textWhite">Jetzt zeigen wir,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:51.790" end="00:00:54.710">
+        <tt:span style="textWhite">was bei der Sonnenfinsternis</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">passiert ist.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:00:54.830" end="00:00:59.310">
+        <tt:span style="textWhite">Die Erde links, der Mond in der Mitte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und die Sonne rechts.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:00:59.390" end="00:01:01.190">
+        <tt:span style="textWhite">Sie waren in einer Linie.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:01.310" end="00:01:03.590">
+        <tt:span style="textWhite">Der Mond hat die Sonne verdeckt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:04.030" end="00:01:07.390">
+        <tt:span style="textWhite">Wo der Kernschatten vom Mond</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf der Erde war,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:07.430" end="00:01:09.310">
+        <tt:span style="textWhite">war die Sonne ganz verdeckt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:09.350" end="00:01:10.630">
+        <tt:span style="textWhite">So wie in Spanien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:11.310" end="00:01:15.830">
+        <tt:span style="textWhite">Neben dem Kernschatten kam aber</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">noch etwas Licht am Mond vorbei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:16.070" end="00:01:17.950">
+        <tt:span style="textWhite">Es gab einen Halbschatten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:18.230" end="00:01:19.790">
+        <tt:span style="textWhite">So wie in Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:20.270" end="00:01:24.990">
+        <tt:span style="textWhite">Der Schatten ist über Grönland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und Island bis nach Spanien gezogen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:25.110" end="00:01:26.910">
+        <tt:span style="textWhite">Auf die Balearen-Inseln.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:27.870" end="00:01:31.470">
+        <tt:span style="textWhite">Viele Menschen in Europa wollten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Sonnenfinsternis sehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:31.510" end="00:01:32.790">
+        <tt:span style="textWhite">Auch in Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:32.830" end="00:01:36.390">
+        <tt:span style="textWhite">Hier war die Sonnenfinsternis</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">schwächer als in Spanien,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:36.430" end="00:01:37.630">
+        <tt:span style="textWhite">wie auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:37.750" end="00:01:39.270">
+        <tt:span style="textWhite">Jetzt kommt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:39.870" end="00:01:44.590">
+        <tt:span style="textWhite">Diese Menschen sitzen auf einem Berg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Mitte von Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:01:45.230" end="00:01:48.830">
+        <tt:span style="textWhite">Dort beobachten sie</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Sonnenfinsternis.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:01:49.590" end="00:01:52.110">
+        <tt:span style="textWhite">Manche haben eine extra Brille.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:01:52.430" end="00:01:55.590">
+        <tt:span style="textWhite">Sie ist wichtig als Schutz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gegen die Sonne.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:01:56.150" end="00:02:00.150">
+        <tt:span style="textWhite">Manche haben sich einen Schutz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">selbst gebastelt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:00.510" end="00:02:03.430">
+        <tt:span style="textWhite">Alle warten auf die Sonnenfinsternis.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:03.830" end="00:02:05.550">
+        <tt:span style="textWhite">Und dann ist es so weit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:06.670" end="00:02:10.110">
+        <tt:span style="textWhite">Von der Sonne ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nur noch ein Teil zu sehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:10.350" end="00:02:13.070">
+        <tt:span style="textWhite">Es wird dunkler am Himmel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:14.190" end="00:02:15.630">
+        <tt:span style="textWhite">Diese Frau sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:15.670" end="00:02:18.710">
+        <tt:span style="textWhite">Als die Sonne weg war, war es kalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:18.910" end="00:02:21.710">
+        <tt:span style="textWhite">Ich habe zum Glück</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einen warmen Pullover.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:21.750" end="00:02:25.750">
+        <tt:span style="textWhite">Ich habe gedacht, die Sonne</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und der Himmel sind so groß.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:25.910" end="00:02:28.390">
+        <tt:span style="textWhite">Und wir Menschen sind so klein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:30.350" end="00:02:31.790">
+        <tt:span style="textWhite">Dieser Mann sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:31.830" end="00:02:32.910">
+        <tt:span style="textWhite">Es war schön.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:33.150" end="00:02:35.270">
+        <tt:span style="textWhite">Es war etwas ganz Besonderes.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:02:35.950" end="00:02:37.670">
+        <tt:span style="textWhite">Auch in der Stadt Berlin</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:02:37.870" end="00:02:40.870">
+        <tt:span style="textWhite">wollten die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Sonnenfinsternis sehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:02:40.910" end="00:02:45.510">
+        <tt:span style="textWhite">Und auch in der Stadt München waren</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Menschen deshalb gekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:02:45.550" end="00:02:48.190">
+        <tt:span style="textWhite">Alle haben etwas Besonderes erlebt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:02:48.790" end="00:02:51.470">
+        <tt:span style="textWhite">Bis zur nächsten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">großen Sonnenfinsternis</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:02:51.510" end="00:02:54.070">
+        <tt:span style="textWhite">dauert es in Deutschland noch lange.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:02:54.190" end="00:02:57.270">
+        <tt:span style="textWhite">Sie ist im Jahr 2081.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:02:58.510" end="00:03:00.710">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:05.510" end="00:03:08.030">
+        <tt:span style="textWhite">In Berlin gab es früher eine Mauer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:08.150" end="00:03:09.670">
+        <tt:span style="textWhite">Sie ist auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:09.950" end="00:03:12.230">
+        <tt:span style="textWhite">Die Mauer hat die Stadt geteilt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:12.350" end="00:03:13.910">
+        <tt:span style="textWhite">In Ost und West.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:14.150" end="00:03:15.670">
+        <tt:span style="textWhite">Wie auf dieser Karte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:16.310" end="00:03:19.430">
+        <tt:span style="textWhite">Der westliche Teil gehörte zur BRD.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:19.950" end="00:03:23.750">
+        <tt:span style="textWhite">Das ist das kurze Wort</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für Bundesrepublik Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:03:23.870" end="00:03:26.990">
+        <tt:span style="textWhite">Der östliche Teil gehörte zur DDR.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:03:27.790" end="00:03:31.670">
+        <tt:span style="textWhite">Das ist das kurze Wort</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für Deutsche Demokratische Republik.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:03:32.310" end="00:03:35.310">
+        <tt:span style="textWhite">Die DDR hat die Mauer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gebaut vor 65 Jahren,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:03:35.750" end="00:03:37.110">
+        <tt:span style="textWhite">am 13. August 1961.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:03:40.910" end="00:03:43.990">
+        <tt:span style="textWhite">Die Regierung von der DDR</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat damals gesagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:03:44.150" end="00:03:48.670">
+        <tt:span style="textWhite">Nur manche Menschen dürfen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über die Grenze in den Westen reisen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:03:48.790" end="00:03:53.270">
+        <tt:span style="textWhite">Für die meisten Menschen sind</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Reisen in den Westen aber verboten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:03:53.310" end="00:03:56.110">
+        <tt:span style="textWhite">Deshalb wurden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">manche Familien getrennt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:03:56.430" end="00:03:59.590">
+        <tt:span style="textWhite">Und Freunde</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">konnten sich nicht mehr besuchen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:03:59.710" end="00:04:01.550">
+        <tt:span style="textWhite">Dazu kommt jetzt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:01.790" end="00:04:04.430">
+        <tt:span style="textWhite">Diese Aufnahmen sind von früher.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:05.110" end="00:04:07.270">
+        <tt:span style="textWhite">Deshalb sind sie Schwarz-Weiß.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:07.430" end="00:04:13.190">
+        <tt:span style="textWhite">Soldaten von der DDR bauen die Mauer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">quer durch die Stadt Berlin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:13.870" end="00:04:16.030">
+        <tt:span style="textWhite">Die Mauer trennt Ost und West.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:17.990" end="00:04:21.550">
+        <tt:span style="textWhite">In der Zeitung steht:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">"Ost-Berlin ist abgeriegelt."</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:22.430" end="00:04:23.430">
+        <tt:span style="textWhite">Das bedeutet,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:04:24.070" end="00:04:27.230">
+        <tt:span style="textWhite">niemand kann über die Grenze</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in den Westen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:04:27.990" end="00:04:30.790">
+        <tt:span style="textWhite">Der Mann links ist Walter Ulbricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:04:31.230" end="00:04:33.390">
+        <tt:span style="textWhite">Er war der Chef von der DDR.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:04:34.110" end="00:04:37.470">
+        <tt:span style="textWhite">Er hat gesagt:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Niemand baut eine Mauer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:04:37.950" end="00:04:39.630">
+        <tt:span style="textWhite">Das war aber gelogen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:04:40.150" end="00:04:43.990">
+        <tt:span style="textWhite">Die Mauer hat plötzlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Familien und Freunde getrennt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:04:44.430" end="00:04:48.430">
+        <tt:span style="textWhite">Viele Menschen sind aus dem Osten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in den Westen geflohen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:04:49.350" end="00:04:52.950">
+        <tt:span style="textWhite">Die Aufnahmen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von diesem Soldaten von der DDR</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:04:52.990" end="00:04:55.670">
+        <tt:span style="textWhite">sind in der ganzen Welt bekannt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:04:57.110" end="00:05:00.750">
+        <tt:span style="textWhite">Die Flucht aus der DDR</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">war schwierig und gefährlich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:01.950" end="00:05:04.990">
+        <tt:span style="textWhite">Viele Menschen sind dabei gestorben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:05.870" end="00:05:08.950">
+        <tt:span style="textWhite">Trotzdem haben Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">immer wieder versucht,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:08.990" end="00:05:10.550">
+        <tt:span style="textWhite">über die Grenze zu kommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:10.590" end="00:05:12.990">
+        <tt:span style="textWhite">Zum Beispiel mit einer Leiter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:13.030" end="00:05:14.790">
+        <tt:span style="textWhite">Durch einen Tunnel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:15.190" end="00:05:16.750">
+        <tt:span style="textWhite">Oder mit dem Auto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:17.190" end="00:05:20.510">
+        <tt:span style="textWhite">Die Mauer stand 28 Jahre lang.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:05:21.190" end="00:05:24.310">
+        <tt:span style="textWhite">1989 ist die Mauer gefallen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:05:24.870" end="00:05:28.750">
+        <tt:span style="textWhite">Die Menschen aus der DDR</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">durften über die Grenze</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:05:28.790" end="00:05:30.310">
+        <tt:span style="textWhite">in den Westen kommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:05:31.630" end="00:05:33.830">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:05:37.910" end="00:05:41.910">
+        <tt:span style="textWhite">In Italien ist vor einigen Tagen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ein Vulkan ausgebrochen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:05:42.470" end="00:05:45.950">
+        <tt:span style="textWhite">Er heißt Ätna</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und ist auf der Insel Sizilien,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:05:46.070" end="00:05:47.590">
+        <tt:span style="textWhite">im Süden von Italien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:05:47.990" end="00:05:50.710">
+        <tt:span style="textWhite">In der Nähe vom Ätna</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist ein Flughafen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:05:50.990" end="00:05:52.550">
+        <tt:span style="textWhite">Er ist jetzt gesperrt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:05:52.870" end="00:05:56.910">
+        <tt:span style="textWhite">Deshalb sitzen manche Touristen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf der Insel fest, wie auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:05:57.710" end="00:06:01.710">
+        <tt:span style="textWhite">Sie müssen warten oder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zu einem anderen Flughafen fahren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:06:01.870" end="00:06:03.790">
+        <tt:span style="textWhite">Wir zeigen einen Film dazu.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:04.070" end="00:06:05.910">
+        <tt:span style="textWhite">Das ist der Ätna von oben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:06.350" end="00:06:08.910">
+        <tt:span style="textWhite">Aus dem Vulkan kommen Gas und Asche.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:09.190" end="00:06:13.430">
+        <tt:span style="textWhite">Wegen der Asche in der Luft können</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Flugzeuge nicht fliegen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:06:13.470" end="00:06:16.790">
+        <tt:span style="textWhite">Aus dem Vulkan</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">kommen auch Steine und Lava.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:06:17.230" end="00:06:19.430">
+        <tt:span style="textWhite">Das ist die rote, heiße Flüssigkeit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:06:19.470" end="00:06:21.750">
+        <tt:span style="textWhite">Sie ist gefährlich für Menschen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:06:22.350" end="00:06:27.350">
+        <tt:span style="textWhite">Viele sind aber trotzdem gekommen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">um den Vulkan aus der Nähe zu sehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:06:28.110" end="00:06:30.030">
+        <tt:span style="textWhite">Nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:06:33.590" end="00:06:38.310">
+        <tt:span style="textWhite">In der Hauptstadt von Frankreich,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Paris, ist gerade die Schwimm-EM,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:06:38.670" end="00:06:41.310">
+        <tt:span style="textWhite">die Europameisterschaft</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für Schwimmen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:06:41.550" end="00:06:45.070">
+        <tt:span style="textWhite">Der Mann vorne auf dem Foto</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist Johannes Liebmann.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub114" style="textCenter" region="bottom" begin="00:06:45.430" end="00:06:49.070">
+        <tt:span style="textWhite">Er war der Schnellste</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">beim Schwimmen über 800 Meter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub115" style="textCenter" region="bottom" begin="00:06:49.470" end="00:06:52.270">
+        <tt:span style="textWhite">Dafür hat er</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine Goldmedaille bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub116" style="textCenter" region="bottom" begin="00:06:52.990" end="00:06:55.870">
+        <tt:span style="textWhite">Hinter ihm auf dem Foto</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist Sven Schwarz.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub117" style="textCenter" region="bottom" begin="00:06:56.310" end="00:07:00.830">
+        <tt:span style="textWhite">Er war der Zweitschnellste und</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat eine Silbermedaille bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub118" style="textCenter" region="bottom" begin="00:07:00.950" end="00:07:03.630">
+        <tt:span style="textWhite">Das Schwimmen war im Freistil.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub119" style="textCenter" region="bottom" begin="00:07:04.110" end="00:07:08.470">
+        <tt:span style="textWhite">Die Sportler konnten sich die</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Schwimmtechnik selbst aussuchen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub120" style="textCenter" region="bottom" begin="00:07:08.750" end="00:07:10.750">
+        <tt:span style="textWhite">zum Beispiel Brustschwimmen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub121" style="textCenter" region="bottom" begin="00:07:11.830" end="00:07:14.230">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub122" style="textCenter" region="bottom" begin="00:07:30.350" end="00:07:32.270">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub123" style="textCenter" region="bottom" begin="00:07:33.230" end="00:07:34.510">
+        <tt:span style="textWhite">Die Sonne scheint.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub124" style="textCenter" region="bottom" begin="00:07:34.630" end="00:07:39.150">
+        <tt:span style="textWhite">Nur oben im Norden und rechts im</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Westen gibt es ein paar Wolken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub125" style="textCenter" region="bottom" begin="00:07:39.270" end="00:07:40.350">
+        <tt:span style="textWhite">Es ist trocken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub126" style="textCenter" region="bottom" begin="00:07:44.270" end="00:07:47.350">
+        <tt:span style="textWhite">Das war die tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub127" style="textCenter" region="bottom" begin="00:07:47.390" end="00:07:48.910">
+        <tt:span style="textWhite">Bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub128" style="textCenter" region="bottom" begin="00:07:52.110" end="00:07:54.270">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>

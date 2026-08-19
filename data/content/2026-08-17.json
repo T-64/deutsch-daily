@@ -1,0 +1,648 @@
+{
+ "date": "2026-08-17",
+ "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1632926.html",
+ "embed_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1632926~player.html",
+ "news": [
+  {
+   "title": "Belgien: Kampf gegen Feuer im Wald",
+   "paragraphs": [
+    "Belgien ist ein Nachbarland von Deutschland. In einem Gebiet an der Grenze brennt es im Wald. Das Feuer ist sehr groß. Die Feuerwehr konnte den Brand noch nicht löschen. Deshalb haben viele Menschen Angst. Was, wenn das Feuer ihre Häuser erreicht? Jetzt bekommt die Feuerwehr Hilfe. Es regnet nämlich.",
+    "Dazu kommt jetzt ein Film. Endlich gibt es etwas Regen. Die Feuerwehrleute und die Bewohner von der Region sind froh. Sie hoffen, vielleicht kann der Regen das Feuer stoppen. Dieser Feuerwehrmann sagt, der Regen ist gut. Auch der Wind weht nicht mehr so stark. Das Feuer kann gerade nicht größer werden. Aber der Regen kann das Feuer nicht ganz löschen. Die Erde ist hier nämlich aus Torf. Das wurde früher zum Heizen benutzt. Torf brennt sehr gut. Deshalb brennt es auch unter der Erde. Da kann die Feuerwehr nicht löschen.",
+    "Wegen dem Feuer gibt es auch sehr viel Rauch. Einige Menschen mussten deshalb ihre Häuser verlassen. Zur Sicherheit. Dieser Feuerwehrmann sagt, wir gehen auf Nummer sicher. In der Nähe gibt es nämlich auch einen Nadelwald. Ein Nadelwald brennt sehr schnell. Deswegen haben wir die Menschen lieber in Sicherheit gebracht.",
+    "In einem Nachbarort können die Menschen schon wieder in ihre Häuser zurück. Das Feuer ist für sie nicht mehr gefährlich. Dieser Mann sagt, wir sind wieder zu Hause. Ich bin erleichtert. Wir hatten Angst, dass unser Haus abbrennt. Ich möchte der Feuerwehr Danke sagen. Die Feuerwehr hat nämlich Tag und Nacht gearbeitet und gegen das Feuer gekämpft."
+   ],
+   "translations": [
+    "比利时是德国的邻国。在边境的一个地区，森林里着火了。火势很大。消防队还无法扑灭这场大火。因此许多人很害怕。如果火烧到他们的房子怎么办？现在消防队得到了帮助——因为下雨了。",
+    "（接下来是一段影片。）终于下了一些雨。消防员和当地居民都很高兴。他们希望，也许雨水能阻止火势。这位消防员说，下雨是好事。风也不再刮得那么大了。火势目前无法再扩大。但是雨水无法完全扑灭大火。这里的土壤是泥炭——以前人们用它取暖。泥炭非常易燃。所以地下也在燃烧。消防队对此无能为力。",
+    "因为大火，还有大量的烟雾。一些人因此必须离开自己的家，为了安全起见。这位消防员说，我们要做到万无一失。附近还有一片针叶林。针叶林燃烧得非常快。所以我们宁可把居民转移到安全地带。",
+    "在邻近的一个小镇，居民已经可以回到家里了。大火对他们来说不再危险。这位男士说，我们回到家了。我松了一口气。我们之前很害怕，怕我们的房子被烧毁。我要感谢消防队。消防队日夜不停地工作，与大火搏斗。"
+   ],
+   "vocab": [
+    {
+     "lemma": "löschen",
+     "key": "löschen",
+     "forms": [
+      "löschen"
+     ],
+     "pos": "Verb",
+     "zh": "扑灭",
+     "example_de": "Die Feuerwehr konnte den Brand noch nicht löschen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Brand, Brände",
+     "key": "brand",
+     "forms": [
+      "Brand",
+      "Brände"
+     ],
+     "pos": "",
+     "zh": "火灾",
+     "example_de": "Die Feuerwehr konnte den Brand noch nicht löschen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Feuerwehr, -en",
+     "key": "feuerwehr",
+     "forms": [
+      "Feuerwehr",
+      "Feuerwehren"
+     ],
+     "pos": "",
+     "zh": "消防队",
+     "example_de": "Die Feuerwehr konnte den Brand noch nicht löschen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Torf",
+     "key": "torf",
+     "forms": [
+      "Torf"
+     ],
+     "pos": "",
+     "zh": "泥炭",
+     "example_de": "Die Erde ist hier nämlich aus Torf.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Rauch",
+     "key": "rauch",
+     "forms": [
+      "Rauch"
+     ],
+     "pos": "",
+     "zh": "烟雾",
+     "example_de": "Wegen dem Feuer gibt es auch sehr viel Rauch.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "verlassen",
+     "key": "verlassen",
+     "forms": [
+      "verlassen"
+     ],
+     "pos": "Verb",
+     "zh": "离开",
+     "example_de": "Einige Menschen mussten deshalb ihre Häuser verlassen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "auf Nummer sicher gehen",
+     "key": "auf-nummer-sicher-gehen",
+     "forms": [
+      "auf Nummer sicher gehen",
+      "auf Nummer sicher"
+     ],
+     "pos": "Redewendung",
+     "zh": "万无一失",
+     "example_de": "Dieser Feuerwehrmann sagt, wir gehen auf Nummer sicher.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Nadelwald, Nadelwälder",
+     "key": "nadelwald",
+     "forms": [
+      "Nadelwald",
+      "Nadelwälder"
+     ],
+     "pos": "",
+     "zh": "针叶林",
+     "example_de": "In der Nähe gibt es nämlich auch einen Nadelwald.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Sicherheit",
+     "key": "sicherheit",
+     "forms": [
+      "Sicherheit"
+     ],
+     "pos": "",
+     "zh": "安全",
+     "example_de": "Zur Sicherheit.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "erleichtert",
+     "key": "erleichtert",
+     "forms": [
+      "erleichtert"
+     ],
+     "pos": "",
+     "zh": "松了口气的",
+     "example_de": "Ich bin erleichtert.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "deshalb / deswegen / nämlich",
+     "summary": "deshalb / deswegen / nämlich — 因果连接词家族 这条新闻是因果连接词的展览会： · deshalb / deswegen（因此）= 前句是因，本句是果，占第一位：\"Deshalb haben viele Menschen Angst.\" · nämlich（因为）= 原因藏在句子中间，跟在主语后：\"Es regnet nämlich.\" 直觉：deshalb 往前指（所以），nämlich 往后藏（原因埋伏在句中）",
+     "example_de": "Deshalb haben viele Menschen Angst.",
+     "example_zh": ""
+    },
+    {
+     "title": "deshalb 句的 V2 语序",
+     "summary": "deshalb 句的 V2 语序 deshalb 占第一位时，动词紧跟第二位，主语退到动词后。\"Deshalb haben viele Menschen Angst.\" 任何成分提前，动词永远死守第二位。",
+     "example_de": "Deshalb haben viele Menschen Angst.",
+     "example_zh": ""
+    }
+   ],
+   "background": "比利时与德国、荷兰交界地带2026年8月中旬发生大范围泥炭沼泽火灾。泥炭土壤本身可燃，火会在地下蔓延，浇水只能扑灭表面，极难彻底扑灭。这类火灾在欧洲近年高温干旱背景下越来越常见。"
+  },
+  {
+   "title": "Bundesländer lockern Lkw-Fahrverbot am Sonntag",
+   "paragraphs": [
+    "Es gibt zurzeit zu wenig Regen in Deutschland. Deshalb ist es sehr trocken. Und in vielen Flüssen ist nur wenig Wasser. Schiffe können nicht viel Fracht und Ladung mitnehmen. Für manche Firmen ist das ein Problem. Sie brauchen nämlich die Lieferung von der Fracht. Z.B. für ihre Fabrik.",
+    "Wegen diesem Problem sagt die Regierung in vielen Bundesländern von Deutschland, die Fracht soll mit Lastwagen transportiert werden. Das ist jetzt auch am Sonntag erlaubt. Bisher durften Lastwagen nämlich nicht am Sonntag fahren.",
+    "Dazu kommt jetzt ein Film. In diesem Hafen in dem Bundesland Bayern ist nichts los. Es gibt zu wenig Wasser im Fluss. Schiffe fahren nicht. Die Container können jetzt nur mit Lastwagen transportiert werden. Joachim Herrmann von der CSU ist Minister in der Regierung von Bayern. Er sagt, wir ändern das Gesetz. Lastwagen dürfen jetzt auch am Sonntag fahren.",
+    "Aber an diesem Sonntag sind kaum Lastwagen unterwegs. Viele Lastwagen stehen auf dem Rastplatz. Die Fahrer müssen nämlich Pause machen. Das ist ein Gesetz. Viele Fahrer wissen gar nicht, dass sie jetzt am Sonntag fahren dürfen. Dieser Fahrer sagt, heute ist Sonntag, da darf ich nicht Lastwagen fahren. Alle Fahrer haben am Sonntag frei. Und dieser Fahrer sagt, ich fahre erst am Montagmorgen wieder los.",
+    "Für viele Firmen mit Lastwagen ist die neue Regel nicht so einfach. Dieser Mann vertritt die Lastwagenfirmen. Er sagt, die Firmen haben komplizierte Pläne gemacht für ihre Lastwagen und für ihre Fahrer. Die Pläne können sie nicht so schnell ändern. Lastwagen fahren am Sonntag nicht, obwohl sie dürfen. Diese Autofahrerin sagt, wir haben kaum Lastwagen gesehen.",
+    "Der Minister aus Bayern findet die neue Regel trotzdem gut. Er sagt, wir schränken die Firmen nicht mehr ein. Sie dürfen jetzt auch am Sonntag Fracht transportieren. Ob sie das auch machen, das muss jede Firma selbst entscheiden. Aber die Regel soll nicht für immer bleiben. Wenn Schiffe wieder fahren können, dann müssen die Lastwagen auch am Sonntag wieder Pause machen."
+   ],
+   "translations": [
+    "目前德国降雨太少。因此非常干燥。许多河流水位很低。船只无法运载太多货物。对一些公司来说这是个问题，因为它们需要货物按时送达，比如送到工厂。",
+    "由于这个问题，德国许多联邦州的政府说：货物应该用卡车运输。现在周日也允许了。在此之前，卡车是不允许在周日上路的。",
+    "（接下来是一段影片。）巴伐利亚州的这个港口冷冷清清。河里水太少了。船只无法航行。集装箱现在只能用卡车运输。基社盟的约阿希姆·赫尔曼是巴伐利亚政府的部长。他说，我们修改法律。卡车现在周日也可以上路了。",
+    "但在这个周日，路上几乎看不到卡车。很多卡车停在服务区。因为司机必须休息——这是法律规定。很多司机根本不知道现在周日可以开车了。这位司机说，今天是周日，我不能开卡车。所有司机周日都休息。另一位司机说，我要到周一早上才重新出发。",
+    "对很多卡车公司来说，新规没那么容易执行。这位男士代表卡车公司的利益。他说，公司为卡车和司机制定了复杂的计划。这些计划没法那么快改。所以卡车周日不上路，尽管被允许。这位女司机说，我们几乎没看到卡车。",
+    "巴伐利亚的部长仍然认为新规是好的。他说，我们不再限制公司了。它们现在周日也可以运货了。至于做不做，每家公司自己决定。但这条规则不会永远保留。等船只恢复航行，卡车周日也得重新休息。"
+   ],
+   "vocab": [
+    {
+     "lemma": "das Bundesland, Bundesländer",
+     "key": "bundesland",
+     "forms": [
+      "Bundesland",
+      "Bundesländer"
+     ],
+     "pos": "",
+     "zh": "联邦州",
+     "example_de": "In diesem Hafen in dem Bundesland Bayern ist nichts los.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "lockern",
+     "key": "lockern",
+     "forms": [
+      "lockern"
+     ],
+     "pos": "Verb",
+     "zh": "放宽",
+     "example_de": "Die Bundesländer lockern das Fahrverbot.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "das Fahrverbot, -e",
+     "key": "fahrverbot",
+     "forms": [
+      "Fahrverbot",
+      "Fahrverbote"
+     ],
+     "pos": "",
+     "zh": "禁行令",
+     "example_de": "Bisher gab es ein Fahrverbot am Sonntag.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Fracht",
+     "key": "fracht",
+     "forms": [
+      "Fracht"
+     ],
+     "pos": "",
+     "zh": "货物（运输的）",
+     "example_de": "Schiffe können nicht viel Fracht und Ladung mitnehmen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Lieferung, -en",
+     "key": "lieferung",
+     "forms": [
+      "Lieferung",
+      "Lieferungen"
+     ],
+     "pos": "",
+     "zh": "送货、交付",
+     "example_de": "Sie brauchen nämlich die Lieferung von der Fracht.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Lastwagen (Lkw), -s",
+     "key": "lastwagen",
+     "forms": [
+      "Lastwagen",
+      "Lastwagens",
+      "Lkw"
+     ],
+     "pos": "",
+     "zh": "卡车",
+     "example_de": "Wegen diesem Problem sagt die Regierung in vielen Bundesländern von Deutschland, die Fracht soll mit Lastwagen transportiert werden.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "transportieren",
+     "key": "transportieren",
+     "forms": [
+      "transportieren"
+     ],
+     "pos": "Verb",
+     "zh": "运输",
+     "example_de": "Sie dürfen jetzt auch am Sonntag Fracht transportieren.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Rastplatz, Rastplätze",
+     "key": "rastplatz",
+     "forms": [
+      "Rastplatz",
+      "Rastplätze"
+     ],
+     "pos": "",
+     "zh": "服务区",
+     "example_de": "Viele Lastwagen stehen auf dem Rastplatz.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Regel, -n",
+     "key": "regel",
+     "forms": [
+      "Regel",
+      "Regeln"
+     ],
+     "pos": "",
+     "zh": "规则",
+     "example_de": "Für viele Firmen mit Lastwagen ist die neue Regel nicht so einfach.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "vertreten",
+     "key": "vertreten",
+     "forms": [
+      "vertreten"
+     ],
+     "pos": "Verb",
+     "zh": "代表",
+     "example_de": "Dieser Mann vertritt die Lastwagenfirmen.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "被动语态",
+     "summary": "被动语态 — werden + Partizip II \"Die Fracht soll mit Lastwagen transportiert werden.\"（货物应该被卡车运输） \"Das ist jetzt auch am Sonntag erlaubt.\"（现在周日也被允许了） 直觉：被动 = 主语是\"被打\"的那一方。werden 承担\"被\"的功能，动词变第二分词甩句末。soll ... werden = 情态动词 + 被动，两层框架叠在句末",
+     "example_de": "Die Fracht soll mit Lastwagen transportiert werden.",
+     "example_zh": ""
+    },
+    {
+     "title": "dürfen vs. müssen vs. sollen",
+     "summary": "dürfen vs. müssen vs. sollen — 三个\"规\"的直觉 · dürfen（被允许）：法律开绿灯 \"Lastwagen dürfen jetzt fahren.\" · müssen（必须）：法律上枷锁 \"Die Fahrer müssen Pause machen.\" · sollen（应该/被期望）：政府的态度 \"Die Fracht soll transportiert werden.\" 直觉：dürfen 是权利，müssen 是义务，sollen 是期望——都来自规则世界，不是你自己的意愿",
+     "example_de": "规",
+     "example_zh": ""
+    }
+   ],
+   "background": "德国传统上禁止卡车周日上高速（Sonntagsfahrverbot），目的是让司机休息、缓解交通。2026年夏莱茵河等主要航道因干旱水位过低断航，物流受阻，多州临时放宽周日禁令。由于欧盟对司机的强制休息时间和运输公司的计划周期，放宽初期实际效果有限。"
+  },
+  {
+   "title": "E-Scooter: Unfälle und Diskussion über Helmpflicht",
+   "paragraphs": [
+    "E-Scooter ist englisch für E-Roller. Das E steht für Elektro. Die Roller fahren nämlich mit einem Elektromotor, mit Strom aus einer Batterie. Vor allem junge Menschen fahren E-Scooter. Aber E-Scooter können gefährlich sein. Es gibt sehr viele Unfälle mit E-Scootern. Viele Fahrer von E-Scootern tragen nämlich keinen Helm auf dem Kopf. E-Scooter fahren und einen Helm auf dem Kopf tragen, ist sicherer. Deshalb gibt es jetzt eine Diskussion über die Helmpflicht. Das heißt, sollen alle Fahrer mit dem E-Scooter einen Helm tragen müssen?",
+    "Dazu kommt jetzt ein Film. Viele Menschen finden E-Scooter praktisch. Aber bei manchen Fahrten mit dem E-Scooter gibt es einen Unfall. In diesem Krankenhaus arbeitet der Arzt Michael Zyskowski. Er behandelt viele Unfälle mit E-Scootern. Der Arzt sagt, die Menschen haben Verletzungen am Kopf und am Gehirn. Wenn ein Knochen gebrochen ist, dann kann ich das operieren. Aber wenn das Gehirn verletzt ist, dann geht das nicht. Ein Unfall kann sehr schlimme Folgen haben.",
+    "In einigen Ländern müssen alle Fahrer von E-Scootern einen Helm tragen. In Deutschland nicht. Es gibt Firmen, die verleihen E-Scooter. Diese Firmen wollen keine Helmpflicht. Die Firmen sagen nämlich, eine Helmpflicht ist zu kompliziert. Wir glauben, dann mieten weniger Menschen spontan einen E-Scooter. Das ist schlecht fürs Geschäft. In dem Land Israel gibt es eine Helmpflicht. Dort mietet man einen E-Scooter und einen Helm dazu. Dieser Mann sagt, das Mieten geht einfach über eine App auf dem Smartphone. Aber manchmal fehlt der Helm auch. Dann kann man nicht mit Helm fahren.",
+    "Der Arzt Michael Zyskowski meint, E-Scooter fahren mit Helm ist sicherer. Das müssen die Menschen verstehen. Das Verstehen ist besser als eine Helmpflicht."
+   ],
+   "translations": [
+    "E-Scooter 是英语，就是电动滑板车。E 代表电动。这种滑板车靠电动机驱动，电来自电池。主要是年轻人在骑。但 E-Scooter 可能很危险，事故非常多。因为很多骑的人头上不戴头盔。骑 E-Scooter 时戴上头盔更安全。因此现在有一场关于头盔强制令的讨论：所有骑 E-Scooter 的人都必须戴头盔吗？",
+    "（接下来是一段影片。）很多人觉得 E-Scooter 很实用。但有些骑行中会发生事故。医生米夏埃尔·济斯科夫斯基在这家医院工作，他治疗过很多 E-Scooter 事故。这位医生说，伤者头部和大脑受伤。如果骨头断了，我可以做手术。但如果大脑受了伤，那就没办法了。一次事故可能造成非常严重的后果。",
+    "在一些国家，所有骑 E-Scooter 的人都必须戴头盔。德国没有这样的规定。有些公司出租 E-Scooter，这些公司不想要头盔强制令。它们说，头盔强制令太麻烦了。我们相信，那样会更少有人临时起意租一辆 E-Scooter，这对生意不利。在以色列有头盔强制令，租 E-Scooter 时会一并租到一个头盔。这位男士说，租赁通过智能手机 App 就能完成。但有时候头盔不在，那就只能不戴头盔骑了。",
+    "医生济斯科夫斯基认为，戴头盔骑 E-Scooter 更安全。这一点人们必须明白。明白这一点比一条头盔强制令更好。"
+   ],
+   "vocab": [
+    {
+     "lemma": "der Unfall, Unfälle",
+     "key": "unfall",
+     "forms": [
+      "Unfall",
+      "Unfälle"
+     ],
+     "pos": "",
+     "zh": "事故",
+     "example_de": "Es gibt sehr viele Unfälle mit E-Scootern.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Helm, -e",
+     "key": "helm",
+     "forms": [
+      "Helm",
+      "Helme"
+     ],
+     "pos": "",
+     "zh": "头盔",
+     "example_de": "Viele Fahrer von E-Scootern tragen nämlich keinen Helm auf dem Kopf.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Helmpflicht",
+     "key": "helmpflicht",
+     "forms": [
+      "Helmpflicht"
+     ],
+     "pos": "",
+     "zh": "头盔强制令",
+     "example_de": "Deshalb gibt es jetzt eine Diskussion über die Helmpflicht.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Verletzung, -en",
+     "key": "verletzung",
+     "forms": [
+      "Verletzung",
+      "Verletzungen"
+     ],
+     "pos": "",
+     "zh": "伤",
+     "example_de": "Der Arzt sagt, die Menschen haben Verletzungen am Kopf und am Gehirn.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "das Gehirn",
+     "key": "gehirn",
+     "forms": [
+      "Gehirn"
+     ],
+     "pos": "",
+     "zh": "大脑",
+     "example_de": "Der Arzt sagt, die Menschen haben Verletzungen am Kopf und am Gehirn.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "brechen (brach, gebrochen)",
+     "key": "brechen-brach",
+     "forms": [
+      "brechen",
+      "brach",
+      "gebrochen"
+     ],
+     "pos": "Redewendung",
+     "zh": "折断",
+     "example_de": "Wenn ein Knochen gebrochen ist, dann kann ich das operieren.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "verleihen",
+     "key": "verleihen",
+     "forms": [
+      "verleihen"
+     ],
+     "pos": "Verb",
+     "zh": "出租",
+     "example_de": "Es gibt Firmen, die verleihen E-Scooter.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "mieten",
+     "key": "mieten",
+     "forms": [
+      "mieten"
+     ],
+     "pos": "Verb",
+     "zh": "租",
+     "example_de": "Wir glauben, dann mieten weniger Menschen spontan einen E-Scooter.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "spontan",
+     "key": "spontan",
+     "forms": [
+      "spontan"
+     ],
+     "pos": "",
+     "zh": "临时起意的",
+     "example_de": "Wir glauben, dann mieten weniger Menschen spontan einen E-Scooter.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Folge, -n",
+     "key": "folge",
+     "forms": [
+      "Folge",
+      "Folgen"
+     ],
+     "pos": "",
+     "zh": "后果",
+     "example_de": "Ein Unfall kann sehr schlimme Folgen haben.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "zu + 形容词",
+     "summary": "zu + 形容词 — \"太……了\" \"Eine Helmpflicht ist zu kompliziert.\"（头盔强制令太麻烦了） 直觉：zu 和英语 too 完全同源同义。本期另一处 \"Es gibt zurzeit zu wenig Regen\" 也是它",
+     "example_de": "太……了",
+     "example_zh": ""
+    },
+    {
+     "title": "besser als",
+     "summary": "besser als — 比较级 + als \"Das Verstehen ist besser als eine Helmpflicht.\"（明白比强制令更好） gut → besser（不规则比较级，同英语 good → better），als 连接比较对象",
+     "example_de": "Das Verstehen ist besser als eine Helmpflicht.",
+     "example_zh": ""
+    }
+   ],
+   "background": "德国自2019年放开电动滑板车以来事故持续攀升，头部伤害是主要死因，但一直没有全国性头盔强制令。以色列是少数有强制令的国家，共享滑板车公司随车配头盔。共享出行公司普遍反对强制令，理由正是\"降低临时租赁\"。2026年夏的讨论由事故数据推动，医生群体是主要推动方。"
+  },
+  {
+   "title": "Schauspielerin Hayden Panettiere gestorben",
+   "paragraphs": [
+    "Die Frau auf dem Foto ist die Schauspielerin Hayden Panettiere. Hayden Panettiere war schon als Kind berühmt. Sie hat auch in vielen Serien mitgespielt. Jetzt ist Hayden Panettiere gestorben. Sie wurde nur 36 Jahre alt. Warum sie gestorben ist, das weiß man noch nicht. Viele Fans, andere Schauspieler und Künstler sind traurig über den Tod von Hayden Panettiere."
+   ],
+   "translations": [
+    "照片上的这位女士是演员海登·潘妮蒂埃。她很小的时候就出名了，还在许多电视剧里出演过。现在她去世了，只活到36岁。她为什么去世，目前还不得而知。许多粉丝、其他演员和艺术家都对她的离世感到悲伤。"
+   ],
+   "vocab": [
+    {
+     "lemma": "die Schauspielerin, -nen",
+     "key": "schauspielerin",
+     "forms": [
+      "Schauspielerin",
+      "Schauspielerinnen"
+     ],
+     "pos": "",
+     "zh": "女演员",
+     "example_de": "Die Frau auf dem Foto ist die Schauspielerin Hayden Panettiere.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "berühmt",
+     "key": "berühmt",
+     "forms": [
+      "berühmt"
+     ],
+     "pos": "",
+     "zh": "出名的",
+     "example_de": "Hayden Panettiere war schon als Kind berühmt.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Serie, -n",
+     "key": "serie",
+     "forms": [
+      "Serie",
+      "Serien"
+     ],
+     "pos": "",
+     "zh": "电视剧",
+     "example_de": "Sie hat auch in vielen Serien mitgespielt.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "mitspielen (hat mitgespielt)",
+     "key": "mitspielen",
+     "forms": [
+      "mitspielen",
+      "mitgespielt"
+     ],
+     "pos": "Redewendung",
+     "zh": "参演",
+     "example_de": "Sie hat auch in vielen Serien mitgespielt.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "sterben (ist gestorben)",
+     "key": "sterben",
+     "forms": [
+      "sterben",
+      "gestorben"
+     ],
+     "pos": "Redewendung",
+     "zh": "去世",
+     "example_de": "Jetzt ist Hayden Panettiere gestorben.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Tod",
+     "key": "tod",
+     "forms": [
+      "Tod"
+     ],
+     "pos": "",
+     "zh": "死亡",
+     "example_de": "Viele Fans, andere Schauspieler und Künstler sind traurig über den Tod von Hayden Panettiere.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "traurig über + Akk.",
+     "key": "traurig-über",
+     "forms": [
+      "traurig über + Akk."
+     ],
+     "pos": "Redewendung",
+     "zh": "对……悲伤",
+     "example_de": "Viele Fans, andere Schauspieler und Künstler sind traurig über den Tod von Hayden Panettiere.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "wurde + 数字 + alt",
+     "summary": "wurde + 数字 + alt — \"活到多少岁\" \"Sie wurde nur 36 Jahre alt.\"（她只活到36岁） wurde 是 werden 的过去时。werden 的两个面孔：① \"变\"（alt werden 长大 / dunkler werden 变暗）② 构成被动。本句是①：她\"变成\"了36岁 = 活到36岁",
+     "example_de": "活到多少岁",
+     "example_zh": ""
+    },
+    {
+     "title": "traurig über + 第四格",
+     "summary": "traurig über + 第四格 — 情绪 + 固定介词 \"traurig über den Tod\"（对去世感到悲伤） über = 情绪有明确的靶子（第四格）。同家族：sich freuen über（为已发生的事高兴）/ sich freuen auf（为将来的事期待）",
+     "example_de": "traurig über den Tod",
+     "example_zh": ""
+    }
+   ],
+   "background": "Hayden Panettiere（1989–2026），美国演员，童星出身，代表作《英雄 Heroes》《音乐之乡 Nashville》。她还公开谈过产后抑郁和饮酒问题，是心理健康议题的倡导者。（背景为模型知识，细节以官方报道为准。）"
+  },
+  {
+   "title": "Das Wetter",
+   "paragraphs": [
+    "Und jetzt kommt das Wetter. Rechts im Osten und unten im Südosten gibt es viel Sonne. Wenige Wolken und es ist meist trocken. Sonst gibt es einen Mix aus Sonne und Wolken und einzelne Schauer und Gewitter. Es werden 21 bis 39 Grad."
+   ],
+   "translations": [
+    "现在是天气预报。东部和东南部阳光充足，云很少，大部分地区干燥。其他地区晴雨混合，有零星阵雨和雷雨。气温21到39度。"
+   ],
+   "vocab": [
+    {
+     "lemma": "der Osten",
+     "key": "osten",
+     "forms": [
+      "Osten"
+     ],
+     "pos": "",
+     "zh": "东方",
+     "example_de": "Rechts im Osten und unten im Südosten gibt es viel Sonne.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Südosten",
+     "key": "südosten",
+     "forms": [
+      "Südosten"
+     ],
+     "pos": "",
+     "zh": "东南",
+     "example_de": "Rechts im Osten und unten im Südosten gibt es viel Sonne.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Schauer, -",
+     "key": "schauer",
+     "forms": [
+      "Schauer"
+     ],
+     "pos": "",
+     "zh": "阵雨",
+     "example_de": "Sonst gibt es einen Mix aus Sonne und Wolken und einzelne Schauer und Gewitter.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "das Gewitter, -",
+     "key": "gewitter",
+     "forms": [
+      "Gewitter"
+     ],
+     "pos": "",
+     "zh": "雷雨",
+     "example_de": "Sonst gibt es einen Mix aus Sonne und Wolken und einzelne Schauer und Gewitter.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Grad, -e",
+     "key": "grad",
+     "forms": [
+      "Grad",
+      "Grade"
+     ],
+     "pos": "",
+     "zh": "度",
+     "example_de": "Es werden 21 bis 39 Grad.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Mix",
+     "key": "mix",
+     "forms": [
+      "Mix"
+     ],
+     "pos": "",
+     "zh": "混合",
+     "example_de": "Sonst gibt es einen Mix aus Sonne und Wolken und einzelne Schauer und Gewitter.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "Es werden + 数字",
+     "summary": "Es werden + 数字 — 气温预报专用句 \"Es werden 21 bis 39 Grad.\"（气温将是21到39度） 固定句式：werden（复数，因为 Grad 是复数）+ 数字 + Grad。温度\"变成\"某个数——werden 的\"变\"用法又出现了，天气播报里 werden 是常客",
+     "example_de": "Es werden 21 bis 39 Grad.",
+     "example_zh": ""
+    }
+   ],
+   "background": ""
+  }
+ ]
+}

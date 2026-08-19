@@ -1,0 +1,515 @@
+{
+ "date": "2026-08-06",
+ "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1627096.html",
+ "embed_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1627096~player.html",
+ "news": [
+  {
+   "title": "Flughafen Leipzig: Sprengstoff gefunden",
+   "paragraphs": [
+    "Auf dem Flughafen Leipzig im Osten von Deutschland wurde eine Drohne mit Sprengstoff gefunden. Drohnen sind Flugroboter. Sprengstoff kann explodieren. Er ist deshalb sehr gefährlich.",
+    "Der Sprengstoff auf dem Flughafen ist nicht explodiert. Mitarbeiter haben die Drohne nämlich gesehen und die Polizei gerufen. Die Polizei hat den Sprengstoff entschärft.",
+    "Viele Menschen in Deutschland haben jetzt Fragen: Wie ist die Drohne auf den Flughafen gekommen? Und wie sicher ist Deutschland?",
+    "Polizei und Feuerwehr finden die Drohne in der Nähe von Flugzeugen aus der Ukraine. Die Polizei entschärft mit einem Roboter den Sprengstoff und bringt ihn weg.",
+    "Olaf Hoppe von der Polizei: Auf dem Flughafen konnten mehrere Stunden lang keine Flugzeuge landen oder starten. Einige Flugzeuge sind deshalb zu anderen Flughäfen geflogen.",
+    "Innenminister Alexander Dobrindt: Das ist eine sehr ernste Bedrohung für die Sicherheit. Wir hatten schon früher unbekannte Drohnen an Flughäfen. Aber eine bewaffnete Drohne mit Sprengstoff auf einem Flughafen, das ist neu.",
+    "Auch Frachtflugzeuge starten und landen in Leipzig. Diese Flugzeuge bringen Waffen in die Ukraine. Vielleicht hat Russland die Drohne geschickt. Vielleicht war es aber auch jemand anderes. Wir wissen es nicht. Die Polizei will jetzt herausfinden, wem die Drohne gehört und wer sie gesteuert hat."
+   ],
+   "translations": [
+    "在德国东部的莱比锡机场发现了一架载有炸药的无人机。无人机是飞行机器人，炸药会爆炸，因此非常危险。",
+    "机场上的炸药没有爆炸——员工看到了无人机并报警。警方拆除了炸药。",
+    "许多人都在问：这架无人机怎么来到机场的？德国到底有多安全？",
+    "警察和消防员在乌克兰来的飞机附近找到了这架无人机。警方用机器人拆除炸药并运走。",
+    "警方表示机场连续数小时无法起降，部分飞机改飞其他机场。",
+    "内政部长 Dobrindt 称这是对安全的严重威胁——德国之前出现过不明无人机，但携带炸药的武装无人机出现在机场，这是首次。",
+    "莱比锡机场也起降向乌克兰运送武器的货机。也许是俄罗斯派来了这架无人机，也许是其他人。警方现在要查清这架无人机属于谁、谁在操控。"
+   ],
+   "vocab": [
+    {
+     "lemma": "die Drohne",
+     "key": "drohne",
+     "forms": [
+      "Drohne"
+     ],
+     "pos": "",
+     "zh": "无人机",
+     "example_de": "Auf dem Flughafen Leipzig im Osten von Deutschland wurde eine Drohne mit Sprengstoff gefunden.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Sprengstoff",
+     "key": "sprengstoff",
+     "forms": [
+      "Sprengstoff"
+     ],
+     "pos": "",
+     "zh": "炸药",
+     "example_de": "Auf dem Flughafen Leipzig im Osten von Deutschland wurde eine Drohne mit Sprengstoff gefunden.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "explodieren",
+     "key": "explodieren",
+     "forms": [
+      "explodieren"
+     ],
+     "pos": "Verb",
+     "zh": "爆炸",
+     "example_de": "Sprengstoff kann explodieren.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "entschärfen",
+     "key": "entschärfen",
+     "forms": [
+      "entschärfen"
+     ],
+     "pos": "Verb",
+     "zh": "拆除（炸弹）",
+     "example_de": "Die Polizei hat den Sprengstoff entschärft",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Bedrohung",
+     "key": "bedrohung",
+     "forms": [
+      "Bedrohung"
+     ],
+     "pos": "",
+     "zh": "威胁",
+     "example_de": "Innenminister Alexander Dobrindt: Das ist eine sehr ernste Bedrohung für die Sicherheit.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "bewaffnet",
+     "key": "bewaffnet",
+     "forms": [
+      "bewaffnet"
+     ],
+     "pos": "",
+     "zh": "武装的",
+     "example_de": "eine bewaffnete Drohne",
+     "example_zh": ""
+    },
+    {
+     "lemma": "steuern",
+     "key": "steuern",
+     "forms": [
+      "steuern"
+     ],
+     "pos": "Verb",
+     "zh": "操控、驾驶",
+     "example_de": "Wer hat die Drohne gesteuert?",
+     "example_zh": ""
+    },
+    {
+     "lemma": "das Frachtflugzeug",
+     "key": "frachtflugzeug",
+     "forms": [
+      "Frachtflugzeug"
+     ],
+     "pos": "",
+     "zh": "货机",
+     "example_de": "Frachtflugzeuge transportieren Waffen",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "werden + 过去分词 = 被动语态",
+     "summary": "werden + 过去分词 = 被动语态 Eine Drohne wurde ... gefunden = 一架无人机被发现 结构：werden（变位）+ 过去分词。wurde 是 werden 的过去时。被动语态在新闻中极为常用——强调\"发生了什么\"而非\"谁做的\"。",
+     "example_de": "发生了什么",
+     "example_zh": ""
+    }
+   ],
+   "background": "莱比锡-哈雷机场是德国第二大货运机场、DHL 欧洲枢纽。因承担向乌克兰运送军事物资的任务，炸药无人机引发俄方破坏的猜测，但调查仍在进行。内政部长称这是首次在德国机场发现携带炸药的武装无人机。"
+  },
+  {
+   "title": "Urteil: Lebenslange Haft wegen Anschlag",
+   "paragraphs": [
+    "Der Mann auf dem Foto hat vor einem Jahr einen Anschlag gemacht. Er ist mit einem Auto in eine Demonstration in der Stadt München gefahren. Eine Frau und ihre Tochter sind dabei gestorben. Viele Menschen wurden verletzt.",
+    "Ein Gericht in München hat den Mann jetzt zu lebenslanger Haft verurteilt. Das heißt, er muss für mindestens 15 Jahre ins Gefängnis."
+   ],
+   "translations": [
+    "照片上的这个男人一年前制造了一起袭击事件。他开车冲进了慕尼黑的一场示威游行。一名女子和她的女儿因此丧生，许多人受伤。",
+    "慕尼黑一家法院现在判处该男子终身监禁——这意味着他至少要服刑 15 年。"
+   ],
+   "vocab": [
+    {
+     "lemma": "der Anschlag",
+     "key": "anschlag",
+     "forms": [
+      "Anschlag"
+     ],
+     "pos": "",
+     "zh": "袭击事件",
+     "example_de": "Der Mann auf dem Foto hat vor einem Jahr einen Anschlag gemacht.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Demonstration",
+     "key": "demonstration",
+     "forms": [
+      "Demonstration"
+     ],
+     "pos": "",
+     "zh": "示威游行",
+     "example_de": "Er ist mit einem Auto in eine Demonstration in der Stadt München gefahren.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "sterben (starb, gestorben)",
+     "key": "sterben-starb",
+     "forms": [
+      "sterben",
+      "starb",
+      "gestorben"
+     ],
+     "pos": "Redewendung",
+     "zh": "死亡",
+     "example_de": "Eine Frau und ihre Tochter sind dabei gestorben.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "sich verletzen",
+     "key": "verletzen",
+     "forms": [
+      "verletzen"
+     ],
+     "pos": "Substantiv",
+     "zh": "受伤",
+     "example_de": "Viele Menschen wurden verletzt",
+     "example_zh": ""
+    },
+    {
+     "lemma": "das Gericht",
+     "key": "gericht",
+     "forms": [
+      "Gericht"
+     ],
+     "pos": "",
+     "zh": "法院",
+     "example_de": "Ein Gericht in München hat den Mann jetzt zu lebenslanger Haft verurteilt.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die lebenslange Haft",
+     "key": "lebenslange-haft",
+     "forms": [
+      "lebenslange Haft",
+      "die lebenslange Haft"
+     ],
+     "pos": "",
+     "zh": "终身监禁",
+     "example_de": "zu lebenslanger Haft verurteilt",
+     "example_zh": ""
+    },
+    {
+     "lemma": "verurteilen",
+     "key": "verurteilen",
+     "forms": [
+      "verurteilen"
+     ],
+     "pos": "Verb",
+     "zh": "判决",
+     "example_de": "hat den Mann verurteilt",
+     "example_zh": ""
+    },
+    {
+     "lemma": "das Gefängnis",
+     "key": "gefängnis",
+     "forms": [
+      "Gefängnis"
+     ],
+     "pos": "",
+     "zh": "监狱",
+     "example_de": "Das heißt, er muss für mindestens 15 Jahre ins Gefängnis.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "zu + 第三格名词 = \"被判处…\"",
+     "summary": "zu + 第三格名词 = \"被判处…\" zu lebenslanger Haft verurteilt = 被判处终身监禁 法律新闻高频结构：zu + Dativ + verurteilen。 • zu Geldstrafe verurteilt（被判罚款） • zu drei Jahren verurteilt（被判三年）",
+     "example_de": "被判处…",
+     "example_zh": ""
+    }
+   ],
+   "background": "2025年2月，一名阿富汗寻求庇护者驾车冲入慕尼黑工会示威活动，造成两人死亡、数十人受伤。此案曾引发德国移民政策激烈讨论，法院最终判处终身监禁。"
+  },
+  {
+   "title": "Bäume: Hilfe gegen Hitze",
+   "paragraphs": [
+    "In vielen Städten wird es im Sommer sehr heiß. Die Menschen suchen dann Schatten. Hitze ist nämlich anstrengend und für manche Menschen ist sie gefährlich — zum Beispiel für alte oder kranke Menschen.",
+    "Die Behörden überlegen: Was kann man tun gegen Hitze? Wie wird die Stadt im Sommer kühler?",
+    "Die Stadt Bochum hat eine Lösung gefunden: Bäume pflanzen. In der Allee-Straße wird ein Loch gegraben, viel Erde kommt hinein. Wenn es regnet, fließt Wasser von der Straße ins Loch. Die Erde speichert das Wasser, die Bäume bekommen dadurch auch dann Wasser, wenn es nicht regnet.",
+    "Große Bäume verdunsten Wasser über die Blätter. Die Luft wird so kühler. Eine schon umgebaute Straße: Unter den Gräsern ist ein tiefes Loch mit Erde. Regenwasser fließt durch die Lücken im Bordstein hinein. Das ist gut für die Umwelt und für die Menschen.",
+    "Bochum will noch mehr Parks und Straßen umbauen und mehr Bäume pflanzen."
+   ],
+   "translations": [
+    "许多城市夏天很热。人们寻找阴凉处。炎热令人疲惫，对老人和病人来说特别危险。",
+    "城市当局在考虑：怎样对抗酷热？怎样让城市更凉爽？",
+    "波鸿市找到了一个方案：种树。在马路中间挖坑、填土。下雨时水从路面流进坑里，泥土储存水分，即使不下雨树木也能得到水。",
+    "大树通过叶片蒸发水分，让空气变凉。在已改造的街道上，草地下方有蓄水土坑，雨水通过路缘石缝隙流入。这对环境和人都有好处。",
+    "波鸿还想改造更多公园和街道，种更多树。"
+   ],
+   "vocab": [
+    {
+     "lemma": "die Hitze",
+     "key": "hitze",
+     "forms": [
+      "Hitze"
+     ],
+     "pos": "",
+     "zh": "酷热",
+     "example_de": "Hitze ist nämlich anstrengend und für manche Menschen ist sie gefährlich — zum Beispiel für alte oder kranke Menschen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Schatten",
+     "key": "schatten",
+     "forms": [
+      "Schatten"
+     ],
+     "pos": "",
+     "zh": "阴凉处",
+     "example_de": "Die Menschen suchen dann Schatten.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "anstrengend",
+     "key": "anstrengend",
+     "forms": [
+      "anstrengend"
+     ],
+     "pos": "",
+     "zh": "令人疲惫的",
+     "example_de": "Hitze ist nämlich anstrengend und für manche Menschen ist sie gefährlich — zum Beispiel für alte oder kranke Menschen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "pflanzen",
+     "key": "pflanzen",
+     "forms": [
+      "pflanzen"
+     ],
+     "pos": "Verb",
+     "zh": "种植",
+     "example_de": "Die Stadt Bochum hat eine Lösung gefunden: Bäume pflanzen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Erde",
+     "key": "erde",
+     "forms": [
+      "Erde"
+     ],
+     "pos": "",
+     "zh": "泥土",
+     "example_de": "In der Allee-Straße wird ein Loch gegraben, viel Erde kommt hinein.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "speichern",
+     "key": "speichern",
+     "forms": [
+      "speichern"
+     ],
+     "pos": "Verb",
+     "zh": "储存",
+     "example_de": "Die Erde speichert Wasser",
+     "example_zh": ""
+    },
+    {
+     "lemma": "verdunsten",
+     "key": "verdunsten",
+     "forms": [
+      "verdunsten"
+     ],
+     "pos": "Verb",
+     "zh": "蒸发",
+     "example_de": "Große Bäume verdunsten Wasser über die Blätter.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "umbauen",
+     "key": "umbauen",
+     "forms": [
+      "umbauen"
+     ],
+     "pos": "Verb",
+     "zh": "改造",
+     "example_de": "Bochum will noch mehr Parks und Straßen umbauen und mehr Bäume pflanzen.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "方向介词：durch / über / in + Akkusativ",
+     "summary": "方向介词：durch / über / in + Akkusativ • Wasser fließt durch die Lücken → 水穿过缝隙（durch = 穿透过程） • Sie verdunsten Wasser über die Blätter → 通过叶片蒸发（über = 覆盖表面） • Wasser fließt in das Loch → 水流进坑里（in + Akk = 向内运动）",
+     "example_de": "",
+     "example_zh": ""
+    }
+   ],
+   "background": "波鸿的做法属于\"海绵城市\"（Schwammstadt）理念——道路下方挖蓄水坑收集雨水，干旱时供给树木。树木蒸腾作用可降温 2-5°C，这种城市改造方式正被越来越多德国城市采用。"
+  },
+  {
+   "title": "Gedenken: Atombombe in Hiroshima",
+   "paragraphs": [
+    "Hiroshima ist eine Stadt in Japan. In Hiroshima ist im Zweiten Weltkrieg eine Atombombe explodiert. Die Atombombe war von den USA. Sehr viele Menschen sind gestorben und wurden schwer verletzt.",
+    "Schulkinder in Hiroshima läuten die Friedensglocke. Tausende Menschen aus vielen Ländern sind zur Gedenkveranstaltung gekommen. Sie schweigen gemeinsam für eine Minute und bringen Blumen zum Mahnmal für die Opfer.",
+    "Der Bürgermeister von Hiroshima sagt: Auch heute drohen einige Länder mit Atomwaffen. Das ist gefährlich. Atomwaffen machen die Welt unsicher. Nie wieder darf ein Land Atomwaffen einsetzen."
+   ],
+   "translations": [
+    "广岛是日本的一座城市。二战期间一颗原子弹在这里爆炸——是美国投下的。无数人丧生，无数人受重伤。",
+    "广岛的学童敲响和平钟。来自许多国家的数千人参加纪念仪式，集体默哀一分钟，向遇难者纪念碑献花。",
+    "广岛市长说：即使在今天，一些国家也以核武器相威胁。这很危险。核武器让世界不安全。任何国家都不许再次使用核武器。"
+   ],
+   "vocab": [
+    {
+     "lemma": "die Atombombe",
+     "key": "atombombe",
+     "forms": [
+      "Atombombe"
+     ],
+     "pos": "",
+     "zh": "原子弹",
+     "example_de": "In Hiroshima ist im Zweiten Weltkrieg eine Atombombe explodiert.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Friedensglocke",
+     "key": "friedensglocke",
+     "forms": [
+      "Friedensglocke"
+     ],
+     "pos": "",
+     "zh": "和平钟",
+     "example_de": "Schulkinder in Hiroshima läuten die Friedensglocke.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Gedenkveranstaltung",
+     "key": "gedenkveranstaltung",
+     "forms": [
+      "Gedenkveranstaltung"
+     ],
+     "pos": "",
+     "zh": "纪念仪式",
+     "example_de": "Tausende Menschen aus vielen Ländern sind zur Gedenkveranstaltung gekommen.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "schweigen (schwieg)",
+     "key": "schweigen",
+     "forms": [
+      "schweigen",
+      "schwieg"
+     ],
+     "pos": "",
+     "zh": "沉默",
+     "example_de": "Sie schweigen gemeinsam für eine Minute und bringen Blumen zum Mahnmal für die Opfer.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "das Mahnmal",
+     "key": "mahnmal",
+     "forms": [
+      "Mahnmal"
+     ],
+     "pos": "",
+     "zh": "纪念碑",
+     "example_de": "Sie schweigen gemeinsam für eine Minute und bringen Blumen zum Mahnmal für die Opfer.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "das Opfer",
+     "key": "opfer",
+     "forms": [
+      "Opfer"
+     ],
+     "pos": "",
+     "zh": "遇难者",
+     "example_de": "Sie schweigen gemeinsam für eine Minute und bringen Blumen zum Mahnmal für die Opfer.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "die Atomwaffe",
+     "key": "atomwaffe",
+     "forms": [
+      "Atomwaffe"
+     ],
+     "pos": "",
+     "zh": "核武器",
+     "example_de": "Einige Länder drohen mit Atomwaffen",
+     "example_zh": ""
+    },
+    {
+     "lemma": "einsetzen",
+     "key": "einsetzen",
+     "forms": [
+      "einsetzen"
+     ],
+     "pos": "Verb",
+     "zh": "使用（武器）",
+     "example_de": "Nie wieder darf ein Land Atomwaffen einsetzen.",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [
+    {
+     "title": "dürfen 否定 = 禁止性表达",
+     "summary": "dürfen 否定 = 禁止性表达 Nie wieder darf ein Land Atomwaffen einsetzen. = 任何国家不许再次使用核武器。 dürfen 表\"被允许\"，否定后即\"不许/不得\"，在新闻和官方声明中比 nicht sollen 更正式、更有分量。",
+     "example_de": "被允许",
+     "example_zh": ""
+    }
+   ],
+   "background": "1945年8月6日，美军在广岛投下人类历史上第一颗实战原子弹\"小男孩\"，当场约8万人死亡，后续因辐射死亡超14万人。每年8月6日广岛和平纪念公园举行仪式，2026年是81周年。"
+  },
+  {
+   "title": "Das Wetter",
+   "paragraphs": [
+    "Im Norden ist es oft stark bewölkt. Auch ganz unten im Süden ist es wolkig. Manchmal mit Regenschauern oder Gewittern. 19 bis 31 Grad."
+   ],
+   "translations": [
+    "北部经常云层厚重。最南端也是多云。有时伴有阵雨或雷暴。气温 19 到 31 度。"
+   ],
+   "vocab": [
+    {
+     "lemma": "bewölkt",
+     "key": "bewölkt",
+     "forms": [
+      "bewölkt"
+     ],
+     "pos": "",
+     "zh": "多云的",
+     "example_de": "Im Norden ist es oft stark bewölkt.",
+     "example_zh": ""
+    },
+    {
+     "lemma": "der Regenschauer",
+     "key": "regenschauer",
+     "forms": [
+      "Regenschauer"
+     ],
+     "pos": "",
+     "zh": "阵雨",
+     "example_de": "mit Regenschauern",
+     "example_zh": ""
+    },
+    {
+     "lemma": "das Gewitter",
+     "key": "gewitter",
+     "forms": [
+      "Gewitter"
+     ],
+     "pos": "",
+     "zh": "雷暴",
+     "example_de": "oder Gewittern",
+     "example_zh": ""
+    }
+   ],
+   "grammar_points": [],
+   "background": ""
+  }
+ ]
+}

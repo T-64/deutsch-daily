@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:00.070" end="00:00:01.710">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:02.270" end="00:00:04.710">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:04.830" end="00:00:08.190">
+        <tt:span style="textWhite">Willkommen zur</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:08.510" end="00:00:12.710">
+        <tt:span style="textWhite">Ich bin Michail Paweletz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:30.470" end="00:00:32.910">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:38.270" end="00:00:42.910">
+        <tt:span style="textWhite">Auf dem Flughafen Leipzig</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Osten von Deutschland</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:42.910" end="00:00:46.150">
+        <tt:span style="textWhite">wurde eine Drohne</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit Sprengstoff gefunden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:46.470" end="00:00:50.470">
+        <tt:span style="textWhite">Drohnen sind Flugroboter,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wie auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:51.270" end="00:00:53.750">
+        <tt:span style="textWhite">Sprengstoff kann explodieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:54.110" end="00:00:56.510">
+        <tt:span style="textWhite">Er ist deshalb sehr gefährlich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:00:57.270" end="00:01:01.990">
+        <tt:span style="textWhite">Der Sprengstoff auf dem Flughafen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist nicht explodiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:01:02.030" end="00:01:05.910">
+        <tt:span style="textWhite">Mitarbeiter haben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Drohne nämlich gesehen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:05.950" end="00:01:08.150">
+        <tt:span style="textWhite">und die Polizei gerufen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:08.710" end="00:01:12.110">
+        <tt:span style="textWhite">Die Polizei</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat den Sprengstoff entschärft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:12.350" end="00:01:15.910">
+        <tt:span style="textWhite">Viele Menschen in Deutschland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben jetzt Fragen:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:15.990" end="00:01:19.590">
+        <tt:span style="textWhite">Wie ist die Drohne</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf den Flughafen gekommen?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:19.870" end="00:01:22.630">
+        <tt:span style="textWhite">Und wie sicher ist Deutschland?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:25.030" end="00:01:27.630">
+        <tt:span style="textWhite">Das ist der Flughafen Leipzig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:28.030" end="00:01:31.630">
+        <tt:span style="textWhite">Polizei und Feuerwehr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">suchen nach der Drohne.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:32.030" end="00:01:36.150">
+        <tt:span style="textWhite">Sie finden die Drohne</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Nähe von diesen Flugzeugen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:36.430" end="00:01:39.270">
+        <tt:span style="textWhite">Die Flugzeuge sind aus der Ukraine.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:39.430" end="00:01:42.590">
+        <tt:span style="textWhite">Die Polizei</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">entschärft mit diesem Roboter</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:42.630" end="00:01:45.510">
+        <tt:span style="textWhite">den Sprengstoff und bringt ihn weg.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:45.750" end="00:01:49.270">
+        <tt:span style="textWhite">Olaf Hoppe</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist von der Polizei in Leipzig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:49.550" end="00:01:50.790">
+        <tt:span style="textWhite">Er sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:50.830" end="00:01:53.910">
+        <tt:span style="textWhite">Auf dem Flughafen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">konnten mehrere Stunden lang</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:53.950" end="00:01:57.030">
+        <tt:span style="textWhite">keine Flugzeuge landen oder starten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:01:57.430" end="00:02:02.150">
+        <tt:span style="textWhite">Einige Flugzeuge sind deshalb</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zu anderen Flughäfen geflogen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:02:02.750" end="00:02:05.150">
+        <tt:span style="textWhite">Das ist Alexander Dobrindt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:02:05.670" end="00:02:08.470">
+        <tt:span style="textWhite">Er ist der Innenminister</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von Deutschland</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:02:08.510" end="00:02:12.590">
+        <tt:span style="textWhite">und wegen der Drohne</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zum Flughafen in Leipzig gekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:13.150" end="00:02:14.710">
+        <tt:span style="textWhite">Dobrindt sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:14.750" end="00:02:18.950">
+        <tt:span style="textWhite">Das ist eine sehr ernste Bedrohung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für die Sicherheit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:18.990" end="00:02:20.790">
+        <tt:span style="textWhite">Wir hatten in Deutschland</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:20.830" end="00:02:24.270">
+        <tt:span style="textWhite">schon früher</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">unbekannte Drohnen an Flughäfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:24.310" end="00:02:29.430">
+        <tt:span style="textWhite">Aber eine bewaffnete Drohne</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit Sprengstoff auf einem Flughafen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:29.710" end="00:02:31.670">
+        <tt:span style="textWhite">das ist neu.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:33.270" end="00:02:37.630">
+        <tt:span style="textWhite">Auch Frachtflugzeuge</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">starten und landen in Leipzig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:38.470" end="00:02:41.590">
+        <tt:span style="textWhite">Frachtflugzeuge</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">transportieren schwere Sachen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:41.630" end="00:02:46.150">
+        <tt:span style="textWhite">Diese Flugzeuge</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bringen Waffen in die Ukraine.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:46.670" end="00:02:51.070">
+        <tt:span style="textWhite">Dieser Mann sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vielleicht hat Russland die Drohne</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:51.110" end="00:02:54.190">
+        <tt:span style="textWhite">mit dem Sprengstoff</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zum Flughafen geschickt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:54.550" end="00:02:57.630">
+        <tt:span style="textWhite">Vielleicht war es aber auch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">jemand anderes.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:02:57.670" end="00:02:59.150">
+        <tt:span style="textWhite">Wir wissen es nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:03:00.630" end="00:03:03.830">
+        <tt:span style="textWhite">Die Polizei will jetzt herausfinden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:03:04.310" end="00:03:09.030">
+        <tt:span style="textWhite">wem hat die Drohne gehört</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und wer hat sie gesteuert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:03:10.150" end="00:03:12.790">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:03:17.350" end="00:03:19.070">
+        <tt:span style="textWhite">Der Mann auf dem Foto</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:03:19.110" end="00:03:22.430">
+        <tt:span style="textWhite">hat vor einem Jahr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einen Anschlag gemacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:03:22.470" end="00:03:24.110">
+        <tt:span style="textWhite">Er ist mit einem Auto</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:24.150" end="00:03:27.790">
+        <tt:span style="textWhite">in eine Demonstration</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Stadt München gefahren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:28.070" end="00:03:31.550">
+        <tt:span style="textWhite">Eine Frau und ihre Tochter</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind dabei gestorben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:31.910" end="00:03:33.910">
+        <tt:span style="textWhite">Viele Menschen wurden verletzt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:33.950" end="00:03:35.830">
+        <tt:span style="textWhite">Ein Gericht in München</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:35.870" end="00:03:40.350">
+        <tt:span style="textWhite">hat den Mann jetzt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zu lebenslanger Haft verurteilt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:40.390" end="00:03:45.390">
+        <tt:span style="textWhite">Das heißt, er muss für</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mindestens 15 Jahre ins Gefängnis.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:46.630" end="00:03:49.350">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:52.470" end="00:03:56.670">
+        <tt:span style="textWhite">In vielen Städten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wird es im Sommer sehr heiß.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:03:56.990" end="00:04:00.950">
+        <tt:span style="textWhite">Die Menschen suchen dann Schatten,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wie auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:04:01.950" end="00:04:04.510">
+        <tt:span style="textWhite">Hitze ist nämlich anstrengend</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:04:04.550" end="00:04:08.190">
+        <tt:span style="textWhite">und für manche Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist sie gefährlich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:04:08.510" end="00:04:14.470">
+        <tt:span style="textWhite">Hitze ist zum Beispiel für alte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder kranke Menschen gefährlich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:04:14.510" end="00:04:18.750">
+        <tt:span style="textWhite">Die Behörden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in den Städten überlegen deshalb,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:04:19.110" end="00:04:21.950">
+        <tt:span style="textWhite">was kann man tun gegen Hitze?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:04:21.990" end="00:04:25.470">
+        <tt:span style="textWhite">Wie wird die Stadt im Sommer kühler?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:04:26.670" end="00:04:30.110">
+        <tt:span style="textWhite">Die Stadt Bochum</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Westen von Deutschland</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:04:30.150" end="00:04:32.190">
+        <tt:span style="textWhite">hat eine Lösung gefunden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:04:32.670" end="00:04:36.350">
+        <tt:span style="textWhite">Bochum pflanzt Bäume</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">als Hilfe gegen Hitze.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:38.030" end="00:04:40.870">
+        <tt:span style="textWhite">Das ist die Allee-Straße in Bochum.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:40.910" end="00:04:43.190">
+        <tt:span style="textWhite">Eigentlich fahren hier Autos.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:43.990" end="00:04:46.630">
+        <tt:span style="textWhite">Jetzt ist die Straße eine Baustelle.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:46.670" end="00:04:48.910">
+        <tt:span style="textWhite">Bald sollen hier Bäume wachsen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:49.510" end="00:04:52.870">
+        <tt:span style="textWhite">Diese Frau und dieser Mann</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">leiten die Baustelle.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:53.750" end="00:04:56.430">
+        <tt:span style="textWhite">Das ist der Plan für die Bäume.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:04:56.470" end="00:05:00.430">
+        <tt:span style="textWhite">In die Mitte der Straße</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wird ein Loch gegraben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:05:00.710" end="00:05:04.190">
+        <tt:span style="textWhite">In das Loch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">kommt viel Erde für die Bäume.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:05:04.230" end="00:05:09.070">
+        <tt:span style="textWhite">Wenn es regnet, dann fließt Wasser</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Straße ins Loch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:05:09.310" end="00:05:13.710">
+        <tt:span style="textWhite">Der Mann sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Erde kann viel Wasser speichern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:05:13.950" end="00:05:17.870">
+        <tt:span style="textWhite">Die Bäume bekommen dadurch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">später auch dann Wasser,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:05:18.070" end="00:05:19.870">
+        <tt:span style="textWhite">wenn es nicht regnet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:05:19.910" end="00:05:22.990">
+        <tt:span style="textWhite">Sie wachsen besser und werden größer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:05:23.750" end="00:05:26.590">
+        <tt:span style="textWhite">Große Bäume sind gut für die Stadt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:05:26.910" end="00:05:30.510">
+        <tt:span style="textWhite">Sie verdunsten nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Wasser über die Blätter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:05:30.830" end="00:05:33.150">
+        <tt:span style="textWhite">Die Luft wird so kühler.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:33.190" end="00:05:36.230">
+        <tt:span style="textWhite">Diese Straße ist schon umgebaut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:36.590" end="00:05:40.430">
+        <tt:span style="textWhite">Unter den Gräsern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist auch ein tiefes Loch mit Erde.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:40.870" end="00:05:42.110">
+        <tt:span style="textWhite">Wenn es regnet,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:42.630" end="00:05:46.430">
+        <tt:span style="textWhite">fließt Wasser durch die Lücken</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Bordstein in das Loch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:46.470" end="00:05:50.710">
+        <tt:span style="textWhite">Die Frau sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das ist gut für die Umwelt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:50.950" end="00:05:53.910">
+        <tt:span style="textWhite">weil das Regenwasser gesammelt wird.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:53.950" end="00:05:56.510">
+        <tt:span style="textWhite">Und es ist gut für die Menschen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:05:56.950" end="00:06:02.230">
+        <tt:span style="textWhite">Die Gräser machen die Luft</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nämlich auch ein bisschen kälter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:06:02.270" end="00:06:07.670">
+        <tt:span style="textWhite">Die Stadt Bochum hat auch in den Park</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">neue Bäume gepflanzt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:06:07.710" end="00:06:10.270">
+        <tt:span style="textWhite">Früher war es hier oft heiß.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:06:10.950" end="00:06:14.270">
+        <tt:span style="textWhite">Dieser Mann kommt gern in den Park.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:06:14.310" end="00:06:17.750">
+        <tt:span style="textWhite">Er sagt, im Park wird es nie zu heiß.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:06:17.950" end="00:06:21.550">
+        <tt:span style="textWhite">Es ist viel kühler</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">als in den Straßen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:06:21.830" end="00:06:23.670">
+        <tt:span style="textWhite">Das ist sehr angenehm.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:06:24.830" end="00:06:28.230">
+        <tt:span style="textWhite">Bochum will noch mehr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Parks und Straßen umbauen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:06:28.470" end="00:06:30.510">
+        <tt:span style="textWhite">Und mehr Bäume pflanzen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:06:32.710" end="00:06:35.350">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:06:39.470" end="00:06:42.230">
+        <tt:span style="textWhite">Hiroshima ist eine Stadt in Japan.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:06:42.550" end="00:06:45.350">
+        <tt:span style="textWhite">Japan ist ein Land in Asien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:45.990" end="00:06:51.710">
+        <tt:span style="textWhite">In Hiroshima ist im Zweiten Weltkrieg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine Atombombe explodiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:52.910" end="00:06:56.110">
+        <tt:span style="textWhite">Die Atombombe war von den USA.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:56.990" end="00:06:59.590">
+        <tt:span style="textWhite">Sehr viele Menschen sind gestorben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:07:00.150" end="00:07:03.590">
+        <tt:span style="textWhite">Und sehr viele Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wurden schwer verletzt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:07:07.870" end="00:07:12.070">
+        <tt:span style="textWhite">Schulkinder in Hiroshima</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">läuten die Friedensglocke.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:07:12.790" end="00:07:15.470">
+        <tt:span style="textWhite">Tausende Menschen aus vielen Ländern</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:07:15.510" end="00:07:18.470">
+        <tt:span style="textWhite">sind zu der</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Gedenkveranstaltung gekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:07:18.510" end="00:07:21.950">
+        <tt:span style="textWhite">Sie schweigen gemeinsam</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für eine Minute.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:07:22.710" end="00:07:24.870">
+        <tt:span style="textWhite">Und die Menschen bringen Blumen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:07:24.910" end="00:07:27.910">
+        <tt:span style="textWhite">zum Mahnmal</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für die Opfer von der Atombombe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:07:29.470" end="00:07:33.110">
+        <tt:span style="textWhite">Das ist der Bürgermeister</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von Hiroshima.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub114" style="textCenter" region="bottom" begin="00:07:33.110" end="00:07:34.150">
+        <tt:span style="textWhite">Er sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub115" style="textCenter" region="bottom" begin="00:07:34.270" end="00:07:38.390">
+        <tt:span style="textWhite">auch heute drohen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einige Länder mit Atomwaffen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub116" style="textCenter" region="bottom" begin="00:07:38.430" end="00:07:40.190">
+        <tt:span style="textWhite">Das ist gefährlich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub117" style="textCenter" region="bottom" begin="00:07:40.750" end="00:07:44.030">
+        <tt:span style="textWhite">Atomwaffen machen die Welt unsicher.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub118" style="textCenter" region="bottom" begin="00:07:44.070" end="00:07:48.150">
+        <tt:span style="textWhite">Nie wieder darf ein Land</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Atomwaffen einsetzen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub119" style="textCenter" region="bottom" begin="00:07:49.910" end="00:07:52.790">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub120" style="textCenter" region="bottom" begin="00:08:10.590" end="00:08:12.830">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub121" style="textCenter" region="bottom" begin="00:08:14.390" end="00:08:17.110">
+        <tt:span style="textWhite">Im Norden ist es oft stark bewölkt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub122" style="textCenter" region="bottom" begin="00:08:17.390" end="00:08:20.390">
+        <tt:span style="textWhite">Auch ganz unten im Süden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist es wolkig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub123" style="textCenter" region="bottom" begin="00:08:20.710" end="00:08:25.710">
+        <tt:span style="textWhite">Manchmal mit Regenschauern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder Gewittern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub124" style="textCenter" region="bottom" begin="00:08:25.750" end="00:08:27.670">
+        <tt:span style="textWhite">19 bis 31 Grad.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub125" style="textCenter" region="bottom" begin="00:08:28.670" end="00:08:32.270">
+        <tt:span style="textWhite">Das war die</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub126" style="textCenter" region="bottom" begin="00:08:32.870" end="00:08:35.030">
+        <tt:span style="textWhite">Tschüss, bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub127" style="textCenter" region="bottom" begin="00:08:39.470" end="00:08:42.070">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>
