@@ -187,11 +187,19 @@
   .h-zh { margin-top: 6px; padding-top: 0; }
   .para { margin-bottom: 22px; }
   .para:last-child { margin-bottom: 8px; }
-  .lines { min-width: 0; }
+  .lines { position: relative; min-width: 0; }
+  .de-src {
+    position: absolute; left: 0; right: 0; visibility: hidden; pointer-events: none;
+  }
+  body.hide-zh .de-src { position: static; visibility: visible; pointer-events: auto; }
+  body.hide-zh .ilines { display: none; }
+  .iline { margin: 0 0 0.28em; }
+  .iline:last-child { margin-bottom: 0; }
   .de {
-    font: var(--reader-size, 18.5px)/1.82 ui-serif, Georgia, "Noto Serif", serif;
+    font: var(--reader-size, 18.5px)/1.45 ui-serif, Georgia, "Noto Serif", serif;
     letter-spacing: .003em;
   }
+  body.hide-zh .de-src { line-height: 1.82; }
   .de w {
     cursor: pointer; border-radius: 4px; transition: background .12s, color .12s;
     text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
@@ -215,10 +223,11 @@
     border-radius: 10px;
   }
   .zh {
-    margin-top: 10px;
+    margin-top: 2px;
     color: var(--ink);
-    font: 400 16px/1.7 Inter, ui-sans-serif, "Noto Sans SC", sans-serif;
+    font: 400 15.5px/1.4 Inter, ui-sans-serif, "Noto Sans SC", sans-serif;
   }
+  .n-head .h-zh { margin-top: 6px; }
   body.hide-zh .zh { display: none; }
   .n-head .h-zh {
     margin-top: 6px;
@@ -507,6 +516,7 @@ function applyPrefs() {
   document.documentElement.dataset.theme = prefs.theme === 'dark' ? 'dark' : 'light';
   document.body.style.setProperty('--reader-size', `${18.5 + (prefs.fontStep || 0)}px`);
   document.body.classList.toggle('hide-zh', prefs.zh === false);
+  if (typeof scheduleInterlinear === 'function') scheduleInterlinear();
 }
 applyPrefs();
 
@@ -612,11 +622,88 @@ DATA.news.forEach((n, i) => {
       : `<button class="seek" type="button" disabled>—</button>`;
     const bits = p.lines && p.lines.length ? p.lines : [{de: p.de || '', zh: p.zh || ''}];
     const de = bits.map(l => tokenizeDe(l.de || '')).join(' ');
-    const zh = bits.map(l => l.zh ? esc(l.zh) : '').join('');
-    return `<div class="para" data-start="${hasT ? p.start : ''}" data-end="${p.end != null ? p.end : ''}" id="p-${i}-${pi}">${seek}<div class="lines"><div class="de">${de}</div>${zh ? `<div class="zh">${zh}</div>` : ''}</div></div>`;
+    return `<div class="para" data-start="${hasT ? p.start : ''}" data-end="${p.end != null ? p.end : ''}" id="p-${i}-${pi}">${seek}<div class="lines"><div class="de de-src">${de}</div><div class="ilines"></div></div></div>`;
   }).join('');
   newsEl.insertAdjacentHTML('beforeend',
     `<article id="story-${i + 1}" data-idx="${i}"><div class="n-head"><span class="n-idx">${String(i+1).padStart(2,'0')}</span><div><h2>${esc(n.title)}</h2>${n.title_zh ? `<div class="zh h-zh">${esc(n.title_zh)}</div>` : ''}</div></div>${paras}<div class="article-extras">${storyExtras(n)}</div></article>`);
+});
+
+function paraBits(el) {
+  const m = /^p-(\d+)-(\d+)$/.exec(el.id);
+  if (!m) return [];
+  const p = DATA.news[Number(m[1])]?.paras[Number(m[2])];
+  return (p && p.lines && p.lines.length) ? p.lines : [{de: p?.de || '', zh: p?.zh || ''}];
+}
+function visualLines(el) {
+  const lines = [];
+  let top = null, buf = '';
+  const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    const text = node.data;
+    for (let i = 0; i < text.length; i++) {
+      const range = document.createRange();
+      range.setStart(node, i);
+      range.setEnd(node, i + 1);
+      const rect = range.getClientRects()[0];
+      const t = rect ? Math.round(rect.top) : top;
+      if (t == null) { buf += text[i]; continue; }
+      if (top == null) top = t;
+      if (Math.abs(t - top) > 2) {
+        if (buf) lines.push(buf);
+        buf = text[i];
+        top = t;
+      } else buf += text[i];
+    }
+  }
+  if (buf) lines.push(buf);
+  return lines;
+}
+function zhForLines(bits, lines) {
+  let cur = 0;
+  const spans = bits.map(b => {
+    const a = cur, z = cur + (b.de || '').length;
+    cur = z + 1;
+    return {a, z, zh: b.zh || ''};
+  });
+  const used = new Set();
+  let pos = 0;
+  return lines.map(line => {
+    const start = pos, end = pos + line.length;
+    pos = end;
+    const out = [];
+    spans.forEach((s, i) => {
+      if (used.has(i) || s.a >= end || s.z <= start) return;
+      used.add(i);
+      if (s.zh) out.push(s.zh);
+    });
+    return out.join('');
+  });
+}
+function layoutPara(el) {
+  const src = el.querySelector('.de-src');
+  const box = el.querySelector('.ilines');
+  if (!src || !box) return;
+  const bits = paraBits(el);
+  const lines = visualLines(src);
+  const zhs = zhForLines(bits, lines);
+  box.innerHTML = lines.map((line, i) => {
+    const zh = zhs[i];
+    return `<div class="iline"><div class="de">${tokenizeDe(line)}</div>${zh ? `<div class="zh">${esc(zh)}</div>` : ''}</div>`;
+  }).join('');
+}
+function relayoutAll() {
+  document.querySelectorAll('.para').forEach(layoutPara);
+}
+function scheduleInterlinear() {
+  cancelAnimationFrame(scheduleInterlinear.id);
+  scheduleInterlinear.id = requestAnimationFrame(() => requestAnimationFrame(relayoutAll));
+}
+scheduleInterlinear();
+setTimeout(relayoutAll, 250);
+window.addEventListener('resize', () => {
+  clearTimeout(scheduleInterlinear.t);
+  scheduleInterlinear.t = setTimeout(relayoutAll, 80);
 });
 document.getElementById('topic-list').innerHTML = DATA.news.map((n, i) =>
   `<div class="topic" data-idx="${i}"><a href="#story-${i + 1}" data-idx="${i}"><b>${String(i + 1).padStart(2, '0')}</b><span>${esc(n.title)}</span></a><div class="topic-study">${storyExtras(n, true)}</div></div>`
