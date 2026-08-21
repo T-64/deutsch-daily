@@ -196,6 +196,7 @@
     min-width: 0;
     margin: 0 1.1em 0.75em 0;
   }
+  .sent[data-start] { cursor: pointer; }
   .de {
     max-width: 100%;
     font: var(--reader-size, 18.5px)/1.55 ui-serif, Georgia, "Noto Serif", serif;
@@ -211,13 +212,6 @@
   .de w.ed { text-decoration-style: solid; text-decoration-thickness: 1.5px; }
   .de w.wiki { text-decoration-style: dotted; text-decoration-color: color-mix(in srgb, var(--ink-soft) 55%, transparent); }
   .de w.saved { color: var(--accent-strong); background: var(--accent-soft); text-decoration-color: transparent; }
-  .seek {
-    margin: 0 0 4px;
-    border: 1px solid var(--line); border-radius: 6px;
-    background: var(--surface-2); color: var(--accent-strong);
-    padding: 2px 6px; font: 750 10px/1 ui-monospace, monospace; cursor: pointer;
-  }
-  .seek:disabled { opacity: .35; cursor: default; }
   .sent.now .de {
     background: color-mix(in srgb, var(--accent-soft) 70%, transparent);
     border-radius: 4px;
@@ -231,7 +225,6 @@
   body.hide-zh .zh { display: none; }
   body.hide-zh .sent { display: inline; margin: 0 0.45em 0 0; }
   body.hide-zh .sent .de { display: inline; line-height: 1.82; }
-  body.hide-zh .sent .seek { display: inline-block; margin: 0 0.35em 0 0; vertical-align: middle; }
   .n-head .h-zh {
     margin-top: 6px;
     padding-top: 0;
@@ -620,10 +613,7 @@ DATA.news.forEach((n, i) => {
     const bits = p.lines && p.lines.length ? p.lines : [{de: p.de || '', zh: p.zh || '', start: p.start, end: p.end}];
     const sents = bits.map((line, li) => {
       const hasT = line.start != null;
-      const seek = hasT
-        ? `<button class="seek" data-start="${line.start}" type="button">${fmtClock(line.start)}</button>`
-        : `<button class="seek" type="button" disabled>—</button>`;
-      return `<span class="sent" data-start="${hasT ? line.start : ''}" data-end="${line.end != null ? line.end : ''}" id="p-${i}-${pi}-${li}">${seek}<span class="de">${tokenizeDe(line.de || '')}</span>${line.zh ? `<span class="zh">${esc(line.zh)}</span>` : ''}</span>`;
+      return `<span class="sent"${hasT ? ` data-start="${line.start}"` : ''}${line.end != null ? ` data-end="${line.end}"` : ''} id="p-${i}-${pi}-${li}"><span class="de">${tokenizeDe(line.de || '')}</span>${line.zh ? `<span class="zh">${esc(line.zh)}</span>` : ''}</span>`;
     }).join('');
     return `<div class="para" id="p-${i}-${pi}">${sents}</div>`;
   }).join('');
@@ -741,8 +731,8 @@ document.addEventListener('click', e => {
     basketAdd();
     return;
   }
-  const seek = e.target.closest('.seek[data-start]');
-  if (seek) seekTo(parseFloat(seek.dataset.start));
+  const sent = e.target.closest('.sent[data-start]');
+  if (sent && !e.target.closest('w')) seekTo(parseFloat(sent.dataset.start));
 });
 
 document.getElementById('theme-btn').onclick = () => {
