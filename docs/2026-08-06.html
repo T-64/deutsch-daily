@@ -187,10 +187,17 @@
   .h-zh { margin-top: 6px; padding-top: 0; }
   .para { margin-bottom: 22px; }
   .para:last-child { margin-bottom: 8px; }
-  .sent { margin-bottom: 10px; }
-  .sent:last-child { margin-bottom: 0; }
+  .lines { min-width: 0; }
+  .sent {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    vertical-align: top;
+    max-width: 100%;
+    margin: 0 0.55em 0.28em 0;
+  }
   .de {
-    font: var(--reader-size, 18.5px)/1.82 ui-serif, Georgia, "Noto Serif", serif;
+    font: var(--reader-size, 18.5px)/1.55 ui-serif, Georgia, "Noto Serif", serif;
     letter-spacing: .003em;
   }
   .de w {
@@ -216,10 +223,13 @@
     border-radius: 10px;
   }
   .zh {
-    margin-top: 2px; color: var(--ink);
-    font: 400 16px/1.7 Inter, ui-sans-serif, "Noto Sans SC", sans-serif;
+    color: var(--ink);
+    font: 400 15.5px/1.45 Inter, ui-sans-serif, "Noto Sans SC", sans-serif;
   }
+  .sent .zh { margin-top: 2px; }
   body.hide-zh .zh { display: none; }
+  body.hide-zh .sent { display: inline; margin: 0 0.28em 0 0; }
+  body.hide-zh .sent .de { display: inline; line-height: 1.82; }
   .n-head .h-zh {
     margin-top: 6px;
     padding-top: 0;
@@ -611,7 +621,7 @@ DATA.news.forEach((n, i) => {
       ? `<button class="seek" data-start="${p.start}" type="button">${fmtClock(p.start)}</button>`
       : `<button class="seek" type="button" disabled>—</button>`;
     const lines = (p.lines && p.lines.length ? p.lines : [{de: p.de || '', zh: p.zh || ''}]).map(line =>
-      `<div class="sent"><div class="de">${tokenizeDe(line.de || '')}</div>${line.zh ? `<div class="zh">${esc(line.zh)}</div>` : ''}</div>`
+      `<span class="sent"><span class="de">${tokenizeDe(line.de || '')}</span>${line.zh ? `<span class="zh">${esc(line.zh)}</span>` : ''}</span>`
     ).join('');
     return `<div class="para" data-start="${hasT ? p.start : ''}" data-end="${p.end != null ? p.end : ''}" id="p-${i}-${pi}">${seek}<div class="lines">${lines}</div></div>`;
   }).join('');
