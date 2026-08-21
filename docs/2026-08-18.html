@@ -181,7 +181,7 @@
   .n-head h2, .h-zh {
     padding-top: 3px;
     color: var(--ink);
-    font: 750 clamp(21px, 3vw, 28px)/1.25 ui-serif, Georgia, "Noto Serif SC", serif;
+    font: 750 clamp(21px, 3vw, 28px)/1.25 ui-serif, Georgia, "Noto Serif CJK SC", "Noto Serif SC", serif;
     letter-spacing: -.025em;
   }
   .h-zh { margin-top: 6px; padding-top: 0; }
@@ -214,6 +214,13 @@
     font: 400 16px/1.7 Inter, ui-sans-serif, "Noto Sans SC", sans-serif;
   }
   body.hide-zh .zh { display: none; }
+  .n-head .h-zh {
+    margin-top: 6px;
+    padding-top: 0;
+    color: var(--ink);
+    font: 750 clamp(21px, 3vw, 28px)/1.25 ui-serif, Georgia, "Noto Serif CJK SC", "Noto Serif SC", serif;
+    letter-spacing: -.025em;
+  }
   .article-extras details { margin-top: 10px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface-2); }
   .article-extras details summary {
     list-style: none; cursor: pointer; padding: 12px 14px; color: var(--ink-soft);
@@ -361,6 +368,7 @@
     .h-zh { font-size: 21px; }
     .de { font-size: var(--reader-size, 17.5px); line-height: 1.78; }
     .zh { font-size: 15px; }
+    .n-head .h-zh { font-size: 21px; line-height: 1.25; }
     .article-extras details .body { padding-left: 14px; }
     .para { grid-template-columns: 44px minmax(0,1fr); gap: 8px; }
     #pop { left: 12px !important; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); top: auto !important; width: auto; }
