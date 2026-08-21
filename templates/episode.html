@@ -185,8 +185,10 @@
     letter-spacing: -.025em;
   }
   .h-zh { margin-top: 6px; padding-top: 0; }
-  .para { margin-bottom: 14px; }
-  .para:last-of-type { margin-bottom: 8px; }
+  .para { margin-bottom: 22px; }
+  .para:last-child { margin-bottom: 8px; }
+  .sent { margin-bottom: 10px; }
+  .sent:last-child { margin-bottom: 0; }
   .de {
     font: var(--reader-size, 18.5px)/1.82 ui-serif, Georgia, "Noto Serif", serif;
     letter-spacing: .003em;
@@ -208,9 +210,13 @@
     padding: 4px 0; font: 750 11px/1 ui-monospace, monospace; cursor: pointer;
   }
   .seek:disabled { opacity: .35; cursor: default; }
-  .para.now .de { background: color-mix(in srgb, var(--accent-soft) 70%, transparent); border-radius: 6px; }
+  .para.now {
+    padding: 6px 8px 6px 2px;
+    background: color-mix(in srgb, var(--accent-soft) 55%, transparent);
+    border-radius: 10px;
+  }
   .zh {
-    margin-top: 10px; color: var(--ink);
+    margin-top: 2px; color: var(--ink);
     font: 400 16px/1.7 Inter, ui-sans-serif, "Noto Sans SC", sans-serif;
   }
   body.hide-zh .zh { display: none; }
@@ -604,7 +610,10 @@ DATA.news.forEach((n, i) => {
     const seek = hasT
       ? `<button class="seek" data-start="${p.start}" type="button">${fmtClock(p.start)}</button>`
       : `<button class="seek" type="button" disabled>—</button>`;
-    return `<div class="para" data-start="${hasT ? p.start : ''}" data-end="${p.end != null ? p.end : ''}" id="p-${i}-${pi}">${seek}<div><div class="de">${tokenizeDe(p.de)}</div>${p.zh ? `<div class="zh">${esc(p.zh)}</div>` : ''}</div></div>`;
+    const lines = (p.lines && p.lines.length ? p.lines : [{de: p.de || '', zh: p.zh || ''}]).map(line =>
+      `<div class="sent"><div class="de">${tokenizeDe(line.de || '')}</div>${line.zh ? `<div class="zh">${esc(line.zh)}</div>` : ''}</div>`
+    ).join('');
+    return `<div class="para" data-start="${hasT ? p.start : ''}" data-end="${p.end != null ? p.end : ''}" id="p-${i}-${pi}">${seek}<div class="lines">${lines}</div></div>`;
   }).join('');
   newsEl.insertAdjacentHTML('beforeend',
     `<article id="story-${i + 1}" data-idx="${i}"><div class="n-head"><span class="n-idx">${String(i+1).padStart(2,'0')}</span><div><h2>${esc(n.title)}</h2>${n.title_zh ? `<div class="zh h-zh">${esc(n.title_zh)}</div>` : ''}</div></div>${paras}<div class="article-extras">${storyExtras(n)}</div></article>`);
@@ -826,11 +835,9 @@ document.addEventListener('click', e => {
 }, true);
 
 function sentenceAround(el) {
-  const para = el.closest('.para')?.querySelector('.de');
-  if (!para) return '';
-  const text = (para.innerText || para.textContent || '').replace(/\s+/g, ' ').trim();
-  const word = el.textContent;
-  return text.split(/(?<=[.!?])\s+(?=[A-ZÄÖÜ])/).find(s => s.includes(word)) || text;
+  const de = el.closest('.de');
+  if (!de) return '';
+  return (de.innerText || de.textContent || '').replace(/\s+/g, ' ').trim();
 }
 
 function showPop(wEl) {

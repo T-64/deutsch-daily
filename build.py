@@ -301,26 +301,52 @@ def merge_to_n(parts, n, joiner=" "):
     return parts
 
 
-def expand_lines(paragraphs, translations):
-    """One German sentence per row, Chinese directly underneath."""
+def pair_sentences(de, zh):
+    """Keep one content paragraph, but pair each German sentence with its Chinese."""
+    ds = split_de_sents(de)
+    zs = split_zh_sents(zh)
+    if not ds:
+        return []
+    if len(zs) > len(ds):
+        zs = merge_to_n(zs, len(ds), "")
+    elif len(zs) < len(ds):
+        if zs:
+            ds = merge_to_n(ds, len(zs), " ")
+        else:
+            zs = [""] * len(ds)
+    if not zs:
+        zs = [(zh or "").strip()] * len(ds)
+    return [{"de": a, "zh": b} for a, b in zip(ds, zs)]
+
+
+FILM_CUE_RE = re.compile(
+    r"(Dazu kommt jetzt ein Film|Dazu kommt ein Film|Jetzt zeigen wir einen Film|Im Film zeigen wir)",
+    re.I,
+)
+
+
+def coalesce_sentence_items(paragraphs, translations):
+    """Regroup JSON that was stored one sentence per item into studio/film paragraphs."""
+    paras = list(paragraphs or [])
+    trans = list(translations or [])
+    if len(paras) < 4:
+        return paras, trans
+    singles = sum(1 for p in paras if len(split_de_sents(p)) <= 1)
+    if singles < len(paras) * 0.75:
+        return paras, trans
+    groups_de, groups_zh = [[]], [[]]
+    for de, zh in zip(paras, trans):
+        groups_de[-1].append(de)
+        groups_zh[-1].append(zh)
+        if FILM_CUE_RE.search(de):
+            groups_de.append([])
+            groups_zh.append([])
     out_de, out_zh = [], []
-    for de, zh in zip(paragraphs or [], translations or []):
-        ds = split_de_sents(de)
-        zs = split_zh_sents(zh)
+    for ds, zs in zip(groups_de, groups_zh):
         if not ds:
             continue
-        if len(zs) > len(ds):
-            zs = merge_to_n(zs, len(ds), "")
-        elif len(zs) < len(ds):
-            if zs:
-                ds = merge_to_n(ds, len(zs), " ")
-            else:
-                zs = [""] * len(ds)
-        if not zs:
-            zs = [zh.strip() or ""] * len(ds)
-        for a, b in zip(ds, zs):
-            out_de.append(a)
-            out_zh.append(b)
+        out_de.append(" ".join(ds))
+        out_zh.append("".join(zs))
     return out_de, out_zh
 
 
@@ -464,13 +490,17 @@ def render(doc):
     news_html = []
     cursor = 0
     for n in doc["news"]:
-        paras, trans = expand_lines(n.get("paragraphs") or [], n.get("translations") or [])
+        paras, trans = coalesce_sentence_items(n.get("paragraphs") or [], n.get("translations") or [])
         times, cursor = align_paragraphs(paras, cues, cursor)
         news_html.append({
             "title": n["title"],
             "title_zh": n.get("title_zh") or "",
             "paras": [
-                {"de": de, "zh": zh, "start": start, "end": end}
+                {
+                    "start": start,
+                    "end": end,
+                    "lines": pair_sentences(de, zh),
+                }
                 for (de, zh), (start, end) in zip(zip(paras, trans), times)
             ],
             "vocab": editorial_vocab(n),

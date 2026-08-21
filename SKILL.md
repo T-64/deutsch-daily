@@ -1,7 +1,7 @@
 ---
 name: tagesschau-einfache-sprache
 description: "Use when running Deutsch Daily: fetch Tagesschau 20:00 or einfache Sprache, write content JSON, validate, build, GitHub Pages, WeChat. Trigger on 每日德语, deutsch-daily, tagesschau, 简易德语, 德语新闻精读."
-version: 5.1.0
+version: 5.1.1
 author: Hermes Agent
 license: MIT
 metadata:
@@ -132,7 +132,7 @@ echo "date=$DATE slug=$SLUG"
 2. 片尾丢掉：简易从「Das waren unsere Nachrichten」起（含）；20:00 从「Das war die tagesschau」起（含）
 3. 按 meta.`synopsis` 的逗号列表切成 `news[]`，标题用 synopsis 里的德语短句。**丢掉** `Hinweis:` 及之后的版权/更正说明，不要做成一条新闻
 4. 片中「Dazu kommt ein Film」这类提示留在段落里，译文加「（接下来是一段影片。）」
-5. **一句一行**：`paragraphs[]` 里每项只放一句德语，对应 `translations[]` 一句中文。页面按句对照，字幕也按句高亮。不要把整段新闻揉成一个大段落
+5. **按原来的新闻段落写** `paragraphs[]`：演播室一块、影片一块，不要一句一项。每段德语对应一段中文；页面会把中文拆到各句下面，不要自己拆成一句一段
 6. 20:00 是 B2–C1 正片，译文跟口语/书面新闻走，不要改写成简易德语
 7. **禁止**写 HTML、课后题、整段 `grammar` 字符串、`Deutsch / 中文 / Beispielsatz` 占位行
 
@@ -179,7 +179,7 @@ echo "date=$DATE slug=$SLUG"
 字段约束：
 
 - 20uhr 必须有 `"source": "20uhr"` 和 `"slug": "YYYY-MM-DD-20uhr"`；简易德语可省略 source（默认 einfach），文件名仍是 `YYYY-MM-DD.json`
-- `paragraphs` 与 `translations` **条数必须相等**，且都不为空。每项尽量一句德语 / 一句中文
+- `paragraphs` 与 `translations` **条数必须相等**，且都不为空。每项是一段（里面可以有多句），不要一句一项
 - `title_zh` 是标题的中文，跟段落译文一样随「译文」开关显示
 - 普通新闻 vocab **6–10**（最少 5）；`Das Wetter` **3–8**
 - 名词 lemma 带冠词；短语整条进 `lemma`；`forms` 写正文里会出现的表面形式（不要逗号串）
