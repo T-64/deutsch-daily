@@ -187,11 +187,11 @@
   .h-zh { margin-top: 6px; padding-top: 0; }
   .para { margin-bottom: 22px; }
   .para:last-child { margin-bottom: 8px; }
-  .lines {
-    min-width: 0;
+  .lines { min-width: 0; }
+  .de {
     font: var(--reader-size, 18.5px)/1.82 ui-serif, Georgia, "Noto Serif", serif;
+    letter-spacing: .003em;
   }
-  .de { letter-spacing: .003em; }
   .de w {
     cursor: pointer; border-radius: 4px; transition: background .12s, color .12s;
     text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
@@ -215,10 +215,10 @@
     border-radius: 10px;
   }
   .zh {
+    margin-top: 10px;
     color: var(--ink);
-    font: 400 16px/1.82 Inter, ui-sans-serif, "Noto Sans SC", sans-serif;
+    font: 400 16px/1.7 Inter, ui-sans-serif, "Noto Sans SC", sans-serif;
   }
-  .sent .zh { margin-left: 0.4em; }
   body.hide-zh .zh { display: none; }
   .n-head .h-zh {
     margin-top: 6px;
@@ -610,10 +610,10 @@ DATA.news.forEach((n, i) => {
     const seek = hasT
       ? `<button class="seek" data-start="${p.start}" type="button">${fmtClock(p.start)}</button>`
       : `<button class="seek" type="button" disabled>—</button>`;
-    const lines = (p.lines && p.lines.length ? p.lines : [{de: p.de || '', zh: p.zh || ''}]).map(line =>
-      `<span class="sent"><span class="de">${tokenizeDe(line.de || '')}</span>${line.zh ? `<span class="zh">${esc(line.zh)}</span>` : ''}</span>`
-    ).join(' ');
-    return `<div class="para" data-start="${hasT ? p.start : ''}" data-end="${p.end != null ? p.end : ''}" id="p-${i}-${pi}">${seek}<div class="lines">${lines}</div></div>`;
+    const bits = p.lines && p.lines.length ? p.lines : [{de: p.de || '', zh: p.zh || ''}];
+    const de = bits.map(l => tokenizeDe(l.de || '')).join(' ');
+    const zh = bits.map(l => l.zh ? esc(l.zh) : '').join('');
+    return `<div class="para" data-start="${hasT ? p.start : ''}" data-end="${p.end != null ? p.end : ''}" id="p-${i}-${pi}">${seek}<div class="lines"><div class="de">${de}</div>${zh ? `<div class="zh">${zh}</div>` : ''}</div></div>`;
   }).join('');
   newsEl.insertAdjacentHTML('beforeend',
     `<article id="story-${i + 1}" data-idx="${i}"><div class="n-head"><span class="n-idx">${String(i+1).padStart(2,'0')}</span><div><h2>${esc(n.title)}</h2>${n.title_zh ? `<div class="zh h-zh">${esc(n.title_zh)}</div>` : ''}</div></div>${paras}<div class="article-extras">${storyExtras(n)}</div></article>`);
@@ -835,9 +835,11 @@ document.addEventListener('click', e => {
 }, true);
 
 function sentenceAround(el) {
-  const de = el.closest('.de');
-  if (!de) return '';
-  return (de.innerText || de.textContent || '').replace(/\s+/g, ' ').trim();
+  const para = el.closest('.de');
+  if (!para) return '';
+  const text = (para.innerText || para.textContent || '').replace(/\s+/g, ' ').trim();
+  const word = el.textContent;
+  return text.split(/(?<=[.!?])\s+(?=[A-ZÄÖÜ])/).find(s => s.includes(word)) || text;
 }
 
 function showPop(wEl) {
