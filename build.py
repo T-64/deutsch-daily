@@ -491,18 +491,24 @@ def render(doc):
     cursor = 0
     for n in doc["news"]:
         paras, trans = coalesce_sentence_items(n.get("paragraphs") or [], n.get("translations") or [])
-        times, cursor = align_paragraphs(paras, cues, cursor)
+        para_out = []
+        for de, zh in zip(paras, trans):
+            lines = pair_sentences(de, zh)
+            times, cursor = align_paragraphs([x["de"] for x in lines], cues, cursor)
+            starts = [t[0] for t in times if t[0] is not None]
+            ends = [t[1] for t in times if t[1] is not None]
+            para_out.append({
+                "start": starts[0] if starts else None,
+                "end": ends[-1] if ends else None,
+                "lines": [
+                    {"de": line["de"], "zh": line["zh"], "start": s, "end": e}
+                    for line, (s, e) in zip(lines, times)
+                ],
+            })
         news_html.append({
             "title": n["title"],
             "title_zh": n.get("title_zh") or "",
-            "paras": [
-                {
-                    "start": start,
-                    "end": end,
-                    "lines": pair_sentences(de, zh),
-                }
-                for (de, zh), (start, end) in zip(zip(paras, trans), times)
-            ],
+            "paras": para_out,
             "vocab": editorial_vocab(n),
             "grammar_points": [
                 {

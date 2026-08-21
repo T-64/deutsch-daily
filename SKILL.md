@@ -132,7 +132,7 @@ echo "date=$DATE slug=$SLUG"
 2. 片尾丢掉：简易从「Das waren unsere Nachrichten」起（含）；20:00 从「Das war die tagesschau」起（含）
 3. 按 meta.`synopsis` 的逗号列表切成 `news[]`，标题用 synopsis 里的德语短句。**丢掉** `Hinweis:` 及之后的版权/更正说明，不要做成一条新闻
 4. 片中「Dazu kommt ein Film」这类提示留在段落里，译文加「（接下来是一段影片。）」
-5. **按原来的新闻段落写** `paragraphs[]`：演播室一块、影片一块，不要一句一项。每段德语对应一段中文；页面按行宽折行，每一行德语下面跟对应句子的译文
+5. **按原来的新闻段落写** `paragraphs[]`：演播室一块、影片一块，不要一句一项。每段德语对应一段中文；页面上每句中文在该句德语正下方左对齐，时间标在句上
 6. 20:00 是 B2–C1 正片，译文跟口语/书面新闻走，不要改写成简易德语
 7. **禁止**写 HTML、课后题、整段 `grammar` 字符串、`Deutsch / 中文 / Beispielsatz` 占位行
 

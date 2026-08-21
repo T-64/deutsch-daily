@@ -187,19 +187,20 @@
   .h-zh { margin-top: 6px; padding-top: 0; }
   .para { margin-bottom: 22px; }
   .para:last-child { margin-bottom: 8px; }
-  .lines { position: relative; min-width: 0; }
-  .de-src {
-    position: absolute; left: 0; right: 0; visibility: hidden; pointer-events: none;
+  .sent {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    vertical-align: top;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 1.1em 0.75em 0;
   }
-  body.hide-zh .de-src { position: static; visibility: visible; pointer-events: auto; }
-  body.hide-zh .ilines { display: none; }
-  .iline { margin: 0 0 0.28em; }
-  .iline:last-child { margin-bottom: 0; }
   .de {
-    font: var(--reader-size, 18.5px)/1.45 ui-serif, Georgia, "Noto Serif", serif;
+    max-width: 100%;
+    font: var(--reader-size, 18.5px)/1.55 ui-serif, Georgia, "Noto Serif", serif;
     letter-spacing: .003em;
   }
-  body.hide-zh .de-src { line-height: 1.82; }
   .de w {
     cursor: pointer; border-radius: 4px; transition: background .12s, color .12s;
     text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
@@ -210,25 +211,27 @@
   .de w.ed { text-decoration-style: solid; text-decoration-thickness: 1.5px; }
   .de w.wiki { text-decoration-style: dotted; text-decoration-color: color-mix(in srgb, var(--ink-soft) 55%, transparent); }
   .de w.saved { color: var(--accent-strong); background: var(--accent-soft); text-decoration-color: transparent; }
-  .para { display: grid; grid-template-columns: 52px minmax(0,1fr); gap: 10px; align-items: start; }
   .seek {
-    margin-top: 4px; border: 1px solid var(--line); border-radius: 8px;
+    margin: 0 0 4px;
+    border: 1px solid var(--line); border-radius: 6px;
     background: var(--surface-2); color: var(--accent-strong);
-    padding: 4px 0; font: 750 11px/1 ui-monospace, monospace; cursor: pointer;
+    padding: 2px 6px; font: 750 10px/1 ui-monospace, monospace; cursor: pointer;
   }
   .seek:disabled { opacity: .35; cursor: default; }
-  .para.now {
-    padding: 6px 8px 6px 2px;
-    background: color-mix(in srgb, var(--accent-soft) 55%, transparent);
-    border-radius: 10px;
+  .sent.now .de {
+    background: color-mix(in srgb, var(--accent-soft) 70%, transparent);
+    border-radius: 4px;
   }
   .zh {
-    margin-top: 2px;
+    margin-top: 3px;
+    max-width: 100%;
     color: var(--ink);
-    font: 400 15.5px/1.4 Inter, ui-sans-serif, "Noto Sans SC", sans-serif;
+    font: 400 15.5px/1.45 Inter, ui-sans-serif, "Noto Sans SC", sans-serif;
   }
-  .n-head .h-zh { margin-top: 6px; }
   body.hide-zh .zh { display: none; }
+  body.hide-zh .sent { display: inline; margin: 0 0.45em 0 0; }
+  body.hide-zh .sent .de { display: inline; line-height: 1.82; }
+  body.hide-zh .sent .seek { display: inline-block; margin: 0 0.35em 0 0; vertical-align: middle; }
   .n-head .h-zh {
     margin-top: 6px;
     padding-top: 0;
@@ -385,7 +388,6 @@
     .zh { font-size: 15px; }
     .n-head .h-zh { font-size: 21px; line-height: 1.25; }
     .article-extras details .body { padding-left: 14px; }
-    .para { grid-template-columns: 44px minmax(0,1fr); gap: 8px; }
     #pop { left: 12px !important; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); top: auto !important; width: auto; }
     #basket-btn { right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); min-height: 46px; }
     #basket { padding: 18px 17px calc(18px + env(safe-area-inset-bottom)); }
@@ -516,7 +518,6 @@ function applyPrefs() {
   document.documentElement.dataset.theme = prefs.theme === 'dark' ? 'dark' : 'light';
   document.body.style.setProperty('--reader-size', `${18.5 + (prefs.fontStep || 0)}px`);
   document.body.classList.toggle('hide-zh', prefs.zh === false);
-  if (typeof scheduleInterlinear === 'function') scheduleInterlinear();
 }
 applyPrefs();
 
@@ -616,94 +617,18 @@ function storyExtras(n, compact) {
 const newsEl = document.getElementById('news');
 DATA.news.forEach((n, i) => {
   const paras = n.paras.map((p, pi) => {
-    const hasT = p.start != null;
-    const seek = hasT
-      ? `<button class="seek" data-start="${p.start}" type="button">${fmtClock(p.start)}</button>`
-      : `<button class="seek" type="button" disabled>—</button>`;
-    const bits = p.lines && p.lines.length ? p.lines : [{de: p.de || '', zh: p.zh || ''}];
-    const de = bits.map(l => tokenizeDe(l.de || '')).join(' ');
-    return `<div class="para" data-start="${hasT ? p.start : ''}" data-end="${p.end != null ? p.end : ''}" id="p-${i}-${pi}">${seek}<div class="lines"><div class="de de-src">${de}</div><div class="ilines"></div></div></div>`;
+    const bits = p.lines && p.lines.length ? p.lines : [{de: p.de || '', zh: p.zh || '', start: p.start, end: p.end}];
+    const sents = bits.map((line, li) => {
+      const hasT = line.start != null;
+      const seek = hasT
+        ? `<button class="seek" data-start="${line.start}" type="button">${fmtClock(line.start)}</button>`
+        : `<button class="seek" type="button" disabled>—</button>`;
+      return `<span class="sent" data-start="${hasT ? line.start : ''}" data-end="${line.end != null ? line.end : ''}" id="p-${i}-${pi}-${li}">${seek}<span class="de">${tokenizeDe(line.de || '')}</span>${line.zh ? `<span class="zh">${esc(line.zh)}</span>` : ''}</span>`;
+    }).join('');
+    return `<div class="para" id="p-${i}-${pi}">${sents}</div>`;
   }).join('');
   newsEl.insertAdjacentHTML('beforeend',
     `<article id="story-${i + 1}" data-idx="${i}"><div class="n-head"><span class="n-idx">${String(i+1).padStart(2,'0')}</span><div><h2>${esc(n.title)}</h2>${n.title_zh ? `<div class="zh h-zh">${esc(n.title_zh)}</div>` : ''}</div></div>${paras}<div class="article-extras">${storyExtras(n)}</div></article>`);
-});
-
-function paraBits(el) {
-  const m = /^p-(\d+)-(\d+)$/.exec(el.id);
-  if (!m) return [];
-  const p = DATA.news[Number(m[1])]?.paras[Number(m[2])];
-  return (p && p.lines && p.lines.length) ? p.lines : [{de: p?.de || '', zh: p?.zh || ''}];
-}
-function visualLines(el) {
-  const lines = [];
-  let top = null, buf = '';
-  const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
-  while (walker.nextNode()) {
-    const node = walker.currentNode;
-    const text = node.data;
-    for (let i = 0; i < text.length; i++) {
-      const range = document.createRange();
-      range.setStart(node, i);
-      range.setEnd(node, i + 1);
-      const rect = range.getClientRects()[0];
-      const t = rect ? Math.round(rect.top) : top;
-      if (t == null) { buf += text[i]; continue; }
-      if (top == null) top = t;
-      if (Math.abs(t - top) > 2) {
-        if (buf) lines.push(buf);
-        buf = text[i];
-        top = t;
-      } else buf += text[i];
-    }
-  }
-  if (buf) lines.push(buf);
-  return lines;
-}
-function zhForLines(bits, lines) {
-  let cur = 0;
-  const spans = bits.map(b => {
-    const a = cur, z = cur + (b.de || '').length;
-    cur = z + 1;
-    return {a, z, zh: b.zh || ''};
-  });
-  const used = new Set();
-  let pos = 0;
-  return lines.map(line => {
-    const start = pos, end = pos + line.length;
-    pos = end;
-    const out = [];
-    spans.forEach((s, i) => {
-      if (used.has(i) || s.a >= end || s.z <= start) return;
-      used.add(i);
-      if (s.zh) out.push(s.zh);
-    });
-    return out.join('');
-  });
-}
-function layoutPara(el) {
-  const src = el.querySelector('.de-src');
-  const box = el.querySelector('.ilines');
-  if (!src || !box) return;
-  const bits = paraBits(el);
-  const lines = visualLines(src);
-  const zhs = zhForLines(bits, lines);
-  box.innerHTML = lines.map((line, i) => {
-    const zh = zhs[i];
-    return `<div class="iline"><div class="de">${tokenizeDe(line)}</div>${zh ? `<div class="zh">${esc(zh)}</div>` : ''}</div>`;
-  }).join('');
-}
-function relayoutAll() {
-  document.querySelectorAll('.para').forEach(layoutPara);
-}
-function scheduleInterlinear() {
-  cancelAnimationFrame(scheduleInterlinear.id);
-  scheduleInterlinear.id = requestAnimationFrame(() => requestAnimationFrame(relayoutAll));
-}
-scheduleInterlinear();
-setTimeout(relayoutAll, 250);
-window.addEventListener('resize', () => {
-  clearTimeout(scheduleInterlinear.t);
-  scheduleInterlinear.t = setTimeout(relayoutAll, 80);
 });
 document.getElementById('topic-list').innerHTML = DATA.news.map((n, i) =>
   `<div class="topic" data-idx="${i}"><a href="#story-${i + 1}" data-idx="${i}"><b>${String(i + 1).padStart(2, '0')}</b><span>${esc(n.title)}</span></a><div class="topic-study">${storyExtras(n, true)}</div></div>`
@@ -781,7 +706,7 @@ function highlightPlaying() {
   if (!v) return;
   const t = v.currentTime;
   let current = null;
-  document.querySelectorAll('.para').forEach(el => {
+  document.querySelectorAll('.sent').forEach(el => {
     const a = parseFloat(el.dataset.start), b = parseFloat(el.dataset.end);
     const on = !Number.isNaN(a) && !Number.isNaN(b) && t >= a && t < b + 0.05;
     el.classList.toggle('now', on);
