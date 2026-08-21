@@ -10,7 +10,8 @@ data/content/YYYY-MM-DD.json + templates/ → docs/YYYY-MM-DD.html (+index.html)
 
 用法:
   python3 build.py               # 渲染全部 content → docs/
-  python3 build.py 2026-08-13    # 渲染单期
+  python3 build.py 2026-08-13    # 渲染简易一期
+  python3 build.py 2026-08-19-20uhr  # 渲染 20:00 一期
   python3 build.py --dict        # 用本地词典重填 dict-cache（离线，无限流）
 """
 import json
@@ -21,6 +22,9 @@ from difflib import SequenceMatcher
 from pathlib import Path
 
 BASE = Path(__file__).parent
+sys.path.insert(0, str(BASE / "scripts"))
+from sources import SOURCES, detect_source, parse_slug, slug_for
+
 DATA = BASE / "data"
 CONTENT = DATA / "content"
 META = DATA / "meta"
@@ -34,7 +38,7 @@ FROZEN_DATES = frozenset({"2026-07-31", "2026-08-03", "2026-08-11"})
 TOKEN_RE = re.compile(r"[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß-]*")
 SENT_RE = re.compile(r"(?<=[.!?])\s+(?=[A-ZÄÖÜ])")
 SKIP_CUE = re.compile(r"(gong|untertitel|norddeutscher rundfunk|willkommen zur tagesschau|"
-                      r"ich bin |das waren unsere nachrichten)", re.I)
+                      r"ich bin |das waren unsere nachrichten|das war die tagesschau)", re.I)
 
 
 def load_cache():
@@ -207,25 +211,34 @@ def norm_de(text):
     return " ".join(text.split())
 
 
-def content_file(date):
-    modern = CONTENT / f"{date}.json"
+def content_file(slug):
+    modern = CONTENT / f"{slug}.json"
     if modern.exists():
         return modern
+    date, _src = parse_slug(slug)
     return CONTENT / f"content-{date}.json"
 
 
-def content_dates():
-    dates = []
+def content_slugs():
+    slugs = []
     for p in CONTENT.glob("*.json"):
         stem = p.stem
         if stem.startswith("content-"):
             stem = stem[len("content-"):]
-        dates.append(stem)
-    return sorted(dates)
+        slugs.append(stem)
+    return sorted(slugs)
 
 
-def load_transcript(date):
-    data = load_json(TRANSCRIPTS / f"{date}.json")
+def doc_slug(doc, fallback=""):
+    if doc.get("slug"):
+        return doc["slug"]
+    source = doc.get("source") or detect_source(doc.get("video_page") or "")
+    date = doc.get("date") or fallback
+    return slug_for(date, source)
+
+
+def load_transcript(slug):
+    data = load_json(TRANSCRIPTS / f"{slug}.json")
     if not isinstance(data, list):
         return []
     cues = []
@@ -258,6 +271,57 @@ def window_score(target, joined):
     if target in joined or joined in target:
         ratio = max(ratio, 0.9)
     return max(ratio, cover)
+
+
+def split_de_sents(text):
+    text = re.sub(r"\s+", " ", (text or "").strip())
+    if not text:
+        return []
+    parts = re.split(r'(?<=[.!?…])\s+(?=[A-ZÄÖÜ„"»])', text)
+    return [p.strip() for p in parts if p.strip()]
+
+
+def split_zh_sents(text):
+    text = re.sub(r"\s+", " ", (text or "").strip())
+    if not text:
+        return []
+    parts = re.split(r'(?<=[。！？])', text)
+    return [p.strip() for p in parts if p.strip()] or [text]
+
+
+def merge_to_n(parts, n, joiner=" "):
+    parts = [p for p in parts if p]
+    if n <= 0 or len(parts) <= n:
+        return parts
+    parts = list(parts)
+    while len(parts) > n:
+        i = min(range(len(parts) - 1), key=lambda k: len(parts[k]) + len(parts[k + 1]))
+        parts[i] = parts[i] + joiner + parts[i + 1]
+        del parts[i + 1]
+    return parts
+
+
+def expand_lines(paragraphs, translations):
+    """One German sentence per row, Chinese directly underneath."""
+    out_de, out_zh = [], []
+    for de, zh in zip(paragraphs or [], translations or []):
+        ds = split_de_sents(de)
+        zs = split_zh_sents(zh)
+        if not ds:
+            continue
+        if len(zs) > len(ds):
+            zs = merge_to_n(zs, len(ds), "")
+        elif len(zs) < len(ds):
+            if zs:
+                ds = merge_to_n(ds, len(zs), " ")
+            else:
+                zs = [""] * len(ds)
+        if not zs:
+            zs = [zh.strip() or ""] * len(ds)
+        for a, b in zip(ds, zs):
+            out_de.append(a)
+            out_zh.append(b)
+    return out_de, out_zh
 
 
 def align_paragraphs(paragraphs, cues, cursor=0):
@@ -385,19 +449,26 @@ def word_gloss_map(doc, cache):
 
 def render(doc):
     date = doc["date"]
+    slug = doc_slug(doc, date)
+    source = doc.get("source") or detect_source(doc.get("video_page") or "")
+    info = SOURCES.get(source) or SOURCES["einfach"]
     if any(len(n.get("paragraphs") or []) != len(n.get("translations") or []) for n in doc["news"]):
-        raise SystemExit(f"{date}: paragraphs 与 translations 数量不一致")
-    meta = load_json(META / f"{date}.json")
-    cues = load_transcript(date)
+        raise SystemExit(f"{slug}: paragraphs 与 translations 数量不一致")
+    meta = load_json(META / f"{slug}.json")
+    if meta is None and source == "einfach" and slug != date:
+        meta = load_json(META / f"{date}.json")
+    cues = load_transcript(slug)
+    if not cues and source == "einfach" and slug != date:
+        cues = load_transcript(date)
     gloss, form_to_key, phrases = word_gloss_map(doc, load_cache())
     news_html = []
     cursor = 0
     for n in doc["news"]:
-        paras = n.get("paragraphs") or []
-        trans = n.get("translations") or []
+        paras, trans = expand_lines(n.get("paragraphs") or [], n.get("translations") or [])
         times, cursor = align_paragraphs(paras, cues, cursor)
         news_html.append({
             "title": n["title"],
+            "title_zh": n.get("title_zh") or "",
             "paras": [
                 {"de": de, "zh": zh, "start": start, "end": end}
                 for (de, zh), (start, end) in zip(zip(paras, trans), times)
@@ -419,6 +490,10 @@ def render(doc):
         duration = cues[-1]["end"]
     payload = {
         "date": date,
+        "slug": slug,
+        "source": source,
+        "source_label": info["label"],
+        "source_short": info["short"],
         "video_page": doc.get("video_page") or (meta or {}).get("video_page") or "",
         "embed_url": doc.get("embed_url") or "",
         "mp4_url": derive_mp4_url(meta),
@@ -430,38 +505,49 @@ def render(doc):
     }
     tpl = (TEMPLATES / "episode.html").read_text()
     return (
-        tpl.replace("__DATE__", doc["date"])
+        tpl.replace("__DATE__", date)
         .replace("__PAYLOAD__", json.dumps(payload, ensure_ascii=False).replace("</", "<\\/"))
     )
 
 
-def build(date=None, push=False):
+def build(slug=None, push=False):
     SITE.mkdir(parents=True, exist_ok=True)
-    if date:
-        if date in FROZEN_DATES:
-            raise SystemExit(f"refusing to rebuild frozen page {date}")
-        dates = [date]
+    if slug:
+        if slug in FROZEN_DATES:
+            raise SystemExit(f"refusing to rebuild frozen page {slug}")
+        slugs = [slug]
     else:
-        dates = [d for d in content_dates() if d not in FROZEN_DATES]
-    for d in dates:
-        doc = json.loads(content_file(d).read_text())
+        slugs = [s for s in content_slugs() if s not in FROZEN_DATES]
+    for s in slugs:
+        doc = json.loads(content_file(s).read_text())
         html = render(doc)
-        (SITE / f"{d}.html").write_text(html)
-        print(f"[ok] {d}.html ({len(html)} bytes)")
+        out_slug = doc_slug(doc, s)
+        (SITE / f"{out_slug}.html").write_text(html)
+        print(f"[ok] {out_slug}.html ({len(html)} bytes)")
     build_index()
-    return dates
+    return slugs
 
 
-def build_index(all_dates=None):
-    dates = sorted(all_dates or content_dates(), reverse=True)
+def build_index(all_slugs=None):
+    slugs = sorted(all_slugs or content_slugs(), reverse=True)
     items = []
-    for d in dates:
+    for s in slugs:
         try:
-            doc = json.loads(content_file(d).read_text())
-            titles = " · ".join(n["title"] for n in doc["news"][:3])
-            items.append({"date": d, "titles": titles, "count": len(doc["news"])})
+            doc = json.loads(content_file(s).read_text())
         except FileNotFoundError:
-            pass
+            continue
+        source = doc.get("source") or detect_source(doc.get("video_page") or "")
+        info = SOURCES.get(source) or SOURCES["einfach"]
+        titles = " · ".join(n["title"] for n in doc["news"][:3])
+        items.append({
+            "date": doc.get("date") or parse_slug(s)[0],
+            "slug": doc_slug(doc, s),
+            "source": source,
+            "source_short": info["short"],
+            "source_label": info["label"],
+            "titles": titles,
+            "count": len(doc["news"]),
+        })
     tpl = (TEMPLATES / "index.html").read_text()
     html = tpl.replace("__ITEMS__", json.dumps(items, ensure_ascii=False).replace("</", "<\\/"))
     (SITE / "index.html").write_text(html)

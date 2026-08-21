@@ -10,10 +10,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "data" / "content"
 REQUIRED_TOP = ("date", "video_page", "embed_url", "news")
-REQUIRED_NEWS = ("title", "paragraphs", "translations", "vocab", "grammar_points", "background")
+REQUIRED_NEWS = ("title", "title_zh", "paragraphs", "translations", "vocab", "grammar_points", "background")
 REQUIRED_VOCAB = ("lemma", "key", "forms", "pos", "zh", "example_de")
 REQUIRED_GRAMMAR = ("title", "summary", "example_de", "example_zh")
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+SLUG_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})(?:-(20uhr))?$")
 
 
 def is_wetter(title: str) -> bool:
@@ -29,14 +30,14 @@ def load_path(arg: str) -> Path:
     p = Path(arg)
     if p.exists():
         return p
-    if DATE_RE.match(arg):
+    if SLUG_RE.match(arg):
         return CONTENT / f"{arg}.json"
-    raise SystemExit(f"usage: validate-content.py <file.json|YYYY-MM-DD>\nnot found: {arg}")
+    raise SystemExit(f"usage: validate-content.py <file.json|YYYY-MM-DD[-20uhr]>\nnot found: {arg}")
 
 
 def main(argv: list[str]) -> int:
     if len(argv) != 2:
-        print("usage: validate-content.py <file.json|YYYY-MM-DD>", file=sys.stderr)
+        print("usage: validate-content.py <file.json|YYYY-MM-DD[-20uhr]>", file=sys.stderr)
         return 1
     path = load_path(argv[1])
     errors: list[str] = []
@@ -51,9 +52,17 @@ def main(argv: list[str]) -> int:
             errors.append(f"missing top-level field {k}")
     if not DATE_RE.match(str(doc.get("date") or "")):
         errors.append(f"bad date: {doc.get('date')!r}")
-    if path.stem != str(doc.get("date") or path.stem) and DATE_RE.match(path.stem):
-        if path.stem != doc.get("date"):
-            errors.append(f"filename date {path.stem} != doc.date {doc.get('date')}")
+    sm = SLUG_RE.match(path.stem)
+    if sm:
+        file_date, src_suffix = sm.group(1), sm.group(2)
+        if file_date != str(doc.get("date") or ""):
+            errors.append(f"filename date {file_date} != doc.date {doc.get('date')}")
+        if src_suffix == "20uhr" and doc.get("source") not in (None, "", "20uhr"):
+            errors.append(f"20uhr file has source={doc.get('source')!r}")
+        if src_suffix == "20uhr" and not doc.get("source"):
+            errors.append("20uhr file missing source=20uhr")
+        if not src_suffix and doc.get("source") == "20uhr":
+            errors.append("source=20uhr must live in YYYY-MM-DD-20uhr.json")
 
     news = doc.get("news")
     if not isinstance(news, list) or not news:

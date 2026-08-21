@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
-"""Parse a tagesschau Einfacher Sprache episode page and ingest subtitle.
+"""Parse a tagesschau episode page (einfach or 20:00) and ingest subtitle.
 
 Canonical episode date = Europe/Berlin calendar day of the media file
 (TV-YYYYMMDD / audio/YYYY/MMDD). broadcastedOnDateTime is UTC and is only
 used as a fallback after converting to Berlin.
 
-SKIP (exit 3) only when this date already has the SAME identity
+Files: YYYY-MM-DD.* (einfach) or YYYY-MM-DD-20uhr.* (20:00). Same calendar
+day can hold both shows.
+
+SKIP (exit 3) only when this slug already has the SAME identity
 (episode_id + video_id + subtitle_url) AND the remote XML bytes match
 the stored file AND the transcript still matches the lead synopsis.
 File existence is not enough.
 
-Exit 1 if the page still hangs a subtitle that already belongs to another date
+Exit 1 if the page still hangs a subtitle that already belongs to another slug
 (the 2026-08-18 stale-subtitle pitfall).
 """
 from __future__ import annotations
@@ -25,6 +28,8 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
+from sources import detect_source, slug_for, source_info
 
 BERLIN = ZoneInfo("Europe/Berlin")
 STOP = {
@@ -100,18 +105,18 @@ def first(html: str, pat: str) -> str:
     return m.group(1) if m else ""
 
 
-def parse_fields(html: str, episode_url: str) -> dict:
+def parse_fields(html: str, episode_url: str, source: str = "") -> dict:
     date, md, berlin_iso = canonical_date(html)
     text = unescape(html)
-    episode_id = first(episode_url, r"(tse-\d+)") or first(html, r"(tse-\d+)\.html")
+    src = detect_source(episode_url, source)
+    info = source_info(src)
+    episode_id = (
+        first(episode_url, info["episode_re"])
+        or first(html, info["episode_re"] + r"\.html")
+    )
     video_id = first(html, r"(video-\d+)\.html")
     subtitle_id = first(html, r"(untertitel-\d+)\.xml")
-    video_page = ""
-    if video_id:
-        video_page = (
-            "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/"
-            f"{video_id}.html"
-        )
+    video_page = f"{info['base']}{video_id}.html" if video_id else ""
     m3u8 = first(html, r"(https://adaptive\.tagesschau\.de/[^\"']*master\.m3u8)")
     m3u8 = m3u8.split("&")[0]
     mp3 = first(html, r"(https://tagesschau-podcast\.ard-mcdn\.de/audio/[^\"']+\.mp3)")
@@ -119,15 +124,15 @@ def parse_fields(html: str, episode_url: str) -> dict:
     synopsis = first(text, r'"synopsis"\s*:\s*"([^"]*)"') or first(
         html, r"synopsis&quot;:&quot;([^&]*)"
     )
-    subtitle_url = ""
-    if subtitle_id:
-        subtitle_url = (
-            "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/"
-            f"{subtitle_id}.xml"
-        )
+    synopsis = (synopsis or "").replace("\\n", "\n")
+    subtitle_url = f"{info['base']}{subtitle_id}.xml" if subtitle_id else ""
     dt = parse_broadcasted_at(html)
+    slug = slug_for(date, src) if date else ""
     return {
         "date": date,
+        "slug": slug,
+        "source": src,
+        "source_label": info["label"],
         "timezone": "Europe/Berlin",
         "broadcasted_at": berlin_iso,
         "broadcasted_at_utc": dt.astimezone(timezone.utc).isoformat() if dt else "",
@@ -164,21 +169,25 @@ def id_from(text: str, pat: str) -> str:
 
 
 def identity_of(doc: dict) -> tuple[str, str, str]:
-    episode = doc.get("episode_id") or id_from(doc.get("episode_url") or "", r"(tse-\d+)")
+    episode = (
+        doc.get("episode_id")
+        or id_from(doc.get("episode_url") or "", r"(tse-\d+)")
+        or id_from(doc.get("episode_url") or "", r"(ts-\d+)")
+    )
     video = doc.get("video_id") or id_from(doc.get("video_page") or "", r"(video-\d+)")
     sub = doc.get("subtitle_url") or ""
     return (episode, video, sub)
 
 
-def subtitle_owner(metas: dict[str, dict], subtitle_url: str, except_date: str = "") -> str:
-    """Earliest other date that already stored this subtitle URL."""
+def subtitle_owner(metas: dict[str, dict], subtitle_url: str, except_slug: str = "") -> str:
+    """Earliest other slug that already stored this subtitle URL."""
     if not subtitle_url:
         return ""
-    for date in sorted(metas):
-        if date == except_date:
+    for slug in sorted(metas):
+        if slug == except_slug:
             continue
-        if (metas[date].get("subtitle_url") or "") == subtitle_url:
-            return date
+        if (metas[slug].get("subtitle_url") or "") == subtitle_url:
+            return slug
     return ""
 
 
@@ -272,6 +281,9 @@ def _maybe_enrich_meta(meta_path: Path, existing: dict, fields: dict) -> None:
         "synopsis",
         "subtitle_url",
         "subtitle_source",
+        "source",
+        "source_label",
+        "slug",
     ):
         val = fields.get(key)
         if val and merged.get(key) != val:
@@ -282,10 +294,10 @@ def _maybe_enrich_meta(meta_path: Path, existing: dict, fields: dict) -> None:
     meta_path.write_text(json.dumps(merged, ensure_ascii=False, indent=2) + "\n")
 
 
-def _skip(date: str, fields: dict, meta_path: Path, existing: dict) -> int:
+def _skip(slug: str, fields: dict, meta_path: Path, existing: dict) -> int:
     _maybe_enrich_meta(meta_path, existing, fields)
     print(
-        f"SKIP: {date} identity unchanged ({fields['episode_id']} / {fields['subtitle_id']})",
+        f"SKIP: {slug} identity unchanged ({fields['episode_id']} / {fields['subtitle_id']})",
         file=sys.stderr,
     )
     print(meta_path)
@@ -308,7 +320,8 @@ def write_episode(fields: dict, xml_bytes: bytes, xml_path: Path, trans_path: Pa
             file=sys.stderr,
         )
         return 1
-    print(f"  Date:      {date} (Europe/Berlin, media={fields['media_date'] or '—'})", file=sys.stderr)
+    slug = fields.get("slug") or date
+    print(f"  Date:      {date}  slug={slug}  source={fields.get('source')}", file=sys.stderr)
     print(f"  Broadcast: {fields['broadcasted_at'] or '—'}", file=sys.stderr)
     print(f"  Episode:   {fields['episode_id']}  video {fields['video_id']}", file=sys.stderr)
     print(f"  Themen:    {fields['synopsis']}", file=sys.stderr)
@@ -316,7 +329,7 @@ def write_episode(fields: dict, xml_bytes: bytes, xml_path: Path, trans_path: Pa
     xml_path.write_bytes(xml_bytes)
     trans_path.write_text(json.dumps(cues, ensure_ascii=False, indent=2) + "\n")
     out = dict(fields)
-    out["transcript_file"] = f"data/transcripts/{date}.json"
+    out["transcript_file"] = f"data/transcripts/{slug}.json"
     meta_path.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n")
     print(f"  Segments: {len(cues)}", file=sys.stderr)
     print("Done.", file=sys.stderr)
@@ -324,9 +337,10 @@ def write_episode(fields: dict, xml_bytes: bytes, xml_path: Path, trans_path: Pa
     return 0
 
 
-def ingest(html: str, episode_url: str, data: Path) -> int:
-    fields = parse_fields(html, episode_url)
+def ingest(html: str, episode_url: str, data: Path, source: str = "") -> int:
+    fields = parse_fields(html, episode_url, source)
     date = fields["date"]
+    slug = fields["slug"]
     if not date:
         print("ERROR: cannot derive episode date (no TV-YYYYMMDD, no broadcastedOnDateTime)", file=sys.stderr)
         return 1
@@ -348,26 +362,26 @@ def ingest(html: str, episode_url: str, data: Path) -> int:
         d.mkdir(parents=True, exist_ok=True)
 
     metas = load_metas(meta_dir)
-    owner = subtitle_owner(metas, fields["subtitle_url"], except_date=date)
+    owner = subtitle_owner(metas, fields["subtitle_url"], except_slug=slug)
     if owner:
         print(
             f"ERROR: subtitle {fields['subtitle_id']} already stored as {owner}; "
-            f"page date {date} is still hanging the previous episode's captions. Not writing.",
+            f"page slug {slug} is still hanging the previous episode's captions. Not writing.",
             file=sys.stderr,
         )
         return 1
 
-    meta_path = meta_dir / f"{date}.json"
-    trans_path = trans_dir / f"{date}.json"
-    xml_path = sub_dir / f"{date}.xml"
-    existing = metas.get(date)
+    meta_path = meta_dir / f"{slug}.json"
+    trans_path = trans_dir / f"{slug}.json"
+    xml_path = sub_dir / f"{slug}.xml"
+    existing = metas.get(slug)
     remote: bytes | None = None
     if existing and trans_path.exists() and trans_path.stat().st_size > 5:
         old_id = identity_of(existing)
         new_id = identity_of(fields)
         if old_id != new_id:
             print(
-                f"WARN: {date} exists but identity changed {old_id} → {new_id}; re-ingesting",
+                f"WARN: {slug} exists but identity changed {old_id} → {new_id}; re-ingesting",
                 file=sys.stderr,
             )
         else:
@@ -381,7 +395,7 @@ def ingest(html: str, episode_url: str, data: Path) -> int:
                         f"WARN: could not re-check subtitle ({exc}); local transcript matches synopsis",
                         file=sys.stderr,
                     )
-                    return _skip(date, fields, meta_path, existing)
+                    return _skip(slug, fields, meta_path, existing)
                 print(
                     f"ERROR: subtitle re-check failed ({exc}) and local transcript does not match synopsis",
                     file=sys.stderr,
@@ -390,14 +404,14 @@ def ingest(html: str, episode_url: str, data: Path) -> int:
             if stored and stored == remote:
                 cues = json.loads(trans_path.read_text())
                 if transcript_matches_synopsis(cues, fields["synopsis"]):
-                    return _skip(date, fields, meta_path, existing)
+                    return _skip(slug, fields, meta_path, existing)
                 print(
                     "WARN: stored XML unchanged but transcript does not match synopsis; re-ingesting",
                     file=sys.stderr,
                 )
             else:
                 print(
-                    f"WARN: {date} subtitle XML changed in place at {fields['subtitle_id']}; re-ingesting",
+                    f"WARN: {slug} subtitle XML changed in place at {fields['subtitle_id']}; re-ingesting",
                     file=sys.stderr,
                 )
 
@@ -411,9 +425,10 @@ def main() -> int:
     ap.add_argument("--html", required=True)
     ap.add_argument("--episode-url", required=True)
     ap.add_argument("--data", required=True)
+    ap.add_argument("--source", default="", help="einfach | 20uhr (default: detect from URL)")
     args = ap.parse_args()
     html = Path(args.html).read_text(encoding="utf-8", errors="replace")
-    return ingest(html, args.episode_url, Path(args.data))
+    return ingest(html, args.episode_url, Path(args.data), args.source)
 
 
 if __name__ == "__main__":

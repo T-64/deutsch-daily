@@ -1,14 +1,14 @@
 # Deutsch Daily — 每日德语听力学习站
 
-Tagesschau in einfacher Sprache（德国公共广播的简化德语新闻）→ 精读学习页面，每天 7:00 自动发布。
+两条线都在首页：`T-64 · tagesschau 20:00 Uhr` 与 `T-64 · tagesschau in einfacher Sprache`。每天 7:00 抓前一晚 Berlin 媒体日。
 
 **在线地址** https://t-64.github.io/deutsch-daily/
 
 ## 这是什么
 
-一个全自动的德语学习管道。每天早上抓取当天的 Tagesschau 简易德语新闻视频，用官方字幕转写，AI 整理成结构化数据，本地脚本渲染成静态页面上传 GitHub Pages。手机浏览器打开即用，零登录、零后端、离线可读（除视频）。
+一个全自动的德语学习管道。每天抓取 Tagesschau **20:00 正片**和 **einfacher Sprache**（官方字幕），整理成逐句德中对照页面。手机打开即用，零登录、零后端。
 
-适合 A2-B1 水平的德语学习者（我，准备去斯图加特留学）每天 15 分钟精读一篇新闻。
+适合 B1–C1（20:00）和 A2–B1（简易德语）。我准备去斯图加特留学，每天精读一条新闻。
 
 ## 架构：数据与排版分离
 
@@ -38,20 +38,22 @@ Tagesschau in einfacher Sprache（德国公共广播的简化德语新闻）→ 
 
 ## 每日流程（真源：`SKILL.md`）
 
-每天 07:00 Hermes cron 加载 skill `tagesschau-einfache-sprache`，按 `SKILL.md` 四步走。cron prompt 只触发，不另写流程。
+每天 07:00 Hermes cron 加载 skill `tagesschau-einfache-sprache`，按 `SKILL.md` 四步走。cron prompt 只触发，不另写流程。**日更默认 `20uhr`。**
 
 ```bash
 cd ~/tagesschau-deutsch
-bash scripts/fetch-latest.sh          # 0=新/重抓  3=同身份且字幕未变  1=失败或挂着上期字幕
-python3 scripts/validate-content.py YYYY-MM-DD
-bash scripts/publish.sh YYYY-MM-DD    # 渲一期 + 定点 git push
+bash scripts/fetch-latest.sh 20uhr    # 0=新/重抓  3=同身份且字幕未变  1=失败或挂着上期字幕
+# bash scripts/fetch-latest.sh einfach  # 仍可补抓简易德语
+python3 scripts/validate-content.py YYYY-MM-DD-20uhr
+bash scripts/publish.sh YYYY-MM-DD-20uhr  # 渲一期 + 定点 git push
 ```
 
 本地改版面：
 
 ```bash
 python3 build.py            # 重建全部有 content 的期
-python3 build.py 2026-08-13 # 只重建一期
+python3 build.py 2026-08-13         # 简易一期
+python3 build.py 2026-08-19-20uhr   # 20:00 一期
 python3 -m http.server 4185 -d docs
 ```
 

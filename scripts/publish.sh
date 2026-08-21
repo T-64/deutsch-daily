@@ -1,11 +1,12 @@
 #!/bin/bash
 # 渲染一期并只提交该期 HTML + index（禁止 git add -A）
 # 用法: bash scripts/publish.sh YYYY-MM-DD
+#        bash scripts/publish.sh YYYY-MM-DD-20uhr
 set -euo pipefail
 
 DATE="${1:-}"
-if [[ ! "$DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
-  echo "usage: publish.sh YYYY-MM-DD" >&2
+if [[ ! "$DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}(-20uhr)?$ ]]; then
+  echo "usage: publish.sh YYYY-MM-DD[-20uhr]" >&2
   exit 1
 fi
 

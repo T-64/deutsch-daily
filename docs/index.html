@@ -25,59 +25,51 @@
   header { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: end; margin-bottom: 38px; }
   .eyebrow { margin-bottom: 10px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
   h1 { max-width: 650px; font: 750 clamp(40px, 7vw, 72px)/1.02 ui-serif, Georgia, serif; letter-spacing: -.055em; }
-  .sub { max-width: 340px; color: var(--muted); font-size: 14px; }
-  .latest {
-    display: grid; grid-template-columns: 145px 1fr auto; gap: 20px; align-items: center;
-    margin-bottom: 34px; padding: 25px; border-radius: 24px; background: var(--ink);
-    color: #eff6f4; text-decoration: none; box-shadow: var(--shadow);
+  .sub { max-width: 380px; color: var(--muted); font-size: 14px; }
+  .series {
+    display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-bottom: 36px;
   }
-  .latest-date { color: #9fd3d0; font: 750 13px/1.4 ui-monospace, monospace; }
-  .latest-copy small { display: block; margin-bottom: 4px; color: #9fd3d0; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-  .latest-copy strong { display: block; font: 700 20px/1.35 ui-serif, Georgia, serif; }
-  .latest-go { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 15px; background: var(--warm); color: var(--ink); font-size: 21px; }
-  .filters { display: flex; gap: 8px; margin: 0 3px 14px; }
-  .filters button {
-    border: 1px solid var(--line); background: rgba(255,255,255,.7); color: var(--muted);
-    border-radius: 999px; padding: 6px 12px; font: 800 11px/1 ui-sans-serif, system-ui;
-    letter-spacing: .08em; text-transform: uppercase; cursor: pointer;
+  a.series-card {
+    display: grid; gap: 10px; min-height: 168px; padding: 22px; border-radius: 24px;
+    background: var(--ink); color: #eff6f4; text-decoration: none; box-shadow: var(--shadow);
   }
-  .filters button.on { background: var(--ink); color: #eff6f4; border-color: var(--ink); }
-  .badge {
-    display: inline-block; margin-top: 6px; padding: 2px 7px; border-radius: 999px;
-    font: 800 10px/1.3 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase;
-  }
-  .badge-einfach { background: var(--accent-soft); color: var(--accent); }
-  .badge-20uhr { background: #172127; color: #9fd3d0; }
-  .datebox .badge { margin-top: 8px; }
+  a.series-card.einfach { background: #1c3d40; }
+  .series-kicker { color: #9fd3d0; font: 800 11px/1.4 ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
+  .series-name { font: 750 22px/1.25 ui-serif, Georgia, serif; letter-spacing: -.03em; }
+  .series-meta { color: #9fd3d0; font-size: 13px; }
+  .series-titles { color: #d7e8e6; font-size: 14px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .section-head { display: flex; align-items: baseline; justify-content: space-between; margin: 0 3px 12px; }
   .section-head h2 { font-size: 16px; }
   .section-head span { color: var(--muted); font-size: 12px; }
-  .list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
-  a.ep {
-    display: grid; grid-template-columns: 78px minmax(0,1fr) auto; gap: 14px; align-items: center;
-    min-height: 108px; padding: 18px; border: 1px solid var(--line); border-radius: 18px;
-    background: rgba(255,255,255,.78); color: inherit; text-decoration: none; transition: transform .16s, box-shadow .16s, border-color .16s;
+  .days { display: grid; gap: 10px; }
+  .day {
+    display: grid; grid-template-columns: 88px minmax(0,1fr); gap: 16px; align-items: start;
+    padding: 16px 18px; border: 1px solid var(--line); border-radius: 18px;
+    background: rgba(255,255,255,.78);
   }
-  a.ep:hover { transform: translateY(-2px); border-color: #aacbc8; box-shadow: var(--shadow); }
-  .datebox { padding-right: 14px; border-right: 1px solid var(--line); text-align: center; }
-  .datebox b { display: block; color: var(--accent); font: 800 25px/1 ui-serif, Georgia, serif; }
-  .datebox span { color: var(--muted); font: 700 10px/1.4 ui-monospace, monospace; text-transform: uppercase; }
-  a.ep .t { overflow: hidden; color: var(--muted); font-size: 13px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
-  a.ep .arrow { color: var(--accent); font-size: 18px; }
+  .day-date b { display: block; color: var(--accent); font: 800 25px/1 ui-serif, Georgia, serif; }
+  .day-date span { color: var(--muted); font: 700 10px/1.4 ui-monospace, monospace; text-transform: uppercase; }
+  .day-shows { display: grid; gap: 8px; }
+  a.show {
+    display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; align-items: center;
+    padding: 8px 0; color: inherit; text-decoration: none;
+  }
+  a.show + a.show { border-top: 1px dashed var(--line); padding-top: 10px; }
+  .show-name { color: var(--accent-strong, var(--accent)); font: 800 11px/1.3 ui-monospace, monospace; letter-spacing: .06em; }
+  .show-titles { color: var(--muted); font-size: 13px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .show .arrow { color: var(--accent); font-size: 18px; }
   @media (max-width: 700px) {
     body { padding: 16px 12px; }
     nav { margin-bottom: 55px; }
     header { display: block; }
     .sub { margin-top: 18px; }
-    .latest { grid-template-columns: 1fr auto; padding: 20px; }
-    .latest-date { grid-column: 1 / -1; }
-    .list { grid-template-columns: 1fr; }
+    .series { grid-template-columns: 1fr; }
+    .day { grid-template-columns: 66px minmax(0,1fr); }
   }
   @media (max-width: 430px) {
     h1 { font-size: 42px; }
     .nav-note { display: none; }
-    .latest-copy strong { font-size: 17px; }
-    a.ep { grid-template-columns: 66px minmax(0,1fr) auto; }
+    .series-name { font-size: 19px; }
   }
 </style>
 </head>
@@ -85,65 +77,59 @@
 <div class="wrap">
   <nav>
     <div class="brand"><span class="brand-mark">DD</span><span>Deutsch Daily</span></div>
-    <span class="nav-note">20:00 · 简易德语</span>
+    <span class="nav-note">github.com/T-64</span>
   </nav>
   <header>
     <div>
-      <div class="eyebrow">Tagesschau</div>
+      <div class="eyebrow">T-64 · Deutsch Daily</div>
       <h1>每日德语新闻</h1>
     </div>
-    <div class="sub">20:00 正片与简易德语：视频、德中对照、点词释义、生词本。静态页面，无登录。</div>
+    <div class="sub">两条线都在首页：20:00 正片和简易德语。视频、逐句德中对照、点词释义、生词本。</div>
   </header>
-  <div id="latest"></div>
-  <div class="section-head"><h2>全部往期</h2><span id="total"></span></div>
-  <div class="filters" id="filters">
-    <button type="button" data-src="all" class="on">全部</button>
-    <button type="button" data-src="20uhr">20:00</button>
-    <button type="button" data-src="einfach">简易</button>
-  </div>
-  <div class="list" id="list"></div>
+  <div class="series" id="series"></div>
+  <div class="section-head"><h2>往期</h2><span id="total"></span></div>
+  <div class="days" id="days"></div>
 </div>
 <script>
-const ITEMS = [{"date": "2026-08-20", "slug": "2026-08-20-20uhr", "source": "20uhr", "source_short": "20:00", "titles": "Deutsche Gasspeicher nur halb voll · Vor der Landtagswahl in Sachsen-Anhalt · DGB-Ausbildungsreport 2026", "count": 10}, {"date": "2026-08-19", "slug": "2026-08-19", "source": "einfach", "source_short": "简易", "titles": "USA: Prozess gegen Meta · Migranten: Italien und Deutschland streiten · Hilfsorganisationen: Gefährliche Arbeit", "count": 6}, {"date": "2026-08-18", "slug": "2026-08-18", "source": "einfach", "source_short": "简易", "titles": "Drohnen: Neues Zentrum für Forschung · Hitze: Bauern haben weniger Ernte · Belgien: Feuerwehr weiter im Einsatz", "count": 5}, {"date": "2026-08-17", "slug": "2026-08-17", "source": "einfach", "source_short": "简易", "titles": "Belgien: Kampf gegen Feuer im Wald · Bundesländer lockern Lkw-Fahrverbot am Sonntag · E-Scooter: Unfälle und Diskussion über Helmpflicht", "count": 5}, {"date": "2026-08-13", "slug": "2026-08-13", "source": "einfach", "source_short": "简易", "titles": "Sonnenfinsternis: Himmel wird dunkel · Vor 65 Jahren: Mauer in Berlin gebaut · Vulkan ausgebrochen: Flughafen gesperrt", "count": 5}, {"date": "2026-08-12", "slug": "2026-08-12", "source": "einfach", "source_short": "简易", "titles": "Neue Regeln für Nachrichtendienste geplant · Forscher: Junge Menschen arbeiten viel in Deutschland · Sonnenfinsternis in Teilen Westeuropas", "count": 3}, {"date": "2026-08-10", "slug": "2026-08-10", "source": "einfach", "source_short": "简易", "titles": "Bahn: Mehr Gewalt gegen Zugbegleiter · Sommer: Temperaturen so hoch wie nie · Rhein: Fluss hat sehr wenig Wasser", "count": 6}, {"date": "2026-08-07", "slug": "2026-08-07", "source": "einfach", "source_short": "简易", "titles": "Rhein: Wasser ist niedrig · Südeuropa: Hitze in vielen Ländern · Mallorca: Mittelmeer so warm wie nie", "count": 4}, {"date": "2026-08-06", "slug": "2026-08-06", "source": "einfach", "source_short": "简易", "titles": "Flughafen Leipzig: Sprengstoff gefunden · Urteil: Lebenslange Haft wegen Anschlag · Bäume: Hilfe gegen Hitze", "count": 5}, {"date": "2026-08-05", "slug": "2026-08-05", "source": "einfach", "source_short": "简易", "titles": "Ukraine — Russische Angriffe · Zu wenig Wasser — Probleme für Bauern · Urlaub mit Rollstuhl am Strand", "count": 5}, {"date": "2026-08-04", "slug": "2026-08-04", "source": "einfach", "source_short": "简易", "titles": "EU-Innenminister beraten über Ceuta · Familienministerium: Pläne für Zivildienst · Kuba: Stromausfall", "count": 4}];
-let filter = 'all';
+const ITEMS = [{"date": "2026-08-20", "slug": "2026-08-20-20uhr", "source": "20uhr", "source_short": "20:00 Uhr", "source_label": "T-64 · tagesschau 20:00 Uhr", "titles": "Deutsche Gasspeicher nur halb voll · Vor der Landtagswahl in Sachsen-Anhalt · DGB-Ausbildungsreport 2026", "count": 10}, {"date": "2026-08-20", "slug": "2026-08-20", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Wenig Gas in Speichern: Preise steigen vielleicht · Umfrage: Auszubildende sind unzufrieden · Unwetter: Viele Schäden", "count": 5}, {"date": "2026-08-19", "slug": "2026-08-19", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "USA: Prozess gegen Meta · Migranten: Italien und Deutschland streiten · Hilfsorganisationen: Gefährliche Arbeit", "count": 6}, {"date": "2026-08-18", "slug": "2026-08-18", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Drohnen: Neues Zentrum für Forschung · Hitze: Bauern haben weniger Ernte · Belgien: Feuerwehr weiter im Einsatz", "count": 5}, {"date": "2026-08-17", "slug": "2026-08-17", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Belgien: Kampf gegen Feuer im Wald · Bundesländer lockern Lkw-Fahrverbot am Sonntag · E-Scooter: Unfälle und Diskussion über Helmpflicht", "count": 5}, {"date": "2026-08-13", "slug": "2026-08-13", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Sonnenfinsternis: Himmel wird dunkel · Vor 65 Jahren: Mauer in Berlin gebaut · Vulkan ausgebrochen: Flughafen gesperrt", "count": 5}, {"date": "2026-08-12", "slug": "2026-08-12", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Neue Regeln für Nachrichtendienste geplant · Forscher: Junge Menschen arbeiten viel in Deutschland · Sonnenfinsternis in Teilen Westeuropas", "count": 3}, {"date": "2026-08-10", "slug": "2026-08-10", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Bahn: Mehr Gewalt gegen Zugbegleiter · Sommer: Temperaturen so hoch wie nie · Rhein: Fluss hat sehr wenig Wasser", "count": 6}, {"date": "2026-08-07", "slug": "2026-08-07", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Rhein: Wasser ist niedrig · Südeuropa: Hitze in vielen Ländern · Mallorca: Mittelmeer so warm wie nie", "count": 4}, {"date": "2026-08-06", "slug": "2026-08-06", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Flughafen Leipzig: Sprengstoff gefunden · Urteil: Lebenslange Haft wegen Anschlag · Bäume: Hilfe gegen Hitze", "count": 5}, {"date": "2026-08-05", "slug": "2026-08-05", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Ukraine — Russische Angriffe · Zu wenig Wasser — Probleme für Bauern · Urlaub mit Rollstuhl am Strand", "count": 5}, {"date": "2026-08-04", "slug": "2026-08-04", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "EU-Innenminister beraten über Ceuta · Familienministerium: Pläne für Zivildienst · Kuba: Stromausfall", "count": 4}];
+const ORDER = ['20uhr', 'einfach'];
 function hrefOf(it) { return (it.slug || it.date) + '.html'; }
-function visible() {
-  return filter === 'all' ? ITEMS : ITEMS.filter(it => it.source === filter);
+function labelOf(it) {
+  return it.source_label || (it.source === '20uhr' ? 'T-64 · tagesschau 20:00 Uhr' : 'T-64 · tagesschau in einfacher Sprache');
 }
-function render() {
-  const items = visible();
-  document.getElementById('total').textContent = `${items.length} 期`;
-  const latest = items[0];
-  const latestEl = document.getElementById('latest');
-  if (latest) {
-    const tag = latest.source_short || (latest.source === '20uhr' ? '20:00' : '简易');
-    latestEl.innerHTML = `
-      <a class="latest" href="${hrefOf(latest)}">
-        <span class="latest-date">${formatLong(latest.date)} · ${tag}</span>
-        <span class="latest-copy"><small>最新一期 · ${latest.count} 条新闻</small><strong>${esc(latest.titles)}</strong></span>
-        <span class="latest-go">→</span>
-      </a>`;
-  } else {
-    latestEl.innerHTML = '';
-  }
-  document.getElementById('list').innerHTML = items.map(it => {
-    const d = new Date(it.date + 'T12:00:00');
-    const src = it.source || 'einfach';
-    const short = it.source_short || (src === '20uhr' ? '20:00' : '简易');
-    return `<a class="ep" href="${hrefOf(it)}">
-      <span class="datebox"><b>${String(d.getDate()).padStart(2, '0')}</b><span>${d.toLocaleDateString('de-DE', { month: 'short' })}</span><span class="badge badge-${src}">${short}</span></span>
-      <span class="t">${esc(it.titles)}${it.count > 3 ? ' …' : ''}</span><span class="arrow">→</span>
-    </a>`;
-  }).join('');
+function latestOf(src) {
+  return ITEMS.find(it => (it.source || 'einfach') === src);
 }
-document.getElementById('filters').addEventListener('click', (e) => {
-  const btn = e.target.closest('button[data-src]');
-  if (!btn) return;
-  filter = btn.dataset.src;
-  document.querySelectorAll('#filters button').forEach(b => b.classList.toggle('on', b === btn));
-  render();
+document.getElementById('series').innerHTML = ORDER.map(src => {
+  const it = latestOf(src);
+  if (!it) return '';
+  return `<a class="series-card ${src}" href="${hrefOf(it)}">
+    <div class="series-kicker">最新一期 · ${formatLong(it.date)}</div>
+    <div class="series-name">${esc(labelOf(it))}</div>
+    <div class="series-meta">${it.count} Themen</div>
+    <div class="series-titles">${esc(it.titles)}</div>
+  </a>`;
+}).join('');
+
+const byDate = {};
+ITEMS.forEach(it => {
+  const d = it.date;
+  (byDate[d] ||= []).push(it);
 });
-render();
+const dates = Object.keys(byDate).sort().reverse();
+document.getElementById('total').textContent = `${ITEMS.length} 期`;
+document.getElementById('days').innerHTML = dates.map(iso => {
+  const d = new Date(iso + 'T12:00:00');
+  const shows = byDate[iso].slice().sort((a, b) => ORDER.indexOf(a.source || 'einfach') - ORDER.indexOf(b.source || 'einfach'));
+  return `<div class="day">
+    <div class="day-date"><b>${String(d.getDate()).padStart(2, '0')}</b><span>${d.toLocaleDateString('de-DE', { month: 'short' })}</span></div>
+    <div class="day-shows">${shows.map(it => `<a class="show" href="${hrefOf(it)}">
+      <div><div class="show-name">${esc(labelOf(it))}</div><div class="show-titles">${esc(it.titles)}${it.count > 3 ? ' …' : ''}</div></div>
+      <span class="arrow">→</span>
+    </a>`).join('')}</div>
+  </div>`;
+}).join('');
+
 function formatLong(iso) {
   return new Date(iso + 'T12:00:00').toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
 }
