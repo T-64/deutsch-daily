@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Deutsch Daily</title>
+<meta name="description" content="把真实德语视频变成逐句对译、可查词、可导出 Anki 的学习材料。">
+<title>Deutsch Daily — 用真实视频学德语</title>
 <style>
   :root {
     --bg: #eef2f0; --surface: #fff; --surface-2: #f7f9f8; --ink: #172127;
@@ -18,122 +19,122 @@
     color: var(--ink); font: 16px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, "Noto Sans SC", sans-serif;
   }
   .wrap { width: min(1040px, 100%); margin: 0 auto; padding-bottom: 70px; }
-  nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: clamp(55px, 8vw, 100px); }
-  .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -.02em; }
+  nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: clamp(48px, 7vw, 82px); }
+  .brand { display: inline-flex; align-items: center; gap: 10px; color: inherit; font-weight: 800; letter-spacing: -.02em; text-decoration: none; }
   .brand-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--accent); color: #fff; font: 800 12px/1 ui-monospace, monospace; }
-  .nav-note { color: var(--muted); font-size: 12px; }
-  header { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: end; margin-bottom: 38px; }
-  .eyebrow { margin-bottom: 10px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-  h1 { max-width: 650px; font: 750 clamp(40px, 7vw, 72px)/1.02 ui-serif, Georgia, serif; letter-spacing: -.055em; }
-  .sub { max-width: 380px; color: var(--muted); font-size: 14px; }
-  .series {
-    display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-bottom: 36px;
-  }
-  a.series-card {
-    display: grid; gap: 10px; min-height: 168px; padding: 22px; border-radius: 24px;
-    background: var(--ink); color: #eff6f4; text-decoration: none; box-shadow: var(--shadow);
-  }
+  .nav-links { display: flex; gap: 18px; align-items: center; }
+  .nav-links a { color: var(--muted); font-size: 13px; font-weight: 700; text-decoration: none; }
+  .nav-links a:hover { color: var(--accent); }
+  header { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: end; margin-bottom: 28px; }
+  h1 { max-width: 680px; font: 750 clamp(40px, 6.5vw, 68px)/1.04 ui-serif, Georgia, serif; letter-spacing: -.055em; }
+  h1 span { display: block; white-space: nowrap; }
+  .sub { max-width: 390px; color: var(--muted); font-size: 15px; }
+  .import-card { margin-bottom: 54px; padding: clamp(20px, 4vw, 34px); border: 1px solid var(--line); border-radius: 24px; background: rgba(255,255,255,.88); box-shadow: var(--shadow); }
+  .import-card h2 { margin-bottom: 6px; font: 750 clamp(21px, 3vw, 28px)/1.25 ui-serif, Georgia, serif; letter-spacing: -.025em; }
+  .import-card p { margin-bottom: 18px; color: var(--muted); font-size: 14px; }
+  .url-form { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; }
+  .url-form input { min-width: 0; height: 52px; padding: 0 16px; border: 1px solid #cbd8d4; border-radius: 14px; background: var(--surface); color: var(--ink); font: 500 15px/1 ui-sans-serif, system-ui; outline: none; }
+  .url-form input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(23,107,114,.13); }
+  .url-form button { min-height: 52px; padding: 0 22px; border: 0; border-radius: 14px; background: var(--accent); color: #fff; cursor: pointer; font: 800 14px/1 ui-sans-serif, system-ui; }
+  .url-form button:hover { background: #125b61; }
+  .url-error { min-height: 22px; padding-top: 8px; color: #a33d32; font-size: 13px; }
+  .import-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--muted); font-size: 12px; }
+  .import-meta b { color: var(--accent); }
+  .section-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin: 0 3px 14px; }
+  .section-head h2 { font: 750 24px/1.2 ui-serif, Georgia, serif; letter-spacing: -.025em; }
+  .section-head p, .section-head span { color: var(--muted); font-size: 13px; }
+  .series { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-bottom: 42px; }
+  a.series-card { display: grid; gap: 10px; min-height: 168px; padding: 22px; border-radius: 24px; background: var(--ink); color: #eff6f4; text-decoration: none; box-shadow: var(--shadow); }
   a.series-card.einfach { background: #1c3d40; }
   .series-kicker { color: #9fd3d0; font: 800 11px/1.4 ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
   .series-name { font: 750 22px/1.25 ui-serif, Georgia, serif; letter-spacing: -.03em; }
   .series-meta { color: #9fd3d0; font-size: 13px; }
   .series-titles { color: #d7e8e6; font-size: 14px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-  .section-head { display: flex; align-items: baseline; justify-content: space-between; margin: 0 3px 12px; }
-  .section-head h2 { font-size: 16px; }
-  .section-head span { color: var(--muted); font-size: 12px; }
   .days { display: grid; gap: 10px; }
-  .day {
-    display: grid; grid-template-columns: 88px minmax(0,1fr); gap: 16px; align-items: start;
-    padding: 16px 18px; border: 1px solid var(--line); border-radius: 18px;
-    background: rgba(255,255,255,.78);
-  }
+  .day { display: grid; grid-template-columns: 88px minmax(0,1fr); gap: 16px; align-items: start; padding: 16px 18px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.78); }
   .day-date b { display: block; color: var(--accent); font: 800 25px/1 ui-serif, Georgia, serif; }
   .day-date span { color: var(--muted); font: 700 10px/1.4 ui-monospace, monospace; text-transform: uppercase; }
   .day-shows { display: grid; gap: 8px; }
-  a.show {
-    display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; align-items: center;
-    padding: 8px 0; color: inherit; text-decoration: none;
-  }
+  a.show { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; align-items: center; padding: 8px 0; color: inherit; text-decoration: none; }
   a.show + a.show { border-top: 1px dashed var(--line); padding-top: 10px; }
-  .show-name { color: var(--accent-strong, var(--accent)); font: 800 11px/1.3 ui-monospace, monospace; letter-spacing: .06em; }
+  .show-name { color: var(--accent); font: 800 11px/1.3 ui-monospace, monospace; letter-spacing: .06em; }
   .show-titles { color: var(--muted); font-size: 13px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .show .arrow { color: var(--accent); font-size: 18px; }
-  @media (max-width: 700px) {
-    body { padding: 16px 12px; }
-    nav { margin-bottom: 55px; }
-    header { display: block; }
-    .sub { margin-top: 18px; }
-    .series { grid-template-columns: 1fr; }
-    .day { grid-template-columns: 66px minmax(0,1fr); }
-  }
-  @media (max-width: 430px) {
-    h1 { font-size: 42px; }
-    .nav-note { display: none; }
-    .series-name { font-size: 19px; }
-  }
+  footer { display: flex; justify-content: space-between; gap: 24px; margin-top: 44px; padding: 22px 3px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+  footer a { color: inherit; }
+  @media (max-width: 700px) { body { padding: 16px 12px; } nav { margin-bottom: 46px; } header { display: block; } .sub { margin-top: 16px; } .url-form { grid-template-columns: 1fr; } .url-form button { width: 100%; } .series { grid-template-columns: 1fr; } .day { grid-template-columns: 66px minmax(0,1fr); } }
+  @media (max-width: 430px) { h1 { font-size: 42px; } .nav-links a:first-child { display: none; } .series-name { font-size: 19px; } footer { display: block; } }
 </style>
 </head>
 <body>
 <div class="wrap">
   <nav>
-    <div class="brand"><span class="brand-mark">DD</span><span>Deutsch Daily</span></div>
-    <span class="nav-note">github.com/T-64</span>
+    <a class="brand" href="index.html"><span class="brand-mark">DD</span><span>Deutsch Daily</span></a>
+    <div class="nav-links"><a href="#today">今日精选</a><a href="https://github.com/T-64/deutsch-daily" target="_blank" rel="noopener">开源代码</a></div>
   </nav>
   <header>
-    <div>
-      <div class="eyebrow">T-64 · Deutsch Daily</div>
-      <h1>每日德语新闻</h1>
-    </div>
-    <div class="sub">两条线都在首页：20:00 正片和简易德语。视频、逐句德中对照、点词释义、生词本。</div>
+    <h1><span>把真实德语，</span><span>变成今天的一课</span></h1>
+    <p class="sub">逐句听、逐句读、随手查词。你可以从一个视频链接开始，也可以直接学习每天整理好的新闻。</p>
   </header>
-  <div class="series" id="series"></div>
+  <section class="import-card" aria-labelledby="import-title">
+    <h2 id="import-title">打开一个视频</h2>
+    <p>粘贴链接；已支持的内容会直接进入逐句学习页。</p>
+    <form class="url-form" id="url-form" novalidate>
+      <label for="video-url" style="position:absolute;left:-9999px">视频链接</label>
+      <input id="video-url" name="url" type="url" inputmode="url" autocomplete="url" placeholder="https://www.tagesschau.de/…" aria-describedby="url-error">
+      <button type="submit">用这个视频学习</button>
+    </form>
+    <div class="url-error" id="url-error" role="alert" aria-live="polite"></div>
+    <div class="import-meta"><span><b>当前支持</b> 已收录的 Tagesschau</span><span>无需登录</span><span>生词保存在本机</span></div>
+  </section>
+  <section id="today" aria-labelledby="today-title">
+    <div class="section-head"><div><h2 id="today-title">今日精选</h2><p>不想找视频，就从今天的一条新闻开始。</p></div></div>
+    <div class="series" id="series"></div>
+  </section>
   <div class="section-head"><h2>往期</h2><span id="total"></span></div>
   <div class="days" id="days"></div>
+  <footer><span>一个开源的真实语料学习实验。</span><span>内容来源归原权利人所有 · <a href="https://github.com/T-64/deutsch-daily/issues" target="_blank" rel="noopener">反馈问题</a></span></footer>
 </div>
 <script>
 const ITEMS = __ITEMS__;
 const ORDER = ['20uhr', 'einfach'];
 function hrefOf(it) { return (it.slug || it.date) + '.html'; }
-function labelOf(it) {
-  return it.source_label || (it.source === '20uhr' ? 'T-64 · tagesschau 20:00 Uhr' : 'T-64 · tagesschau in einfacher Sprache');
-}
-function latestOf(src) {
-  return ITEMS.find(it => (it.source || 'einfach') === src);
-}
+function labelOf(it) { return it.source_label || (it.source === '20uhr' ? 'T-64 · tagesschau 20:00 Uhr' : 'T-64 · tagesschau in einfacher Sprache'); }
+function latestOf(src) { return ITEMS.find(it => (it.source || 'einfach') === src); }
+
+document.getElementById('url-form').addEventListener('submit', event => {
+  event.preventDefault();
+  const field = document.getElementById('video-url');
+  const error = document.getElementById('url-error');
+  try {
+    const url = new URL(field.value.trim());
+    if (!['http:', 'https:'].includes(url.protocol)) throw new Error('protocol');
+    error.textContent = '';
+    location.href = 'open.html#' + encodeURIComponent(url.href);
+  } catch {
+    error.textContent = '请粘贴一个以 http:// 或 https:// 开头的完整视频链接。';
+    field.focus();
+  }
+});
+
 document.getElementById('series').innerHTML = ORDER.map(src => {
   const it = latestOf(src);
   if (!it) return '';
-  return `<a class="series-card ${src}" href="${hrefOf(it)}">
-    <div class="series-kicker">最新一期 · ${formatLong(it.date)}</div>
-    <div class="series-name">${esc(labelOf(it))}</div>
-    <div class="series-meta">${it.count} Themen</div>
-    <div class="series-titles">${esc(it.titles)}</div>
-  </a>`;
+  return `<a class="series-card ${src}" href="${hrefOf(it)}"><div class="series-kicker">最新一期 · ${formatLong(it.date)}</div><div class="series-name">${esc(labelOf(it))}</div><div class="series-meta">${it.count} Themen</div><div class="series-titles">${esc(it.titles)}</div></a>`;
 }).join('');
 
 const byDate = {};
-ITEMS.forEach(it => {
-  const d = it.date;
-  (byDate[d] ||= []).push(it);
-});
+ITEMS.forEach(it => { (byDate[it.date] ||= []).push(it); });
 const dates = Object.keys(byDate).sort().reverse();
 document.getElementById('total').textContent = `${ITEMS.length} 期`;
 document.getElementById('days').innerHTML = dates.map(iso => {
   const d = new Date(iso + 'T12:00:00');
   const shows = byDate[iso].slice().sort((a, b) => ORDER.indexOf(a.source || 'einfach') - ORDER.indexOf(b.source || 'einfach'));
-  return `<div class="day">
-    <div class="day-date"><b>${String(d.getDate()).padStart(2, '0')}</b><span>${d.toLocaleDateString('de-DE', { month: 'short' })}</span></div>
-    <div class="day-shows">${shows.map(it => `<a class="show" href="${hrefOf(it)}">
-      <div><div class="show-name">${esc(labelOf(it))}</div><div class="show-titles">${esc(it.titles)}${it.count > 3 ? ' …' : ''}</div></div>
-      <span class="arrow">→</span>
-    </a>`).join('')}</div>
-  </div>`;
+  return `<div class="day"><div class="day-date"><b>${String(d.getDate()).padStart(2, '0')}</b><span>${d.toLocaleDateString('de-DE', { month: 'short' })}</span></div><div class="day-shows">${shows.map(it => `<a class="show" href="${hrefOf(it)}"><div><div class="show-name">${esc(labelOf(it))}</div><div class="show-titles">${esc(it.titles)}${it.count > 3 ? ' …' : ''}</div></div><span class="arrow" aria-hidden="true">→</span></a>`).join('')}</div></div>`;
 }).join('');
 
-function formatLong(iso) {
-  return new Date(iso + 'T12:00:00').toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-}
-function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function formatLong(iso) { return new Date(iso + 'T12:00:00').toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }); }
+function esc(s) { return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 </script>
 </body>
 </html>

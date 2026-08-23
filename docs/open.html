@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="用 Deutsch Daily 打开一个外语视频，进入逐句学习。">
+<title>打开视频 — Deutsch Daily</title>
+<style>
+  :root { --bg:#eef2f0; --surface:#fff; --surface-2:#f7f9f8; --ink:#172127; --muted:#647077; --line:#dce4e1; --accent:#176b72; --accent-soft:#dceeed; --shadow:0 18px 50px rgba(20,46,47,.09); }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { min-height:100vh; padding:24px; background:radial-gradient(circle at 85% 5%,rgba(23,107,114,.12),transparent 32rem),var(--bg); color:var(--ink); font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,"Noto Sans SC",sans-serif; }
+  .wrap { width:min(820px,100%); margin:0 auto; }
+  nav { display:flex; align-items:center; justify-content:space-between; margin-bottom:clamp(52px,9vw,94px); }
+  .brand { display:inline-flex; align-items:center; gap:10px; color:inherit; font-weight:800; letter-spacing:-.02em; text-decoration:none; }
+  .brand-mark { display:grid; place-items:center; width:30px; height:30px; border-radius:9px; background:var(--accent); color:#fff; font:800 12px/1 ui-monospace,monospace; }
+  nav>a:last-child { color:var(--muted); font-size:13px; font-weight:700; text-decoration:none; }
+  main { padding:clamp(24px,5vw,46px); border:1px solid var(--line); border-radius:26px; background:rgba(255,255,255,.9); box-shadow:var(--shadow); }
+  h1 { font:750 clamp(30px,5vw,48px)/1.08 ui-serif,Georgia,serif; letter-spacing:-.045em; }
+  .lead { margin-top:12px; color:var(--muted); }
+  .url-form { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; margin-top:24px; }
+  input { min-width:0; height:52px; padding:0 16px; border:1px solid #cbd8d4; border-radius:14px; background:var(--surface); color:var(--ink); font:500 15px/1 ui-sans-serif,system-ui; outline:none; }
+  input:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(23,107,114,.13); }
+  button,.button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 20px; border:0; border-radius:13px; background:var(--accent); color:#fff; cursor:pointer; font:800 14px/1 ui-sans-serif,system-ui; text-decoration:none; }
+  .result { display:none; margin-top:28px; padding-top:26px; border-top:1px solid var(--line); }
+  .result.on { display:block; }
+  .status { display:inline-flex; margin-bottom:12px; padding:5px 9px; border-radius:8px; background:#f8e8dc; color:#8b4a20; font-size:12px; font-weight:800; }
+  .result h2 { font:750 25px/1.25 ui-serif,Georgia,serif; letter-spacing:-.025em; }
+  .result p { margin-top:9px; color:var(--muted); font-size:14px; }
+  .source { margin-top:16px; padding:13px 14px; overflow-wrap:anywhere; border-radius:12px; background:var(--surface-2); color:var(--muted); font:12px/1.5 ui-monospace,monospace; }
+  .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+  .button.secondary { border:1px solid var(--line); background:var(--surface); color:var(--ink); }
+  .player { display:none; position:relative; aspect-ratio:16/9; margin-top:20px; overflow:hidden; border-radius:16px; background:#0c1518; }
+  .player.on { display:block; }
+  .player iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .boundary { margin-top:26px; padding-top:18px; border-top:1px dashed var(--line); color:var(--muted); font-size:12px; }
+  @media(max-width:620px){ body{padding:16px 12px} nav{margin-bottom:44px}.url-form{grid-template-columns:1fr}.url-form button{width:100%}main{border-radius:20px}.actions{display:grid}.button{width:100%} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a class="brand" href="index.html"><span class="brand-mark">DD</span><span>Deutsch Daily</span></a><a href="index.html#today">浏览精选</a></nav>
+  <main>
+    <h1>用一个视频开始学习</h1>
+    <p class="lead">粘贴视频页面链接。已收录的内容会直接打开；其他来源会先检查当前支持情况。</p>
+    <form class="url-form" id="url-form" novalidate>
+      <label for="video-url" style="position:absolute;left:-9999px">视频链接</label>
+      <input id="video-url" type="url" inputmode="url" autocomplete="url" placeholder="https://…">
+      <button type="submit">检查链接</button>
+    </form>
+    <section class="result" id="result" aria-live="polite">
+      <div class="status" id="status"></div>
+      <h2 id="result-title"></h2>
+      <p id="result-copy"></p>
+      <div class="player" id="player"></div>
+      <div class="source" id="source"></div>
+      <div class="actions" id="actions"></div>
+    </section>
+    <p class="boundary">当前公开版只保证已收录的 Tagesschau 课程。我们不会为了“任意链接”这个口号，偷偷下载受限制的视频或承诺拿不到的字幕。</p>
+  </main>
+</div>
+<script>
+const ITEMS = [{"date": "2026-08-22", "slug": "2026-08-22-20uhr", "source": "20uhr", "source_short": "20:00 Uhr", "source_label": "T-64 · tagesschau 20:00 Uhr", "titles": "Wadephul verspricht weitere humanitäre Hilfe für die Ukraine · Deutschland und Polen stärken gemeinsam europäische Ostflanke · Kanzler Merz besucht nach Urlaub Waldbrandgebiet in NRW", "count": 8, "urls": ["https://www.tagesschau.de/tagesschau_20_uhr/video-1635752.html", "https://www.tagesschau.de/tagesschau_20_uhr/video-1635752~player.html", "https://www.tagesschau.de/tagesschau_20_uhr/ts-80422.html"]}, {"date": "2026-08-20", "slug": "2026-08-20-20uhr", "source": "20uhr", "source_short": "20:00 Uhr", "source_label": "T-64 · tagesschau 20:00 Uhr", "titles": "Deutsche Gasspeicher nur halb voll · Vor der Landtagswahl in Sachsen-Anhalt · DGB-Ausbildungsreport 2026", "count": 10, "urls": ["https://www.tagesschau.de/tagesschau_20_uhr/video-1634820.html", "https://www.tagesschau.de/tagesschau_20_uhr/video-1634820~player.html", "https://www.tagesschau.de/tagesschau_20_uhr/ts-80504.html"]}, {"date": "2026-08-20", "slug": "2026-08-20", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Wenig Gas in Speichern: Preise steigen vielleicht · Umfrage: Auszubildende sind unzufrieden · Unwetter: Viele Schäden", "count": 5, "urls": ["https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1634648.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1634648~player.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1392.html"]}, {"date": "2026-08-19", "slug": "2026-08-19", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "USA: Prozess gegen Meta · Migranten: Italien und Deutschland streiten · Hilfsorganisationen: Gefährliche Arbeit", "count": 6, "urls": ["https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1634040.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1634040~player.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1386.html"]}, {"date": "2026-08-18", "slug": "2026-08-18", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Drohnen: Neues Zentrum für Forschung · Hitze: Bauern haben weniger Ernte · Belgien: Feuerwehr weiter im Einsatz", "count": 5, "urls": ["https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1633538.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1633538~player.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1390.html"]}, {"date": "2026-08-17", "slug": "2026-08-17", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Belgien: Kampf gegen Feuer im Wald · Bundesländer lockern Lkw-Fahrverbot am Sonntag · E-Scooter: Unfälle und Diskussion über Helmpflicht", "count": 5, "urls": ["https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1632926.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1632926~player.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1384.html"]}, {"date": "2026-08-13", "slug": "2026-08-13", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Sonnenfinsternis: Himmel wird dunkel · Vor 65 Jahren: Mauer in Berlin gebaut · Vulkan ausgebrochen: Flughafen gesperrt", "count": 5, "urls": ["https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1630762.html", "https://www.tagesschau.de/multimedia/sendung/tagesschau_in_einfacher_sprache/video-1630762~player.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1378.html"]}, {"date": "2026-08-12", "slug": "2026-08-12", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Neue Regeln für Nachrichtendienste geplant · Forscher: Junge Menschen arbeiten viel in Deutschland · Sonnenfinsternis in Teilen Westeuropas", "count": 3, "urls": ["https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1630140.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1630140~player.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1380.html"]}, {"date": "2026-08-10", "slug": "2026-08-10", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Bahn: Mehr Gewalt gegen Zugbegleiter · Sommer: Temperaturen so hoch wie nie · Rhein: Fluss hat sehr wenig Wasser", "count": 6, "urls": ["https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1629018.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1629018~player.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1382.html"]}, {"date": "2026-08-07", "slug": "2026-08-07", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Rhein: Wasser ist niedrig · Südeuropa: Hitze in vielen Ländern · Mallorca: Mittelmeer so warm wie nie", "count": 4, "urls": ["https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1627708.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1627708~player.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1370.html"]}, {"date": "2026-08-06", "slug": "2026-08-06", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Flughafen Leipzig: Sprengstoff gefunden · Urteil: Lebenslange Haft wegen Anschlag · Bäume: Hilfe gegen Hitze", "count": 5, "urls": ["https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1627096.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1627096~player.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1366.html"]}, {"date": "2026-08-05", "slug": "2026-08-05", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "Ukraine — Russische Angriffe · Zu wenig Wasser — Probleme für Bauern · Urlaub mit Rollstuhl am Strand", "count": 5, "urls": ["https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1626538.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1372.html"]}, {"date": "2026-08-04", "slug": "2026-08-04", "source": "einfach", "source_short": "einfacher Sprache", "source_label": "T-64 · tagesschau in einfacher Sprache", "titles": "EU-Innenminister beraten über Ceuta · Familienministerium: Pläne für Zivildienst · Kuba: Stromausfall", "count": 4, "urls": ["https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1625858.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1625858~player.html", "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1364.html"]}];
+const form = document.getElementById('url-form');
+const field = document.getElementById('video-url');
+const result = document.getElementById('result');
+
+function normalized(raw) {
+  const url = new URL(raw);
+  if (!['http:', 'https:'].includes(url.protocol)) throw new Error('protocol');
+  url.hash = '';
+  if (url.pathname.length > 1) url.pathname = url.pathname.replace(/\/+$/, '');
+  return url.href;
+}
+function fromHash() {
+  if (!location.hash.slice(1)) return '';
+  try { return decodeURIComponent(location.hash.slice(1)); }
+  catch { return location.hash.slice(1); }
+}
+function youtubeId(raw) {
+  try {
+    const url = new URL(raw);
+    if (url.hostname === 'youtu.be') return url.pathname.split('/').filter(Boolean)[0] || '';
+    if (/(^|\.)youtube\.com$/.test(url.hostname)) {
+      if (url.pathname === '/watch') return url.searchParams.get('v') || '';
+      const match = url.pathname.match(/^\/(?:shorts|embed)\/([^/?]+)/);
+      return match ? match[1] : '';
+    }
+  } catch {}
+  return '';
+}
+function show({kind,title,copy,url,videoId=''}) {
+  result.classList.add('on');
+  document.getElementById('status').textContent = kind === 'youtube' ? '播放器可用 · 字幕未开放' : '当前不支持';
+  document.getElementById('result-title').textContent = title;
+  document.getElementById('result-copy').textContent = copy;
+  document.getElementById('source').textContent = url;
+  const player = document.getElementById('player');
+  if (videoId) {
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}`;
+    iframe.title = 'YouTube 视频播放器';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+    player.replaceChildren(iframe);
+    player.classList.add('on');
+  } else {
+    player.replaceChildren();
+    player.classList.remove('on');
+  }
+  const issue = 'https://github.com/T-64/deutsch-daily/issues/new?title=' + encodeURIComponent('希望支持这个视频来源') + '&body=' + encodeURIComponent('视频链接：' + url);
+  document.getElementById('actions').innerHTML = `<a class="button secondary" href="${escapeAttr(url)}" target="_blank" rel="noopener">打开原视频</a><a class="button" href="${escapeAttr(issue)}" target="_blank" rel="noopener">提交支持请求</a>`;
+}
+function openUrl(raw) {
+  let url;
+  try { url = normalized(raw.trim()); }
+  catch {
+    show({kind:'unsupported',title:'这个链接格式不对',copy:'请使用以 http:// 或 https:// 开头的完整视频链接。',url:raw || '—'});
+    return;
+  }
+  field.value = url;
+  const match = ITEMS.find(item => (item.urls || []).some(candidate => {
+    try { return normalized(candidate) === url; } catch { return false; }
+  }));
+  if (match) {
+    location.replace((match.slug || match.date) + '.html');
+    return;
+  }
+  const yt = youtubeId(url);
+  if (yt) {
+    show({kind:'youtube',title:'视频可以播放，但还不能生成逐句课程',copy:'公开版目前没有合规、稳定的公共字幕导入能力。你仍可预览视频，或提交这个来源帮助我们确定下一批支持范围。',url,videoId:yt});
+    return;
+  }
+  show({kind:'unsupported',title:'这个来源还没有接入',copy:'我们先只承诺已经验证过的来源。你可以打开原视频，或提交支持请求。',url});
+}
+function escapeAttr(value) { return String(value).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+form.addEventListener('submit', event => { event.preventDefault(); location.hash = encodeURIComponent(field.value.trim()); openUrl(field.value); });
+const initial = fromHash();
+if (initial) openUrl(initial);
+</script>
+</body>
+</html>

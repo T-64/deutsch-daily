@@ -614,19 +614,35 @@ def build_index(all_slugs=None):
         source = doc.get("source") or detect_source(doc.get("video_page") or "")
         info = SOURCES.get(source) or SOURCES["einfach"]
         titles = " · ".join(n["title"] for n in doc["news"][:3])
+        slug = doc_slug(doc, s)
+        meta = load_json(META / f"{slug}.json") or {}
+        urls = []
+        for url in (
+            doc.get("video_page"),
+            doc.get("embed_url"),
+            meta.get("episode_url"),
+            meta.get("video_page"),
+        ):
+            if url and url not in urls:
+                urls.append(url)
         items.append({
             "date": doc.get("date") or parse_slug(s)[0],
-            "slug": doc_slug(doc, s),
+            "slug": slug,
             "source": source,
             "source_short": info["short"],
             "source_label": info["label"],
             "titles": titles,
             "count": len(doc["news"]),
+            "urls": urls,
         })
+    payload = json.dumps(items, ensure_ascii=False).replace("</", "<\\/")
     tpl = (TEMPLATES / "index.html").read_text()
-    html = tpl.replace("__ITEMS__", json.dumps(items, ensure_ascii=False).replace("</", "<\\/"))
+    html = tpl.replace("__ITEMS__", payload)
     (SITE / "index.html").write_text(html)
+    open_tpl = (TEMPLATES / "open.html").read_text()
+    (SITE / "open.html").write_text(open_tpl.replace("__ITEMS__", payload))
     print(f"[ok] index.html ({len(items)} 期)")
+    print(f"[ok] open.html ({len(items)} 个可识别课程)")
 
 
 if __name__ == "__main__":
