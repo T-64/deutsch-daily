@@ -37,6 +37,11 @@ FROZEN_DATES = frozenset({"2026-07-31", "2026-08-03", "2026-08-11"})
 
 TOKEN_RE = re.compile(r"[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß-]*")
 SENT_RE = re.compile(r"(?<=[.!?])\s+(?=[A-ZÄÖÜ])")
+DE_SENT_BOUNDARY_RE = re.compile(r'([.!?…][»”"]?)(\s+)(?=[A-ZÄÖÜ„"»0-9])')
+DE_NON_TERMINALS = {
+    "bzw.", "ca.", "d.h.", "dr.", "etc.", "nr.", "prof.",
+    "u.a.", "u.s.w.", "usw.", "z.b.",
+}
 SKIP_CUE = re.compile(r"(gong|untertitel|norddeutscher rundfunk|willkommen zur tagesschau|"
                       r"ich bin |das waren unsere nachrichten|das war die tagesschau)", re.I)
 
@@ -277,8 +282,24 @@ def split_de_sents(text):
     text = re.sub(r"\s+", " ", (text or "").strip())
     if not text:
         return []
-    parts = re.split(r'(?<=[.!?…])\s+(?=[A-ZÄÖÜ„"»])', text)
-    return [p.strip() for p in parts if p.strip()]
+    parts = []
+    start = 0
+    for match in DE_SENT_BOUNDARY_RE.finditer(text):
+        before = text[start:match.start(2)].rstrip('»”"')
+        token = before.rsplit(" ", 1)[-1].lower()
+        # 13. August / 1. FC Kaiserslautern and common abbreviations are not
+        # sentence boundaries. A real boundary may still be followed by a
+        # number ("Verstörende Bilder. 1400 Polizisten ...").
+        if match.group(1).startswith(".") and (
+            re.fullmatch(r"\d+\.", token)
+            or token in DE_NON_TERMINALS
+            or re.fullmatch(r"(?:[a-zäöüß]\.){1,3}", token)
+        ):
+            continue
+        parts.append(text[start:match.start(2)].strip())
+        start = match.end(2)
+    parts.append(text[start:].strip())
+    return [p for p in parts if p]
 
 
 def split_zh_sents(text):
@@ -286,6 +307,15 @@ def split_zh_sents(text):
     if not text:
         return []
     parts = re.split(r'(?<=[。！？])', text)
+    return [p.strip() for p in parts if p.strip()] or [text]
+
+
+def split_zh_clauses(text):
+    """Expand compact Chinese translations only when sentence counts require it."""
+    text = re.sub(r"\s+", " ", (text or "").strip())
+    if not text:
+        return []
+    parts = re.split(r'(?<=[。！？；，])', text)
     return [p.strip() for p in parts if p.strip()] or [text]
 
 
@@ -307,9 +337,18 @@ def pair_sentences(de, zh):
     zs = split_zh_sents(zh)
     if not ds:
         return []
+    # Chinese often joins two directly corresponding German sentences with a
+    # comma. Split those clauses before ever coalescing German source text.
+    if len(zs) < len(ds):
+        clauses = split_zh_clauses(zh)
+        if len(clauses) >= len(ds):
+            zs = merge_to_n(clauses, len(ds), "")
     if len(zs) > len(ds):
         zs = merge_to_n(zs, len(ds), "")
     elif len(zs) < len(ds):
+        # Legacy content can be a genuinely condensed paragraph translation.
+        # Keep its old rendering behaviour; current content is rejected by the
+        # validator before publish if it reaches this fallback.
         if zs:
             ds = merge_to_n(ds, len(zs), " ")
         else:

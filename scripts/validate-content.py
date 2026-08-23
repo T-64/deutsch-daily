@@ -8,6 +8,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+from build import pair_sentences, split_de_sents
+
 CONTENT = ROOT / "data" / "content"
 REQUIRED_TOP = ("date", "video_page", "embed_url", "news")
 REQUIRED_NEWS = ("title", "title_zh", "paragraphs", "translations", "vocab", "grammar_points", "background")
@@ -89,6 +92,14 @@ def main(argv: list[str]) -> int:
             for j, (de, zh) in enumerate(zip(paras, trans)):
                 if not str(de).strip() or not str(zh).strip():
                     errors.append(f"{prefix} empty paragraph or translation at {j}")
+                    continue
+                source_sentences = split_de_sents(str(de))
+                pairs = pair_sentences(str(de), str(zh))
+                if len(pairs) != len(source_sentences) or any(not p.get("zh") for p in pairs):
+                    errors.append(
+                        f"{prefix} sentence alignment failed at paragraph {j}: "
+                        f"German={len(source_sentences)} rendered pairs={len(pairs)}"
+                    )
 
         vocab = item.get("vocab") or []
         lo, hi = vocab_range(str(item.get("title") or ""))

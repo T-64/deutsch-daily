@@ -179,7 +179,7 @@ echo "date=$DATE slug=$SLUG"
 字段约束：
 
 - 20uhr 必须有 `"source": "20uhr"` 和 `"slug": "YYYY-MM-DD-20uhr"`；简易德语可省略 source（默认 einfach），文件名仍是 `YYYY-MM-DD.json`
-- `paragraphs` 与 `translations` **条数必须相等**，且都不为空。每项是一段（里面可以有多句），不要一句一项
+- `paragraphs` 与 `translations` **条数必须相等**，且都不为空。每项仍是一段（不要一句一项），但段内德中句子也必须逐句对应；中文可用句号明确分开，页面会把每个德语句与它的中文译文组成独立、居首对齐的句对
 - `title_zh` 是标题的中文，跟段落译文一样随「译文」开关显示
 - 普通新闻 vocab **6–10**（最少 5）；`Das Wetter` **3–8**
 - 名词 lemma 带冠词；短语整条进 `lemma`；`forms` 写正文里会出现的表面形式（不要逗号串）
