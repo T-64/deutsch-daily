@@ -214,6 +214,7 @@
     text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
     text-decoration-color: transparent;
   }
+  .de w:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; background: var(--accent-soft); }
   .de w:hover, .de w:active { background: var(--warm-soft); text-decoration-color: var(--warm); }
   .de w.known { text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent); }
   .de w.ed { text-decoration-style: solid; text-decoration-thickness: 1.5px; }
@@ -457,7 +458,7 @@
 <div class="scrim" id="scrim"></div>
 <div id="pop" role="dialog" aria-modal="false" aria-label="单词卡片"></div>
 <button id="basket-btn" aria-label="打开生词本">生词本<span class="cnt" id="bk-cnt">0</span></button>
-<aside id="basket" aria-label="生词本">
+<aside id="basket" role="dialog" aria-modal="true" aria-hidden="true" aria-label="生词本">
   <div class="bhead">
     <div><h3>我的生词本</h3><p>保存在当前浏览器，可复制或导出 Anki</p></div>
     <button class="bclose" onclick="toggleBasket(false)" aria-label="关闭">×</button>
@@ -553,7 +554,7 @@ function wrapWord(surface, key) {
     g?.source === 'dict' ? 'wiki' : '',
     basket.some(b => b.key === key) ? 'saved' : ''
   ].filter(Boolean).join(' ');
-  return `<w data-w="${esc(key)}" class="${classes}">${esc(surface)}</w>`;
+  return `<w data-w="${esc(key)}" class="${classes}" tabindex="0" role="button" aria-label="${esc(surface)}，查看释义">${esc(surface)}</w>`;
 }
 function isLetter(ch) { return /[A-Za-zÄÖÜäöüß]/.test(ch || ''); }
 function tokenizeDe(text) {
@@ -870,6 +871,12 @@ document.addEventListener('click', e => {
   e.stopPropagation();
   showPop(w);
 }, true);
+document.addEventListener('keydown', e => {
+  const w = e.target.closest('w[role="button"]');
+  if (!w || !['Enter', ' '].includes(e.key)) return;
+  e.preventDefault();
+  showPop(w);
+});
 
 function sentenceAround(el) {
   const para = el.closest('.de');
@@ -985,12 +992,35 @@ function renderBasket() {
   ).join('');
 }
 function toggleBasket(open) {
-  document.getElementById('basket').classList.toggle('open', open);
+  const panel = document.getElementById('basket');
+  const wasOpen = panel.classList.contains('open');
+  panel.classList.toggle('open', open);
+  panel.setAttribute('aria-hidden', String(!open));
   document.getElementById('scrim').classList.toggle('on', open);
-  if (!open) closeWordEditor();
+  if (open) setTimeout(() => panel.querySelector('.bclose')?.focus(), 0);
+  else {
+    closeWordEditor();
+    if (wasOpen) document.getElementById('basket-btn').focus();
+  }
 }
 document.getElementById('basket-btn').onclick = () => toggleBasket(true);
 document.getElementById('scrim').onclick = () => toggleBasket(false);
+document.addEventListener('keydown', e => {
+  const panel = document.getElementById('basket');
+  if (!panel.classList.contains('open')) return;
+  if (e.key === 'Escape') {
+    e.preventDefault();
+    toggleBasket(false);
+    return;
+  }
+  if (e.key !== 'Tab') return;
+  const focusable = [...panel.querySelectorAll('button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')];
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+});
 document.getElementById('bk-list').onclick = e => {
   const btn = e.target.closest('button[data-key]');
   if (!btn) return;
