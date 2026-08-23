@@ -641,8 +641,10 @@ def build_index(all_slugs=None):
     (SITE / "index.html").write_text(html)
     open_tpl = (TEMPLATES / "open.html").read_text()
     (SITE / "open.html").write_text(open_tpl.replace("__ITEMS__", payload))
+    (SITE / "about.html").write_text((TEMPLATES / "about.html").read_text())
     print(f"[ok] index.html ({len(items)} 期)")
     print(f"[ok] open.html ({len(items)} 个可识别课程)")
+    print("[ok] about.html")
 
 
 if __name__ == "__main__":

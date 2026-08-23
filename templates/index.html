@@ -40,6 +40,11 @@
   .url-error { min-height: 22px; padding-top: 8px; color: #a33d32; font-size: 13px; }
   .import-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--muted); font-size: 12px; }
   .import-meta b { color: var(--accent); }
+  .continue { display: none; margin: -26px 0 42px; }
+  .continue.on { display: block; }
+  .continue a { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 14px; align-items: center; padding: 15px 17px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.8); color: inherit; text-decoration: none; }
+  .continue b { color: var(--accent); font-size: 13px; }
+  .continue span { min-width: 0; overflow: hidden; color: var(--muted); font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
   .section-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin: 0 3px 14px; }
   .section-head h2 { font: 750 24px/1.2 ui-serif, Georgia, serif; letter-spacing: -.025em; }
   .section-head p, .section-head span { color: var(--muted); font-size: 13px; }
@@ -70,7 +75,7 @@
 <div class="wrap">
   <nav>
     <a class="brand" href="index.html"><span class="brand-mark">DD</span><span>Deutsch Daily</span></a>
-    <div class="nav-links"><a href="#today">今日精选</a><a href="https://github.com/T-64/deutsch-daily" target="_blank" rel="noopener">开源代码</a></div>
+    <div class="nav-links"><a href="about.html">使用说明</a><a href="https://github.com/T-64/deutsch-daily" target="_blank" rel="noopener">开源代码</a></div>
   </nav>
   <header>
     <h1><span>把真实德语，</span><span>变成今天的一课</span></h1>
@@ -87,17 +92,26 @@
     <div class="url-error" id="url-error" role="alert" aria-live="polite"></div>
     <div class="import-meta"><span><b>当前支持</b> 已收录的 Tagesschau</span><span>无需登录</span><span>生词保存在本机</span></div>
   </section>
+  <section class="continue" id="continue"><a id="continue-link"><b>继续上次学习</b><span id="continue-title"></span><span aria-hidden="true">→</span></a></section>
   <section id="today" aria-labelledby="today-title">
     <div class="section-head"><div><h2 id="today-title">今日精选</h2><p>不想找视频，就从今天的一条新闻开始。</p></div></div>
     <div class="series" id="series"></div>
   </section>
   <div class="section-head"><h2>往期</h2><span id="total"></span></div>
   <div class="days" id="days"></div>
-  <footer><span>一个开源的真实语料学习实验。</span><span>内容来源归原权利人所有 · <a href="https://github.com/T-64/deutsch-daily/issues" target="_blank" rel="noopener">反馈问题</a></span></footer>
+  <footer><span>一个开源的真实语料学习实验。</span><span><a href="about.html">使用、隐私与内容边界</a> · <a href="https://github.com/T-64/deutsch-daily/issues" target="_blank" rel="noopener">反馈问题</a></span></footer>
 </div>
 <script>
 const ITEMS = __ITEMS__;
 const ORDER = ['20uhr', 'einfach'];
+try {
+  const recent = JSON.parse(localStorage.getItem('dd-recent-lesson') || 'null');
+  if (recent?.slug && ITEMS.some(item => item.slug === recent.slug)) {
+    document.getElementById('continue-link').href = recent.slug + '.html';
+    document.getElementById('continue-title').textContent = recent.title || recent.sourceLabel || recent.date;
+    document.getElementById('continue').classList.add('on');
+  }
+} catch {}
 function hrefOf(it) { return (it.slug || it.date) + '.html'; }
 function labelOf(it) { return it.source_label || (it.source === '20uhr' ? 'T-64 · tagesschau 20:00 Uhr' : 'T-64 · tagesschau in einfacher Sprache'); }
 function latestOf(src) { return ITEMS.find(it => (it.source || 'einfach') === src); }
