@@ -1,0 +1,30 @@
+name: 报告学习页问题
+description: 字幕、对齐、播放、查词或导出出现问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: 出问题的页面
+      placeholder: https://t-64.github.io/deutsch-daily/…
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 怎样复现
+      placeholder: 打开页面 → 点击… → 看到…
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你原本期待什么？
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 设备与浏览器
+      placeholder: iPhone 15 / Safari，Windows / Chrome…

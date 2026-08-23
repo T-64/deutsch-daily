@@ -40,8 +40,14 @@ def load_path(arg: str) -> Path:
 
 def main(argv: list[str]) -> int:
     if len(argv) != 2:
-        print("usage: validate-content.py <file.json|YYYY-MM-DD[-20uhr]>", file=sys.stderr)
+        print("usage: validate-content.py <file.json|YYYY-MM-DD[-20uhr]|--all>", file=sys.stderr)
         return 1
+    if argv[1] == "--all":
+        paths = [p for p in sorted(CONTENT.glob("*.json")) if p.stem >= "2026-08-18"]
+        if not paths:
+            print("FAIL: no current-schema content files found", file=sys.stderr)
+            return 1
+        return int(any(main([argv[0], str(path)]) for path in paths))
     path = load_path(argv[1])
     errors: list[str] = []
     try:

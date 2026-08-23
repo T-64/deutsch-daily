@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Python and shell syntax
+        run: |
+          python3 -m py_compile build.py scripts/*.py tests/*.py
+          bash -n scripts/*.sh
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate current content schema
+        run: python3 scripts/validate-content.py --all
+      - name: Static build smoke test
+        run: python3 build.py 2026-08-20-20uhr

@@ -6,9 +6,16 @@
 
 ## 这是什么
 
-一个全自动的德语学习管道。每天抓取 Tagesschau **20:00 正片**和 **einfacher Sprache**（官方字幕），整理成逐句德中对照页面。手机打开即用，零登录、零后端。
+一个全自动的德语视频学习管道，也是“把自己想看的视频变成逐句课程”的产品 MVP。每天抓取 Tagesschau **20:00 正片**和 **einfacher Sprache**（官方字幕），整理成逐句德中对照页面。手机打开即用，零登录、零后端。
 
 适合 B1–C1（20:00）和 A2–B1（简易德语）。我准备去斯图加特留学，每天精读一条新闻。
+
+## 两个入口
+
+1. 首页：直接学习每天整理好的两档德语新闻。
+2. 视频链接：在首页粘贴，或使用 `https://t-64.github.io/deutsch-daily/open.html#<原视频 URL>`。已收录内容会直接进入学习页；其他来源会显示当前支持状态。
+
+公开 MVP 目前只保证已收录的 Tagesschau 内容。YouTube 可用官方播放器预览，但不承诺公共字幕的一键导入；不会绕过登录、付费、DRM 或平台限制。商业产品边界和验证路线见 [`product/COMMERCIAL-MVP.md`](product/COMMERCIAL-MVP.md)。
 
 ## 架构：数据与排版分离
 
@@ -28,12 +35,12 @@
 
 | 功能 | 说明 |
 |---|---|
-| 逐段德中对照 | 每段德语原文下紧跟中文译文，可一键隐藏译文先盲读 |
+| 逐句德中对照 | 每句德语原文下紧跟对应中文译文，可一键隐藏译文先盲听 |
 | 点词查义 | 点正文中的任意德语词弹出释义卡；无释义时可自行补充，已有释义也可修改 |
 | 个人生词本 | 点词收集或手动录入单词/短语，支持编辑、删除，localStorage 跨期次持久保存 |
 | 导出 Anki | 浏览器内生成 .apkg，牌组 `Deutsch Daily`，日期作 tag |
 | 重点词汇 / 语法 | 每条新闻折叠卡片；语法最多 2 条，背景标注未经核验 |
-| 段落跳播 | 转写对得上的段落显示时间，原生视频可 seek；对不上或仍是 iframe 则按钮无效 |
+| 逐句跳播 | 转写对得上的句子可 seek；对不上或仍是 iframe 则按钮无效 |
 | 响应式视频 | 16:9；优先试官方 MP4，失败回退 iframe；手机下滑后小窗 |
 
 ## 每日流程（真源：`SKILL.md`）
@@ -63,14 +70,16 @@ python3 -m http.server 4185 -d docs
 ~/tagesschau-deutsch/
 ├── SKILL.md                 # 每日流程唯一真源
 ├── build.py
-├── templates/               episode.html / index.html
+├── templates/               episode / index / open / about 页面
 ├── scripts/
 │   ├── fetch-latest.sh
 │   ├── ingest_episode.py    # 日期(Berlin 媒体日) + 字幕身份
 │   ├── validate-content.py
 │   └── publish.sh
 ├── data/                    content / meta / transcripts / subtitles / dict-cache.json
-├── LICENSE
+├── product/                 商业 MVP、指标与合规边界
+├── tests/                   切句和公共入口回归测试
+├── LICENSE / NOTICE.md      代码许可证与第三方内容边界
 └── docs/                    GitHub Pages 输出（T-64/deutsch-daily，/docs）
 ```
 
@@ -93,3 +102,8 @@ python3 -m http.server 4185 -d docs
 
 依赖：Python 3 标准库，无第三方包。
 
+## 商业与内容边界
+
+GitHub Pages 适合作为开源项目和免费样板，不应作为商业 SaaS 主站。Tagesschau/ARD 的视频、字幕和节目素材也不由 MIT License 授权；商业化前必须迁移到商业托管，并只处理获得许可、用户自有或明确开放许可的媒体。详见 [`NOTICE.md`](NOTICE.md) 和产品路线文档。
+
+贡献方式见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。

@@ -1,0 +1,43 @@
+name: 请求支持一个视频来源
+description: 提交一个你真的想用来学习、但目前打不开的视频链接
+title: "[来源请求] "
+labels: ["source-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请只提交公开页面，别贴账号、cookie、付费内容或私人文件。请求数量会帮助我们决定接入顺序。
+  - type: input
+    id: url
+    attributes:
+      label: 视频链接
+      placeholder: https://…
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: 视频语言
+      options:
+        - 德语
+        - 英语
+        - 日语
+        - 法语
+        - 西班牙语
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: 你想怎样学习它？
+      description: 例如逐句精听、查词、做 Anki，或只需要双语字幕。
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: 内容边界
+      options:
+        - label: 这个链接是公开页面，我没有在这里提供登录凭据或绕过付费/访问限制的方法。
+          required: true
