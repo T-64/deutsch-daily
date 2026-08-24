@@ -15,7 +15,7 @@ cd "$ROOT"
 
 python3 "$ROOT/build.py" "$DATE"
 
-git add "docs/${DATE}.html" docs/index.html docs/open.html docs/about.html
+git add "docs/${DATE}.html" docs/index.html docs/open.html docs/about.html docs/studio.html docs/assets/studio.js
 if git diff --cached --quiet; then
   echo "publish: nothing to commit ($DATE)"
   exit 0

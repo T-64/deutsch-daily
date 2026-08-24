@@ -8,6 +8,7 @@
 
 ```bash
 python3 -m unittest discover -s tests -v
+node tests/test_studio.js
 python3 -m py_compile build.py scripts/*.py tests/*.py
 bash -n scripts/*.sh
 python3 scripts/validate-content.py --all

@@ -16,6 +16,7 @@ data/content/YYYY-MM-DD.json + templates/ → docs/YYYY-MM-DD.html (+index.html)
 """
 import json
 import re
+import shutil
 import sqlite3
 import sys
 from difflib import SequenceMatcher
@@ -32,6 +33,7 @@ TRANSCRIPTS = DATA / "transcripts"
 CACHE = DATA / "dict-cache.json"
 DICT_DB = DATA / "dict" / "de-zh.sqlite"
 TEMPLATES = BASE / "templates"
+STATIC = BASE / "static"
 SITE = BASE / "docs"
 FROZEN_DATES = frozenset({"2026-07-31", "2026-08-03", "2026-08-11"})
 
@@ -642,9 +644,14 @@ def build_index(all_slugs=None):
     open_tpl = (TEMPLATES / "open.html").read_text()
     (SITE / "open.html").write_text(open_tpl.replace("__ITEMS__", payload))
     (SITE / "about.html").write_text((TEMPLATES / "about.html").read_text())
+    (SITE / "studio.html").write_text((TEMPLATES / "studio.html").read_text())
+    assets = SITE / "assets"
+    assets.mkdir(exist_ok=True)
+    shutil.copy2(STATIC / "studio.js", assets / "studio.js")
     print(f"[ok] index.html ({len(items)} 期)")
     print(f"[ok] open.html ({len(items)} 个可识别课程)")
     print("[ok] about.html")
+    print("[ok] studio.html")
 
 
 if __name__ == "__main__":

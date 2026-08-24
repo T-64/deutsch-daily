@@ -40,6 +40,7 @@
   .url-error { min-height: 22px; padding-top: 8px; color: #a33d32; font-size: 13px; }
   .import-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--muted); font-size: 12px; }
   .import-meta b { color: var(--accent); }
+  .import-meta a { color: var(--accent); font-weight: 750; }
   .continue { display: none; margin: -26px 0 42px; }
   .continue.on { display: block; }
   .continue a { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 14px; align-items: center; padding: 15px 17px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.8); color: inherit; text-decoration: none; }
@@ -90,7 +91,7 @@
       <button type="submit">用这个视频学习</button>
     </form>
     <div class="url-error" id="url-error" role="alert" aria-live="polite"></div>
-    <div class="import-meta"><span><b>当前支持</b> 已收录的 Tagesschau</span><span>无需登录</span><span>生词保存在本机</span></div>
+    <div class="import-meta"><span><b>当前支持</b> 已收录的 Tagesschau</span><a href="studio.html">有字幕？创建本地课程</a><span>无需登录</span><span>生词保存在本机</span></div>
   </section>
   <section class="continue" id="continue"><a id="continue-link"><b>继续上次学习</b><span id="continue-title"></span><span aria-hidden="true">→</span></a></section>
   <section id="today" aria-labelledby="today-title">

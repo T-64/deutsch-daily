@@ -15,12 +15,17 @@ class CatalogPageTests(unittest.TestCase):
                 home = (build.SITE / "index.html").read_text()
                 opener = (build.SITE / "open.html").read_text()
                 about = (build.SITE / "about.html").read_text()
+                studio = (build.SITE / "studio.html").read_text()
+                studio_js = (build.SITE / "assets" / "studio.js").read_text()
             finally:
                 build.SITE = previous_site
 
         self.assertIn("打开一个视频", home)
         self.assertIn("open.html#", about)
         self.assertIn("2026-08-20-20uhr", opener)
+        self.assertIn("创建本地课程", studio)
+        self.assertIn("parseTimedText", studio_js)
+        self.assertIn("studio.html", home + opener + about)
         self.assertNotIn("__ITEMS__", home + opener)
 
 

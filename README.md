@@ -13,9 +13,9 @@
 ## 两个入口
 
 1. 首页：直接学习每天整理好的两档德语新闻。
-2. 视频链接：在首页粘贴，或使用 `https://t-64.github.io/deutsch-daily/open.html#<原视频 URL>`。已收录内容会直接进入学习页；其他来源会显示当前支持状态。
+2. 视频链接：在首页粘贴，或使用 `https://t-64.github.io/deutsch-daily/open.html#<原视频 URL>`。已收录内容会直接进入学习页；其他来源可以转到本地课程工坊。
 
-公开 MVP 目前只保证已收录的 Tagesschau 内容。YouTube 可用官方播放器预览，但不承诺公共字幕的一键导入；不会绕过登录、付费、DRM 或平台限制。商业产品边界和验证路线见 [`product/COMMERCIAL-MVP.md`](product/COMMERCIAL-MVP.md)。
+本地课程工坊允许用户选择自己有权处理的视频/音频、德语 SRT/WebVTT 和可选逐句中文译文，在浏览器中生成可跳播、可隐藏译文、可查词的课程；字幕课程可导入/导出 JSON，媒体文件不会上传或长期保存。公开 MVP 不承诺公共字幕的一键导入，也不会绕过登录、付费、DRM 或平台限制。商业产品边界和验证路线见 [`product/COMMERCIAL-MVP.md`](product/COMMERCIAL-MVP.md)。
 
 ## 架构：数据与排版分离
 
@@ -42,6 +42,7 @@
 | 重点词汇 / 语法 | 每条新闻折叠卡片；语法最多 2 条，背景标注未经核验 |
 | 逐句跳播 | 转写对得上的句子可 seek；对不上或仍是 iframe 则按钮无效 |
 | 响应式视频 | 16:9；优先试官方 MP4，失败回退 iframe；手机下滑后小窗 |
+| 本地课程工坊 | 用户自带媒体和 SRT/VTT，浏览器本地解析、保存字幕、导入/导出课程 JSON |
 
 ## 每日流程（真源：`SKILL.md`）
 
@@ -70,7 +71,8 @@ python3 -m http.server 4185 -d docs
 ~/tagesschau-deutsch/
 ├── SKILL.md                 # 每日流程唯一真源
 ├── build.py
-├── templates/               episode / index / open / about 页面
+├── templates/               episode / index / open / studio / about 页面
+├── static/                  本地课程解析与阅读器脚本
 ├── scripts/
 │   ├── fetch-latest.sh
 │   ├── ingest_episode.py    # 日期(Berlin 媒体日) + 字幕身份
