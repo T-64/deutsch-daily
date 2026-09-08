@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Deutsch Daily — 2026-09-08</title>
+<style>
+  :root {
+    --bg: #eef2f0;
+    --surface: #ffffff;
+    --surface-2: #f7f9f8;
+    --ink: #172127;
+    --ink-soft: #647077;
+    --line: #dce4e1;
+    --accent: #176b72;
+    --accent-strong: #0d5057;
+    --accent-soft: #dceeed;
+    --warm: #d98f39;
+    --warm-soft: #fff0d9;
+    --zh: #5f696f;
+    --danger: #b3493f;
+    --shadow: 0 18px 50px rgba(20, 46, 47, .10);
+    --shadow-soft: 0 8px 24px rgba(20, 46, 47, .07);
+  }
+  [data-theme="dark"] {
+    --bg: #111719; --surface: #192124; --surface-2: #202a2d;
+    --ink: #edf3f1; --ink-soft: #a9b7b8; --line: #344145;
+    --accent: #75cbd0; --accent-strong: #99dfe2; --accent-soft: #223e40;
+    --warm: #f0b35e; --warm-soft: #3b3022; --zh: #bac5c5;
+    --shadow: 0 18px 50px rgba(0,0,0,.28); --shadow-soft: 0 8px 24px rgba(0,0,0,.22);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+  body {
+    min-height: 100vh; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, "Noto Sans SC", sans-serif;
+    transition: background .2s, color .2s;
+  }
+  button, input, textarea { font: inherit; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+  button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent); outline-offset: 2px;
+  }
+  .app { width: min(1280px, calc(100% - 48px)); margin: 0 auto; padding: 24px 0 100px; }
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    min-height: 42px; margin-bottom: 34px;
+  }
+  .brand {
+    display: inline-flex; align-items: center; gap: 10px; color: var(--ink);
+    font-weight: 800; letter-spacing: -.02em; text-decoration: none;
+  }
+  .brand-mark {
+    display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px;
+    background: var(--accent); color: #fff; font: 800 12px/1 ui-monospace, monospace;
+  }
+  .top-actions { display: flex; align-items: center; gap: 8px; }
+  .icon-btn, .archive-link, .text-btn {
+    min-height: 38px; border: 1px solid var(--line); border-radius: 12px;
+    background: var(--surface); color: var(--ink-soft); cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center; text-decoration: none;
+  }
+  .icon-btn { width: 38px; }
+  .archive-link, .text-btn { gap: 7px; padding: 0 13px; font-size: 13px; font-weight: 700; }
+  .hero { margin-bottom: 26px; }
+  .eyebrow {
+    color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em;
+    text-transform: uppercase; margin-bottom: 9px;
+  }
+  .hero h1 {
+    max-width: 720px; font: 750 clamp(29px, 4vw, 50px)/1.08 ui-serif, Georgia, serif;
+    letter-spacing: -.04em;
+  }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 13px; color: var(--ink-soft); font-size: 14px; }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
+
+  .study-grid { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: clamp(20px, 3.2vw, 48px); align-items: start; }
+  .side {
+    position: sticky; top: 16px; max-height: calc(100vh - 24px);
+    display: flex; flex-direction: column; min-height: 0;
+  }
+  .study-panel {
+    display: flex; flex-direction: column; gap: 16px; min-height: 0; max-height: calc(100vh - 24px);
+    background: transparent; border: 0; box-shadow: none; overflow: visible;
+  }
+  .video-card {
+    position: relative; flex: 0 0 auto; overflow: hidden; background: #071012;
+    border-radius: 24px; box-shadow: var(--shadow-soft);
+  }
+  .player { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #071012; }
+  .player iframe, .player video { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; background: #071012; }
+  .video-drag {
+    display: none; position: absolute; z-index: 3; top: 0; left: 0; right: 36px; height: 32px;
+    cursor: grab; touch-action: none;
+    background: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
+  }
+  .video-drag:active { cursor: grabbing; }
+  .video-float-close {
+    display: none; border: 0; background: rgba(255,255,255,.14); color: #fff;
+    width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
+  }
+  .rail {
+    display: flex; flex-direction: column; flex: 1; min-height: 0;
+    padding: 18px 18px 16px; border: 1px solid var(--line); border-radius: 24px;
+    background: var(--surface); box-shadow: var(--shadow-soft); overflow: hidden;
+  }
+  .rail-bar { padding: 0 0 12px; }
+  .controls { display: flex; width: 100%; }
+  .controls button {
+    flex: 1; min-height: 40px; padding: 0 14px; border: 1px solid var(--line); border-radius: 12px;
+    background: var(--surface-2); color: var(--ink-soft); cursor: pointer; font-size: 14px; font-weight: 750;
+  }
+  .controls button.on { border-color: var(--accent); background: var(--accent); color: #fff; }
+  .hero-meta a { color: var(--accent); text-decoration: none; font-weight: 700; }
+  .hero-meta a:hover { text-decoration: underline; }
+  .topic-nav { flex: 1; min-height: 0; overflow-y: auto; padding: 0; scrollbar-gutter: stable; }
+  .topic { border-top: 1px solid var(--line); }
+  .topic:first-child { border-top: 0; }
+  .topic > a {
+    display: grid; grid-template-columns: 32px minmax(0,1fr); gap: 10px; align-items: start;
+    padding: 11px 0; color: var(--ink); text-decoration: none;
+  }
+  .topic > a span {
+    min-width: 0; padding-top: 5px;
+    font: 650 15px/1.35 ui-serif, Georgia, serif; letter-spacing: -.015em;
+  }
+  .topic > a:hover span { color: var(--accent); }
+  .topic b {
+    display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px;
+    background: var(--accent-soft); color: var(--accent-strong);
+    font: 800 11px/1 ui-monospace, monospace;
+  }
+  .topic.on b { background: var(--accent); color: #fff; }
+  .topic.on > a span { color: var(--accent-strong); }
+  .topic-study { display: none; padding: 0 0 12px; }
+  .topic.on .topic-study { display: block; }
+  .topic-study .empty-study { color: var(--ink-soft); font-size: 13px; padding: 6px 0; }
+  .study-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 2px; }
+  .study-tabs.n2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .study-tabs.n1 { grid-template-columns: 1fr; }
+  .stab {
+    min-height: 32px; padding: 0 6px; border: 1px solid var(--line); border-radius: 11px;
+    background: var(--surface-2); color: var(--ink-soft); cursor: pointer;
+    font-size: 12px; font-weight: 750;
+  }
+  .stab:hover { border-color: var(--accent); color: var(--accent-strong); }
+  .stab.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-strong); }
+  .spane { display: none; margin-top: 6px; }
+  .spane.on { display: block; }
+  .vrow {
+    display: grid; grid-template-columns: minmax(0,1fr) 28px; gap: 8px; align-items: start;
+    padding: 10px 0; border-top: 1px dashed var(--line);
+  }
+  .vrow .vw { color: var(--ink); font: 750 14.5px/1.35 ui-serif, Georgia, serif; }
+  .vrow .vz { margin-top: 4px; color: var(--accent-strong); font-size: 13.5px; }
+  .vrow .vex { margin-top: 6px; color: var(--ink-soft); font-size: 13px; font-style: italic; }
+  .vadd {
+    width: 28px; height: 28px; border: 1px solid var(--line); border-radius: 8px;
+    background: var(--surface); color: var(--accent-strong); cursor: pointer;
+    font: 700 18px/1 ui-sans-serif, system-ui;
+  }
+  .vadd:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .rail-note { margin: 0; padding: 10px 0; color: var(--ink-soft); font-size: 13.5px; line-height: 1.7; }
+  .rail-note + .rail-note { border-top: 1px dashed var(--line); }
+  .rail-note strong { display: block; margin-bottom: 4px; color: var(--ink); font: 750 14.5px/1.35 ui-serif, Georgia, serif; }
+  .rail-note i { display: block; margin-bottom: 6px; }
+  @media (min-width: 841px) { .article-extras { display: none; } }
+
+  .reader { min-width: 0; }
+  .first-run {
+    display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: start;
+    margin-bottom: 16px; padding: 16px 18px; border: 1px solid var(--line); border-radius: 16px;
+    background: var(--accent-soft); color: var(--ink-soft); font-size: 13.5px;
+  }
+  .first-run[hidden] { display: none; }
+  .first-run strong { display: block; margin-bottom: 3px; color: var(--accent-strong); }
+  .first-run button { border: 0; background: transparent; color: var(--ink-soft); cursor: pointer; font-weight: 800; }
+  .legend { color: var(--ink-soft); }
+  article {
+    scroll-margin-top: 24px; margin-bottom: 22px; padding: clamp(22px, 4vw, 38px);
+    border: 1px solid var(--line); border-radius: 24px; background: var(--surface);
+    box-shadow: var(--shadow-soft);
+  }
+  .n-head { display: grid; grid-template-columns: 42px minmax(0,1fr); gap: 13px; align-items: start; margin-bottom: 24px; }
+  .n-idx {
+    display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px;
+    background: var(--accent-soft); color: var(--accent-strong); font: 800 13px/1 ui-monospace, monospace;
+  }
+  .n-head h2, .h-zh {
+    padding-top: 3px;
+    color: var(--ink);
+    font: 750 clamp(21px, 3vw, 28px)/1.25 ui-serif, Georgia, "Noto Serif CJK SC", "Noto Serif SC", serif;
+    letter-spacing: -.025em;
+  }
+  .h-zh { margin-top: 6px; padding-top: 0; }
+  .para { display: flex; flex-direction: column; align-items: stretch; margin-bottom: 22px; }
+  .para:last-child { margin-bottom: 8px; }
+  .sent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 0;
+    margin: 0 0 0.8em;
+  }
+  .sent[data-start] { cursor: pointer; }
+  .de {
+    max-width: 100%;
+    font: var(--reader-size, 18.5px)/1.55 ui-serif, Georgia, "Noto Serif", serif;
+    letter-spacing: .003em;
+  }
+  .de w {
+    cursor: pointer; border-radius: 4px; transition: background .12s, color .12s;
+    text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+    text-decoration-color: transparent;
+  }
+  .de w:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; background: var(--accent-soft); }
+  .de w:hover, .de w:active { background: var(--warm-soft); text-decoration-color: var(--warm); }
+  .de w.known { text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent); }
+  .de w.ed { text-decoration-style: solid; text-decoration-thickness: 1.5px; }
+  .de w.wiki { text-decoration-style: dotted; text-decoration-color: color-mix(in srgb, var(--ink-soft) 55%, transparent); }
+  .de w.saved { color: var(--accent-strong); background: var(--accent-soft); text-decoration-color: transparent; }
+  .sent.now .de {
+    background: color-mix(in srgb, var(--accent-soft) 70%, transparent);
+    border-radius: 4px;
+  }
+  .zh {
+    margin-top: 3px;
+    width: 100%;
+    max-width: 100%;
+    color: var(--ink);
+    font: 400 15.5px/1.45 Inter, ui-sans-serif, "Noto Sans SC", sans-serif;
+  }
+  body.hide-zh .zh { display: none; }
+  body.hide-zh .para { display: block; }
+  body.hide-zh .sent { display: inline; width: auto; margin: 0 0.45em 0 0; }
+  body.hide-zh .sent .de { display: inline; line-height: 1.82; }
+  .n-head .h-zh {
+    margin-top: 6px;
+    padding-top: 0;
+    color: var(--ink);
+    font: 750 clamp(21px, 3vw, 28px)/1.25 ui-serif, Georgia, "Noto Serif CJK SC", "Noto Serif SC", serif;
+    letter-spacing: -.025em;
+  }
+  .article-extras details { margin-top: 10px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface-2); }
+  .article-extras details summary {
+    list-style: none; cursor: pointer; padding: 12px 14px; color: var(--ink-soft);
+    display: flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 750;
+  }
+  .article-extras details summary::before {
+    content: "+"; display: inline-grid; place-items: center; width: 20px; height: 20px;
+    border-radius: 7px; background: var(--surface); color: var(--accent); font-size: 14px;
+  }
+  .article-extras details[open] summary::before { content: "−"; }
+  .article-extras details summary::-webkit-details-marker { display: none; }
+  .article-extras details .body { padding: 2px 14px 15px 43px; color: var(--ink-soft); font-size: 13.5px; line-height: 1.75; }
+  .article-extras details .body strong { color: var(--ink); }
+  .vcard { display: grid; grid-template-columns: minmax(0,1fr) 28px; gap: 8px; align-items: start; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .vcard:last-child { border-bottom: 0; }
+  .gcard { padding: 12px 0; border-bottom: 1px dashed var(--line); }
+  .gcard:last-child { border-bottom: 0; }
+  .vcard-top, .gcard h4 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; font: 750 14.5px/1.35 ui-serif, Georgia, serif; color: var(--ink); }
+  .article-extras .vadd {
+    width: 28px; height: 28px; border: 1px solid var(--line); border-radius: 8px;
+    background: var(--surface); color: var(--accent-strong); cursor: pointer;
+    font: 700 18px/1 ui-sans-serif, system-ui;
+  }
+  .vpos { color: var(--ink-soft); font: 750 11px/1.2 ui-sans-serif, system-ui; letter-spacing: .06em; text-transform: uppercase; }
+  .vzh { margin-top: 4px; color: var(--accent-strong); font-size: 13.5px; }
+  .vex, .gex { margin-top: 6px; color: var(--ink-soft); font-size: 13px; font-style: italic; }
+  .gexzh { color: var(--zh); font-size: 12.5px; }
+  .gmore { margin-top: 8px; color: var(--ink-soft); font-size: 13px; }
+  .bg-note { margin: 0 0 8px; color: var(--ink-soft); font-size: 12px; }
+
+  .scrim { position: fixed; inset: 0; z-index: 55; display: none; background: rgba(7,16,18,.48); backdrop-filter: blur(3px); }
+  .scrim.on { display: block; }
+  #pop {
+    position: fixed; z-index: 70; display: none; width: min(360px, calc(100vw - 24px));
+    border: 1px solid var(--line); border-radius: 18px; padding: 18px;
+    background: var(--surface); color: var(--ink); box-shadow: var(--shadow);
+  }
+  #pop.open { display: block; }
+  .pop-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  #pop .pw { font: 750 21px/1.2 ui-serif, Georgia, serif; word-break: break-word; }
+  #pop .pp { margin-top: 3px; color: var(--ink-soft); font-size: 11px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+  #pop .pclose { border: 0; background: var(--surface-2); color: var(--ink-soft); width: 30px; height: 30px; border-radius: 9px; cursor: pointer; }
+  #pop .pz { margin-top: 12px; color: var(--accent-strong); font-weight: 700; }
+  #pop .pz:empty::after { content: "还没有释义，你可以自己补充"; color: var(--ink-soft); font-weight: 400; }
+  #pop .pe { margin-top: 9px; padding-top: 9px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 12.5px; font-style: italic; }
+  .pop-actions { display: flex; gap: 8px; margin-top: 14px; }
+  .pbtn, .secondary-btn, .primary-btn {
+    min-height: 40px; border-radius: 11px; padding: 0 13px; cursor: pointer; font-size: 13px; font-weight: 750;
+  }
+  .pbtn { flex: 1; border: 1px solid var(--accent); background: var(--accent); color: #fff; }
+  .pbtn.in { border-color: var(--line); background: var(--surface-2); color: var(--ink-soft); }
+  .secondary-btn { border: 1px solid var(--line); background: var(--surface); color: var(--ink-soft); }
+  .primary-btn { border: 1px solid var(--accent); background: var(--accent); color: #fff; }
+  .word-form { display: grid; gap: 11px; }
+  .word-form label { display: grid; gap: 5px; color: var(--ink-soft); font-size: 12px; font-weight: 700; }
+  .word-form input, .word-form textarea {
+    width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 9px 11px;
+    background: var(--surface-2); color: var(--ink); resize: vertical;
+  }
+  .word-form textarea { min-height: 66px; }
+  .form-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 3px; }
+
+  #basket-btn {
+    position: fixed; right: 22px; bottom: max(22px, env(safe-area-inset-bottom)); z-index: 45;
+    display: inline-flex; align-items: center; gap: 9px; min-height: 48px; padding: 0 18px;
+    border: 0; border-radius: 15px; background: var(--ink); color: var(--surface);
+    box-shadow: var(--shadow); cursor: pointer; font-weight: 800;
+  }
+  #basket-btn .cnt { min-width: 23px; padding: 2px 7px; border-radius: 99px; background: var(--warm); color: #172127; font-size: 12px; }
+  #basket {
+    position: fixed; inset: 0 0 0 auto; z-index: 65; width: min(440px, 100vw);
+    display: flex; flex-direction: column; padding: 24px 24px calc(24px + env(safe-area-inset-bottom));
+    background: var(--surface); box-shadow: -20px 0 60px rgba(7,16,18,.18);
+    transform: translateX(105%); transition: transform .22s ease;
+  }
+  #basket.open { transform: translateX(0); }
+  #basket .bhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+  #basket .bhead h3 { font-size: 22px; letter-spacing: -.02em; }
+  #basket .bhead p { margin-top: 2px; color: var(--ink-soft); font-size: 12.5px; }
+  #basket .bclose { border: 0; background: var(--surface-2); color: var(--ink-soft); width: 36px; height: 36px; border-radius: 11px; font-size: 20px; cursor: pointer; }
+  .basket-add { width: 100%; margin-bottom: 12px; }
+  #basket .blist { overflow-y: auto; flex: 1; padding-right: 4px; }
+  .bitem { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 5px 10px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+  .bitem .bw { font: 750 16px/1.3 ui-serif, Georgia, serif; }
+  .bitem .bz { grid-column: 1; color: var(--accent-strong); font-size: 13px; }
+  .bitem .be { grid-column: 1; overflow: hidden; color: var(--ink-soft); font-size: 11.5px; text-overflow: ellipsis; white-space: nowrap; }
+  .bitem-actions { grid-column: 2; grid-row: 1 / span 3; align-self: center; display: flex; gap: 3px; }
+  .bitem-actions button { border: 0; background: transparent; color: var(--ink-soft); padding: 7px; cursor: pointer; font-size: 12px; }
+  .bitem-actions .bx { color: var(--danger); }
+  #basket .bfoot { display: flex; gap: 8px; margin-top: 14px; }
+  #basket .bfoot button { flex: 1; }
+  #basket .bfoot button:disabled { opacity: .5; cursor: wait; }
+  #basket .bstatus { min-height: 18px; margin-top: 8px; color: var(--ink-soft); text-align: center; font-size: 12px; }
+  .bempty { padding: 42px 14px; color: var(--ink-soft); text-align: center; font-size: 13px; }
+  .bempty b { display: block; margin-bottom: 5px; color: var(--ink); font-size: 15px; }
+  #word-editor {
+    display: none; padding: 15px; margin-bottom: 12px; border: 1px solid var(--line);
+    border-radius: 14px; background: var(--surface-2);
+  }
+  #word-editor.open { display: block; }
+  #toast {
+    position: fixed; left: 50%; bottom: 28px; z-index: 90; display: none;
+    transform: translateX(-50%); padding: 10px 16px; border-radius: 12px;
+    background: var(--ink); color: var(--surface); box-shadow: var(--shadow); font-size: 13px; font-weight: 700;
+  }
+  @media (max-width: 840px) {
+    .app { width: min(100% - 28px, 720px); padding-top: 15px; padding-left: max(14px, env(safe-area-inset-left)); padding-right: max(14px, env(safe-area-inset-right)); }
+    .topbar { margin-bottom: 24px; }
+    .study-grid { display: block; }
+    .side { position: static; max-height: none; margin-bottom: 18px; }
+    .study-panel { display: contents; max-height: none; }
+    .video-card { border-radius: 20px; box-shadow: var(--shadow); }
+    .rail {
+      position: sticky; top: env(safe-area-inset-top); z-index: 30; margin: 10px 0 18px; padding: 8px 12px;
+      border-radius: 20px;
+    }
+    .rail-bar { padding: 0; }
+    .topic-nav { display: none; }
+    .video-card.floating {
+      position: fixed; z-index: 48; top: 72px; right: 10px; left: auto; width: min(48vw, 210px);
+      border: 1px solid rgba(255,255,255,.2); border-radius: 14px; box-shadow: 0 18px 45px rgba(0,0,0,.28);
+    }
+    .video-card.floating .video-drag { display: block; }
+    .video-card.floating .video-float-close { display: block; position: absolute; z-index: 4; top: 6px; right: 6px; }
+    .video-card.float-off { display: none; }
+    article { border-radius: 20px; }
+  }
+  @media (max-width: 560px) {
+    .app { width: 100%; padding: 12px 12px 88px; padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }
+    .brand span:last-child { display: none; }
+    .text-btn { padding: 0 10px; font-size: 12px; }
+    .archive-link { width: 38px; padding: 0; font-size: 0; }
+    .archive-link svg { width: 17px; }
+    .hero { padding: 0 5px; margin-bottom: 18px; }
+    .hero h1 { font-size: 30px; }
+    .hero-meta { gap: 5px 14px; font-size: 12.5px; }
+    .video-card { border-radius: 18px; }
+    .video-card.floating { width: min(56vw, 220px); }
+    .controls { gap: 5px; }
+    .controls button { min-height: 38px; font-size: 13px; }
+    article { padding: 20px 17px; margin-bottom: 13px; border-radius: 18px; }
+    .n-head { grid-template-columns: 34px minmax(0,1fr); gap: 10px; margin-bottom: 19px; }
+    .n-idx { width: 34px; height: 34px; border-radius: 10px; font-size: 11px; }
+    .n-head h2, .h-zh { padding-top: 1px; font-size: 21px; }
+    .h-zh { font-size: 21px; }
+    .de { font-size: var(--reader-size, 17.5px); line-height: 1.78; }
+    .zh { font-size: 15px; }
+    .n-head .h-zh { font-size: 21px; line-height: 1.25; }
+    .article-extras details .body { padding-left: 14px; }
+    #pop { left: 12px !important; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); top: auto !important; width: auto; }
+    #basket-btn { right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); min-height: 46px; }
+    #basket { padding: 18px 17px calc(18px + env(safe-area-inset-bottom)); }
+    #basket .bfoot { flex-direction: column; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<main class="app">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="返回往期列表">
+      <span class="brand-mark">DD</span><span>Deutsch Daily</span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-btn" id="theme-btn" aria-label="切换深浅色" title="切换深浅色">◐</button>
+      <button class="text-btn" id="font-btn">字号 A+</button>
+      <button class="text-btn" id="share-btn">分享</button>
+      <a class="archive-link" href="index.html">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M6 3h12a2 2 0 0 1 2 2v2H4V5a2 2 0 0 1 2-2Zm0 4h12v14H6V7Zm4 4h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        往期
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow" id="source-label">Tagesschau</div>
+    <h1 id="hdate"></h1>
+    <div class="hero-meta">
+      <span id="story-count"></span>
+      <a id="vlink" target="_blank" rel="noopener">在 tagesschau.de 打开 ↗</a>
+      <span class="legend">实线是重点词，虚线是词典结果</span>
+    </div>
+  </section>
+
+  <div class="study-grid">
+    <aside class="side">
+      <div id="video-anchor"></div>
+      <div class="study-panel">
+        <div class="video-card" id="video-card">
+          <div class="video-drag" id="video-drag" aria-label="拖动小窗"></div>
+          <button class="video-float-close" id="video-float-close" aria-label="暂时隐藏悬浮视频">×</button>
+          <div class="player" id="player"></div>
+        </div>
+        <div class="rail">
+          <div class="rail-bar">
+            <div class="controls">
+              <button id="btn-zh" class="on" aria-pressed="true">译文</button>
+            </div>
+          </div>
+          <nav class="topic-nav" id="topic-list" aria-label="本期新闻"></nav>
+        </div>
+      </div>
+    </aside>
+
+    <section class="reader">
+      <div class="first-run" id="first-run" hidden><div><strong>第一次来？</strong>播放视频后点一句可跳播，点德语词可查义；想先盲听，关掉“译文”即可。</div><button type="button" id="first-run-close" aria-label="关闭使用提示">知道了</button></div>
+      <div id="news"></div>
+    </section>
+  </div>
+</main>
+
+<div class="scrim" id="scrim"></div>
+<div id="pop" role="dialog" aria-modal="false" aria-label="单词卡片"></div>
+<button id="basket-btn" aria-label="打开生词本">生词本<span class="cnt" id="bk-cnt">0</span></button>
+<aside id="basket" role="dialog" aria-modal="true" aria-hidden="true" aria-label="生词本">
+  <div class="bhead">
+    <div><h3>我的生词本</h3><p>保存在当前浏览器，可复制或导出 Anki</p></div>
+    <button class="bclose" onclick="toggleBasket(false)" aria-label="关闭">×</button>
+  </div>
+  <button class="secondary-btn basket-add" onclick="openWordEditor()">＋ 手动添加单词</button>
+  <div id="word-editor">
+    <form class="word-form" id="word-form">
+      <label>德语单词或短语<input id="edit-word" required autocomplete="off" placeholder="z. B. die Entscheidung"></label>
+      <label>中文释义<input id="edit-zh" required autocomplete="off" placeholder="决定"></label>
+      <label>例句（可选）<textarea id="edit-example" placeholder="Das ist eine wichtige Entscheidung."></textarea></label>
+      <div class="form-actions">
+        <button type="button" class="secondary-btn" onclick="closeWordEditor()">取消</button>
+        <button type="submit" class="primary-btn">保存单词</button>
+      </div>
+    </form>
+  </div>
+  <div class="blist" id="bk-list"></div>
+  <div class="bfoot">
+    <button class="secondary-btn" onclick="copyWords()">复制文本</button>
+    <button class="primary-btn" id="btn-apkg" onclick="exportApkg()">导出 Anki</button>
+  </div>
+  <div class="bstatus" id="bk-status"></div>
+</aside>
+<div id="toast"></div>
+
+<script>
+const DATA = {"date": "2026-09-08", "slug": "2026-09-08", "source": "einfach", "source_label": "T-64 · tagesschau in einfacher Sprache", "source_short": "einfacher Sprache", "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1645420.html", "embed_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1645420~player.html", "mp4_url": "https://tagesschau-progressive.ard-mcdn.de/video/2026/0908/TV-20260908-1739-4200.webl.h264.mp4", "duration": 373.64, "news": [{"title": "Diskussion über Ergebnisse der Wahl in Sachsen-Anhalt", "title_zh": "讨论萨克森-安哈尔特州的选举结果", "paras": [{"start": 15.08, "end": 83.92, "lines": [{"de": "Willkommen zur tagesschau in Einfacher Sprache.", "zh": "欢迎收看简易德语每日新闻。", "start": null, "end": null}, {"de": "Ich bin Susanne Holst.", "zh": "我是苏珊娜·霍尔斯特。", "start": null, "end": null}, {"de": "Und das sind unsere Nachrichten: Und nun zur ersten Nachricht: Die Menschen in dem Bundesland Sachsen-Anhalt haben ein neues Parlament gewählt.", "zh": "以下是今天的新闻：现在来看第一条新闻：萨克森-安哈尔特州的民众选出了新的议会。", "start": 15.08, "end": 49.76}, {"de": "Die Partei AfD hat die Wahl klar gewonnen.", "zh": "德国选择党明显赢得了这次选举。", "start": 50.36, "end": 53.28}, {"de": "Der Verfassungsschutz sagt: Die AfD in Sachsen-Anhalt ist rechtsextrem.", "zh": "宪法保卫局说：萨克森-安哈尔特州的德国选择党是极右的。", "start": 54.48, "end": 60.44}, {"de": "Rechtsextreme sagen zum Beispiel: Ausländer sind weniger wert als Deutsche.", "zh": "举一个例子，极右分子会说：外国人不如德国人有价值。", "start": 62.24, "end": 67.76}, {"de": "Die AfD sagt: Viele Ausländer sollen Deutschland verlassen.", "zh": "德国选择党说：许多外国人应当离开德国。", "start": 68.6, "end": 73.64}, {"de": "Die anderen Parteien in Deutschland diskutieren jetzt über das Ergebnis von der Wahl in Sachsen-Anhalt.", "zh": "德国其他政党现在正在讨论萨克森-安哈尔特州的选举结果。", "start": 74.36, "end": 81.24}, {"de": "Dazu zeigen wir einen Film:", "zh": "（接下来是一段影片。）", "start": 81.96, "end": 83.92}]}, {"start": 85.08, "end": 153.28, "lines": [{"de": "Ulrich Siegmund von der AfD in Sachsen-Anhalt ist in Berlin.", "zh": "来自萨克森-安哈尔特州德国选择党的乌尔里希·西格蒙德在柏林。", "start": 85.08, "end": 89.04}, {"de": "Zusammen mit den Chefs von der AfD.", "zh": "和德国选择党的领导们在一起。", "start": 89.76, "end": 92.2}, {"de": "Sie sprechen mit Journalisten.", "zh": "他们正在和记者交谈。", "start": 93.0, "end": 95.08}, {"de": "AfD-Chefin Alice Weidel sagt: Wir wollen in allen Bundesländern regieren.", "zh": "德国选择党主席爱丽丝·魏德尔说：我们想在所有的联邦州执政。", "start": 95.84, "end": 100.96}, {"de": "Und wenn die nächste Wahl für den Bundestag ist, dann wollen wir klar gewinnen.", "zh": "等到下一次联邦议院选举时，我们要赢得明显的胜利。", "start": 101.24, "end": 106.56}, {"de": "Bundeskanzler Friedrich Merz von der CDU ist geschockt.", "zh": "来自基民盟的联邦总理弗里德里希·默茨感到震惊。", "start": 107.6, "end": 111.2}, {"de": "Er sagt: Das Ergebnis von der Wahl in Sachsen-Anhalt ist schlimmer als gedacht.", "zh": "他说：萨克森-安哈尔特州的选举结果比想象的更糟糕。", "start": 111.52, "end": 117.52}, {"de": "Die SPD findet: Vielleicht hat die Politik von der Bundesregierung eine Mitschuld an dem Ergebnis von der Wahl.", "zh": "社民党认为：也许联邦政府的政策对这次选举结果负有一部分责任。", "start": 117.84, "end": 125.48}, {"de": "SPD-Chefin Bärbel Baas sagt: Als Bundesregierung müssen wir Geld sparen.", "zh": "社民党主席巴尔贝尔·巴斯说：作为联邦政府，我们必须节省开支。", "start": 125.84, "end": 131.16}, {"de": "Aber die Menschen dürfen nicht darunter leiden.", "zh": "但民众不应当因此受苦。", "start": 131.64, "end": 134.68}, {"de": "Die Partei Die Linke findet: Die AfD ist die größte Gefahr für die Demokratie.", "zh": "左翼党认为：德国选择党是对民主的最大威胁。", "start": 136.84, "end": 142.2}, {"de": "Die Chefin von der Linken, Heidi Reichinnek, sagt: Die Bundesregierung spart zu viel.", "zh": "左翼党主席海蒂·赖希内克说：联邦政府节省得太厉害。", "start": 143.2, "end": 148.8}, {"de": "Für die Menschen wird alles teurer.", "zh": "对民众来说一切都在变贵。", "start": 149.04, "end": 151.32}, {"de": "Sie wählen deshalb die AfD.", "zh": "因此他们投票给德国选择党。", "start": 151.44, "end": 153.28}]}, {"start": 155.88, "end": 161.44, "lines": [{"de": "Die Diskussion über das Ergebnis von der Wahl in Sachsen-Anhalt wird wohl weitergehen.", "zh": "关于萨克森-安哈尔特州选举结果的讨论可能还会继续下去。", "start": 155.88, "end": 161.44}]}], "vocab": [{"lemma": "die Wahl, -en", "key": "wahl", "forms": ["Wahl", "Wahlen", "gewählt"], "pos": "Substantiv", "zh": "选举；选择", "example_de": "Und das sind unsere Nachrichten: Und nun zur ersten Nachricht: Die Menschen in dem Bundesland Sachsen-Anhalt haben ein neues Parlament gewählt.", "example_zh": "德国选择党明显赢得了这次选举。"}, {"lemma": "das Parlament, -e", "key": "parlament", "forms": ["Parlament"], "pos": "Substantiv", "zh": "议会", "example_de": "Und das sind unsere Nachrichten: Und nun zur ersten Nachricht: Die Menschen in dem Bundesland Sachsen-Anhalt haben ein neues Parlament gewählt.", "example_zh": "萨克森-安哈尔特州的民众选出了新的议会。"}, {"lemma": "der Verfassungsschutz", "key": "verfassungsschutz", "forms": ["Verfassungsschutz"], "pos": "Substantiv", "zh": "宪法保卫局（德国国内情报机构）", "example_de": "Der Verfassungsschutz sagt: Die AfD in Sachsen-Anhalt ist rechtsextrem.", "example_zh": "宪法保卫局说：萨克森-安哈尔特州的德国选择党是极右的。"}, {"lemma": "rechtsextrem", "key": "rechtsextrem", "forms": ["rechtsextrem", "Rechtsextreme"], "pos": "Adjektiv", "zh": "极右的", "example_de": "Der Verfassungsschutz sagt: Die AfD in Sachsen-Anhalt ist rechtsextrem.", "example_zh": "宪法保卫局说：萨克森-安哈尔特州的德国选择党是极右的。"}, {"lemma": "der Ausländer, -", "key": "auslaender", "forms": ["Ausländer"], "pos": "Substantiv", "zh": "外国人", "example_de": "Rechtsextreme sagen zum Beispiel: Ausländer sind weniger wert als Deutsche.", "example_zh": "举一个例子，极右分子会说：外国人不如德国人有价值。"}, {"lemma": "die Mitschuld", "key": "mitschuld", "forms": ["Mitschuld"], "pos": "Substantiv", "zh": "共同责任、也有一部分责任", "example_de": "Die SPD findet: Vielleicht hat die Politik von der Bundesregierung eine Mitschuld an dem Ergebnis von der Wahl.", "example_zh": "社民党认为：也许联邦政府的政策对这次选举结果负有一部分责任。"}, {"lemma": "die Bundesregierung, -en", "key": "bundesregierung", "forms": ["Bundesregierung"], "pos": "Substantiv", "zh": "联邦政府", "example_de": "Die SPD findet: Vielleicht hat die Politik von der Bundesregierung eine Mitschuld an dem Ergebnis von der Wahl.", "example_zh": "社民党认为：也许联邦政府的政策对这次选举结果负有一部分责任。"}, {"lemma": "die Gefahr, -en", "key": "gefahr", "forms": ["Gefahr"], "pos": "Substantiv", "zh": "危险", "example_de": "Die Partei Die Linke findet: Die AfD ist die größte Gefahr für die Demokratie.", "example_zh": "左翼党认为：德国选择党是对民主的最大威胁。"}, {"lemma": "regieren", "key": "regieren", "forms": ["regieren"], "pos": "Verb", "zh": "执政、统治", "example_de": "AfD-Chefin Alice Weidel sagt: Wir wollen in allen Bundesländern regieren.", "example_zh": "德国选择党主席爱丽丝·魏德尔说：我们想在所有的联邦州执政。"}], "grammar_points": [{"title": "von + Dativ 代替第二格", "summary": "在口语和简易德语里，常用「von + 三格」代替第二格，例如 das Ergebnis von der Wahl（= das Ergebnis der Wahl）。", "example_de": "Die anderen Parteien in Deutschland diskutieren jetzt über das Ergebnis von der Wahl in Sachsen-Anhalt.", "example_zh": "德国其他政党现在正在讨论萨克森-安哈尔特州的选举结果。"}, {"title": "deshalb + 动词第二位", "summary": "deshalb（因此）放在句首占第一位时，动词仍然紧随其后占第二位。", "example_de": "Sie wählen deshalb die AfD.", "example_zh": "因此他们投票给德国选择党。"}], "background": "萨克森-安哈尔特州位于德国东部。宪法保卫局是德国各州和联邦负责监视极端主义的国内情报机构；AfD（德国选择党）是德国右翼民粹政党，其部分州级组织已被宪法保卫局列为极右观察对象。这期节目讨论的是该州选举后德国各党的反应。"}, {"title": "Leistung von Schülern in Deutschland schlechter", "title_zh": "德国学生的成绩变差", "paras": [{"start": 162.96, "end": 206.08, "lines": [{"de": "Und nun zur nächsten Nachricht: In vielen Ländern gibt es die Studie PISA.", "zh": "现在来看下一条新闻：许多国家都有 PISA 这项研究。", "start": 162.96, "end": 172.84}, {"de": "Dabei untersuchen Experten, wie gut ist die Leistung von den Schülern?", "zh": "在这项研究里，专家们考察学生的成绩到底怎么样？", "start": 173.72, "end": 178.44}, {"de": "Zum Beispiel beim Lesen und beim Rechnen.", "zh": "比如在阅读和计算方面。", "start": 178.8, "end": 181.52}, {"de": "Die Studie hat jetzt gezeigt: Die Leistung von den Schülern in Deutschland ist schlechter geworden.", "zh": "这项研究现在表明：德国学生的成绩变差了。", "start": 181.96, "end": 189.12}, {"de": "Zum Beispiel können viele Schüler lange Texte nur schlecht verstehen.", "zh": "比如许多学生只能勉强看懂较长的文章。", "start": 189.6, "end": 194.04}, {"de": "Und viele können nicht so gut rechnen.", "zh": "还有许多人计算能力不强。", "start": 195.48, "end": 197.96}, {"de": "In mehreren anderen Ländern ist die Leistung von den Schülern viel besser.", "zh": "在其他一些国家，学生的成绩要好得多。", "start": 198.36, "end": 203.16}, {"de": "Zum Beispiel in Estland, Japan und Korea.", "zh": "比如爱沙尼亚、日本和韩国。", "start": 203.28, "end": 206.08}]}], "vocab": [{"lemma": "die Studie, -n", "key": "studie", "forms": ["Studie"], "pos": "Substantiv", "zh": "研究、调查报告", "example_de": "Und nun zur nächsten Nachricht: In vielen Ländern gibt es die Studie PISA.", "example_zh": "许多国家都有 PISA 这项研究。"}, {"lemma": "die Leistung, -en", "key": "leistung", "forms": ["Leistung"], "pos": "Substantiv", "zh": "成绩、能力", "example_de": "Dabei untersuchen Experten, wie gut ist die Leistung von den Schülern?", "example_zh": "在这项研究里，专家们考察学生的成绩到底怎么样？"}, {"lemma": "der Schüler, -", "key": "schueler", "forms": ["Schülern", "Schüler"], "pos": "Substantiv", "zh": "学生（中小学）", "example_de": "Dabei untersuchen Experten, wie gut ist die Leistung von den Schülern?", "example_zh": "在这项研究里，专家们考察学生的成绩到底怎么样？"}, {"lemma": "das Rechnen", "key": "rechnen", "forms": ["Rechnen"], "pos": "Substantiv", "zh": "计算、算术", "example_de": "Zum Beispiel beim Lesen und beim Rechnen.", "example_zh": "比如在阅读和计算方面。"}, {"lemma": "verstehen", "key": "verstehen", "forms": ["verstehen"], "pos": "Verb", "zh": "理解、听懂、看懂", "example_de": "Zum Beispiel können viele Schüler lange Texte nur schlecht verstehen.", "example_zh": "比如许多学生只能勉强看懂较长的文章。"}, {"lemma": "das Land, die Länder", "key": "land", "forms": ["Ländern", "Länder", "Land"], "pos": "Substantiv", "zh": "国家；（复数也指）地区", "example_de": "Und nun zur nächsten Nachricht: In vielen Ländern gibt es die Studie PISA.", "example_zh": "许多国家都有 PISA 这项研究。"}], "grammar_points": [{"title": "比较级 + geworden（werden 的完成时）", "summary": "werden 表示变化，完成时用 sein + geworden；比较级 schlechter 说明变化的方向和程度。", "example_de": "Die Leistung von den Schülern in Deutschland ist schlechter geworden.", "example_zh": "德国学生的成绩变差了。"}], "background": "PISA 是经济合作与发展组织（OECD）主办的大型国际学生评估项目，定期考察各国 15 岁学生的阅读、数学和科学能力，德国学生近几轮的成绩持续下滑是教育界的重点话题。"}, {"title": "Festnahme nach Angriffen auf Stromnetz", "title_zh": "袭击电网后有人被捕", "paras": [{"start": 208.68, "end": 250.88, "lines": [{"de": "Und nun zur nächsten Nachricht: In Deutschland gab es Angriffe auf das Stromnetz.", "zh": "现在来看下一条新闻：德国发生了针对电网的袭击。", "start": 208.68, "end": 218.6}, {"de": "Und zwar in den Bundesländern Brandenburg und Nordrhein-Westfalen.", "zh": "具体是在勃兰登堡州和北莱茵-威斯特法伦州。", "start": 219.36, "end": 223.76}, {"de": "Dort war Sprengstoff in der Nähe von Kraftwerken gefunden worden.", "zh": "在那里，发电厂附近曾发现过炸药。", "start": 224.72, "end": 229.04}, {"de": "Sprengstoff ist eine Masse, die explodieren kann.", "zh": "炸药是一种可以爆炸的物质。", "start": 229.36, "end": 232.64}, {"de": "Die Polizei hat dann den Täter gesucht.", "zh": "随后警方搜寻了作案人。", "start": 233.92, "end": 236.56}, {"de": "Jetzt hat sie einen Mann festgenommen.", "zh": "现在警方逮捕了一名男子。", "start": 237.48, "end": 240.0}, {"de": "Er war in der Nähe von einem Kraftwerk in Nordrhein-Westfalen.", "zh": "他当时在北威州一座发电厂的附近。", "start": 240.36, "end": 244.6}, {"de": "Die Polizei sagt: Der Mann hatte Sprengstoff dabei.", "zh": "警方说：这名男子随身携带了炸药。", "start": 244.72, "end": 248.28}, {"de": "Wahrscheinlich ist er der Täter.", "zh": "他很可能就是作案人。", "start": 248.6, "end": 250.88}]}], "vocab": [{"lemma": "das Stromnetz, -e", "key": "stromnetz", "forms": ["Stromnetz"], "pos": "Substantiv", "zh": "电网", "example_de": "Und nun zur nächsten Nachricht: In Deutschland gab es Angriffe auf das Stromnetz.", "example_zh": "德国发生了针对电网的袭击。"}, {"lemma": "der Angriff, -e", "key": "angriff", "forms": ["Angriffe", "Angriffen", "Angriff"], "pos": "Substantiv", "zh": "袭击、攻击", "example_de": "Und nun zur nächsten Nachricht: In Deutschland gab es Angriffe auf das Stromnetz.", "example_zh": "德国发生了针对电网的袭击。"}, {"lemma": "der Sprengstoff, -e", "key": "sprengstoff", "forms": ["Sprengstoff"], "pos": "Substantiv", "zh": "炸药", "example_de": "Dort war Sprengstoff in der Nähe von Kraftwerken gefunden worden.", "example_zh": "在那里，发电厂附近曾发现过炸药。"}, {"lemma": "die Nähe", "key": "naehe", "forms": ["Nähe"], "pos": "Substantiv", "zh": "附近、近处", "example_de": "Dort war Sprengstoff in der Nähe von Kraftwerken gefunden worden.", "example_zh": "在那里，发电厂附近曾发现过炸药。"}, {"lemma": "explodieren", "key": "explodieren", "forms": ["explodieren"], "pos": "Verb", "zh": "爆炸", "example_de": "Sprengstoff ist eine Masse, die explodieren kann.", "example_zh": "炸药是一种可以爆炸的物质。"}, {"lemma": "der Täter, -", "key": "taeter", "forms": ["Täter"], "pos": "Substantiv", "zh": "作案人、行为人", "example_de": "Die Polizei hat dann den Täter gesucht.", "example_zh": "随后警方搜寻了作案人。"}, {"lemma": "festnehmen", "key": "festnehmen", "forms": ["festgenommen", "festnehmen"], "pos": "Verb", "zh": "逮捕", "example_de": "Jetzt hat sie einen Mann festgenommen.", "example_zh": "现在警方逮捕了一名男子。"}, {"lemma": "das Kraftwerk, -e", "key": "kraftwerk", "forms": ["Kraftwerken", "Kraftwerk"], "pos": "Substantiv", "zh": "发电厂", "example_de": "Dort war Sprengstoff in der Nähe von Kraftwerken gefunden worden.", "example_zh": "在那里，发电厂附近曾发现过炸药。"}], "grammar_points": [{"title": "状态被动态的完成时：sein + Partizip II + worden", "summary": "「war ... gefunden worden」表示『曾被发现了』这一状态，是状态被动态（sein-Passiv）的完成时形式，强调发现这个动作已经完成。", "example_de": "Dort war Sprengstoff in der Nähe von Kraftwerken gefunden worden.", "example_zh": "在那里，发电厂附近曾发现过炸药。"}], "background": "电网、发电厂属于德国的关键基础设施，针对它们的蓄意破坏会受到警方和安全部门的高度重视。"}, {"title": "Russland greift Ukraine wieder an", "title_zh": "俄罗斯再次攻击乌克兰", "paras": [{"start": 253.08, "end": 283.44, "lines": [{"de": "Und nun zur nächsten Nachricht: Bei dem Krieg gegen die Ukraine gab es eine Waffenruhe.", "zh": "现在来看下一条新闻：在针对乌克兰的战争中，曾有过一次停火。", "start": 253.08, "end": 263.72}, {"de": "Eine Pause vom Krieg.", "zh": "也就是战争中的一次暂停。", "start": 264.48, "end": 266.04}, {"de": "Es gab nämlich Gespräche über Frieden.", "zh": "因为当时举行了关于和平的会谈。", "start": 266.92, "end": 269.4}, {"de": "Dafür waren Vertreter von dem Land USA in Russland und in der Ukraine.", "zh": "为此，美国的代表去了俄罗斯和乌克兰。", "start": 269.84, "end": 275.12}, {"de": "Jetzt hat Russland die Ukraine aber wieder angegriffen.", "zh": "但现在俄罗斯再次攻击了乌克兰。", "start": 277.56, "end": 281.04}, {"de": "Dazu zeigen wir einen Film:", "zh": "（接下来是一段影片。）", "start": 281.6, "end": 283.44}]}, {"start": 284.56, "end": 327.44, "lines": [{"de": "Das ist in der Hauptstadt von der Ukraine, in Kiew.", "zh": "这里是乌克兰的首都基辅。", "start": 284.56, "end": 288.0}, {"de": "Hier sind die meisten Raketen von Russland eingeschlagen.", "zh": "俄罗斯的大部分导弹都落在了这里。", "start": 288.6, "end": 292.24}, {"de": "Es gibt Tote und Verletzte.", "zh": "有人员死亡和受伤。", "start": 292.44, "end": 294.36}, {"de": "Wegen den Angriffen gab es Feuer in mehreren Häusern.", "zh": "由于这些袭击，多栋房屋起了火。", "start": 295.44, "end": 298.68}, {"de": "Die Regierung sagt: Auch Teile von einer Schule und von einem Krankenhaus wurden zerstört.", "zh": "政府说：一所学校和一家医院的部分建筑也被摧毁。", "start": 298.88, "end": 305.4}, {"de": "Im Osten von der Ukraine hat eine Rakete einen Zug getroffen.", "zh": "在乌克兰东部，一枚导弹击中了一列火车。", "start": 306.96, "end": 310.92}, {"de": "Russland hat auch im Süden angegriffen, unter anderem diesen Markt.", "zh": "俄罗斯在南部也发动了攻击，其中包括这个市场。", "start": 312.16, "end": 316.8}, {"de": "Die Regierung von der Ukraine sagt: Das waren sehr viele Angriffe von Russland.", "zh": "乌克兰政府说：这次俄罗斯的袭击非常多。", "start": 317.72, "end": 322.96}, {"de": "Deshalb braucht die Ukraine noch mehr Hilfe von anderen Ländern.", "zh": "因此乌克兰需要其他国家更多的帮助。", "start": 323.28, "end": 327.44}]}], "vocab": [{"lemma": "die Waffenruhe", "key": "waffenruhe", "forms": ["Waffenruhe"], "pos": "Substantiv", "zh": "停火", "example_de": "Und nun zur nächsten Nachricht: Bei dem Krieg gegen die Ukraine gab es eine Waffenruhe.", "example_zh": "在针对乌克兰的战争中，曾有过一次停火。"}, {"lemma": "der Krieg, -e", "key": "krieg", "forms": ["Krieg", "Kriege"], "pos": "Substantiv", "zh": "战争", "example_de": "Und nun zur nächsten Nachricht: Bei dem Krieg gegen die Ukraine gab es eine Waffenruhe.", "example_zh": "在针对乌克兰的战争中，曾有过一次停火。"}, {"lemma": "das Gespräch, -e", "key": "gespraech", "forms": ["Gespräche", "Gespräch"], "pos": "Substantiv", "zh": "谈话、会谈", "example_de": "Es gab nämlich Gespräche über Frieden.", "example_zh": "因为当时举行了关于和平的会谈。"}, {"lemma": "der Frieden", "key": "frieden", "forms": ["Frieden"], "pos": "Substantiv", "zh": "和平", "example_de": "Es gab nämlich Gespräche über Frieden.", "example_zh": "因为当时举行了关于和平的会谈。"}, {"lemma": "der Vertreter, -", "key": "vertreter", "forms": ["Vertreter"], "pos": "Substantiv", "zh": "代表", "example_de": "Dafür waren Vertreter von dem Land USA in Russland und in der Ukraine.", "example_zh": "为此，美国的代表去了俄罗斯和乌克兰。"}, {"lemma": "angreifen", "key": "angreifen", "forms": ["angegriffen", "angreifen"], "pos": "Verb", "zh": "攻击、进攻", "example_de": "Jetzt hat Russland die Ukraine aber wieder angegriffen.", "example_zh": "但现在俄罗斯再次攻击了乌克兰。"}, {"lemma": "die Rakete, -n", "key": "rakete", "forms": ["Raketen", "Rakete"], "pos": "Substantiv", "zh": "导弹、火箭", "example_de": "Hier sind die meisten Raketen von Russland eingeschlagen.", "example_zh": "俄罗斯的大部分导弹都落在了这里。"}, {"lemma": "zerstören", "key": "zerstoeren", "forms": ["zerstört", "zerstören"], "pos": "Verb", "zh": "摧毁、毁坏", "example_de": "Die Regierung sagt: Auch Teile von einer Schule und von einem Krankenhaus wurden zerstört.", "example_zh": "政府说：一所学校和一家医院的部分建筑也被摧毁。"}], "grammar_points": [{"title": "nämlich（因为、也就是）", "summary": "nämlich 放在句中，用来解释前面那句话的原因，语气相当于「因为」，但顺序是先说结果再说原因。", "example_de": "Es gab nämlich Gespräche über Frieden.", "example_zh": "因为当时举行了关于和平的会谈。"}], "background": "乌克兰战争自 2022 年爆发。本期报道的是：此前在美国代表斡旋下达成临时停火并举行和平会谈之后，俄罗斯恢复了对乌克兰多地的打击。"}, {"title": "Das Wetter", "title_zh": "天气", "paras": [{"start": 349.64, "end": 366.16, "lines": [{"de": "Und jetzt kommt das Wetter: Im Süden und im Osten kann es regnen.", "zh": "现在来看天气：南部和东部可能会下雨。", "start": 349.64, "end": 354.6}, {"de": "Im Nordwesten gibt es Schauer und einzelne Gewitter.", "zh": "西北部有阵雨和零星雷雨。", "start": 355.2, "end": 358.88}, {"de": "Sonst scheint die Sonne.", "zh": "其他地区阳光明媚。", "start": 359.64, "end": 361.28}, {"de": "Manchmal gibt es Wolken.", "zh": "有时有云。", "start": 361.44, "end": 363.12}, {"de": "Es werden 17 bis 24 Grad.", "zh": "气温 17 到 24 度。", "start": 364.2, "end": 366.16}]}], "vocab": [{"lemma": "der Schauer, -", "key": "schauer", "forms": ["Schauer"], "pos": "Substantiv", "zh": "阵雨", "example_de": "Im Nordwesten gibt es Schauer und einzelne Gewitter.", "example_zh": "西北部有阵雨和零星雷雨。"}, {"lemma": "das Gewitter, -", "key": "gewitter", "forms": ["Gewitter"], "pos": "Substantiv", "zh": "雷雨", "example_de": "Im Nordwesten gibt es Schauer und einzelne Gewitter.", "example_zh": "西北部有阵雨和零星雷雨。"}, {"lemma": "scheinen", "key": "scheinen", "forms": ["scheint", "scheinen"], "pos": "Verb", "zh": "照耀（太阳）；似乎", "example_de": "Sonst scheint die Sonne.", "example_zh": "其他地区阳光明媚。"}, {"lemma": "die Wolke, -n", "key": "wolke", "forms": ["Wolken", "Wolke"], "pos": "Substantiv", "zh": "云", "example_de": "Manchmal gibt es Wolken.", "example_zh": "有时有云。"}], "grammar_points": [], "background": ""}], "gloss": {"wahl": {"word": "die Wahl, -en", "zh": "选举；选择", "pos": "Substantiv", "example": "Und das sind unsere Nachrichten: Und nun zur ersten Nachricht: Die Menschen in dem Bundesland Sachsen-Anhalt haben ein neues Parlament gewählt.", "source": "editorial"}, "parlament": {"word": "das Parlament, -e", "zh": "议会", "pos": "Substantiv", "example": "Und das sind unsere Nachrichten: Und nun zur ersten Nachricht: Die Menschen in dem Bundesland Sachsen-Anhalt haben ein neues Parlament gewählt.", "source": "editorial"}, "verfassungsschutz": {"word": "der Verfassungsschutz", "zh": "宪法保卫局（德国国内情报机构）", "pos": "Substantiv", "example": "Der Verfassungsschutz sagt: Die AfD in Sachsen-Anhalt ist rechtsextrem.", "source": "editorial"}, "rechtsextrem": {"word": "rechtsextrem", "zh": "极右的", "pos": "Adjektiv", "example": "Der Verfassungsschutz sagt: Die AfD in Sachsen-Anhalt ist rechtsextrem.", "source": "editorial"}, "auslaender": {"word": "der Ausländer, -", "zh": "外国人", "pos": "Substantiv", "example": "Rechtsextreme sagen zum Beispiel: Ausländer sind weniger wert als Deutsche.", "source": "editorial"}, "mitschuld": {"word": "die Mitschuld", "zh": "共同责任、也有一部分责任", "pos": "Substantiv", "example": "Die SPD findet: Vielleicht hat die Politik von der Bundesregierung eine Mitschuld an dem Ergebnis von der Wahl.", "source": "editorial"}, "bundesregierung": {"word": "die Bundesregierung, -en", "zh": "联邦政府", "pos": "Substantiv", "example": "Die SPD findet: Vielleicht hat die Politik von der Bundesregierung eine Mitschuld an dem Ergebnis von der Wahl.", "source": "editorial"}, "gefahr": {"word": "die Gefahr, -en", "zh": "危险", "pos": "Substantiv", "example": "Die Partei Die Linke findet: Die AfD ist die größte Gefahr für die Demokratie.", "source": "editorial"}, "regieren": {"word": "regieren", "zh": "执政、统治", "pos": "Verb", "example": "AfD-Chefin Alice Weidel sagt: Wir wollen in allen Bundesländern regieren.", "source": "editorial"}, "studie": {"word": "die Studie, -n", "zh": "研究、调查报告", "pos": "Substantiv", "example": "Und nun zur nächsten Nachricht: In vielen Ländern gibt es die Studie PISA.", "source": "editorial"}, "leistung": {"word": "die Leistung, -en", "zh": "成绩、能力", "pos": "Substantiv", "example": "Dabei untersuchen Experten, wie gut ist die Leistung von den Schülern?", "source": "editorial"}, "schueler": {"word": "der Schüler, -", "zh": "学生（中小学）", "pos": "Substantiv", "example": "Dabei untersuchen Experten, wie gut ist die Leistung von den Schülern?", "source": "editorial"}, "rechnen": {"word": "das Rechnen", "zh": "计算、算术", "pos": "Substantiv", "example": "Zum Beispiel beim Lesen und beim Rechnen.", "source": "editorial"}, "verstehen": {"word": "verstehen", "zh": "理解、听懂、看懂", "pos": "Verb", "example": "Zum Beispiel können viele Schüler lange Texte nur schlecht verstehen.", "source": "editorial"}, "land": {"word": "das Land, die Länder", "zh": "国家；（复数也指）地区", "pos": "Substantiv", "example": "Und nun zur nächsten Nachricht: In vielen Ländern gibt es die Studie PISA.", "source": "editorial"}, "stromnetz": {"word": "das Stromnetz, -e", "zh": "电网", "pos": "Substantiv", "example": "Und nun zur nächsten Nachricht: In Deutschland gab es Angriffe auf das Stromnetz.", "source": "editorial"}, "angriff": {"word": "der Angriff, -e", "zh": "袭击、攻击", "pos": "Substantiv", "example": "Und nun zur nächsten Nachricht: In Deutschland gab es Angriffe auf das Stromnetz.", "source": "editorial"}, "sprengstoff": {"word": "der Sprengstoff, -e", "zh": "炸药", "pos": "Substantiv", "example": "Dort war Sprengstoff in der Nähe von Kraftwerken gefunden worden.", "source": "editorial"}, "naehe": {"word": "die Nähe", "zh": "附近、近处", "pos": "Substantiv", "example": "Dort war Sprengstoff in der Nähe von Kraftwerken gefunden worden.", "source": "editorial"}, "explodieren": {"word": "explodieren", "zh": "爆炸", "pos": "Verb", "example": "Sprengstoff ist eine Masse, die explodieren kann.", "source": "editorial"}, "taeter": {"word": "der Täter, -", "zh": "作案人、行为人", "pos": "Substantiv", "example": "Die Polizei hat dann den Täter gesucht.", "source": "editorial"}, "festnehmen": {"word": "festnehmen", "zh": "逮捕", "pos": "Verb", "example": "Jetzt hat sie einen Mann festgenommen.", "source": "editorial"}, "kraftwerk": {"word": "das Kraftwerk, -e", "zh": "发电厂", "pos": "Substantiv", "example": "Dort war Sprengstoff in der Nähe von Kraftwerken gefunden worden.", "source": "editorial"}, "waffenruhe": {"word": "die Waffenruhe", "zh": "停火", "pos": "Substantiv", "example": "Und nun zur nächsten Nachricht: Bei dem Krieg gegen die Ukraine gab es eine Waffenruhe.", "source": "editorial"}, "krieg": {"word": "der Krieg, -e", "zh": "战争", "pos": "Substantiv", "example": "Und nun zur nächsten Nachricht: Bei dem Krieg gegen die Ukraine gab es eine Waffenruhe.", "source": "editorial"}, "gespraech": {"word": "das Gespräch, -e", "zh": "谈话、会谈", "pos": "Substantiv", "example": "Es gab nämlich Gespräche über Frieden.", "source": "editorial"}, "frieden": {"word": "der Frieden", "zh": "和平", "pos": "Substantiv", "example": "Es gab nämlich Gespräche über Frieden.", "source": "editorial"}, "vertreter": {"word": "der Vertreter, -", "zh": "代表", "pos": "Substantiv", "example": "Dafür waren Vertreter von dem Land USA in Russland und in der Ukraine.", "source": "editorial"}, "angreifen": {"word": "angreifen", "zh": "攻击、进攻", "pos": "Verb", "example": "Jetzt hat Russland die Ukraine aber wieder angegriffen.", "source": "editorial"}, "rakete": {"word": "die Rakete, -n", "zh": "导弹、火箭", "pos": "Substantiv", "example": "Hier sind die meisten Raketen von Russland eingeschlagen.", "source": "editorial"}, "zerstoeren": {"word": "zerstören", "zh": "摧毁、毁坏", "pos": "Verb", "example": "Die Regierung sagt: Auch Teile von einer Schule und von einem Krankenhaus wurden zerstört.", "source": "editorial"}, "schauer": {"word": "der Schauer, -", "zh": "阵雨", "pos": "Substantiv", "example": "Im Nordwesten gibt es Schauer und einzelne Gewitter.", "source": "editorial"}, "gewitter": {"word": "das Gewitter, -", "zh": "雷雨", "pos": "Substantiv", "example": "Im Nordwesten gibt es Schauer und einzelne Gewitter.", "source": "editorial"}, "scheinen": {"word": "scheinen", "zh": "照耀（太阳）；似乎", "pos": "Verb", "example": "Sonst scheint die Sonne.", "source": "editorial"}, "wolke": {"word": "die Wolke, -n", "zh": "云", "pos": "Substantiv", "example": "Manchmal gibt es Wolken.", "source": "editorial"}, "ich": {"word": "ich", "zh": "我", "pos": "", "example": "", "source": "dict"}, "bin": {"word": "bin", "zh": "（sein 的第一人稱現在式）是", "pos": "Verb", "example": "", "source": "dict"}, "und": {"word": "und", "zh": "和；以及", "pos": "", "example": "", "source": "dict"}, "das": {"word": "das", "zh": "关系代词形式：主格中性、宾格中性", "pos": "Pronomen", "example": "", "source": "dict"}, "unsere": {"word": "unser", "zh": "我們的", "pos": "", "example": "", "source": "dict"}, "nun": {"word": "nun", "zh": "现在", "pos": "Adverb", "example": "", "source": "dict"}, "ersten": {"word": "erst", "zh": "首先，起初", "pos": "Adverb", "example": "", "source": "dict"}, "nachricht": {"word": "Nachricht", "zh": "信息", "pos": "", "example": "", "source": "dict"}, "die": {"word": "die", "zh": "der 的主格/賓格單數陰性", "pos": "Artikel", "example": "", "source": "dict"}, "menschen": {"word": "Mensch", "zh": "人类，人", "pos": "Substantiv", "example": "", "source": "dict"}, "bundesland": {"word": "Bundesland", "zh": "州、联邦州", "pos": "Substantiv", "example": "", "source": "dict"}, "sachsen-anhalt": {"word": "Sachsen-Anhalt", "zh": "萨克森-安哈尔特；薩克森-安哈爾特", "pos": "", "example": "", "source": "dict"}, "haben": {"word": "haben", "zh": "有", "pos": "Verb", "example": "", "source": "dict"}, "ein": {"word": "ein", "zh": "一个；开", "pos": "", "example": "", "source": "dict"}, "neues": {"word": "Neue", "zh": "〈阴〉 新雪，新降的雪，新人，新来者", "pos": "Substantiv", "example": "", "source": "dict"}, "partei": {"word": "Partei", "zh": "党；黨", "pos": "", "example": "", "source": "dict"}, "der": {"word": "der", "zh": "定冠词形式：主格单数阳性、属格单数阴性、属格复数、与格单数阴性", "pos": "Artikel", "example": "", "source": "dict"}, "sagt": {"word": "sagt", "zh": "sagen的变位形式", "pos": "", "example": "", "source": "dict"}, "ist": {"word": "Ist", "zh": "（前缀）实际的（例如 Ist-Spiel 实际间隙）", "pos": "", "example": "", "source": "dict"}, "sagen": {"word": "sagen", "zh": "说；告诉", "pos": "", "example": "", "source": "dict"}, "beispiel": {"word": "Beispiel", "zh": "例子", "pos": "Substantiv", "example": "", "source": "dict"}, "weniger": {"word": "wenig", "zh": "少的，少量的", "pos": "Adjektiv", "example": "", "source": "dict"}, "als": {"word": "als", "zh": "比", "pos": "", "example": "", "source": "dict"}, "deutsche": {"word": "Deutsche", "zh": "德国人；德國人", "pos": "Substantiv", "example": "", "source": "dict"}, "viele": {"word": "viele", "zh": "多数、很多", "pos": "Pronomen", "example": "", "source": "dict"}, "sollen": {"word": "sollen", "zh": "很可能", "pos": "", "example": "", "source": "dict"}, "deutschland": {"word": "Deutschland", "zh": "德国；德意志", "pos": "", "example": "", "source": "dict"}, "verlassen": {"word": "verlassen", "zh": "摒棄", "pos": "Verb", "example": "", "source": "dict"}, "anderen": {"word": "anderen", "zh": "anderer 的屈折：", "pos": "Adjektiv", "example": "", "source": "dict"}, "parteien": {"word": "Partei", "zh": "党；黨", "pos": "", "example": "", "source": "dict"}, "jetzt": {"word": "jetzt", "zh": "现在；現在", "pos": "", "example": "", "source": "dict"}, "über": {"word": "über", "zh": "上边", "pos": "", "example": "", "source": "dict"}, "von": {"word": "von", "zh": "來自", "pos": "", "example": "", "source": "dict"}, "dazu": {"word": "dazu", "zh": "另外、进一步、附加地", "pos": "Adverb", "example": "", "source": "dict"}, "zeigen": {"word": "zeigen", "zh": "见", "pos": "", "example": "", "source": "dict"}, "wir": {"word": "wir", "zh": "我们；我們", "pos": "", "example": "", "source": "dict"}, "film": {"word": "Film", "zh": "电影；電影", "pos": "Substantiv", "example": "", "source": "dict"}, "berlin": {"word": "Berlin", "zh": "柏林", "pos": "Substantiv", "example": "", "source": "dict"}, "mit": {"word": "mit", "zh": "跟；和", "pos": "Präposition", "example": "", "source": "dict"}, "sie": {"word": "sie", "zh": "她；他们", "pos": "Pronomen", "example": "", "source": "dict"}, "sprechen": {"word": "sprechen", "zh": "讲话；说", "pos": "Verb", "example": "", "source": "dict"}, "wollen": {"word": "wollen", "zh": "要；想要", "pos": "", "example": "", "source": "dict"}, "bundesländern": {"word": "Bundesländ", "zh": "〈中〉 州，德国联邦州", "pos": "Substantiv", "example": "", "source": "dict"}, "wenn": {"word": "wenn", "zh": "如果", "pos": "Konjunktion", "example": "", "source": "dict"}, "für": {"word": "für", "zh": "给", "pos": "", "example": "", "source": "dict"}, "dann": {"word": "dann", "zh": "（时间）此后、然后", "pos": "Adverb", "example": "", "source": "dict"}, "gewinnen": {"word": "gewinnen", "zh": "获得、赢得、赢取", "pos": "Verb", "example": "", "source": "dict"}, "schlimmer": {"word": "schlimm", "zh": "坏的、糟糕的、严重的", "pos": "", "example": "", "source": "dict"}, "gedacht": {"word": "gedacht", "zh": "denken 的過去時分詞", "pos": "Verb", "example": "", "source": "dict"}, "findet": {"word": "findet", "zh": "finden的变位形式", "pos": "", "example": "", "source": "dict"}, "vielleicht": {"word": "vielleicht", "zh": "可能；或许", "pos": "", "example": "", "source": "dict"}, "politik": {"word": "Politik", "zh": "政治", "pos": "", "example": "", "source": "dict"}, "müssen": {"word": "müssen", "zh": "得；必须", "pos": "", "example": "", "source": "dict"}, "geld": {"word": "Geld", "zh": "钱；錢", "pos": "", "example": "", "source": "dict"}, "sparen": {"word": "sparen", "zh": "省", "pos": "Verb", "example": "", "source": "dict"}, "aber": {"word": "aber", "zh": "但是；可是", "pos": "Konjunktion", "example": "", "source": "dict"}, "dürfen": {"word": "dürfen", "zh": "可以", "pos": "", "example": "", "source": "dict"}, "nicht": {"word": "nicht", "zh": "不", "pos": "", "example": "", "source": "dict"}, "linke": {"word": "Linke", "zh": "左", "pos": "Substantiv", "example": "", "source": "dict"}, "größte": {"word": "größt", "zh": "adj. adv. 最大的，最巨的，极端，最大限度的", "pos": "Adjektiv", "example": "", "source": "dict"}, "viel": {"word": "viel", "zh": "不少", "pos": "", "example": "", "source": "dict"}, "alles": {"word": "alle", "zh": "有限", "pos": "", "example": "", "source": "dict"}, "deshalb": {"word": "deshalb", "zh": "因此、为此、所以", "pos": "Adverb", "example": "", "source": "dict"}, "diskussion": {"word": "Diskussion", "zh": "討論；讨论", "pos": "", "example": "", "source": "dict"}, "nächsten": {"word": "nächst", "zh": "距离最近的", "pos": "Adjektiv", "example": "", "source": "dict"}, "vielen": {"word": "viel", "zh": "不少", "pos": "", "example": "", "source": "dict"}, "gibt": {"word": "gibt", "zh": "geben的变位形式，详见geben", "pos": "", "example": "", "source": "dict"}, "dabei": {"word": "dabei", "zh": "然而", "pos": "", "example": "", "source": "dict"}, "experten": {"word": "Experte", "zh": "家", "pos": "", "example": "", "source": "dict"}, "wie": {"word": "wie", "zh": "如何；怎样", "pos": "Konjunktion", "example": "", "source": "dict"}, "gut": {"word": "gut", "zh": "好", "pos": "", "example": "", "source": "dict"}, "gezeigt": {"word": "gezeigt", "zh": "zeigen的过去分词", "pos": "Verb", "example": "", "source": "dict"}, "geworden": {"word": "geworden", "zh": "动词werden（成为…）的过去分词", "pos": "Verb", "example": "", "source": "dict"}, "können": {"word": "können", "zh": "会", "pos": "", "example": "", "source": "dict"}, "lange": {"word": "lange", "zh": "好久", "pos": "Adverb", "example": "", "source": "dict"}, "texte": {"word": "Text", "zh": "課文；课文", "pos": "Substantiv", "example": "", "source": "dict"}, "nur": {"word": "nur", "zh": "只有", "pos": "", "example": "", "source": "dict"}, "schlecht": {"word": "schlecht", "zh": "不好；坏", "pos": "", "example": "", "source": "dict"}, "besser": {"word": "besser", "zh": "比較好；比较好", "pos": "", "example": "", "source": "dict"}, "japan": {"word": "Japan", "zh": "日本", "pos": "Substantiv", "example": "", "source": "dict"}, "auf": {"word": "auf", "zh": "上", "pos": "", "example": "", "source": "dict"}, "zwar": {"word": "zwar", "zh": "也就是，即 （仅用于und zwar）", "pos": "Adverb", "example": "", "source": "dict"}, "nordrhein-westfalen": {"word": "Nordrhein-Westfalen", "zh": "北莱因－威斯特法伦，德国州份", "pos": "Substantiv", "example": "", "source": "dict"}, "dort": {"word": "dort", "zh": "那边、那里", "pos": "Adverb", "example": "", "source": "dict"}, "gefunden": {"word": "gefunden", "zh": "finden的过去分词", "pos": "Verb", "example": "", "source": "dict"}, "worden": {"word": "worden", "zh": "助动词werden的过去分词", "pos": "Verb", "example": "", "source": "dict"}, "polizei": {"word": "Polizei", "zh": "警察", "pos": "", "example": "", "source": "dict"}, "gesucht": {"word": "suchen", "zh": "搜索、寻找（后也可接nach）", "pos": "Verb", "example": "", "source": "dict"}, "mann": {"word": "Mann", "zh": "男人；丈夫", "pos": "Substantiv", "example": "", "source": "dict"}, "wahrscheinlich": {"word": "wahrscheinlich", "zh": "可能", "pos": "", "example": "", "source": "dict"}, "bei": {"word": "bei", "zh": "同", "pos": "", "example": "", "source": "dict"}, "gegen": {"word": "gegen", "zh": "［支配宾格］对着、朝着、面对、靠、反、反对、与…相对、大约", "pos": "Präposition", "example": "", "source": "dict"}, "ukraine": {"word": "Ukraine", "zh": "乌克兰；烏克蘭", "pos": "", "example": "", "source": "dict"}, "pause": {"word": "Pause", "zh": "停顿", "pos": "Substantiv", "example": "", "source": "dict"}, "vom": {"word": "vom", "zh": "从", "pos": "", "example": "", "source": "dict"}, "nämlich": {"word": "nämlich", "zh": "即、也就是说", "pos": "Adverb", "example": "", "source": "dict"}, "dafür": {"word": "dafür", "zh": "为此(for that)", "pos": "Adverb", "example": "", "source": "dict"}, "waren": {"word": "waren", "zh": "sein的变位形式，详见sein", "pos": "Verb", "example": "", "source": "dict"}, "usa": {"word": "USA", "zh": "美國", "pos": "", "example": "", "source": "dict"}, "russland": {"word": "Russland", "zh": "俄罗斯；俄羅斯", "pos": "", "example": "", "source": "dict"}, "wieder": {"word": "wieder", "zh": "再次", "pos": "", "example": "", "source": "dict"}, "hauptstadt": {"word": "Hauptstadt", "zh": "首都", "pos": "", "example": "", "source": "dict"}, "kiew": {"word": "Kiew", "zh": "基輔", "pos": "", "example": "", "source": "dict"}, "hier": {"word": "hier", "zh": "这里；這裡", "pos": "Adjektiv", "example": "", "source": "dict"}, "meisten": {"word": "meist", "zh": "最多的、大多数的", "pos": "Adjektiv", "example": "", "source": "dict"}, "wegen": {"word": "wegen", "zh": "因为，由于", "pos": "Präposition", "example": "", "source": "dict"}, "feuer": {"word": "Feuer", "zh": "火；火災", "pos": "Substantiv", "example": "", "source": "dict"}, "regierung": {"word": "Regierung", "zh": "政府", "pos": "", "example": "", "source": "dict"}, "auch": {"word": "auch", "zh": "也；还", "pos": "Konjunktion", "example": "", "source": "dict"}, "schule": {"word": "Schule", "zh": "学校", "pos": "", "example": "", "source": "dict"}, "krankenhaus": {"word": "Krankenhaus", "zh": "医院", "pos": "Substantiv", "example": "", "source": "dict"}, "wurden": {"word": "wurden", "zh": "werden的变位形式，详见werden", "pos": "", "example": "", "source": "dict"}, "osten": {"word": "Osten", "zh": "东", "pos": "Substantiv", "example": "", "source": "dict"}, "süden": {"word": "Süden", "zh": "南", "pos": "Substantiv", "example": "", "source": "dict"}, "unter": {"word": "unter", "zh": "下", "pos": "", "example": "", "source": "dict"}, "diesen": {"word": "dies", "zh": "它", "pos": "", "example": "", "source": "dict"}, "sehr": {"word": "sehr", "zh": "很", "pos": "", "example": "", "source": "dict"}, "braucht": {"word": "braucht", "zh": "brauchen的变位形式", "pos": "Verb", "example": "", "source": "dict"}, "noch": {"word": "noch", "zh": "还", "pos": "", "example": "", "source": "dict"}, "mehr": {"word": "mehr", "zh": "（viel 的比较级）许多、更多、很多", "pos": "Adjektiv", "example": "", "source": "dict"}, "hilfe": {"word": "Hilfe", "zh": "帮助；幫助", "pos": "Substantiv", "example": "", "source": "dict"}, "kommt": {"word": "kommen", "zh": "来；來", "pos": "", "example": "", "source": "dict"}, "wetter": {"word": "Wetter", "zh": "天气；天氣", "pos": "Adjektiv", "example": "", "source": "dict"}, "regnen": {"word": "regnen", "zh": "下雨", "pos": "Verb", "example": "", "source": "dict"}, "einzelne": {"word": "Einzelne", "zh": "[der/die]个人，单身", "pos": "", "example": "", "source": "dict"}, "sonst": {"word": "sonst", "zh": "否则", "pos": "Konjunktion", "example": "", "source": "dict"}, "sonne": {"word": "Sonne", "zh": "日；太阳", "pos": "Pronomen", "example": "", "source": "dict"}, "manchmal": {"word": "manchmal", "zh": "偶尔", "pos": "", "example": "", "source": "dict"}, "werden": {"word": "werden", "zh": "变成", "pos": "", "example": "", "source": "dict"}, "bis": {"word": "bis", "zh": "到、直到", "pos": "Präposition", "example": "", "source": "dict"}, "grad": {"word": "Grad", "zh": "度", "pos": "Substantiv", "example": "", "source": "dict"}}, "form_to_key": {"wahl": "wahl", "wahlen": "wahl", "gewählt": "wahl", "parlament": "parlament", "verfassungsschutz": "verfassungsschutz", "rechtsextrem": "rechtsextrem", "rechtsextreme": "rechtsextrem", "ausländer": "auslaender", "mitschuld": "mitschuld", "bundesregierung": "bundesregierung", "gefahr": "gefahr", "regieren": "regieren", "studie": "studie", "leistung": "leistung", "schülern": "schueler", "schüler": "schueler", "rechnen": "rechnen", "verstehen": "verstehen", "ländern": "land", "länder": "land", "land": "land", "stromnetz": "stromnetz", "angriffe": "angriff", "angriffen": "angriff", "angriff": "angriff", "sprengstoff": "sprengstoff", "nähe": "naehe", "explodieren": "explodieren", "täter": "taeter", "festgenommen": "festnehmen", "festnehmen": "festnehmen", "kraftwerken": "kraftwerk", "kraftwerk": "kraftwerk", "waffenruhe": "waffenruhe", "krieg": "krieg", "kriege": "krieg", "gespräche": "gespraech", "gespräch": "gespraech", "frieden": "frieden", "vertreter": "vertreter", "angegriffen": "angreifen", "angreifen": "angreifen", "raketen": "rakete", "rakete": "rakete", "zerstört": "zerstoeren", "zerstören": "zerstoeren", "schauer": "schauer", "gewitter": "gewitter", "scheint": "scheinen", "scheinen": "scheinen", "wolken": "wolke", "wolke": "wolke", "ich": "ich", "bin": "bin", "und": "und", "das": "das", "unsere": "unsere", "nun": "nun", "ersten": "ersten", "nachricht": "nachricht", "die": "die", "menschen": "menschen", "bundesland": "bundesland", "sachsen-anhalt": "sachsen-anhalt", "haben": "haben", "ein": "ein", "neues": "neues", "partei": "partei", "der": "der", "sagt": "sagt", "ist": "ist", "sagen": "sagen", "beispiel": "beispiel", "weniger": "weniger", "als": "als", "deutsche": "deutsche", "viele": "viele", "sollen": "sollen", "deutschland": "deutschland", "verlassen": "verlassen", "anderen": "anderen", "parteien": "parteien", "jetzt": "jetzt", "über": "über", "von": "von", "dazu": "dazu", "zeigen": "zeigen", "wir": "wir", "film": "film", "berlin": "berlin", "mit": "mit", "sie": "sie", "sprechen": "sprechen", "wollen": "wollen", "bundesländern": "bundesländern", "wenn": "wenn", "für": "für", "dann": "dann", "gewinnen": "gewinnen", "schlimmer": "schlimmer", "gedacht": "gedacht", "findet": "findet", "vielleicht": "vielleicht", "politik": "politik", "müssen": "müssen", "geld": "geld", "sparen": "sparen", "aber": "aber", "dürfen": "dürfen", "nicht": "nicht", "linke": "linke", "größte": "größte", "viel": "viel", "alles": "alles", "deshalb": "deshalb", "diskussion": "diskussion", "nächsten": "nächsten", "vielen": "vielen", "gibt": "gibt", "dabei": "dabei", "experten": "experten", "wie": "wie", "gut": "gut", "gezeigt": "gezeigt", "geworden": "geworden", "können": "können", "lange": "lange", "texte": "texte", "nur": "nur", "schlecht": "schlecht", "besser": "besser", "japan": "japan", "auf": "auf", "zwar": "zwar", "nordrhein-westfalen": "nordrhein-westfalen", "dort": "dort", "gefunden": "gefunden", "worden": "worden", "polizei": "polizei", "gesucht": "gesucht", "mann": "mann", "wahrscheinlich": "wahrscheinlich", "bei": "bei", "gegen": "gegen", "ukraine": "ukraine", "pause": "pause", "vom": "vom", "nämlich": "nämlich", "dafür": "dafür", "waren": "waren", "usa": "usa", "russland": "russland", "wieder": "wieder", "hauptstadt": "hauptstadt", "kiew": "kiew", "hier": "hier", "meisten": "meisten", "wegen": "wegen", "feuer": "feuer", "regierung": "regierung", "auch": "auch", "schule": "schule", "krankenhaus": "krankenhaus", "wurden": "wurden", "osten": "osten", "süden": "süden", "unter": "unter", "diesen": "diesen", "sehr": "sehr", "braucht": "braucht", "noch": "noch", "mehr": "mehr", "hilfe": "hilfe", "kommt": "kommt", "wetter": "wetter", "regnen": "regnen", "einzelne": "einzelne", "sonst": "sonst", "sonne": "sonne", "manchmal": "manchmal", "werden": "werden", "bis": "bis", "grad": "grad"}, "phrases": []};
+const BK_KEY = 'dd-basket';
+const GLOSS_KEY = 'dd-user-gloss';
+const PREF_KEY = 'dd-preferences';
+const RECENT_KEY = 'dd-recent-lesson';
+const ONBOARD_KEY = 'dd-onboarded-v1';
+function migrateBasketItem(b) {
+  return {
+    key: b.key,
+    word: b.word,
+    zh: b.zh || '',
+    pos: b.pos || '',
+    example: b.example || b.exampleDe || '',
+    exampleZh: b.exampleZh || '',
+    date: b.date || '',
+    topic: b.topic || '',
+    source: b.source || '',
+    createdAt: b.createdAt || 0
+  };
+}
+const basketData = loadStored(BK_KEY, []);
+let basket = Array.isArray(basketData) ? basketData.map(migrateBasketItem) : [];
+let userGloss = loadStored(GLOSS_KEY, {});
+const prefs = loadStored(PREF_KEY, { theme: 'light', fontStep: 0, zh: true });
+let editingKey = null;
+let popWord = null;
+
+function loadStored(key, fallback) {
+  try { return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback)); }
+  catch { return fallback; }
+}
+function saveStored(key, value) { localStorage.setItem(key, JSON.stringify(value)); }
+function getGloss(key) {
+  if (userGloss[key]) return { source: 'user', ...userGloss[key] };
+  return DATA.gloss[key] || null;
+}
+function applyPrefs() {
+  document.documentElement.dataset.theme = prefs.theme === 'dark' ? 'dark' : 'light';
+  document.body.style.setProperty('--reader-size', `${18.5 + (prefs.fontStep || 0)}px`);
+  document.body.classList.toggle('hide-zh', prefs.zh === false);
+}
+applyPrefs();
+saveStored(RECENT_KEY, {
+  slug: DATA.slug,
+  date: DATA.date,
+  sourceLabel: DATA.source_label,
+  title: DATA.news[0]?.title || ''
+});
+const firstRun = document.getElementById('first-run');
+if (!loadStored(ONBOARD_KEY, false)) firstRun.hidden = false;
+document.getElementById('first-run-close').onclick = () => {
+  firstRun.hidden = true;
+  saveStored(ONBOARD_KEY, true);
+};
+
+/* ---------- 渲染 ---------- */
+const WK_RE = /[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß-]*/g;
+const PHRASES = (DATA.phrases || []).slice().sort((a, b) => b.length - a.length);
+function lookupKey(surface) {
+  return (DATA.form_to_key && DATA.form_to_key[surface.toLowerCase()]) || surface.toLowerCase();
+}
+function wrapWord(surface, key) {
+  const g = getGloss(key);
+  const classes = [
+    g?.zh ? 'known' : '',
+    g?.source === 'editorial' ? 'ed' : '',
+    g?.source === 'dict' ? 'wiki' : '',
+    basket.some(b => b.key === key) ? 'saved' : ''
+  ].filter(Boolean).join(' ');
+  return `<w data-w="${esc(key)}" class="${classes}" tabindex="0" role="button" aria-label="${esc(surface)}，查看释义">${esc(surface)}</w>`;
+}
+function isLetter(ch) { return /[A-Za-zÄÖÜäöüß]/.test(ch || ''); }
+function tokenizeDe(text) {
+  let html = '', i = 0;
+  const lower = text.toLowerCase();
+  while (i < text.length) {
+    let hit = '';
+    if (i === 0 || !isLetter(text[i - 1])) {
+      for (const ph of PHRASES) {
+        if (lower.startsWith(ph.toLowerCase(), i) && !isLetter(text[i + ph.length])) {
+          hit = text.slice(i, i + ph.length);
+          break;
+        }
+      }
+    }
+    if (hit) {
+      html += wrapWord(hit, lookupKey(hit));
+      i += hit.length;
+      continue;
+    }
+    if (isLetter(text[i])) {
+      let j = i + 1;
+      while (j < text.length && /[A-Za-zÄÖÜäöüß-]/.test(text[j])) j++;
+      const word = text.slice(i, j);
+      html += wrapWord(word, lookupKey(word));
+      i = j;
+    } else {
+      let j = i + 1;
+      while (j < text.length && !isLetter(text[j])) j++;
+      html += esc(text.slice(i, j));
+      i = j;
+    }
+  }
+  return html;
+}
+
+document.getElementById('hdate').textContent = fmtDate(DATA.date);
+document.getElementById('story-count').textContent = DATA.news.length + ' Themen';
+document.title = 'Deutsch Daily — ' + fmtDate(DATA.date);
+if (DATA.source_label) document.getElementById('source-label').textContent = DATA.source_label;
+mountPlayer();
+const vlink = document.getElementById('vlink');
+if (DATA.video_page) vlink.href = DATA.video_page;
+else vlink.style.display = 'none';
+
+function storyExtras(n, compact) {
+  if (compact) {
+    const tabs = [];
+    const panes = [];
+    if (n.background) {
+      tabs.push('<button type="button" class="stab" data-pane="bg">背景</button>');
+      panes.push(`<div class="spane" data-pane="bg"><div class="rail-note">${esc(n.background)}</div></div>`);
+    }
+    if (n.vocab.length) {
+      tabs.push(`<button type="button" class="stab" data-pane="vocab">词汇 ${n.vocab.length}</button>`);
+      panes.push(`<div class="spane" data-pane="vocab">${
+        n.vocab.map(v => `<div class="vrow"><div><div class="vw">${esc(v.lemma)}</div><div class="vz">${esc(v.zh)}</div>${v.example_de ? `<div class="vex">${esc(v.example_de)}</div>` : ''}</div><button type="button" class="vadd" data-add="${esc(v.key)}" title="加入生词本" aria-label="加入生词本">+</button></div>`).join('')
+      }</div>`);
+    }
+    if (n.grammar_points.length) {
+      tabs.push(`<button type="button" class="stab" data-pane="gram">语法 ${n.grammar_points.length}</button>`);
+      panes.push(`<div class="spane" data-pane="gram">${
+        n.grammar_points.map(g => `<div class="rail-note"><strong>${esc(g.title)}</strong>${g.example_de ? `<i>${esc(g.example_de)}</i>` : ''}${esc(g.summary)}</div>`).join('')
+      }</div>`);
+    }
+    if (!tabs.length) return '<p class="empty-study">这条没有单独的词汇或语法。</p>';
+    return `<div class="study-tabs n${tabs.length}">${tabs.join('')}</div>${panes.join('')}`;
+  }
+  const vocab = n.vocab.length ? `<details class="sec-vocab"><summary>重点词汇 · ${n.vocab.length}</summary><div class="body">${
+    n.vocab.map(v => `<div class="vcard"><div><div class="vcard-top">${esc(v.lemma)}${v.pos ? `<span class="vpos">${esc(v.pos)}</span>` : ''}</div><div class="vzh">${esc(v.zh)}</div>${v.example_de ? `<div class="vex">${esc(v.example_de)}</div>` : ''}</div><button type="button" class="vadd" data-add="${esc(v.key)}" title="加入生词本" aria-label="加入生词本">+</button></div>`).join('')
+  }</div></details>` : '';
+  const gram = n.grammar_points.length ? `<details class="sec-gram"><summary>语法 · ${n.grammar_points.length}</summary><div class="body">${
+    n.grammar_points.map(g => `<div class="gcard"><h4>${esc(g.title)}</h4>${g.example_de ? `<div class="gex">${esc(g.example_de)}</div>` : ''}${g.example_zh ? `<div class="gexzh">${esc(g.example_zh)}</div>` : ''}${g.summary ? `<details class="gmore"><summary>解释</summary><div>${esc(g.summary)}</div></details>` : ''}</div>`).join('')
+  }</div></details>` : '';
+  const bg = n.background ? `<details class="sec-bg"><summary>背景资料</summary><div class="body"><p class="bg-note">AI 整理，未经独立来源核验</p>${esc(n.background)}</div></details>` : '';
+  return vocab + gram + bg || '<p class="empty-study">这条没有单独的词汇或语法。</p>';
+}
+
+const newsEl = document.getElementById('news');
+DATA.news.forEach((n, i) => {
+  const paras = n.paras.map((p, pi) => {
+    const bits = p.lines && p.lines.length ? p.lines : [{de: p.de || '', zh: p.zh || '', start: p.start, end: p.end}];
+    const sents = bits.map((line, li) => {
+      const hasT = line.start != null;
+      return `<span class="sent"${hasT ? ` data-start="${line.start}"` : ''}${line.end != null ? ` data-end="${line.end}"` : ''} id="p-${i}-${pi}-${li}"><span class="de">${tokenizeDe(line.de || '')}</span>${line.zh ? `<span class="zh">${esc(line.zh)}</span>` : ''}</span>`;
+    }).join('');
+    return `<div class="para" id="p-${i}-${pi}">${sents}</div>`;
+  }).join('');
+  newsEl.insertAdjacentHTML('beforeend',
+    `<article id="story-${i + 1}" data-idx="${i}"><div class="n-head"><span class="n-idx">${String(i+1).padStart(2,'0')}</span><div><h2>${esc(n.title)}</h2>${n.title_zh ? `<div class="zh h-zh">${esc(n.title_zh)}</div>` : ''}</div></div>${paras}<div class="article-extras">${storyExtras(n)}</div></article>`);
+});
+document.getElementById('topic-list').innerHTML = DATA.news.map((n, i) =>
+  `<div class="topic" data-idx="${i}"><a href="#story-${i + 1}" data-idx="${i}"><b>${String(i + 1).padStart(2, '0')}</b><span>${esc(n.title)}</span></a><div class="topic-study">${storyExtras(n, true)}</div></div>`
+).join('');
+
+let activeStory = -1;
+function setActiveStory(i, scroll) {
+  if (i < 0 || i >= DATA.news.length) return;
+  activeStory = i;
+  document.querySelectorAll('#topic-list .topic').forEach((el, idx) => el.classList.toggle('on', idx === i));
+  if (scroll) document.getElementById('story-' + (i + 1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+setActiveStory(0);
+document.getElementById('topic-list').addEventListener('click', e => {
+  const tab = e.target.closest('.stab');
+  if (tab) {
+    const study = tab.closest('.topic-study');
+    const on = tab.classList.contains('on');
+    study.querySelectorAll('.stab').forEach(b => b.classList.remove('on'));
+    study.querySelectorAll('.spane').forEach(p => p.classList.remove('on'));
+    if (!on) {
+      tab.classList.add('on');
+      study.querySelector(`.spane[data-pane="${tab.dataset.pane}"]`)?.classList.add('on');
+    }
+    return;
+  }
+  const a = e.target.closest('a[data-idx]');
+  if (!a) return;
+  e.preventDefault();
+  setActiveStory(Number(a.dataset.idx), true);
+});
+const storyWatch = new IntersectionObserver((entries) => {
+  const vis = entries.filter(x => x.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  if (vis) setActiveStory(Number(vis.target.dataset.idx));
+}, { rootMargin: '-20% 0px -55% 0px', threshold: [0.15, 0.4, 0.7] });
+document.querySelectorAll('article[data-idx]').forEach(el => storyWatch.observe(el));
+
+function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function fmtInline(s) { return esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>'); }
+function fmtDate(iso) {
+  const d = new Date(iso + 'T12:00:00');
+  return d.toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+}
+function fmtClock(sec) {
+  const s = Math.max(0, Math.floor(Number(sec) || 0));
+  return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
+}
+function mountPlayer() {
+  const box = document.getElementById('player');
+  const fallback = () => {
+    if (!DATA.embed_url) {
+      document.getElementById('video-card').style.display = 'none';
+      return;
+    }
+    box.innerHTML = `<iframe src="${esc(DATA.embed_url)}" title="Tagesschau 视频播放器" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen scrolling="no"></iframe>`;
+  };
+  if (DATA.mp4_url) {
+    box.innerHTML = `<video id="av" controls playsinline preload="metadata" src="${esc(DATA.mp4_url)}"></video>`;
+    const v = document.getElementById('av');
+    let dead = false;
+    v.addEventListener('error', () => { if (!dead) { dead = true; fallback(); } });
+    v.addEventListener('timeupdate', highlightPlaying);
+  } else {
+    fallback();
+  }
+}
+function seekTo(sec) {
+  const v = document.getElementById('av');
+  if (!v || Number.isNaN(sec)) return;
+  v.currentTime = sec;
+  v.play().catch(() => {});
+}
+function highlightPlaying() {
+  const v = document.getElementById('av');
+  if (!v) return;
+  const t = v.currentTime;
+  let current = null;
+  document.querySelectorAll('.sent').forEach(el => {
+    const a = parseFloat(el.dataset.start), b = parseFloat(el.dataset.end);
+    const on = !Number.isNaN(a) && !Number.isNaN(b) && t >= a && t < b + 0.05;
+    el.classList.toggle('now', on);
+    if (on) current = el;
+  });
+  if (current && highlightPlaying._last !== current) {
+    highlightPlaying._last = current;
+    current.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+}
+
+/* ---------- 控制条 ---------- */
+const state = { zh: prefs.zh !== false };
+document.getElementById('btn-zh').classList.toggle('on', state.zh);
+document.getElementById('btn-zh').setAttribute('aria-pressed', String(state.zh));
+document.getElementById('btn-zh').onclick = () => {
+  state.zh = !state.zh;
+  prefs.zh = state.zh;
+  saveStored(PREF_KEY, prefs);
+  document.body.classList.toggle('hide-zh', !state.zh);
+  document.getElementById('btn-zh').classList.toggle('on', state.zh);
+  document.getElementById('btn-zh').setAttribute('aria-pressed', String(state.zh));
+};
+document.addEventListener('click', e => {
+  const add = e.target.closest('[data-add]');
+  if (add && (add.closest('#news') || add.closest('#topic-list'))) {
+    const key = add.dataset.add;
+    const v = DATA.news.flatMap(n => n.vocab).find(x => x.key === key);
+    const topic = DATA.news.find(n => n.vocab.some(x => x.key === key))?.title || '';
+    if (!v) return;
+    popWord = { key, word: v.lemma, zh: v.zh, pos: v.pos, example: v.example_de, topic };
+    basketAdd();
+    return;
+  }
+  const sent = e.target.closest('.sent[data-start]');
+  if (sent && !e.target.closest('w')) seekTo(parseFloat(sent.dataset.start));
+});
+
+document.getElementById('theme-btn').onclick = () => {
+  prefs.theme = prefs.theme === 'dark' ? 'light' : 'dark';
+  saveStored(PREF_KEY, prefs);
+  applyPrefs();
+};
+document.getElementById('font-btn').onclick = () => {
+  prefs.fontStep = ((prefs.fontStep || 0) + 1) % 4;
+  saveStored(PREF_KEY, prefs);
+  applyPrefs();
+  document.getElementById('font-btn').textContent = ['字号 A+', '字号 A++', '字号 A+++', '字号 A'][prefs.fontStep];
+};
+document.getElementById('font-btn').textContent = ['字号 A+', '字号 A++', '字号 A+++', '字号 A'][prefs.fontStep || 0];
+document.getElementById('share-btn').onclick = async () => {
+  const share = { title: document.title, text: '用 Deutsch Daily 逐句学习这期德语新闻', url: location.href };
+  try {
+    if (navigator.share) await navigator.share(share);
+    else if (navigator.clipboard) { await navigator.clipboard.writeText(location.href); toast('链接已复制'); }
+    else throw new Error('clipboard unavailable');
+  } catch (error) {
+    if (error?.name !== 'AbortError') toast('分享失败，可复制浏览器地址');
+  }
+};
+
+const videoCard = document.getElementById('video-card');
+const FLOAT_KEY = 'dd-float-pos';
+let floatDismissed = false;
+function clampFloat(x, y) {
+  const w = videoCard.offsetWidth || 210;
+  const h = videoCard.offsetHeight || 118;
+  const pad = 8;
+  return {
+    x: Math.min(Math.max(pad, x), Math.max(pad, innerWidth - w - pad)),
+    y: Math.min(Math.max(pad, y), Math.max(pad, innerHeight - h - pad))
+  };
+}
+function applyFloatPos(x, y) {
+  const p = clampFloat(x, y);
+  videoCard.style.left = p.x + 'px';
+  videoCard.style.top = p.y + 'px';
+  videoCard.style.right = 'auto';
+  saveStored(FLOAT_KEY, p);
+}
+function restoreFloatPos() {
+  const pos = loadStored(FLOAT_KEY, null);
+  if (pos && typeof pos.x === 'number' && typeof pos.y === 'number') applyFloatPos(pos.x, pos.y);
+}
+function clearFloatPos() {
+  videoCard.style.left = '';
+  videoCard.style.top = '';
+  videoCard.style.right = '';
+}
+const videoObserver = new IntersectionObserver(([entry]) => {
+  if (innerWidth > 840) {
+    videoCard.classList.remove('floating', 'float-off');
+    clearFloatPos();
+    return;
+  }
+  if (entry.isIntersecting) {
+    floatDismissed = false;
+    videoCard.classList.remove('floating', 'float-off');
+    clearFloatPos();
+  } else if (!floatDismissed && DATA.embed_url) {
+    videoCard.classList.add('floating');
+    requestAnimationFrame(restoreFloatPos);
+  }
+}, { threshold: 0 });
+videoObserver.observe(document.getElementById('video-anchor'));
+document.getElementById('video-float-close').onclick = () => {
+  floatDismissed = true;
+  videoCard.classList.remove('floating');
+  videoCard.classList.add('float-off');
+  clearFloatPos();
+};
+(function enableFloatDrag() {
+  const handle = document.getElementById('video-drag');
+  let drag = null;
+  handle.addEventListener('pointerdown', e => {
+    if (!videoCard.classList.contains('floating') || e.button) return;
+    e.preventDefault();
+    const r = videoCard.getBoundingClientRect();
+    drag = { ox: e.clientX - r.left, oy: e.clientY - r.top };
+    handle.setPointerCapture(e.pointerId);
+  });
+  handle.addEventListener('pointermove', e => {
+    if (!drag) return;
+    applyFloatPos(e.clientX - drag.ox, e.clientY - drag.oy);
+  });
+  const stop = () => { drag = null; };
+  handle.addEventListener('pointerup', stop);
+  handle.addEventListener('pointercancel', stop);
+})();
+addEventListener('resize', () => {
+  if (innerWidth > 840) {
+    videoCard.classList.remove('floating', 'float-off');
+    clearFloatPos();
+  } else if (videoCard.classList.contains('floating')) {
+    const r = videoCard.getBoundingClientRect();
+    applyFloatPos(r.left, r.top);
+  }
+});
+
+/* ---------- 点词弹卡 ---------- */
+const pop = document.getElementById('pop');
+document.addEventListener('click', e => {
+  if (e.target.closest('#pop')) return;
+  const w = e.target.closest('w');
+  if (!w) { hidePop(); return; }
+  e.stopPropagation();
+  showPop(w);
+}, true);
+document.addEventListener('keydown', e => {
+  const w = e.target.closest('w[role="button"]');
+  if (!w || !['Enter', ' '].includes(e.key)) return;
+  e.preventDefault();
+  showPop(w);
+});
+
+function sentenceAround(el) {
+  const para = el.closest('.de');
+  if (!para) return '';
+  const text = (para.innerText || para.textContent || '').replace(/\s+/g, ' ').trim();
+  const word = el.textContent;
+  return text.split(/(?<=[.!?])\s+(?=[A-ZÄÖÜ])/).find(s => s.includes(word)) || text;
+}
+
+function showPop(wEl) {
+  const key = wEl.dataset.w;
+  const g = getGloss(key) || { word: wEl.textContent, zh: '', pos: '', example: '' };
+  const example = sentenceAround(wEl) || g.example || '';
+  const topic = wEl.closest('article')?.querySelector('h2')?.textContent || '';
+  popWord = { key, word: wEl.textContent, ...g, example, topic };
+  const inBasket = basket.some(b => b.key === key);
+  pop.innerHTML = `
+    <div class="pop-top"><div><div class="pw">${esc(g.word || wEl.textContent)}</div>
+    <div class="pp">${esc(g.source === 'dict' ? '离线词典' : (g.pos || '本期重点词汇'))}</div></div>
+    <button class="pclose" onclick="hidePop()" aria-label="关闭">×</button></div>
+    <div class="pz">${esc(g.zh || '')}</div>
+    ${example ? `<div class="pe">${esc(example)}</div>` : ''}
+    <div class="pop-actions">
+      <button class="secondary-btn" onclick="openPopEditor()">${g.zh ? '编辑' : '补充释义'}</button>
+      <button class="pbtn ${inBasket ? 'in' : ''}" onclick="basketAdd()">${inBasket ? '已在生词本' : '加入生词本'}</button>
+    </div>`;
+  const r = wEl.getBoundingClientRect();
+  pop.classList.add('open');
+  const pw = pop.offsetWidth, ph = pop.offsetHeight;
+  let x = Math.min(Math.max(12, r.left + r.width/2 - pw/2), innerWidth - pw - 12);
+  let y = r.top - ph - 10;
+  if (y < 12) y = Math.min(r.bottom + 10, innerHeight - ph - 12);
+  pop.style.left = x + 'px'; pop.style.top = y + 'px';
+}
+function openPopEditor() {
+  if (!popWord) return;
+  pop.innerHTML = `
+    <div class="pop-top"><div class="pw">${esc(popWord.word)}</div><button class="pclose" onclick="hidePop()" aria-label="关闭">×</button></div>
+    <form class="word-form" id="pop-form" style="margin-top:14px">
+      <label>显示词形<input id="pop-edit-word" required value="${esc(popWord.word)}"></label>
+      <label>中文释义<input id="pop-edit-zh" required value="${esc(popWord.zh || '')}" placeholder="输入你自己的释义"></label>
+      <label>例句（可选）<textarea id="pop-edit-example">${esc(popWord.example || '')}</textarea></label>
+      <div class="form-actions"><button type="button" class="secondary-btn" onclick="hidePop()">取消</button><button class="primary-btn" type="submit">保存并加入</button></div>
+    </form>`;
+  document.getElementById('pop-form').onsubmit = e => {
+    e.preventDefault();
+    const custom = {
+      word: document.getElementById('pop-edit-word').value.trim(),
+      zh: document.getElementById('pop-edit-zh').value.trim(),
+      pos: popWord.pos || '',
+      example: document.getElementById('pop-edit-example').value.trim()
+    };
+    if (!custom.word || !custom.zh) return;
+    userGloss[popWord.key] = custom;
+    saveStored(GLOSS_KEY, userGloss);
+    popWord = { key: popWord.key, ...custom };
+    const existing = basket.find(b => b.key === popWord.key);
+    if (existing) Object.assign(existing, custom);
+    else basket.push({ key: popWord.key, ...custom, date: DATA.date, topic: popWord.topic || '', createdAt: Date.now() });
+    saveBasket();
+    refreshWordMarks();
+    hidePop();
+    renderBasket();
+    toast('已保存到生词本');
+  };
+  setTimeout(() => document.getElementById('pop-edit-zh')?.focus(), 0);
+}
+function hidePop() { pop.classList.remove('open'); }
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    hidePop();
+    toggleBasket(false);
+  }
+});
+
+/* ---------- 生词篮 ---------- */
+renderBasket();
+
+function basketAdd() {
+  if (!popWord) return;
+  if (!popWord.zh) { openPopEditor(); return; }
+  if (basket.some(b => b.key === popWord.key)) { toast('已在生词本'); return; }
+  basket.push({
+    key: popWord.key, word: popWord.word, zh: popWord.zh, pos: popWord.pos || '',
+    example: popWord.example || '', date: DATA.date, topic: popWord.topic || '',
+    source: popWord.source || '', createdAt: Date.now()
+  });
+  saveBasket();
+  refreshWordMarks();
+  hidePop(); renderBasket(); toast('已加入生词本');
+}
+function basketDel(key) {
+  basket = basket.filter(b => b.key !== key);
+  saveBasket();
+  refreshWordMarks();
+  renderBasket();
+}
+function saveBasket() { saveStored(BK_KEY, basket); }
+function refreshWordMarks() {
+  document.querySelectorAll('w').forEach(w => {
+    w.classList.toggle('known', Boolean(getGloss(w.dataset.w)?.zh));
+    w.classList.toggle('saved', basket.some(b => b.key === w.dataset.w));
+  });
+}
+function renderBasket() {
+  const n = basket.length;
+  document.getElementById('bk-cnt').textContent = n;
+  const list = document.getElementById('bk-list');
+  if (!n) { list.innerHTML = '<div class="bempty"><b>生词本还是空的</b>点击正文中的任意德语词，或手动添加一个。</div>'; return; }
+  list.innerHTML = basket.map(b =>
+    `<div class="bitem"><span class="bw">${esc(b.word)}</span><span class="bz">${esc(b.zh || '未填写释义')}</span>${b.example ? `<span class="be">${esc(b.example)}</span>` : ''}
+      <span class="bitem-actions"><button class="bedit" data-key="${esc(b.key)}">编辑</button><button class="bx" data-key="${esc(b.key)}">删除</button></span></div>`
+  ).join('');
+}
+function toggleBasket(open) {
+  const panel = document.getElementById('basket');
+  const wasOpen = panel.classList.contains('open');
+  panel.classList.toggle('open', open);
+  panel.setAttribute('aria-hidden', String(!open));
+  document.getElementById('scrim').classList.toggle('on', open);
+  if (open) setTimeout(() => panel.querySelector('.bclose')?.focus(), 0);
+  else {
+    closeWordEditor();
+    if (wasOpen) document.getElementById('basket-btn').focus();
+  }
+}
+document.getElementById('basket-btn').onclick = () => toggleBasket(true);
+document.getElementById('scrim').onclick = () => toggleBasket(false);
+document.addEventListener('keydown', e => {
+  const panel = document.getElementById('basket');
+  if (!panel.classList.contains('open')) return;
+  if (e.key === 'Escape') {
+    e.preventDefault();
+    toggleBasket(false);
+    return;
+  }
+  if (e.key !== 'Tab') return;
+  const focusable = [...panel.querySelectorAll('button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')];
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+});
+document.getElementById('bk-list').onclick = e => {
+  const btn = e.target.closest('button[data-key]');
+  if (!btn) return;
+  if (btn.classList.contains('bx')) basketDel(btn.dataset.key);
+  else openWordEditor(btn.dataset.key);
+};
+
+function openWordEditor(key = null) {
+  editingKey = key;
+  const item = key ? basket.find(b => b.key === key) : null;
+  document.getElementById('edit-word').value = item?.word || '';
+  document.getElementById('edit-zh').value = item?.zh || '';
+  document.getElementById('edit-example').value = item?.example || '';
+  document.getElementById('word-editor').classList.add('open');
+  setTimeout(() => document.getElementById('edit-word').focus(), 0);
+}
+function closeWordEditor() {
+  editingKey = null;
+  document.getElementById('word-editor').classList.remove('open');
+  document.getElementById('word-form').reset();
+}
+document.getElementById('word-form').onsubmit = e => {
+  e.preventDefault();
+  const wasEditing = Boolean(editingKey);
+  const word = document.getElementById('edit-word').value.trim();
+  const zh = document.getElementById('edit-zh').value.trim();
+  const example = document.getElementById('edit-example').value.trim();
+  if (!word || !zh) return;
+  const key = editingKey || word.toLocaleLowerCase('de-DE');
+  const item = basket.find(b => b.key === editingKey || (!editingKey && b.key === key));
+  if (item) Object.assign(item, { word, zh, example });
+  else basket.unshift({ key, word, zh, example, date: DATA.date, manual: true });
+  userGloss[key] = { word, zh, example, pos: '' };
+  saveStored(GLOSS_KEY, userGloss);
+  saveBasket();
+  refreshWordMarks();
+  renderBasket();
+  closeWordEditor();
+  toast(wasEditing ? '单词已更新' : '已添加单词');
+};
+
+function copyWords() {
+  if (!basket.length) { toast('生词本是空的'); return; }
+  const text = basket.map(b => `${b.word}\t${b.zh}${b.example ? '\t' + b.example : ''}`).join('\n');
+  navigator.clipboard.writeText(text).then(
+    () => toast('已复制 ' + basket.length + ' 词'),
+    () => toast('复制失败')
+  );
+}
+
+/* ---------- apkg 导出 ---------- */
+const SQLJS_URL = 'https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/sql-wasm.wasm';
+const SQLJS_JS  = 'https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/sql-wasm.js';
+
+function loadScript(src) {
+  return new Promise((ok, no) => {
+    const s = document.createElement('script');
+    s.src = src; s.onload = ok; s.onerror = () => no(new Error('load fail: ' + src));
+    document.head.appendChild(s);
+  });
+}
+
+async function exportApkg() {
+  const st = document.getElementById('bk-status');
+  const btn = document.getElementById('btn-apkg');
+  if (!basket.length) { toast('篮子是空的'); return; }
+  btn.disabled = true;
+  try {
+    st.textContent = '加载 sql.js…';
+    if (!window.initSqlJs) {
+      await loadScript(SQLJS_JS);
+      window.initSqlJs = window.initSqlJs.bind({ locateFile: () => SQLJS_URL });
+    }
+    const SQL = await window.initSqlJs({ locateFile: () => SQLJS_URL });
+
+    st.textContent = '构建牌组…';
+    const db = new SQL.Database();
+
+    // apkg = collection.anki2 + media(空json) — 最小合法集
+    db.run(`CREATE TABLE col(
+      id integer primary key, crt integer, mod integer, scm integer, ver integer,
+      dty integer, usn integer, ls integer, conf text, models text, decks text,
+      dconf text, tags text)`);
+    const now = Math.floor(Date.now() / 1000);
+    const mid = Date.now();
+    const deckId = now * 1000;
+    const model = {
+      [mid]: {
+        id: mid, name: 'Deutsch Daily', type: 0, mod: now, usn: 0, sortf: 0,
+        did: deckId, tmpls: [{ name: 'Card 1', ord: 0, qfmt: '{{Front}}', afmt: '{{FrontSide}}<hr id=answer>{{Back}}', bqfmt: '', bafmt: '' }],
+        flds: [
+          { name: 'Front', ord: 0, sticky: false, rtl: false, font: 'Arial', size: 20, media: [] },
+          { name: 'Back',  ord: 1, sticky: false, rtl: false, font: 'Arial', size: 20, media: [] }
+        ],
+        css: `.card{font-family:-apple-system,'Noto Sans SC',sans-serif;font-size:20px;text-align:center;color:#1F2328;background:#FAF7F2;padding:24px}.card b{color:#B3541E}`,
+        latexPre: '\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n',
+        latexPost: '\\end{document}',
+        req: [[0, 'all', [0]]], tags: [], vers: []
+      }
+    };
+    const decks = {
+      "1": { id: 1, name: 'Default', mod: now, usn: 0, lrnToday: [0,0], revToday: [0,0], newToday: [0,0], timeToday: [0,0], collapsed: false, browserCollapsed: false, desc: '', dyn: 0, conf: 1, extendNew: 10, extendRev: 50 },
+      [deckId]: { id: deckId, name: 'Deutsch Daily', mod: now, usn: 0, lrnToday: [0,0], revToday: [0,0], newToday: [0,0], timeToday: [0,0], collapsed: false, browserCollapsed: false, desc: '', dyn: 0, conf: 1, extendNew: 10, extendRev: 50 }
+    };
+    const conf = {
+      activeDecks: [1], addToCur: true, collapseTime: 1200, curDeck: 1,
+      curModel: mid, dayLearnFirst: false, dueCounts: true, estTimes: true,
+      newSpread: 0, nextPos: 1, schedVer: 2, sched2021: true, sortBackwards: false,
+      sortType: "noteFld", timeLim: 0, creationOffset: -480
+    };
+    const dconf = {
+      "1": { id: 1, name: "Default", replayq: true, lapse: { delays: [10, 60], mult: 0, minInt: 1, leechFails: 8, leechAction: 0 }, rev: { perDay: 200, fuzz: 0.05, ivlFct: 1, maxIvl: 36500, ease4: 1.3, bury: true, minSpace: 1 }, timer: 0, maxTaken: 60, new: { separate: true, ints: [1, 4, 7], initialFactor: 2500, bury: true, order: 1 }, mod: 0, usn: 0, autoplay: true }
+    };
+    db.run(`INSERT INTO col VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)`, [
+      now, now, now * 1000, 0, 11, 0, 0, 0,
+      JSON.stringify(conf), JSON.stringify(model), JSON.stringify(decks),
+      JSON.stringify(dconf), '{}'
+    ]);
+
+    db.run(`CREATE TABLE notes(
+      id integer primary key, guid text, mid integer, mod integer, usn integer,
+      tags text, flds text, sfld text, csum integer, flags integer, data text)`);
+    db.run(`CREATE TABLE cards(
+      id integer primary key, nid integer, did integer, ord integer, mod integer,
+      usn integer, type integer, queue integer, due integer, ivl integer,
+      factor integer, reps integer, lapses integer, left integer, odue integer,
+      odid integer, flags integer, data text)`);
+    db.run(`CREATE TABLE revlog(
+      id integer primary key, cid integer, usn integer, ease integer, ivl integer,
+      lastIvl integer, factor integer, time integer, type integer)`);
+    db.run(`CREATE TABLE graves(
+      usn integer, oid integer, type integer)`);
+    db.run(`CREATE INDEX ix_notes_usn on notes (usn)`);
+    db.run(`CREATE INDEX ix_cards_usn on cards (usn)`);
+    db.run(`CREATE INDEX ix_revlog_usn on revlog (usn)`);
+    db.run(`CREATE INDEX ix_cards_nid on cards (nid)`);
+    db.run(`CREATE INDEX ix_revlog_cid on revlog (cid)`);
+    db.run(`CREATE INDEX ix_notes_csum on notes (csum)`);
+
+    const enc = new TextEncoder();
+    function csum(s) { // anki checquers field hash (java String.hashCode)
+      let h = 0;
+      for (const b of enc.encode(s)) { h = (31 * h + b) | 0; }
+      return h;
+    }
+    function guid(key) {
+      let h = 0; const s = 'dd-' + key;
+      for (const b of enc.encode(s)) { h = (31 * h + b) | 0; }
+      return 'dd' + (h >>> 0).toString(16);
+    }
+
+    let nid = now * 1000, cid = (now + 1) * 1000;
+    for (const b of basket) {
+      const front = b.word;
+      const back = `${b.zh}${b.example ? `<br><i>${b.example}</i>` : ''}`;
+      const sfld = front;
+      const flds = front.replace(/\t/g, ' ') + '\x1f' + back.replace(/\t/g, ' ');
+      db.run(`INSERT INTO notes VALUES(?,?,?,?,?,?,?,?,?,?,?)`,
+        [nid, guid(b.key), mid, now, -1, ' dd::' + (DATA.slug || b.date || DATA.date) + ' ', flds, sfld, csum(sfld), 0, '']);
+      db.run(`INSERT INTO cards VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+        [cid, nid, deckId, 0, now, -1, 0, 0, nid, 0, 0, 0, 0, 0, 0, 0, 0, '']);
+      nid++; cid++;
+    }
+
+    st.textContent = '打包…';
+    const data = db.export();
+    // zip: meta(version2) + collection.anki2 + collection.anki21(同内容, anki26+导入器优先读) + media
+    const zip = makeZip({
+      'meta': new Uint8Array([0x08, 0x02]),
+      'collection.anki2': data,
+      'collection.anki21': data,
+      'media': new TextEncoder().encode('{}')
+    });
+    const blob = new Blob([zip], { type: 'application/apkg' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `deutsch-${basket.length}w-${Date.now()}.apkg`;
+    a.click();
+    st.textContent = `已导出 ${basket.length} 张卡 — 打开 Anki 导入即可`;
+    toast('apkg 已下载');
+  } catch (err) {
+    console.error(err);
+    st.textContent = '导出失败: ' + err.message + ' — 可先用「复制文本」';
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+/* 极简 zip (store, 无压缩) — apkg 只需合法 zip */
+function makeZip(files) {
+  const enc = new TextEncoder();
+  const chunks = [], central = [];
+  let offset = 0;
+  const CRC_TABLE = (() => {
+    const t = new Uint32Array(256);
+    for (let n = 0; n < 256; n++) {
+      let c = n;
+      for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1;
+      t[n] = c >>> 0;
+    }
+    return t;
+  })();
+  function crc32(buf) {
+    let c = 0xFFFFFFFF;
+    for (let i = 0; i < buf.length; i++) c = CRC_TABLE[(c ^ buf[i]) & 0xFF] ^ (c >>> 8);
+    return (c ^ 0xFFFFFFFF) >>> 0;
+  }
+  for (const [name, content] of Object.entries(files)) {
+    const nameB = enc.encode(name);
+    const crc = crc32(content);
+    const lh = new DataView(new ArrayBuffer(30));
+    lh.setUint32(0, 0x04034b50, true);
+    lh.setUint16(4, 20, true);       // version
+    lh.setUint16(6, 0, true);        // flags
+    lh.setUint16(8, 0, true);        // store
+    lh.setUint16(10, 0, true); lh.setUint16(12, 0x2821, true); // time/date(dos)
+    lh.setUint32(14, crc, true);
+    lh.setUint32(18, content.length, true);
+    lh.setUint32(22, content.length, true);
+    lh.setUint16(26, nameB.length, true);
+    lh.setUint16(28, 0, true);
+    chunks.push(new Uint8Array(lh.buffer), nameB, content);
+    const ch = new DataView(new ArrayBuffer(46));
+    ch.setUint32(0, 0x02014b50, true);
+    ch.setUint16(4, 20, true); ch.setUint16(6, 20, true);
+    ch.setUint16(8, 0, true); ch.setUint16(10, 0, true);
+    ch.setUint16(12, 0, true); ch.setUint16(14, 0x2821, true);
+    ch.setUint32(16, crc, true);
+    ch.setUint32(20, content.length, true); ch.setUint32(24, content.length, true);
+    ch.setUint16(28, nameB.length, true);
+    // 30..45 = 0
+    ch.setUint32(42, offset, true);
+    central.push(new Uint8Array(ch.buffer), nameB);
+    offset += 30 + nameB.length + content.length;
+  }
+  let centralSize = central.reduce((s, c) => s + c.length, 0);
+  const eocd = new DataView(new ArrayBuffer(22));
+  eocd.setUint32(0, 0x06054b50, true);
+  eocd.setUint16(8, Object.keys(files).length, true);
+  eocd.setUint16(10, Object.keys(files).length, true);
+  eocd.setUint32(12, centralSize, true);
+  eocd.setUint32(16, offset, true);
+  const total = [...chunks, ...central, new Uint8Array(eocd.buffer)];
+  const out = new Uint8Array(total.reduce((s, c) => s + c.length, 0));
+  let p = 0;
+  for (const c of total) { out.set(c, p); p += c.length; }
+  return out;
+}
+
+/* ---------- toast ---------- */
+let toastT;
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.style.display = 'block';
+  clearTimeout(toastT);
+  toastT = setTimeout(() => t.style.display = 'none', 1600);
+}
+</script>
+</body>
+</html>
