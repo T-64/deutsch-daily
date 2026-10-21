@@ -1,99 +1,130 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="适合 A2–B1 的简易德语新闻：德中对照、重点词汇、语法提示和个人生词本。">
-<title>Deutsch Daily — 每天一点，读懂德语</title>
+__HEAD__
+<title>Deutsch Daily — 每天三条简易德语新闻</title>
+<meta name="description" content="A2–B1 简易德语新闻精读：先读德语再看中文，点词查义，生词导出 Anki。无需登录。">
 <style>
-:root { --bg:#fff; --ink:#193e38; --muted:#5d7471; --accent:#245d4c; --soft:#eff5f1; --line:#d8e3df; }
-* { box-sizing:border-box; margin:0; padding:0; }
-html { scroll-behavior:smooth; }
-body { background:var(--bg); color:var(--ink); font:16px/1.65 system-ui,-apple-system,"Noto Sans CJK SC",sans-serif; }
-a { color:inherit; } button,input { font:inherit; } a:focus-visible,input:focus-visible { outline:3px solid #a5c8b6; outline-offset:4px; }
-.wrap { width:min(1408px,calc(100% - 80px)); margin:auto; }
-nav { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:74px; border-bottom:1px solid var(--line); }
-.brand { display:inline-flex; align-items:center; gap:16px; text-decoration:none; font:700 31px/1.2 Georgia,serif; letter-spacing:-.035em; }
-.mark { display:grid; place-items:center; width:40px; height:40px; background:var(--accent); color:#fff; font:20px Georgia,serif; }
-.links { display:flex; gap:40px; } .links a { text-decoration:none; font-size:17px; font-weight:650; } .links a:hover { text-decoration:underline; }
-header { padding:35px 0 25px; } h1 { font:700 clamp(34px,5.2vw,76px)/1.35 ui-serif,"Noto Serif CJK SC",Georgia,serif; letter-spacing:-.035em; }
-.sub { margin-top:7px; color:var(--muted); font-size:clamp(15px,1.8vw,25px); }
-.latest { padding:32px 44px; border-radius:12px; background:var(--soft); }
-.latest-meta { display:flex; flex-wrap:wrap; align-items:center; gap:20px; color:var(--muted); font-size:19px; }
-.latest-meta b { padding-right:22px; border-right:1px solid #bbcfc5; color:var(--accent); font-weight:650; }
-.latest h2 { margin:14px 0 6px; font:700 clamp(28px,4.6vw,66px)/1.2 Georgia,"Noto Serif",serif; letter-spacing:-.04em; }
-.latest p { color:var(--muted); font-size:clamp(16px,1.8vw,25px); }
-.latest-actions { display:flex; flex-wrap:wrap; gap:25px 40px; align-items:center; margin-top:22px; }
-.primary { display:inline-flex; align-items:center; justify-content:center; gap:16px; min-height:56px; padding:10px 40px; border-radius:10px; background:var(--accent); color:#fff; text-decoration:none; font-size:20px; font-weight:650; }
-.primary:hover { background:#194637; } .latest-actions span { font-size:18px; color:var(--muted); }
-.continue { margin-top:18px; } .continue[hidden] { display:none; } .continue a { display:flex; flex-wrap:wrap; gap:8px 20px; text-decoration:none; border-bottom:1px solid var(--line); padding:10px 0; } .continue span { color:var(--muted); }
-.columns { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(300px,1fr); gap:34px; margin:34px 0 20px; align-items:start; }
-.section-head { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px; margin-bottom:15px; } h3 { font:700 clamp(26px,2.6vw,36px)/1.4 ui-serif,"Noto Serif CJK SC",Georgia,serif; letter-spacing:-.03em; }
-.search { width:min(355px,100%); height:50px; padding:0 18px; border:1px solid var(--line); border-radius:10px; color:var(--ink); background:#fff; font-size:17px; } .search::placeholder { color:var(--muted); }
-.lesson { display:grid; grid-template-columns:140px minmax(0,1fr) 24px; align-items:start; gap:18px; padding:18px 7px; border-top:1px solid var(--line); text-decoration:none; }
-.lesson:hover { background:var(--soft); } .lesson time { padding-top:2px; color:var(--muted); font-size:16px; }
-.lesson h4 { font:700 25px/1.3 Georgia,serif; letter-spacing:-.02em; } .lesson p { margin-top:6px; color:var(--muted); font-size:16px; } .arrow { padding-top:5px; font-size:24px; }
-.empty { padding:24px 0; color:var(--muted); } .empty[hidden] { display:none; }
-.more { display:block; margin-top:12px; padding:10px 0; border:0; background:transparent; color:var(--accent); text-decoration:underline; text-underline-offset:4px; font:600 15px/1.5 system-ui,sans-serif; cursor:pointer; } .more[hidden] { display:none; }
-.guide { padding-left:34px; border-left:1px solid var(--line); } .guide ol { list-style:none; margin-top:10px; }
-.guide li { display:grid; grid-template-columns:56px 1fr; gap:26px; align-items:start; padding:18px 0; } .guide li+li { border-top:1px solid var(--line); }
-.num { display:grid; place-items:center; width:54px; height:54px; background:var(--soft); border-radius:50%; font:24px Georgia,serif; }
-.guide b { display:block; font-size:19px; font-weight:650; } .guide p { color:var(--muted); font-size:16px; } .source { margin-top:4px; color:var(--muted); font-size:14px; }
-footer { display:flex; justify-content:space-between; gap:20px; margin-top:18px; padding:18px 0 24px; border-top:1px solid var(--line); color:var(--muted); font-size:16px; } footer a { text-decoration:none; } footer a:hover { text-decoration:underline; }
-.sr { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-@media(max-width:900px) { .columns { grid-template-columns:1fr; } .guide { border-left:0; border-top:1px solid var(--line); padding:24px 0 0; } .guide ol { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; } .guide li { display:block; } .guide li+li { border-top:0; } .num { margin-bottom:12px; } .latest { padding:28px; } .brand { font-size:26px; } }
-@media(max-width:560px) { .wrap { width:calc(100% - 36px); } nav { min-height:76px; } .brand { gap:9px; font-size:22px; } .mark { width:30px; height:30px; font-size:15px; } .links { gap:16px; } .links a { font-size:13px; } .links a:first-child { display:none; } header { padding:30px 0 24px; } h1 { font-size:32px; } .latest { padding:24px 20px; } .latest h2 { font-size:34px; overflow-wrap:break-word; } .latest-meta { gap:12px; font-size:14px; } .latest-meta b { padding-right:12px; } .latest-actions { gap:14px; margin-top:20px; } .primary { min-height:50px; padding:10px 25px; font-size:17px; } .latest-actions span { font-size:14px; } .columns { margin-top:28px; } .section-head { gap:12px; } .search { width:100%; font-size:16px; } .lesson { grid-template-columns:1fr 22px; gap:5px 12px; padding:18px 0; } .lesson time { grid-column:1; font-size:13px; } .lesson .text { grid-column:1; } .lesson h4 { font-size:23px; } .lesson p { font-size:14px; } .arrow { grid-column:2; grid-row:1 / 3; align-self:center; } .guide ol { display:block; } .guide li { display:grid; gap:16px; } .guide li+li { border-top:1px solid var(--line); } .num { margin-bottom:0; } footer { font-size:13px; } }
-@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  .home { padding-top: 64px; }
+  .intro, .today, .archive { margin-left: auto; margin-right: auto; }
+  .intro { max-width: var(--measure); }
+  .intro h1 { margin: 14px 0 14px; font: 600 clamp(34px, 6vw, 52px)/1.1 var(--serif); letter-spacing: -.025em; }
+  .intro .lead { max-width: 34rem; }
+
+  .today { max-width: var(--measure); margin-top: 56px; }
+  .section-h { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-h h2 { font: 600 13px/1 var(--sans); color: var(--muted); letter-spacing: .03em; }
+  .section-h span { color: var(--muted); font-size: 13px; }
+  .today-link { display: block; padding: 22px 0 6px; color: inherit; }
+  .today-link:hover { text-decoration: none; }
+  .today-date { font: 600 clamp(24px, 3.6vw, 30px)/1.2 var(--serif); letter-spacing: -.015em; }
+  .today-list { list-style: none; display: grid; gap: 14px; margin-top: 18px; }
+  .today-list li { display: grid; grid-template-columns: 28px 1fr; gap: 8px; }
+  .today-list .num { font: 500 12px/1.9 var(--mono); color: var(--faint); }
+  .today-list b { display: block; font: 500 19px/1.4 var(--serif); color: var(--ink); }
+  .today-list .zh { font-size: 14px; color: var(--muted); }
+  .today-go { display: inline-flex; margin-top: 24px; }
+  .today-link:hover .btn { opacity: .88; }
+  .continue { display: inline-flex; gap: 6px; margin-top: 18px; font-size: 14px; color: var(--muted); }
+  .continue b { color: var(--ink-2); font-weight: 500; }
+
+  .archive { max-width: var(--measure); margin-top: 72px; }
+  .archive .section-h { align-items: center; }
+  .archive .input { width: min(220px, 52%); min-height: 34px; padding: 6px 10px; font-size: 14px; }
+  .month { margin-top: 28px; font: 600 15px/1 var(--serif); color: var(--ink-2); }
+  .rows { list-style: none; margin-top: 8px; }
+  .rows a { display: grid; grid-template-columns: 84px 1fr auto; gap: 12px; align-items: baseline; padding: 12px 8px; margin: 0 -8px; border-radius: 8px; color: inherit; }
+  .rows a:hover { background: var(--surface-2); text-decoration: none; }
+  .rows time { font: 500 13px/1.5 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+  .rows .t { min-width: 0; }
+  .rows .de { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 16px/1.5 var(--serif); color: var(--ink); }
+  .rows .zh { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; color: var(--muted); }
+  .rows .tag { font-size: 12px; color: var(--faint); }
+  .empty { margin-top: 24px; color: var(--muted); }
+  @media (max-width: 720px) {
+    .home { padding-top: 36px; }
+    .rows a { grid-template-columns: 74px 1fr; gap: 8px; }
+    .rows .tag { display: none; }
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
-<nav aria-label="主导航"><a class="brand" href="index.html"><span class="mark">DD</span>Deutsch Daily</a><div class="links"><a href="#archive">往期阅读</a><a href="about.html">使用说明</a></div></nav>
-<header><h1>每天一点，读懂德语。</h1><p class="sub">A2–B1 简易新闻 · 德中对照 · 点词收藏</p></header>
-<section class="latest" id="latest" aria-labelledby="latest-title"></section>
-<section class="continue" id="continue" hidden><a id="continue-link"><b>继续上次学习 →</b><span id="continue-title"></span></a></section>
-<div class="columns">
-<section id="archive" aria-labelledby="archive-title"><div class="section-head"><h3 id="archive-title">往期阅读</h3><label class="sr" for="search">搜索主题或日期</label><input class="search" id="search" type="search" placeholder="搜索主题或日期" autocomplete="off" aria-controls="lessons"></div><div id="lessons"></div><p class="empty" id="empty" hidden>没有找到相关内容，试试其他主题或日期。</p><button type="button" class="more" id="more">加载更早的阅读 ↓</button><span class="sr" id="result-count" role="status" aria-live="polite"></span></section>
-<aside class="guide" aria-labelledby="guide-title"><h3 id="guide-title">按自己的节奏学</h3><ol><li><span class="num">01</span><div><b>先读德语</b><p>先尝试阅读原文，培养语感，了解大意。</p></div></li><li><span class="num">02</span><div><b>展开中文对照</b><p>遇到不懂的地方，再查看中文翻译，逐步理解。</p></div></li><li><span class="num">03</span><div><b>收藏今天的生词</b><p>将有用的词汇加入收藏，反复复习，加深记忆。</p></div></li></ol><p class="source">原文来源：tagesschau · Einfache Sprache</p></aside>
-</div>
-<footer><span>真实来源，轻松阅读。</span><a href="about.html">内容与隐私</a></footer>
-</div>
+<header class="bar"><div class="wrap bar-in">
+  <a class="brand" href="index.html">Deutsch Daily</a>
+  <nav class="bar-nav"><a class="btn-quiet" href="#archive">往期</a><a class="btn-quiet" href="about.html">关于</a><button class="btn-icon" type="button" data-settings aria-label="阅读设置" aria-expanded="false">Aa</button></nav>
+</div></header>
+
+<main class="wrap home">
+  <section class="intro">
+    <p class="kicker"><b>A2–B1</b> · tagesschau in Einfacher Sprache</p>
+    <h1>每天一点，读懂德语。</h1>
+    <p class="lead">每天三条简易德语新闻。先读德语，再对照中文；点任意单词查释义，生词一键导出到 Anki。</p>
+  </section>
+
+  <section class="today" aria-labelledby="today-h" id="today" hidden>
+    <div class="section-h"><h2 id="today-h">最新一期</h2><span id="today-meta"></span></div>
+    <a class="today-link" id="today-link">
+      <div class="today-date" id="today-date"></div>
+      <ol class="today-list" id="today-list"></ol>
+      <span class="btn today-go">开始阅读 →</span>
+    </a>
+    <a class="continue" id="continue" hidden>继续上次：<b id="continue-title"></b> →</a>
+  </section>
+
+  <section class="archive" id="archive" aria-labelledby="archive-h">
+    <div class="section-h"><h2 id="archive-h">往期</h2><input class="input" id="q" type="search" placeholder="搜索主题或日期" aria-label="搜索主题或日期" autocomplete="off"></div>
+    <div id="months"></div>
+    <p class="empty" id="empty" hidden>没有找到匹配的课程。</p>
+  </section>
+</main>
+__FOOT__
+__CORE__
 <script>
 const ITEMS = __ITEMS__;
-const esc = s => String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-const latest = ITEMS[0];
-const dateOf = (date, options) => new Date(date+'T12:00:00').toLocaleDateString('de-DE', options);
-if (latest) {
- document.getElementById('latest').innerHTML = `<div class="latest-meta"><b>最新一期</b><time datetime="${esc(latest.date)}">${dateOf(latest.date,{day:'numeric',month:'long',year:'numeric'})}</time></div><h2 id="latest-title" lang="de">Nachrichten in einfacher Sprache</h2><p>从今天的新闻开始，读一小段真实德语。</p><div class="latest-actions"><a class="primary" href="${esc(latest.slug)}.html">开始阅读 <span aria-hidden="true" style="color:inherit">→</span></a><span>德中对照 · 词汇 · 语法</span></div>`;
-} else { document.getElementById('latest').innerHTML='<h2 id="latest-title">第一篇阅读正在准备中</h2>'; }
-try {
- const recent = JSON.parse(localStorage.getItem('dd-recent-lesson') || 'null');
- if (recent?.slug && ITEMS.some(item=>item.slug===recent.slug)) {
-  document.getElementById('continue-link').href=recent.slug+'.html';
-  document.getElementById('continue-title').textContent=recent.title || recent.date;
-  document.getElementById('continue').hidden=false;
- }
-} catch {}
-let visibleCount=3;
-function showLessons() {
- const query=document.getElementById('search').value.trim().toLocaleLowerCase('de');
- const matches=ITEMS.filter(it=>[it.date,dateOf(it.date),it.titles,it.titles_zh].join(' ').toLocaleLowerCase('de').includes(query));
- const archive=query ? matches : ITEMS.slice(1);
- const items=query ? archive : archive.slice(0,visibleCount);
- document.getElementById('lessons').innerHTML=items.map(it=>{
-  const titles=it.news_titles || [it.titles];
-  const translations=it.news_titles_zh || [it.titles_zh];
-  const hit=query ? titles.findIndex((title,i)=>[title,translations[i]].join(' ').toLocaleLowerCase('de').includes(query)) : 0;
-  const index=hit<0 ? 0 : hit;
-  return `<a class="lesson" href="${esc(it.slug)}.html" title="${esc(it.titles)}"><time datetime="${esc(it.date)}">${dateOf(it.date)}</time><div class="text"><h4 lang="de">${esc(titles[index])}</h4><p>${esc(translations[index] || '简易德语新闻')}</p></div><span class="arrow" aria-hidden="true">›</span></a>`;
- }).join('');
- document.getElementById('empty').hidden=items.length>0;
- document.getElementById('more').hidden=Boolean(query) || items.length>=archive.length;
- document.getElementById('result-count').textContent=query ? `找到 ${items.length} 期阅读` : `显示 ${items.length} 期往期阅读`;
-}
-document.getElementById('search').addEventListener('input',()=>{visibleCount=3;showLessons();});
-document.getElementById('more').addEventListener('click',()=>{visibleCount+=6;showLessons();});
-showLessons();
+(function () {
+  const { esc, fmtDate, store } = window.DD;
+  const $ = id => document.getElementById(id);
+  const kind = item => item.content_kind === 'reading' ? '短读' : '视频课';
+  const shortDate = iso => `${fmtDate(iso, { weekday: 'short' }).replace('.', '')} ${iso.slice(8, 10)}.${iso.slice(5, 7)}.`;
+
+  const latest = ITEMS[0];
+  if (latest) {
+    $('today').hidden = false;
+    $('today-link').href = latest.slug + '.html';
+    $('today-date').textContent = fmtDate(latest.date);
+    $('today-meta').textContent = `${latest.count} Themen · ${kind(latest)}`;
+    $('today-list').innerHTML = latest.news_titles.map((t, i) => `<li><span class="num">${String(i + 1).padStart(2, '0')}</span>
+      <span><b lang="de">${esc(t)}</b>${latest.news_titles_zh[i] ? `<span class="zh">${esc(latest.news_titles_zh[i])}</span>` : ''}</span></li>`).join('');
+  }
+  const recent = store.get('dd-recent-lesson', null);
+  if (recent && recent.slug && recent.slug !== latest?.slug && ITEMS.some(item => item.slug === recent.slug)) {
+    $('continue').href = recent.slug + '.html';
+    $('continue-title').textContent = `${fmtDate(recent.date, { day: 'numeric', month: 'long' })} · ${recent.title || ''}`;
+    $('continue').hidden = false;
+  }
+
+  const haystack = item => [item.date, fmtDate(item.date), fmtDate(item.date, { day: '2-digit', month: '2-digit' }),
+    ...(item.news_titles || []), ...(item.news_titles_zh || [])].join(' ').toLowerCase();
+  const indexed = ITEMS.map(item => ({ item, text: haystack(item) }));
+  function render(query) {
+    const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+    const hits = indexed.filter(x => terms.every(t => x.text.includes(t))).map(x => x.item);
+    const months = new Map();
+    hits.forEach(item => {
+      const key = item.date.slice(0, 7);
+      if (!months.has(key)) months.set(key, []);
+      months.get(key).push(item);
+    });
+    $('months').innerHTML = [...months].map(([key, items]) =>
+      `<h3 class="month">${esc(fmtDate(key + '-15', { month: 'long', year: 'numeric' }))}</h3><ul class="rows">${items.map(item => `<li><a href="${esc(item.slug)}.html">
+        <time datetime="${esc(item.date)}">${esc(shortDate(item.date))}</time>
+        <span class="t"><span class="de" lang="de">${esc((item.news_titles || []).join(' · '))}</span><span class="zh">${esc((item.news_titles_zh || []).filter(Boolean).join(' · '))}</span></span>
+        <span class="tag">${kind(item)}</span></a></li>`).join('')}</ul>`).join('');
+    $('empty').hidden = hits.length > 0;
+  }
+  $('q').addEventListener('input', e => render(e.target.value));
+  render('');
+})();
 </script>
 </body>
 </html>

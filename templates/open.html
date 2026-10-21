@@ -1,54 +1,48 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="用 Deutsch Daily 打开一个外语视频，进入逐句学习。">
-<title>打开视频 — Deutsch Daily</title>
+__HEAD__
+<title>用视频链接学习 — Deutsch Daily</title>
+<meta name="description" content="粘贴视频页面链接：已收录的内容直接打开，其他来源可以用自己的字幕在浏览器本地创建课程。">
 <style>
-  :root { --bg:#eef2f0; --surface:#fff; --surface-2:#f7f9f8; --ink:#172127; --muted:#647077; --line:#dce4e1; --accent:#176b72; --accent-soft:#dceeed; --shadow:0 18px 50px rgba(20,46,47,.09); }
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body { min-height:100vh; padding:24px; background:radial-gradient(circle at 85% 5%,rgba(23,107,114,.12),transparent 32rem),var(--bg); color:var(--ink); font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,"Noto Sans SC",sans-serif; }
-  .wrap { width:min(820px,100%); margin:0 auto; }
-  nav { display:flex; align-items:center; justify-content:space-between; margin-bottom:clamp(52px,9vw,94px); }
-  .brand { display:inline-flex; align-items:center; gap:10px; color:inherit; font-weight:800; letter-spacing:-.02em; text-decoration:none; }
-  .brand-mark { display:grid; place-items:center; width:30px; height:30px; border-radius:9px; background:var(--accent); color:#fff; font:800 12px/1 ui-monospace,monospace; }
-  nav>a:last-child { color:var(--muted); font-size:13px; font-weight:700; text-decoration:none; }
-  main { padding:clamp(24px,5vw,46px); border:1px solid var(--line); border-radius:26px; background:rgba(255,255,255,.9); box-shadow:var(--shadow); }
-  h1 { font:750 clamp(30px,5vw,48px)/1.08 ui-serif,Georgia,serif; letter-spacing:-.045em; }
-  .lead { margin-top:12px; color:var(--muted); }
-  .url-form { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; margin-top:24px; }
-  input { min-width:0; height:52px; padding:0 16px; border:1px solid #cbd8d4; border-radius:14px; background:var(--surface); color:var(--ink); font:500 15px/1 ui-sans-serif,system-ui; outline:none; }
-  input:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(23,107,114,.13); }
-  button,.button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 20px; border:0; border-radius:13px; background:var(--accent); color:#fff; cursor:pointer; font:800 14px/1 ui-sans-serif,system-ui; text-decoration:none; }
-  .result { display:none; margin-top:28px; padding-top:26px; border-top:1px solid var(--line); }
-  .result.on { display:block; }
-  .status { display:inline-flex; margin-bottom:12px; padding:5px 9px; border-radius:8px; background:#f8e8dc; color:#8b4a20; font-size:12px; font-weight:800; }
-  .result h2 { font:750 25px/1.25 ui-serif,Georgia,serif; letter-spacing:-.025em; }
-  .result p { margin-top:9px; color:var(--muted); font-size:14px; }
-  .source { margin-top:16px; padding:13px 14px; overflow-wrap:anywhere; border-radius:12px; background:var(--surface-2); color:var(--muted); font:12px/1.5 ui-monospace,monospace; }
-  .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
-  .button.secondary { border:1px solid var(--line); background:var(--surface); color:var(--ink); }
-  .button.ghost { background:transparent; color:var(--accent); }
-  .player { display:none; position:relative; aspect-ratio:16/9; margin-top:20px; overflow:hidden; border-radius:16px; background:#0c1518; }
-  .player.on { display:block; }
-  .player iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
-  .boundary { margin-top:26px; padding-top:18px; border-top:1px dashed var(--line); color:var(--muted); font-size:12px; }
-  @media(max-width:620px){ body{padding:16px 12px} nav{margin-bottom:44px}.url-form{grid-template-columns:1fr}.url-form button{width:100%}main{border-radius:20px}.actions{display:grid}.button{width:100%} }
+  .open { max-width: var(--measure); padding: 56px 0 0; }
+  .open .kicker { margin-bottom: 14px; }
+  .open h1 { font: 600 clamp(30px, 5vw, 42px)/1.15 var(--serif); letter-spacing: -.02em; margin-bottom: 12px; }
+  .url-form { display: flex; gap: 8px; margin-top: 28px; }
+  .url-form .input { flex: 1; min-width: 0; min-height: 44px; }
+  .url-form .btn { min-height: 44px; }
+  .result { display: none; margin-top: 28px; padding: 20px; }
+  .result.on { display: block; }
+  .status { display: inline-block; margin-bottom: 10px; color: var(--muted); font-size: 12px; letter-spacing: .02em; }
+  .result h2 { font: 600 21px/1.3 var(--serif); margin-bottom: 6px; }
+  .result p { color: var(--ink-2); }
+  .player { display: none; position: relative; aspect-ratio: 16 / 9; margin-top: 18px; overflow: hidden; border-radius: 8px; background: var(--surface-2); }
+  .player.on { display: block; }
+  .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .source { margin-top: 16px; padding: 10px 12px; overflow-wrap: anywhere; border-radius: 8px; background: var(--surface-2); color: var(--muted); font: 12px/1.5 var(--mono); }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .boundary { margin-top: 32px; }
+  @media (max-width: 520px) {
+    .url-form { flex-direction: column; }
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav><a class="brand" href="index.html"><span class="brand-mark">DD</span><span>Deutsch Daily</span></a><a href="about.html">支持范围</a></nav>
-  <main>
+<header class="bar"><div class="wrap bar-in">
+  <a class="brand" href="index.html">Deutsch Daily</a>
+  <nav class="bar-nav"><a class="btn-quiet" href="index.html">往期</a><button class="btn-icon" type="button" data-settings aria-label="阅读设置" aria-expanded="false">Aa</button></nav>
+</div></header>
+<main class="wrap">
+  <section class="open">
+    <p class="kicker"><b>视频链接</b> · 已收录内容直达</p>
     <h1>用一个视频开始学习</h1>
-    <p class="lead">粘贴视频页面链接。已收录的内容会直接打开；其他来源会先检查当前支持情况。</p>
+    <p class="lead">粘贴视频页面链接。已收录的内容会直接打开；其他来源会说明现在能做什么。</p>
     <form class="url-form" id="url-form" novalidate>
-      <label for="video-url" style="position:absolute;left:-9999px">视频链接</label>
-      <input id="video-url" type="url" inputmode="url" autocomplete="url" placeholder="https://…">
-      <button type="submit">检查链接</button>
+      <label for="video-url" class="sr-only">视频链接</label>
+      <input class="input" id="video-url" type="url" inputmode="url" autocomplete="url" placeholder="https://…">
+      <button class="btn" type="submit">检查链接</button>
     </form>
-    <section class="result" id="result" aria-live="polite">
+    <section class="result card" id="result" aria-live="polite">
       <div class="status" id="status"></div>
       <h2 id="result-title"></h2>
       <p id="result-copy"></p>
@@ -56,9 +50,11 @@
       <div class="source" id="source"></div>
       <div class="actions" id="actions"></div>
     </section>
-    <p class="boundary">没有自动接入的来源，也可以用自己有权处理的媒体与字幕创建本地课程。我们不会为了“任意链接”这个口号，偷偷下载受限制的视频或承诺拿不到的字幕。</p>
-  </main>
-</div>
+    <p class="note boundary">没有自动接入的来源，也可以用自己有权处理的媒体与字幕<a href="studio.html">创建本地课程</a>。我们不会为了“任意链接”这个口号，偷偷下载受限制的视频，或承诺拿不到的字幕。</p>
+  </section>
+</main>
+__FOOT__
+__CORE__
 <script>
 const ITEMS = __ITEMS__;
 const form = document.getElementById('url-form');
@@ -89,7 +85,7 @@ function youtubeId(raw) {
   } catch {}
   return '';
 }
-function show({kind,title,copy,url,videoId=''}) {
+function show({kind, title, copy, url, videoId = ''}) {
   result.classList.add('on');
   document.getElementById('status').textContent = kind === 'youtube' ? '播放器可用 · 自带字幕可创建' : kind === 'invalid' ? '链接格式有误' : '需要用户提供字幕';
   document.getElementById('result-title').textContent = title;
@@ -109,18 +105,18 @@ function show({kind,title,copy,url,videoId=''}) {
     player.classList.remove('on');
   }
   if (kind === 'invalid') {
-    document.getElementById('actions').innerHTML = '<a class="button" href="studio.html">从自己的字幕创建课程</a>';
+    document.getElementById('actions').innerHTML = '<a class="btn" href="studio.html">从自己的字幕创建课程</a>';
     return;
   }
   const issue = 'https://github.com/T-64/deutsch-daily/issues/new?title=' + encodeURIComponent('希望支持这个视频来源') + '&body=' + encodeURIComponent('视频链接：' + url);
   const studio = 'studio.html#source=' + encodeURIComponent(url);
-  document.getElementById('actions').innerHTML = `<a class="button" href="${escapeAttr(studio)}">用自己的字幕创建课程</a><a class="button secondary" href="${escapeAttr(url)}" target="_blank" rel="noopener">打开原视频</a><a class="button ghost" href="${escapeAttr(issue)}" target="_blank" rel="noopener">提交支持请求</a>`;
+  document.getElementById('actions').innerHTML = `<a class="btn" href="${DD.esc(studio)}">用自己的字幕创建课程</a><a class="btn secondary" href="${DD.esc(url)}" target="_blank" rel="noopener">打开原视频</a><a class="btn-quiet" href="${DD.esc(issue)}" target="_blank" rel="noopener">提交支持请求</a>`;
 }
 function openUrl(raw) {
   let url;
   try { url = normalized(raw.trim()); }
   catch {
-    show({kind:'invalid',title:'这个链接格式不对',copy:'请使用以 http:// 或 https:// 开头的完整视频链接，或者直接上传自己的字幕。',url:raw || '—'});
+    show({kind: 'invalid', title: '这个链接格式不对', copy: '请使用以 http:// 或 https:// 开头的完整视频链接，或者直接上传自己的字幕。', url: raw || '—'});
     return;
   }
   field.value = url;
@@ -133,12 +129,11 @@ function openUrl(raw) {
   }
   const yt = youtubeId(url);
   if (yt) {
-    show({kind:'youtube',title:'视频可以播放；有自己的字幕就能做成课程',copy:'公开版不会抓取公共字幕。你可以使用自己有权处理的 SRT 或 VTT，在浏览器本地创建逐句课程。',url,videoId:yt});
+    show({kind: 'youtube', title: '视频可以播放；有自己的字幕就能做成课程', copy: '公开版不会抓取公共字幕。你可以使用自己有权处理的 SRT 或 VTT，在浏览器本地创建逐句课程。', url, videoId: yt});
     return;
   }
-  show({kind:'unsupported',title:'这个来源没有自动接入',copy:'如果你有权使用媒体和字幕，现在仍可在浏览器本地创建逐句课程；否则可以提交来源请求。',url});
+  show({kind: 'unsupported', title: '这个来源没有自动接入', copy: '如果你有权使用媒体和字幕，现在仍可在浏览器本地创建逐句课程；否则可以提交来源请求。', url});
 }
-function escapeAttr(value) { return String(value).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
 form.addEventListener('submit', event => {
   event.preventDefault();
   const next = encodeURIComponent(field.value.trim());
