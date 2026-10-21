@@ -25,6 +25,7 @@ import urllib.request
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
+from xml.etree.ElementTree import ParseError
 from zoneinfo import ZoneInfo
 
 from ingest_episode import ebu_to_cues, parse_fields, transcript_matches_synopsis
@@ -89,46 +90,78 @@ def atomic_json(path: Path, value) -> None:
     tmp.replace(path)
 
 
-def discover(source: dict, since: date, until: date) -> list[tuple[dict, bytes]]:
+# A problem with one day (network, parsing, AI, validation) skips only that day.
+DAY_ERRORS = (ValueError, KeyError, TypeError, OSError, ParseError, http.client.HTTPException)
+
+
+class PartialUpdate(ValueError):
+    """Some days failed; every other ready day was still saved and published."""
+
+    def __init__(self, ready: list[str], failures: list[tuple[str, str]]):
+        self.ready, self.failures = ready, failures
+        super().__init__(f"{len(failures)} day(s) failed: " + "; ".join(f"{day} ({reason})" for day, reason in failures))
+
+
+def note_failure(failures: list[tuple[str, str]], label: str, exc, verb: str = "skip") -> None:
+    reason = " ".join(str(exc).split())[:300] or type(exc).__name__
+    failures.append((label, reason))
+    print(f"{verb}: {label} · {reason}", flush=True)
+
+
+def discover(source: dict, since: date, until: date, failures: list[tuple[str, str]] | None = None) -> list[tuple[dict, bytes]]:
+    """Verified editions in range; per-day problems go to `failures` instead of aborting."""
+    failures = [] if failures is None else failures
     html = source_bytes(source["list_url"], source, listing=True).decode("utf-8")
     paths = list(dict.fromkeys(re.findall(r"tse-\d+\.html", html)))
     if not paths:
         raise ValueError("No simple-news episodes in the source listing")
-    found = {}
+    found, conflicts, skipped = {}, set(), len(failures)
     # CMS ordering isn't chronological: inspect every visible episode, then sort.
     listed_dates = dict(re.findall(r'href="[^"<>]*/(tse-\d+\.html)"[^>]*>(?:(?!</a>).)*?class="teaser__date"[^>]*>\s*(\d{2}\.\d{2}\.\d{4})', html, re.S))
     for path in paths[:20]:
-        if path in listed_dates:
-            listed_day = datetime.strptime(listed_dates[path], "%d.%m.%Y").date()
-            if not since <= listed_day <= until:
+        label = path
+        try:
+            if path in listed_dates:
+                listed_day = datetime.strptime(listed_dates[path], "%d.%m.%Y").date()
+                if not since <= listed_day <= until:
+                    continue
+                label = listed_day.isoformat()
+            url = urljoin(source["list_url"] + "/", path)
+            page = source_bytes(url, source).decode("utf-8")
+            fields = parse_fields(page, url, "einfach")
+            if not fields.get("date"):
+                raise ValueError(f"Cannot verify publication date of {path}")
+            day = date.fromisoformat(fields["date"])
+            if not since <= day <= until:
                 continue
-        url = urljoin(source["list_url"] + "/", path)
-        page = source_bytes(url, source).decode("utf-8")
-        fields = parse_fields(page, url, "einfach")
-        if not fields.get("date"):
-            raise ValueError(f"Cannot verify publication date of {path}")
-        day = date.fromisoformat(fields["date"])
-        if not since <= day <= until:
+            label = fields["date"]
+            if not fields.get("subtitle_url"):
+                raise ValueError("official text is not available yet")
+            xml = source_bytes(fields["subtitle_url"], source)
+            cues = ebu_to_cues(xml)
+            if len(cues) < 8 or not transcript_matches_synopsis(cues, fields["synopsis"]):
+                raise ValueError("official text does not match the episode")
+        except DAY_ERRORS as exc:
+            note_failure(failures, label, exc)
             continue
-        if not fields.get("subtitle_url"):
-            raise ValueError(f"{day}: official text is not available yet")
-        xml = source_bytes(fields["subtitle_url"], source)
-        cues = ebu_to_cues(xml)
-        if len(cues) < 8 or not transcript_matches_synopsis(cues, fields["synopsis"]):
-            raise ValueError(f"{day}: official text does not match the episode")
         fields["text_sha256"] = hashlib.sha256(xml).hexdigest()
         if day in found and found[day][0]["text_sha256"] != fields["text_sha256"]:
-            raise ValueError(f"Conflicting episodes for {day}")
+            conflicts.add(day)
         found[day] = (fields, xml)
         print(f"source: {day} · {fields['episode_id']}", flush=True)
-    if not found:
-        raise ValueError("No source editions found in the requested date range")
+    for day in sorted(conflicts):
+        del found[day]
+        note_failure(failures, day.isoformat(), "conflicting episodes for this day")
     owners = {}
     for day, (fields, _) in found.items():
-        digest = fields["text_sha256"]
-        if digest in owners:
-            raise ValueError(f"Reused source text: {day} / {owners[digest]}")
-        owners[digest] = day
+        owners.setdefault(fields["text_sha256"], []).append(day)
+    for days in owners.values():
+        if len(days) > 1:
+            for day in days:
+                del found[day]
+                note_failure(failures, day.isoformat(), "source text reused by " + " / ".join(d.isoformat() for d in sorted(days)))
+    if not found and len(failures) == skipped:
+        raise ValueError("No source editions found in the requested date range")
     return [found[day] for day in sorted(found)]
 
 
@@ -226,6 +259,39 @@ def validate(doc: dict) -> None:
             raise ValueError(report.getvalue().strip())
 
 
+def refresh(fields: dict, xml: bytes, fetch_only: bool) -> bool:
+    """Save one day's evidence and (re)generate its reading; True when the day can be published."""
+    day = fields["date"]
+    # Persist independently fetched evidence even if the AI step fails.
+    atomic_json(ROOT / f"data/meta/{day}.json", fields)
+    atomic_json(ROOT / f"data/transcripts/{day}.json", ebu_to_cues(xml))
+    sub = ROOT / f"data/subtitles/{day}.xml"
+    sub.parent.mkdir(parents=True, exist_ok=True)
+    sub.write_bytes(xml)
+    path = ROOT / f"data/content/{day}.json"
+    existing = json.loads(path.read_text()) if path.exists() else None
+    if existing and existing.get("source_text_sha256") == fields["text_sha256"]:
+        validate(existing)
+        print(f"unchanged: {day}", flush=True)
+        return True
+    if fetch_only:
+        return False
+    print(f"generate: {day}", flush=True)
+    feedback = ""
+    for attempt in range(3):
+        try:
+            doc = generate(fields, ebu_to_cues(xml), feedback)
+            validate(doc)
+            break
+        except (ValueError, KeyError, TypeError) as exc:
+            if attempt == 2:
+                raise
+            feedback = "Your previous response was rejected. Generate a corrected COMPLETE response. Errors: " + str(exc)
+            print(f"retry generation: {day} (attempt {attempt + 2})", flush=True)
+    atomic_json(path, doc)
+    return True
+
+
 def update(args) -> list[str]:
     load_env(args.env_file)
     config = json.loads((ROOT / "config/reading-sources.json").read_text())
@@ -234,46 +300,22 @@ def update(args) -> list[str]:
     since = args.since or until - timedelta(days=6)
     if since > until:
         raise ValueError("--since must not be after --until")
-    editions = discover(source, since, until)
+    failures: list[tuple[str, str]] = []
     ready = []
-    for fields, xml in editions:
-        day = fields["date"]
-        # Persist independently fetched evidence even if the AI step fails.
-        atomic_json(ROOT / f"data/meta/{day}.json", fields)
-        atomic_json(ROOT / f"data/transcripts/{day}.json", ebu_to_cues(xml))
-        sub = ROOT / f"data/subtitles/{day}.xml"
-        sub.parent.mkdir(parents=True, exist_ok=True)
-        sub.write_bytes(xml)
-        path = ROOT / f"data/content/{day}.json"
-        existing = json.loads(path.read_text()) if path.exists() else None
-        if existing and existing.get("source_text_sha256") == fields["text_sha256"]:
-            validate(existing)
-            ready.append(day)
-            print(f"unchanged: {day}", flush=True)
-            continue
-        if args.fetch_only:
-            doc = None
-        else:
-            print(f"generate: {day}", flush=True)
-            feedback = ""
-            for attempt in range(3):
-                try:
-                    doc = generate(fields, ebu_to_cues(xml), feedback)
-                    validate(doc)
-                    break
-                except (ValueError, KeyError, TypeError) as exc:
-                    if attempt == 2:
-                        raise
-                    feedback = "Your previous response was rejected. Generate a corrected COMPLETE response. Errors: " + str(exc)
-                    print(f"retry generation: {day} (attempt {attempt + 2})", flush=True)
-        if doc:
-            atomic_json(path, doc)
-            ready.append(day)
+    for fields, xml in discover(source, since, until, failures):
+        try:
+            if refresh(fields, xml, args.fetch_only):
+                ready.append(fields["date"])
+        except DAY_ERRORS as exc:
+            # The day's existing content stays untouched; the other days still publish.
+            note_failure(failures, fields["date"], exc, "failed")
     if ready and not args.fetch_only:
         if args.publish:
             subprocess.run(["bash", str(ROOT / "scripts/publish.sh"), *ready], cwd=ROOT, check=True)
         else:
             subprocess.run([sys.executable, str(ROOT / "build.py")], cwd=ROOT, check=True)
+    if failures:
+        raise PartialUpdate(ready, failures)
     return ready
 
 
@@ -298,6 +340,11 @@ def main():
         try:
             days = update(args)
             print("Ready: " + ", ".join(days))
+        except PartialUpdate as exc:
+            # The good days are already published; still fail the task so the gap is noticed.
+            print("Ready: " + (", ".join(exc.ready) or "none"))
+            print(f"Update incomplete, {exc}", file=sys.stderr)
+            return 1
         except (ValueError, KeyError, TypeError, urllib.error.URLError, TimeoutError, http.client.HTTPException, subprocess.CalledProcessError) as exc:
             # HTTPError's message excludes request headers/credentials.
             print(f"Update failed: {exc}", file=sys.stderr)
