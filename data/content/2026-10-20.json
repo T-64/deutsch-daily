@@ -1,21 +1,728 @@
 {
+  "schema": 2,
+  "content_kind": "broadcast",
   "date": "2026-10-20",
   "slug": "2026-10-20",
   "source": "einfach",
-  "source_label": "tagesschau · Einfache Sprache",
+  "source_label": "tagesschau in Einfacher Sprache",
   "level": "A2–B1",
-  "content_kind": "reading",
-  "adaptation": "根据官方新闻整理的简易德语短读，非节目逐字稿；中文译文与学习提示由 AI 生成。",
   "source_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1478.html",
+  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1669558.html",
   "source_text_sha256": "94a2f0f3655e56600d454cb33bd1354598de502ee88846cf308aeb00501c2957",
-  "generated_at": "2026-10-21T01:46:44.679481+02:00",
+  "generated_at": "2026-10-22T00:59:30.123930+02:00",
   "generation_model": "glm-5.3",
-  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1478.html",
-  "embed_url": "",
-  "news": [
+  "sentences": [
+    {
+      "de": "Willkommen zur tagesschau in Einfacher Sprache.",
+      "start": 11.49,
+      "end": 14.97,
+      "zh": "欢迎收看简易语言版每日新闻。"
+    },
+    {
+      "de": "Ich bin Susanne Stichler und das sind unsere Nachrichten.",
+      "start": 15.37,
+      "end": 19.37,
+      "zh": "我是苏珊娜·施蒂希勒，以下是我们的新闻。"
+    },
+    {
+      "de": "Und nun zur ersten Nachricht.",
+      "start": 39.61,
+      "end": 41.69,
+      "zh": "现在来看第一条新闻。"
+    },
+    {
+      "de": "In Berlin gab es gerade ein großes Treffen von der Wirtschaft.",
+      "start": 47.01,
+      "end": 52.21,
+      "zh": "柏林刚刚举行了一场大型经济界聚会。"
+    },
+    {
+      "de": "Die Bundesregierung hat Investoren aus der ganzen Welt dazu eingeladen.",
+      "start": 52.81,
+      "end": 58.61,
+      "zh": "联邦政府邀请了来自世界各地的投资者。"
+    },
+    {
+      "de": "Investoren sind Menschen mit viel Geld.",
+      "start": 59.01,
+      "end": 62.81,
+      "zh": "投资者是拥有很多钱的人。"
+    },
+    {
+      "de": "Sie geben das Geld zum Beispiel für den Bau von Firmen aus.",
+      "start": 63.45,
+      "end": 68.01,
+      "zh": "他们把这些钱用于例如建设公司。"
+    },
+    {
+      "de": "Die Bundesregierung will, dass viele Investoren in Deutschland Geld ausgeben.",
+      "start": 69.57,
+      "end": 76.45,
+      "zh": "联邦政府希望很多投资者在德国花钱。"
+    },
+    {
+      "de": "In der Mitte von dem Foto ist der Bundeskanzler Friedrich Merz.",
+      "start": 77.29,
+      "end": 82.73,
+      "zh": "照片中间是联邦总理弗里德里希·默茨。"
+    },
+    {
+      "de": "Er sagt, Investoren aus dem Ausland sind gut für die deutsche Wirtschaft.",
+      "start": 83.37,
+      "end": 89.01,
+      "zh": "他说，来自外国的投资者对德国经济有好处。"
+    },
+    {
+      "de": "Es gab ein großes Fest für die Investoren.",
+      "start": 90.69,
+      "end": 94.85,
+      "zh": "为投资者举办了一场大型庆祝活动。"
+    },
+    {
+      "de": "Sie wollen viele Milliarden Euro in Deutschland investieren.",
+      "start": 95.61,
+      "end": 100.57,
+      "zh": "他们想在德国投资数十亿欧元。"
+    },
+    {
+      "de": "Jetzt zeigen wir einen Film dazu.",
+      "start": 100.97,
+      "end": 103.33,
+      "zh": "现在我们播放一段相关影片。"
+    },
+    {
+      "de": "Bei dem Fest sind viele Investoren aus der ganzen Welt.",
+      "start": 104.29,
+      "end": 109.01,
+      "zh": "庆祝活动上有很多来自世界各地的投资者。"
+    },
+    {
+      "de": "Der Bundeskanzler Friedrich Merz sagt, Deutschland will Investoren und Handel und die deutsche Wirtschaft will schneller wachsen.",
+      "start": 109.41,
+      "end": 119.49,
+      "zh": "联邦总理弗里德里希·默茨说，德国需要投资者和贸易，德国经济要更快增长。"
+    },
+    {
+      "de": "Jen-Hsun Huang ist der Chef von der Firma Nvidia in den USA.",
+      "start": 122.37,
+      "end": 127.97,
+      "zh": "黄仁勋是美国英伟达公司的老板。"
+    },
+    {
+      "de": "Sie macht Chips für Computer und ist eine sehr wertvolle Firma.",
+      "start": 128.57,
+      "end": 133.53,
+      "zh": "这家公司生产电脑芯片，是一家非常有价值的公司。"
+    },
+    {
+      "de": "Deutschland will mit Nvidia zusammenarbeiten.",
+      "start": 134.41,
+      "end": 137.57,
+      "zh": "德国想与英伟达合作。"
+    },
+    {
+      "de": "Aber Deutschland braucht noch mehr Investoren.",
+      "start": 138.41,
+      "end": 141.69,
+      "zh": "但德国还需要更多投资者。"
+    },
+    {
+      "de": "Diese Frau ist Expertin für Wirtschaft.",
+      "start": 142.29,
+      "end": 145.01,
+      "zh": "这位女士是经济专家。"
+    },
+    {
+      "de": "Sie sagt, Deutschland liegt mitten in Europa.",
+      "start": 145.73,
+      "end": 149.49,
+      "zh": "她说，德国位于欧洲中部。"
+    },
+    {
+      "de": "Und es gibt viele Forscher in Deutschland.",
+      "start": 149.97,
+      "end": 152.89,
+      "zh": "而且德国有很多科研人员。"
+    },
+    {
+      "de": "Das finden Investoren gut.",
+      "start": 153.21,
+      "end": 155.33,
+      "zh": "投资者觉得这很好。"
+    },
+    {
+      "de": "Aber in Deutschland ist Energie sehr teuer und die Steuern sind hoch.",
+      "start": 155.57,
+      "end": 160.69,
+      "zh": "但在德国能源非常贵，税收也高。"
+    },
+    {
+      "de": "Das mögen Investoren nicht.",
+      "start": 160.73,
+      "end": 162.97,
+      "zh": "投资者不喜欢这一点。"
+    },
+    {
+      "de": "Deshalb muss die Bundesregierung neue, bessere Regeln zum Beispiel für Steuern machen.",
+      "start": 163.61,
+      "end": 169.93,
+      "zh": "因此联邦政府必须制定新的、更好的规定，比如税收方面。"
+    },
+    {
+      "de": "Dann kommen mehr Investoren nach Deutschland.",
+      "start": 169.97,
+      "end": 173.13,
+      "zh": "这样就会有更多投资者来德国。"
+    },
+    {
+      "de": "Und der Chef von Nvidia sagt, die Menschen in Deutschland können viel, fangt mit der Arbeit an.",
+      "start": 173.97,
+      "end": 181.53,
+      "zh": "英伟达的老板说，德国人很有能力，开始工作吧。"
+    },
+    {
+      "de": "Deutschland will den Investoren bei dem Treffen in Berlin zeigen, es ist gut, wenn ihr nach Deutschland kommt.",
+      "start": 183.45,
+      "end": 191.45,
+      "zh": "德国想在柏林的聚会上向投资者表明：你们来德国是好事。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 192.29,
+      "end": 194.65,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "Wenn auf Reisen der Bus, die Bahn oder das Flugzeug zu spät kommen oder ausfallen, dann haben Reisende Rechte.",
+      "start": 199.05,
+      "end": 208.25,
+      "zh": "旅行时如果公交车、火车或飞机晚点或取消，旅客是有权利的。"
+    },
+    {
+      "de": "Sie bekommen zum Beispiel Geld für das Ticket zurück.",
+      "start": 208.61,
+      "end": 212.69,
+      "zh": "比如他们可以退回票款。"
+    },
+    {
+      "de": "Bislang ist es aber oft schwierig, an das Geld zu kommen.",
+      "start": 213.53,
+      "end": 218.09,
+      "zh": "但到目前为止，拿到这笔钱往往很困难。"
+    },
+    {
+      "de": "Manchmal muss man viel schreiben an verschiedene Behörden oder Firmen.",
+      "start": 219.21,
+      "end": 224.29,
+      "zh": "有时要给不同的部门或公司写很多信。"
+    },
+    {
+      "de": "Die EU will das ändern.",
+      "start": 225.17,
+      "end": 227.25,
+      "zh": "欧盟想改变这一点。"
+    },
+    {
+      "de": "Es soll einfacher werden, Geld zurückzubekommen.",
+      "start": 227.69,
+      "end": 231.81,
+      "zh": "退钱应该变得更简单。"
+    },
+    {
+      "de": "Und es soll in der ganzen EU nur einen Antrag dafür geben.",
+      "start": 232.37,
+      "end": 237.05,
+      "zh": "而且整个欧盟应该只有一种统一的申请表。"
+    },
+    {
+      "de": "Er soll einfach zu verstehen und in allen Ländern gleich sein.",
+      "start": 237.61,
+      "end": 242.65,
+      "zh": "它应该容易理解，并且在所有国家都一样。"
+    },
+    {
+      "de": "Das Parlament von der EU hat dafür gestimmt.",
+      "start": 243.17,
+      "end": 247.13,
+      "zh": "欧盟议会已经对此投了票。"
+    },
+    {
+      "de": "Die EU-Länder müssen aber noch darüber abstimmen.",
+      "start": 247.97,
+      "end": 251.41,
+      "zh": "但欧盟各国还需要就此表决。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 254.21,
+      "end": 256.41,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "Vor 65 Jahren brauchte die Bundesrepublik Deutschland sehr viele Arbeiter.",
+      "start": 261.97,
+      "end": 268.89,
+      "zh": "65年前，德意志联邦共和国需要非常多的工人。"
+    },
+    {
+      "de": "Die Bundesrepublik war im Westen von Deutschland.",
+      "start": 269.37,
+      "end": 273.57,
+      "zh": "联邦德国位于德国西部。"
+    },
+    {
+      "de": "Die Wirtschaft ist damals stark gewachsen.",
+      "start": 274.37,
+      "end": 278.01,
+      "zh": "当时经济增长强劲。"
+    },
+    {
+      "de": "Und es gab viel Arbeit.",
+      "start": 278.53,
+      "end": 280.73,
+      "zh": "工作机会很多。"
+    },
+    {
+      "de": "Es gab aber zu wenige Arbeiter.",
+      "start": 281.41,
+      "end": 284.29,
+      "zh": "但工人太少。"
+    },
+    {
+      "de": "Deshalb hat die Bundesrepublik mit der Türkei einen Vertrag gemacht.",
+      "start": 285.09,
+      "end": 290.73,
+      "zh": "因此联邦德国与土耳其签订了一份合同。"
+    },
+    {
+      "de": "In der Türkei waren nämlich viele Menschen ohne Arbeit.",
+      "start": 291.49,
+      "end": 296.21,
+      "zh": "因为土耳其当时有很多没有工作的人。"
+    },
+    {
+      "de": "Viele von ihnen sind deshalb in die Bundesrepublik gekommen, wie auf dem Foto.",
+      "start": 297.17,
+      "end": 303.41,
+      "zh": "他们中的许多人因此来到了联邦德国，就像照片上那样。"
+    },
+    {
+      "de": "Sie haben dort gearbeitet und damit der Wirtschaft geholfen.",
+      "start": 304.33,
+      "end": 309.01,
+      "zh": "他们在那里工作，帮助了经济。"
+    },
+    {
+      "de": "Sie haben Geld verdient und davon etwas nach Hause geschickt.",
+      "start": 309.85,
+      "end": 314.89,
+      "zh": "他们赚了钱，并把钱寄回家。"
+    },
+    {
+      "de": "Und damit den Menschen in der Türkei geholfen.",
+      "start": 315.77,
+      "end": 319.33,
+      "zh": "从而帮助了土耳其的人们。"
+    },
+    {
+      "de": "Jetzt zeigen wir einen Film dazu.",
+      "start": 319.81,
+      "end": 321.73,
+      "zh": "现在我们播放一段相关影片。"
+    },
+    {
+      "de": "Diese alten Aufnahmen zeigen, viele türkische Arbeiter sind damals gekommen.",
+      "start": 322.41,
+      "end": 328.73,
+      "zh": "这些老影像显示，当时来了很多土耳其工人。"
+    },
+    {
+      "de": "Die Bundesrepublik brauchte dringend Arbeiter für Fabriken.",
+      "start": 329.13,
+      "end": 333.89,
+      "zh": "联邦德国急需工厂工人。"
+    },
+    {
+      "de": "Eigentlich sollten die Arbeiter nur wenige Jahre bleiben.",
+      "start": 334.37,
+      "end": 338.53,
+      "zh": "其实这些工人本应只待几年。"
+    },
+    {
+      "de": "Deshalb nannte man sie Gastarbeiter.",
+      "start": 338.97,
+      "end": 341.93,
+      "zh": "因此人们称他们为客籍工人。"
+    },
+    {
+      "de": "Viele sind aber geblieben und haben auch die Familie aus der Türkei geholt.",
+      "start": 342.89,
+      "end": 348.41,
+      "zh": "但很多人留了下来，还把家人从土耳其接了过来。"
+    },
+    {
+      "de": "So wie der Opa von Ömer Kocak.",
+      "start": 348.49,
+      "end": 351.85,
+      "zh": "就像厄梅尔·科恰克的爷爷一样。"
+    },
+    {
+      "de": "Ömer Kocak hat eine eigene Firma in Deutschland.",
+      "start": 352.33,
+      "end": 356.65,
+      "zh": "厄梅尔·科恰克在德国拥有自己的公司。"
+    },
+    {
+      "de": "Sie bekommt gerade ein neues Gebäude.",
+      "start": 357.13,
+      "end": 360.01,
+      "zh": "公司刚刚得到一栋新大楼。"
+    },
+    {
+      "de": "Ömer Kocak sagt, ich möchte, dass hier alles ordentlich ist.",
+      "start": 360.73,
+      "end": 365.73,
+      "zh": "Ömer Kocak说：我希望这里一切都井井有条。"
+    },
+    {
+      "de": "Und ich möchte gute Arbeit machen.",
+      "start": 365.85,
+      "end": 368.57,
+      "zh": "我想把工作做好。"
+    },
+    {
+      "de": "Ich bin sehr deutsch.",
+      "start": 368.73,
+      "end": 370.33,
+      "zh": "我非常德国化。"
+    },
+    {
+      "de": "Die Firma putzt, räumt auf und hält Gärten in Ordnung.",
+      "start": 370.93,
+      "end": 375.57,
+      "zh": "这家公司负责清洁、整理和维护花园。"
+    },
+    {
+      "de": "Als Ömer Kocak Kind war, hat er seiner Mutter beim Putzen geholfen.",
+      "start": 376.01,
+      "end": 381.81,
+      "zh": "Ömer Kocak小时候曾帮母亲打扫卫生。"
+    },
+    {
+      "de": "Die Mutter sagt, wir haben sehr früh morgens angefangen zu putzen.",
+      "start": 383.41,
+      "end": 389.01,
+      "zh": "母亲说：我们很早很早就开始打扫了。"
+    },
+    {
+      "de": "Danach ist Ömer zur Schule gegangen.",
+      "start": 389.09,
+      "end": 391.93,
+      "zh": "之后Ömer就去上学了。"
+    },
+    {
+      "de": "Der Opa von Ömer Kocak ist vor 60 Jahren in die Bundesrepublik bekommen.",
+      "start": 392.85,
+      "end": 399.33,
+      "zh": "Ömer Kocak的爷爷是60年前来到联邦德国的。"
+    },
+    {
+      "de": "Einen Sprachkurs gab es damals nicht.",
+      "start": 399.69,
+      "end": 402.77,
+      "zh": "当时没有语言课程。"
+    },
+    {
+      "de": "Die Mutter sagt, er hatte es sehr schwer.",
+      "start": 404.09,
+      "end": 407.45,
+      "zh": "母亲说：他当年非常辛苦。"
+    },
+    {
+      "de": "Er konnte kein Deutsch.",
+      "start": 407.69,
+      "end": 409.33,
+      "zh": "他不会德语。"
+    },
+    {
+      "de": "Es war schwierig beim Einkaufen oder beim Arzt.",
+      "start": 409.81,
+      "end": 413.33,
+      "zh": "买东西或看医生都很困难。"
+    },
+    {
+      "de": "Er hat die Sprache nicht verstanden.",
+      "start": 413.57,
+      "end": 415.81,
+      "zh": "他听不懂这种语言。"
+    },
+    {
+      "de": "Am Anfang war es sehr schwer.",
+      "start": 415.85,
+      "end": 418.21,
+      "zh": "一开始非常艰难。"
+    },
+    {
+      "de": "Der Opa war Gastarbeiter.",
+      "start": 419.33,
+      "end": 421.53,
+      "zh": "爷爷曾是外籍劳工。"
+    },
+    {
+      "de": "Sein Enkel Ömer Kocak hat eine große Firma.",
+      "start": 422.25,
+      "end": 426.57,
+      "zh": "他的孙子Ömer Kocak现在有一家大公司。"
+    },
+    {
+      "de": "Vieles ist anders als früher.",
+      "start": 427.13,
+      "end": 429.69,
+      "zh": "许多事情和以前不一样了。"
+    },
+    {
+      "de": "Ömer Kocak sagt, früher sind wir in den Sommerferien in die Türkei gefahren.",
+      "start": 431.49,
+      "end": 437.25,
+      "zh": "Ömer Kocak说：以前我们暑假会去土耳其。"
+    },
+    {
+      "de": "Das war super.",
+      "start": 437.29,
+      "end": 438.45,
+      "zh": "那太棒了。"
+    },
+    {
+      "de": "Aber meine Kinder wollen dort nicht mehr hin.",
+      "start": 438.65,
+      "end": 441.81,
+      "zh": "但我的孩子们已经不想去那里了。"
+    },
+    {
+      "de": "Zur Erinnerung an die Türkei hat Ömer Kocak einen Baum gepflanzt, einen türkischen Olivenbaum.",
+      "start": 442.29,
+      "end": 449.61,
+      "zh": "为了纪念土耳其，Ömer Kocak种了一棵树，一棵土耳其橄榄树。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 451.77,
+      "end": 453.65,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "In Deutschland fühlen sich viele Menschen einsam.",
+      "start": 459.21,
+      "end": 462.85,
+      "zh": "在德国，很多人感到孤独。"
+    },
+    {
+      "de": "Es sind oft junge Menschen.",
+      "start": 463.09,
+      "end": 465.01,
+      "zh": "其中常常是年轻人。"
+    },
+    {
+      "de": "Sie sind dann traurig.",
+      "start": 465.49,
+      "end": 467.17,
+      "zh": "他们会因此难过。"
+    },
+    {
+      "de": "Das kann gefährlich für die Gesundheit sein.",
+      "start": 467.61,
+      "end": 470.77,
+      "zh": "这可能对健康有害。"
+    },
+    {
+      "de": "Es gibt aber verschiedene Projekte für einsame Menschen.",
+      "start": 471.49,
+      "end": 475.97,
+      "zh": "不过有一些面向孤独人群的项目。"
+    },
+    {
+      "de": "Zum Beispiel gemeinsame Spaziergänge, wie auf dem Foto.",
+      "start": 476.85,
+      "end": 481.89,
+      "zh": "比如一起散步，就像照片上那样。"
+    },
+    {
+      "de": "Bei diesen Spaziergängen lernen sich die Menschen kennen und werden vielleicht Freunde.",
+      "start": 482.77,
+      "end": 489.33,
+      "zh": "在散步时，人们互相认识，也许会成为朋友。"
+    },
+    {
+      "de": "Es gibt diese Spaziergänge zum Beispiel in der Stadt Leipzig im Osten von Deutschland.",
+      "start": 490.09,
+      "end": 497.13,
+      "zh": "比如在德国东部的莱比锡市就有这样的散步活动。"
+    },
+    {
+      "de": "Dazu zeigen wir jetzt einen Film.",
+      "start": 497.61,
+      "end": 499.97,
+      "zh": "下面我们来看一段影片。"
+    },
+    {
+      "de": "Pascal Oetken organisiert die Spaziergänge und begrüßt die Menschen.",
+      "start": 500.97,
+      "end": 506.85,
+      "zh": "Pascal Oetken组织这些散步活动，并欢迎大家。"
+    },
+    {
+      "de": "Sie haben unterschiedliche Gründe, warum sie bei dem Spaziergang mitmachen.",
+      "start": 506.89,
+      "end": 512.61,
+      "zh": "他们参加散步的原因各不相同。"
+    },
+    {
+      "de": "Diese Frau sagt, ich will neue Menschen kennenlernen.",
+      "start": 512.97,
+      "end": 516.65,
+      "zh": "这位女士说：我想认识新的人。"
+    },
+    {
+      "de": "Dieser Mann sagt, es ist gut für schüchterne Menschen.",
+      "start": 516.69,
+      "end": 520.49,
+      "zh": "这位男士说：这对害羞的人有好处。"
+    },
+    {
+      "de": "Und dieser Mann sagt, ich möchte in der Natur sein und nicht immer am Handy.",
+      "start": 521.09,
+      "end": 526.69,
+      "zh": "还有这位男士说：我想待在大自然里，而不是总盯着手机。"
+    },
+    {
+      "de": "Einmal in der Woche treffen sich die Menschen zum Spaziergang, auch bei schlechtem Wetter.",
+      "start": 527.49,
+      "end": 533.77,
+      "zh": "人们每周聚在一起散步一次，即使天气不好也一样。"
+    },
+    {
+      "de": "Sie gehen jedes Mal einen anderen Weg.",
+      "start": 534.01,
+      "end": 537.29,
+      "zh": "他们每次走不同的路线。"
+    },
+    {
+      "de": "Vor allem jüngere Menschen gehen mit.",
+      "start": 537.81,
+      "end": 540.77,
+      "zh": "参加的主要是年轻人。"
+    },
+    {
+      "de": "Sie fühlen sich oft einsam.",
+      "start": 541.01,
+      "end": 543.37,
+      "zh": "他们常常感到孤独。"
+    },
+    {
+      "de": "Manche haben hier schon einen Partner gefunden oder neue Freunde.",
+      "start": 544.05,
+      "end": 549.29,
+      "zh": "有些人已经在这里找到了伴侣或新朋友。"
+    },
+    {
+      "de": "Pascal Oetken hat nicht gedacht, dass die Idee so gut ankommt.",
+      "start": 549.89,
+      "end": 555.85,
+      "zh": "Pascal Oetken没想到这个主意会这么受欢迎。"
+    },
+    {
+      "de": "Er sagt, manche Menschen bleiben immer zu Hause.",
+      "start": 556.69,
+      "end": 560.21,
+      "zh": "他说：有些人总是待在家里。"
+    },
+    {
+      "de": "Sie sind sehr einsam.",
+      "start": 560.41,
+      "end": 562.13,
+      "zh": "他们非常孤独。"
+    },
+    {
+      "de": "Wenn solche Menschen zum Spaziergang kommen und andere treffen, dann freue ich mich.",
+      "start": 562.41,
+      "end": 568.57,
+      "zh": "当这样的人来散步并遇到其他人时，我很高兴。"
+    },
+    {
+      "de": "Die Menschen kommen, weil sie sich vom Partner getrennt haben, umgezogen sind oder eine neue Arbeit haben.",
+      "start": 569.93,
+      "end": 580.05,
+      "zh": "人们来这里，是因为他们和伴侣分手了、搬家了或者有了新工作。"
+    },
+    {
+      "de": "Sie können hier andere Menschen kennenlernen.",
+      "start": 580.73,
+      "end": 584.21,
+      "zh": "他们可以在这里认识其他人。"
+    },
+    {
+      "de": "Solche Spaziergänge gegen Einsamkeit gibt es schon in vielen deutschen Städten.",
+      "start": 584.69,
+      "end": 591.61,
+      "zh": "德国许多城市已经有这样对抗孤独的散步活动。"
+    },
+    {
+      "de": "Und das waren unsere Nachrichten.",
+      "start": 593.69,
+      "end": 595.81,
+      "zh": "以上是我们的新闻。"
+    },
+    {
+      "de": "Und jetzt kommt das Wetter.",
+      "start": 614.69,
+      "end": 616.93,
+      "zh": "现在来看天气。"
+    },
+    {
+      "de": "Es gibt viele Wolken und es regnet in vielen Regionen.",
+      "start": 617.53,
+      "end": 621.57,
+      "zh": "云很多，许多地区在下雨。"
+    },
+    {
+      "de": "Links im Westen nur manchmal, rechts im Osten ist es trocken.",
+      "start": 621.93,
+      "end": 626.57,
+      "zh": "左边西部只是偶尔下雨，右边东部则是干燥的。"
+    },
+    {
+      "de": "Es werden 8 bis 18 Grad.",
+      "start": 626.85,
+      "end": 629.17,
+      "zh": "气温为8到18度。"
+    },
+    {
+      "de": "Das war die tagesschau in Einfacher Sprache.",
+      "start": 630.37,
+      "end": 633.77,
+      "zh": "以上就是简易语言版的每日新闻。"
+    },
+    {
+      "de": "Tschüss und bis zum nächsten Mal.",
+      "start": 634.09,
+      "end": 636.45,
+      "zh": "再见，下次见。"
+    }
+  ],
+  "stories": [
+    {
+      "title": "Begrüßung",
+      "title_zh": "开场问候",
+      "from": 0,
+      "to": 2,
+      "vocab": [],
+      "grammar_points": []
+    },
     {
       "title": "Treffen für Investoren in Berlin",
-      "title_zh": "柏林投资者会议",
+      "title_zh": "柏林投资者大会",
+      "from": 3,
+      "to": 28,
       "vocab": [
         {
           "lemma": "das Treffen, -",
@@ -23,32 +730,40 @@
           "forms": [
             "Treffen"
           ],
-          "pos": "Substantiv",
-          "zh": "会面、聚会",
-          "example_de": "In Berlin gab es ein großes Treffen von der Wirtschaft.",
-          "example_zh": "柏林举行了一次大型经济会议。"
+          "pos": "noun",
+          "zh": "会面，聚会",
+          "sentence": 3
         },
         {
-          "lemma": "die Wirtschaft (经济，无复数)",
+          "lemma": "der Investor, -en",
+          "key": "investoren",
+          "forms": [
+            "Investoren",
+            "Investoren"
+          ],
+          "pos": "noun",
+          "zh": "投资者",
+          "sentence": 4
+        },
+        {
+          "lemma": "einladen",
+          "key": "eingeladen",
+          "forms": [
+            "eingeladen"
+          ],
+          "pos": "verb",
+          "zh": "邀请",
+          "sentence": 4
+        },
+        {
+          "lemma": "die Wirtschaft, -en",
           "key": "wirtschaft",
           "forms": [
             "Wirtschaft"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "经济",
-          "example_de": "In Berlin gab es ein großes Treffen von der Wirtschaft.",
-          "example_zh": "柏林举行了一次大型经济会议。"
-        },
-        {
-          "lemma": "einladen",
-          "key": "einladen",
-          "forms": [
-            "eingeladen"
-          ],
-          "pos": "Verb",
-          "zh": "邀请",
-          "example_de": "Die Bundesregierung hat Investoren aus der ganzen Welt eingeladen.",
-          "example_zh": "联邦政府邀请了来自世界各地的投资者。"
+          "sentence": 3
         },
         {
           "lemma": "investieren",
@@ -56,211 +771,279 @@
           "forms": [
             "investieren"
           ],
-          "pos": "Verb",
+          "pos": "verb",
           "zh": "投资",
-          "example_de": "Investoren wollen viele Milliarden Euro in Deutschland investieren.",
-          "example_zh": "投资者想在德国投资数十亿欧元。"
-        },
-        {
-          "lemma": "der Bundeskanzler, -",
-          "key": "bundeskanzler",
-          "forms": [
-            "Bundeskanzler"
-          ],
-          "pos": "Substantiv",
-          "zh": "联邦总理",
-          "example_de": "Der Bundeskanzler sagt: Investoren sind gut für die Wirtschaft.",
-          "example_zh": "联邦总理说：投资者对经济有好处。"
+          "sentence": 11
         }
       ],
       "grammar_points": [
         {
-          "title": "现在完成时（Perfekt）",
-          "summary": "\"hat ... eingeladen\" 用助动词 haben 加过去分词，表示已完成的动作。",
-          "example_de": "Die Bundesregierung hat Investoren aus der ganzen Welt eingeladen.",
-          "example_zh": "联邦政府邀请了来自世界各地的投资者。"
+          "title": "dazu eingeladen（代副词 dazu）",
+          "summary": "dazu 指代前面提到的事件（这次大会），意为\"为此/参加这个活动\"。",
+          "sentence": 4
         }
-      ],
-      "paragraphs": [
-        "In Berlin gab es ein großes Treffen von der Wirtschaft.",
-        "Die Bundesregierung hat Investoren aus der ganzen Welt eingeladen.",
-        "Investoren wollen viele Milliarden Euro in Deutschland investieren.",
-        "Der Bundeskanzler sagt: Investoren sind gut für die Wirtschaft."
-      ],
-      "translations": [
-        "柏林举行了一次大型经济会议。",
-        "联邦政府邀请了来自世界各地的投资者。",
-        "投资者想在德国投资数十亿欧元。",
-        "联邦总理说：投资者对经济有好处。"
-      ],
-      "background": ""
+      ]
     },
     {
-      "title": "EU will mehr Rechte für Reisende",
-      "title_zh": "欧盟想给旅客更多权利",
+      "title": "EU: mehr Rechte für Reisende geplant",
+      "title_zh": "欧盟：计划给旅客更多权利",
+      "from": 29,
+      "to": 39,
       "vocab": [
         {
-          "lemma": "der Reisende, -n",
-          "key": "reisende",
+          "lemma": "die Reise, -n",
+          "key": "reisen",
           "forms": [
-            "Reisende"
+            "Reisen"
           ],
-          "pos": "Substantiv",
-          "zh": "旅客",
-          "example_de": "Wenn Bus, Bahn oder Flugzeug zu spät kommen, haben Reisende Rechte.",
-          "example_zh": "当巴士、火车或飞机迟到时，旅客有相应的权利。"
+          "pos": "noun",
+          "zh": "旅行",
+          "sentence": 30
         },
         {
           "lemma": "das Recht, -e",
-          "key": "recht",
+          "key": "rechte",
           "forms": [
             "Rechte"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "权利",
-          "example_de": "Wenn Bus, Bahn oder Flugzeug zu spät kommen, haben Reisende Rechte.",
-          "example_zh": "当巴士、火车或飞机迟到时，旅客有相应的权利。"
+          "sentence": 30
         },
         {
-          "lemma": "zurückbekommen",
-          "key": "zurueckbekommen",
+          "lemma": "ausfallen",
+          "key": "ausfallen",
           "forms": [
-            "bekommen",
-            "zurück"
+            "ausfallen"
           ],
-          "pos": "Verb",
-          "zh": "取回、收回",
-          "example_de": "Sie bekommen zum Beispiel Geld für das Ticket zurück.",
-          "example_zh": "例如他们可以拿回票钱。"
+          "pos": "verb",
+          "zh": "（交通工具）取消，停运",
+          "sentence": 30
         },
         {
-          "lemma": "schwierig",
-          "key": "schwierig",
+          "lemma": "das Ticket, -s",
+          "key": "ticket",
           "forms": [
-            "schwierig"
+            "Ticket"
           ],
-          "pos": "Adjektiv",
-          "zh": "困难的",
-          "example_de": "Bislang ist es oft schwierig, an das Geld zu kommen.",
-          "example_zh": "到目前为止，拿到这笔钱往往很困难。"
+          "pos": "noun",
+          "zh": "车票，机票",
+          "sentence": 31
         },
         {
-          "lemma": "der Antrag, Anträge",
-          "key": "antrag",
+          "lemma": "die Behörde, -n",
+          "key": "behörden",
           "forms": [
-            "Antrag"
+            "Behörden"
           ],
-          "pos": "Substantiv",
-          "zh": "申请",
-          "example_de": "Die EU will jetzt einen einfachen Antrag für alle Länder.",
-          "example_zh": "欧盟现在想要一个适用于所有国家的简单申请。"
+          "pos": "noun",
+          "zh": "行政机关，当局",
+          "sentence": 33
         }
       ],
       "grammar_points": [
         {
-          "title": "带 zu 的不定式作主语",
-          "summary": "\"ist es oft schwierig, an das Geld zu kommen\" 中，\"zu + 动词\" 结构作真正的主语。",
-          "example_de": "Bislang ist es oft schwierig, an das Geld zu kommen.",
-          "example_zh": "到目前为止，拿到这笔钱往往很困难。"
+          "title": "zu spät kommen / ausfallen 时的条件句 Wenn..., dann...",
+          "summary": "wenn 引导条件从句，主句常带 dann：\"如果……，那么旅客有权利\"。",
+          "sentence": 30
         }
-      ],
-      "paragraphs": [
-        "Wenn Bus, Bahn oder Flugzeug zu spät kommen, haben Reisende Rechte.",
-        "Sie bekommen zum Beispiel Geld für das Ticket zurück.",
-        "Bislang ist es oft schwierig, an das Geld zu kommen.",
-        "Die EU will jetzt einen einfachen Antrag für alle Länder."
-      ],
-      "translations": [
-        "当巴士、火车或飞机迟到时，旅客有相应的权利。",
-        "例如他们可以拿回票钱。",
-        "到目前为止，拿到这笔钱往往很困难。",
-        "欧盟现在想要一个适用于所有国家的简单申请。"
-      ],
-      "background": ""
+      ]
     },
     {
-      "title": "Gemeinsame Spaziergänge gegen Einsamkeit",
-      "title_zh": "共同散步对抗孤独",
+      "title": "Vor 65 Jahren: Vertrag mit der Türkei",
+      "title_zh": "65年前：与土耳其的协定",
+      "from": 40,
+      "to": 81,
       "vocab": [
         {
-          "lemma": "sich fühlen",
-          "key": "fuehlen",
+          "lemma": "der Arbeiter, -",
+          "key": "arbeiter",
           "forms": [
-            "fühlen"
+            "Arbeiter",
+            "Arbeiter"
           ],
-          "pos": "Verb",
-          "zh": "感觉",
-          "example_de": "In Deutschland fühlen sich viele junge Menschen einsam.",
-          "example_zh": "在德国，很多年轻人感到孤独。"
+          "pos": "noun",
+          "zh": "工人",
+          "sentence": 41
         },
+        {
+          "lemma": "der Vertrag, ¨-e",
+          "key": "vertrag",
+          "forms": [
+            "Vertrag"
+          ],
+          "pos": "noun",
+          "zh": "合同，协定",
+          "sentence": 46
+        },
+        {
+          "lemma": "der Gastarbeiter, -",
+          "key": "gastarbeiter",
+          "forms": [
+            "Gastarbeiter",
+            "Gastarbeiter"
+          ],
+          "pos": "noun",
+          "zh": "客籍工人",
+          "sentence": 56
+        },
+        {
+          "lemma": "verdienen",
+          "key": "verdient",
+          "forms": [
+            "verdient"
+          ],
+          "pos": "verb",
+          "zh": "挣钱，赚得",
+          "sentence": 50
+        },
+        {
+          "lemma": "der Sprachkurs, -e",
+          "key": "sprachkurs",
+          "forms": [
+            "Sprachkurs"
+          ],
+          "pos": "noun",
+          "zh": "语言课程",
+          "sentence": 69
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "Perfekt：hat ... gemacht / sind ... gekommen",
+          "summary": "现在完成时表示过去的事：haben/sein + 过去分词，如 \"hat einen Vertrag gemacht\"、\"sind ... gekommen\"。",
+          "sentence": 46
+        }
+      ]
+    },
+    {
+      "title": "Einsamkeit: Gemeinsame Spaziergänge helfen",
+      "title_zh": "孤独：一起散步有帮助",
+      "from": 82,
+      "to": 109,
+      "vocab": [
         {
           "lemma": "einsam",
           "key": "einsam",
           "forms": [
+            "einsam",
             "einsam"
           ],
-          "pos": "Adjektiv",
+          "pos": "adj",
           "zh": "孤独的",
-          "example_de": "In Deutschland fühlen sich viele junge Menschen einsam.",
-          "example_zh": "在德国，很多年轻人感到孤独。"
+          "sentence": 83
         },
         {
-          "lemma": "der Spaziergang, Spaziergänge",
-          "key": "spaziergang",
+          "lemma": "der Spaziergang, ¨-e",
+          "key": "spaziergänge",
           "forms": [
             "Spaziergänge"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "散步",
-          "example_de": "In Leipzig gibt es gemeinsame Spaziergänge für einsame Menschen.",
-          "example_zh": "在莱比锡有为孤独的人举办的共同散步活动。"
+          "sentence": 88
         },
         {
           "lemma": "kennenlernen",
           "key": "kennenlernen",
           "forms": [
-            "lernen",
-            "kennen"
+            "kennenlernen"
           ],
-          "pos": "Verb",
-          "zh": "结识、认识",
-          "example_de": "Die Menschen lernen sich beim Spazieren kennen.",
-          "example_zh": "人们在散步时互相认识。"
+          "pos": "verb",
+          "zh": "结识，认识",
+          "sentence": 94
         },
         {
-          "lemma": "der Freund, -e",
-          "key": "freund",
+          "lemma": "schüchtern",
+          "key": "schüchterne",
           "forms": [
-            "Freunde"
+            "schüchterne"
           ],
-          "pos": "Substantiv",
-          "zh": "朋友",
-          "example_de": "Manche finden hier neue Freunde oder einen Partner.",
-          "example_zh": "有些人在这里找到了新朋友或伴侣。"
+          "pos": "adj",
+          "zh": "害羞的，腼腆的",
+          "sentence": 95
+        },
+        {
+          "lemma": "mitmachen",
+          "key": "mitmachen",
+          "forms": [
+            "mitmachen"
+          ],
+          "pos": "verb",
+          "zh": "一起参加",
+          "sentence": 93
         }
       ],
       "grammar_points": [
         {
-          "title": "反身动词",
-          "summary": "\"fühlen sich ... einsam\" 是反身动词，sich 随主语变化，表示自我感觉。",
-          "example_de": "In Deutschland fühlen sich viele junge Menschen einsam.",
-          "example_zh": "在德国，很多年轻人感到孤独。"
+          "title": "sich freuen（反身动词）",
+          "summary": "sich (über etw.) freuen 表示\"感到高兴\"：\"dann freue ich mich\"。",
+          "sentence": 105
+        }
+      ]
+    },
+    {
+      "title": "Das Wetter",
+      "title_zh": "天气",
+      "from": 110,
+      "to": 113,
+      "vocab": [
+        {
+          "lemma": "die Wolke, -n",
+          "key": "wolken",
+          "forms": [
+            "Wolken"
+          ],
+          "pos": "noun",
+          "zh": "云",
+          "sentence": 111
+        },
+        {
+          "lemma": "regnen",
+          "key": "regnet",
+          "forms": [
+            "regnet"
+          ],
+          "pos": "verb",
+          "zh": "下雨",
+          "sentence": 111
+        },
+        {
+          "lemma": "die Region, -en",
+          "key": "regionen",
+          "forms": [
+            "Regionen"
+          ],
+          "pos": "noun",
+          "zh": "地区",
+          "sentence": 111
+        },
+        {
+          "lemma": "trocken",
+          "key": "trocken",
+          "forms": [
+            "trocken"
+          ],
+          "pos": "adj",
+          "zh": "干燥的",
+          "sentence": 112
         }
       ],
-      "paragraphs": [
-        "In Deutschland fühlen sich viele junge Menschen einsam.",
-        "In Leipzig gibt es gemeinsame Spaziergänge für einsame Menschen.",
-        "Die Menschen lernen sich beim Spazieren kennen.",
-        "Manche finden hier neue Freunde oder einen Partner."
-      ],
-      "translations": [
-        "在德国，很多年轻人感到孤独。",
-        "在莱比锡有为孤独的人举办的共同散步活动。",
-        "人们在散步时互相认识。",
-        "有些人在这里找到了新朋友或伴侣。"
-      ],
-      "background": ""
+      "grammar_points": [
+        {
+          "title": "es regnet（无人称 es）",
+          "summary": "天气用无人称代词 es：\"es regnet\"（在下雨）。",
+          "sentence": 111
+        }
+      ]
+    },
+    {
+      "title": "Verabschiedung",
+      "title_zh": "结束语",
+      "from": 114,
+      "to": 115,
+      "vocab": [],
+      "grammar_points": []
     }
-  ],
-  "editorial_review": "德中句对、新闻事实、词形和语法例句已对照来源检查。"
+  ]
 }

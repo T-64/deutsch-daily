@@ -1,54 +1,888 @@
 {
+  "schema": 2,
+  "content_kind": "broadcast",
   "date": "2026-10-19",
   "slug": "2026-10-19",
   "source": "einfach",
-  "source_label": "tagesschau · Einfache Sprache",
+  "source_label": "tagesschau in Einfacher Sprache",
   "level": "A2–B1",
-  "content_kind": "reading",
-  "adaptation": "根据官方新闻整理的简易德语短读，非节目逐字稿；中文译文与学习提示由 AI 生成。",
   "source_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1482.html",
+  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1668996.html",
   "source_text_sha256": "fb1a50baacc6de03717bcdd9435b1301bb1d883f6dac6a015ec5ac014dc97480",
-  "generated_at": "2026-10-21T01:36:04.311606+02:00",
+  "generated_at": "2026-10-22T00:58:57.227481+02:00",
   "generation_model": "glm-5.3",
-  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1482.html",
-  "embed_url": "",
-  "news": [
+  "sentences": [
     {
-      "title": "Gewalt bei Protesten in Frankreich",
-      "title_zh": "法国抗议活动中出现暴力",
+      "de": "Willkommen zur tagesschau in Einfacher Sprache.",
+      "start": 10.76,
+      "end": 13.88,
+      "zh": "欢迎收看简单语言版每日新闻。"
+    },
+    {
+      "de": "Ich bin Susanne Stichler und das sind unsere Nachrichten.",
+      "start": 14.68,
+      "end": 18.68,
+      "zh": "我是Susanne Stichler，以下是我们的新闻。"
+    },
+    {
+      "de": "Frankreich.",
+      "start": 19.44,
+      "end": 20.4,
+      "zh": "法国。"
+    },
+    {
+      "de": "Gewalt bei Protesten.",
+      "start": 20.44,
+      "end": 22.28,
+      "zh": "抗议活动中发生暴力。"
+    },
+    {
+      "de": "Ukraine-Krieg.",
+      "start": 23.32,
+      "end": 24.52,
+      "zh": "乌克兰战争。"
+    },
+    {
+      "de": "Trump setzt Sanktionen aus.",
+      "start": 24.92,
+      "end": 27.4,
+      "zh": "特朗普暂停制裁。"
+    },
+    {
+      "de": "Japan.",
+      "start": 28.48,
+      "end": 29.48,
+      "zh": "日本。"
+    },
+    {
+      "de": "Mission zum Mond vom Mars.",
+      "start": 29.8,
+      "end": 31.96,
+      "zh": "从火星到月球的任务。"
+    },
+    {
+      "de": "Spanien.",
+      "start": 32.88,
+      "end": 33.88,
+      "zh": "西班牙。"
+    },
+    {
+      "de": "Heftiger Sturm.",
+      "start": 34.48,
+      "end": 35.68,
+      "zh": "强风暴。"
+    },
+    {
+      "de": "Und nun zur 1. Nachricht.",
+      "start": 36.72,
+      "end": 39.36,
+      "zh": "现在来看第一条新闻。"
+    },
+    {
+      "de": "Frankreich.",
+      "start": 40.4,
+      "end": 41.4,
+      "zh": "法国。"
+    },
+    {
+      "de": "Gewalt bei Protesten.",
+      "start": 41.64,
+      "end": 43.72,
+      "zh": "抗议活动中发生暴力。"
+    },
+    {
+      "de": "Zuerst haben die Schüler in Frankreich protestiert.",
+      "start": 44.76,
+      "end": 49.12,
+      "zh": "首先是法国的学生举行了抗议。"
+    },
+    {
+      "de": "Sie fordern ein besseres System für die Bildung.",
+      "start": 49.4,
+      "end": 53.56,
+      "zh": "他们要求更好的教育制度。"
+    },
+    {
+      "de": "Dann sind mehr Menschen auf die Straßen gegangen.",
+      "start": 54.04,
+      "end": 57.48,
+      "zh": "然后有更多人走上街头。"
+    },
+    {
+      "de": "Das Leben ist immer teurer.",
+      "start": 57.92,
+      "end": 59.84,
+      "zh": "生活成本越来越高。"
+    },
+    {
+      "de": "Deshalb haben sie am Wochenende protestiert.",
+      "start": 60.52,
+      "end": 64.0,
+      "zh": "因此他们在周末举行了抗议。"
+    },
+    {
+      "de": "Friedlich.",
+      "start": 64.36,
+      "end": 65.36,
+      "zh": "和平地进行。"
+    },
+    {
+      "de": "Aber dann kam es zu Gewalt.",
+      "start": 66.0,
+      "end": 68.04,
+      "zh": "但随后发生了暴力。"
+    },
+    {
+      "de": "Einige Demonstranten waren sehr wütend.",
+      "start": 68.08,
+      "end": 72.28,
+      "zh": "一些示威者非常愤怒。"
+    },
+    {
+      "de": "Sie haben Autos zerstört und Feuer auf den Straßen gemacht.",
+      "start": 72.76,
+      "end": 78.52,
+      "zh": "他们砸毁汽车，并在街上纵火。"
+    },
+    {
+      "de": "Hier auf dem Foto brennt das Rathaus von der Stadt Limoges.",
+      "start": 79.68,
+      "end": 83.76,
+      "zh": "照片中是法国城市利摩日的市政厅在燃烧。"
+    },
+    {
+      "de": "Die Menschen in Frankreich sind erschrocken über die Gewalt.",
+      "start": 85.44,
+      "end": 90.76,
+      "zh": "法国民众对暴力感到震惊。"
+    },
+    {
+      "de": "Dazu kommt jetzt ein Film.",
+      "start": 91.04,
+      "end": 92.88,
+      "zh": "接下来请看一段影片。"
+    },
+    {
+      "de": "Überall Zerstörung nach den Protesten auf den Straßen von Frankreich.",
+      "start": 94.36,
+      "end": 99.8,
+      "zh": "法国街头抗议过后到处是被破坏的景象。"
+    },
+    {
+      "de": "Z.B. in den Städten Paris und Marseille.",
+      "start": 99.84,
+      "end": 104.32,
+      "zh": "比如在巴黎和马赛等城市。"
+    },
+    {
+      "de": "In Limoges schauen die Menschen erschrocken auf das verbrannte Rathaus.",
+      "start": 104.36,
+      "end": 110.48,
+      "zh": "在利摩日，人们震惊地看着被烧毁的市政厅。"
+    },
+    {
+      "de": "Das Feuer war groß.",
+      "start": 113.0,
+      "end": 114.64,
+      "zh": "火势很大。"
+    },
+    {
+      "de": "Der Turm ist eingestürzt.",
+      "start": 114.88,
+      "end": 116.96,
+      "zh": "塔楼倒塌了。"
+    },
+    {
+      "de": "Dieser Mann sagt: Was hier passiert ist, ich kann es nicht glauben.",
+      "start": 118.16,
+      "end": 123.88,
+      "zh": "这位男子说：这里发生的事，我简直不敢相信。"
+    },
+    {
+      "de": "Und dieser Mann sagt: Ich verstehe es nicht.",
+      "start": 125.04,
+      "end": 128.56,
+      "zh": "这位男子说：我无法理解。"
+    },
+    {
+      "de": "Frankreich ist vielleicht nicht das Paradies.",
+      "start": 129.16,
+      "end": 132.16,
+      "zh": "法国也许不是天堂。"
+    },
+    {
+      "de": "Aber Frankreich ist auch nicht die Hölle.",
+      "start": 132.2,
+      "end": 135.04,
+      "zh": "但法国也不是地狱。"
+    },
+    {
+      "de": "In vielen französischen Städten haben die Menschen am Wochenende demonstriert.",
+      "start": 135.56,
+      "end": 141.0,
+      "zh": "周末，法国许多城市的人们举行了示威。"
+    },
+    {
+      "de": "Dabei kam es zu heftigen Auseinandersetzungen von einigen Menschen mit der Polizei.",
+      "start": 141.6,
+      "end": 147.04,
+      "zh": "其间一些人也与警方发生了激烈冲突。"
+    },
+    {
+      "de": "Im Fernsehen verurteilt Präsident Emmanuel Macron die Gewalt.",
+      "start": 147.88,
+      "end": 152.4,
+      "zh": "总统埃马纽埃尔·马克龙在电视上谴责暴力。"
+    },
+    {
+      "de": "Er sagt: Wer das getan hat, der wird bestraft.",
+      "start": 152.8,
+      "end": 156.72,
+      "zh": "他说：谁做了这些事，谁就会受到惩罚。"
+    },
+    {
+      "de": "In einigen Städten gibt es jetzt Ausgangssperren.",
+      "start": 157.88,
+      "end": 161.44,
+      "zh": "一些城市现在实行了宵禁。"
+    },
+    {
+      "de": "D.h. die Menschen dürfen zu einer bestimmten Zeit nicht nach draußen gehen.",
+      "start": 161.92,
+      "end": 167.64,
+      "zh": "也就是说，人们在特定时间不得外出。"
+    },
+    {
+      "de": "Proteste gab es auch in dem Land Italien.",
+      "start": 168.6,
+      "end": 171.56,
+      "zh": "意大利也发生了抗议活动。"
+    },
+    {
+      "de": "Wie hier in der Stadt Mailand.",
+      "start": 171.8,
+      "end": 173.96,
+      "zh": "比如在米兰市。"
+    },
+    {
+      "de": "Demonstranten brechen in Geschäfte und Supermärkte ein.",
+      "start": 174.64,
+      "end": 178.36,
+      "zh": "示威者闯入商店和超市。"
+    },
+    {
+      "de": "Auf den Straßen kommt es zu Gewalt mit der Polizei.",
+      "start": 178.72,
+      "end": 182.12,
+      "zh": "街头发生了与警方的暴力冲突。"
+    },
+    {
+      "de": "Mehrere Demonstranten werden festgenommen.",
+      "start": 183.4,
+      "end": 186.48,
+      "zh": "多名示威者被逮捕。"
+    },
+    {
+      "de": "Die Kosten für das Leben werden auch in Italien immer teurer.",
+      "start": 188.32,
+      "end": 192.76,
+      "zh": "意大利的生活成本也越来越高。"
+    },
+    {
+      "de": "Deshalb protestieren die Menschen.",
+      "start": 193.32,
+      "end": 195.76,
+      "zh": "因此人们举行抗议。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 196.96,
+      "end": 199.24,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "Ukraine-Krieg.",
+      "start": 200.36,
+      "end": 201.36,
+      "zh": "乌克兰战争。"
+    },
+    {
+      "de": "Trump setzt Sanktionen aus.",
+      "start": 201.64,
+      "end": 203.64,
+      "zh": "特朗普暂停制裁。"
+    },
+    {
+      "de": "Der Krieg von dem Land Russland gegen das Land Ukraine dauert schon mehrere Jahre.",
+      "start": 203.68,
+      "end": 210.24,
+      "zh": "俄罗斯对乌克兰的战争已经持续了数年。"
+    },
+    {
+      "de": "Russland hat die Ukraine angegriffen.",
+      "start": 210.6,
+      "end": 213.24,
+      "zh": "俄罗斯攻击了乌克兰。"
+    },
+    {
+      "de": "Deshalb haben die Partner von der Ukraine Sanktionen gegen Russland verhängt.",
+      "start": 214.16,
+      "end": 220.24,
+      "zh": "因此乌克兰的伙伴们对俄罗斯实施了制裁。"
+    },
+    {
+      "de": "Sanktionen sind Strafen.",
+      "start": 220.72,
+      "end": 222.84,
+      "zh": "制裁就是惩罚。"
+    },
+    {
+      "de": "Auch das Land USA hat Sanktionen verhängt.",
+      "start": 223.68,
+      "end": 227.4,
+      "zh": "美国也实施了制裁。"
+    },
+    {
+      "de": "Aber US-Präsident Donald Trump, der Mann hier auf dem Foto, hat einige Sanktionen ausgesetzt.",
+      "start": 227.44,
+      "end": 236.4,
+      "zh": "但美国总统唐纳德·特朗普，就是照片上的这位男子，暂停了部分制裁。"
+    },
+    {
+      "de": "Warum?",
+      "start": 236.92,
+      "end": 237.44,
+      "zh": "为什么呢？"
+    },
+    {
+      "de": "Dazu kommt jetzt ein Film.",
+      "start": 237.48,
+      "end": 239.68,
+      "zh": "接下来请看一段影片。"
+    },
+    {
+      "de": "US-Präsident Trump hat im Internet geschrieben:",
+      "start": 240.28,
+      "end": 243.88,
+      "zh": "美国总统特朗普在互联网上写道："
+    },
+    {
+      "de": "Ich verhandele momentan mit Russland über einen Frieden.",
+      "start": 244.12,
+      "end": 248.04,
+      "zh": "我目前正在与俄罗斯就和平进行谈判。"
+    },
+    {
+      "de": "Und Russland soll weiter verhandeln.",
+      "start": 248.24,
+      "end": 250.8,
+      "zh": "俄罗斯还应该继续谈判。"
+    },
+    {
+      "de": "Deshalb will ich nichts gegen Russland machen.",
+      "start": 251.0,
+      "end": 254.2,
+      "zh": "所以我不想对俄罗斯采取任何行动。"
+    },
+    {
+      "de": "Trump macht jetzt dem ukrainischen Präsidenten Selenskyj Vorwürfe.",
+      "start": 255.2,
+      "end": 259.56,
+      "zh": "特朗普现在指责乌克兰总统泽连斯基。"
+    },
+    {
+      "de": "Trump sagt: Selenskyj will den Krieg gar nicht beenden.",
+      "start": 259.84,
+      "end": 263.88,
+      "zh": "特朗普说：泽连斯基根本不想结束战争。"
+    },
+    {
+      "de": "Die Ukraine greift in Russland Ziele für die Herstellung von Diesel an.",
+      "start": 265.68,
+      "end": 272.44,
+      "zh": "乌克兰袭击了俄罗斯境内生产柴油的目标。"
+    },
+    {
+      "de": "Die Ukraine macht damit den Handel mit Diesel kaputt.",
+      "start": 272.48,
+      "end": 276.2,
+      "zh": "乌克兰这样做破坏了柴油贸易。"
+    },
+    {
+      "de": "In den USA ist Diesel teuer geworden.",
+      "start": 276.64,
+      "end": 280.16,
+      "zh": "在美国，柴油变得很贵。"
+    },
+    {
+      "de": "Die Autofahrer sind deshalb wütend.",
+      "start": 280.52,
+      "end": 283.04,
+      "zh": "因此开车的人很生气。"
+    },
+    {
+      "de": "Das ist schlecht für Trump.",
+      "start": 283.28,
+      "end": 285.2,
+      "zh": "这对特朗普不利。"
+    },
+    {
+      "de": "Er will bald den Sieg bei einer Wahl.",
+      "start": 285.64,
+      "end": 288.44,
+      "zh": "他希望很快在选举中获胜。"
+    },
+    {
+      "de": "Deshalb will er Diesel wieder billiger machen.",
+      "start": 289.0,
+      "end": 292.2,
+      "zh": "因此他想让柴油重新变便宜。"
+    },
+    {
+      "de": "Und dafür kauft er Diesel aus Russland.",
+      "start": 292.4,
+      "end": 295.68,
+      "zh": "为此他从俄罗斯购买柴油。"
+    },
+    {
+      "de": "Der ukrainische Präsident Selenskyj macht sich große Sorgen.",
+      "start": 296.96,
+      "end": 301.52,
+      "zh": "乌克兰总统泽连斯基非常担忧。"
+    },
+    {
+      "de": "Er sagt, wenn die USA jetzt Russland unterstützen, dann ist das ein großer Fehler.",
+      "start": 301.8,
+      "end": 308.92,
+      "zh": "他说，如果美国现在支持俄罗斯，那将是一个大错误。"
+    },
+    {
+      "de": "Selenskyj hofft, vielleicht wird das Verhältnis zwischen der Ukraine und den USA nach der Wahl wieder besser.",
+      "start": 309.28,
+      "end": 318.32,
+      "zh": "泽连斯基希望，选举之后乌克兰和美国的关系也许会重新变好。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 319.32,
+      "end": 321.72,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "Japan, Mission zum Mond vom Mars.",
+      "start": 323.12,
+      "end": 326.8,
+      "zh": "日本：从火星的卫星到月球的探测任务。"
+    },
+    {
+      "de": "Diese Rakete hier auf dem Foto steht in dem Land Japan.",
+      "start": 327.32,
+      "end": 332.0,
+      "zh": "照片上的这枚火箭位于日本这个国家。"
+    },
+    {
+      "de": "Sie soll bald starten.",
+      "start": 332.36,
+      "end": 334.12,
+      "zh": "它很快就要发射了。"
+    },
+    {
+      "de": "Sie soll eine Sonde in das Weltall bringen.",
+      "start": 334.4,
+      "end": 337.84,
+      "zh": "它要把一个探测器送上太空。"
+    },
+    {
+      "de": "Die Sonde ist ein Fluggerät.",
+      "start": 338.2,
+      "end": 340.64,
+      "zh": "探测器是一种飞行器。"
+    },
+    {
+      "de": "Sie soll bis zum Mond vom Mars fliegen.",
+      "start": 341.16,
+      "end": 344.72,
+      "zh": "它要飞到火星的卫星去。"
+    },
+    {
+      "de": "Der Mars ist ein Planet weit entfernt von der Erde.",
+      "start": 345.2,
+      "end": 349.56,
+      "zh": "火星是一颗离地球很远的行星。"
+    },
+    {
+      "de": "Der Mond vom Mars heißt Phobos.",
+      "start": 349.6,
+      "end": 352.96,
+      "zh": "火星的卫星叫做火卫一。"
+    },
+    {
+      "de": "Wissenschaftler wollen Phobos erkunden.",
+      "start": 354.08,
+      "end": 356.96,
+      "zh": "科学家想要探测火卫一。"
+    },
+    {
+      "de": "In der Sonde ist deshalb ein Rover.",
+      "start": 357.48,
+      "end": 360.32,
+      "zh": "因此探测器里有一辆探测车。"
+    },
+    {
+      "de": "Das ist ein spezielles Fahrzeug mit vielen Geräten.",
+      "start": 360.96,
+      "end": 365.64,
+      "zh": "那是一种带有很多仪器的特殊车辆。"
+    },
+    {
+      "de": "Der Rover heißt Idefix.",
+      "start": 366.44,
+      "end": 368.84,
+      "zh": "这辆探测车叫做伊德菲克斯。"
+    },
+    {
+      "de": "Dazu kommt jetzt ein Film.",
+      "start": 369.52,
+      "end": 371.36,
+      "zh": "现在来看一段影片。"
+    },
+    {
+      "de": "Das ist der Rover Idefix.",
+      "start": 371.8,
+      "end": 374.52,
+      "zh": "这就是探测车伊德菲克斯。"
+    },
+    {
+      "de": "Forscher aus Frankreich und Deutschland haben Idefix gebaut.",
+      "start": 374.96,
+      "end": 379.16,
+      "zh": "法国和德国的研究人员制造了伊德菲克斯。"
+    },
+    {
+      "de": "Idefix soll den Mond vom Mars erkunden.",
+      "start": 379.96,
+      "end": 383.44,
+      "zh": "伊德菲克斯要探测火星的卫星。"
+    },
+    {
+      "de": "Hier in Japan beginnt die Reise mit einer Rakete in Richtung Phobos.",
+      "start": 384.64,
+      "end": 390.92,
+      "zh": "在日本的这里，旅程由一枚火箭开始，飞向火卫一。"
+    },
+    {
+      "de": "Dieser Experte sagt:",
+      "start": 391.76,
+      "end": 393.76,
+      "zh": "这位专家说："
+    },
+    {
+      "de": "Auf dem Mond Phobos ist es in der Nacht sehr kalt und am Tag sehr warm.",
+      "start": 394.32,
+      "end": 400.16,
+      "zh": "在火卫一上，夜里非常冷，白天非常热。"
+    },
+    {
+      "de": "Das ist großer Stress für Idefix.",
+      "start": 400.2,
+      "end": 403.56,
+      "zh": "这对伊德菲克斯来说是很大的考验。"
+    },
+    {
+      "de": "Zunächst bringt die japanische Rakete diese Raumsonde in das Weltall.",
+      "start": 404.68,
+      "end": 411.68,
+      "zh": "首先，日本火箭把这个太空探测器送入太空。"
+    },
+    {
+      "de": "Der Weg ist sehr weit.",
+      "start": 412.48,
+      "end": 414.48,
+      "zh": "路途非常遥远。"
+    },
+    {
+      "de": "Und die Sonde fliegt sehr lange.",
+      "start": 414.76,
+      "end": 417.28,
+      "zh": "探测器要飞行很长时间。"
+    },
+    {
+      "de": "Sie braucht etwa ein Jahr bis zum Mond Phobos.",
+      "start": 417.84,
+      "end": 421.76,
+      "zh": "它大约需要一年才能到达火卫一。"
+    },
+    {
+      "de": "Dort wirft die Sonde den kleinen Idefix ab.",
+      "start": 421.8,
+      "end": 426.48,
+      "zh": "在那里，探测器会把小小的伊德菲克斯投放下去。"
+    },
+    {
+      "de": "Er soll das Gebiet erkunden.",
+      "start": 427.2,
+      "end": 429.76,
+      "zh": "它要探测这个区域。"
+    },
+    {
+      "de": "Wenn alles okay ist, dann soll auch die Sonde landen.",
+      "start": 431.76,
+      "end": 436.2,
+      "zh": "如果一切顺利，探测器也应该着陆。"
+    },
+    {
+      "de": "Sie soll Proben vom Boden auf Phobos sammeln und zur Erde bringen.",
+      "start": 437.0,
+      "end": 442.32,
+      "zh": "它要采集火卫一地表的样本并带回地球。"
+    },
+    {
+      "de": "Das dauert mehrere Jahre.",
+      "start": 442.36,
+      "end": 445.2,
+      "zh": "这需要好几年时间。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 449.08,
+      "end": 451.28,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "Spanien.",
+      "start": 451.4,
+      "end": 452.12,
+      "zh": "西班牙。"
+    },
+    {
+      "de": "Heftiger Sturm.",
+      "start": 452.16,
+      "end": 453.48,
+      "zh": "猛烈的暴风雨。"
+    },
+    {
+      "de": "Viele Schüler haben momentan Ferien.",
+      "start": 454.2,
+      "end": 457.16,
+      "zh": "很多学生目前在放假。"
+    },
+    {
+      "de": "Und viele Familien machen deshalb Urlaub.",
+      "start": 457.4,
+      "end": 460.56,
+      "zh": "因此很多家庭去度假。"
+    },
+    {
+      "de": "Z.B. in dem Land Spanien.",
+      "start": 461.08,
+      "end": 463.2,
+      "zh": "比如在西班牙这个国家。"
+    },
+    {
+      "de": "Aber da ist das Wetter zurzeit sehr schlecht.",
+      "start": 463.72,
+      "end": 467.72,
+      "zh": "但是那里的天气现在非常糟糕。"
+    },
+    {
+      "de": "Es gibt einen heftigen Sturm.",
+      "start": 467.76,
+      "end": 470.6,
+      "zh": "有一场猛烈的暴风雨。"
+    },
+    {
+      "de": "Viele Straßen sind überschwemmt, wie hier auf dem Foto.",
+      "start": 471.16,
+      "end": 475.2,
+      "zh": "很多街道被淹没了，就像这张照片上一样。"
+    },
+    {
+      "de": "Zu dem Sturm kommt jetzt ein Film.",
+      "start": 475.92,
+      "end": 478.36,
+      "zh": "现在来看一段关于这场暴风雨的影片。"
+    },
+    {
+      "de": "In manchen Orten von Spanien gibt es große Schäden.",
+      "start": 479.36,
+      "end": 483.84,
+      "zh": "在西班牙的一些地方造成了很大的损失。"
+    },
+    {
+      "de": "Häuser und Autos sind kaputt.",
+      "start": 484.48,
+      "end": 487.92,
+      "zh": "房屋和汽车被损坏了。"
+    },
+    {
+      "de": "Auf einigen Straßen ist Wasser.",
+      "start": 489.04,
+      "end": 491.24,
+      "zh": "一些街道上有积水。"
+    },
+    {
+      "de": "Es gab viel Regen und starken Wind.",
+      "start": 491.88,
+      "end": 494.6,
+      "zh": "那里下了很多雨，还有大风。"
+    },
+    {
+      "de": "Mehrere Menschen sind tot.",
+      "start": 494.88,
+      "end": 496.76,
+      "zh": "有几个人死亡了。"
+    },
+    {
+      "de": "Jetzt kommt der Sturm auch auf die spanische Insel Mallorca.",
+      "start": 496.8,
+      "end": 501.84,
+      "zh": "现在风暴也来到了西班牙岛屿马略卡岛。"
+    },
+    {
+      "de": "Viele Deutsche machen dort gerne Urlaub.",
+      "start": 502.88,
+      "end": 505.76,
+      "zh": "很多德国人喜欢在那里度假。"
+    },
+    {
+      "de": "Jetzt auch.",
+      "start": 505.96,
+      "end": 506.96,
+      "zh": "现在也是。"
+    },
+    {
+      "de": "Es sind ja Ferien.",
+      "start": 507.08,
+      "end": 508.64,
+      "zh": "现在正好是假期。"
+    },
+    {
+      "de": "Die Behörden von Mallorca haben die Menschen vor dem Sturm gewarnt.",
+      "start": 509.64,
+      "end": 514.36,
+      "zh": "马略卡岛的当局已经警告人们注意风暴。"
+    },
+    {
+      "de": "Die Menschen sollen in den Häusern bleiben.",
+      "start": 514.76,
+      "end": 517.8,
+      "zh": "人们应该留在室内。"
+    },
+    {
+      "de": "Der Flughafen hat viele Flüge abgesagt.",
+      "start": 518.8,
+      "end": 522.56,
+      "zh": "机场取消了许多航班。"
+    },
+    {
+      "de": "Und das waren unsere Nachrichten.",
+      "start": 523.4,
+      "end": 526.12,
+      "zh": "以上就是我们的新闻。"
+    },
+    {
+      "de": "Frankreich.",
+      "start": 526.44,
+      "end": 528.0,
+      "zh": "法国。"
+    },
+    {
+      "de": "Gewalt bei Protesten.",
+      "start": 528.32,
+      "end": 529.88,
+      "zh": "抗议活动中的暴力事件。"
+    },
+    {
+      "de": "Ukraine-Krieg.",
+      "start": 530.64,
+      "end": 531.64,
+      "zh": "乌克兰战争。"
+    },
+    {
+      "de": "Trump setzt Sanktionen aus.",
+      "start": 532.08,
+      "end": 534.08,
+      "zh": "特朗普暂停制裁。"
+    },
+    {
+      "de": "Japan.",
+      "start": 535.12,
+      "end": 536.12,
+      "zh": "日本。"
+    },
+    {
+      "de": "Mission zum Mond vor Mars.",
+      "start": 536.36,
+      "end": 538.56,
+      "zh": "前往月球的任务在火星之前。"
+    },
+    {
+      "de": "Spanien.",
+      "start": 539.44,
+      "end": 540.44,
+      "zh": "西班牙。"
+    },
+    {
+      "de": "Heftiger Sturm.",
+      "start": 541.24,
+      "end": 542.32,
+      "zh": "猛烈的风暴。"
+    },
+    {
+      "de": "Und jetzt kommt das Wetter.",
+      "start": 542.92,
+      "end": 545.4,
+      "zh": "现在播报天气。"
+    },
+    {
+      "de": "Oben im Norden und links im Westen Wolken und etwas Regen.",
+      "start": 546.24,
+      "end": 551.36,
+      "zh": "北部和西部地区有云和一些降雨。"
+    },
+    {
+      "de": "In den anderen Regionen scheint auch mal die Sonne.",
+      "start": 551.6,
+      "end": 555.16,
+      "zh": "在其他地区有时也会出太阳。"
+    },
+    {
+      "de": "Das war die Tagesschau in Einfacher Sprache.",
+      "start": 559.52,
+      "end": 562.8,
+      "zh": "以上就是简单语言版每日新闻。"
+    },
+    {
+      "de": "Tschüss und bis zum nächsten Mal.",
+      "start": 563.08,
+      "end": 565.44,
+      "zh": "再见，下次见。"
+    }
+  ],
+  "stories": [
+    {
+      "title": "Begrüßung",
+      "title_zh": "欢迎",
+      "from": 0,
+      "to": 10,
+      "vocab": [],
+      "grammar_points": []
+    },
+    {
+      "title": "Frankreich: Gewalt bei Protesten",
+      "title_zh": "法国：抗议中的暴力",
+      "from": 11,
+      "to": 46,
       "vocab": [
-        {
-          "lemma": "die Straße, -n",
-          "key": "straße",
-          "forms": [
-            "Straßen"
-          ],
-          "pos": "Substantiv",
-          "zh": "街道",
-          "example_de": "In Frankreich sind viele Menschen auf die Straßen gegangen.",
-          "example_zh": "在法国，许多人走上了街头。"
-        },
-        {
-          "lemma": "teuer",
-          "key": "teuer",
-          "forms": [
-            "teurer"
-          ],
-          "pos": "Adjektiv",
-          "zh": "贵的",
-          "example_de": "Sie protestieren, weil das Leben immer teurer wird.",
-          "example_zh": "他们抗议，因为生活变得越来越贵。"
-        },
         {
           "lemma": "der Demonstrant, -en",
           "key": "demonstrant",
           "forms": [
             "Demonstranten"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "示威者",
-          "example_de": "Einige Demonstranten waren wütend und haben Autos zerstört.",
-          "example_zh": "一些示威者很愤怒，破坏了汽车。"
+          "sentence": 20
         },
         {
           "lemma": "zerstören",
@@ -56,130 +890,119 @@
           "forms": [
             "zerstört"
           ],
-          "pos": "Verb",
-          "zh": "破坏",
-          "example_de": "Einige Demonstranten waren wütend und haben Autos zerstört.",
-          "example_zh": "一些示威者很愤怒，破坏了汽车。"
+          "pos": "verb",
+          "zh": "毁坏",
+          "sentence": 21
         },
         {
-          "lemma": "verurteilen",
-          "key": "verurteilen",
+          "lemma": "protestieren",
+          "key": "protestieren",
           "forms": [
-            "verurteilt"
+            "protestiert"
           ],
-          "pos": "Verb",
-          "zh": "谴责",
-          "example_de": "Präsident Macron verurteilt die Gewalt im Fernsehen.",
-          "example_zh": "马克龙总统在电视上谴责暴力。"
+          "pos": "verb",
+          "zh": "抗议",
+          "sentence": 13
+        },
+        {
+          "lemma": "die Ausgangssperre, -n",
+          "key": "ausgangssperren",
+          "forms": [
+            "Ausgangssperren"
+          ],
+          "pos": "noun",
+          "zh": "宵禁",
+          "sentence": 38
+        },
+        {
+          "lemma": "die Gewalt",
+          "key": "gewalt",
+          "forms": [
+            "Gewalt"
+          ],
+          "pos": "noun",
+          "zh": "暴力",
+          "sentence": 19
         }
       ],
       "grammar_points": [
         {
-          "title": "weil 从句",
-          "summary": "weil 引导原因从句，动词放在句子末尾，如：Sie protestieren, weil das Leben teurer wird.",
-          "example_de": "Sie protestieren, weil das Leben immer teurer wird.",
-          "example_zh": "他们抗议，因为生活变得越来越贵。"
+          "title": "sich erschrecken über + Akkusativ",
+          "summary": "erschrocken über die Gewalt：形容词 erschrocken（受惊的）后接介词 über，支配第四格，表示\"对……感到震惊\"。",
+          "sentence": 23
         }
-      ],
-      "paragraphs": [
-        "In Frankreich sind viele Menschen auf die Straßen gegangen.",
-        "Sie protestieren, weil das Leben immer teurer wird.",
-        "Einige Demonstranten waren wütend und haben Autos zerstört.",
-        "Präsident Macron verurteilt die Gewalt im Fernsehen."
-      ],
-      "translations": [
-        "在法国，许多人走上了街头。",
-        "他们抗议，因为生活变得越来越贵。",
-        "一些示威者很愤怒，破坏了汽车。",
-        "马克龙总统在电视上谴责暴力。"
-      ],
-      "background": ""
+      ]
     },
     {
-      "title": "Trump setzt Sanktionen gegen Russland aus",
-      "title_zh": "特朗普暂停对俄罗斯的制裁",
+      "title": "Ukraine-Krieg: Trump setzt Sanktionen aus",
+      "title_zh": "乌克兰战争：特朗普暂停制裁",
+      "from": 47,
+      "to": 74,
       "vocab": [
         {
-          "lemma": "der Krieg, -e",
-          "key": "krieg",
-          "forms": [
-            "Krieg"
-          ],
-          "pos": "Substantiv",
-          "zh": "战争",
-          "example_de": "Der Krieg von Russland gegen die Ukraine dauert schon mehrere Jahre.",
-          "example_zh": "俄罗斯对乌克兰的战争已经持续了好几年。"
-        },
-        {
           "lemma": "die Sanktion, -en",
-          "key": "sanktion",
+          "key": "sanktionen",
           "forms": [
             "Sanktionen"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "制裁",
-          "example_de": "US-Präsident Trump hat einige Sanktionen gegen Russland ausgesetzt.",
-          "example_zh": "美国总统特朗普暂停了一些对俄罗斯的制裁。"
-        },
-        {
-          "lemma": "aussetzen",
-          "key": "aussetzen",
-          "forms": [
-            "ausgesetzt"
-          ],
-          "pos": "Verb",
-          "zh": "暂停",
-          "example_de": "US-Präsident Trump hat einige Sanktionen gegen Russland ausgesetzt.",
-          "example_zh": "美国总统特朗普暂停了一些对俄罗斯的制裁。"
+          "sentence": 52
         },
         {
           "lemma": "verhandeln",
           "key": "verhandeln",
           "forms": [
-            "verhandelt"
+            "verhandele"
           ],
-          "pos": "Verb",
+          "pos": "verb",
           "zh": "谈判",
-          "example_de": "Er verhandelt momentan mit Russland über einen Frieden.",
-          "example_zh": "他目前正在与俄罗斯谈判和平。"
+          "sentence": 59
         },
         {
-          "lemma": "kaufen",
-          "key": "kaufen",
+          "lemma": "der Frieden",
+          "key": "frieden",
           "forms": [
-            "kaufen"
+            "Frieden"
           ],
-          "pos": "Verb",
-          "zh": "购买",
-          "example_de": "Trump will auch billigeren Diesel aus Russland kaufen.",
-          "example_zh": "特朗普还想从俄罗斯购买更便宜的柴油。"
+          "pos": "noun",
+          "zh": "和平",
+          "sentence": 59
+        },
+        {
+          "lemma": "der Vorwurf, ¨-e",
+          "key": "vorwürfe",
+          "forms": [
+            "Vorwürfe"
+          ],
+          "pos": "noun",
+          "zh": "指责",
+          "sentence": 62
+        },
+        {
+          "lemma": "angreifen",
+          "key": "angreifen",
+          "forms": [
+            "angegriffen"
+          ],
+          "pos": "verb",
+          "zh": "攻击",
+          "sentence": 51
         }
       ],
       "grammar_points": [
         {
-          "title": "现在完成时",
-          "summary": "haben + 过去分词表示已完成的动作，如：Trump hat Sanktionen ausgesetzt.",
-          "example_de": "US-Präsident Trump hat einige Sanktionen gegen Russland ausgesetzt.",
-          "example_zh": "美国总统特朗普暂停了一些对俄罗斯的制裁。"
+          "title": "Konjunktiv II / höfliches Wollen",
+          "summary": "wird … wieder besser：hoffen + vielleicht 表达希望；句中 hofft, vielleicht wird … besser 是间接引语式表达（第三人称将来的转述）。",
+          "sentence": 74
         }
-      ],
-      "paragraphs": [
-        "Der Krieg von Russland gegen die Ukraine dauert schon mehrere Jahre.",
-        "US-Präsident Trump hat einige Sanktionen gegen Russland ausgesetzt.",
-        "Er verhandelt momentan mit Russland über einen Frieden.",
-        "Trump will auch billigeren Diesel aus Russland kaufen."
-      ],
-      "translations": [
-        "俄罗斯对乌克兰的战争已经持续了好几年。",
-        "美国总统特朗普暂停了一些对俄罗斯的制裁。",
-        "他目前正在与俄罗斯谈判和平。",
-        "特朗普还想从俄罗斯购买更便宜的柴油。"
-      ],
-      "background": ""
+      ]
     },
     {
-      "title": "Japan plant eine Mission zum Marsmond Phobos",
-      "title_zh": "日本计划探测火星卫星火卫一",
+      "title": "Japan: Mission zum Mond vom Mars",
+      "title_zh": "日本：火星卫星任务",
+      "from": 75,
+      "to": 104,
       "vocab": [
         {
           "lemma": "die Rakete, -n",
@@ -187,10 +1010,9 @@
           "forms": [
             "Rakete"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "火箭",
-          "example_de": "In Japan steht eine Rakete, sie soll bald starten.",
-          "example_zh": "在日本有一枚火箭，它很快就要发射。"
+          "sentence": 77
         },
         {
           "lemma": "die Sonde, -n",
@@ -198,68 +1020,174 @@
           "forms": [
             "Sonde"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "探测器",
-          "example_de": "Sie bringt eine Sonde in das Weltall.",
-          "example_zh": "它将把一个探测器送入太空。"
+          "sentence": 79
         },
         {
-          "doc_note": "",
           "lemma": "das Weltall",
           "key": "weltall",
           "forms": [
             "Weltall"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "宇宙",
-          "example_de": "Sie bringt eine Sonde in das Weltall.",
-          "example_zh": "它将把一个探测器送入太空。"
+          "sentence": 79
         },
         {
-          "lemma": "die Probe, -n",
-          "key": "probe",
+          "lemma": "erkunden",
+          "key": "erkunden",
           "forms": [
-            "Proben"
+            "erkunden"
           ],
-          "pos": "Substantiv",
-          "zh": "样本",
-          "example_de": "Die Sonde soll dort Proben vom Boden sammeln und zur Erde bringen.",
-          "example_zh": "探测器计划在那里采集土壤样本，并把样本带回地球。"
+          "pos": "verb",
+          "zh": "勘察、探索",
+          "sentence": 84
         },
         {
-          "lemma": "sammeln",
-          "key": "sammeln",
+          "lemma": "der Rover, -",
+          "key": "rover",
           "forms": [
-            "sammeln"
+            "Rover"
           ],
-          "pos": "Verb",
-          "zh": "收集",
-          "example_de": "Die Sonde soll dort Proben vom Boden sammeln und zur Erde bringen.",
-          "example_zh": "探测器计划在那里采集土壤样本，并把样本带回地球。"
+          "pos": "noun",
+          "zh": "探测器车、月球车",
+          "sentence": 85
         }
       ],
       "grammar_points": [
         {
-          "title": "soll + 动词不定式",
-          "summary": "soll 表示计划或要求做的动作，如：sie soll bald starten.",
-          "example_de": "In Japan steht eine Rakete, sie soll bald starten.",
-          "example_zh": "在日本有一枚火箭，它很快就要发射。"
+          "title": "sollen 表示计划和要求",
+          "summary": "soll bald starten：情态动词 sollen 在这里表示外界的计划或要求，即\"这枚火箭即将/应要发射\"。",
+          "sentence": 78
+        }
+      ]
+    },
+    {
+      "title": "Spanien: Heftiger Sturm",
+      "title_zh": "西班牙：猛烈风暴",
+      "from": 105,
+      "to": 126,
+      "vocab": [
+        {
+          "lemma": "der Sturm, ¨-e",
+          "key": "sturm",
+          "forms": [
+            "Sturm"
+          ],
+          "pos": "noun",
+          "zh": "风暴",
+          "sentence": 112
+        },
+        {
+          "lemma": "überschwemmt",
+          "key": "überschwemmt",
+          "forms": [
+            "überschwemmt"
+          ],
+          "pos": "adj",
+          "zh": "被淹没的",
+          "sentence": 113
+        },
+        {
+          "lemma": "der Schaden, ¨-",
+          "key": "schäden",
+          "forms": [
+            "Schäden"
+          ],
+          "pos": "noun",
+          "zh": "损失、损坏",
+          "sentence": 115
+        },
+        {
+          "lemma": "absagen",
+          "key": "abgesagt",
+          "forms": [
+            "abgesagt"
+          ],
+          "pos": "verb",
+          "zh": "取消",
+          "sentence": 126
+        },
+        {
+          "lemma": "warnen",
+          "key": "gewarnt",
+          "forms": [
+            "gewarnt"
+          ],
+          "pos": "verb",
+          "zh": "警告",
+          "sentence": 124
         }
       ],
-      "paragraphs": [
-        "In Japan steht eine Rakete, sie soll bald starten.",
-        "Sie bringt eine Sonde in das Weltall.",
-        "Die Sonde fliegt zum Mond Phobos vom Planeten Mars.",
-        "Die Sonde soll dort Proben vom Boden sammeln und zur Erde bringen."
+      "grammar_points": [
+        {
+          "title": "Passiv Perfekt",
+          "summary": "sind überschwemmt / hat abgesagt：Viele Straßen sind überschwemmt 是状态被动态（sein + Partizip II），表示街道处于被淹的状态。",
+          "sentence": 113
+        }
+      ]
+    },
+    {
+      "title": "Nachrichten-Zusammenfassung",
+      "title_zh": "新闻回顾",
+      "from": 127,
+      "to": 135,
+      "vocab": [],
+      "grammar_points": []
+    },
+    {
+      "title": "Das Wetter",
+      "title_zh": "天气",
+      "from": 136,
+      "to": 138,
+      "vocab": [
+        {
+          "lemma": "der Norden",
+          "key": "norden",
+          "forms": [
+            "Norden"
+          ],
+          "pos": "noun",
+          "zh": "北方",
+          "sentence": 137
+        },
+        {
+          "lemma": "der Westen",
+          "key": "westen",
+          "forms": [
+            "Westen"
+          ],
+          "pos": "noun",
+          "zh": "西方",
+          "sentence": 137
+        },
+        {
+          "lemma": "der Regen",
+          "key": "regen",
+          "forms": [
+            "Regen"
+          ],
+          "pos": "noun",
+          "zh": "雨",
+          "sentence": 137
+        }
       ],
-      "translations": [
-        "在日本有一枚火箭，它很快就要发射。",
-        "它将把一个探测器送入太空。",
-        "探测器将飞往火星的卫星火卫一。",
-        "探测器计划在那里采集土壤样本，并把样本带回地球。"
-      ],
-      "background": ""
+      "grammar_points": [
+        {
+          "title": "scheinen（太阳）照耀",
+          "summary": "scheint auch mal die Sonne：动词 scheinen 表示\"（太阳）照耀\"，mal 表示\"偶尔、有时\"。",
+          "sentence": 138
+        }
+      ]
+    },
+    {
+      "title": "Verabschiedung",
+      "title_zh": "再见",
+      "from": 139,
+      "to": 140,
+      "vocab": [],
+      "grammar_points": []
     }
-  ],
-  "editorial_review": "德中句对、新闻事实、词形和语法例句已对照来源检查。"
+  ]
 }

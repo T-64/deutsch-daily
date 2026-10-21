@@ -1,32 +1,546 @@
 {
+  "schema": 2,
+  "content_kind": "broadcast",
   "date": "2026-10-14",
   "slug": "2026-10-14",
   "source": "einfach",
-  "source_label": "tagesschau · Einfache Sprache",
+  "source_label": "tagesschau in Einfacher Sprache",
   "level": "A2–B1",
-  "content_kind": "reading",
-  "adaptation": "根据官方新闻整理的简易德语短读，非节目逐字稿；中文译文与学习提示由 AI 生成。",
   "source_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1472.html",
+  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1666160.html",
   "source_text_sha256": "004a93227362e5d349d38ddd09a94d5b4d2cceecadd145527f26984e4647f0c3",
-  "generated_at": "2026-10-21T01:23:00.833326+02:00",
+  "generated_at": "2026-10-22T00:55:15.238994+02:00",
   "generation_model": "glm-5.3",
-  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1472.html",
-  "embed_url": "",
-  "news": [
+  "sentences": [
     {
-      "title": "Prozess wegen eines Anschlags auf Pipelines",
-      "title_zh": "因管道袭击案男子受审",
+      "de": "Willkommen zur tagesschau in Einfacher Sprache.",
+      "start": 10.52,
+      "end": 13.32,
+      "zh": "欢迎收看简单语言版每日新闻。"
+    },
+    {
+      "de": "Ich bin Susanne Holst und das sind unsere Nachrichten:",
+      "start": 13.72,
+      "end": 17.12,
+      "zh": "我是Susanne Holst，以下是我们的新闻："
+    },
+    {
+      "de": "Und nun zur ersten Nachricht:",
+      "start": 34.16,
+      "end": 36.12,
+      "zh": "现在来看第一条新闻："
+    },
+    {
+      "de": "Vor vier Jahren gab es einen Anschlag auf Pipelines in der Ostsee.",
+      "start": 41.92,
+      "end": 46.2,
+      "zh": "四年前，波罗的海中的管道发生了袭击事件。"
+    },
+    {
+      "de": "Pipelines sind Leitungen für Öl oder Gas.",
+      "start": 47.24,
+      "end": 50.32,
+      "zh": "管道是输送石油或天然气的管线。"
+    },
+    {
+      "de": "Die Pipelines von dem Anschlag sind für Gas und heißen Nord Stream.",
+      "start": 51.56,
+      "end": 56.04,
+      "zh": "遭到袭击的管道是输送天然气的，名叫北溪。"
+    },
+    {
+      "de": "Ein Mann aus der Ukraine ist jetzt vor Gericht in der Stadt Hamburg, im Norden von Deutschland.",
+      "start": 57.48,
+      "end": 63.44,
+      "zh": "一名来自乌克兰的男子现在在德国北部城市汉堡受审。"
+    },
+    {
+      "de": "Er ist auf dem Foto in der Mitte.",
+      "start": 63.64,
+      "end": 65.88,
+      "zh": "他在照片的中间。"
+    },
+    {
+      "de": "Das Foto ist schon älter.",
+      "start": 66.2,
+      "end": 67.96,
+      "zh": "这张照片比较旧了。"
+    },
+    {
+      "de": "Der Mann ist wohl der Chef von einer Gruppe.",
+      "start": 68.56,
+      "end": 71.4,
+      "zh": "这名男子可能是一个团伙的头目。"
+    },
+    {
+      "de": "Sie hat den Anschlag wahrscheinlich gemacht.",
+      "start": 71.88,
+      "end": 74.64,
+      "zh": "这个团伙很可能实施了袭击。"
+    },
+    {
+      "de": "Dazu zeigen wir jetzt einen Film.",
+      "start": 74.96,
+      "end": 77.16,
+      "zh": "接下来我们播放一段影片。"
+    },
+    {
+      "de": "Das ist in der Ostsee vor vier Jahren.",
+      "start": 77.92,
+      "end": 80.96,
+      "zh": "这是四年前在波罗的海的情况。"
+    },
+    {
+      "de": "Explosionen haben die Pipelines beschädigt.",
+      "start": 81.72,
+      "end": 85.04,
+      "zh": "爆炸损坏了这些管道。"
+    },
+    {
+      "de": "Aus Löchern in den Pipelines ist Gas gekommen und hat diese Blasen gemacht.",
+      "start": 86.08,
+      "end": 91.52,
+      "zh": "气体从管道的洞中冒出，形成了这些气泡。"
+    },
+    {
+      "de": "Die Pipelines haben Russland und Deutschland miteinander verbunden.",
+      "start": 92.96,
+      "end": 97.52,
+      "zh": "这些管道曾连接俄罗斯和德国。"
+    },
+    {
+      "de": "Für das Gas hat Russland viel Geld bekommen.",
+      "start": 98.04,
+      "end": 101.04,
+      "zh": "俄罗斯曾通过这些天然气获得很多钱。"
+    },
+    {
+      "de": "Die Menschen von dem Anschlag wollten:",
+      "start": 101.8,
+      "end": 104.2,
+      "zh": "发动袭击的人想要："
+    },
+    {
+      "de": "Dass Russland kein Gas mehr liefern kann und kein Geld mehr damit macht.",
+      "start": 104.4,
+      "end": 109.68,
+      "zh": "让俄罗斯无法再输送天然气，也无法再从中赚钱。"
+    },
+    {
+      "de": "Das Geld nimmt Russland nämlich auch für den Krieg gegen die Ukraine.",
+      "start": 111.56,
+      "end": 116.04,
+      "zh": "因为俄罗斯也把这笔钱用于对乌克兰的战争。"
+    },
+    {
+      "de": "Viele Journalisten sind zum Gericht gekommen.",
+      "start": 117.84,
+      "end": 120.72,
+      "zh": "许多记者来到了法庭。"
+    },
+    {
+      "de": "Diese Frau vom Gericht sagt:",
+      "start": 120.88,
+      "end": 122.76,
+      "zh": "这位法院的工作人员说："
+    },
+    {
+      "de": "Mehr als 100 Journalisten sind gekommen, zum Beispiel aus der Ukraine, Russland, den USA und Frankreich.",
+      "start": 122.92,
+      "end": 130.88,
+      "zh": "超过100名记者来到了这里，例如来自乌克兰、俄罗斯、美国和法国的记者。"
+    },
+    {
+      "de": "Jetzt steht ein Mann aus der Ukraine vor Gericht.",
+      "start": 133.36,
+      "end": 136.48,
+      "zh": "现在一名来自乌克兰的男子正在受审。"
+    },
+    {
+      "de": "Sein Gesicht wird nicht gezeigt.",
+      "start": 136.88,
+      "end": 139.12,
+      "zh": "他的脸没有公开显示。"
+    },
+    {
+      "de": "Er war Offizier beim ukrainischen Militär.",
+      "start": 139.76,
+      "end": 142.8,
+      "zh": "他曾是乌克兰军队的军官。"
+    },
+    {
+      "de": "Dieser Journalist sagt:",
+      "start": 143.6,
+      "end": 145.28,
+      "zh": "这位记者说："
+    },
+    {
+      "de": "Der ukrainische Präsident sagt, ich habe nichts mit dem Anschlag zu tun.",
+      "start": 145.52,
+      "end": 150.52,
+      "zh": "乌克兰总统说，我和这次袭击没有任何关系。"
+    },
+    {
+      "de": "Wir haben aber herausgefunden, wichtige ukrainische Politiker haben davon gewusst.",
+      "start": 150.84,
+      "end": 156.76,
+      "zh": "但我们发现，重要的乌克兰政治家曾知情。"
+    },
+    {
+      "de": "Jetzt muss das Gericht herausfinden, ist der Mann aus der Ukraine schuldig?",
+      "start": 158.68,
+      "end": 164.28,
+      "zh": "现在法院必须查明：这名来自乌克兰的男子有罪吗？"
+    },
+    {
+      "de": "Ist er für die Explosionen und die Zerstörung von den Pipelines verantwortlich?",
+      "start": 164.8,
+      "end": 170.16,
+      "zh": "他对这些爆炸和管道的破坏负有责任吗？"
+    },
+    {
+      "de": "Das Urteil gibt es dann wahrscheinlich im nächsten Jahr.",
+      "start": 171.08,
+      "end": 174.92,
+      "zh": "判决可能要到明年才会作出。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht:",
+      "start": 177.2,
+      "end": 179.24,
+      "zh": "现在来看下一条新闻："
+    },
+    {
+      "de": "Der Mann auf dem Foto ist Papst Leo.",
+      "start": 182.64,
+      "end": 185.12,
+      "zh": "照片上的男子是教皇利奥。"
+    },
+    {
+      "de": "Er ist der Chef von der katholischen Kirche auf der ganzen Welt.",
+      "start": 185.6,
+      "end": 189.64,
+      "zh": "他是全世界天主教会的领袖。"
+    },
+    {
+      "de": "Papst Leo wurde operiert.",
+      "start": 189.8,
+      "end": 191.56,
+      "zh": "教皇利奥接受了手术。"
+    },
+    {
+      "de": "Er hatte nämlich einen Knoten in der Lunge.",
+      "start": 192.0,
+      "end": 194.8,
+      "zh": "因为他的肺里有一个结节。"
+    },
+    {
+      "de": "So ein Knoten kann gefährlich sein.",
+      "start": 195.28,
+      "end": 197.76,
+      "zh": "这样的结节可能是危险的。"
+    },
+    {
+      "de": "Die Lungen braucht man nämlich zum Atmen.",
+      "start": 198.4,
+      "end": 201.04,
+      "zh": "因为肺是用来呼吸的。"
+    },
+    {
+      "de": "Nach der Operation haben die Ärzte gesagt:",
+      "start": 201.44,
+      "end": 204.16,
+      "zh": "手术后医生们说："
+    },
+    {
+      "de": "Wir haben entdeckt, der Papst hat Lungenkrebs.",
+      "start": 204.6,
+      "end": 207.64,
+      "zh": "我们发现，教皇患有肺癌。"
+    },
+    {
+      "de": "Wir haben den Knoten und einen Teil von der Lunge entfernt.",
+      "start": 208.72,
+      "end": 212.4,
+      "zh": "我们切除了结节和一部分肺。"
+    },
+    {
+      "de": "Jetzt kommt ein Film dazu.",
+      "start": 212.88,
+      "end": 214.56,
+      "zh": "现在播放一段相关影片。"
+    },
+    {
+      "de": "In diesem Krankenhaus war die Operation von Papst Leo.",
+      "start": 215.88,
+      "end": 219.96,
+      "zh": "教皇利奥的手术是在这家医院做的。"
+    },
+    {
+      "de": "Es ist in der italienischen Hauptstadt Rom.",
+      "start": 221.32,
+      "end": 224.16,
+      "zh": "它位于意大利首都罗马。"
+    },
+    {
+      "de": "Die Ärzte schreiben nach der Operation, dem Papst geht es gut.",
+      "start": 224.92,
+      "end": 229.2,
+      "zh": "手术后医生们写道，教皇的状况良好。"
+    },
+    {
+      "de": "Es gibt aber noch mehr Untersuchungen.",
+      "start": 229.72,
+      "end": 232.12,
+      "zh": "但还需要做更多检查。"
+    },
+    {
+      "de": "Dann überlegen wir, wie die Behandlung weitergeht.",
+      "start": 232.36,
+      "end": 235.84,
+      "zh": "然后我们会考虑如何继续治疗。"
+    },
+    {
+      "de": "Viele Menschen machen sich jetzt große Sorgen um den Papst.",
+      "start": 236.8,
+      "end": 240.68,
+      "zh": "现在许多人为教皇非常担心。"
+    },
+    {
+      "de": "Sie haben Kerzen zum Krankenhaus gebracht.",
+      "start": 241.6,
+      "end": 244.32,
+      "zh": "他们把蜡烛送到了医院。"
+    },
+    {
+      "de": "Dieser Mann sagt, wir beten für den Papst.",
+      "start": 245.16,
+      "end": 247.96,
+      "zh": "这名男子说：我们为教皇祈祷。"
+    },
+    {
+      "de": "Ich hoffe, dass alles gut wird.",
+      "start": 248.72,
+      "end": 250.88,
+      "zh": "我希望一切都会好起来。"
+    },
+    {
+      "de": "Die Ärzte sind sehr gut.",
+      "start": 251.48,
+      "end": 253.2,
+      "zh": "医生们非常好。"
+    },
+    {
+      "de": "Sie haben den Krebs früh entdeckt.",
+      "start": 253.92,
+      "end": 256.32,
+      "zh": "他们及早发现了癌症。"
+    },
+    {
+      "de": "Deshalb denke ich, der Papst wird wieder gesund.",
+      "start": 257.28,
+      "end": 260.36,
+      "zh": "所以我认为，教皇会康复的。"
+    },
+    {
+      "de": "Gott sei mit ihm.",
+      "start": 261.24,
+      "end": 262.68,
+      "zh": "愿上帝与他同在。"
+    },
+    {
+      "de": "Papst Leo muss mindestens eine Woche im Krankenhaus bleiben.",
+      "start": 263.32,
+      "end": 267.72,
+      "zh": "教皇利奥必须住院至少一个星期。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht:",
+      "start": 270.44,
+      "end": 272.44,
+      "zh": "现在来看下一条新闻："
+    },
+    {
+      "de": "Eine Steuer ist Extrageld, das man zum normalen Preis dazu bezahlen muss.",
+      "start": 276.96,
+      "end": 282.44,
+      "zh": "税是在正常价格之外必须额外支付的钱。"
+    },
+    {
+      "de": "Dieses Extrageld bekommt der Staat.",
+      "start": 283.44,
+      "end": 285.88,
+      "zh": "这笔额外的钱归国家所有。"
+    },
+    {
+      "de": "Die Regierung will ein Gesetz zur Steuer für Zucker in Getränken machen.",
+      "start": 286.96,
+      "end": 291.84,
+      "zh": "政府想制定一项关于饮料糖税的法律。"
+    },
+    {
+      "de": "Das bedeutet:",
+      "start": 292.8,
+      "end": 294.04,
+      "zh": "这意味着："
+    },
+    {
+      "de": "Wenn man zum Beispiel eine Cola mit Zucker kauft, dann kostet die Cola wahrscheinlich in Zukunft mehr.",
+      "start": 294.36,
+      "end": 301.08,
+      "zh": "比如，如果购买含糖的可乐，那么可乐将来可能会更贵。"
+    },
+    {
+      "de": "Die Regierung sagt:",
+      "start": 301.76,
+      "end": 303.04,
+      "zh": "政府说："
+    },
+    {
+      "de": "Wir wollen das Extrageld den Krankenkassen geben.",
+      "start": 303.32,
+      "end": 306.4,
+      "zh": "我们想把这笔额外的钱给法定医疗保险机构。"
+    },
+    {
+      "de": "Sie haben nämlich hohe Kosten.",
+      "start": 307.16,
+      "end": 309.2,
+      "zh": "因为它们的费用很高。"
+    },
+    {
+      "de": "Und die Regierung sagt:",
+      "start": 310.12,
+      "end": 311.68,
+      "zh": "政府还说："
+    },
+    {
+      "de": "Wir hoffen, wenn Getränke mit Zucker teurer sind, dann trinken die Menschen weniger davon.",
+      "start": 311.84,
+      "end": 318.6,
+      "zh": "我们希望，如果含糖饮料变得更贵，人们就会少喝这些饮料。"
+    },
+    {
+      "de": "Das ist wichtig für die Gesundheit.",
+      "start": 319.0,
+      "end": 321.28,
+      "zh": "这对健康很重要。"
+    },
+    {
+      "de": "Zu viel Zucker ist nämlich ungesund.",
+      "start": 321.4,
+      "end": 323.8,
+      "zh": "因为过多的糖是不健康的。"
+    },
+    {
+      "de": "Der Bundestag entscheidet dann darüber, ob das Gesetz zur Steuer für Zucker in Getränken kommt.",
+      "start": 324.36,
+      "end": 330.6,
+      "zh": "联邦议院将决定是否通过这项饮料糖税的法律。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht:",
+      "start": 332.64,
+      "end": 334.64,
+      "zh": "现在来看下一条新闻："
+    },
+    {
+      "de": "Die deutschen Fußballerinnen haben in der Stadt Bremen, im Norden von Deutschland, gegen das Team von Japan gespielt.",
+      "start": 339.92,
+      "end": 347.32,
+      "zh": "德国女足在德国北部城市不来梅与日本队进行了比赛。"
+    },
+    {
+      "de": "Die Deutschen sind auf dem Foto und haben 2:1 gewonnen.",
+      "start": 347.88,
+      "end": 351.72,
+      "zh": "照片上的是德国队，她们以2比1获胜。"
+    },
+    {
+      "de": "Es war ein Testspiel.",
+      "start": 352.76,
+      "end": 354.44,
+      "zh": "这是一场测试赛。"
+    },
+    {
+      "de": "Die deutschen Fußballerinnen haben sich damit auf die Weltmeisterschaft im nächsten Jahr vorbereitet.",
+      "start": 354.88,
+      "end": 361.12,
+      "zh": "德国女足借此为明年的世界杯做准备。"
+    },
+    {
+      "de": "Und das waren unsere Nachrichten:",
+      "start": 361.88,
+      "end": 364.08,
+      "zh": "以上是我们的新闻："
+    },
+    {
+      "de": "Und jetzt kommt das Wetter:",
+      "start": 380.96,
+      "end": 382.8,
+      "zh": "现在来看天气："
+    },
+    {
+      "de": "In der Mitte von Deutschland und unten im Süden gibt es Nebel.",
+      "start": 383.48,
+      "end": 387.36,
+      "zh": "德国中部和南部下方有雾。"
+    },
+    {
+      "de": "Sonst scheint überall die Sonne.",
+      "start": 387.48,
+      "end": 389.52,
+      "zh": "其他地方到处都是晴天。"
+    },
+    {
+      "de": "Es gibt nur wenige Wolken.",
+      "start": 389.76,
+      "end": 391.48,
+      "zh": "只有少量的云。"
+    },
+    {
+      "de": "Es werden 12 bis 22 Grad.",
+      "start": 391.84,
+      "end": 393.88,
+      "zh": "气温是12到22度。"
+    },
+    {
+      "de": "Und das war die tagesschau in Einfacher Sprache.",
+      "start": 396.04,
+      "end": 398.96,
+      "zh": "以上就是简单语言版每日新闻。"
+    },
+    {
+      "de": "Tschüss, bis zum nächsten Mal.",
+      "start": 399.16,
+      "end": 401.2,
+      "zh": "再见，下次见。"
+    }
+  ],
+  "stories": [
+    {
+      "title": "Begrüßung",
+      "title_zh": "欢迎",
+      "from": 0,
+      "to": 2,
+      "vocab": [],
+      "grammar_points": []
+    },
+    {
+      "title": "Anschlag auf Pipelines: Mann ist vor Gericht",
+      "title_zh": "管道袭击事件：男子受审",
+      "from": 3,
+      "to": 31,
       "vocab": [
         {
-          "lemma": "das Gericht, -e",
-          "key": "gericht",
+          "lemma": "der Anschlag, ¨-e",
+          "key": "anschlag",
           "forms": [
-            "Gericht"
+            "Anschlag"
           ],
           "pos": "Substantiv",
-          "zh": "法院",
-          "example_de": "Jetzt ist ein Mann aus der Ukraine vor Gericht in Hamburg.",
-          "example_zh": "现在一名来自乌克兰的男子在汉堡受审。"
+          "zh": "袭击",
+          "sentence": 3
         },
         {
           "lemma": "die Pipeline, -s",
@@ -36,91 +550,83 @@
           ],
           "pos": "Substantiv",
           "zh": "管道",
-          "example_de": "Vor vier Jahren gab es Explosionen bei Gas-Pipelines in der Ostsee.",
-          "example_zh": "四年前，波罗的海的天然气管道发生了爆炸。"
+          "sentence": 3
         },
         {
-          "lemma": "die Explosion, -en",
-          "key": "explosion",
+          "lemma": "das Gericht, -e",
+          "key": "gericht",
           "forms": [
-            "Explosionen"
+            "Gericht"
           ],
           "pos": "Substantiv",
-          "zh": "爆炸",
-          "example_de": "Vor vier Jahren gab es Explosionen bei Gas-Pipelines in der Ostsee.",
-          "example_zh": "四年前，波罗的海的天然气管道发生了爆炸。"
+          "zh": "法院",
+          "sentence": 6
         },
         {
-          "lemma": "schuldig",
-          "key": "schuldig",
+          "lemma": "beschädigen",
+          "key": "beschädigen",
           "forms": [
-            "schuldig"
-          ],
-          "pos": "Adjektiv",
-          "zh": "有罪的",
-          "example_de": "Das Gericht muss herausfinden, ob der Mann schuldig ist.",
-          "example_zh": "法院必须查明这名男子是否有罪。"
-        },
-        {
-          "lemma": "herausfinden",
-          "key": "herausfinden",
-          "forms": [
-            "herausfinden"
+            "beschädigt"
           ],
           "pos": "Verb",
-          "zh": "查明",
-          "example_de": "Das Gericht muss herausfinden, ob der Mann schuldig ist.",
-          "example_zh": "法院必须查明这名男子是否有罪。"
+          "zh": "损坏",
+          "sentence": 13
+        },
+        {
+          "lemma": "zuständig für",
+          "key": "verantwortlich",
+          "forms": [
+            "verantwortlich"
+          ],
+          "pos": "Adjektiv",
+          "zh": "负有责任的",
+          "sentence": 30
         }
       ],
       "grammar_points": [
         {
-          "title": "ob从句",
-          "summary": "用ob引导的从句表示一个问题（是否），动词放在从句末尾，如：ob der Mann schuldig ist。",
-          "example_de": "Das Gericht muss herausfinden, ob der Mann schuldig ist.",
-          "example_zh": "法院必须查明这名男子是否有罪。"
+          "title": "现在完成时",
+          "summary": "haben/sein + 过去分词表示已发生的事：„Explosionen haben die Pipelines beschädigt.“（爆炸损坏了管道。）",
+          "sentence": 13
         }
-      ],
-      "paragraphs": [
-        "Vor vier Jahren gab es Explosionen bei Gas-Pipelines in der Ostsee.",
-        "Die Pipelines heißen Nord Stream und haben Russland mit Deutschland verbunden.",
-        "Jetzt ist ein Mann aus der Ukraine vor Gericht in Hamburg.",
-        "Das Gericht muss herausfinden, ob der Mann schuldig ist."
-      ],
-      "translations": [
-        "四年前，波罗的海的天然气管道发生了爆炸。",
-        "这些管道名为北溪，曾连接俄罗斯和德国。",
-        "现在一名来自乌克兰的男子在汉堡受审。",
-        "法院必须查明这名男子是否有罪。"
-      ],
-      "background": ""
+      ]
     },
     {
-      "title": "Papst Leo hat Lungenkrebs",
-      "title_zh": "教宗利奥患肺癌",
+      "title": "Papst Leo: Lungenkrebs",
+      "title_zh": "教皇利奥：肺癌",
+      "from": 32,
+      "to": 56,
       "vocab": [
+        {
+          "lemma": "operieren",
+          "key": "operieren",
+          "forms": [
+            "operiert"
+          ],
+          "pos": "Verb",
+          "zh": "做手术",
+          "sentence": 35
+        },
         {
           "lemma": "die Lunge, -n",
           "key": "lunge",
           "forms": [
+            "Lunge",
             "Lunge"
           ],
           "pos": "Substantiv",
           "zh": "肺",
-          "example_de": "Er hatte einen Knoten in der Lunge und wurde operiert.",
-          "example_zh": "他肺部有一个结节，并接受了手术。"
+          "sentence": 36
         },
         {
-          "lemma": "die Operation, -en",
-          "key": "operation",
+          "lemma": "der Krebs, -e",
+          "key": "krebs",
           "forms": [
-            "Operation",
-            "operiert"
+            "Krebs"
           ],
           "pos": "Substantiv",
-          "zh": "手术",
-          "example_de": "Er hatte einen Knoten in der Lunge und wurde operiert.",
-          "example_zh": "他肺部有一个结节，并接受了手术。"
+          "zh": "癌症",
+          "sentence": 40
         },
         {
           "lemma": "entfernen",
@@ -129,58 +635,33 @@
             "entfernt"
           ],
           "pos": "Verb",
-          "zh": "切除、移除",
-          "example_de": "Die Ärzte haben den Knoten und einen Teil von der Lunge entfernt.",
-          "example_zh": "医生切除了结节和一部分肺。"
+          "zh": "切除、去除",
+          "sentence": 41
         },
         {
-          "lemma": "der Arzt, ¨-e",
-          "key": "arzt",
+          "lemma": "sich Sorgen machen um",
+          "key": "sorgen",
           "forms": [
-            "Ärzte"
+            "Sorgen"
           ],
-          "pos": "Substantiv",
-          "zh": "医生",
-          "example_de": "Die Ärzte haben den Knoten und einen Teil von der Lunge entfernt.",
-          "example_zh": "医生切除了结节和一部分肺。"
-        },
-        {
-          "lemma": "der Knoten, -",
-          "key": "knoten",
-          "forms": [
-            "Knoten"
-          ],
-          "pos": "Substantiv",
-          "zh": "结节",
-          "example_de": "Er hatte einen Knoten in der Lunge und wurde operiert.",
-          "example_zh": "他肺部有一个结节，并接受了手术。"
+          "pos": "Redewendung",
+          "zh": "为……担心",
+          "sentence": 48
         }
       ],
       "grammar_points": [
         {
-          "title": "现在完成时",
-          "summary": "haben加过去分词表示完成的动作，如：haben ... entfernt，表示医生已经切除了结节。",
-          "example_de": "Die Ärzte haben den Knoten und einen Teil von der Lunge entfernt.",
-          "example_zh": "医生切除了结节和一部分肺。"
+          "title": "被动语态（过程被动）",
+          "summary": "werden + 过去分词表示被动：„Papst Leo wurde operiert.“（教皇利奥被做了手术。）",
+          "sentence": 35
         }
-      ],
-      "paragraphs": [
-        "Papst Leo ist der Chef von der katholischen Kirche auf der Welt.",
-        "Er hatte einen Knoten in der Lunge und wurde operiert.",
-        "Die Ärzte haben den Knoten und einen Teil von der Lunge entfernt.",
-        "Nach der Operation sagen die Ärzte: Dem Papst geht es gut."
-      ],
-      "translations": [
-        "教宗利奥是全世界天主教会的领袖。",
-        "他肺部有一个结节，并接受了手术。",
-        "医生切除了结节和一部分肺。",
-        "手术后医生说：教宗情况良好。"
-      ],
-      "background": ""
+      ]
     },
     {
-      "title": "Regierung plant Steuer auf Zucker in Getränken",
-      "title_zh": "政府计划对含糖饮料征税",
+      "title": "Regierung: Steuer für Zucker in Getränken",
+      "title_zh": "政府：饮料糖税",
+      "from": 57,
+      "to": 70,
       "vocab": [
         {
           "lemma": "die Steuer, -n",
@@ -190,8 +671,18 @@
           ],
           "pos": "Substantiv",
           "zh": "税",
-          "example_de": "Die Regierung will ein Gesetz zur Steuer für Zucker in Getränken machen.",
-          "example_zh": "政府想制定一项针对饮料中糖的税法。"
+          "sentence": 58
+        },
+        {
+          "lemma": "das Getränk, -e",
+          "key": "getränk",
+          "forms": [
+            "Getränken",
+            "Getränke"
+          ],
+          "pos": "Substantiv",
+          "zh": "饮料",
+          "sentence": 60
         },
         {
           "lemma": "das Gesetz, -e",
@@ -201,65 +692,144 @@
           ],
           "pos": "Substantiv",
           "zh": "法律",
-          "example_de": "Die Regierung will ein Gesetz zur Steuer für Zucker in Getränken machen.",
-          "example_zh": "政府想制定一项针对饮料中糖的税法。"
+          "sentence": 60
         },
         {
-          "lemma": "das Getränk, -e",
-          "key": "getraenk",
+          "lemma": "die Krankenkasse, -n",
+          "key": "krankenkasse",
           "forms": [
-            "Getränken"
+            "Krankenkassen"
           ],
           "pos": "Substantiv",
-          "zh": "饮料",
-          "example_de": "Die Regierung will ein Gesetz zur Steuer für Zucker in Getränken machen.",
-          "example_zh": "政府想制定一项针对饮料中糖的税法。"
+          "zh": "法定医疗保险机构",
+          "sentence": 64
         },
         {
-          "lemma": "der Preis, -e",
-          "key": "preis",
-          "forms": [
-            "Preis"
-          ],
-          "pos": "Substantiv",
-          "zh": "价格",
-          "example_de": "Eine Steuer ist Extrageld, das man zum normalen Preis dazu bezahlt.",
-          "example_zh": "税是人们在正常价格之外额外支付的钱。"
-        },
-        {
-          "lemma": "entscheiden",
+          "lemma": "entscheiden über",
           "key": "entscheiden",
           "forms": [
             "entscheidet"
           ],
           "pos": "Verb",
           "zh": "决定",
-          "example_de": "Der Bundestag entscheidet, ob das Gesetz kommt.",
-          "example_zh": "联邦议院决定这项法律是否通过。"
+          "sentence": 70
         }
       ],
       "grammar_points": [
         {
-          "title": "wollen表示打算",
-          "summary": "情态动词wollen表示打算或计划，动词原形放在句子末尾，如：will ... machen。",
-          "example_de": "Die Regierung will ein Gesetz zur Steuer für Zucker in Getränken machen.",
-          "example_zh": "政府想制定一项针对饮料中糖的税法。"
+          "title": "wenn从句",
+          "summary": "wenn引导条件从句，动词放句末：„Wenn man eine Cola kauft, dann kostet die Cola mehr.“（如果买可乐，可乐就更贵。）",
+          "sentence": 62
+        }
+      ]
+    },
+    {
+      "title": "Fußball: Deutsche Frauen gewinnen gegen Japan",
+      "title_zh": "足球：德国女队战胜日本队",
+      "from": 71,
+      "to": 75,
+      "vocab": [
+        {
+          "lemma": "gewinnen gegen",
+          "key": "gewinnen",
+          "forms": [
+            "gewonnen"
+          ],
+          "pos": "Verb",
+          "zh": "战胜",
+          "sentence": 73
+        },
+        {
+          "lemma": "das Testspiel, -e",
+          "key": "testspiel",
+          "forms": [
+            "Testspiel"
+          ],
+          "pos": "Substantiv",
+          "zh": "测试赛",
+          "sentence": 74
+        },
+        {
+          "lemma": "sich vorbereiten auf",
+          "key": "vorbereiten",
+          "forms": [
+            "vorbereitet"
+          ],
+          "pos": "Verb",
+          "zh": "为……做准备",
+          "sentence": 75
+        },
+        {
+          "lemma": "die Weltmeisterschaft, -en",
+          "key": "weltmeisterschaft",
+          "forms": [
+            "Weltmeisterschaft"
+          ],
+          "pos": "Substantiv",
+          "zh": "世界杯",
+          "sentence": 75
         }
       ],
-      "paragraphs": [
-        "Die Regierung will ein Gesetz zur Steuer für Zucker in Getränken machen.",
-        "Eine Steuer ist Extrageld, das man zum normalen Preis dazu bezahlt.",
-        "Das Extrageld soll den Krankenkassen helfen, sie haben hohe Kosten.",
-        "Der Bundestag entscheidet, ob das Gesetz kommt."
+      "grammar_points": [
+        {
+          "title": "现在完成时",
+          "summary": "haben + 过去分词表示已完成的事：„Die Deutschen haben 2:1 gewonnen.“（德国队以2比1获胜。）",
+          "sentence": 73
+        }
+      ]
+    },
+    {
+      "title": "Das Wetter",
+      "title_zh": "天气",
+      "from": 76,
+      "to": 81,
+      "vocab": [
+        {
+          "lemma": "der Nebel",
+          "key": "nebel",
+          "forms": [
+            "Nebel"
+          ],
+          "pos": "Substantiv",
+          "zh": "雾",
+          "sentence": 78
+        },
+        {
+          "lemma": "scheinen",
+          "key": "scheinen",
+          "forms": [
+            "scheint"
+          ],
+          "pos": "Verb",
+          "zh": "照耀",
+          "sentence": 79
+        },
+        {
+          "lemma": "die Wolke, -n",
+          "key": "wolke",
+          "forms": [
+            "Wolken"
+          ],
+          "pos": "Substantiv",
+          "zh": "云",
+          "sentence": 80
+        }
       ],
-      "translations": [
-        "政府想制定一项针对饮料中糖的税法。",
-        "税是人们在正常价格之外额外支付的钱。",
-        "这笔额外的钱应该帮助医疗保险公司，它们的成本很高。",
-        "联邦议院决定这项法律是否通过。"
-      ],
-      "background": ""
+      "grammar_points": [
+        {
+          "title": "es gibt + 第四格",
+          "summary": "es gibt 表示“有”，后接第四格：„Es gibt nur wenige Wolken.“（只有少量的云。）",
+          "sentence": 80
+        }
+      ]
+    },
+    {
+      "title": "Verabschiedung",
+      "title_zh": "告别",
+      "from": 82,
+      "to": 83,
+      "vocab": [],
+      "grammar_points": []
     }
-  ],
-  "editorial_review": "德中句对、新闻事实、词形和语法例句已对照来源检查。"
+  ]
 }

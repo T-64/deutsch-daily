@@ -1,186 +1,947 @@
 {
+  "schema": 2,
+  "content_kind": "broadcast",
   "date": "2026-10-16",
   "slug": "2026-10-16",
   "source": "einfach",
-  "source_label": "tagesschau · Einfache Sprache",
+  "source_label": "tagesschau in Einfacher Sprache",
   "level": "A2–B1",
-  "content_kind": "reading",
-  "adaptation": "根据官方新闻整理的简易德语短读，非节目逐字稿；中文译文与学习提示由 AI 生成。",
   "source_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1464.html",
+  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1667420.html",
   "source_text_sha256": "d8be7863247197730d47f17f64c826c07ab9787f5584987d8e2846c101dbae38",
-  "generated_at": "2026-10-21T01:35:52.656965+02:00",
+  "generated_at": "2026-10-22T00:57:41.974145+02:00",
   "generation_model": "glm-5.3",
-  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1464.html",
-  "embed_url": "",
-  "news": [
+  "sentences": [
     {
-      "title": "Staat hilft jungen Menschen beim Sparen",
-      "title_zh": "国家帮助年轻人储蓄",
+      "de": "Willkommen zur tagesschau in Einfacher Sprache.",
+      "start": 8.79,
+      "end": 11.99,
+      "zh": "欢迎收看简单语言版每日新闻。"
+    },
+    {
+      "de": "Ich bin Michael Paweletz.",
+      "start": 12.07,
+      "end": 13.91,
+      "zh": "我是Michael Paweletz。"
+    },
+    {
+      "de": "Und das sind unsere Nachrichten.",
+      "start": 14.15,
+      "end": 16.47,
+      "zh": "以下是我们的新闻。"
+    },
+    {
+      "de": "Und nun zur ersten Nachricht.",
+      "start": 38.24,
+      "end": 40.32,
+      "zh": "现在来看第一条新闻。"
+    },
+    {
+      "de": "Wenn ein Mensch alt ist, dann muss er nicht mehr arbeiten und bekommt Rente.",
+      "start": 46.31,
+      "end": 52.75,
+      "zh": "当一个人年老时，就不用再工作，并领取养老金。"
+    },
+    {
+      "de": "Rente ist Geld vom Staat.",
+      "start": 53.31,
+      "end": 55.67,
+      "zh": "养老金是国家发的钱。"
+    },
+    {
+      "de": "Einige Menschen bekommen aber nur wenig Rente und haben nicht genug Geld zum Leben.",
+      "start": 56.55,
+      "end": 62.75,
+      "zh": "但有些人只领到很少的养老金，没有足够的钱生活。"
+    },
+    {
+      "de": "Deshalb sagt die Regierung, die Menschen sollen vor der Rente Geld sparen.",
+      "start": 64.08,
+      "end": 69.59,
+      "zh": "因此政府说，人们应该在退休前存钱。"
+    },
+    {
+      "de": "Dann haben sie mehr Geld, wenn sie alt sind.",
+      "start": 70.44,
+      "end": 73.52,
+      "zh": "这样他们年老时就会有更多的钱。"
+    },
+    {
+      "de": "Die Regierung will beim Sparen helfen.",
+      "start": 74.8,
+      "end": 77.44,
+      "zh": "政府想在存钱方面提供帮助。"
+    },
+    {
+      "de": "Deshalb hat sie jetzt einen Beschluss gemacht.",
+      "start": 77.71,
+      "end": 80.95,
+      "zh": "因此政府现在做出了一项决议。"
+    },
+    {
+      "de": "Der Staat gibt jungen Menschen jeden Monat ein bisschen Geld.",
+      "start": 82.36,
+      "end": 86.64,
+      "zh": "国家每个月给年轻人一点钱。"
+    },
+    {
+      "de": "Das Geld kommt zum Sparen auf ein Konto bei der Bank.",
+      "start": 87.56,
+      "end": 91.28,
+      "zh": "这笔钱存到银行的账户上用于储蓄。"
+    },
+    {
+      "de": "Wenn die Menschen alt sind.",
+      "start": 92.64,
+      "end": 94.56,
+      "zh": "当人们年老时。"
+    },
+    {
+      "de": "Wenn die Menschen alt sind und in Rente gehen, bekommen sie das Geld.",
+      "start": 94.6,
+      "end": 98.8,
+      "zh": "当人们年老并退休时，就能拿到这笔钱。"
+    },
+    {
+      "de": "Die Regierung sagt, dann haben alte Menschen genug Geld zum Leben.",
+      "start": 98.92,
+      "end": 103.91,
+      "zh": "政府说，这样老年人就有足够的钱生活了。"
+    },
+    {
+      "de": "Um einen Beschluss von der Regierung geht es auch in der nächsten Nachricht.",
+      "start": 106.72,
+      "end": 111.63,
+      "zh": "下一条新闻也和政府的一项决议有关。"
+    },
+    {
+      "de": "Viele Menschen in Deutschland rauchen Zigaretten.",
+      "start": 116.23,
+      "end": 120.03,
+      "zh": "德国有很多人抽烟。"
+    },
+    {
+      "de": "So wie auf dem Foto.",
+      "start": 120.27,
+      "end": 122.27,
+      "zh": "就像照片上这样。"
+    },
+    {
+      "de": "Wenn man Zigaretten kauft, dann bezahlt man dabei auch Steuern.",
+      "start": 123.36,
+      "end": 127.8,
+      "zh": "买香烟时，也要缴税。"
+    },
+    {
+      "de": "Steuern sind Geld für den Staat.",
+      "start": 128.99,
+      "end": 131.55,
+      "zh": "税是交给国家的钱。"
+    },
+    {
+      "de": "Jetzt hat die Regierung einen Beschluss gemacht.",
+      "start": 132.39,
+      "end": 135.59,
+      "zh": "现在政府做出了一项决议。"
+    },
+    {
+      "de": "Die Regierung sagt, wir machen die Steuern für Zigaretten höher.",
+      "start": 136.04,
+      "end": 140.79,
+      "zh": "政府说：我们要提高香烟的税。"
+    },
+    {
+      "de": "D.h. Zigaretten werden teurer.",
+      "start": 141.8,
+      "end": 143.88,
+      "zh": "也就是说，香烟会变得更贵。"
+    },
+    {
+      "de": "Wenn die Steuern höher werden, dann bekommt der Staat mehr Geld.",
+      "start": 145.48,
+      "end": 149.8,
+      "zh": "如果税提高了，国家就能得到更多的钱。"
+    },
+    {
+      "de": "Der Minister für Geld, Lars Klingbeil, sagt, damit bezahlen wir z.B. die Schulden von Deutschland.",
+      "start": 151.24,
+      "end": 159.51,
+      "zh": "财政部长Lars Klingbeil说：比如我们用这笔钱偿还德国的债务。"
+    },
+    {
+      "de": "Viele Menschen finden die höheren Steuern aber nicht gut.",
+      "start": 161.0,
+      "end": 165.24,
+      "zh": "但很多人认为提高税收不好。"
+    },
+    {
+      "de": "Dazu zeigen wir einen Film.",
+      "start": 165.51,
+      "end": 167.71,
+      "zh": "为此我们播放一段影片。"
+    },
+    {
+      "de": "Das ist Melanie Knabe.",
+      "start": 170.2,
+      "end": 171.76,
+      "zh": "这是Melanie Knabe。"
+    },
+    {
+      "de": "Sie hat einen kleinen Laden.",
+      "start": 172.96,
+      "end": 174.96,
+      "zh": "她开了一家小店。"
+    },
+    {
+      "de": "Dort verkauft sie jeden Tag viele Zigaretten.",
+      "start": 176.07,
+      "end": 179.59,
+      "zh": "她每天都在店里卖出很多香烟。"
+    },
+    {
+      "de": "Sie sagt, die höheren Steuern finde ich nicht gut.",
+      "start": 180.48,
+      "end": 184.0,
+      "zh": "她说：我不认为提高税收是好事。"
+    },
+    {
+      "de": "Vielleicht kaufen die Menschen dann weniger Zigaretten.",
+      "start": 184.75,
+      "end": 188.35,
+      "zh": "也许人们到时候会少买香烟。"
+    },
+    {
+      "de": "Und dann verdiene ich weniger Geld.",
+      "start": 188.39,
+      "end": 191.27,
+      "zh": "那我挣的钱就少了。"
+    },
+    {
+      "de": "Die Regierung sagt aber, wenn die Menschen weniger rauchen, dann ist das gut für die Gesundheit.",
+      "start": 192.35,
+      "end": 200.03,
+      "zh": "但政府说，如果人们少抽烟，那对健康是有好处的。"
+    },
+    {
+      "de": "Einige Menschen finden die höheren Steuern aber auch gut.",
+      "start": 200.83,
+      "end": 205.31,
+      "zh": "不过也有些人认为提高税收是好事。"
+    },
+    {
+      "de": "Dieser Mann sagt, Zigaretten sollen noch teurer werden.",
+      "start": 206.47,
+      "end": 210.95,
+      "zh": "这位男士说：香烟应该变得更贵。"
+    },
+    {
+      "de": "Dann kann der Staat seine Schulden bezahlen.",
+      "start": 211.88,
+      "end": 214.96,
+      "zh": "这样国家就能偿还债务。"
+    },
+    {
+      "de": "Und außerdem ist es für die Menschen gesünder.",
+      "start": 215.8,
+      "end": 219.0,
+      "zh": "而且这对人们的健康也更好。"
+    },
+    {
+      "de": "Viele Raucher finden die höheren Steuern nicht gut.",
+      "start": 221.55,
+      "end": 225.27,
+      "zh": "很多吸烟者认为提高税收不好。"
+    },
+    {
+      "de": "Dieser Mann sagt, wenn Zigaretten zu teuer werden, dann muss ich aufhören zu rauchen.",
+      "start": 226.6,
+      "end": 233.07,
+      "zh": "这位男士说：如果香烟太贵，我就必须戒烟了。"
+    },
+    {
+      "de": "Hören jetzt viele Menschen mit dem Rauchen auf?",
+      "start": 234.35,
+      "end": 237.63,
+      "zh": "现在会有很多人戒烟吗？"
+    },
+    {
+      "de": "Das glaubt Melanie Knabe nicht.",
+      "start": 238.28,
+      "end": 240.48,
+      "zh": "Melanie Knabe不相信会这样。"
+    },
+    {
+      "de": "Sie sagt, die meisten Menschen rauchen bestimmt weiter.",
+      "start": 241.28,
+      "end": 245.12,
+      "zh": "她说：大多数人肯定会继续抽烟。"
+    },
+    {
+      "de": "Experten sagen, seit vielen Jahren rauchen die Menschen in Deutschland weniger.",
+      "start": 246.43,
+      "end": 252.8,
+      "zh": "专家说，多年来德国吸烟的人越来越少了。"
+    },
+    {
+      "de": "Zur nächsten Nachricht.",
+      "start": 255.68,
+      "end": 257.32,
+      "zh": "接下来看下一条新闻。"
+    },
+    {
+      "de": "In den USA hat ein Mann in einer Schule mit einer Waffe geschossen.",
+      "start": 263.6,
+      "end": 268.71,
+      "zh": "在美国，一名男子在一所学校里开枪射击。"
+    },
+    {
+      "de": "Die Schule ist auf dem Foto.",
+      "start": 268.75,
+      "end": 270.83,
+      "zh": "照片上就是这所学校。"
+    },
+    {
+      "de": "Der junge Mann hat mehrere Menschen getötet.",
+      "start": 271.51,
+      "end": 274.67,
+      "zh": "这名年轻男子杀害了多人。"
+    },
+    {
+      "de": "Auch Kinder sind dabei gestorben.",
+      "start": 275.07,
+      "end": 277.47,
+      "zh": "其中也有孩子丧生。"
+    },
+    {
+      "de": "Der Mann mit der Waffe ist auch tot.",
+      "start": 278.15,
+      "end": 280.67,
+      "zh": "持枪的男子也死了。"
+    },
+    {
+      "de": "Warum hat der Mann geschossen, das untersucht jetzt die Polizei.",
+      "start": 281.48,
+      "end": 286.0,
+      "zh": "这名男子为什么开枪，警方现在正在调查。"
+    },
+    {
+      "de": "Dazu zeigen wir einen Film.",
+      "start": 286.23,
+      "end": 288.31,
+      "zh": "为此我们播放一段影片。"
+    },
+    {
+      "de": "Die Schule ist in dem Bundesstaat Oregon.",
+      "start": 290.35,
+      "end": 293.19,
+      "zh": "这所学校位于俄勒冈州。"
+    },
+    {
+      "de": "Vor der Schule stehen viele Polizisten.",
+      "start": 294.03,
+      "end": 296.83,
+      "zh": "学校门前站着很多警察。"
+    },
+    {
+      "de": "Sie wollen jetzt herausfinden, was genau ist in der Schule passiert.",
+      "start": 297.23,
+      "end": 302.91,
+      "zh": "他们现在想查明学校里到底发生了什么。"
+    },
+    {
+      "de": "Auch die Familien von den Schülern sind da.",
+      "start": 303.87,
+      "end": 307.35,
+      "zh": "学生的家人们也在那里。"
+    },
+    {
+      "de": "Sie warten auf Nachrichten von ihren Kindern.",
+      "start": 308.19,
+      "end": 311.35,
+      "zh": "他们等待着自己孩子的消息。"
+    },
+    {
+      "de": "Die Familien machen sich große Sorgen.",
+      "start": 311.99,
+      "end": 314.75,
+      "zh": "这些家庭非常担心。"
+    },
+    {
+      "de": "Der Chef von der Polizei sagt, bei dem Angriff sind drei Kinder gestorben.",
+      "start": 316.07,
+      "end": 322.35,
+      "zh": "警察局长说：这次袭击中有三名儿童丧生。"
+    },
+    {
+      "de": "Auch eine Lehrerin ist tot.",
+      "start": 323.19,
+      "end": 325.59,
+      "zh": "还有一名女教师死亡。"
+    },
+    {
+      "de": "Und mehrere Menschen sind verletzt.",
+      "start": 325.83,
+      "end": 328.83,
+      "zh": "还有多人受伤。"
+    },
+    {
+      "de": "Der Mann mit der Waffe war 16 Jahre alt.",
+      "start": 329.75,
+      "end": 333.15,
+      "zh": "持枪的男子16岁。"
+    },
+    {
+      "de": "Er ist auch tot.",
+      "start": 334.4,
+      "end": 335.56,
+      "zh": "他也死了。"
+    },
+    {
+      "de": "Ein Mann aus der Nachbarschaft hat ihn erschossen.",
+      "start": 336.47,
+      "end": 339.59,
+      "zh": "一名附近的男子开枪打死了他。"
+    },
+    {
+      "de": "Am Abend zünden die Menschen Kerzen für die Toten an.",
+      "start": 342.83,
+      "end": 346.47,
+      "zh": "晚上，人们为死者点燃蜡烛。"
+    },
+    {
+      "de": "Viele fragen sich, wieso ist das passiert?",
+      "start": 347.43,
+      "end": 350.35,
+      "zh": "很多人问：为什么会发生这种事？"
+    },
+    {
+      "de": "Dieser Mann sagt, ich habe gerade in der Nähe gearbeitet.",
+      "start": 352.2,
+      "end": 356.2,
+      "zh": "这名男子说：我刚才就在附近工作。"
+    },
+    {
+      "de": "Dann kamen viele Polizisten.",
+      "start": 356.99,
+      "end": 359.15,
+      "zh": "然后来了很多警察。"
+    },
+    {
+      "de": "Meine Schwester hat mich angerufen und gesagt, in der Schule wird geschossen.",
+      "start": 359.19,
+      "end": 365.59,
+      "zh": "我姐姐打电话给我，说学校里有人开枪。"
+    },
+    {
+      "de": "Unserer Familie ist zum Glück nichts passiert.",
+      "start": 366.27,
+      "end": 369.47,
+      "zh": "幸运的是，我的家人没有出事。"
+    },
+    {
+      "de": "Aber ich bin sehr traurig über die Toten.",
+      "start": 370.27,
+      "end": 373.11,
+      "zh": "但我为死者感到非常难过。"
+    },
+    {
+      "de": "Ich kann es einfach nicht glauben.",
+      "start": 373.67,
+      "end": 376.11,
+      "zh": "我简直无法相信。"
+    },
+    {
+      "de": "Überall in den USA trauern die Menschen jetzt um die Toten.",
+      "start": 377.67,
+      "end": 382.47,
+      "zh": "现在整个美国的人们都在为死者哀悼。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 383.79,
+      "end": 386.55,
+      "zh": "接下来是下一条新闻。"
+    },
+    {
+      "de": "In Belgien ist heute ein wichtiges Treffen von der EU.",
+      "start": 391.88,
+      "end": 395.68,
+      "zh": "今天在比利时举行一场重要的欧盟会议。"
+    },
+    {
+      "de": "Die Länder von der EU sprechen nämlich über den Krieg von Russland gegen die Ukraine.",
+      "start": 396.36,
+      "end": 402.55,
+      "zh": "欧盟各国要讨论俄罗斯对乌克兰的战争。"
+    },
+    {
+      "de": "Auch der Präsident von der Ukraine, Wolodymyr Selenskyj, ist bei dem Treffen.",
+      "start": 403.48,
+      "end": 408.84,
+      "zh": "乌克兰总统弗拉基米尔·泽连斯基也参加了会议。"
+    },
+    {
+      "de": "Selenskyj ist in der Mitte auf dem Foto.",
+      "start": 409.72,
+      "end": 412.52,
+      "zh": "泽连斯基在照片中间。"
+    },
+    {
+      "de": "Die Länder von der EU beraten, wie kann die EU der Ukraine im Krieg weiter helfen.",
+      "start": 413.24,
+      "end": 419.6,
+      "zh": "欧盟各国在商讨：欧盟能如何在战争中继续帮助乌克兰。"
+    },
+    {
+      "de": "Russland greift die Ukraine nämlich immer noch an.",
+      "start": 420.75,
+      "end": 424.59,
+      "zh": "因为俄罗斯仍在攻击乌克兰。"
+    },
+    {
+      "de": "Besonders viele Angriffe gibt es in der Hauptstadt Kiew.",
+      "start": 425.39,
+      "end": 429.59,
+      "zh": "首都基辅的攻击特别多。"
+    },
+    {
+      "de": "Dazu zeigen wir jetzt einen Film.",
+      "start": 430.15,
+      "end": 432.51,
+      "zh": "接下来我们播放一段影片。"
+    },
+    {
+      "de": "In Kiew fahren die Menschen nach der Arbeit mit dem Bus nach Hause.",
+      "start": 434.4,
+      "end": 439.47,
+      "zh": "在基辅，人们下班后乘公交车回家。"
+    },
+    {
+      "de": "Auf dem Weg müssen sie über eine Brücke fahren.",
+      "start": 440.6,
+      "end": 443.88,
+      "zh": "路上他们必须经过一座桥。"
+    },
+    {
+      "de": "Viele haben deshalb Angst.",
+      "start": 444.24,
+      "end": 446.08,
+      "zh": "因此很多人感到害怕。"
+    },
+    {
+      "de": "Russland schießt nämlich oft mit Raketen auf die Brücken.",
+      "start": 447.6,
+      "end": 451.6,
+      "zh": "因为俄罗斯经常向这些桥发射导弹。"
+    },
+    {
+      "de": "So wie auf diesen Bildern.",
+      "start": 452.52,
+      "end": 454.36,
+      "zh": "就像这些画面里一样。"
+    },
+    {
+      "de": "Sie sind schon älter.",
+      "start": 455.76,
+      "end": 457.28,
+      "zh": "这些画面已经比较久了。"
+    },
+    {
+      "de": "Ohne den Bus oder das Auto kommen viele nicht zur Arbeit.",
+      "start": 459.43,
+      "end": 463.67,
+      "zh": "没有公交车或汽车，很多人就无法上班。"
+    },
+    {
+      "de": "So wie diese Frau.",
+      "start": 464.76,
+      "end": 466.04,
+      "zh": "就像这位女士一样。"
+    },
+    {
+      "de": "Sie sagt, ich habe immer Angst.",
+      "start": 466.84,
+      "end": 469.04,
+      "zh": "她说：我一直很害怕。"
+    },
+    {
+      "de": "Es kann ja jeden Moment etwas passieren.",
+      "start": 469.76,
+      "end": 472.56,
+      "zh": "随时都可能出事。"
+    },
+    {
+      "de": "Mit dieser Angst zu leben, ist sehr schwer.",
+      "start": 472.96,
+      "end": 475.96,
+      "zh": "带着这种恐惧生活非常艰难。"
+    },
+    {
+      "de": "In der Nacht hat Russland Kiew wieder angegriffen.",
+      "start": 477.75,
+      "end": 481.63,
+      "zh": "夜里，俄罗斯再次攻击了基辅。"
+    },
+    {
+      "de": "Die Raketen treffen auch wichtige Anlagen für Strom.",
+      "start": 482.31,
+      "end": 486.51,
+      "zh": "导弹还击中了重要的电力设施。"
+    },
+    {
+      "de": "Deshalb gibt es oft viele Tage lang keinen Strom.",
+      "start": 487.51,
+      "end": 491.59,
+      "zh": "因此经常连续很多天没有电。"
+    },
+    {
+      "de": "Und dann funktioniert auch die Heizung nicht.",
+      "start": 492.8,
+      "end": 495.96,
+      "zh": "那样暖气也无法使用。"
+    },
+    {
+      "de": "Bald kommt aber der Winter.",
+      "start": 496.91,
+      "end": 498.83,
+      "zh": "但冬天很快就要来了。"
+    },
+    {
+      "de": "Deshalb verlassen viele Menschen die Stadt.",
+      "start": 499.71,
+      "end": 502.91,
+      "zh": "所以很多人离开这座城市。"
+    },
+    {
+      "de": "Dieser Mann will in Kiew bleiben.",
+      "start": 504.83,
+      "end": 507.19,
+      "zh": "这名男子想留在基辅。"
+    },
+    {
+      "de": "Er sagt, wir bereiten uns auf den Winter vor.",
+      "start": 507.67,
+      "end": 511.43,
+      "zh": "他说：我们正在为过冬做准备。"
+    },
+    {
+      "de": "Wir sammeln viel Holz.",
+      "start": 512.44,
+      "end": 514.0,
+      "zh": "我们收集了很多木头。"
+    },
+    {
+      "de": "Dann können wir Feuer machen und kochen.",
+      "start": 514.64,
+      "end": 517.44,
+      "zh": "这样我们就能生火做饭。"
+    },
+    {
+      "de": "Auch der Busfahrer will im Winter in Kiew bleiben und arbeiten.",
+      "start": 521.07,
+      "end": 526.03,
+      "zh": "这位公交车司机也想冬天留在基辅继续工作。"
+    },
+    {
+      "de": "Er fährt seit vielen Jahren Bus in Kiew.",
+      "start": 527.32,
+      "end": 530.12,
+      "zh": "他在基辅开公交车已经很多年了。"
+    },
+    {
+      "de": "Und das soll auch so bleiben.",
+      "start": 531.03,
+      "end": 533.19,
+      "zh": "今后也应如此。"
+    },
+    {
+      "de": "Der Busfahrer sagt, der Krieg dauert schon fünf Jahre lang.",
+      "start": 534.68,
+      "end": 538.84,
+      "zh": "公交车司机说：战争已经持续五年了。"
+    },
+    {
+      "de": "Wir haben uns daran gewöhnt und machen weiter.",
+      "start": 540.16,
+      "end": 543.36,
+      "zh": "我们已经习惯了，继续生活。"
+    },
+    {
+      "de": "Auch wenn es schwer ist.",
+      "start": 543.76,
+      "end": 545.48,
+      "zh": "即使这很艰难。"
+    },
+    {
+      "de": "Man muss ja weiterleben.",
+      "start": 547.12,
+      "end": 548.84,
+      "zh": "人总得继续活下去。"
+    },
+    {
+      "de": "Und dann fährt er weiter.",
+      "start": 549.55,
+      "end": 551.75,
+      "zh": "然后他继续开车。"
+    },
+    {
+      "de": "Zurück in das Zentrum von Kiew.",
+      "start": 552.8,
+      "end": 555.0,
+      "zh": "开回基辅市中心。"
+    },
+    {
+      "de": "Und das waren unsere Nachrichten.",
+      "start": 557.56,
+      "end": 559.92,
+      "zh": "以上是我们的新闻。"
+    },
+    {
+      "de": "Und jetzt kommt das Wetter.",
+      "start": 578.48,
+      "end": 580.4,
+      "zh": "接下来是天气预报。"
+    },
+    {
+      "de": "Links im Westen gibt es ein wenig Sonne.",
+      "start": 581.4,
+      "end": 584.2,
+      "zh": "西部左边有一点阳光。"
+    },
+    {
+      "de": "Sonst überall viele Wolken und Regen.",
+      "start": 584.44,
+      "end": 587.08,
+      "zh": "其他地方则到处是乌云和降雨。"
+    },
+    {
+      "de": "Es werden 8 bis 18 Grad.",
+      "start": 587.88,
+      "end": 589.6,
+      "zh": "气温为8至18度。"
+    },
+    {
+      "de": "Das war die tagesschau in Einfacher Sprache.",
+      "start": 592.44,
+      "end": 595.52,
+      "zh": "以上就是简单语言版的每日新闻。"
+    },
+    {
+      "de": "Tschüss, bis zum nächsten Mal.",
+      "start": 595.6,
+      "end": 597.76,
+      "zh": "再见，下次见。"
+    }
+  ],
+  "stories": [
+    {
+      "title": "Willkommen zur tagesschau in Einfacher Sprache",
+      "title_zh": "欢迎收看简单语言版每日新闻",
+      "from": 0,
+      "to": 3,
+      "vocab": [],
+      "grammar_points": []
+    },
+    {
+      "title": "Rente: Staat hilft jungen Menschen beim Sparen",
+      "title_zh": "退休金：国家帮助年轻人储蓄",
+      "from": 4,
+      "to": 15,
       "vocab": [
-        {
-          "lemma": "die Regierung, -en",
-          "key": "regierung",
-          "forms": [
-            "Regierung"
-          ],
-          "pos": "Substantiv",
-          "zh": "政府",
-          "example_de": "Die Regierung will Menschen beim Sparen für die Rente helfen.",
-          "example_zh": "政府想帮助人们为退休储蓄。"
-        },
         {
           "lemma": "die Rente, -n",
           "key": "rente",
           "forms": [
             "Rente"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "退休金",
-          "example_de": "Die Regierung will Menschen beim Sparen für die Rente helfen.",
-          "example_zh": "政府想帮助人们为退休储蓄。"
+          "sentence": 4
         },
         {
           "lemma": "sparen",
           "key": "sparen",
           "forms": [
-            "Sparen",
             "sparen"
           ],
-          "pos": "Verb",
-          "zh": "储蓄",
-          "example_de": "Die Regierung will Menschen beim Sparen für die Rente helfen.",
-          "example_zh": "政府想帮助人们为退休储蓄。"
+          "pos": "verb",
+          "zh": "储蓄，存钱",
+          "sentence": 7
         },
         {
-          "lemma": "das Konto, Konten",
+          "lemma": "der Beschluss, -e",
+          "key": "beschluss",
+          "forms": [
+            "Beschluss"
+          ],
+          "pos": "noun",
+          "zh": "决议，决定",
+          "sentence": 10
+        },
+        {
+          "lemma": "die Regierung, -en",
+          "key": "regierung",
+          "forms": [
+            "Regierung"
+          ],
+          "pos": "noun",
+          "zh": "政府",
+          "sentence": 7
+        },
+        {
+          "lemma": "das Konto, -en",
           "key": "konto",
           "forms": [
             "Konto"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "账户",
-          "example_de": "Das Geld kommt zum Sparen auf ein Konto bei der Bank.",
-          "example_zh": "这笔钱为了储蓄存入银行的一个账户。"
-        },
-        {
-          "lemma": "jung",
-          "key": "jung",
-          "forms": [
-            "jungen"
-          ],
-          "pos": "Adjektiv",
-          "zh": "年轻的",
-          "example_de": "Der Staat will jungen Menschen jeden Monat ein bisschen Geld geben.",
-          "example_zh": "国家计划每个月给年轻人一点钱。"
+          "sentence": 12
         }
       ],
       "grammar_points": [
         {
-          "title": "beim + 动名词（beim Sparen）",
-          "summary": "beim 是 bei dem 的缩写，Sparen 是动词名词化。jemandem beim Sparen helfen 表示“帮助某人储蓄”，bei 支配第三格。",
-          "example_de": "Die Regierung will Menschen beim Sparen für die Rente helfen.",
-          "example_zh": "政府想帮助人们为退休储蓄。"
+          "title": "情态动词 müssen",
+          "summary": "句4 „dann muss er nicht mehr arbeiten\"：müssen + 动词原形，表示\"必须（不再）做某事\"。",
+          "sentence": 4
         }
-      ],
-      "paragraphs": [
-        "Die Regierung will Menschen beim Sparen für die Rente helfen.",
-        "Der Staat will jungen Menschen jeden Monat ein bisschen Geld geben.",
-        "Das Geld kommt zum Sparen auf ein Konto bei der Bank.",
-        "In der Rente bekommen die Menschen dann das Geld."
-      ],
-      "translations": [
-        "政府想帮助人们为退休储蓄。",
-        "国家计划每个月给年轻人一点钱。",
-        "这笔钱为了储蓄存入银行的一个账户。",
-        "退休后人们就能得到这笔钱。"
-      ],
-      "background": ""
+      ]
     },
     {
       "title": "Höhere Steuern: Rauchen wird teurer",
-      "title_zh": "更高的税收：吸烟变得更贵",
+      "title_zh": "更高的税：吸烟变得更贵",
+      "from": 16,
+      "to": 44,
       "vocab": [
         {
-          "lemma": "die Steuer, -n",
-          "key": "steuer",
+          "lemma": "rauchen",
+          "key": "rauchen",
           "forms": [
-            "Steuern"
+            "rauchen"
           ],
-          "pos": "Substantiv",
-          "zh": "税",
-          "example_de": "Die Regierung macht die Steuern für Zigaretten höher.",
-          "example_zh": "政府提高了香烟的税收。"
+          "pos": "verb",
+          "zh": "吸烟",
+          "sentence": 17
         },
         {
           "lemma": "die Zigarette, -n",
-          "key": "zigarette",
+          "key": "zigaretten",
           "forms": [
             "Zigaretten"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "香烟",
-          "example_de": "Deshalb werden Zigaretten in Deutschland teurer.",
-          "example_zh": "因此香烟在德国变得更贵。"
+          "sentence": 17
         },
         {
-          "lemma": "teuer",
-          "key": "teuer",
+          "lemma": "die Steuer, -n",
+          "key": "steuern",
           "forms": [
-            "teurer"
+            "Steuern"
           ],
-          "pos": "Adjektiv",
-          "zh": "贵的",
-          "example_de": "Deshalb werden Zigaretten in Deutschland teurer.",
-          "example_zh": "因此香烟在德国变得更贵。"
+          "pos": "noun",
+          "zh": "税",
+          "sentence": 20
         },
         {
-          "lemma": "die Schuld, -en",
-          "key": "schuld",
+          "lemma": "die Schulden (Pl.)",
+          "key": "schulden",
           "forms": [
             "Schulden"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "债务",
-          "example_de": "Der Staat bekommt mehr Geld und bezahlt seine Schulden.",
-          "example_zh": "国家得到更多钱并偿还债务。"
+          "sentence": 25
         },
         {
-          "lemma": "der Raucher, -",
-          "key": "raucher",
+          "lemma": "teuer",
+          "key": "teurer",
           "forms": [
-            "Raucher"
+            "teurer"
           ],
-          "pos": "Substantiv",
-          "zh": "吸烟者",
-          "example_de": "Viele Raucher finden die höheren Steuern nicht gut.",
-          "example_zh": "很多吸烟者认为更高的税收不好。"
+          "pos": "adjective",
+          "zh": "更贵的",
+          "sentence": 23
         }
       ],
       "grammar_points": [
         {
-          "title": "werden + 形容词比较级",
-          "summary": "werden 表示状态变化，后接形容词比较级，如 wird teurer 意为“变得更贵”。",
-          "example_de": "Deshalb werden Zigaretten in Deutschland teurer.",
-          "example_zh": "因此香烟在德国变得更贵。"
+          "title": "werden + 形容词比较级（状态变化）",
+          "summary": "句23 „Zigaretten werden teurer\"：werden 表示变化，\"变得更贵\"，不是被动语态。",
+          "sentence": 23
         }
-      ],
-      "paragraphs": [
-        "Die Regierung macht die Steuern für Zigaretten höher.",
-        "Deshalb werden Zigaretten in Deutschland teurer.",
-        "Der Staat bekommt mehr Geld und bezahlt seine Schulden.",
-        "Viele Raucher finden die höheren Steuern nicht gut."
-      ],
-      "translations": [
-        "政府提高了香烟的税收。",
-        "因此香烟在德国变得更贵。",
-        "国家得到更多钱并偿还债务。",
-        "很多吸烟者认为更高的税收不好。"
-      ],
-      "background": ""
+      ]
     },
     {
-      "title": "EU berät über Hilfe für die Ukraine",
-      "title_zh": "欧盟商讨对乌克兰的援助",
+      "title": "USA: Mann erschießt Menschen in Schule",
+      "title_zh": "美国：男子在学校枪杀多人",
+      "from": 45,
+      "to": 73,
+      "vocab": [
+        {
+          "lemma": "die Waffe, -n",
+          "key": "waffe",
+          "forms": [
+            "Waffe"
+          ],
+          "pos": "noun",
+          "zh": "武器，枪",
+          "sentence": 46
+        },
+        {
+          "lemma": "töten",
+          "key": "getötet",
+          "forms": [
+            "getötet"
+          ],
+          "pos": "verb",
+          "zh": "杀死",
+          "sentence": 48
+        },
+        {
+          "lemma": "die Polizei (o. Pl.)",
+          "key": "polizei",
+          "forms": [
+            "Polizei"
+          ],
+          "pos": "noun",
+          "zh": "警察，警方",
+          "sentence": 51
+        },
+        {
+          "lemma": "die Sorge, -n",
+          "key": "sorgen",
+          "forms": [
+            "Sorgen"
+          ],
+          "pos": "noun",
+          "zh": "担忧",
+          "sentence": 58
+        },
+        {
+          "lemma": "verletzen",
+          "key": "verletzt",
+          "forms": [
+            "verletzt"
+          ],
+          "pos": "verb",
+          "zh": "受伤的",
+          "sentence": 61
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "现在完成时",
+          "summary": "句49 „Auch Kinder sind dabei gestorben\"：sein + Partizip II 构成完成时，表示已发生的动作。",
+          "sentence": 49
+        }
+      ]
+    },
+    {
+      "title": "Treffen von der EU: Hilfe für die Ukraine",
+      "title_zh": "欧盟会议：对乌克兰的援助",
+      "from": 74,
+      "to": 112,
       "vocab": [
         {
           "lemma": "das Treffen, -",
@@ -188,10 +949,9 @@
           "forms": [
             "Treffen"
           ],
-          "pos": "Substantiv",
-          "zh": "会面、会议",
-          "example_de": "In Belgien ist heute ein wichtiges Treffen von der EU.",
-          "example_zh": "今天在比利时有一个重要的欧盟会议。"
+          "pos": "noun",
+          "zh": "会面，会议",
+          "sentence": 75
         },
         {
           "lemma": "der Krieg, -e",
@@ -199,67 +959,111 @@
           "forms": [
             "Krieg"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "战争",
-          "example_de": "Die EU-Länder sprechen über den Krieg von Russland gegen die Ukraine.",
-          "example_zh": "欧盟各国谈论俄罗斯对乌克兰的战争。"
+          "sentence": 76
         },
         {
-          "lemma": "sprechen über",
-          "key": "sprechen",
+          "lemma": "die Angst, -e",
+          "key": "angst",
           "forms": [
-            "sprechen"
+            "Angst"
           ],
-          "pos": "Verb",
-          "zh": "谈论",
-          "example_de": "Die EU-Länder sprechen über den Krieg von Russland gegen die Ukraine.",
-          "example_zh": "欧盟各国谈论俄罗斯对乌克兰的战争。"
+          "pos": "noun",
+          "zh": "恐惧",
+          "sentence": 85
         },
         {
-          "lemma": "helfen",
-          "key": "helfen",
+          "lemma": "der Winter, -",
+          "key": "winter",
           "forms": [
-            "helfen"
+            "Winter"
           ],
-          "pos": "Verb",
-          "zh": "帮助",
-          "example_de": "Die Länder beraten, wie die EU der Ukraine helfen kann.",
-          "example_zh": "各国商讨欧盟如何帮助乌克兰。"
+          "pos": "noun",
+          "zh": "冬天",
+          "sentence": 98
         },
         {
-          "lemma": "wichtig",
-          "key": "wichtig",
+          "lemma": "angreifen",
+          "key": "angegriffen",
           "forms": [
-            "wichtiges"
+            "angegriffen"
           ],
-          "pos": "Adjektiv",
-          "zh": "重要的",
-          "example_de": "In Belgien ist heute ein wichtiges Treffen von der EU.",
-          "example_zh": "今天在比利时有一个重要的欧盟会议。"
+          "pos": "verb",
+          "zh": "攻击",
+          "sentence": 94
         }
       ],
       "grammar_points": [
         {
-          "title": "W-Frage 从句（wie die EU helfen kann）",
-          "summary": "疑问词引导的从句中动词放句末，如 beraten, wie die EU der Ukraine helfen kann。",
-          "example_de": "Die Länder beraten, wie die EU der Ukraine helfen kann.",
-          "example_zh": "各国商讨欧盟如何帮助乌克兰。"
+          "title": "介词 seit + 时间（持续时间）",
+          "summary": "句105 „Er fährt seit vielen Jahren Bus in Kiew\"：seit + 名词表示从过去持续到现在的动作。",
+          "sentence": 105
+        }
+      ]
+    },
+    {
+      "title": "Das Wetter",
+      "title_zh": "天气",
+      "from": 113,
+      "to": 117,
+      "vocab": [
+        {
+          "lemma": "die Sonne, -",
+          "key": "sonne",
+          "forms": [
+            "Sonne"
+          ],
+          "pos": "noun",
+          "zh": "太阳",
+          "sentence": 115
+        },
+        {
+          "lemma": "die Wolke, -n",
+          "key": "wolken",
+          "forms": [
+            "Wolken"
+          ],
+          "pos": "noun",
+          "zh": "云",
+          "sentence": 116
+        },
+        {
+          "lemma": "der Regen",
+          "key": "regen",
+          "forms": [
+            "Regen"
+          ],
+          "pos": "noun",
+          "zh": "雨",
+          "sentence": 116
+        },
+        {
+          "lemma": "der Grad, -e",
+          "key": "grad",
+          "forms": [
+            "Grad"
+          ],
+          "pos": "noun",
+          "zh": "度（温度）",
+          "sentence": 117
         }
       ],
-      "paragraphs": [
-        "In Belgien ist heute ein wichtiges Treffen von der EU.",
-        "Die EU-Länder sprechen über den Krieg von Russland gegen die Ukraine.",
-        "Auch Präsident Selenskyj ist bei dem Treffen.",
-        "Die Länder beraten, wie die EU der Ukraine helfen kann."
-      ],
-      "translations": [
-        "今天在比利时有一个重要的欧盟会议。",
-        "欧盟各国谈论俄罗斯对乌克兰的战争。",
-        "泽连斯基总统也参加了会议。",
-        "各国商讨欧盟如何帮助乌克兰。"
-      ],
-      "background": ""
+      "grammar_points": [
+        {
+          "title": "es gibt + 第四格",
+          "summary": "句116 „überall viele Wolken und Regen\"：es gibt 表示\"有\"，后接第四格名词。",
+          "sentence": 116
+        }
+      ]
+    },
+    {
+      "title": "Tschüss, bis zum nächsten Mal",
+      "title_zh": "再见，下次见",
+      "from": 118,
+      "to": 119,
+      "vocab": [],
+      "grammar_points": []
     }
-  ],
-  "editorial_review": "德中句对、新闻事实、词形和语法例句已对照来源检查。"
+  ]
 }

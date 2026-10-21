@@ -1,265 +1,905 @@
 {
+  "schema": 2,
+  "content_kind": "broadcast",
   "date": "2026-10-15",
   "slug": "2026-10-15",
   "source": "einfach",
-  "source_label": "tagesschau · Einfache Sprache",
+  "source_label": "tagesschau in Einfacher Sprache",
   "level": "A2–B1",
-  "content_kind": "reading",
-  "adaptation": "根据官方新闻整理的简易德语短读，非节目逐字稿；中文译文与学习提示由 AI 生成。",
   "source_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1468.html",
+  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1666824.html",
   "source_text_sha256": "86433bbb561f4585698105178ede0ad9813584994c967c2683a3d17a0920e06b",
-  "generated_at": "2026-10-21T01:35:37.650414+02:00",
+  "generated_at": "2026-10-22T00:56:36.361879+02:00",
   "generation_model": "glm-5.3",
-  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1468.html",
-  "embed_url": "",
-  "news": [
+  "sentences": [
+    {
+      "de": "Willkommen zur tagesschau in Einfacher Sprache.",
+      "start": 10.64,
+      "end": 13.88,
+      "zh": "欢迎收看简单语言版每日新闻。"
+    },
+    {
+      "de": "Ich bin Michael Paweletz und das sind unsere Nachrichten.",
+      "start": 14.1,
+      "end": 18.1,
+      "zh": "我是米夏埃尔·帕韦莱茨，以下是我们的新闻。"
+    },
+    {
+      "de": "Und nun zur ersten Nachricht.",
+      "start": 37.44,
+      "end": 39.52,
+      "zh": "现在来看第一条新闻。"
+    },
+    {
+      "de": "Wenn sich Menschen verletzen oder wenn sie krank sind, dann rufen sie oft den Rettungsdienst oder fahren zur Notaufnahme.",
+      "start": 46.88,
+      "end": 57.06,
+      "zh": "当人们受伤或生病时，他们通常会呼叫急救服务或前往急诊室。"
+    },
+    {
+      "de": "Das ist eine Station im Krankenhaus für Notfälle, wie auf dem Foto.",
+      "start": 58.4,
+      "end": 63.8,
+      "zh": "急诊室是医院里处理紧急情况的部门，就像照片上那样。"
+    },
+    {
+      "de": "Einige Menschen machen das auch ohne Notfall.",
+      "start": 65.82,
+      "end": 70.18,
+      "zh": "有些人没有紧急情况也会去那里。"
+    },
+    {
+      "de": "Sie wissen nämlich nicht, zu welchem Arzt soll ich gehen.",
+      "start": 70.62,
+      "end": 75.78,
+      "zh": "因为他们不知道该去看哪位医生。"
+    },
+    {
+      "de": "Die Notaufnahmen in Deutschland sind deshalb sehr voll.",
+      "start": 76.9,
+      "end": 80.94,
+      "zh": "因此德国的急诊室非常拥挤。"
+    },
+    {
+      "de": "Viele Menschen müssen dann lange warten.",
+      "start": 81.42,
+      "end": 84.42,
+      "zh": "很多人必须等待很长时间。"
+    },
+    {
+      "de": "Und die Rettungsdienste haben viel zu tun.",
+      "start": 85.16,
+      "end": 88.08,
+      "zh": "急救服务也非常繁忙。"
+    },
+    {
+      "de": "Der Bundestag hat jetzt aber neue Regeln beschlossen.",
+      "start": 90.06,
+      "end": 94.22,
+      "zh": "但现在联邦议院通过了新规定。"
+    },
+    {
+      "de": "Es soll in Krankenhäusern Notfallzentren geben.",
+      "start": 94.62,
+      "end": 99.58,
+      "zh": "医院里将设立紧急中心。"
+    },
+    {
+      "de": "Dort wird dann entschieden, soll jemand zur Notaufnahme oder zu einem anderen Arzt gehen.",
+      "start": 100.58,
+      "end": 107.08,
+      "zh": "在那里会决定，某人应该去急诊室还是去看其他医生。"
+    },
+    {
+      "de": "Dazu kommt jetzt ein Film.",
+      "start": 108.98,
+      "end": 111.1,
+      "zh": "接下来请看一段影片。"
+    },
+    {
+      "de": "Dieses Krankenhaus in Hamburg hat schon ein Notfallzentrum.",
+      "start": 112.14,
+      "end": 116.98,
+      "zh": "这家位于汉堡的医院已经设有紧急中心。"
+    },
+    {
+      "de": "Wenn Menschen Hilfe brauchen, dann können sie sich hier melden.",
+      "start": 117.42,
+      "end": 121.86,
+      "zh": "当人们需要帮助时，可以到这里来登记。"
+    },
+    {
+      "de": "Die Mitarbeiter prüfen dann, ist es ein Notfall?",
+      "start": 121.9,
+      "end": 125.78,
+      "zh": "工作人员会检查：这是紧急情况吗？"
+    },
+    {
+      "de": "Welcher Arzt kann helfen?",
+      "start": 126.22,
+      "end": 128.06,
+      "zh": "哪位医生能提供帮助？"
+    },
+    {
+      "de": "Dieser Chef von den Ärzten im Krankenhaus sagt, es gibt jetzt viel weniger Menschen in der Notaufnahme.",
+      "start": 128.74,
+      "end": 136.62,
+      "zh": "这家医院的医生负责人说，现在急诊室里的人少了很多。"
+    },
+    {
+      "de": "Wir haben mehr Zeit für die Notfälle.",
+      "start": 137.02,
+      "end": 140.22,
+      "zh": "我们有更多时间处理紧急情况。"
+    },
+    {
+      "de": "Und es gibt auch eine Praxis mit Hausärzten.",
+      "start": 141.22,
+      "end": 145.54,
+      "zh": "这里还设有一个家庭医生诊所。"
+    },
+    {
+      "de": "Dort bekommen die Menschen ohne Notfälle Hilfe.",
+      "start": 145.78,
+      "end": 149.54,
+      "zh": "没有紧急情况的人可以在那里获得帮助。"
+    },
+    {
+      "de": "Der Bundestag hat jetzt entschieden, es soll die Notfallzentren in ganz Deutschland geben.",
+      "start": 150.58,
+      "end": 157.5,
+      "zh": "联邦议院现在决定，德国全境都将设立紧急中心。"
+    },
+    {
+      "de": "Und wenn Menschen per Telefon Notfälle melden, wird genauer geprüft, wo können sie behandelt werden.",
+      "start": 158.14,
+      "end": 165.7,
+      "zh": "而且当人们通过电话报告紧急情况时，会更仔细地核查他们可以在哪里接受治疗。"
+    },
+    {
+      "de": "Der Minister für Gesundheit ist Carsten Linnemann.",
+      "start": 166.46,
+      "end": 170.54,
+      "zh": "卫生部长是卡斯滕·林内曼。"
+    },
+    {
+      "de": "Er sagt, mit den neuen Regeln ist immer klar, wer bekommt wo Hilfe.",
+      "start": 170.7,
+      "end": 176.94,
+      "zh": "他说，有了新规定，谁在哪里获得帮助总是很清楚。"
+    },
+    {
+      "de": "Aber einige im Bundestag haben Zweifel an den Regeln.",
+      "start": 178.42,
+      "end": 183.46,
+      "zh": "但联邦议院里有一些人对这些规定表示怀疑。"
+    },
+    {
+      "de": "Dieser Politiker ist von den Grünen.",
+      "start": 183.7,
+      "end": 186.66,
+      "zh": "这位政治家来自绿党。"
+    },
+    {
+      "de": "Er sagt, wenn die Menschen weniger in die Notaufnahme gehen sollen, dann brauchen wir mehr Termine bei anderen Ärzten.",
+      "start": 187.06,
+      "end": 196.46,
+      "zh": "他说，如果要减少人们去急诊室，那我们就需要其他医生那里有更多的预约名额。"
+    },
+    {
+      "de": "Aber oft gibt es keine Termine.",
+      "start": 196.5,
+      "end": 199.58,
+      "zh": "但往往没有预约名额。"
+    },
+    {
+      "de": "Mit den neuen Regeln sollen Krankenhäuser, andere Ärzte und Rettungsdienste besser zusammenarbeiten.",
+      "start": 201.48,
+      "end": 209.3,
+      "zh": "根据新规定，医院、其他医生和急救服务将更好地合作。"
+    },
+    {
+      "de": "Nun zur nächsten Nachricht.",
+      "start": 211.08,
+      "end": 213.16,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "EU ist das kurze Wort für Europäische Union.",
+      "start": 217.74,
+      "end": 222.7,
+      "zh": "欧盟是欧洲联盟的简称。"
+    },
+    {
+      "de": "Die EU ist eine Gruppe von Ländern in Europa.",
+      "start": 222.74,
+      "end": 227.22,
+      "zh": "欧盟是欧洲一些国家组成的组织。"
+    },
+    {
+      "de": "Auch Deutschland gehört dazu.",
+      "start": 227.9,
+      "end": 229.98,
+      "zh": "德国也是其中一员。"
+    },
+    {
+      "de": "Sie arbeiten in der Politik und der Wirtschaft zusammen.",
+      "start": 230.42,
+      "end": 234.5,
+      "zh": "这些国家在政治和经济上合作。"
+    },
+    {
+      "de": "Jetzt gibt es wieder ein Treffen von den Chefs von den Ländern.",
+      "start": 235.34,
+      "end": 239.78,
+      "zh": "现在各国领导人再次举行会晤。"
+    },
+    {
+      "de": "Einige sind auf dem Foto.",
+      "start": 240.02,
+      "end": 242.1,
+      "zh": "照片上有其中几位。"
+    },
+    {
+      "de": "Sie sprechen auch über den Haushalt für mehrere Jahre.",
+      "start": 242.9,
+      "end": 247.3,
+      "zh": "他们还会商讨未来几年的预算。"
+    },
+    {
+      "de": "Der Haushalt ist das Geld von der EU.",
+      "start": 247.34,
+      "end": 251.38,
+      "zh": "预算是欧盟的资金。"
+    },
+    {
+      "de": "Es kommt von den Ländern.",
+      "start": 251.82,
+      "end": 253.62,
+      "zh": "这些钱来自各个成员国。"
+    },
+    {
+      "de": "Und der Haushalt regelt, wofür wird das Geld ausgegeben.",
+      "start": 254.06,
+      "end": 259.1,
+      "zh": "预算规定这些钱用于什么用途。"
+    },
+    {
+      "de": "Es gibt aber Streit über den Haushalt.",
+      "start": 260.02,
+      "end": 263.06,
+      "zh": "但围绕预算存在争议。"
+    },
+    {
+      "de": "Die EU will ihn schnell festlegen.",
+      "start": 263.42,
+      "end": 266.34,
+      "zh": "欧盟希望尽快确定预算。"
+    },
+    {
+      "de": "Manche Länder wollen aber noch warten.",
+      "start": 266.62,
+      "end": 269.34,
+      "zh": "但有些国家还想再等等。"
+    },
+    {
+      "de": "Und einige Länder wie Deutschland sagen, der Vorschlag für den Haushalt ist zu hoch.",
+      "start": 269.38,
+      "end": 277.58,
+      "zh": "而德国等一些国家表示，预算提案的金额太高了。"
+    },
+    {
+      "de": "Dazu kommt ein Film.",
+      "start": 277.98,
+      "end": 279.86,
+      "zh": "接下来请看一段影片。"
+    },
+    {
+      "de": "Bundeskanzler Merz sagt, die Verhandlungen über das Geld sind schwierig.",
+      "start": 280.94,
+      "end": 286.34,
+      "zh": "联邦总理默茨表示，关于资金的谈判很困难。"
+    },
+    {
+      "de": "Der Vorschlag von der EU für den Haushalt ist zu hoch.",
+      "start": 286.86,
+      "end": 291.22,
+      "zh": "欧盟提出的预算提案太高了。"
+    },
+    {
+      "de": "Die Länder können sich das nicht leisten.",
+      "start": 291.62,
+      "end": 294.26,
+      "zh": "各国负担不起。"
+    },
+    {
+      "de": "Ich glaube nicht, dass wir uns bei diesem Treffen einigen.",
+      "start": 294.3,
+      "end": 299.18,
+      "zh": "我认为我们不会在这次会议上达成一致。"
+    },
+    {
+      "de": "Wir beraten auch, welche Themen sind uns wichtig.",
+      "start": 299.5,
+      "end": 303.54,
+      "zh": "我们还在商讨哪些主题对我们重要。"
+    },
+    {
+      "de": "Ich finde, vor allem die Wirtschaft und die Verteidigung sind wichtig.",
+      "start": 304.26,
+      "end": 309.18,
+      "zh": "我认为，最重要的是经济和国防。"
+    },
+    {
+      "de": "Da machen wir Fortschritte, aber wir müssen noch besser werden.",
+      "start": 309.54,
+      "end": 313.98,
+      "zh": "我们在这些方面有进展，但还必须做得更好。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 314.22,
+      "end": 316.7,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "An allen Bahnhöfen in Deutschland gilt jetzt, Alkohol ist verboten.",
+      "start": 321.6,
+      "end": 326.32,
+      "zh": "现在德国所有火车站都适用这样的规定：禁止饮酒。"
+    },
+    {
+      "de": "D.h. man darf im Gebäude vom Bahnhof und auf den Bahnsteigen keinen Alkohol trinken.",
+      "start": 327.6,
+      "end": 334.44,
+      "zh": "也就是说，在火车站建筑内和站台上不得饮酒。"
+    },
+    {
+      "de": "Außer z.B. in Restaurants.",
+      "start": 336.5,
+      "end": 339.1,
+      "zh": "但在餐厅等场所除外。"
+    },
+    {
+      "de": "Das steht auf Schildern in den Bahnhöfen wie auf dem Foto.",
+      "start": 339.94,
+      "end": 344.7,
+      "zh": "这一规定写在火车站的指示牌上，就像照片上那样。"
+    },
+    {
+      "de": "Die Bahn will damit die Bahnhöfe sauberer und sicherer machen.",
+      "start": 345.18,
+      "end": 350.06,
+      "zh": "德国铁路公司希望借此让火车站更清洁、更安全。"
+    },
+    {
+      "de": "Bisher gab es das Verbot nur an manchen Bahnhöfen.",
+      "start": 350.26,
+      "end": 354.98,
+      "zh": "到目前为止，只有部分火车站有这项禁令。"
+    },
+    {
+      "de": "Dazu kommt jetzt ein Film.",
+      "start": 355.46,
+      "end": 357.3,
+      "zh": "现在还有一段影片。"
+    },
+    {
+      "de": "Am Hauptbahnhof von Köln ist Alkohol schon länger verboten.",
+      "start": 359.06,
+      "end": 364.5,
+      "zh": "在科隆主火车站，酒精饮料早就被禁止了。"
+    },
+    {
+      "de": "Diese Schilder hängen dort seit April.",
+      "start": 364.9,
+      "end": 367.7,
+      "zh": "这些牌子从四月起就挂在那里。"
+    },
+    {
+      "de": "Auch an anderen Bahnhöfen hat die Bahn das Verbot getestet.",
+      "start": 367.74,
+      "end": 372.86,
+      "zh": "德国铁路公司也在其他火车站试行过这项禁令。"
+    },
+    {
+      "de": "Das ist die Sprecherin von der Bahn.",
+      "start": 373.34,
+      "end": 375.94,
+      "zh": "这是铁路公司的女发言人。"
+    },
+    {
+      "de": "Sie sagt, an den Bahnhöfen mit dem Verbot gibt es weniger Streit, weniger Müll und die Menschen fühlen sich sicherer.",
+      "start": 376.1,
+      "end": 384.38,
+      "zh": "她说，在有禁令的火车站，争吵更少，垃圾更少，人们也感到更安全。"
+    },
+    {
+      "de": "In letzter Zeit gab es immer mehr Angriffe auf Mitarbeiter von der Bahn.",
+      "start": 384.42,
+      "end": 391.1,
+      "zh": "最近，对铁路公司员工的袭击越来越多。"
+    },
+    {
+      "de": "Die Bahn sagt, auch deshalb ist Alkohol jetzt verboten.",
+      "start": 391.34,
+      "end": 395.78,
+      "zh": "铁路公司说，这也是现在禁止酒精饮料的原因。"
+    },
+    {
+      "de": "Viele Menschen finden das Verbot gut.",
+      "start": 396.26,
+      "end": 399.06,
+      "zh": "很多人认为这项禁令很好。"
+    },
+    {
+      "de": "Dieser Mann arbeitet für eine Firma mit Restaurants und Geschäften im Bahnhof.",
+      "start": 400.1,
+      "end": 406.18,
+      "zh": "这名男子在一家于火车站经营餐厅和商店的公司工作。"
+    },
+    {
+      "de": "Er sagt, in manchen Geschäften kaufen die Menschen weniger Getränke.",
+      "start": 406.22,
+      "end": 413.18,
+      "zh": "他说，在一些商店，人们买的饮料变少了。"
+    },
+    {
+      "de": "Dadurch verdienen die Geschäfte weniger.",
+      "start": 413.86,
+      "end": 416.3,
+      "zh": "因此这些商店的收入减少了。"
+    },
+    {
+      "de": "Aber die Mitarbeiter und die Gäste sind sicherer.",
+      "start": 416.34,
+      "end": 420.06,
+      "zh": "但是员工和客人更安全了。"
+    },
+    {
+      "de": "Das ist am wichtigsten.",
+      "start": 420.42,
+      "end": 422.06,
+      "zh": "这是最重要的。"
+    },
+    {
+      "de": "Einige befürchten aber, wenn die Menschen nicht mehr im Bahnhof Alkohol trinken dürfen, dann machen sie es in den Straßen um den Bahnhof.",
+      "start": 423.54,
+      "end": 433.42,
+      "zh": "不过有些人担心，如果人们不能再在火车站喝酒，他们就会到火车站周围的街道上喝。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 434.38,
+      "end": 437.02,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "Albanien ist ein Land, unten rechts im Südosten von Europa.",
+      "start": 441.1,
+      "end": 446.02,
+      "zh": "阿尔巴尼亚是一个国家，位于欧洲东南部右下方。"
+    },
+    {
+      "de": "Dort gibt es gerade heftige Proteste.",
+      "start": 446.62,
+      "end": 449.26,
+      "zh": "那里目前正在发生激烈的抗议活动。"
+    },
+    {
+      "de": "Die Menschen sind nämlich unzufrieden mit der Regierung.",
+      "start": 449.62,
+      "end": 453.54,
+      "zh": "因为人们对政府感到不满。"
+    },
+    {
+      "de": "Zuerst haben die Menschen gesagt, wir wollen bessere Bedingungen zum Studieren.",
+      "start": 454.1,
+      "end": 459.78,
+      "zh": "起初，人们提出：我们想要更好的上大学条件。"
+    },
+    {
+      "de": "Z.B. soll es günstiger werden.",
+      "start": 460.18,
+      "end": 462.74,
+      "zh": "比如说，上大学应该变得更便宜。"
+    },
+    {
+      "de": "Jetzt sind die Proteste aber viel größer geworden.",
+      "start": 463.3,
+      "end": 466.82,
+      "zh": "但现在抗议活动的规模变得大得多。"
+    },
+    {
+      "de": "Viele Menschen fordern den Rücktritt vom Chef der Regierung.",
+      "start": 467.66,
+      "end": 471.86,
+      "zh": "许多人要求政府首脑下台。"
+    },
+    {
+      "de": "Dazu kommt ein Film.",
+      "start": 472.38,
+      "end": 473.94,
+      "zh": "接下来是一段影片。"
+    },
+    {
+      "de": "Bei den Protesten gibt es Gewalt.",
+      "start": 475.1,
+      "end": 477.46,
+      "zh": "抗议活动中出现了暴力。"
+    },
+    {
+      "de": "Einige Menschen werfen brennende Gegenstände und Steine auch vor dem Parlament.",
+      "start": 477.78,
+      "end": 484.22,
+      "zh": "一些人在议会前投掷燃烧物和石块。"
+    },
+    {
+      "de": "Die Polizei setzt Gas ein.",
+      "start": 484.26,
+      "end": 487.7,
+      "zh": "警察使用了催泪瓦斯。"
+    },
+    {
+      "de": "Es reizt die Augen.",
+      "start": 488.02,
+      "end": 489.38,
+      "zh": "它会刺激眼睛。"
+    },
+    {
+      "de": "Die Proteste und die Gewalt dauern schon zwei Tage.",
+      "start": 489.86,
+      "end": 494.02,
+      "zh": "抗议和暴力已经持续两天了。"
+    },
+    {
+      "de": "Und das waren unsere Nachrichten.",
+      "start": 495.86,
+      "end": 498.22,
+      "zh": "以上就是我们的新闻。"
+    },
+    {
+      "de": "Bundestag.",
+      "start": 498.86,
+      "end": 499.86,
+      "zh": "联邦议院。"
+    },
+    {
+      "de": "Und jetzt kommt das Wetter.",
+      "start": 515.1,
+      "end": 517.58,
+      "zh": "现在来看天气。"
+    },
+    {
+      "de": "Zuerst Nebel unten im Süden und in der Mitte.",
+      "start": 518.74,
+      "end": 522.58,
+      "zh": "首先，南部和中部地区有雾。"
+    },
+    {
+      "de": "Danach sonniges Herbstwetter.",
+      "start": 522.9,
+      "end": 524.98,
+      "zh": "之后是晴朗的秋季天气。"
+    },
+    {
+      "de": "Oben links im Nordwesten mehr Wolken und gegen Abend Regen.",
+      "start": 525.78,
+      "end": 530.54,
+      "zh": "西北部上空云较多，傍晚前后有雨。"
+    },
+    {
+      "de": "Es werden 11 bis 24 Grad.",
+      "start": 530.78,
+      "end": 533.9,
+      "zh": "气温为11至24度。"
+    },
+    {
+      "de": "Das war die tagesschau in Einfacher Sprache.",
+      "start": 534.68,
+      "end": 537.76,
+      "zh": "以上就是简单语言版的每日新闻。"
+    },
+    {
+      "de": "Tschüss, bis zum nächsten Mal.",
+      "start": 538.44,
+      "end": 540.6,
+      "zh": "再见，下次见。"
+    }
+  ],
+  "stories": [
+    {
+      "title": "Willkommen zur tagesschau",
+      "title_zh": "欢迎收看简单语言新闻",
+      "from": 0,
+      "to": 2,
+      "vocab": [],
+      "grammar_points": []
+    },
     {
       "title": "Neue Regeln für Notaufnahmen",
-      "title_zh": "急诊室的新规定",
+      "title_zh": "急诊室新规定",
+      "from": 3,
+      "to": 30,
       "vocab": [
         {
           "lemma": "die Notaufnahme, -n",
           "key": "notaufnahme",
           "forms": [
-            "Notaufnahmen"
+            "Notaufnahme"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "急诊室",
-          "example_de": "Die Notaufnahmen in Deutschland sind sehr voll, viele Menschen warten lange.",
-          "example_zh": "德国的急诊室非常拥挤，很多人要等很久。"
+          "sentence": 3
         },
         {
-          "lemma": "warten",
-          "key": "warten",
+          "lemma": "sich verletzen",
+          "key": "verletzen",
           "forms": [
-            "warten"
+            "verletzen"
           ],
-          "pos": "Verb",
-          "zh": "等待",
-          "example_de": "Die Notaufnahmen in Deutschland sind sehr voll, viele Menschen warten lange.",
-          "example_zh": "德国的急诊室非常拥挤，很多人要等很久。"
+          "pos": "verb",
+          "zh": "受伤",
+          "sentence": 3
+        },
+        {
+          "lemma": "der Notfall, -fälle",
+          "key": "notfälle",
+          "forms": [
+            "Notfälle"
+          ],
+          "pos": "noun",
+          "zh": "紧急情况，急诊病例",
+          "sentence": 4
         },
         {
           "lemma": "beschließen",
-          "key": "beschliessen",
+          "key": "beschlossen",
           "forms": [
             "beschlossen"
           ],
-          "pos": "Verb",
-          "zh": "决定、通过",
-          "example_de": "Der Bundestag hat jetzt beschlossen: Krankenhäuser bekommen Notfallzentren.",
-          "example_zh": "联邦议院现在决定：医院将设立急救中心。"
+          "pos": "verb",
+          "zh": "决定，决议",
+          "sentence": 10
         },
         {
-          "lemma": "das Krankenhaus, ¨-er",
-          "key": "krankenhaus",
+          "lemma": "entscheiden",
+          "key": "entschieden",
           "forms": [
-            "Krankenhäuser"
+            "entschieden"
           ],
-          "pos": "Substantiv",
-          "zh": "医院",
-          "example_de": "Der Bundestag hat jetzt beschlossen: Krankenhäuser bekommen Notfallzentren.",
-          "example_zh": "联邦议院现在决定：医院将设立急救中心。"
-        },
-        {
-          "lemma": "zusammenarbeiten",
-          "key": "zusammenarbeiten",
-          "forms": [
-            "zusammenarbeiten"
-          ],
-          "pos": "Verb",
-          "zh": "合作",
-          "example_de": "Krankenhäuser, Ärzte und Rettungsdienste sollen besser zusammenarbeiten.",
-          "example_zh": "医院、医生和急救服务应该更好地合作。"
+          "pos": "verb",
+          "zh": "决定，裁决",
+          "sentence": 12
         }
       ],
       "grammar_points": [
         {
-          "title": "被动语态 wird entschieden",
-          "summary": "被动语态表示动作发生在某人身上，不强调是谁做的。构成：werden/wird + 过去分词，例：Dort wird entschieden（在那里被做出决定）。",
-          "example_de": "Dort wird entschieden, ob jemand zur Notaufnahme oder zu einem anderen Arzt geht.",
-          "example_zh": "在那里决定，一个人是去急诊室还是去看别的医生。"
+          "title": "被动语态：werden + Partizip II",
+          "summary": "„Dort wird dann entschieden“ 是被动语态：werden（按人称变位）+ 过去分词，表示动作被完成，主语不是动作执行者。",
+          "sentence": 12
         }
-      ],
-      "paragraphs": [
-        "Die Notaufnahmen in Deutschland sind sehr voll, viele Menschen warten lange.",
-        "Der Bundestag hat jetzt beschlossen: Krankenhäuser bekommen Notfallzentren.",
-        "Dort wird entschieden, ob jemand zur Notaufnahme oder zu einem anderen Arzt geht.",
-        "Krankenhäuser, Ärzte und Rettungsdienste sollen besser zusammenarbeiten."
-      ],
-      "translations": [
-        "德国的急诊室非常拥挤，很多人要等很久。",
-        "联邦议院现在决定：医院将设立急救中心。",
-        "在那里决定，一个人是去急诊室还是去看别的医生。",
-        "医院、医生和急救服务应该更好地合作。"
-      ],
-      "background": ""
+      ]
     },
     {
-      "title": "Streit über den EU-Haushalt",
-      "title_zh": "关于欧盟预算的争执",
+      "title": "EU: Beratungen über Haushalt",
+      "title_zh": "欧盟：预算磋商",
+      "from": 31,
+      "to": 53,
       "vocab": [
-        {
-          "lemma": "der Haushalt, -e",
-          "key": "haushalt",
-          "forms": [
-            "Haushalt"
-          ],
-          "pos": "Substantiv",
-          "zh": "预算",
-          "example_de": "Die Chefs von den EU-Ländern treffen sich und sprechen über den Haushalt.",
-          "example_zh": "欧盟各国领导人会面，讨论预算问题。"
-        },
         {
           "lemma": "das Treffen, -",
           "key": "treffen",
           "forms": [
             "Treffen"
           ],
-          "pos": "Substantiv",
-          "zh": "会面、会议",
-          "example_de": "Die Chefs von den EU-Ländern treffen sich und sprechen über den Haushalt.",
-          "example_zh": "欧盟各国领导人会面，讨论预算问题。"
+          "pos": "noun",
+          "zh": "会面，会议",
+          "sentence": 36
         },
         {
-          "lemma": "ausgeben",
-          "key": "ausgeben",
+          "lemma": "der Haushalt, -e",
+          "key": "haushalt",
           "forms": [
-            "ausgegeben"
+            "Haushalt"
           ],
-          "pos": "Verb",
-          "zh": "花费、支出",
-          "example_de": "Der Haushalt regelt, wofür das Geld von der EU ausgegeben wird.",
-          "example_zh": "预算规定欧盟的钱用于什么。"
+          "pos": "noun",
+          "zh": "预算",
+          "sentence": 38
         },
         {
-          "lemma": "der Vorschlag, ¨-e",
-          "key": "vorschlag",
+          "lemma": "die Verhandlung, -en",
+          "key": "verhandlungen",
           "forms": [
-            "Vorschlag"
+            "Verhandlungen"
           ],
-          "pos": "Substantiv",
-          "zh": "提案、建议",
-          "example_de": "Deutschland sagt: Der Vorschlag für den Haushalt ist zu hoch.",
-          "example_zh": "德国说：预算提案太高了。"
+          "pos": "noun",
+          "zh": "谈判，协商",
+          "sentence": 47
         },
         {
           "lemma": "sich einigen",
-          "key": "sich_einigen",
+          "key": "einigen",
           "forms": [
-            "einigt"
+            "einigen"
           ],
-          "pos": "Verb",
+          "pos": "verb",
           "zh": "达成一致",
-          "example_de": "Bundeskanzler Merz glaubt nicht, dass man sich beim Treffen einigt.",
-          "example_zh": "联邦总理默茨认为这次会议上不会达成一致。"
+          "sentence": 50
         }
       ],
       "grammar_points": [
         {
-          "title": "zu + 形容词",
-          "summary": "zu 放在形容词前表示\"太……\"，例：Der Vorschlag ist zu hoch（提案太高了）。",
-          "example_de": "Deutschland sagt: Der Vorschlag für den Haushalt ist zu hoch.",
-          "example_zh": "德国说：预算提案太高了。"
+          "title": "zu + 形容词（太……）",
+          "summary": "„Der Vorschlag ... ist zu hoch“ 中 zu 放在形容词前，表示程度过分：太贵/太高。",
+          "sentence": 48
         }
-      ],
-      "paragraphs": [
-        "Die Chefs von den EU-Ländern treffen sich und sprechen über den Haushalt.",
-        "Der Haushalt regelt, wofür das Geld von der EU ausgegeben wird.",
-        "Deutschland sagt: Der Vorschlag für den Haushalt ist zu hoch.",
-        "Bundeskanzler Merz glaubt nicht, dass man sich beim Treffen einigt."
-      ],
-      "translations": [
-        "欧盟各国领导人会面，讨论预算问题。",
-        "预算规定欧盟的钱用于什么。",
-        "德国说：预算提案太高了。",
-        "联邦总理默茨认为这次会议上不会达成一致。"
-      ],
-      "background": ""
+      ]
     },
     {
-      "title": "Kein Alkohol an Bahnhöfen",
-      "title_zh": "火车站禁酒",
+      "title": "Alkohol ist an Bahnhöfen verboten",
+      "title_zh": "火车站禁止饮酒",
+      "from": 54,
+      "to": 75,
       "vocab": [
-        {
-          "lemma": "der Bahnhof, ¨-e",
-          "key": "bahnhof",
-          "forms": [
-            "Bahnhöfen",
-            "Bahnhöfe"
-          ],
-          "pos": "Substantiv",
-          "zh": "火车站",
-          "example_de": "An allen Bahnhöfen in Deutschland ist Alkohol jetzt verboten.",
-          "example_zh": "现在德国所有火车站都禁止饮酒。"
-        },
         {
           "lemma": "verboten",
           "key": "verboten",
           "forms": [
             "verboten"
           ],
-          "pos": "Adjektiv",
+          "pos": "adj",
           "zh": "被禁止的",
-          "example_de": "An allen Bahnhöfen in Deutschland ist Alkohol jetzt verboten.",
-          "example_zh": "现在德国所有火车站都禁止饮酒。"
+          "sentence": 55
         },
         {
           "lemma": "der Bahnsteig, -e",
-          "key": "bahnsteig",
+          "key": "bahnsteigen",
           "forms": [
             "Bahnsteigen"
           ],
-          "pos": "Substantiv",
+          "pos": "noun",
           "zh": "站台",
-          "example_de": "Man darf im Gebäude und auf den Bahnsteigen keinen Alkohol trinken, außer in Restaurants.",
-          "example_zh": "在车站建筑和站台上不许饮酒，但餐厅内除外。"
+          "sentence": 56
         },
         {
-          "lemma": "sauber",
-          "key": "sauber",
+          "lemma": "die Bahn",
+          "key": "bahn",
           "forms": [
-            "sauberer"
+            "Bahn"
           ],
-          "pos": "Adjektiv",
-          "zh": "干净的",
-          "example_de": "Die Bahn will die Bahnhöfe sauberer und sicherer machen.",
-          "example_zh": "铁路公司想让火车站更干净、更安全。"
+          "pos": "noun",
+          "zh": "铁路，德国铁路公司",
+          "sentence": 59
         },
         {
-          "lemma": "der Müll",
-          "key": "muell",
+          "lemma": "das Verbot, -e",
+          "key": "verbot",
           "forms": [
-            "Müll"
+            "Verbot"
           ],
-          "pos": "Substantiv",
-          "zh": "垃圾",
-          "example_de": "Die Bahn sagt: Mit dem Verbot gibt es weniger Streit und weniger Müll.",
-          "example_zh": "铁路公司说：有了禁令，争吵和垃圾都变少了。"
+          "pos": "noun",
+          "zh": "禁令",
+          "sentence": 60
         }
       ],
       "grammar_points": [
         {
-          "title": "kein + 名词：否定冠词",
-          "summary": "kein 用来否定带不定冠词或无冠词的名词。Alkohol 是阳性不可数名词，这里作宾语，用第四格 keinen。",
-          "example_de": "Man darf im Gebäude und auf den Bahnsteigen keinen Alkohol trinken, außer in Restaurants.",
-          "example_zh": "在车站建筑和站台上不许饮酒，但餐厅内除外。"
+          "title": "dürfen 的否定：nicht dürfen（不许）",
+          "summary": "„man darf ... keinen Alkohol trinken“ 用 dürfen 的否定表示禁止：不允许做某事；这里 keinen 是 ein 的否定第四格。",
+          "sentence": 56
+        }
+      ]
+    },
+    {
+      "title": "Heftige Proteste in Albanien",
+      "title_zh": "阿尔巴尼亚爆发激烈抗议",
+      "from": 76,
+      "to": 89,
+      "vocab": [
+        {
+          "lemma": "heftig",
+          "key": "heftige",
+          "forms": [
+            "heftige"
+          ],
+          "pos": "adj",
+          "zh": "激烈的，猛烈的",
+          "sentence": 78
+        },
+        {
+          "lemma": "der Protest, -e",
+          "key": "proteste",
+          "forms": [
+            "Proteste"
+          ],
+          "pos": "noun",
+          "zh": "抗议",
+          "sentence": 78
+        },
+        {
+          "lemma": "die Regierung, -en",
+          "key": "regierung",
+          "forms": [
+            "Regierung"
+          ],
+          "pos": "noun",
+          "zh": "政府",
+          "sentence": 79
+        },
+        {
+          "lemma": "der Rücktritt",
+          "key": "rücktritt",
+          "forms": [
+            "Rücktritt"
+          ],
+          "pos": "noun",
+          "zh": "辞职，下台",
+          "sentence": 83
         }
       ],
-      "paragraphs": [
-        "An allen Bahnhöfen in Deutschland ist Alkohol jetzt verboten.",
-        "Man darf im Gebäude und auf den Bahnsteigen keinen Alkohol trinken, außer in Restaurants.",
-        "Die Bahn will die Bahnhöfe sauberer und sicherer machen.",
-        "Die Bahn sagt: Mit dem Verbot gibt es weniger Streit und weniger Müll."
+      "grammar_points": [
+        {
+          "title": "比较级 größer",
+          "summary": "„die Proteste sind ... größer geworden“ 用比较级 größer（原级 groß）加 geworden 表示变得更大；viel größer 中的 viel 加强比较级。",
+          "sentence": 82
+        }
+      ]
+    },
+    {
+      "title": "Und das waren unsere Nachrichten",
+      "title_zh": "今天的新闻就到这里",
+      "from": 90,
+      "to": 92,
+      "vocab": [],
+      "grammar_points": []
+    },
+    {
+      "title": "Das Wetter",
+      "title_zh": "天气",
+      "from": 93,
+      "to": 96,
+      "vocab": [
+        {
+          "lemma": "der Nebel",
+          "key": "nebel",
+          "forms": [
+            "Nebel"
+          ],
+          "pos": "noun",
+          "zh": "雾",
+          "sentence": 93
+        },
+        {
+          "lemma": "sonnig",
+          "key": "sonniges",
+          "forms": [
+            "sonniges"
+          ],
+          "pos": "adj",
+          "zh": "晴朗的",
+          "sentence": 94
+        },
+        {
+          "lemma": "der Regen",
+          "key": "regen",
+          "forms": [
+            "Regen"
+          ],
+          "pos": "noun",
+          "zh": "雨",
+          "sentence": 95
+        }
       ],
-      "translations": [
-        "现在德国所有火车站都禁止饮酒。",
-        "在车站建筑和站台上不许饮酒，但餐厅内除外。",
-        "铁路公司想让火车站更干净、更安全。",
-        "铁路公司说：有了禁令，争吵和垃圾都变少了。"
-      ],
-      "background": ""
+      "grammar_points": []
+    },
+    {
+      "title": "Tschüss, bis zum nächsten Mal",
+      "title_zh": "再见，下次见",
+      "from": 97,
+      "to": 98,
+      "vocab": [],
+      "grammar_points": []
     }
-  ],
-  "editorial_review": "德中句对、新闻事实、词形和语法例句已对照来源检查。"
+  ]
 }
