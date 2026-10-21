@@ -132,6 +132,33 @@ function BigPlay() {
   );
 }
 
+/* Story starts as ticks on the timeline; clicking one jumps to that story. */
+function Chapters({ duration }: { duration: number }) {
+  const { lesson } = useLesson();
+  const playFrom = usePlayer(s => s.playFrom);
+  if (!duration) return null;
+  return (
+    <div className="pointer-events-none absolute inset-x-0 top-1/2 z-10 h-0">
+      {lesson.stories.map((st, k) => {
+        const i = lesson.sentences.slice(st.from, st.to + 1).findIndex(x => x.start != null);
+        const t = i >= 0 ? lesson.sentences[st.from + i].start! : null;
+        if (t == null || k === 0) return null;
+        return (
+          <Tip key={k} label={`${String(k + 1).padStart(2, '0')} · ${st.title}`}>
+            <button
+              type="button"
+              aria-label={`跳到第 ${k + 1} 段：${st.title}`}
+              onClick={() => playFrom(st.from + i)}
+              className="pointer-events-auto absolute top-0 h-3 w-[3px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-bg ring-1 ring-bg transition hover:h-4 hover:bg-accent"
+              style={{ left: `${(t / duration) * 100}%` }}
+            />
+          </Tip>
+        );
+      })}
+    </div>
+  );
+}
+
 export function Transport({ compact = false }: { compact?: boolean }) {
   const p = usePlayer();
   const prefs = usePrefs();
@@ -149,6 +176,8 @@ export function Transport({ compact = false }: { compact?: boolean }) {
         <Tip label="重听这一句" kbd="R"><Button variant="ghost" size="icon" aria-label="重听这一句" onClick={p.replay}><RotateCcw /></Button></Tip>
         <span className="ml-auto font-mono text-xs tabular text-muted">{clock(p.time)} <span className="text-faint">/ {clock(p.duration || 0)}</span></span>
       </div>
+      <div className="relative">
+      <Chapters duration={p.duration} />
       <Slider
         value={[p.duration ? (p.time / p.duration) * 1000 : 0]}
         max={1000}
@@ -157,6 +186,7 @@ export function Transport({ compact = false }: { compact?: boolean }) {
         onValueChange={([v]) => p.seekRatio(v / 1000)}
         aria-label="播放进度"
       />
+      </div>
       {!compact && (
         <div className="flex flex-wrap items-center gap-2">
           <Segmented<PlayMode>

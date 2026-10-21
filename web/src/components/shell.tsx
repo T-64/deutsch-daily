@@ -40,7 +40,7 @@ export function TopBar({ children, className, transparent = false }: { children?
         className,
       )}
     >
-      <div className="mx-auto flex h-full max-w-[1480px] items-center gap-3 px-4 sm:px-6 lg:px-8">{children}</div>
+      <div className="relative mx-auto flex h-full max-w-[1480px] items-center gap-3 px-4 sm:px-6 lg:px-8">{children}</div>
     </header>
   );
 }

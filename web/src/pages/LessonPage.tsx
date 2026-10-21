@@ -1,4 +1,5 @@
 import { ArrowLeft, BookOpen, ExternalLink, Pause, Play, Repeat1, SkipBack, SkipForward, StepForward } from 'lucide-react';
+import { AnimatePresence, motion } from 'motion/react';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
 import { Footer, Logo, SettingsMenu, TopBar } from '@/components/shell';
@@ -90,6 +91,35 @@ function Masthead() {
         )}
       </p>
       {lesson.note && <p className="mt-4 border-l-2 border-line-2 pl-3 text-xs leading-relaxed text-muted">{lesson.note}</p>}
+    </div>
+  );
+}
+
+function NowPlaying() {
+  const { lesson, storyOf } = useLesson();
+  const active = usePlayer(s => s.active);
+  const started = usePlayer(s => s.started);
+  const playing = usePlayer(s => s.playing);
+  const k = storyOf(active);
+  const story = lesson.stories[k];
+  return (
+    <div className="pointer-events-none absolute left-1/2 hidden -translate-x-1/2 lg:block">
+      <AnimatePresence mode="wait">
+        {started && story && (
+          <motion.p
+            key={k}
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            className="flex max-w-[36vw] items-center gap-2.5 text-[13px] text-fg-2"
+          >
+            <span className={cn('size-1.5 shrink-0 rounded-full bg-accent', playing && 'animate-pulse')} />
+            <span className="font-mono text-[11px] tabular text-faint">{String(k + 1).padStart(2, '0')}/{String(lesson.stories.length).padStart(2, '0')}</span>
+            <span lang="de" className="truncate font-medium">{story.title}</span>
+          </motion.p>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -202,6 +232,7 @@ function Body() {
           <Button variant="ghost" size="icon" asChild aria-label="全部课程"><a href="index.html"><ArrowLeft /></a></Button>
         </Tip>
         <Logo className="max-sm:hidden" />
+        <NowPlaying />
         <div className="ml-auto flex items-center gap-2">
           <div className="max-lg:hidden"><ZhToggle /></div>
           <SettingsMenu />
