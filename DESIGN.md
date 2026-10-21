@@ -6,172 +6,135 @@
 
 ## 1. 产品一句话
 
-A2–B1 中文母语学习者的德语新闻精读站：每天三条 tagesschau in Einfacher Sprache 短读，**先读德语、再看中文**，点词查义，生词进 Anki。纯静态、零登录、零后端。
+跟着每天的 **tagesschau in Einfacher Sprache** 学德语（A2–B1）：原声视频 + 官方字幕逐句同步，逐句中文、跟读、单句循环、点词查义、生词导出 Anki。纯静态、零登录、零后端。
+
+**一期只有一份文本**：官方字幕原句（带时间轴）。AI 只负责逐句中文、分段、词汇和语法，不改写、不另造一份课文。
 
 ## 2. 架构
 
 ```
-config/reading-sources.json  来源白名单
+config/reading-sources.json   来源白名单
         │
-scripts/update_readings.py   抓官方文字 → AI 生成短读 → 校验 → 原子写入（逐日隔离失败）
-        │                    ├─ scripts/ingest_episode.py   解析节目页 / EBU-TT 字幕
-        │                    └─ scripts/validate-content.py 内容 schema 与短读规则
+scripts/update_readings.py    抓节目页 + 官方字幕 → 切句（subtitle_sentences.py）→ AI 逐句中文/分段/词汇/语法
+        │                     → validate-content.py → 原子写入；逐日隔离失败
+        │   运行：GitHub Actions（update-lessons.yml，每天 05:17 UTC，密钥在 Secrets）或本机 Hermes
         ▼
-data/content/YYYY-MM-DD.json 学习内容（唯一真源）
+data/content/YYYY-MM-DD.json  schema 2 "broadcast"（唯一真源）
 data/meta|transcripts|subtitles  来源身份与证据
         │
-build.py                     确定性渲染，不调用 AI
-        │  templates/*.html + static/*  →  docs/*.html + docs/assets/*
+build.py（Python，无 AI，无 Node）
+        │  读 docs/app/index.html（Vite 构建好的外壳），每页注入 <script id="dd-data">
+        │  → docs/index.html · open.html · about.html · YYYY-MM-DD.html
+        │  本地课程工坊仍是旧模板：templates/studio.html + static/ → docs/studio.html + docs/assets/
         ▼
-scripts/publish.sh           只提交所选日期的数据与页面 + 入口页 + assets，直接推 main
-        ▼
-GitHub Pages (main:/docs)
+scripts/publish.sh → main → GitHub Pages (/docs)
+
+web/（Vite + React + TS）── npm run build ──▶ docs/app/（提交进仓库）
 ```
 
 ### 不变量
 
-1. **`docs/` 永远是 `python3 build.py` 的产物。** 不手改 `docs/`；CI 会重建并在 `docs/` 有差异时失败。改模板或 `static/` 后跑全站构建并一起提交。
-2. **数据与版式分离。** AI 只写 `data/content/*.json`；HTML 只来自 `templates/`，样式与交互只来自 `static/`。
-3. **一天出错不连累其他天。** 更新器跳过出错的日期、保留它已有的课程，照常发布其他日期，最后以非零退出码报告。
-4. **20 点版本已退役。** 原始数据保留在 `data/`，不再构建页面。三期手工旧页（7/31、8/3、8/11）冻结，不重建。
+1. **`docs/` 永远是构建产物。** 改 `web/` → `cd web && npm run build`；然后 `python3 build.py`。CI 会重新构建并在 `docs/` 有差异时失败。
+2. **日更只需要 Python。** `docs/app/` 已提交，`build.py` 只往外壳里塞数据；Node 只在改前端时需要。
+3. **一份文本。** 课程页只展示官方字幕句子；AI 内容挂在句子上（中文、词汇例句用句子下标）。
+4. **一天出错不连累其他天。** 更新器跳过出错的日期、保留已有课程，照常发布其他日期，最后非零退出。
+5. **密钥只在环境变量。** `GLM_API_KEY` 只注入 Actions 里生成那一步；`.env` 被 `.gitignore` 忽略；仓库里没有、也不能有密钥。
+6. **20 点版本已退役**，数据保留不构建；三期手工旧页（7/31、8/3、8/11）冻结。
 
-### 模块
+### 课程数据
 
-| 文件 | 职责 |
+`build.lesson_payload(doc)` 把三种历史格式统一成前端的 `Lesson`（`web/src/lib/data.ts`）：
+
+| content_kind | 来源 | 句子 | 中文 |
+|---|---|---|---|
+| `broadcast`（现行） | 官方字幕切句 | 自带时间 | AI 逐句 |
+| `video`（2026-08/09） | 编辑过的字幕段落，按句与字幕对齐 | 对齐得上的有时间 | 有 |
+| `reading`（2026-10 短读，待重生成） | 官方字幕（不再显示 AI 改写） | 有时间 | 暂无，页面提示 |
+
+`Lesson = { slug, date, show, level, kind, note, source_url, video{mp4,embed,page}, duration, sentences[{de,zh,start,end}], stories[{title,title_zh,from,to,vocab[],grammar[],background}], gloss, form_to_key, phrases }`。`stories` 的 `from..to` 连续覆盖全部句子。
+
+### 前端模块（`web/src`）
+
+| 路径 | 职责 |
 |---|---|
-| `build.py` | 渲染单课（`render`）、首页/入口页（`build_index`）、复制 assets（`copy_assets`）、模板片段（`page`）；句子切分与中德配对、字幕对齐（旧视频课）、词义表 |
-| `scripts/sources.py` | 来源定义与 slug 规则（`YYYY-MM-DD` = einfach） |
-| `scripts/update_readings.py` | 日更入口：白名单抓取、AI 生成、校验、发布 |
-| `scripts/validate-content.py` | 内容校验（短读：3 条、每条 3–4 句、90–180 词、词形必须出现在原文） |
-| `static/site.css` | 全站设计令牌与基础组件 |
-| `static/core.js` | `window.DD`：存储、偏好、主题、设置面板、toast |
-| `static/reader.css` / `reader.js` | 课程页版式与交互 |
-| `static/anki.js` | `window.DDAnki.exportApkg(words, status)`，按需从 jsDelivr 加载 sql.js |
-| `static/studio.js` | 本地课程工坊（字幕解析与本地课程） |
-
-### 模板片段
-
-`build.page(name, **repl)` 先替换共享片段，再替换页面占位符：
-
-| 占位符 | 内容 |
-|---|---|
-| `__HEAD__` | charset、viewport、`color-scheme`、首屏主题脚本（避免闪烁）、`assets/site.css?v=…` |
-| `__CORE__` | `assets/core.js?v=…` |
-| `__FOOT__` | 全站页脚 |
-| `__V__` | `static/` 内容哈希（10 位），用于缓存失效 |
-| `__ITEMS__` / `__PAYLOAD__` / `__DATE__` | 首页课程列表 / 课程数据 / 日期 |
-
-课程页的数据写成 `<script>const DATA = {...};\n</script>`，测试依赖这个格式。
+| `main.tsx` | 读 `#dd-data`，按 `page` 渲染 Home / Lesson / Open / About |
+| `lib/store.ts` | Zustand：偏好（persist `dd-prefs-v3`）、生词本（兼容旧键 `dd-basket`/`dd-user-gloss`，跨标签同步） |
+| `lib/player.ts` | Zustand 播放引擎：注册唯一 `<video>`，句子分段、当前句、连续/逐句/循环、上一句/下一句/重听 |
+| `lib/words.ts` | 德语分词（含多词短语）与释义查找 |
+| `lib/anki.ts` | `.apkg` 导出（按需加载 sql.js） |
+| `features/lesson/*` | Player（含环境光）、Transport、Transcript（歌词式字幕）、WordCard（查词弹层）、Study（本段词汇语法 + 生词本） |
+| `components/ui/*` | shadcn 风格基础组件（Radix + cva）：Button、Tabs、Segmented、Slider、Tooltip、Drawer（vaul） |
+| `components/shell.tsx` | 顶栏、Logo、设置菜单（主题/字号）、页脚 |
 
 ---
 
-## 3. 界面设计
+## 3. 界面设计 —「影院」
 
 ### 原则
 
-1. **安静。** 页面上最显眼的永远是德语正文。没有装饰性色块、渐变、卡片阴影堆叠；层次靠字号、字重、留白和细线。
-2. **先盲读。** 译文默认隐藏。每句末一个极小的「译」按钮显示单句中文；顶栏「译文」或键盘 `T` 切换全部译文，并被记住。
-3. **点词是核心。** 每个德语词都可点；本篇重点词有细下划线，收进生词本的词有柔和高亮。释义卡在桌面贴着单词弹出，在手机上是底部抽屉。
-4. **桌面双栏，手机单栏。** 桌面：正文栏（约 40rem）+ 300px 侧栏（目录、本篇词汇/语法、生词本），侧栏随滚动固定。≤1080px：侧栏变成底部抽屉，由顶栏「词汇」「生词本」打开。
-5. **零依赖。** 不用 Web 字体、不用框架、不用构建工具。系统字体栈，原生 HTML/CSS/JS。
+1. **声音是主角。** 课程页像音乐 App 的逐句歌词：当前句全亮、略放大，已播/未播的句子退到 34% 透明度，跟着声音滚到视野上三分之一处。
+2. **一屏完成跟练。** 桌面：左栏视频 + 播放控制 + 本段学习，右栏字幕；中间分隔条可拖动（react-resizable-panels，记住比例）。手机：视频吸顶，字幕在下，底部固定播放条，学习面板是底部抽屉。
+3. **先听后看。** 中文三档：盲听（全隐藏，可逐句点开）/ 当前句（默认）/ 全部；`T` 循环切换。
+4. **点词即查。** 任意单词可点；查词时自动暂停，关掉卡片自动继续。
+5. **克制的动效。** Motion 只用于：入场（ease-out-expo 0.8–1.1s）、共享布局（分段控件滑块）、弹层（spring 520/36）、音柱。尊重 `prefers-reduced-motion`。
+6. **深色优先，浅色同等完成。** 默认跟随系统，设置菜单可固定。
+7. **奥卡姆剃刀。** 界面上不写标语、介绍和说明文字。能用图标就不用字；必须用字时用最短的德语（Archiv、Merken、Lektion…）。中文只出现在学习内容里：逐句译文、释义、段落中文标题（随译文开关隐藏）。
 
-### 颜色令牌（`static/site.css`）
+### 颜色令牌（`web/src/styles.css`，OKLCH）
 
-| 令牌 | 浅色 | 深色 | 用途 |
+| 令牌 | 深色 | 浅色 | 用途 |
 |---|---|---|---|
-| `--bg` | `#f8f6f1` | `#151413` | 页面背景（暖纸色） |
-| `--surface` | `#fffefb` | `#1c1b19` | 浮层、卡片、抽屉 |
-| `--surface-2` | `#f1eee7` | `#252320` | 悬停、选中、分段控件底 |
-| `--ink` | `#1e1d1a` | `#ece8e0` | 正文 |
-| `--ink-2` | `#45423c` | `#c9c3b7` | 次要正文 |
-| `--muted` | `#7d786e` | `#938d82` | 说明、中文译文 |
-| `--faint` | `#a9a397` | `#6c675e` | 编号、标签 |
-| `--line` / `--line-2` | `#e5e0d6` / `#d5cfc2` | `#2d2b27` / `#3a3732` | 分隔线 / 控件描边 |
-| `--accent` | `#2d5b6e` | `#8fbccd` | 链接、焦点、当前播放句 |
-| `--accent-soft` | `#e4ecef` | `#1f2d33` | 已展开译文按钮、当前单词 |
-| `--mark` | `#f4e4a1` | 琥珀 26% | 已收藏单词、选区 |
-| `--danger` | `#a23b2a` | `#e08a77` | 删除 |
+| `--bg` / `--bg-2` | 0.145 / 0.175 中性冷灰 | 0.985 / 0.965 暖白 | 页面 / 抽屉 |
+| `--surface` / `--surface-2` | 0.20 / 0.245 | 白 / 0.95 | 卡片、弹层 / 悬停、分段底 |
+| `--line` / `--line-2` | 白 8% / 14% | 墨 9% / 16% | 分隔 / 描边 |
+| `--fg` `--fg-2` `--muted` `--faint` | 0.97 → 0.47 | 0.20 → 0.68 | 四级文字 |
+| `--accent` | 琥珀 `oklch(.84 .15 82)` | `oklch(.62 .15 60)` | 「正在播出」：当前句音柱、编号、主按钮、重点词下划线 |
+| `--mark` | 琥珀 22% | 琥珀 45% | 已收藏单词底色、选区 |
+| `--lyric-dim` | 0.34 | 0.40 | 非当前句透明度 |
 
-主题：默认跟随系统（`prefers-color-scheme`），设置面板可固定浅色/深色，写在 `html[data-theme]`。新颜色一律加成令牌，两套主题都要定义；页面里不写死颜色。
+全局只有一个强调色。新颜色必须做成令牌并给两套主题。
 
 ### 字体
 
-| 令牌 | 用途 |
-|---|---|
-| `--serif`（Iowan / Palatino / Charter / Source Serif / Georgia / 宋体回退） | 德语正文、标题、词条 |
-| `--sans`（系统 UI + 苹方 / 思源黑体 / 雅黑） | 界面、中文译文 |
-| `--mono` | 编号、时间码、日期列 |
+- **Geist Variable**（自托管，@fontsource）：界面与德语字幕正文（600，`-0.012em`）、例句、小字；中文回退苹方 / 思源黑体。
+- **Instrument Serif**（正体 + 斜体，仅 400）：只用于 ≥ 20px 的展示文字——日期（首页巨型日期、课程页日期）、段落标题、词条、Archiv。小于 20px 一律用 Geist，不要给它加粗。
+- 等宽：时间码、星期缩写、标签（大写 + 字距）。
+- 字幕字号 `clamp(19px, 1.55vw, 25px) × --reader-scale`（设置里 5 档 88%–118%），中文 15.5px。
 
-正文字号 = `--reader-base`（桌面 21px，手机 19px）× `--reader-scale`（设置面板 5 档：86%–122%）。德语行高 1.66，中文 15px/1.65 灰色。
+### 组件约定
 
-### 布局
+- 按钮全部圆角胶囊（`rounded-full`），按下 `scale(.97)`；主操作 `accent`，次要 `secondary` / `outline` / `ghost`。
+- 卡片圆角 20–28px，弹层带 `backdrop-blur-xl` 与 `--shadow`。
+- 图标统一 Lucide，`size-4`（按钮内）/ `size-5`（特征图标，`strokeWidth 1.75`）。
+- 数字用 `tabular`；时间码等宽。
 
-- `--page` 72rem 外框，`--measure` 40rem 阅读栏，`--gutter` 手机 16px / 桌面 32px。
-- 顶栏 `.bar` 56px（手机 52px），半透明背景 + 模糊，滚动后出现底部细线。
-- 断点：720px（手机排版、释义卡变抽屉）、1080px（侧栏变抽屉）。
-
-### 组件
-
-| 组件 | 类名 | 说明 |
-|---|---|---|
-| 主按钮 | `.btn` | 墨色实底，只用于每屏一个主动作 |
-| 次按钮 | `.btn.secondary` | 描边 |
-| 安静按钮 | `.btn-quiet` / `.btn-icon` | 顶栏与面板内操作；`aria-pressed="true"` 表示开启 |
-| 计数 | `.count` | 生词数量 |
-| 标签页 | `.tabs` `.tab[aria-selected]` | 侧栏「本篇 / 生词本」 |
-| 分段控件 | `.seg` | 主题选择 |
-| 表单 | `.field` `.input` `.form-actions` | |
-| 卡片 / 注释 | `.card` / `.note` | 注释用左侧细线，不用底色 |
-| 设置面板 | `[data-settings]` → `#dd-settings` | core.js 自动挂载：外观、正文字号 |
-| 提示 | `DD.toast(msg)` | 底部居中，1.7 秒 |
-
-课程页专用（`reader.css`）：`.sent`（一句，含 `.de`、`.reveal`、`.seek`、`.zh`）、`w`（可点单词：`.ed` 重点词下划线、`.saved` 高亮、`.active` 当前）、`.pop`（释义卡）、`.side`（侧栏/抽屉）、`.toc`、`.vocab`、`.gram`、`.nb-*`（生词本）。
-
-### 交互
+### 交互与快捷键
 
 | 操作 | 结果 |
 |---|---|
-| 点单词 / Enter | 打开释义卡：词条、词性与来源（本篇重点词 / 离线词典 / 我的释义）、中文、所在句（单词加粗）、「加入生词本」「编辑释义」 |
-| 点句末「译」 | 只展开这一句的中文 |
-| 顶栏「译文」/ `T` | 显示或隐藏全部译文（会记住） |
-| 点句末时间码（旧视频课） | 视频跳到该句；正在播放的句子左侧出现强调色细线 |
-| `Esc` | 关闭释义卡、抽屉、设置面板 |
-| 滚动 | 侧栏目录与「本篇词汇」跟随当前新闻 |
+| 空格 | 播放 / 暂停；逐句模式停在句末后接着播下一句 |
+| ← / → | 上一句 / 下一句 |
+| R | 重听当前句 |
+| T | 中文：盲听 → 当前句 → 全部 |
+| 点时间码 | 从这句播放 |
+| 点单词 / Enter | 查词卡片（释义、来源、原句高亮、加入生词本、改释义） |
+| 首页 `/` 或 ⌘K | 搜索往期 |
+| 滚动字幕 | 播放中手动滚动会暂停自动跟随，出现「回到当前句」 |
 
-### 原声跟练（`reader.js` 的 training 部分）
-
-每期都有原节目视频（`mp4_url` 由 `data/meta` 的 m3u8 推出）。短读课的 AI 改写句子**不带时间**（它不是原声）；原声由官方字幕组成单独的跟读轨 `DATA.listen`（`build.listen_track`：去掉 Gong/Untertitel/Copyright，按句末标点合并字幕，保留起止时间）。旧视频课直接用正文里对齐好时间的句子。
-
-| 控件 | 行为 |
-|---|---|
-| 时间码按钮 / ⏮ ⏭（←/→） | 跳到某句 / 上一句 / 下一句 |
-| ▶（空格） | 播放暂停；逐句模式下停在句末后按空格接着播下一句 |
-| ↺（R） | 重听当前句 |
-| 连续 / 逐句跟读 / 单句循环 | 逐句跟读：每句播完自动暂停，留时间跟读；单句循环：当前句反复播 |
-| 0.75× / 0.9× / 1× | 语速 |
-| 仅音频 | 隐藏画面只听声音 |
-| 迷你播放条 | 开始播放后，播放控件滚出屏幕时吸底出现，显示当前句 |
-
-设置存在 `dd-train-v1`（`{mode, rate, audio}`）。视频加载失败时隐藏控件并给出 tagesschau.de 原节目链接。
-
-### 本地存储（键名是用户数据，不要随意改）
+### 本地存储（用户数据，键名不要改）
 
 | 键 | 内容 |
 |---|---|
-| `dd-basket` | 生词本数组 `{key, word, zh, pos, example, date, topic, source, createdAt, manual}` |
-| `dd-user-gloss` | 用户自填释义 `{[key]: {word, zh, pos, example}}` |
-| `dd-recent-lesson` | 最近打开的课程（首页「继续上次」） |
-| `dd-train-v1` | 跟练设置 `{mode: flow|stop|loop, rate, audio}` |
-| `dd-prefs-v2` | `{theme: system|light|dark, size: 0–4, zh: bool}`；首次读取时从旧 `dd-preferences` 迁移主题和字号 |
-| `dd-local-lessons-v1` | 本地课程工坊保存的字幕课程（见 `static/studio.js`） |
-
-所有读写都包在 try/catch 里（`DD.store`），隐私模式下页面照常工作。
+| `dd-basket` | 生词本数组 `{key, word, zh, pos, example, exampleZh, date, topic, source, createdAt, manual}`（可拖动排序） |
+| `dd-user-gloss` | 用户自填释义 |
+| `dd-recent-lesson` | 最近打开的课程（首页「继续」） |
+| `dd-prefs-v3` | Zustand persist：`{theme, scale, zh, mode, rate, audioOnly, follow}` |
+| `dd-lesson-split` | 桌面分栏比例（react-resizable-panels） |
+| `dd-local-lessons-v1` | 本地课程工坊 |
 
 ### 无障碍
 
-- 所有可点元素是 `button` 或 `role="button"` + `tabindex="0"`，焦点环统一 `--accent`。
-- 德语内容标 `lang="de"`，页面 `lang="zh-CN"`。课程标题用中文日期（「10 月 20 日 · 星期二」），德语日期作副标题。
-- 尊重 `prefers-reduced-motion`。
+Radix 原语提供焦点管理与键盘操作；德语内容标 `lang="de"`；所有图标按钮有 `aria-label`；焦点环统一 `--ring`。
 
 ---
 
@@ -179,19 +142,19 @@ GitHub Pages (main:/docs)
 
 | 想改什么 | 改哪里 | 之后 |
 |---|---|---|
-| 颜色、字体、通用组件 | `static/site.css`（并更新本文第 3 节） | `python3 build.py`，提交 `docs/` |
-| 课程页 | `templates/episode.html`、`static/reader.css`、`static/reader.js` | 同上 |
-| 首页 / 入口页 / 关于 / 工坊 | `templates/*.html` | 同上 |
-| 内容规则 | `scripts/validate-content.py` + AI 提示词（`update_readings.py` 的 `SYSTEM`） | `python3 scripts/validate-content.py --all` |
-| 新来源 | `config/reading-sources.json` + 专用提取器 + 测试 | 见 README |
+| 令牌、字体、全局样式 | `web/src/styles.css`（并更新本文第 3 节） | `npm run build` → `python3 build.py` → 提交 `docs/` |
+| 课程页 / 首页 / 其它页 | `web/src/pages`、`web/src/features` | 同上 |
+| 课程数据形状 | `build.lesson_payload` + `web/src/lib/data.ts` + 测试 | 同上 |
+| 内容生成与规则 | `scripts/update_readings.py`、`scripts/validate-content.py` | `python3 scripts/validate-content.py --all` |
+| 本地课程工坊 | `templates/studio.html`、`static/` | `python3 build.py` |
 
 检查清单与 CI 一致：
 
 ```bash
+(cd web && npm ci && npm run build)
 python3 -m unittest discover -s tests -v
 node tests/test_studio.js
-python3 -m py_compile build.py scripts/*.py tests/*.py
-bash -n scripts/*.sh
+python3 -m py_compile build.py scripts/*.py tests/*.py && bash -n scripts/*.sh
 python3 scripts/validate-content.py --all
-python3 build.py && git status --short -- docs   # 应该为空（或只有你预期的改动）
+python3 build.py && git status --short -- docs   # 必须为空
 ```

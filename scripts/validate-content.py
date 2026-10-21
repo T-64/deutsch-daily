@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate one Deutsch Daily content JSON. Exit 0 = OK, 1 = FAIL."""
+"""Validate one Deutsch Daily content JSON (broadcast schema 2 or legacy). Exit 0 = OK, 1 = FAIL."""
 from __future__ import annotations
 
 import json
@@ -10,7 +10,6 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from build import pair_sentences, split_de_sents
 
 CONTENT = ROOT / "data" / "content"
 REQUIRED_TOP = ("date", "video_page", "embed_url", "news")
@@ -28,6 +27,123 @@ def is_wetter(title: str) -> bool:
 
 def vocab_range(title: str) -> tuple[int, int]:
     return (3, 8) if is_wetter(title) else (5, 10)
+
+
+def whitelisted(url: str) -> bool:
+    u = urlparse(url)
+    sources = json.loads((ROOT / "config/reading-sources.json").read_text())["sources"]
+    return any(s["enabled"] and u.scheme == "https" and u.hostname == s["allowed_host"]
+               and u.path.startswith(s["allowed_path"]) and not u.username and not u.password
+               and u.port in (None, 443) for s in sources)
+
+
+def is_num(x) -> bool:
+    return isinstance(x, (int, float)) and not isinstance(x, bool)
+
+
+def broadcast_errors(doc: dict) -> list[str]:
+    """Schema 2: official subtitle sentences + AI zh, contiguous stories, vocab/grammar by sentence index."""
+    errors: list[str] = []
+    if doc.get("schema") != 2:
+        errors.append("broadcast lessons need schema 2")
+    if doc.get("source") != "einfach" or doc.get("level") != "A2–B1":
+        errors.append("broadcast lessons must be einfach at A2–B1")
+    if not re.fullmatch(r"[0-9a-f]{64}", str(doc.get("source_text_sha256") or "")):
+        errors.append("broadcast requires SHA-256 of the source subtitles")
+    if not whitelisted(str(doc.get("source_url") or "")):
+        errors.append("source_url is outside the active whitelist")
+    if doc.get("slug") != doc.get("date"):
+        errors.append("slug must equal date")
+    sents = doc.get("sentences")
+    if not isinstance(sents, list) or not sents:
+        return errors + ["sentences must be a non-empty list"]
+    last = -1.0
+    for i, s in enumerate(sents):
+        if not isinstance(s, dict):
+            errors.append(f"sentences[{i}] is not an object")
+            continue
+        for field in ("de", "zh"):
+            if not isinstance(s.get(field), str) or not s[field].strip():
+                errors.append(f"sentences[{i}] missing {field}")
+        a, b = s.get("start"), s.get("end")
+        if not is_num(a) or not is_num(b) or a > b:
+            errors.append(f"sentences[{i}] needs numeric start <= end")
+            continue
+        if a < last:
+            errors.append(f"sentences[{i}] starts before the previous sentence")
+        last = a
+    stories = doc.get("stories")
+    if not isinstance(stories, list) or not stories:
+        return errors + ["stories must be a non-empty list"]
+    expect = 0
+    for k, st in enumerate(stories):
+        sp = f"stories[{k}]"
+        if not isinstance(st, dict):
+            errors.append(f"{sp} is not an object")
+            continue
+        for field in ("title", "title_zh"):
+            if not isinstance(st.get(field), str) or not st[field].strip():
+                errors.append(f"{sp} missing {field}")
+        lo, hi = st.get("from"), st.get("to")
+        if not isinstance(lo, int) or not isinstance(hi, int) or isinstance(lo, bool) or isinstance(hi, bool) or lo > hi:
+            errors.append(f"{sp} needs integer from <= to")
+            continue
+        if lo != expect:
+            errors.append(f"{sp} starts at {lo}, expected {expect} (ranges must be contiguous)")
+        expect = hi + 1
+        if hi >= len(sents):
+            errors.append(f"{sp} ends at {hi}, beyond the last sentence {len(sents) - 1}")
+            continue
+        vocab = st.get("vocab")
+        if not isinstance(vocab, list) or len(vocab) > 5:
+            errors.append(f"{sp} vocab must be a list of at most 5")
+            vocab = []
+        for j, v in enumerate(vocab):
+            vp = f"{sp}.vocab[{j}]"
+            if not isinstance(v, dict):
+                errors.append(f"{vp} is not an object")
+                continue
+            for field in ("lemma", "key", "pos", "zh"):
+                if not isinstance(v.get(field), str) or not v[field].strip():
+                    errors.append(f"{vp} missing {field}")
+            idx = v.get("sentence")
+            if not isinstance(idx, int) or isinstance(idx, bool) or not lo <= idx <= hi:
+                errors.append(f"{vp} sentence must be an index inside {lo}-{hi}")
+                continue
+            forms = v.get("forms")
+            text = str(sents[idx].get("de") or "").casefold() if isinstance(sents[idx], dict) else ""
+            if not isinstance(forms, list) or not forms:
+                errors.append(f"{vp} forms must be a non-empty list")
+            elif any(not isinstance(f, str) or not f.strip() or f.casefold() not in text for f in forms):
+                errors.append(f"{vp} forms must occur in sentence {idx}")
+        grammar = st.get("grammar_points")
+        if not isinstance(grammar, list) or len(grammar) > 1:
+            errors.append(f"{sp} grammar_points must be a list of at most 1")
+            grammar = []
+        for j, g in enumerate(grammar):
+            gp = f"{sp}.grammar_points[{j}]"
+            if not isinstance(g, dict):
+                errors.append(f"{gp} is not an object")
+                continue
+            for field in ("title", "summary"):
+                if not isinstance(g.get(field), str) or not g[field].strip():
+                    errors.append(f"{gp} missing {field}")
+            idx = g.get("sentence")
+            if not isinstance(idx, int) or isinstance(idx, bool) or not lo <= idx <= hi:
+                errors.append(f"{gp} sentence must be an index inside {lo}-{hi}")
+    if expect != len(sents):
+        errors.append(f"stories cover sentences 0-{expect - 1}, but there are {len(sents)}")
+    return errors
+
+
+def report(path: Path, errors: list[str], summary: str) -> int:
+    if errors:
+        print(f"FAIL {path.name} ({len(errors)})")
+        for e in errors:
+            print(f"  - {e}")
+        return 1
+    print(f"OK {path.name} ({summary})")
+    return 0
 
 
 def load_path(arg: str) -> Path:
@@ -56,6 +172,21 @@ def main(argv: list[str]) -> int:
     except Exception as e:
         print(f"FAIL {path}: cannot parse JSON ({e})", file=sys.stderr)
         return 1
+
+    if not isinstance(doc, dict):
+        print(f"FAIL {path}: top level must be an object", file=sys.stderr)
+        return 1
+    if doc.get("content_kind") == "broadcast":
+        errors = broadcast_errors(doc)
+        if not DATE_RE.match(str(doc.get("date") or "")):
+            errors.append(f"bad date: {doc.get('date')!r}")
+        elif SLUG_RE.match(path.stem) and path.stem != doc["date"]:
+            errors.append(f"filename {path.stem} != doc.date {doc['date']}")
+        n = len(doc.get("sentences") or []), len(doc.get("stories") or [])
+        return report(path, errors, f"{n[0]} sentences, {n[1]} stories")
+
+    # Legacy schema (video lessons and the retired short readings).
+    from build import pair_sentences, split_de_sents
 
     for k in REQUIRED_TOP:
         if k not in doc:
@@ -86,11 +217,7 @@ def main(argv: list[str]) -> int:
             errors.append("readings must contain exactly 3 short stories")
         if not re.fullmatch(r"[0-9a-f]{64}", str(doc.get("source_text_sha256") or "")):
             errors.append("reading requires SHA-256 of the source text")
-        source_url = urlparse(str(doc.get("source_url") or ""))
-        sources = json.loads((ROOT / "config/reading-sources.json").read_text())["sources"]
-        if not any(s["enabled"] and source_url.scheme == "https" and source_url.hostname == s["allowed_host"]
-                   and source_url.path.startswith(s["allowed_path"]) and not source_url.username
-                   and not source_url.password and source_url.port in (None, 443) for s in sources):
+        if not whitelisted(str(doc.get("source_url") or "")):
             errors.append("reading source_url is outside the active whitelist")
         if not doc.get("adaptation") or doc.get("embed_url"):
             errors.append("readings require an adaptation disclosure and no embedded player")
@@ -179,13 +306,7 @@ def main(argv: list[str]) -> int:
         if item.get("background") is None:
             errors.append(f"{prefix} background must be a string (empty ok)")
 
-    if errors:
-        print(f"FAIL {path.name} ({len(errors)})")
-        for e in errors:
-            print(f"  - {e}")
-        return 1
-    print(f"OK {path.name} ({len(news)} news)")
-    return 0
+    return report(path, errors, f"{len(news)} news")
 
 
 if __name__ == "__main__":

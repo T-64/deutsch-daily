@@ -1,5 +1,4 @@
 import argparse
-import copy
 import io
 import json
 import sys
@@ -12,7 +11,6 @@ from urllib.request import Request
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'scripts'))
 import update_readings as updates
-import build
 
 SOURCE = json.loads((updates.ROOT / 'config/reading-sources.json').read_text())['sources'][0]
 
@@ -35,25 +33,67 @@ class ReadingUpdateTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             handler.redirect_request(Request(SOURCE['list_url']), None, 302, '', {}, 'https://example.com/a')
 
-    def test_generated_examples_are_derived_from_sentence_pairs(self):
-        news = [{
-            'title': 'Neue Ideen', 'title_zh': '新想法',
-            'sentences': [{'de': 'Wir lesen heute Nachrichten.', 'zh': '我们今天读新闻。'},
-                          {'de': 'Die Sätze sind kurz.', 'zh': '这些句子很短。'},
-                          {'de': 'Wir lernen neue Wörter.', 'zh': '我们学习新单词。'}],
-            'vocab': [{'lemma': 'lernen', 'key': 'lernen', 'forms': ['lernen'], 'pos': 'Verb', 'zh': '学习', 'sentence': 2}],
-            'grammar_points': [{'title': '陈述句', 'summary': '动词第二位。', 'sentence': 1}],
-        }]
-        response = {'choices': [{'finish_reason': 'stop', 'message': {'content': json.dumps({'news': news})}}]}
-        fields = {'date': '2026-10-20', 'synopsis': 'Ideen', 'episode_url': SOURCE['list_url'] + '/tse-1.html', 'text_sha256': 'a' * 64}
-        with patch.dict(updates.os.environ, {'GLM_API_KEY': 'unit-test-placeholder'}), patch.object(updates.urllib.request, 'urlopen', return_value=io.BytesIO(json.dumps(response).encode())):
-            result = updates.generate(fields, [{'text': 'source'}])
-        item = result['news'][0]
-        self.assertEqual(item['vocab'][0]['example_de'], item['paragraphs'][2])
-        self.assertEqual(item['vocab'][0]['example_zh'], item['translations'][2])
-        self.assertEqual(item['grammar_points'][0]['example_de'], item['paragraphs'][1])
-        self.assertNotIn('sentences', item)
-        self.assertEqual(result['content_kind'], 'reading')
+    FIELDS = {'date': '2026-10-20', 'synopsis': 'Ideen', 'episode_url': SOURCE['list_url'] + '/tse-1.html',
+              'video_page': SOURCE['list_url'] + '/video-1.html', 'text_sha256': 'a' * 64}
+
+    @staticmethod
+    def ai_reply(payload):
+        return io.BytesIO(json.dumps({'choices': [{'finish_reason': 'stop', 'message': {'content': json.dumps(payload)}}]}).encode())
+
+    def test_broadcast_text_and_timing_come_from_subtitles_not_the_model(self):
+        cues = [{'start': 1, 'end': 2, 'text': '* Gong *'},
+                {'start': 3.111, 'end': 4, 'text': 'Willkommen zur'}, {'start': 4.2, 'end': 5.555, 'text': 'tagesschau.'},
+                {'start': 6, 'end': 7, 'text': 'Wir lernen neue Wörter.'},
+                {'start': 8, 'end': 9, 'text': 'Tschüss.'}, {'start': 10, 'end': 11, 'text': 'Copyright Untertitel: NDR'}]
+        reply = {'zh': ['欢迎收看每日新闻。', '我们学习新单词。', '再见。'],
+                 'stories': [{'title': 'Begrüßung', 'title_zh': '欢迎', 'from': 0, 'to': 0},
+                             {'title': 'Wörter', 'title_zh': '单词', 'from': 1, 'to': 1, 'extra': 'dropped',
+                              'vocab': [{'lemma': 'das Wort, Wörter', 'forms': ['Wörter'], 'pos': 'Substantiv', 'zh': '词', 'sentence': 1}],
+                              'grammar_points': [{'title': '现在时', 'summary': '动词第二位。', 'sentence': 1}]},
+                             {'title': 'Abschied', 'title_zh': '结束语', 'from': 2, 'to': 2}],
+                 # Anything the model says about German text is ignored.
+                 'sentences': [{'de': 'Erfunden.'}]}
+        with patch.dict(updates.os.environ, {'GLM_API_KEY': 'unit-test-placeholder'}), \
+                patch.object(updates.urllib.request, 'urlopen', return_value=self.ai_reply(reply)) as call:
+            doc = updates.generate(self.FIELDS, cues)
+        self.assertEqual(call.call_count, 1)
+        self.assertEqual([s['de'] for s in doc['sentences']], ['Willkommen zur tagesschau.', 'Wir lernen neue Wörter.', 'Tschüss.'])
+        self.assertEqual(doc['sentences'][0], {'de': 'Willkommen zur tagesschau.', 'start': 3.11, 'end': 5.55, 'zh': '欢迎收看每日新闻。'})
+        self.assertEqual(doc['sentences'][1]['zh'], '我们学习新单词。')
+        self.assertEqual((doc['content_kind'], doc['schema']), ('broadcast', 2))
+        self.assertEqual(doc['stories'][1]['vocab'][0]['key'], 'wort')
+        self.assertNotIn('extra', doc['stories'][1])
+        self.assertEqual(doc['video_page'], self.FIELDS['video_page'])
+        updates.validate(doc)
+
+    def test_translation_count_mismatch_is_rejected(self):
+        cues = [{'start': i, 'end': i + 0.5, 'text': f'Satz {i}.'} for i in range(4)]
+        reply = {'zh': ['一', '二', '三'], 'stories': [{'title': 'A', 'title_zh': '甲', 'from': 0, 'to': 3}]}
+        with patch.dict(updates.os.environ, {'GLM_API_KEY': 'unit-test-placeholder'}), \
+                patch.object(updates.urllib.request, 'urlopen', return_value=self.ai_reply(reply)):
+            with self.assertRaisesRegex(ValueError, 'expected 4 Chinese translations, got 3'):
+                updates.generate(self.FIELDS, cues)
+
+    def test_long_broadcasts_are_translated_in_chunks(self):
+        n = updates.COMBINED_LIMIT + 31
+        cues = [{'start': i, 'end': i + 0.5, 'text': f'Das ist Satz {i}.'} for i in range(n)]
+        seen = []
+
+        def fake_urlopen(req, timeout):
+            body = json.loads(json.loads(req.data)['messages'][1]['content'])
+            idx = [x['i'] for x in body['sentences']]
+            seen.append((idx[0], idx[-1]))
+            if 'stories' in json.loads(req.data)['messages'][0]['content'].split('Return ONLY JSON')[-1]:
+                return self.ai_reply({'stories': [{'title': 'Alles', 'title_zh': '全部', 'from': 0, 'to': n - 1}]})
+            return self.ai_reply({'zh': [f'句子{i}' for i in idx]})
+
+        with patch.dict(updates.os.environ, {'GLM_API_KEY': 'unit-test-placeholder'}), \
+                patch.object(updates.urllib.request, 'urlopen', side_effect=fake_urlopen):
+            doc = updates.generate(self.FIELDS, cues)
+        self.assertEqual(seen, [(0, 59), (60, 119), (120, n - 1), (0, n - 1)])
+        self.assertEqual(doc['sentences'][75]['zh'], '句子75')
+        self.assertEqual(len(doc['sentences']), n)
+        updates.validate(doc)
 
     def test_failed_generation_does_not_replace_existing_content_or_publish(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -121,7 +161,7 @@ class ReadingUpdateTests(unittest.TestCase):
             (root / 'config').mkdir()
             (root / 'config/reading-sources.json').write_text(json.dumps({'sources': [SOURCE]}))
             fields = {'date': '2026-10-20', 'text_sha256': 'a' * 64}
-            doc = {'date': '2026-10-20', 'source_text_sha256': 'a' * 64}
+            doc = {'date': '2026-10-20', 'content_kind': 'broadcast', 'source_text_sha256': 'a' * 64}
             updates.atomic_json(root / 'data/content/2026-10-20.json', doc)
             args = argparse.Namespace(env_file=None, since=None, until=date(2026, 10, 20), fetch_only=False, publish=True)
             with patch.object(updates, 'ROOT', root), patch.object(updates, 'discover', return_value=[(fields, b'<source/>')]), patch.object(updates, 'ebu_to_cues', return_value=[]), patch.object(updates, 'validate'), patch.object(updates, 'generate') as generate, patch.object(updates.subprocess, 'run') as publish:
@@ -129,18 +169,20 @@ class ReadingUpdateTests(unittest.TestCase):
                 generate.assert_not_called()
                 publish.assert_called_once_with(['bash', str(root / 'scripts/publish.sh'), '2026-10-20'], cwd=root, check=True)
 
-    def test_reading_text_is_untimed_but_broadcast_is_offered_for_listening(self):
-        doc = json.loads((updates.ROOT / 'data/content/2026-10-14.json').read_text())
-        html = build.render(copy.deepcopy(doc))
-        payload = json.loads(html.split('const DATA = ', 1)[1].split(';\n', 1)[0])
-        # The AI rewrite is not the broadcast text, so its sentences never get seek times ...
-        self.assertTrue(all(line['start'] is None for n in payload['news'] for p in n['paras'] for line in p['lines']))
-        # ... while the official video and its subtitles form a separate follow-along track.
-        self.assertTrue(payload['mp4_url'].endswith('.mp4'))
-        self.assertGreater(len(payload['listen']), 20)
-        self.assertTrue(all(x['start'] <= x['end'] for x in payload['listen']))
-        self.assertFalse(any('Untertitel' in x['de'] or x['de'].startswith('*') for x in payload['listen']))
-        self.assertEqual(payload['source_url'], doc['source_url'])
+    def test_old_reading_is_regenerated_and_force_regenerates_broadcast(self):
+        for existing, force in ((({'content_kind': 'reading'}), False), ({'content_kind': 'broadcast'}, True)):
+            with self.subTest(existing=existing, force=force), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                (root / 'config').mkdir()
+                (root / 'config/reading-sources.json').write_text(json.dumps({'sources': [SOURCE]}))
+                updates.atomic_json(root / 'data/content/2026-10-20.json', {'date': '2026-10-20', 'source_text_sha256': 'a' * 64, **existing})
+                fields = {'date': '2026-10-20', 'text_sha256': 'a' * 64}
+                args = argparse.Namespace(env_file=None, since=None, until=date(2026, 10, 20), fetch_only=False, publish=False, force=force)
+                new = {'date': '2026-10-20', 'content_kind': 'broadcast', 'source_text_sha256': 'a' * 64, 'fresh': True}
+                with patch.object(updates, 'ROOT', root), patch.object(updates, 'discover', return_value=[(fields, b'<source/>')]), patch.object(updates, 'ebu_to_cues', return_value=[]), patch.object(updates, 'validate'), patch.object(updates, 'generate', return_value=new) as generate, patch.object(updates.subprocess, 'run'):
+                    self.assertEqual(updates.update(args), ['2026-10-20'])
+                generate.assert_called_once()
+                self.assertTrue(json.loads((root / 'data/content/2026-10-20.json').read_text())['fresh'])
 
 if __name__ == '__main__':
     unittest.main()
