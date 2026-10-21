@@ -72,15 +72,17 @@
   }
 
   /* ---------- page head ---------- */
-  const dateLabel = fmtDate(DATA.date);
-  document.title = `${dateLabel} — Deutsch Daily`;
-  $('title').textContent = dateLabel;
-  $('kicker').innerHTML = `<b>${esc(DATA.source_label || 'tagesschau')}</b> · ${esc(DATA.level || 'A2–B1')}`;
-  const sourceUrl = DATA.source_url || DATA.video_page;
+  const SHOW = DATA.source === 'einfach' ? 'tagesschau in Einfacher Sprache' : (DATA.source_label || 'tagesschau');
+  const zhDate = DD.zhDate(DATA.date);
+  document.title = `${zhDate} · ${SHOW} — Deutsch Daily`;
+  $('title').textContent = zhDate;
+  $('title-de').textContent = fmtDate(DATA.date);
+  $('kicker').innerHTML = `<b>${esc(SHOW)}</b> · ${esc(DATA.level || 'A2–B1')}`;
+  const sourceUrl = DATA.video_page || DATA.source_url;
   $('meta').innerHTML = [
-    `${DATA.news.length} Themen`,
-    isReading ? '短读' : '视频课',
-    sourceUrl ? `<a href="${esc(sourceUrl)}" target="_blank" rel="noopener">${isReading ? '新闻原文' : 'tagesschau.de'} ↗</a>` : '',
+    `${DATA.news.length} 条新闻`,
+    DATA.duration ? `原声 ${Math.round(DATA.duration / 60)} 分钟` : '',
+    sourceUrl ? `<a href="${esc(sourceUrl)}" target="_blank" rel="noopener">tagesschau.de 原节目 ↗</a>` : '',
   ].filter(Boolean).map(x => `<span>${x}</span>`).join('');
   if (DATA.adaptation) { $('adaptation').textContent = DATA.adaptation; $('adaptation').hidden = false; }
   store.set(RECENT_KEY, { slug: DATA.slug, date: DATA.date, sourceLabel: DATA.source_label, title: DATA.news[0]?.title || '' });
@@ -154,36 +156,152 @@
   $('zh-toggle').addEventListener('click', toggleZh);
   applyZh();
 
-  /* ---------- video (legacy video lessons) ---------- */
-  const timed = [...document.querySelectorAll('.sent[data-start]')].map(el => ({ el, a: +el.dataset.start, b: +el.dataset.end }));
+  /* ---------- follow-along training: video / audio, sentence stepping ---------- */
+  const TRAIN_KEY = 'dd-train-v1';
+  const train = Object.assign({ mode: 'flow', rate: 1, audio: false }, store.get(TRAIN_KEY, {}) || {});
+  const saveTrain = () => store.set(TRAIN_KEY, train);
   let video = null;
-  function mountPlayer() {
-    if (isReading || (!DATA.mp4_url && !DATA.embed_url)) return;
-    const box = $('player');
-    box.hidden = false;
-    const iframe = () => {
-      document.body.classList.remove('has-av');
+  let segs = [];
+  let cur = -1;
+  let target = -1;
+
+  function buildListen() {
+    const list = DATA.listen || [];
+    if (!list.length) return;
+    $('listen').innerHTML = list.map((x, k) => `<span class="sent" id="l-${k}" data-start="${x.start}" data-end="${x.end}"><button class="seek" type="button" aria-label="从这句播放">${clock(x.start)}</button><span class="de" lang="de">${tokenizeDe(x.de)}</span></span>`).join('');
+    $('listen').hidden = false;
+    $('train-sub').textContent = `官方字幕 ${list.length} 句 · 点时间跳播，点词查义`;
+  }
+  function segAt(t) {
+    let k = -1;
+    for (let i = 0; i < segs.length; i++) { if (segs[i].a <= t + 0.05) k = i; else break; }
+    return k;
+  }
+  function mark(k) {
+    if (k === cur) return;
+    segs[cur]?.el.classList.remove('now');
+    cur = k;
+    const s = segs[k];
+    if (!s) { $('dock-text').textContent = ''; return; }
+    s.el.classList.add('now');
+    $('dock-text').textContent = s.el.querySelector('.de').textContent;
+    const box = s.el.closest('.listen');
+    if (box) box.scrollTo({ top: s.el.offsetTop - box.clientHeight / 3, behavior: 'smooth' });
+    else if (!video.paused) s.el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+  function playFrom(k) {
+    if (!video || !segs.length) return;
+    k = Math.max(0, Math.min(segs.length - 1, k));
+    target = k;
+    video.currentTime = segs[k].a;
+    mark(k);
+    video.play().catch(() => {});
+  }
+  function toggle() {
+    if (!video) return;
+    if (!video.paused) { video.pause(); return; }
+    // In stepped modes, "play" continues with the next sentence after a stop.
+    const k = segAt(video.currentTime);
+    if (train.mode !== 'flow' && segs[k] && video.currentTime >= segs[k].b - 0.05) playFrom(k + 1);
+    else { target = k; video.play().catch(() => {}); }
+  }
+  const step = d => playFrom((cur < 0 ? segAt(video?.currentTime || 0) : cur) + d);
+  function syncControls() {
+    $('tr-mode').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === train.mode)));
+    $('tr-speed').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.rate) === train.rate)));
+    $('tr-audio').setAttribute('aria-pressed', String(train.audio));
+    $('train').classList.toggle('audio', train.audio);
+    if (video) video.playbackRate = train.rate;
+  }
+  function syncPlay() {
+    const playing = video && !video.paused;
+    document.querySelectorAll('.tr-play').forEach(b => { b.textContent = playing ? '❚❚' : '▶'; b.setAttribute('aria-label', playing ? '暂停（空格）' : '播放（空格）'); });
+  }
+  function mountTraining() {
+    if (!DATA.mp4_url && !DATA.embed_url) return;
+    $('train').hidden = false;
+    if (isReading) $('read-h').hidden = false;
+    buildListen();
+    const fail = () => {
       video = null;
-      if (!DATA.embed_url) { box.hidden = true; return; }
-      box.innerHTML = `<iframe src="${esc(DATA.embed_url)}" title="tagesschau 视频" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+      $('player').innerHTML = DATA.embed_url ? `<iframe src="${esc(DATA.embed_url)}" title="tagesschau 视频" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>` : '';
+      $('player').hidden = !DATA.embed_url;
+      document.querySelector('.train-bar').hidden = true;
+      document.body.classList.remove('has-av');
+      const page = DATA.video_page ? ` <a href="${esc(DATA.video_page)}" target="_blank" rel="noopener">到 tagesschau.de 观看 ↗</a>` : '';
+      $('tr-fail').innerHTML = `视频暂时无法加载，跟读控制不可用。${page}`;
+      $('tr-fail').hidden = false;
     };
-    if (!DATA.mp4_url) { iframe(); return; }
-    box.innerHTML = `<video controls playsinline preload="metadata" src="${esc(DATA.mp4_url)}"></video>`;
-    video = box.querySelector('video');
-    video.addEventListener('loadedmetadata', () => { if (timed.length) document.body.classList.add('has-av'); });
-    video.addEventListener('error', iframe, { once: true });
-    let last = null;
+    if (!DATA.mp4_url) { fail(); return; }
+    $('player').innerHTML = `<video playsinline preload="metadata" src="${esc(DATA.mp4_url)}"></video>`;
+    video = $('player').querySelector('video');
+    video.addEventListener('error', fail, { once: true });
+    video.addEventListener('click', toggle);
+    segs = [...document.querySelectorAll(isReading ? '#listen .sent[data-start]' : '#stories .sent[data-start]')]
+      .map(el => ({ el, a: Number(el.dataset.start), b: Number(el.dataset.end) }))
+      .sort((x, y) => x.a - y.a);
+    if (segs.length) document.body.classList.add('has-av');
+    video.addEventListener('loadedmetadata', () => { video.playbackRate = train.rate; });
+    ['play', 'pause'].forEach(ev => video.addEventListener(ev, () => { syncPlay(); updateDock(); }));
     video.addEventListener('timeupdate', () => {
       const t = video.currentTime;
-      const now = timed.find(x => t >= x.a && t < x.b + 0.05);
-      if (now?.el === last) return;
-      last?.classList.remove('now');
-      last = now?.el || null;
-      if (last) { last.classList.add('now'); last.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+      const d = video.duration || DATA.duration || 0;
+      $('tr-time').textContent = `${clock(t)} / ${clock(d)}`;
+      if (d && document.activeElement !== $('tr-seek')) $('tr-seek').value = String(Math.round(t / d * 1000));
+      const s = segs[target];
+      if (train.mode !== 'flow' && s && t >= s.b + 0.12) {
+        if (train.mode === 'loop') { video.currentTime = s.a; return; }
+        video.pause();
+        video.currentTime = Math.max(s.a, s.b - 0.02);
+        return;
+      }
+      const k = segAt(t);
+      if (train.mode === 'flow' || target < 0) target = k;
+      mark(k);
     });
-    $('hint').insertAdjacentText('beforeend', ' 播放后点句末时间可跳到那一句。');
+    $('tr-seek').addEventListener('input', e => {
+      if (!video.duration) return;
+      video.currentTime = Number(e.target.value) / 1000 * video.duration;
+      target = segAt(video.currentTime);
+    });
+    $('tr-play').addEventListener('click', toggle);
+    $('tr-prev').addEventListener('click', () => step(-1));
+    $('tr-next').addEventListener('click', () => step(1));
+    $('tr-again').addEventListener('click', () => playFrom(cur < 0 ? 0 : cur));
+    $('tr-mode').addEventListener('click', e => {
+      const b = e.target.closest('[data-mode]');
+      if (!b) return;
+      train.mode = b.dataset.mode;
+      target = segAt(video.currentTime);
+      saveTrain(); syncControls();
+      toast({ flow: '连续播放', stop: '逐句跟读：每句播完暂停，按空格继续下一句', loop: '单句循环：←/→ 换句' }[train.mode]);
+    });
+    $('tr-speed').addEventListener('click', e => {
+      const b = e.target.closest('[data-rate]');
+      if (!b) return;
+      train.rate = Number(b.dataset.rate);
+      saveTrain(); syncControls();
+    });
+    $('tr-audio').addEventListener('click', () => { train.audio = !train.audio; saveTrain(); syncControls(); });
+    $('dock').addEventListener('click', e => {
+      const act = e.target.closest('[data-dock]')?.dataset.dock;
+      if (act === 'play') toggle();
+      else if (act === 'prev') step(-1);
+      else if (act === 'next') step(1);
+    });
+    new IntersectionObserver(([entry]) => { trainVisible = entry.isIntersecting; updateDock(); }).observe(document.querySelector('.train-bar'));
+    syncControls();
+    syncPlay();
+    $('hint').insertAdjacentText('beforeend', isReading ? '' : ' 点有时间的句子可以跳播。');
   }
-  mountPlayer();
+  let trainVisible = true;
+  let started = false;
+  function updateDock() {
+    if (video && !video.paused) started = true;
+    $('dock').hidden = !video || !started || trainVisible;
+    document.body.classList.toggle('docked', !$('dock').hidden);
+  }
+  mountTraining();
 
   /* ---------- side panel: desktop column, mobile bottom sheet ---------- */
   const side = $('side');
@@ -229,15 +347,21 @@
       return;
     }
     const seek = e.target.closest('.seek');
-    if (seek && video) {
-      video.currentTime = Number(seek.closest('.sent').dataset.start);
-      video.play().catch(() => {});
-      return;
-    }
+    if (seek && video) { playFrom(segs.findIndex(x => x.el === seek.closest('.sent'))); return; }
     const study = e.target.closest('[data-study]');
     if (study) { setActive(Number(study.dataset.study)); openSide('study'); return; }
     const w = e.target.closest('w');
     if (w) { e.stopPropagation(); showPop(w); }
+  });
+  $('listen').addEventListener('click', e => {
+    const w = e.target.closest('w');
+    if (w) { e.stopPropagation(); showPop(w); return; }
+    const seek = e.target.closest('.seek');
+    if (seek && video) playFrom(segs.findIndex(x => x.el === seek.closest('.sent')));
+  });
+  $('listen').addEventListener('keydown', e => {
+    const w = e.target.closest('w');
+    if (w && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); showPop(w); }
   });
   $('stories').addEventListener('keydown', e => {
     const w = e.target.closest('w');
@@ -266,7 +390,7 @@
     popWord = {
       key, surface: wEl.textContent, word: g.word || wEl.textContent, zh: g.zh || '', pos: g.pos || '',
       source: g.source || '', example: sentenceOf(wEl) || g.example || '',
-      topic: story ? DATA.news[Number(story.dataset.idx)].title : '',
+      topic: story ? DATA.news[Number(story.dataset.idx)].title : '原声',
     };
     popAnchor?.classList.remove('active');
     popAnchor = wEl;
@@ -449,5 +573,11 @@
     if (e.key === 'Escape') { hidePop(); closeSide(); return; }
     if (e.target.closest('input, textarea, select, [contenteditable]') || e.metaKey || e.ctrlKey || e.altKey) return;
     if (e.key === 't' || e.key === 'T') toggleZh();
+    if (!video) return;
+    // Space drives the player everywhere except inside the popover, side panel and links/words.
+    if (e.key === ' ' && !e.target.closest('#pop, #side, #dd-settings, a, w')) { e.preventDefault(); toggle(); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
+    else if (e.key === 'r' || e.key === 'R') playFrom(cur < 0 ? 0 : cur);
   });
 })();

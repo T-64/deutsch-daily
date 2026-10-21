@@ -129,16 +129,18 @@ class ReadingUpdateTests(unittest.TestCase):
                 generate.assert_not_called()
                 publish.assert_called_once_with(['bash', str(root / 'scripts/publish.sh'), '2026-10-20'], cwd=root, check=True)
 
-    def test_reading_never_receives_subtitle_seek_times_or_video(self):
+    def test_reading_text_is_untimed_but_broadcast_is_offered_for_listening(self):
         doc = json.loads((updates.ROOT / 'data/content/2026-10-14.json').read_text())
-        with patch.object(build, 'load_transcript') as transcript:
-            html = build.render(copy.deepcopy(doc))
-        transcript.assert_not_called()
+        html = build.render(copy.deepcopy(doc))
         payload = json.loads(html.split('const DATA = ', 1)[1].split(';\n', 1)[0])
-        self.assertEqual(payload['mp4_url'], '')
-        self.assertEqual(payload['source_url'], doc['source_url'])
+        # The AI rewrite is not the broadcast text, so its sentences never get seek times ...
         self.assertTrue(all(line['start'] is None for n in payload['news'] for p in n['paras'] for line in p['lines']))
-
+        # ... while the official video and its subtitles form a separate follow-along track.
+        self.assertTrue(payload['mp4_url'].endswith('.mp4'))
+        self.assertGreater(len(payload['listen']), 20)
+        self.assertTrue(all(x['start'] <= x['end'] for x in payload['listen']))
+        self.assertFalse(any('Untertitel' in x['de'] or x['de'].startswith('*') for x in payload['listen']))
+        self.assertEqual(payload['source_url'], doc['source_url'])
 
 if __name__ == '__main__':
     unittest.main()

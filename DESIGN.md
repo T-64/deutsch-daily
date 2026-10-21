@@ -138,6 +138,22 @@ GitHub Pages (main:/docs)
 | `Esc` | 关闭释义卡、抽屉、设置面板 |
 | 滚动 | 侧栏目录与「本篇词汇」跟随当前新闻 |
 
+### 原声跟练（`reader.js` 的 training 部分）
+
+每期都有原节目视频（`mp4_url` 由 `data/meta` 的 m3u8 推出）。短读课的 AI 改写句子**不带时间**（它不是原声）；原声由官方字幕组成单独的跟读轨 `DATA.listen`（`build.listen_track`：去掉 Gong/Untertitel/Copyright，按句末标点合并字幕，保留起止时间）。旧视频课直接用正文里对齐好时间的句子。
+
+| 控件 | 行为 |
+|---|---|
+| 时间码按钮 / ⏮ ⏭（←/→） | 跳到某句 / 上一句 / 下一句 |
+| ▶（空格） | 播放暂停；逐句模式下停在句末后按空格接着播下一句 |
+| ↺（R） | 重听当前句 |
+| 连续 / 逐句跟读 / 单句循环 | 逐句跟读：每句播完自动暂停，留时间跟读；单句循环：当前句反复播 |
+| 0.75× / 0.9× / 1× | 语速 |
+| 仅音频 | 隐藏画面只听声音 |
+| 迷你播放条 | 开始播放后，播放控件滚出屏幕时吸底出现，显示当前句 |
+
+设置存在 `dd-train-v1`（`{mode, rate, audio}`）。视频加载失败时隐藏控件并给出 tagesschau.de 原节目链接。
+
 ### 本地存储（键名是用户数据，不要随意改）
 
 | 键 | 内容 |
@@ -145,6 +161,7 @@ GitHub Pages (main:/docs)
 | `dd-basket` | 生词本数组 `{key, word, zh, pos, example, date, topic, source, createdAt, manual}` |
 | `dd-user-gloss` | 用户自填释义 `{[key]: {word, zh, pos, example}}` |
 | `dd-recent-lesson` | 最近打开的课程（首页「继续上次」） |
+| `dd-train-v1` | 跟练设置 `{mode: flow|stop|loop, rate, audio}` |
 | `dd-prefs-v2` | `{theme: system|light|dark, size: 0–4, zh: bool}`；首次读取时从旧 `dd-preferences` 迁移主题和字号 |
 | `dd-local-lessons-v1` | 本地课程工坊保存的字幕课程（见 `static/studio.js`） |
 
@@ -153,7 +170,7 @@ GitHub Pages (main:/docs)
 ### 无障碍
 
 - 所有可点元素是 `button` 或 `role="button"` + `tabindex="0"`，焦点环统一 `--accent`。
-- 德语内容标 `lang="de"`，页面 `lang="zh-CN"`。
+- 德语内容标 `lang="de"`，页面 `lang="zh-CN"`。课程标题用中文日期（「10 月 20 日 · 星期二」），德语日期作副标题。
 - 尊重 `prefers-reduced-motion`。
 
 ---
