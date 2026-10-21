@@ -1,0 +1,65 @@
+name: Update lessons
+
+# Daily broadcast lessons: official subtitles + AI Chinese, built and pushed to main.
+# Secrets are only exposed to the single generation step; no PR/issue triggers.
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "First Berlin date to check (YYYY-MM-DD, optional)"
+        required: false
+        type: string
+      until:
+        description: "Last Berlin date to check (YYYY-MM-DD, optional; default yesterday)"
+        required: false
+        type: string
+      force:
+        description: "Regenerate lessons even when the subtitles are unchanged"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-lessons
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.repository == 'T-64/deutsch-daily'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate, validate and publish
+        env:
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          GLM_BASE_URL: ${{ secrets.GLM_BASE_URL }}
+          DEUTSCH_AI_MODEL: ${{ vars.DEUTSCH_AI_MODEL }}
+          INPUT_SINCE: ${{ inputs.since }}
+          INPUT_UNTIL: ${{ inputs.until }}
+          INPUT_FORCE: ${{ inputs.force }}
+        run: |
+          args=(--publish)
+          # Inputs arrive via env (not interpolated into the script) and are format-checked.
+          for pair in "since:$INPUT_SINCE" "until:$INPUT_UNTIL"; do
+            name="${pair%%:*}"; value="${pair#*:}"
+            if [ -n "$value" ]; then
+              if [[ ! "$value" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+                echo "invalid $name: expected YYYY-MM-DD" >&2; exit 1
+              fi
+              args+=("--$name" "$value")
+            fi
+          done
+          if [ "$INPUT_FORCE" = "true" ]; then args+=(--force); fi
+          python3 scripts/update_readings.py "${args[@]}"

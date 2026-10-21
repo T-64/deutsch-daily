@@ -1,5 +1,5 @@
-/* Deutsch Daily — Anki .apkg export (sql.js from jsDelivr, loaded on demand). */
-(function () {
+// @ts-nocheck — ported verbatim from the first front end (static/anki.js); exercised manually in Anki.
+
 const SQLJS_URL = 'https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/sql-wasm.wasm';
 const SQLJS_JS  = 'https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/sql-wasm.js';
 
@@ -13,7 +13,7 @@ function loadScript(src) {
 
 function esc(s) { return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 
-async function exportApkg(words, status = () => {}) {
+async function exportApkg(words, status = (_m) => {}) {
   if (!words.length) throw new Error('生词本是空的');
   status('加载 sql.js…');
   if (!window.initSqlJs) {
@@ -189,5 +189,5 @@ function makeZip(files) {
   return out;
 }
 
-window.DDAnki = { exportApkg };
-})();
+export { exportApkg };
+

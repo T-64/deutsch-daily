@@ -15,6 +15,7 @@ data/content/YYYY-MM-DD.json + templates/ → docs/YYYY-MM-DD.html (+index.html)
 """
 import hashlib
 import json
+from html import escape
 import re
 import shutil
 import sqlite3
@@ -25,6 +26,7 @@ from pathlib import Path
 BASE = Path(__file__).parent
 sys.path.insert(0, str(BASE / "scripts"))
 from sources import SOURCES, detect_source, parse_slug, slug_for
+from subtitle_sentences import cue_sentences
 
 DATA = BASE / "data"
 CONTENT = DATA / "content"
@@ -279,33 +281,10 @@ def load_transcript(slug):
     return cues
 
 
-LISTEN_SKIP = re.compile(r"(^\*.*\*$|untertitel|copyright)", re.I)
-
-
 def listen_track(slug):
-    """Official subtitles regrouped into timed sentences for the follow-along player."""
+    """Official subtitles regrouped into timed sentences (shared with the lesson generator)."""
     data = load_json(TRANSCRIPTS / f"{slug}.json")
-    if not isinstance(data, list):
-        return []
-    out, buf, start, end = [], [], None, None
-    for row in data:
-        text = " ".join(str(row.get("text") or "").split())
-        if not text or LISTEN_SKIP.search(text):
-            continue
-        try:
-            a, b = float(row["start"]), float(row.get("end") or row["start"])
-        except (KeyError, TypeError, ValueError):
-            continue
-        if start is None:
-            start = a
-        buf.append(text)
-        end = b
-        if re.search(r'[.!?:]["»“]?$', text):
-            out.append({"de": " ".join(buf), "start": round(start, 2), "end": round(end, 2)})
-            buf, start = [], None
-    if buf:
-        out.append({"de": " ".join(buf), "start": round(start, 2), "end": round(end, 2)})
-    return out
+    return cue_sentences(data) if isinstance(data, list) else []
 
 
 def token_set(text):
@@ -521,122 +500,189 @@ def editorial_vocab(news):
     return items
 
 
-def word_gloss_map(doc, cache, extra_texts=()):
-    gloss = {}
-    form_to_key = {}
-    phrases = []
-    for n in doc["news"]:
-        for v in editorial_vocab(n):
-            gloss[v["key"]] = {
-                "word": v["lemma"],
-                "zh": v["zh"],
-                "pos": v["pos"],
-                "example": v["example_de"],
-                "source": "editorial",
-            }
-            for form in v["forms"]:
-                form_to_key[form.lower()] = v["key"]
-                if " " in form.strip() and not any(ch in form for ch in ",(+"):
-                    phrases.append(form.strip())
-    texts = [p for n in doc["news"] for p in (n.get("paragraphs") or [])] + list(extra_texts)
-    for p in texts:
-        for t in TOKEN_RE.findall(p):
+def word_gloss_map(vocab_items, texts, cache):
+    """vocab_items: [{key, lemma, forms, pos, zh, example_de}] → gloss, form_to_key, phrases."""
+    gloss, form_to_key, phrases = {}, {}, []
+    for v in vocab_items:
+        gloss[v["key"]] = {"word": v["lemma"], "zh": v["zh"], "pos": v["pos"], "example": v.get("example_de", ""), "source": "editorial"}
+        for form in v["forms"]:
+            form_to_key[form.lower()] = v["key"]
+            if " " in form.strip() and not any(ch in form for ch in ",(+"):
+                phrases.append(form.strip())
+    for text in texts:
+        for t in TOKEN_RE.findall(text):
             key = t.lower()
-            if key in form_to_key:
+            if key in form_to_key or not cache.get(key, {}).get("zh"):
                 continue
-            if key in cache and cache[key].get("zh"):
-                gloss[key] = {
-                    "word": cache[key].get("word") or t,
-                    "zh": cache[key]["zh"],
-                    "pos": cache[key].get("pos") or "",
-                    "example": "",
-                    "source": "dict",
-                }
-                form_to_key[key] = key
-    phrases = sorted(set(phrases), key=lambda s: (-len(s), s.lower()))
-    return gloss, form_to_key, phrases
+            gloss[key] = {"word": cache[key].get("word") or t, "zh": cache[key]["zh"], "pos": cache[key].get("pos") or "", "example": "", "source": "dict"}
+            form_to_key[key] = key
+    return gloss, form_to_key, sorted(set(phrases), key=lambda x: (-len(x), x.lower()))
 
 
-def render(doc):
-    date = doc["date"]
-    slug = doc_slug(doc, date)
-    source = doc.get("source") or detect_source(doc.get("video_page") or "")
-    info = SOURCES.get(source) or SOURCES["einfach"]
-    if any(len(n.get("paragraphs") or []) != len(n.get("translations") or []) for n in doc["news"]):
-        raise SystemExit(f"{slug}: paragraphs 与 translations 数量不一致")
-    meta = load_json(META / f"{slug}.json")
-    if meta is None and source == "einfach" and slug != date:
-        meta = load_json(META / f"{date}.json")
-    reading = doc.get("content_kind") == "reading"
-    cues = [] if reading else load_transcript(slug)
-    if not reading and not cues and source == "einfach" and slug != date:
+SHOW = "tagesschau in Einfacher Sprache"
+PENDING_NOTE = "这期的逐句中文还在生成中；先用原声和字幕跟练，点词可查义。"
+
+
+def _vocab_item(v, sentences=None):
+    lemma = (v.get("lemma") or "").strip()
+    key = (v.get("key") or "").strip()
+    if not lemma or not key:
+        return None
+    idx = v.get("sentence")
+    ex_de, ex_zh = v.get("example_de") or "", v.get("example_zh") or ""
+    if sentences is not None and isinstance(idx, int) and 0 <= idx < len(sentences):
+        ex_de, ex_zh = sentences[idx]["de"], sentences[idx].get("zh", "")
+    return {"key": key, "lemma": lemma, "forms": surface_forms(lemma, v.get("forms") or []), "pos": v.get("pos") or "",
+            "zh": v.get("zh") or "", "example_de": ex_de, "example_zh": ex_zh}
+
+
+def _grammar_item(g, sentences=None):
+    idx = g.get("sentence")
+    ex_de, ex_zh = g.get("example_de") or "", g.get("example_zh") or ""
+    if sentences is not None and isinstance(idx, int) and 0 <= idx < len(sentences):
+        ex_de, ex_zh = sentences[idx]["de"], sentences[idx].get("zh", "")
+    return {"title": g.get("title") or "Grammatik", "summary": g.get("summary") or "", "example_de": ex_de, "example_zh": ex_zh}
+
+
+def _timed(x):
+    return None if x is None else round(float(x), 2)
+
+
+def _broadcast(doc):
+    sentences = [{"de": s["de"], "zh": s.get("zh") or "", "start": _timed(s.get("start")), "end": _timed(s.get("end"))} for s in doc["sentences"]]
+    stories = []
+    for st in doc["stories"]:
+        vocab = [x for x in (_vocab_item(v, sentences) for v in st.get("vocab") or []) if x]
+        stories.append({"title": st["title"], "title_zh": st.get("title_zh") or "", "from": st["from"], "to": st["to"],
+                        "vocab": vocab, "grammar": [_grammar_item(g, sentences) for g in st.get("grammar_points") or []],
+                        "background": st.get("background") or ""})
+    return sentences, stories, ""
+
+
+def _legacy_video(doc, slug, date, source):
+    """Aligned 08–09/2026 lessons: news paragraphs paired sentence by sentence with subtitle times."""
+    cues = load_transcript(slug)
+    if not cues and source == "einfach" and slug != date:
         cues = load_transcript(date)
-    listen = listen_track(slug if (TRANSCRIPTS / f"{slug}.json").exists() else date) if reading else []
-    gloss, form_to_key, phrases = word_gloss_map(doc, load_cache(), [x["de"] for x in listen])
-    news_html = []
-    cursor = 0
+    sentences, stories, cursor = [], [], 0
     for n in doc["news"]:
+        start = len(sentences)
         paras, trans = coalesce_sentence_items(n.get("paragraphs") or [], n.get("translations") or [])
-        para_out = []
         for de, zh in zip(paras, trans):
             lines = pair_sentences(de, zh)
             times, cursor = align_paragraphs([x["de"] for x in lines], cues, cursor)
-            starts = [t[0] for t in times if t[0] is not None]
-            ends = [t[1] for t in times if t[1] is not None]
-            para_out.append({
-                "start": starts[0] if starts else None,
-                "end": ends[-1] if ends else None,
-                "lines": [
-                    {"de": line["de"], "zh": line["zh"], "start": s, "end": e}
-                    for line, (s, e) in zip(lines, times)
-                ],
-            })
-        news_html.append({
-            "title": n["title"],
-            "title_zh": n.get("title_zh") or "",
-            "paras": para_out,
-            "vocab": editorial_vocab(n),
-            "grammar_points": [
-                {
-                    "title": g.get("title") or "Grammatik",
-                    "summary": g.get("summary") or "",
-                    "example_de": g.get("example_de") or "",
-                    "example_zh": g.get("example_zh") or "",
-                }
-                for g in (n.get("grammar_points") or [])[:2]
-            ],
-            "background": n.get("background") or "",
-        })
-    duration = None
-    if cues:
-        duration = cues[-1]["end"]
-    payload = {
-        "date": date,
-        "slug": slug,
-        "source": source,
-        "source_label": doc.get("source_label") or info["label"],
-        "source_short": info["short"],
-        "content_kind": doc.get("content_kind") or "video",
-        "level": doc.get("level") or "A2–B1",
-        "adaptation": doc.get("adaptation") or "",
-        "source_url": doc.get("source_url") or doc.get("video_page") or "",
-        "video_page": (meta or {}).get("video_page") or doc.get("video_page") or "",
-        "embed_url": doc.get("embed_url") or "",
-        # Readings are rewrites, so their sentences carry no timing; the broadcast and
-        # its official subtitles are offered separately as the listening track.
-        "mp4_url": derive_mp4_url(meta),
-        "duration": listen[-1]["end"] if listen else duration,
-        "listen": listen,
-        "news": news_html,
-        "gloss": gloss,
-        "form_to_key": form_to_key,
-        "phrases": phrases,
+            sentences += [{"de": line["de"], "zh": line["zh"], "start": _timed(a), "end": _timed(b)} for line, (a, b) in zip(lines, times)]
+        if len(sentences) == start:
+            continue
+        stories.append({"title": n["title"], "title_zh": n.get("title_zh") or "", "from": start, "to": len(sentences) - 1,
+                        "vocab": [x for x in (_vocab_item({**v, "example_de": example_from_source(n.get("paragraphs") or [], surface_forms(v.get("lemma") or "", v.get("forms") or [])) or v.get("example_de") or ""}) for v in n.get("vocab") or []) if x],
+                        "grammar": [_grammar_item(g) for g in (n.get("grammar_points") or [])[:2]],
+                        "background": n.get("background") or ""})
+    return sentences, stories, ""
+
+
+def _legacy_reading(doc, slug, date):
+    """Oct 2026 short readings: show the broadcast transcript instead of the AI rewrite until regenerated."""
+    track = listen_track(slug) or listen_track(date)
+    sentences = [{"de": x["de"], "zh": "", "start": x["start"], "end": x["end"]} for x in track]
+    if not sentences:
+        return _legacy_video(doc, slug, date, "einfach")
+    text = " ".join(x["de"] for x in sentences)
+    vocab, seen = [], set()
+    for n in doc["news"]:
+        for v in n.get("vocab") or []:
+            item = _vocab_item(v)
+            if not item or item["key"] in seen or not any(form_in_text(f, text) for f in item["forms"]):
+                continue
+            seen.add(item["key"])
+            item["example_de"] = next((x["de"] for x in sentences if any(form_in_text(f, x["de"]) for f in item["forms"])), "")
+            item["example_zh"] = ""
+            vocab.append(item)
+    stories = [{"title": "Die Sendung", "title_zh": " · ".join(n.get("title_zh") or n["title"] for n in doc["news"]),
+                "from": 0, "to": len(sentences) - 1, "vocab": vocab, "grammar": [], "background": ""}]
+    return sentences, stories, PENDING_NOTE
+
+
+def lesson_payload(doc, fallback_slug=""):
+    date = doc["date"]
+    slug = doc_slug(doc, fallback_slug or date)
+    source = doc.get("source") or detect_source(doc.get("video_page") or "")
+    meta = load_json(META / f"{slug}.json") or (load_json(META / f"{date}.json") if slug != date else None) or {}
+    kind = doc.get("content_kind") or "video"
+    if kind == "broadcast":
+        sentences, stories, note = _broadcast(doc)
+    elif kind == "reading":
+        sentences, stories, note = _legacy_reading(doc, slug, date)
+    else:
+        if any(len(n.get("paragraphs") or []) != len(n.get("translations") or []) for n in doc["news"]):
+            raise SystemExit(f"{slug}: paragraphs 与 translations 数量不一致")
+        sentences, stories, note = _legacy_video(doc, slug, date, source)
+    vocab_items = [v for st in stories for v in st["vocab"]]
+    gloss, form_to_key, phrases = word_gloss_map(vocab_items, [x["de"] for x in sentences], load_cache())
+    for st in stories:
+        for v in st["vocab"]:
+            v.pop("forms", None)
+    ends = [x["end"] for x in sentences if x["end"] is not None]
+    return {
+        "slug": slug, "date": date, "show": SHOW if source == "einfach" else SOURCES[source]["label"],
+        "level": doc.get("level") or "A2–B1", "kind": kind if kind in ("broadcast", "reading") else "video", "note": note,
+        "source_url": doc.get("source_url") or doc.get("video_page") or meta.get("episode_url") or "",
+        "video": {"mp4": derive_mp4_url(meta), "embed": doc.get("embed_url") or "",
+                  "page": meta.get("video_page") or doc.get("video_page") or ""},
+        "duration": max(ends) if ends else None,
+        "sentences": sentences, "stories": stories, "gloss": gloss, "form_to_key": form_to_key, "phrases": phrases,
     }
-    return page("episode.html", __DATE__=date, __PAYLOAD__=to_script_json(payload))
+
+
+def catalog_item(doc, slug):
+    """Home/archive entry, computed without subtitle alignment so a one-day build stays fast."""
+    date = doc["date"]
+    meta = load_json(META / f"{slug}.json") or (load_json(META / f"{date}.json") if slug != date else None) or {}
+    kind = doc.get("content_kind") or "video"
+    urls = []
+    for url in (doc.get("video_page"), doc.get("embed_url"), doc.get("source_url"), meta.get("episode_url"), meta.get("video_page")):
+        if url and url not in urls:
+            urls.append(url)
+    if kind == "broadcast":
+        stories = [st for st in doc["stories"] if st.get("vocab")] or doc["stories"]
+        titles, titles_zh = [st["title"] for st in stories], [st.get("title_zh") or "" for st in stories]
+        ends = [x.get("end") for x in doc["sentences"] if x.get("end") is not None]
+    else:
+        titles, titles_zh = [n["title"] for n in doc["news"]], [n.get("title_zh") or "" for n in doc["news"]]
+        track = listen_track(slug) or (listen_track(date) if slug != date else [])
+        ends = [x["end"] for x in track]
+    return {"slug": slug, "date": date, "kind": kind if kind in ("broadcast", "reading") else "video", "count": len(titles),
+            "duration": round(max(ends), 2) if ends else None, "titles": titles, "titles_zh": titles_zh,
+            "mp4": derive_mp4_url(meta), "urls": urls}
+
+
+def render(doc):
+    """Kept for tests and scripts: the lesson page for one content document."""
+    lesson = lesson_payload(doc)
+    return app_page({"page": "lesson", "lesson": lesson, "items": []}, f"{zh_title(lesson['date'])} · {lesson['show']}",
+                    "跟着 tagesschau 原声逐句学德语：官方字幕、逐句中文、点词查义。")
+
+
+def zh_title(date):
+    y, m, d = (int(x) for x in date.split("-"))
+    return f"{m} 月 {d} 日"
 
 
 def to_script_json(value):
-    return json.dumps(value, ensure_ascii=False).replace("</", "<\\/")
+    return json.dumps(value, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+
+
+APP_SHELL = SITE / "app" / "index.html"
+
+
+def app_page(data, title, description):
+    """Stamp one page from the Vite-built shell (docs/app/index.html) — no Node needed here."""
+    if not APP_SHELL.exists():
+        raise SystemExit("缺少 docs/app/index.html：先在 web/ 里运行 npm ci && npm run build")
+    html = APP_SHELL.read_text().replace('"./assets/', '"app/assets/')
+    html = html.replace("<title>Deutsch Daily</title>", f"<title>{escape(title)} — Deutsch Daily</title>")
+    html = html.replace("<!--dd:head-->", f'<meta name="description" content="{escape(description)}">')
+    return html.replace("<!--dd:data-->", f'<script id="dd-data" type="application/json">{to_script_json(data)}</script>')
 
 
 def asset_version():
@@ -649,7 +695,7 @@ def asset_version():
 
 
 def page(name, **replacements):
-    """Fill a template: shared partials first, then page-specific placeholders."""
+    """Legacy static template (only the local studio still uses it)."""
     v = asset_version()
     html = (TEMPLATES / name).read_text()
     html = html.replace("__HEAD__", (
@@ -676,6 +722,10 @@ def copy_assets():
         shutil.copy2(STATIC / name, assets / name)
 
 
+def publishable_slugs():
+    return [s for s in content_slugs() if s not in FROZEN_DATES and parse_slug(s)[1] == "einfach"]
+
+
 def build(slug=None):
     SITE.mkdir(parents=True, exist_ok=True)
     if slug:
@@ -683,72 +733,35 @@ def build(slug=None):
             raise SystemExit("20:00 edition is retired; only einfach is published")
         if slug in FROZEN_DATES:
             raise SystemExit(f"refusing to rebuild frozen page {slug}")
-        slugs = [slug]
-    else:
-        slugs = [s for s in content_slugs() if s not in FROZEN_DATES and parse_slug(s)[1] == "einfach"]
-    for s in slugs:
+    docs = {}
+    for s in sorted(publishable_slugs(), reverse=True):
         doc = json.loads(content_file(s).read_text())
-        html = render(doc)
-        out_slug = doc_slug(doc, s)
-        (SITE / f"{out_slug}.html").write_text(html)
-        print(f"[ok] {out_slug}.html ({len(html)} bytes)")
-    # Keep difficult-edition source data archived, but remove its public pages.
-    for page in SITE.glob("*-20uhr.html"):
-        page.unlink()
-    build_index()
-    return slugs
+        if (doc.get("source") or detect_source(doc.get("video_page") or "")) == "einfach":
+            docs[doc_slug(doc, s)] = doc
+    if slug and slug not in docs:
+        raise SystemExit(f"no content for {slug}")
+    targets = [slug] if slug else list(docs)
+    for s in targets:
+        lesson = lesson_payload(docs[s], s)
+        html = app_page({"page": "lesson", "lesson": lesson, "items": []}, f"{zh_title(lesson['date'])} · {lesson['show']}",
+                        " · ".join(st["title"] for st in lesson["stories"][:4]))
+        (SITE / f"{s}.html").write_text(html)
+        print(f"[ok] {s}.html ({len(lesson['sentences'])} 句)")
+    items = [catalog_item(doc, s) for s, doc in docs.items()]
+    for page_ in SITE.glob("*-20uhr.html"):
+        page_.unlink()
+    build_index(items)
+    return targets
 
 
-def build_index(all_slugs=None):
-    slugs = sorted(all_slugs or content_slugs(), reverse=True)
-    items = []
-    for s in slugs:
-        try:
-            doc = json.loads(content_file(s).read_text())
-        except FileNotFoundError:
-            continue
-        source = doc.get("source") or detect_source(doc.get("video_page") or "")
-        if source != "einfach":
-            continue
-        info = SOURCES.get(source) or SOURCES["einfach"]
-        titles = " · ".join(n["title"] for n in doc["news"][:3])
-        slug = doc_slug(doc, s)
-        meta = load_json(META / f"{slug}.json") or {}
-        urls = []
-        for url in (
-            doc.get("video_page"),
-            doc.get("embed_url"),
-            meta.get("episode_url"),
-            meta.get("video_page"),
-        ):
-            if url and url not in urls:
-                urls.append(url)
-        items.append({
-            "date": doc.get("date") or parse_slug(s)[0],
-            "slug": slug,
-            "source": source,
-            "source_short": info["short"],
-            "source_label": info["label"],
-            "titles": titles,
-            "titles_zh": " · ".join(n.get("title_zh", "") for n in doc["news"][:3]),
-            "news_titles": [n["title"] for n in doc["news"]],
-            "news_titles_zh": [n.get("title_zh", "") for n in doc["news"]],
-            "content_kind": doc.get("content_kind") or "video",
-            "level": doc.get("level") or "A2–B1",
-            "count": len(doc["news"]),
-            "urls": urls,
-        })
-    payload = to_script_json(items)
-    (SITE / "index.html").write_text(page("index.html", __ITEMS__=payload))
-    (SITE / "open.html").write_text(page("open.html", __ITEMS__=payload))
-    (SITE / "about.html").write_text(page("about.html"))
+def build_index(items):
+    desc = "跟着 tagesschau in Einfacher Sprache 原声逐句学德语：官方字幕、逐句中文、跟读与循环、点词查义、导出 Anki。"
+    (SITE / "index.html").write_text(app_page({"page": "home", "items": items}, "跟着 tagesschau 学德语", desc))
+    (SITE / "open.html").write_text(app_page({"page": "open", "items": items}, "用链接打开", desc))
+    (SITE / "about.html").write_text(app_page({"page": "about"}, "关于", desc))
     (SITE / "studio.html").write_text(page("studio.html"))
     copy_assets()
-    print(f"[ok] index.html ({len(items)} 期)")
-    print(f"[ok] open.html ({len(items)} 个可识别课程)")
-    print("[ok] about.html")
-    print("[ok] studio.html")
-    print("[ok] assets/")
+    print(f"[ok] index.html ({len(items)} 期) · open.html · about.html · studio.html · assets/")
 
 
 if __name__ == "__main__":
