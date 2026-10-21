@@ -3,7 +3,7 @@
 <head>
 __HEAD__
 <link rel="stylesheet" href="assets/reader.css?v=__V__">
-<title>Deutsch Daily — __DATE__</title>
+<title>__DATE__ · Deutsch Daily</title>
 </head>
 <body>
 <header class="bar"><div class="wrap bar-in">
@@ -20,11 +20,37 @@ __HEAD__
   <article class="reader" id="reader">
     <header class="lesson-head">
       <p class="kicker" id="kicker"></p>
-      <h1 id="title" lang="de"></h1>
+      <h1 id="title"></h1>
+      <p class="title-de" id="title-de" lang="de"></p>
       <p class="lesson-meta" id="meta"></p>
       <p class="note" id="adaptation" hidden></p>
     </header>
-    <div class="player" id="player" hidden></div>
+    <section class="train" id="train" aria-labelledby="train-h" hidden>
+      <div class="part-h"><h2 id="train-h">原声跟练</h2><span id="train-sub"></span></div>
+      <div class="player" id="player"></div>
+      <div class="train-bar" role="group" aria-label="播放控制">
+        <div class="tr-main">
+          <button class="btn-icon" type="button" id="tr-prev" aria-label="上一句（←）" title="上一句（←）">⏮</button>
+          <button class="btn tr-play" type="button" id="tr-play" aria-label="播放（空格）">▶</button>
+          <button class="btn-icon" type="button" id="tr-next" aria-label="下一句（→）" title="下一句（→）">⏭</button>
+          <button class="btn-icon" type="button" id="tr-again" aria-label="重听这一句（R）" title="重听这一句（R）">↺</button>
+          <span class="tr-time" id="tr-time">00:00</span>
+        </div>
+        <input class="tr-seek" id="tr-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="播放进度">
+        <div class="tr-opts">
+          <div class="seg" role="group" aria-label="播放方式" id="tr-mode">
+            <button type="button" data-mode="flow">连续</button><button type="button" data-mode="stop" title="每句播完自动暂停，跟读后再继续">逐句跟读</button><button type="button" data-mode="loop">单句循环</button>
+          </div>
+          <div class="seg" role="group" aria-label="语速" id="tr-speed">
+            <button type="button" data-rate="0.75">0.75×</button><button type="button" data-rate="0.9">0.9×</button><button type="button" data-rate="1">1×</button>
+          </div>
+          <button class="btn-quiet" type="button" id="tr-audio" aria-pressed="false">仅音频</button>
+        </div>
+      </div>
+      <div class="listen" id="listen" hidden></div>
+      <p class="tr-fail" id="tr-fail" hidden></p>
+    </section>
+    <div class="part-h part-read" id="read-h" hidden><h2>精读短文</h2><span>AI 按原声改写，可点词查义</span></div>
     <p class="hint" id="hint">先读德语。读完一句再点句末的 <span class="chip">译</span> 对照中文；点任意单词查释义。</p>
     <div id="stories"></div>
   </article>
@@ -58,6 +84,12 @@ __HEAD__
   </aside>
 </div>
 
+<div class="dock" id="dock" hidden>
+  <button class="btn-icon" type="button" data-dock="prev" aria-label="上一句">⏮</button>
+  <button class="btn tr-play" type="button" data-dock="play" aria-label="播放">▶</button>
+  <button class="btn-icon" type="button" data-dock="next" aria-label="下一句">⏭</button>
+  <p class="dock-text" id="dock-text" lang="de"></p>
+</div>
 <div class="scrim" id="scrim" hidden></div>
 <div class="pop" id="pop" role="dialog" aria-label="单词卡片" hidden></div>
 __FOOT__

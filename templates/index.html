@@ -33,9 +33,9 @@ __HEAD__
   .archive .input { width: min(220px, 52%); min-height: 34px; padding: 6px 10px; font-size: 14px; }
   .month { margin-top: 28px; font: 600 15px/1 var(--serif); color: var(--ink-2); }
   .rows { list-style: none; margin-top: 8px; }
-  .rows a { display: grid; grid-template-columns: 84px 1fr auto; gap: 12px; align-items: baseline; padding: 12px 8px; margin: 0 -8px; border-radius: 8px; color: inherit; }
+  .rows a { display: grid; grid-template-columns: 92px 1fr auto; gap: 12px; align-items: baseline; padding: 12px 8px; margin: 0 -8px; border-radius: 8px; color: inherit; }
   .rows a:hover { background: var(--surface-2); text-decoration: none; }
-  .rows time { font: 500 13px/1.5 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+  .rows time { font: 500 13px/1.5 var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
   .rows .t { min-width: 0; }
   .rows .de { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 16px/1.5 var(--serif); color: var(--ink); }
   .rows .zh { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; color: var(--muted); }
@@ -82,28 +82,28 @@ __CORE__
 <script>
 const ITEMS = __ITEMS__;
 (function () {
-  const { esc, fmtDate, store } = window.DD;
+  const { esc, fmtDate, zhDate, store } = window.DD;
   const $ = id => document.getElementById(id);
-  const kind = item => item.content_kind === 'reading' ? '短读' : '视频课';
-  const shortDate = iso => `${fmtDate(iso, { weekday: 'short' }).replace('.', '')} ${iso.slice(8, 10)}.${iso.slice(5, 7)}.`;
+  const kind = item => item.content_kind === 'reading' ? '原声 + 短读' : '视频精读';
+  const shortDate = iso => `${Number(iso.slice(5, 7))}月${Number(iso.slice(8, 10))}日 ${'日一二三四五六'[new Date(iso + 'T12:00:00').getDay()]}`;
 
   const latest = ITEMS[0];
   if (latest) {
     $('today').hidden = false;
     $('today-link').href = latest.slug + '.html';
-    $('today-date').textContent = fmtDate(latest.date);
-    $('today-meta').textContent = `${latest.count} Themen · ${kind(latest)}`;
+    $('today-date').textContent = zhDate(latest.date);
+    $('today-meta').textContent = `${latest.count} 条新闻 · ${kind(latest)}`;
     $('today-list').innerHTML = latest.news_titles.map((t, i) => `<li><span class="num">${String(i + 1).padStart(2, '0')}</span>
       <span><b lang="de">${esc(t)}</b>${latest.news_titles_zh[i] ? `<span class="zh">${esc(latest.news_titles_zh[i])}</span>` : ''}</span></li>`).join('');
   }
   const recent = store.get('dd-recent-lesson', null);
   if (recent && recent.slug && recent.slug !== latest?.slug && ITEMS.some(item => item.slug === recent.slug)) {
     $('continue').href = recent.slug + '.html';
-    $('continue-title').textContent = `${fmtDate(recent.date, { day: 'numeric', month: 'long' })} · ${recent.title || ''}`;
+    $('continue-title').textContent = `${zhDate(recent.date, { weekday: false })} · ${recent.title || ''}`;
     $('continue').hidden = false;
   }
 
-  const haystack = item => [item.date, fmtDate(item.date), fmtDate(item.date, { day: '2-digit', month: '2-digit' }),
+  const haystack = item => [item.date, fmtDate(item.date), zhDate(item.date), shortDate(item.date), fmtDate(item.date, { day: '2-digit', month: '2-digit' }),
     ...(item.news_titles || []), ...(item.news_titles_zh || [])].join(' ').toLowerCase();
   const indexed = ITEMS.map(item => ({ item, text: haystack(item) }));
   function render(query) {
@@ -116,7 +116,7 @@ const ITEMS = __ITEMS__;
       months.get(key).push(item);
     });
     $('months').innerHTML = [...months].map(([key, items]) =>
-      `<h3 class="month">${esc(fmtDate(key + '-15', { month: 'long', year: 'numeric' }))}</h3><ul class="rows">${items.map(item => `<li><a href="${esc(item.slug)}.html">
+      `<h3 class="month">${esc(key.slice(0, 4) + ' 年 ' + Number(key.slice(5, 7)) + ' 月')}</h3><ul class="rows">${items.map(item => `<li><a href="${esc(item.slug)}.html">
         <time datetime="${esc(item.date)}">${esc(shortDate(item.date))}</time>
         <span class="t"><span class="de" lang="de">${esc((item.news_titles || []).join(' · '))}</span><span class="zh">${esc((item.news_titles_zh || []).filter(Boolean).join(' · '))}</span></span>
         <span class="tag">${kind(item)}</span></a></li>`).join('')}</ul>`).join('');

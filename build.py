@@ -279,6 +279,35 @@ def load_transcript(slug):
     return cues
 
 
+LISTEN_SKIP = re.compile(r"(^\*.*\*$|untertitel|copyright)", re.I)
+
+
+def listen_track(slug):
+    """Official subtitles regrouped into timed sentences for the follow-along player."""
+    data = load_json(TRANSCRIPTS / f"{slug}.json")
+    if not isinstance(data, list):
+        return []
+    out, buf, start, end = [], [], None, None
+    for row in data:
+        text = " ".join(str(row.get("text") or "").split())
+        if not text or LISTEN_SKIP.search(text):
+            continue
+        try:
+            a, b = float(row["start"]), float(row.get("end") or row["start"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        if start is None:
+            start = a
+        buf.append(text)
+        end = b
+        if re.search(r'[.!?:]["»“]?$', text):
+            out.append({"de": " ".join(buf), "start": round(start, 2), "end": round(end, 2)})
+            buf, start = [], None
+    if buf:
+        out.append({"de": " ".join(buf), "start": round(start, 2), "end": round(end, 2)})
+    return out
+
+
 def token_set(text):
     return set(norm_de(text).split())
 
@@ -492,7 +521,7 @@ def editorial_vocab(news):
     return items
 
 
-def word_gloss_map(doc, cache):
+def word_gloss_map(doc, cache, extra_texts=()):
     gloss = {}
     form_to_key = {}
     phrases = []
@@ -509,21 +538,21 @@ def word_gloss_map(doc, cache):
                 form_to_key[form.lower()] = v["key"]
                 if " " in form.strip() and not any(ch in form for ch in ",(+"):
                     phrases.append(form.strip())
-    for n in doc["news"]:
-        for p in n.get("paragraphs") or []:
-            for t in TOKEN_RE.findall(p):
-                key = t.lower()
-                if key in form_to_key:
-                    continue
-                if key in cache and cache[key].get("zh"):
-                    gloss[key] = {
-                        "word": cache[key].get("word") or t,
-                        "zh": cache[key]["zh"],
-                        "pos": cache[key].get("pos") or "",
-                        "example": "",
-                        "source": "dict",
-                    }
-                    form_to_key[key] = key
+    texts = [p for n in doc["news"] for p in (n.get("paragraphs") or [])] + list(extra_texts)
+    for p in texts:
+        for t in TOKEN_RE.findall(p):
+            key = t.lower()
+            if key in form_to_key:
+                continue
+            if key in cache and cache[key].get("zh"):
+                gloss[key] = {
+                    "word": cache[key].get("word") or t,
+                    "zh": cache[key]["zh"],
+                    "pos": cache[key].get("pos") or "",
+                    "example": "",
+                    "source": "dict",
+                }
+                form_to_key[key] = key
     phrases = sorted(set(phrases), key=lambda s: (-len(s), s.lower()))
     return gloss, form_to_key, phrases
 
@@ -542,7 +571,8 @@ def render(doc):
     cues = [] if reading else load_transcript(slug)
     if not reading and not cues and source == "einfach" and slug != date:
         cues = load_transcript(date)
-    gloss, form_to_key, phrases = word_gloss_map(doc, load_cache())
+    listen = listen_track(slug if (TRANSCRIPTS / f"{slug}.json").exists() else date) if reading else []
+    gloss, form_to_key, phrases = word_gloss_map(doc, load_cache(), [x["de"] for x in listen])
     news_html = []
     cursor = 0
     for n in doc["news"]:
@@ -590,10 +620,13 @@ def render(doc):
         "level": doc.get("level") or "A2–B1",
         "adaptation": doc.get("adaptation") or "",
         "source_url": doc.get("source_url") or doc.get("video_page") or "",
-        "video_page": doc.get("video_page") or (meta or {}).get("video_page") or "",
+        "video_page": (meta or {}).get("video_page") or doc.get("video_page") or "",
         "embed_url": doc.get("embed_url") or "",
-        "mp4_url": "" if reading else derive_mp4_url(meta),
-        "duration": duration,
+        # Readings are rewrites, so their sentences carry no timing; the broadcast and
+        # its official subtitles are offered separately as the listening track.
+        "mp4_url": derive_mp4_url(meta),
+        "duration": listen[-1]["end"] if listen else duration,
+        "listen": listen,
         "news": news_html,
         "gloss": gloss,
         "form_to_key": form_to_key,

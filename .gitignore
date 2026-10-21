@@ -11,3 +11,8 @@ pdf/
 data/dict/*.sqlite3
 data/dict/*.sqlite
 data/dict/*.jsonl
+
+# local credentials — never commit
+.env
+.env.*
+*.env

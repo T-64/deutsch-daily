@@ -61,6 +61,13 @@
     return d.toLocaleDateString('de-DE', opts || { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
   }
 
+  const WEEK = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+  function zhDate(iso, { year = false, weekday = true } = {}) {
+    const d = new Date(iso + 'T12:00:00');
+    if (Number.isNaN(d.getTime())) return iso;
+    return `${year ? d.getFullYear() + ' 年 ' : ''}${d.getMonth() + 1} 月 ${d.getDate()} 日${weekday ? ' · ' + WEEK[d.getDay()] : ''}`;
+  }
+
   let toastEl, toastTimer;
   function toast(message) {
     if (!toastEl) {
@@ -142,5 +149,5 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', watchBar);
   else watchBar();
 
-  window.DD = { store, prefs, savePrefs, onPrefs, esc, fmtDate, toast };
+  window.DD = { store, prefs, savePrefs, onPrefs, esc, fmtDate, zhDate, toast };
 })();
