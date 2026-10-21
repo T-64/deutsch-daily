@@ -78,6 +78,7 @@ web/（Vite + React + TS）── npm run build ──▶ docs/app/（提交进�
 4. **点词即查。** 任意单词可点；查词时自动暂停，关掉卡片自动继续。
 5. **克制的动效。** Motion 只用于：入场（ease-out-expo 0.8–1.1s）、共享布局（分段控件滑块）、弹层（spring 520/36）、音柱。尊重 `prefers-reduced-motion`。
 6. **深色优先，浅色同等完成。** 默认跟随系统，设置菜单可固定。
+7. **奥卡姆剃刀。** 界面上不写标语、介绍和说明文字。能用图标就不用字；必须用字时用最短的德语（Archiv、Merken、Lektion…）。中文只出现在学习内容里：逐句译文、释义、段落中文标题（随译文开关隐藏）。
 
 ### 颜色令牌（`web/src/styles.css`，OKLCH）
 
@@ -95,8 +96,9 @@ web/（Vite + React + TS）── npm run build ──▶ docs/app/（提交进�
 
 ### 字体
 
-- **Inter Variable**（自托管，@fontsource）：界面与德语字幕正文（600，`-0.012em`），中文回退苹方 / 思源黑体。
-- **Newsreader Variable**（含斜体）：段落标题、德语日期、例句、Hero 的 *Satz für Satz.*。
+- **Geist Variable**（自托管，@fontsource）：界面与德语字幕正文（600，`-0.012em`）、例句、小字；中文回退苹方 / 思源黑体。
+- **Instrument Serif**（正体 + 斜体，仅 400）：只用于 ≥ 20px 的展示文字——日期（首页巨型日期、课程页日期）、段落标题、词条、Archiv。小于 20px 一律用 Geist，不要给它加粗。
+- 等宽：时间码、星期缩写、标签（大写 + 字距）。
 - 字幕字号 `clamp(19px, 1.55vw, 25px) × --reader-scale`（设置里 5 档 88%–118%），中文 15.5px。
 
 ### 组件约定

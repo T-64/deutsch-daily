@@ -520,7 +520,7 @@ def word_gloss_map(vocab_items, texts, cache):
 
 
 SHOW = "tagesschau in Einfacher Sprache"
-PENDING_NOTE = "这期的逐句中文还在生成中；先用原声和字幕跟练，点词可查义。"
+PENDING_NOTE = ""
 
 
 def _vocab_item(v, sentences=None):
@@ -659,13 +659,16 @@ def catalog_item(doc, slug):
 def render(doc):
     """Kept for tests and scripts: the lesson page for one content document."""
     lesson = lesson_payload(doc)
-    return app_page({"page": "lesson", "lesson": lesson, "items": []}, f"{zh_title(lesson['date'])} · {lesson['show']}",
-                    "跟着 tagesschau 原声逐句学德语：官方字幕、逐句中文、点词查义。")
+    return app_page({"page": "lesson", "lesson": lesson, "items": []}, de_title(lesson["date"]),
+                    " · ".join(st["title"] for st in lesson["stories"][:4]))
 
 
-def zh_title(date):
-    y, m, d = (int(x) for x in date.split("-"))
-    return f"{m} 月 {d} 日"
+MONTHS_DE = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]
+
+
+def de_title(date):
+    _, m, d = (int(x) for x in date.split("-"))
+    return f"{d}. {MONTHS_DE[m - 1]}"
 
 
 def to_script_json(value):
@@ -743,7 +746,7 @@ def build(slug=None):
     targets = [slug] if slug else list(docs)
     for s in targets:
         lesson = lesson_payload(docs[s], s)
-        html = app_page({"page": "lesson", "lesson": lesson, "items": []}, f"{zh_title(lesson['date'])} · {lesson['show']}",
+        html = app_page({"page": "lesson", "lesson": lesson, "items": []}, de_title(lesson["date"]),
                         " · ".join(st["title"] for st in lesson["stories"][:4]))
         (SITE / f"{s}.html").write_text(html)
         print(f"[ok] {s}.html ({len(lesson['sentences'])} 句)")
@@ -755,10 +758,10 @@ def build(slug=None):
 
 
 def build_index(items):
-    desc = "跟着 tagesschau in Einfacher Sprache 原声逐句学德语：官方字幕、逐句中文、跟读与循环、点词查义、导出 Anki。"
-    (SITE / "index.html").write_text(app_page({"page": "home", "items": items}, "跟着 tagesschau 学德语", desc))
-    (SITE / "open.html").write_text(app_page({"page": "open", "items": items}, "用链接打开", desc))
-    (SITE / "about.html").write_text(app_page({"page": "about"}, "关于", desc))
+    desc = "tagesschau in Einfacher Sprache — Satz für Satz."
+    (SITE / "index.html").write_text(app_page({"page": "home", "items": items}, "Archiv", desc))
+    (SITE / "open.html").write_text(app_page({"page": "open", "items": items}, "Link", desc))
+    (SITE / "about.html").write_text(app_page({"page": "about"}, "Info", desc))
     (SITE / "studio.html").write_text(page("studio.html"))
     copy_assets()
     print(f"[ok] index.html ({len(items)} 期) · open.html · about.html · studio.html · assets/")

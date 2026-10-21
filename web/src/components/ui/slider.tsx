@@ -10,7 +10,7 @@ export const Slider = React.forwardRef<React.ElementRef<typeof SliderPrimitive.R
         <SliderPrimitive.Range className="absolute h-full bg-fg" />
       </SliderPrimitive.Track>
       <SliderPrimitive.Thumb
-        aria-label="播放进度"
+        aria-label="Position"
         className="block size-3.5 scale-0 rounded-full bg-fg shadow transition-transform group-hover:scale-100 focus-visible:scale-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring"
       />
     </SliderPrimitive.Root>

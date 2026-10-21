@@ -55,7 +55,7 @@ class AppPageTests(unittest.TestCase):
         self.assertIn("Willkommen zur tagesschau", texts)
         self.assertNotIn(doc["news"][0]["paragraphs"][0], texts)  # the AI rewrite is not shown twice
         self.assertTrue(all(s["start"] is not None for s in lesson["sentences"]))
-        self.assertTrue(lesson["note"])
+        self.assertTrue(all(s["zh"] == "" for s in lesson["sentences"]))  # until regenerated
 
     def test_broadcast_lesson_maps_examples_from_sentence_indices(self):
         doc = {

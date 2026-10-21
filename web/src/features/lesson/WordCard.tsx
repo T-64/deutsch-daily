@@ -33,12 +33,12 @@ export const useWordCard = create<WordState>()((set, get) => ({
   },
 }));
 
-const SOURCE: Record<string, string> = { editorial: '本期重点词', dict: '离线词典', user: '我的释义' };
+const SOURCE: Record<string, string> = { editorial: 'Lektion', dict: 'Wörterbuch', user: 'Eigene' };
 
 function Highlight({ text, word }: { text: string; word: string }) {
   const at = text.indexOf(word);
   if (at < 0) return <>{text}</>;
-  return <>{text.slice(0, at)}<b className="font-semibold not-italic text-fg">{word}</b>{text.slice(at + word.length)}</>;
+  return <>{text.slice(0, at)}<b className="font-semibold text-fg">{word}</b>{text.slice(at + word.length)}</>;
 }
 
 export function WordCard() {
@@ -68,7 +68,7 @@ export function WordCard() {
       key: target.key, word: custom?.word ?? headword, zh, pos: g?.pos || '', example: custom?.example ?? target.sentence,
       date: lesson.date, topic: target.topic, source: custom ? 'user' : g?.source || '',
     });
-    toast.success(saved ? '已更新生词本' : '已加入生词本', { description: custom?.word ?? headword });
+    toast.success(custom?.word ?? headword, { description: 'Gemerkt' });
     close();
   }
 
@@ -93,28 +93,26 @@ export function WordCard() {
           >
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
-                <div lang="de" className="font-serif text-[26px] leading-tight font-semibold tracking-tight text-fg">{headword}</div>
-                <div className="mt-0.5 text-xs text-faint">{[g?.pos, g ? SOURCE[g.source] : '词典暂无'].filter(Boolean).join(' · ')}</div>
+                <div lang="de" className="font-serif text-[32px] leading-none tracking-[-0.01em] text-fg">{headword}</div>
+                <div className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">{[g?.pos, g ? SOURCE[g.source] : ''].filter(Boolean).join(' · ')}</div>
               </div>
               <Popover.Close asChild>
-                <Button variant="ghost" size="icon-sm" aria-label="关闭" className="-mr-1.5 -mt-1"><X /></Button>
+                <Button variant="ghost" size="icon-sm" aria-label="Schließen" className="-mr-1.5 -mt-1"><X /></Button>
               </Popover.Close>
             </div>
 
             {!editing ? (
               <>
-                <p className={g?.zh ? 'mt-3 text-[17px] text-fg' : 'mt-3 text-sm text-muted'}>
-                  {g?.zh || '这个词形不在词典里，可以写下你的理解。'}
-                </p>
+                <p className={g?.zh ? 'mt-3 text-[17px] text-fg' : 'mt-3 text-faint'}>{g?.zh || '—'}</p>
                 {target?.sentence && (
-                  <p lang="de" className="mt-3 border-l-2 border-line-2 pl-3 font-serif text-[15px] italic leading-relaxed text-fg-2">
+                  <p lang="de" className="mt-3 border-l-2 border-line-2 pl-3 text-[14px] leading-relaxed text-fg-2">
                     <Highlight text={target.sentence} word={target.surface} />
                   </p>
                 )}
                 <div className="mt-4 flex justify-end gap-2">
-                  <Button variant="ghost" size="sm" onClick={() => setEditing(true)}><Pencil />{g?.zh ? '改释义' : '写释义'}</Button>
+                  <Button variant="ghost" size="icon-sm" aria-label="Bearbeiten" onClick={() => setEditing(true)}><Pencil /></Button>
                   <Button variant={saved ? 'secondary' : 'accent'} size="sm" onClick={() => save()} disabled={saved}>
-                    {saved ? <><Check />已在生词本</> : <><Plus />加入生词本</>}
+                    {saved ? <><Check />Gemerkt</> : <><Plus />Merken</>}
                   </Button>
                 </div>
               </>
@@ -129,12 +127,12 @@ export function WordCard() {
                   if (word && zh) save({ word, zh, example: String(f.get('example') || '').trim() });
                 }}
               >
-                <Field label="词形"><input name="word" defaultValue={headword} lang="de" required className={inputCls} /></Field>
-                <Field label="中文释义"><input name="zh" defaultValue={g?.zh || ''} required autoFocus className={inputCls} placeholder="写下你的理解" /></Field>
-                <Field label="例句"><textarea name="example" defaultValue={target?.sentence} lang="de" rows={2} className={inputCls + ' resize-none py-2'} /></Field>
+                <Field label="Wort"><input name="word" defaultValue={headword} lang="de" required className={inputCls} /></Field>
+                <Field label="Bedeutung"><input name="zh" defaultValue={g?.zh || ''} required autoFocus className={inputCls} /></Field>
+                <Field label="Beispiel"><textarea name="example" defaultValue={target?.sentence} lang="de" rows={2} className={inputCls + ' resize-none py-2'} /></Field>
                 <div className="mt-1 flex justify-end gap-2">
-                  <Button variant="ghost" size="sm" onClick={() => setEditing(false)}>取消</Button>
-                  <Button variant="accent" size="sm" type="submit">保存并加入</Button>
+                  <Button variant="ghost" size="sm" onClick={() => setEditing(false)}>Abbrechen</Button>
+                  <Button variant="accent" size="sm" type="submit">Speichern</Button>
                 </div>
               </form>
             )}

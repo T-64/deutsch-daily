@@ -50,8 +50,7 @@ function AudioCard() {
         ))}
       </div>
       <div className="relative">
-        <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted">仅音频</p>
-        <p lang="de" className="mt-1 font-serif text-2xl leading-tight text-fg">{story?.title}</p>
+        <p lang="de" className="font-serif text-3xl leading-tight text-fg">{story?.title}</p>
       </div>
     </div>
   );
@@ -91,10 +90,10 @@ export function Player() {
       {failed && (
         <div className="flex aspect-video flex-col items-center justify-center gap-3 rounded-[22px] border border-line bg-surface p-6 text-center">
           <Video className="size-6 text-faint" />
-          <p className="text-sm text-muted">视频暂时无法加载。字幕和中文仍可阅读。</p>
+
           {lesson.video.page && (
             <Button asChild variant="outline" size="sm">
-              <a href={lesson.video.page} target="_blank" rel="noreferrer">在 tagesschau.de 观看 <ExternalLink /></a>
+              <a href={lesson.video.page} target="_blank" rel="noreferrer">tagesschau.de <ExternalLink /></a>
             </Button>
           )}
         </div>
@@ -113,7 +112,7 @@ function BigPlay() {
         <motion.button
           type="button"
           onClick={toggle}
-          aria-label="播放"
+          aria-label="Abspielen"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.08 }}
@@ -147,7 +146,7 @@ function Chapters({ duration }: { duration: number }) {
           <Tip key={k} label={`${String(k + 1).padStart(2, '0')} · ${st.title}`}>
             <button
               type="button"
-              aria-label={`跳到第 ${k + 1} 段：${st.title}`}
+              aria-label={st.title}
               onClick={() => playFrom(st.from + i)}
               className="pointer-events-auto absolute top-0 h-3 w-[3px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-bg ring-1 ring-bg transition hover:h-4 hover:bg-accent"
               style={{ left: `${(t / duration) * 100}%` }}
@@ -166,14 +165,14 @@ export function Transport({ compact = false }: { compact?: boolean }) {
   return (
     <div className={cn('grid gap-3', disabled && 'pointer-events-none opacity-50')}>
       <div className="flex items-center gap-1">
-        <Tip label="上一句" kbd="←"><Button variant="ghost" size="icon" aria-label="上一句" onClick={() => p.step(-1)}><SkipBack /></Button></Tip>
-        <Tip label={p.playing ? '暂停' : '播放'} kbd="Space">
-          <Button variant="default" size="icon-lg" aria-label={p.playing ? '暂停' : '播放'} onClick={p.toggle} className="mx-1">
+        <Tip label="Zurück" kbd="←"><Button variant="ghost" size="icon" aria-label="Zurück" onClick={() => p.step(-1)}><SkipBack /></Button></Tip>
+        <Tip label={p.playing ? 'Pause' : 'Abspielen'} kbd="Space">
+          <Button variant="default" size="icon-lg" aria-label={p.playing ? 'Pause' : 'Abspielen'} onClick={p.toggle} className="mx-1">
             {p.playing ? <Pause className="size-5 fill-current" /> : <Play className="ml-0.5 size-5 fill-current" />}
           </Button>
         </Tip>
-        <Tip label="下一句" kbd="→"><Button variant="ghost" size="icon" aria-label="下一句" onClick={() => p.step(1)}><SkipForward /></Button></Tip>
-        <Tip label="重听这一句" kbd="R"><Button variant="ghost" size="icon" aria-label="重听这一句" onClick={p.replay}><RotateCcw /></Button></Tip>
+        <Tip label="Weiter" kbd="→"><Button variant="ghost" size="icon" aria-label="Weiter" onClick={() => p.step(1)}><SkipForward /></Button></Tip>
+        <Tip label="Wiederholen" kbd="R"><Button variant="ghost" size="icon" aria-label="Wiederholen" onClick={p.replay}><RotateCcw /></Button></Tip>
         <span className="ml-auto font-mono text-xs tabular text-muted">{clock(p.time)} <span className="text-faint">/ {clock(p.duration || 0)}</span></span>
       </div>
       <div className="relative">
@@ -184,34 +183,34 @@ export function Transport({ compact = false }: { compact?: boolean }) {
         step={1}
         buffered={p.buffered}
         onValueChange={([v]) => p.seekRatio(v / 1000)}
-        aria-label="播放进度"
+        aria-label="Position"
       />
       </div>
       {!compact && (
         <div className="flex flex-wrap items-center gap-2">
           <Segmented<PlayMode>
             size="sm"
-            label="播放方式"
+            label="Modus"
             value={prefs.mode}
             onChange={mode => prefs.set({ mode })}
             options={[
-              { value: 'flow', label: <><Play className="size-3.5" />连续</>, title: '一直播放' },
-              { value: 'stop', label: <><StepForward className="size-3.5" />逐句跟读</>, title: '每句播完暂停，跟读后按空格继续' },
-              { value: 'loop', label: <><Repeat1 className="size-3.5" />单句循环</>, title: '当前句反复播放' },
+              { value: 'flow', label: <Play className="size-3.5" />, title: 'Durchgehend' },
+              { value: 'stop', label: <StepForward className="size-3.5" />, title: 'Satz für Satz' },
+              { value: 'loop', label: <Repeat1 className="size-3.5" />, title: 'Schleife' },
             ]}
           />
           <Segmented<string>
             size="sm"
-            label="语速"
+            label="Tempo"
             value={String(prefs.rate)}
             onChange={v => prefs.set({ rate: Number(v) })}
             options={['0.75', '0.9', '1'].map(v => ({ value: v, label: `${v}×` }))}
           />
-          <Tip label={prefs.audioOnly ? '显示画面' : '只听声音'}>
+          <Tip label={prefs.audioOnly ? 'Video' : 'Nur Audio'}>
             <Button
               variant={prefs.audioOnly ? 'secondary' : 'ghost'}
               size="icon-sm"
-              aria-label="仅音频"
+              aria-label="Nur Audio"
               aria-pressed={prefs.audioOnly}
               onClick={() => prefs.set({ audioOnly: !prefs.audioOnly })}
               className={cn('ml-auto', prefs.audioOnly && 'text-accent')}

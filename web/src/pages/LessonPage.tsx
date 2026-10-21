@@ -1,4 +1,4 @@
-import { ArrowLeft, BookOpen, ExternalLink, Pause, Play, Repeat1, SkipBack, SkipForward, StepForward } from 'lucide-react';
+import { ArrowLeft, BookOpen, Captions, ExternalLink, EyeOff, Languages, Pause, Play, Repeat1, SkipBack, SkipForward, StepForward } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
@@ -10,7 +10,7 @@ import { Tip } from '@/components/ui/tooltip';
 import type { Lesson } from '@/lib/data';
 import { usePlayer } from '@/lib/player';
 import { recent, usePrefs, type PlayMode, type ZhMode } from '@/lib/store';
-import { cn, deDate, zhDate } from '@/lib/utils';
+import { cn, de } from '@/lib/utils';
 import { LessonProvider, useLesson } from '@/features/lesson/context';
 import { Player, Transport } from '@/features/lesson/Player';
 import { Study } from '@/features/lesson/Study';
@@ -54,14 +54,14 @@ function ZhToggle({ size = 'md' }: { size?: 'sm' | 'md' }) {
   const set = usePrefs(p => p.set);
   return (
     <Segmented<ZhMode>
-      label="中文译文"
+      label="Übersetzung"
       size={size}
       value={zh}
       onChange={v => set({ zh: v })}
       options={[
-        { value: 'hidden', label: '盲听', title: '隐藏中文，可逐句点开（T 切换）' },
-        { value: 'current', label: '当前句', title: '只显示正在播放这一句的中文' },
-        { value: 'all', label: '全部', title: '显示全部中文' },
+        { value: 'hidden', label: <EyeOff className="size-3.5" />, title: 'Aus (T)' },
+        { value: 'current', label: <Languages className="size-3.5" />, title: 'Aktueller Satz (T)' },
+        { value: 'all', label: <Captions className="size-3.5" />, title: 'Alle (T)' },
       ]}
     />
   );
@@ -69,28 +69,20 @@ function ZhToggle({ size = 'md' }: { size?: 'sm' | 'md' }) {
 
 function Masthead() {
   const { lesson } = useLesson();
-  const mins = lesson.duration ? Math.max(1, Math.round(lesson.duration / 60)) : null;
+  const href = lesson.video.page || lesson.source_url;
   return (
-    <div>
-      <p className="flex items-center gap-2 text-xs font-medium text-muted">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-2 py-0.5 text-accent">
-          <span className="size-1.5 rounded-full bg-accent" />{lesson.show}
-        </span>
-        <span>{lesson.level}</span>
-      </p>
-      <h1 className="mt-3 text-[clamp(28px,3vw,40px)] font-semibold leading-[1.1] tracking-[-0.025em] text-fg">{zhDate(lesson.date)}</h1>
-      <p lang="de" className="mt-1 font-serif text-[17px] italic text-muted">{deDate(lesson.date)}</p>
-      <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] text-muted">
-        <span>{lesson.stories.length} 段</span>
-        <span>{lesson.sentences.length} 句</span>
-        {mins && <span>{mins} 分钟</span>}
-        {(lesson.video.page || lesson.source_url) && (
-          <a className="inline-flex items-center gap-1 hover:text-fg" href={lesson.video.page || lesson.source_url} target="_blank" rel="noreferrer">
-            tagesschau.de <ExternalLink className="size-3" />
-          </a>
-        )}
-      </p>
-      {lesson.note && <p className="mt-4 border-l-2 border-line-2 pl-3 text-xs leading-relaxed text-muted">{lesson.note}</p>}
+    <div className="flex items-end justify-between gap-4">
+      <div>
+        <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted">{de(lesson.date, { weekday: 'long' })}</p>
+        <h1 className="mt-2 font-serif text-[clamp(44px,4.2vw,64px)] leading-[0.9] tracking-[-0.02em] text-fg">
+          {de(lesson.date, { day: 'numeric' })}. <span className="italic text-fg-2">{de(lesson.date, { month: 'long' })}</span>
+        </h1>
+      </div>
+      {href && (
+        <Tip label="tagesschau.de">
+          <Button asChild variant="ghost" size="icon" aria-label="tagesschau.de"><a href={href} target="_blank" rel="noreferrer"><ExternalLink /></a></Button>
+        </Tip>
+      )}
     </div>
   );
 }
@@ -164,9 +156,9 @@ function Mobile() {
   const p = usePlayer();
   const prefs = usePrefs();
   const modes: { v: PlayMode; icon: React.ReactNode; label: string }[] = [
-    { v: 'flow', icon: <Play className="size-3.5" />, label: '连续' },
-    { v: 'stop', icon: <StepForward className="size-3.5" />, label: '逐句' },
-    { v: 'loop', icon: <Repeat1 className="size-3.5" />, label: '循环' },
+    { v: 'flow', icon: <Play className="size-4" />, label: 'Durchgehend' },
+    { v: 'stop', icon: <StepForward className="size-4" />, label: 'Satz für Satz' },
+    { v: 'loop', icon: <Repeat1 className="size-4" />, label: 'Schleife' },
   ];
   useLayoutEffect(() => {
     const el = media.current;
@@ -186,26 +178,27 @@ function Mobile() {
       </div>
       <div className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-[color-mix(in_oklch,var(--bg)_86%,transparent)] px-3 pb-[calc(10px+env(safe-area-inset-bottom))] pt-2.5 backdrop-blur-xl">
         <div className="mx-auto flex max-w-xl items-center gap-1">
-          <Button variant="ghost" size="icon" aria-label="上一句" onClick={() => p.step(-1)} disabled={!p.el}><SkipBack /></Button>
-          <Button size="icon-lg" aria-label={p.playing ? '暂停' : '播放'} onClick={p.toggle} disabled={!p.el || p.failed}>
+          <Button variant="ghost" size="icon" aria-label="Zurück" onClick={() => p.step(-1)} disabled={!p.el}><SkipBack /></Button>
+          <Button size="icon-lg" aria-label={p.playing ? 'Pause' : 'Abspielen'} onClick={p.toggle} disabled={!p.el || p.failed}>
             {p.playing ? <Pause className="size-5 fill-current" /> : <Play className="ml-0.5 size-5 fill-current" />}
           </Button>
-          <Button variant="ghost" size="icon" aria-label="下一句" onClick={() => p.step(1)} disabled={!p.el}><SkipForward /></Button>
-          <button
-            type="button"
+          <Button variant="ghost" size="icon" aria-label="Weiter" onClick={() => p.step(1)} disabled={!p.el}><SkipForward /></Button>
+          <Button
+            variant="ghost"
+            size="icon"
             onClick={() => prefs.set({ mode: modes[(modes.findIndex(m => m.v === prefs.mode) + 1) % modes.length].v })}
-            className="ml-1 inline-flex h-8 items-center gap-1.5 rounded-full bg-surface-2 px-3 text-xs font-medium text-fg-2"
-            aria-label="切换播放方式"
+            className={cn(prefs.mode !== 'flow' && 'text-accent')}
+            aria-label={modes.find(m => m.v === prefs.mode)?.label}
           >
-            {modes.find(m => m.v === prefs.mode)?.icon}{modes.find(m => m.v === prefs.mode)?.label}
-          </button>
-          <Button variant="secondary" size="sm" className="ml-auto" onClick={() => setDrawer('story')}><BookOpen />学习</Button>
+            {modes.find(m => m.v === prefs.mode)?.icon}
+          </Button>
+          <Button variant="secondary" size="icon" className="ml-auto" aria-label="Wörter" onClick={() => setDrawer('story')}><BookOpen /></Button>
         </div>
       </div>
-      <Drawer open={!!drawer} onOpenChange={o => setDrawer(o ? drawer ?? 'story' : null)} title="学习面板">
-        <div className="mb-5 grid gap-4">
+      <Drawer open={!!drawer} onOpenChange={o => setDrawer(o ? drawer ?? 'story' : null)} title="Lektion">
+        <div className="mb-6 grid gap-4">
           <Transport />
-          <div className="flex items-center justify-between gap-3"><span className="text-sm text-muted">中文</span><ZhToggle size="sm" /></div>
+          <div><ZhToggle size="sm" /></div>
         </div>
         <Study tab={drawer ?? 'story'} onTab={setDrawer} />
       </Drawer>
@@ -222,15 +215,13 @@ function Body() {
   useEffect(() => setSentences(lesson.sentences), [lesson, setSentences]);
   useEffect(() => {
     recent.set({ slug: lesson.slug, date: lesson.date, title: lesson.stories.find(s => s.vocab.length)?.title || lesson.stories[0]?.title || '' });
-    document.title = `${zhDate(lesson.date)} · ${lesson.show} — Deutsch Daily`;
+    document.title = `${de(lesson.date, { day: 'numeric', month: 'long' })} — Deutsch Daily`;
   }, [lesson]);
   useEffect(() => close, [close]);
   return (
     <div className={cn(desktop && 'h-dvh overflow-hidden')}>
       <TopBar>
-        <Tip label="全部课程" side="bottom">
-          <Button variant="ghost" size="icon" asChild aria-label="全部课程"><a href="index.html"><ArrowLeft /></a></Button>
-        </Tip>
+        <Button variant="ghost" size="icon" asChild aria-label="Archiv"><a href="index.html"><ArrowLeft /></a></Button>
         <Logo className="max-sm:hidden" />
         <NowPlaying />
         <div className="ml-auto flex items-center gap-2">

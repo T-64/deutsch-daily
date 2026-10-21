@@ -51,7 +51,7 @@ const Line = memo(function Line({
           <button
             type="button"
             data-seek={i}
-            aria-label={`从 ${clock(s.start)} 播放这一句`}
+            aria-label={clock(s.start)}
             className={cn(
               'inline-flex h-6 items-center gap-1 rounded-full px-1.5 font-mono text-[11px] tabular text-faint transition',
               'hover:bg-surface-2 hover:text-fg',
@@ -92,7 +92,7 @@ const Line = memo(function Line({
             <button
               type="button"
               data-reveal={i}
-              aria-label="显示这一句的中文"
+              aria-label="Übersetzung"
               className="ml-2 inline-flex size-6 translate-y-[-2px] items-center justify-center rounded-full align-middle text-faint opacity-0 transition hover:bg-surface-2 hover:text-fg group-hover:opacity-100 focus-visible:opacity-100 max-lg:opacity-60"
             >
               <Languages className="size-3.5" />
@@ -124,6 +124,7 @@ export function Transcript({ scroller }: { scroller: React.RefObject<HTMLElement
   const hasVideo = usePlayer(s => !!s.el && !s.failed);
   const playFrom = usePlayer(s => s.playFrom);
   const follow = usePrefs(p => p.follow);
+  const zhMode = usePrefs(p => p.zh);
   const words = useNotebook(s => s.words);
   const openWord = useWordCard(s => s.open);
   const [revealed, setRevealed] = useState<Set<number>>(() => new Set());
@@ -203,9 +204,9 @@ export function Transcript({ scroller }: { scroller: React.RefObject<HTMLElement
           <header className="sticky top-0 z-10 -mx-1 mb-1 bg-bg px-1 pb-3 pt-6 after:pointer-events-none after:absolute after:inset-x-0 after:top-full after:h-8 after:bg-gradient-to-b after:from-[var(--bg)] after:to-transparent">
             <div className="flex items-baseline gap-3">
               <span className="font-mono text-[11px] tabular text-accent">{String(k + 1).padStart(2, '0')}</span>
-              <h2 id={`story-h-${k}`} lang="de" className="font-serif text-[22px] font-medium leading-tight tracking-tight text-fg">{story.title}</h2>
+              <h2 id={`story-h-${k}`} lang="de" className="font-serif text-[28px] leading-tight tracking-[-0.01em] text-fg">{story.title}</h2>
             </div>
-            {story.title_zh && <p className="mt-0.5 pl-[calc(11px*2+12px)] text-[13px] text-muted">{story.title_zh}</p>}
+            {story.title_zh && zhMode !== 'hidden' && <p className="mt-0.5 pl-[calc(11px*2+12px)] text-[13px] text-muted">{story.title_zh}</p>}
           </header>
           {lesson.sentences.slice(story.from, story.to + 1).map((s, j) => {
             const i = story.from + j;
@@ -222,8 +223,8 @@ export function Transcript({ scroller }: { scroller: React.RefObject<HTMLElement
             exit={{ opacity: 0, y: 12 }}
             className="pointer-events-none sticky bottom-6 z-20 flex justify-center max-lg:bottom-24"
           >
-            <Button variant="secondary" size="sm" className="pointer-events-auto shadow-[var(--shadow)] backdrop-blur" onClick={() => { setDetached(false); center(); }}>
-              <ArrowDown />回到当前句
+            <Button variant="secondary" size="icon" aria-label="Aktueller Satz" className="pointer-events-auto shadow-[var(--shadow)] backdrop-blur" onClick={() => { setDetached(false); center(); }}>
+              <ArrowDown />
             </Button>
           </motion.div>
         )}
