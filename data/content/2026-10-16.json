@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-16",
+  "slug": "2026-10-16",
+  "source": "einfach",
+  "source_label": "tagesschau · Einfache Sprache",
+  "level": "A2–B1",
+  "content_kind": "reading",
+  "adaptation": "根据官方新闻整理的简易德语短读，非节目逐字稿；中文译文与学习提示由 AI 生成。",
+  "source_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1464.html",
+  "source_text_sha256": "d8be7863247197730d47f17f64c826c07ab9787f5584987d8e2846c101dbae38",
+  "generated_at": "2026-10-21T01:35:52.656965+02:00",
+  "generation_model": "glm-5.3",
+  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1464.html",
+  "embed_url": "",
+  "news": [
+    {
+      "title": "Staat hilft jungen Menschen beim Sparen",
+      "title_zh": "国家帮助年轻人储蓄",
+      "vocab": [
+        {
+          "lemma": "die Regierung, -en",
+          "key": "regierung",
+          "forms": [
+            "Regierung"
+          ],
+          "pos": "Substantiv",
+          "zh": "政府",
+          "example_de": "Die Regierung will Menschen beim Sparen für die Rente helfen.",
+          "example_zh": "政府想帮助人们为退休储蓄。"
+        },
+        {
+          "lemma": "die Rente, -n",
+          "key": "rente",
+          "forms": [
+            "Rente"
+          ],
+          "pos": "Substantiv",
+          "zh": "退休金",
+          "example_de": "Die Regierung will Menschen beim Sparen für die Rente helfen.",
+          "example_zh": "政府想帮助人们为退休储蓄。"
+        },
+        {
+          "lemma": "sparen",
+          "key": "sparen",
+          "forms": [
+            "Sparen",
+            "sparen"
+          ],
+          "pos": "Verb",
+          "zh": "储蓄",
+          "example_de": "Die Regierung will Menschen beim Sparen für die Rente helfen.",
+          "example_zh": "政府想帮助人们为退休储蓄。"
+        },
+        {
+          "lemma": "das Konto, Konten",
+          "key": "konto",
+          "forms": [
+            "Konto"
+          ],
+          "pos": "Substantiv",
+          "zh": "账户",
+          "example_de": "Das Geld kommt zum Sparen auf ein Konto bei der Bank.",
+          "example_zh": "这笔钱为了储蓄存入银行的一个账户。"
+        },
+        {
+          "lemma": "jung",
+          "key": "jung",
+          "forms": [
+            "jungen"
+          ],
+          "pos": "Adjektiv",
+          "zh": "年轻的",
+          "example_de": "Der Staat will jungen Menschen jeden Monat ein bisschen Geld geben.",
+          "example_zh": "国家计划每个月给年轻人一点钱。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "beim + 动名词（beim Sparen）",
+          "summary": "beim 是 bei dem 的缩写，Sparen 是动词名词化。jemandem beim Sparen helfen 表示“帮助某人储蓄”，bei 支配第三格。",
+          "example_de": "Die Regierung will Menschen beim Sparen für die Rente helfen.",
+          "example_zh": "政府想帮助人们为退休储蓄。"
+        }
+      ],
+      "paragraphs": [
+        "Die Regierung will Menschen beim Sparen für die Rente helfen.",
+        "Der Staat will jungen Menschen jeden Monat ein bisschen Geld geben.",
+        "Das Geld kommt zum Sparen auf ein Konto bei der Bank.",
+        "In der Rente bekommen die Menschen dann das Geld."
+      ],
+      "translations": [
+        "政府想帮助人们为退休储蓄。",
+        "国家计划每个月给年轻人一点钱。",
+        "这笔钱为了储蓄存入银行的一个账户。",
+        "退休后人们就能得到这笔钱。"
+      ],
+      "background": ""
+    },
+    {
+      "title": "Höhere Steuern: Rauchen wird teurer",
+      "title_zh": "更高的税收：吸烟变得更贵",
+      "vocab": [
+        {
+          "lemma": "die Steuer, -n",
+          "key": "steuer",
+          "forms": [
+            "Steuern"
+          ],
+          "pos": "Substantiv",
+          "zh": "税",
+          "example_de": "Die Regierung macht die Steuern für Zigaretten höher.",
+          "example_zh": "政府提高了香烟的税收。"
+        },
+        {
+          "lemma": "die Zigarette, -n",
+          "key": "zigarette",
+          "forms": [
+            "Zigaretten"
+          ],
+          "pos": "Substantiv",
+          "zh": "香烟",
+          "example_de": "Deshalb werden Zigaretten in Deutschland teurer.",
+          "example_zh": "因此香烟在德国变得更贵。"
+        },
+        {
+          "lemma": "teuer",
+          "key": "teuer",
+          "forms": [
+            "teurer"
+          ],
+          "pos": "Adjektiv",
+          "zh": "贵的",
+          "example_de": "Deshalb werden Zigaretten in Deutschland teurer.",
+          "example_zh": "因此香烟在德国变得更贵。"
+        },
+        {
+          "lemma": "die Schuld, -en",
+          "key": "schuld",
+          "forms": [
+            "Schulden"
+          ],
+          "pos": "Substantiv",
+          "zh": "债务",
+          "example_de": "Der Staat bekommt mehr Geld und bezahlt seine Schulden.",
+          "example_zh": "国家得到更多钱并偿还债务。"
+        },
+        {
+          "lemma": "der Raucher, -",
+          "key": "raucher",
+          "forms": [
+            "Raucher"
+          ],
+          "pos": "Substantiv",
+          "zh": "吸烟者",
+          "example_de": "Viele Raucher finden die höheren Steuern nicht gut.",
+          "example_zh": "很多吸烟者认为更高的税收不好。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "werden + 形容词比较级",
+          "summary": "werden 表示状态变化，后接形容词比较级，如 wird teurer 意为“变得更贵”。",
+          "example_de": "Deshalb werden Zigaretten in Deutschland teurer.",
+          "example_zh": "因此香烟在德国变得更贵。"
+        }
+      ],
+      "paragraphs": [
+        "Die Regierung macht die Steuern für Zigaretten höher.",
+        "Deshalb werden Zigaretten in Deutschland teurer.",
+        "Der Staat bekommt mehr Geld und bezahlt seine Schulden.",
+        "Viele Raucher finden die höheren Steuern nicht gut."
+      ],
+      "translations": [
+        "政府提高了香烟的税收。",
+        "因此香烟在德国变得更贵。",
+        "国家得到更多钱并偿还债务。",
+        "很多吸烟者认为更高的税收不好。"
+      ],
+      "background": ""
+    },
+    {
+      "title": "EU berät über Hilfe für die Ukraine",
+      "title_zh": "欧盟商讨对乌克兰的援助",
+      "vocab": [
+        {
+          "lemma": "das Treffen, -",
+          "key": "treffen",
+          "forms": [
+            "Treffen"
+          ],
+          "pos": "Substantiv",
+          "zh": "会面、会议",
+          "example_de": "In Belgien ist heute ein wichtiges Treffen von der EU.",
+          "example_zh": "今天在比利时有一个重要的欧盟会议。"
+        },
+        {
+          "lemma": "der Krieg, -e",
+          "key": "krieg",
+          "forms": [
+            "Krieg"
+          ],
+          "pos": "Substantiv",
+          "zh": "战争",
+          "example_de": "Die EU-Länder sprechen über den Krieg von Russland gegen die Ukraine.",
+          "example_zh": "欧盟各国谈论俄罗斯对乌克兰的战争。"
+        },
+        {
+          "lemma": "sprechen über",
+          "key": "sprechen",
+          "forms": [
+            "sprechen"
+          ],
+          "pos": "Verb",
+          "zh": "谈论",
+          "example_de": "Die EU-Länder sprechen über den Krieg von Russland gegen die Ukraine.",
+          "example_zh": "欧盟各国谈论俄罗斯对乌克兰的战争。"
+        },
+        {
+          "lemma": "helfen",
+          "key": "helfen",
+          "forms": [
+            "helfen"
+          ],
+          "pos": "Verb",
+          "zh": "帮助",
+          "example_de": "Die Länder beraten, wie die EU der Ukraine helfen kann.",
+          "example_zh": "各国商讨欧盟如何帮助乌克兰。"
+        },
+        {
+          "lemma": "wichtig",
+          "key": "wichtig",
+          "forms": [
+            "wichtiges"
+          ],
+          "pos": "Adjektiv",
+          "zh": "重要的",
+          "example_de": "In Belgien ist heute ein wichtiges Treffen von der EU.",
+          "example_zh": "今天在比利时有一个重要的欧盟会议。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "W-Frage 从句（wie die EU helfen kann）",
+          "summary": "疑问词引导的从句中动词放句末，如 beraten, wie die EU der Ukraine helfen kann。",
+          "example_de": "Die Länder beraten, wie die EU der Ukraine helfen kann.",
+          "example_zh": "各国商讨欧盟如何帮助乌克兰。"
+        }
+      ],
+      "paragraphs": [
+        "In Belgien ist heute ein wichtiges Treffen von der EU.",
+        "Die EU-Länder sprechen über den Krieg von Russland gegen die Ukraine.",
+        "Auch Präsident Selenskyj ist bei dem Treffen.",
+        "Die Länder beraten, wie die EU der Ukraine helfen kann."
+      ],
+      "translations": [
+        "今天在比利时有一个重要的欧盟会议。",
+        "欧盟各国谈论俄罗斯对乌克兰的战争。",
+        "泽连斯基总统也参加了会议。",
+        "各国商讨欧盟如何帮助乌克兰。"
+      ],
+      "background": ""
+    }
+  ],
+  "editorial_review": "德中句对、新闻事实、词形和语法例句已对照来源检查。"
+}

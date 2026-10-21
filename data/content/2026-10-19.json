@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-19",
+  "slug": "2026-10-19",
+  "source": "einfach",
+  "source_label": "tagesschau · Einfache Sprache",
+  "level": "A2–B1",
+  "content_kind": "reading",
+  "adaptation": "根据官方新闻整理的简易德语短读，非节目逐字稿；中文译文与学习提示由 AI 生成。",
+  "source_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1482.html",
+  "source_text_sha256": "fb1a50baacc6de03717bcdd9435b1301bb1d883f6dac6a015ec5ac014dc97480",
+  "generated_at": "2026-10-21T01:36:04.311606+02:00",
+  "generation_model": "glm-5.3",
+  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1482.html",
+  "embed_url": "",
+  "news": [
+    {
+      "title": "Gewalt bei Protesten in Frankreich",
+      "title_zh": "法国抗议活动中出现暴力",
+      "vocab": [
+        {
+          "lemma": "die Straße, -n",
+          "key": "straße",
+          "forms": [
+            "Straßen"
+          ],
+          "pos": "Substantiv",
+          "zh": "街道",
+          "example_de": "In Frankreich sind viele Menschen auf die Straßen gegangen.",
+          "example_zh": "在法国，许多人走上了街头。"
+        },
+        {
+          "lemma": "teuer",
+          "key": "teuer",
+          "forms": [
+            "teurer"
+          ],
+          "pos": "Adjektiv",
+          "zh": "贵的",
+          "example_de": "Sie protestieren, weil das Leben immer teurer wird.",
+          "example_zh": "他们抗议，因为生活变得越来越贵。"
+        },
+        {
+          "lemma": "der Demonstrant, -en",
+          "key": "demonstrant",
+          "forms": [
+            "Demonstranten"
+          ],
+          "pos": "Substantiv",
+          "zh": "示威者",
+          "example_de": "Einige Demonstranten waren wütend und haben Autos zerstört.",
+          "example_zh": "一些示威者很愤怒，破坏了汽车。"
+        },
+        {
+          "lemma": "zerstören",
+          "key": "zerstören",
+          "forms": [
+            "zerstört"
+          ],
+          "pos": "Verb",
+          "zh": "破坏",
+          "example_de": "Einige Demonstranten waren wütend und haben Autos zerstört.",
+          "example_zh": "一些示威者很愤怒，破坏了汽车。"
+        },
+        {
+          "lemma": "verurteilen",
+          "key": "verurteilen",
+          "forms": [
+            "verurteilt"
+          ],
+          "pos": "Verb",
+          "zh": "谴责",
+          "example_de": "Präsident Macron verurteilt die Gewalt im Fernsehen.",
+          "example_zh": "马克龙总统在电视上谴责暴力。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "weil 从句",
+          "summary": "weil 引导原因从句，动词放在句子末尾，如：Sie protestieren, weil das Leben teurer wird.",
+          "example_de": "Sie protestieren, weil das Leben immer teurer wird.",
+          "example_zh": "他们抗议，因为生活变得越来越贵。"
+        }
+      ],
+      "paragraphs": [
+        "In Frankreich sind viele Menschen auf die Straßen gegangen.",
+        "Sie protestieren, weil das Leben immer teurer wird.",
+        "Einige Demonstranten waren wütend und haben Autos zerstört.",
+        "Präsident Macron verurteilt die Gewalt im Fernsehen."
+      ],
+      "translations": [
+        "在法国，许多人走上了街头。",
+        "他们抗议，因为生活变得越来越贵。",
+        "一些示威者很愤怒，破坏了汽车。",
+        "马克龙总统在电视上谴责暴力。"
+      ],
+      "background": ""
+    },
+    {
+      "title": "Trump setzt Sanktionen gegen Russland aus",
+      "title_zh": "特朗普暂停对俄罗斯的制裁",
+      "vocab": [
+        {
+          "lemma": "der Krieg, -e",
+          "key": "krieg",
+          "forms": [
+            "Krieg"
+          ],
+          "pos": "Substantiv",
+          "zh": "战争",
+          "example_de": "Der Krieg von Russland gegen die Ukraine dauert schon mehrere Jahre.",
+          "example_zh": "俄罗斯对乌克兰的战争已经持续了好几年。"
+        },
+        {
+          "lemma": "die Sanktion, -en",
+          "key": "sanktion",
+          "forms": [
+            "Sanktionen"
+          ],
+          "pos": "Substantiv",
+          "zh": "制裁",
+          "example_de": "US-Präsident Trump hat einige Sanktionen gegen Russland ausgesetzt.",
+          "example_zh": "美国总统特朗普暂停了一些对俄罗斯的制裁。"
+        },
+        {
+          "lemma": "aussetzen",
+          "key": "aussetzen",
+          "forms": [
+            "ausgesetzt"
+          ],
+          "pos": "Verb",
+          "zh": "暂停",
+          "example_de": "US-Präsident Trump hat einige Sanktionen gegen Russland ausgesetzt.",
+          "example_zh": "美国总统特朗普暂停了一些对俄罗斯的制裁。"
+        },
+        {
+          "lemma": "verhandeln",
+          "key": "verhandeln",
+          "forms": [
+            "verhandelt"
+          ],
+          "pos": "Verb",
+          "zh": "谈判",
+          "example_de": "Er verhandelt momentan mit Russland über einen Frieden.",
+          "example_zh": "他目前正在与俄罗斯谈判和平。"
+        },
+        {
+          "lemma": "kaufen",
+          "key": "kaufen",
+          "forms": [
+            "kaufen"
+          ],
+          "pos": "Verb",
+          "zh": "购买",
+          "example_de": "Trump will auch billigeren Diesel aus Russland kaufen.",
+          "example_zh": "特朗普还想从俄罗斯购买更便宜的柴油。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "现在完成时",
+          "summary": "haben + 过去分词表示已完成的动作，如：Trump hat Sanktionen ausgesetzt.",
+          "example_de": "US-Präsident Trump hat einige Sanktionen gegen Russland ausgesetzt.",
+          "example_zh": "美国总统特朗普暂停了一些对俄罗斯的制裁。"
+        }
+      ],
+      "paragraphs": [
+        "Der Krieg von Russland gegen die Ukraine dauert schon mehrere Jahre.",
+        "US-Präsident Trump hat einige Sanktionen gegen Russland ausgesetzt.",
+        "Er verhandelt momentan mit Russland über einen Frieden.",
+        "Trump will auch billigeren Diesel aus Russland kaufen."
+      ],
+      "translations": [
+        "俄罗斯对乌克兰的战争已经持续了好几年。",
+        "美国总统特朗普暂停了一些对俄罗斯的制裁。",
+        "他目前正在与俄罗斯谈判和平。",
+        "特朗普还想从俄罗斯购买更便宜的柴油。"
+      ],
+      "background": ""
+    },
+    {
+      "title": "Japan plant eine Mission zum Marsmond Phobos",
+      "title_zh": "日本计划探测火星卫星火卫一",
+      "vocab": [
+        {
+          "lemma": "die Rakete, -n",
+          "key": "rakete",
+          "forms": [
+            "Rakete"
+          ],
+          "pos": "Substantiv",
+          "zh": "火箭",
+          "example_de": "In Japan steht eine Rakete, sie soll bald starten.",
+          "example_zh": "在日本有一枚火箭，它很快就要发射。"
+        },
+        {
+          "lemma": "die Sonde, -n",
+          "key": "sonde",
+          "forms": [
+            "Sonde"
+          ],
+          "pos": "Substantiv",
+          "zh": "探测器",
+          "example_de": "Sie bringt eine Sonde in das Weltall.",
+          "example_zh": "它将把一个探测器送入太空。"
+        },
+        {
+          "doc_note": "",
+          "lemma": "das Weltall",
+          "key": "weltall",
+          "forms": [
+            "Weltall"
+          ],
+          "pos": "Substantiv",
+          "zh": "宇宙",
+          "example_de": "Sie bringt eine Sonde in das Weltall.",
+          "example_zh": "它将把一个探测器送入太空。"
+        },
+        {
+          "lemma": "die Probe, -n",
+          "key": "probe",
+          "forms": [
+            "Proben"
+          ],
+          "pos": "Substantiv",
+          "zh": "样本",
+          "example_de": "Die Sonde soll dort Proben vom Boden sammeln und zur Erde bringen.",
+          "example_zh": "探测器计划在那里采集土壤样本，并把样本带回地球。"
+        },
+        {
+          "lemma": "sammeln",
+          "key": "sammeln",
+          "forms": [
+            "sammeln"
+          ],
+          "pos": "Verb",
+          "zh": "收集",
+          "example_de": "Die Sonde soll dort Proben vom Boden sammeln und zur Erde bringen.",
+          "example_zh": "探测器计划在那里采集土壤样本，并把样本带回地球。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "soll + 动词不定式",
+          "summary": "soll 表示计划或要求做的动作，如：sie soll bald starten.",
+          "example_de": "In Japan steht eine Rakete, sie soll bald starten.",
+          "example_zh": "在日本有一枚火箭，它很快就要发射。"
+        }
+      ],
+      "paragraphs": [
+        "In Japan steht eine Rakete, sie soll bald starten.",
+        "Sie bringt eine Sonde in das Weltall.",
+        "Die Sonde fliegt zum Mond Phobos vom Planeten Mars.",
+        "Die Sonde soll dort Proben vom Boden sammeln und zur Erde bringen."
+      ],
+      "translations": [
+        "在日本有一枚火箭，它很快就要发射。",
+        "它将把一个探测器送入太空。",
+        "探测器将飞往火星的卫星火卫一。",
+        "探测器计划在那里采集土壤样本，并把样本带回地球。"
+      ],
+      "background": ""
+    }
+  ],
+  "editorial_review": "德中句对、新闻事实、词形和语法例句已对照来源检查。"
+}

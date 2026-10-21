@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.000" end="00:00:04.400">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:04.800" end="00:00:07.480">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:10.520" end="00:00:13.320">
+        <tt:span style="textWhite">Willkommen zur tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:13.720" end="00:00:17.120">
+        <tt:span style="textWhite">Ich bin Susanne Holst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:34.160" end="00:00:36.120">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:41.920" end="00:00:46.200">
+        <tt:span style="textWhite">Vor vier Jahren gab es einen Anschlag</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf Pipelines in der Ostsee.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:47.240" end="00:00:50.320">
+        <tt:span style="textWhite">Pipelines sind Leitungen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für Öl oder Gas.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:51.560" end="00:00:56.040">
+        <tt:span style="textWhite">Die Pipelines von dem Anschlag</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind für Gas und heißen Nord Stream.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:57.480" end="00:01:00.280">
+        <tt:span style="textWhite">Ein Mann aus der Ukraine</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist jetzt vor Gericht</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:01:00.440" end="00:01:03.440">
+        <tt:span style="textWhite">in der Stadt Hamburg,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Norden von Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:01:03.640" end="00:01:05.880">
+        <tt:span style="textWhite">Er ist auf dem Foto in der Mitte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:01:06.200" end="00:01:07.960">
+        <tt:span style="textWhite">Das Foto ist schon älter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:08.560" end="00:01:11.400">
+        <tt:span style="textWhite">Der Mann ist wohl</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Chef von einer Gruppe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:11.880" end="00:01:14.640">
+        <tt:span style="textWhite">Sie hat den Anschlag</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wahrscheinlich gemacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:14.960" end="00:01:17.160">
+        <tt:span style="textWhite">Dazu zeigen wir jetzt einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:17.920" end="00:01:20.960">
+        <tt:span style="textWhite">Das ist in der Ostsee</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vor vier Jahren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:21.720" end="00:01:25.040">
+        <tt:span style="textWhite">Explosionen haben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Pipelines beschädigt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:26.080" end="00:01:28.920">
+        <tt:span style="textWhite">Aus Löchern in den Pipelines</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist Gas gekommen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:29.080" end="00:01:31.520">
+        <tt:span style="textWhite">und hat diese Blasen gemacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:32.960" end="00:01:34.440">
+        <tt:span style="textWhite">Die Pipelines haben</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:34.600" end="00:01:37.520">
+        <tt:span style="textWhite">Russland und Deutschland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">miteinander verbunden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:38.040" end="00:01:41.040">
+        <tt:span style="textWhite">Für das Gas hat Russland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">viel Geld bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:41.800" end="00:01:44.200">
+        <tt:span style="textWhite">Die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von dem Anschlag wollten:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:44.400" end="00:01:47.080">
+        <tt:span style="textWhite">Dass Russland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">kein Gas mehr liefern kann</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:47.200" end="00:01:49.680">
+        <tt:span style="textWhite">und kein Geld mehr damit macht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:51.560" end="00:01:56.040">
+        <tt:span style="textWhite">Das Geld nimmt Russland nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch für den Krieg gegen die Ukraine.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:57.840" end="00:02:00.720">
+        <tt:span style="textWhite">Viele Journalisten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind zum Gericht gekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:02:00.880" end="00:02:02.760">
+        <tt:span style="textWhite">Diese Frau vom Gericht sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:02:02.920" end="00:02:05.880">
+        <tt:span style="textWhite">Mehr als 100 Journalisten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind gekommen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:02:06.040" end="00:02:10.880">
+        <tt:span style="textWhite">zum Beispiel aus der Ukraine,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Russland, den USA und Frankreich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:02:13.360" end="00:02:16.480">
+        <tt:span style="textWhite">Jetzt steht ein Mann aus der Ukraine</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vor Gericht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:16.880" end="00:02:19.120">
+        <tt:span style="textWhite">Sein Gesicht wird nicht gezeigt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:19.760" end="00:02:22.800">
+        <tt:span style="textWhite">Er war Offizier</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">beim ukrainischen Militär.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:23.600" end="00:02:25.280">
+        <tt:span style="textWhite">Dieser Journalist sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:25.520" end="00:02:27.560">
+        <tt:span style="textWhite">Der ukrainische Präsident sagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:27.760" end="00:02:30.520">
+        <tt:span style="textWhite">ich habe nichts</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit dem Anschlag zu tun.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:30.840" end="00:02:32.960">
+        <tt:span style="textWhite">Wir haben aber herausgefunden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:33.080" end="00:02:36.760">
+        <tt:span style="textWhite">wichtige ukrainische Politiker</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben davon gewusst.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:38.680" end="00:02:41.240">
+        <tt:span style="textWhite">Jetzt muss das Gericht herausfinden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:41.800" end="00:02:44.280">
+        <tt:span style="textWhite">ist der Mann</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aus der Ukraine schuldig?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:44.800" end="00:02:47.640">
+        <tt:span style="textWhite">Ist er für die Explosionen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und die Zerstörung</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:47.760" end="00:02:50.160">
+        <tt:span style="textWhite">von den Pipelines verantwortlich?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:51.080" end="00:02:53.400">
+        <tt:span style="textWhite">Das Urteil</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gibt es dann wahrscheinlich</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:02:53.520" end="00:02:54.920">
+        <tt:span style="textWhite">im nächsten Jahr.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:02:57.200" end="00:02:59.240">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:03:02.640" end="00:03:05.120">
+        <tt:span style="textWhite">Der Mann auf dem Foto ist Papst Leo.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:03:05.600" end="00:03:08.080">
+        <tt:span style="textWhite">Er ist der Chef</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der katholischen Kirche</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:03:08.240" end="00:03:09.640">
+        <tt:span style="textWhite">auf der ganzen Welt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:03:09.800" end="00:03:11.560">
+        <tt:span style="textWhite">Papst Leo wurde operiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:03:12.000" end="00:03:14.800">
+        <tt:span style="textWhite">Er hatte nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einen Knoten in der Lunge.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:15.280" end="00:03:17.760">
+        <tt:span style="textWhite">So ein Knoten kann gefährlich sein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:18.400" end="00:03:21.040">
+        <tt:span style="textWhite">Die Lungen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">braucht man nämlich zum Atmen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:21.440" end="00:03:24.160">
+        <tt:span style="textWhite">Nach der Operation</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben die Ärzte gesagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:24.600" end="00:03:27.640">
+        <tt:span style="textWhite">Wir haben entdeckt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Papst hat Lungenkrebs.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:28.720" end="00:03:32.400">
+        <tt:span style="textWhite">Wir haben den Knoten und einen Teil</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Lunge entfernt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:32.880" end="00:03:34.560">
+        <tt:span style="textWhite">Jetzt kommt ein Film dazu.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:35.880" end="00:03:39.960">
+        <tt:span style="textWhite">In diesem Krankenhaus</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">war die Operation von Papst Leo.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:41.320" end="00:03:44.160">
+        <tt:span style="textWhite">Es ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der italienischen Hauptstadt Rom.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:03:44.920" end="00:03:47.400">
+        <tt:span style="textWhite">Die Ärzte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">schreiben nach der Operation,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:03:47.520" end="00:03:49.200">
+        <tt:span style="textWhite">dem Papst geht es gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:03:49.720" end="00:03:52.120">
+        <tt:span style="textWhite">Es gibt aber</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">noch mehr Untersuchungen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:03:52.360" end="00:03:55.840">
+        <tt:span style="textWhite">Dann überlegen wir,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wie die Behandlung weitergeht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:03:56.800" end="00:04:00.680">
+        <tt:span style="textWhite">Viele Menschen machen sich jetzt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">große Sorgen um den Papst.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:04:01.600" end="00:04:04.320">
+        <tt:span style="textWhite">Sie haben Kerzen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zum Krankenhaus gebracht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:04:05.160" end="00:04:07.960">
+        <tt:span style="textWhite">Dieser Mann sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wir beten für den Papst.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:04:08.720" end="00:04:10.880">
+        <tt:span style="textWhite">Ich hoffe, dass alles gut wird.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:04:11.480" end="00:04:13.200">
+        <tt:span style="textWhite">Die Ärzte sind sehr gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:04:13.920" end="00:04:16.320">
+        <tt:span style="textWhite">Sie haben den Krebs früh entdeckt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:17.280" end="00:04:20.360">
+        <tt:span style="textWhite">Deshalb denke ich,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Papst wird wieder gesund.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:21.240" end="00:04:22.680">
+        <tt:span style="textWhite">Gott sei mit ihm.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:23.320" end="00:04:27.720">
+        <tt:span style="textWhite">Papst Leo muss mindestens eine Woche</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Krankenhaus bleiben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:30.440" end="00:04:32.440">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:36.960" end="00:04:38.720">
+        <tt:span style="textWhite">Eine Steuer ist Extrageld,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:39.400" end="00:04:42.440">
+        <tt:span style="textWhite">das man zum normalen Preis</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dazu bezahlen muss.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:04:43.440" end="00:04:45.880">
+        <tt:span style="textWhite">Dieses Extrageld bekommt der Staat.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:04:46.960" end="00:04:48.920">
+        <tt:span style="textWhite">Die Regierung will ein Gesetz</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:04:49.120" end="00:04:51.840">
+        <tt:span style="textWhite">zur Steuer für Zucker</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Getränken machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:04:52.800" end="00:04:54.040">
+        <tt:span style="textWhite">Das bedeutet:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:04:54.360" end="00:04:57.440">
+        <tt:span style="textWhite">Wenn man zum Beispiel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine Cola mit Zucker kauft,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:04:57.840" end="00:05:01.080">
+        <tt:span style="textWhite">dann kostet die Cola</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wahrscheinlich in Zukunft mehr.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:05:01.760" end="00:05:03.040">
+        <tt:span style="textWhite">Die Regierung sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:05:03.320" end="00:05:06.400">
+        <tt:span style="textWhite">Wir wollen das Extrageld</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">den Krankenkassen geben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:05:07.160" end="00:05:09.200">
+        <tt:span style="textWhite">Sie haben nämlich hohe Kosten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:05:10.120" end="00:05:11.680">
+        <tt:span style="textWhite">Und die Regierung sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:11.840" end="00:05:15.080">
+        <tt:span style="textWhite">Wir hoffen, wenn Getränke</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit Zucker teurer sind,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:15.960" end="00:05:18.600">
+        <tt:span style="textWhite">dann trinken die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">weniger davon.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:19.000" end="00:05:21.280">
+        <tt:span style="textWhite">Das ist wichtig für die Gesundheit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:21.400" end="00:05:23.800">
+        <tt:span style="textWhite">Zu viel Zucker ist nämlich ungesund.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:24.360" end="00:05:26.920">
+        <tt:span style="textWhite">Der Bundestag</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">entscheidet dann darüber,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:27.080" end="00:05:30.600">
+        <tt:span style="textWhite">ob das Gesetz zur Steuer für Zucker</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Getränken kommt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:32.640" end="00:05:34.640">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:05:39.920" end="00:05:43.240">
+        <tt:span style="textWhite">Die deutschen Fußballerinnen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben in der Stadt Bremen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:05:43.440" end="00:05:47.320">
+        <tt:span style="textWhite">im Norden von Deutschland,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gegen das Team von Japan gespielt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:05:47.880" end="00:05:51.720">
+        <tt:span style="textWhite">Die Deutschen sind auf dem Foto</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und haben 2:1 gewonnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:05:52.760" end="00:05:54.440">
+        <tt:span style="textWhite">Es war ein Testspiel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:05:54.880" end="00:05:57.600">
+        <tt:span style="textWhite">Die deutschen Fußballerinnen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben sich damit</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:05:57.760" end="00:06:01.120">
+        <tt:span style="textWhite">auf die Weltmeisterschaft</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im nächsten Jahr vorbereitet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:06:01.880" end="00:06:04.080">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:06:20.960" end="00:06:22.800">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:06:23.480" end="00:06:27.360">
+        <tt:span style="textWhite">In der Mitte von Deutschland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und unten im Süden gibt es Nebel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:06:27.480" end="00:06:29.520">
+        <tt:span style="textWhite">Sonst scheint überall die Sonne.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:06:29.760" end="00:06:31.480">
+        <tt:span style="textWhite">Es gibt nur wenige Wolken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:06:31.840" end="00:06:33.880">
+        <tt:span style="textWhite">Es werden 12 bis 22 Grad.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:36.040" end="00:06:38.960">
+        <tt:span style="textWhite">Und das war die tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:39.160" end="00:06:41.200">
+        <tt:span style="textWhite">Tschüss, bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:45.760" end="00:06:47.840">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>

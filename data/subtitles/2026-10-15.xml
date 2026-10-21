@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.000" end="00:00:04.080">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:05.160" end="00:00:07.880">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:10.640" end="00:00:13.880">
+        <tt:span style="textWhite">Willkommen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zur tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:14.100" end="00:00:18.100">
+        <tt:span style="textWhite">Ich bin Michael Paweletz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:37.440" end="00:00:39.520">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:46.880" end="00:00:50.680">
+        <tt:span style="textWhite">Wenn sich Menschen verletzen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder wenn sie krank sind,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:51.180" end="00:00:57.060">
+        <tt:span style="textWhite">dann rufen sie oft den Rettungsdienst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder fahren zur Notaufnahme.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:58.400" end="00:01:03.800">
+        <tt:span style="textWhite">Das ist eine Station im Krankenhaus</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für Notfälle, wie auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:01:05.820" end="00:01:10.180">
+        <tt:span style="textWhite">Einige Menschen machen das</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch ohne Notfall.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:01:10.620" end="00:01:15.780">
+        <tt:span style="textWhite">Sie wissen nämlich nicht,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zu welchem Arzt soll ich gehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:01:16.900" end="00:01:20.940">
+        <tt:span style="textWhite">Die Notaufnahmen in Deutschland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind deshalb sehr voll.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:01:21.420" end="00:01:24.420">
+        <tt:span style="textWhite">Viele Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">müssen dann lange warten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:25.160" end="00:01:28.080">
+        <tt:span style="textWhite">Und die Rettungsdienste</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben viel zu tun.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:30.060" end="00:01:34.220">
+        <tt:span style="textWhite">Der Bundestag hat jetzt aber</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">neue Regeln beschlossen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:34.620" end="00:01:39.580">
+        <tt:span style="textWhite">Es soll in Krankenhäusern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Notfallzentren geben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:40.580" end="00:01:42.580">
+        <tt:span style="textWhite">Dort wird dann entschieden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:42.620" end="00:01:47.080">
+        <tt:span style="textWhite">soll jemand zur Notaufnahme</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder zu einem anderen Arzt gehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:48.980" end="00:01:51.100">
+        <tt:span style="textWhite">Dazu kommt jetzt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:52.140" end="00:01:56.980">
+        <tt:span style="textWhite">Dieses Krankenhaus in Hamburg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat schon ein Notfallzentrum.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:57.420" end="00:02:01.860">
+        <tt:span style="textWhite">Wenn Menschen Hilfe brauchen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dann können sie sich hier melden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:02:01.900" end="00:02:05.780">
+        <tt:span style="textWhite">Die Mitarbeiter prüfen dann,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist es ein Notfall?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:02:06.220" end="00:02:08.060">
+        <tt:span style="textWhite">Welcher Arzt kann helfen?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:02:08.740" end="00:02:13.740">
+        <tt:span style="textWhite">Dieser Chef von den Ärzten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Krankenhaus sagt, es gibt jetzt</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:02:13.780" end="00:02:16.620">
+        <tt:span style="textWhite">viel weniger Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Notaufnahme.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:02:17.020" end="00:02:20.220">
+        <tt:span style="textWhite">Wir haben mehr Zeit für die Notfälle.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:02:21.220" end="00:02:25.540">
+        <tt:span style="textWhite">Und es gibt auch eine Praxis</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit Hausärzten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:02:25.780" end="00:02:29.540">
+        <tt:span style="textWhite">Dort bekommen die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ohne Notfälle Hilfe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:02:30.580" end="00:02:33.500">
+        <tt:span style="textWhite">Der Bundestag hat jetzt entschieden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:02:33.780" end="00:02:37.500">
+        <tt:span style="textWhite">es soll die Notfallzentren</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in ganz Deutschland geben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:02:38.140" end="00:02:41.580">
+        <tt:span style="textWhite">Und wenn Menschen per Telefon</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Notfälle melden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:02:41.980" end="00:02:45.700">
+        <tt:span style="textWhite">wird genauer geprüft,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wo können sie behandelt werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:46.460" end="00:02:50.540">
+        <tt:span style="textWhite">Der Minister für Gesundheit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist Carsten Linnemann.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:50.700" end="00:02:54.620">
+        <tt:span style="textWhite">Er sagt, mit den neuen Regeln</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist immer klar,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:54.780" end="00:02:56.940">
+        <tt:span style="textWhite">wer bekommt wo Hilfe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:58.420" end="00:03:03.460">
+        <tt:span style="textWhite">Aber einige im Bundestag</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben Zweifel an den Regeln.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:03:03.700" end="00:03:06.660">
+        <tt:span style="textWhite">Dieser Politiker ist von den Grünen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:03:07.060" end="00:03:12.460">
+        <tt:span style="textWhite">Er sagt, wenn die Menschen weniger</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in die Notaufnahme gehen sollen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:03:12.500" end="00:03:16.460">
+        <tt:span style="textWhite">dann brauchen wir mehr Termine</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei anderen Ärzten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:03:16.500" end="00:03:19.580">
+        <tt:span style="textWhite">Aber oft gibt es keine Termine.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:03:21.480" end="00:03:24.400">
+        <tt:span style="textWhite">Mit den neuen Regeln sollen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Krankenhäuser,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:03:24.940" end="00:03:29.300">
+        <tt:span style="textWhite">andere Ärzte und Rettungsdienste</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">besser zusammenarbeiten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:03:31.080" end="00:03:33.160">
+        <tt:span style="textWhite">Nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:03:37.740" end="00:03:42.700">
+        <tt:span style="textWhite">EU ist das kurze Wort</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für Europäische Union.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:03:42.740" end="00:03:47.220">
+        <tt:span style="textWhite">Die EU ist eine Gruppe</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von Ländern in Europa.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:03:47.900" end="00:03:49.980">
+        <tt:span style="textWhite">Auch Deutschland gehört dazu.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:03:50.420" end="00:03:54.500">
+        <tt:span style="textWhite">Sie arbeiten in der Politik</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und der Wirtschaft zusammen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:03:55.340" end="00:03:59.780">
+        <tt:span style="textWhite">Jetzt gibt es wieder ein Treffen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von den Chefs von den Ländern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:04:00.020" end="00:04:02.100">
+        <tt:span style="textWhite">Einige sind auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:04:02.900" end="00:04:07.300">
+        <tt:span style="textWhite">Sie sprechen auch über den Haushalt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für mehrere Jahre.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:04:07.340" end="00:04:11.380">
+        <tt:span style="textWhite">Der Haushalt ist das Geld von der EU.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:04:11.820" end="00:04:13.620">
+        <tt:span style="textWhite">Es kommt von den Ländern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:04:14.060" end="00:04:19.100">
+        <tt:span style="textWhite">Und der Haushalt regelt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wofür wird das Geld ausgegeben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:04:20.020" end="00:04:23.060">
+        <tt:span style="textWhite">Es gibt aber Streit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über den Haushalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:04:23.420" end="00:04:26.340">
+        <tt:span style="textWhite">Die EU will ihn schnell festlegen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:04:26.620" end="00:04:29.340">
+        <tt:span style="textWhite">Manche Länder wollen aber</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">noch warten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:04:29.380" end="00:04:33.220">
+        <tt:span style="textWhite">Und einige Länder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wie Deutschland sagen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:04:33.500" end="00:04:37.580">
+        <tt:span style="textWhite">der Vorschlag</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für den Haushalt ist zu hoch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:04:37.980" end="00:04:39.860">
+        <tt:span style="textWhite">Dazu kommt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:04:40.940" end="00:04:42.820">
+        <tt:span style="textWhite">Bundeskanzler Merz sagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:04:43.060" end="00:04:46.340">
+        <tt:span style="textWhite">die Verhandlungen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über das Geld sind schwierig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:04:46.860" end="00:04:51.220">
+        <tt:span style="textWhite">Der Vorschlag von der EU</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für den Haushalt ist zu hoch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:04:51.620" end="00:04:54.260">
+        <tt:span style="textWhite">Die Länder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">können sich das nicht leisten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:04:54.300" end="00:04:59.180">
+        <tt:span style="textWhite">Ich glaube nicht, dass wir uns</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei diesem Treffen einigen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:04:59.500" end="00:05:03.540">
+        <tt:span style="textWhite">Wir beraten auch, welche Themen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind uns wichtig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:05:04.260" end="00:05:09.180">
+        <tt:span style="textWhite">Ich finde, vor allem die Wirtschaft</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und die Verteidigung sind wichtig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:05:09.540" end="00:05:13.980">
+        <tt:span style="textWhite">Da machen wir Fortschritte,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aber wir müssen noch besser werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:05:14.220" end="00:05:16.700">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:05:21.600" end="00:05:26.320">
+        <tt:span style="textWhite">An allen Bahnhöfen in Deutschland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gilt jetzt, Alkohol ist verboten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:05:27.600" end="00:05:29.480">
+        <tt:span style="textWhite">D.h. man darf im Gebäude</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:05:29.560" end="00:05:34.440">
+        <tt:span style="textWhite">vom Bahnhof und auf den Bahnsteigen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">keinen Alkohol trinken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:05:36.500" end="00:05:39.100">
+        <tt:span style="textWhite">Außer z.B. in Restaurants.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:05:39.940" end="00:05:44.700">
+        <tt:span style="textWhite">Das steht auf Schildern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in den Bahnhöfen wie auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:05:45.180" end="00:05:46.900">
+        <tt:span style="textWhite">Die Bahn will damit</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:05:46.940" end="00:05:50.060">
+        <tt:span style="textWhite">die Bahnhöfe sauberer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und sicherer machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:05:50.260" end="00:05:54.980">
+        <tt:span style="textWhite">Bisher gab es das Verbot</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nur an manchen Bahnhöfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:05:55.460" end="00:05:57.300">
+        <tt:span style="textWhite">Dazu kommt jetzt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:05:59.060" end="00:06:04.500">
+        <tt:span style="textWhite">Am Hauptbahnhof von Köln</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist Alkohol schon länger verboten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:06:04.900" end="00:06:07.700">
+        <tt:span style="textWhite">Diese Schilder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hängen dort seit April.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:06:07.740" end="00:06:12.860">
+        <tt:span style="textWhite">Auch an anderen Bahnhöfen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat die Bahn das Verbot getestet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:06:13.340" end="00:06:15.940">
+        <tt:span style="textWhite">Das ist die Sprecherin von der Bahn.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:06:16.100" end="00:06:19.980">
+        <tt:span style="textWhite">Sie sagt, an den Bahnhöfen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit dem Verbot gibt es</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:06:20.020" end="00:06:21.100">
+        <tt:span style="textWhite">weniger Streit,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:06:21.300" end="00:06:24.380">
+        <tt:span style="textWhite">weniger Müll und die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">fühlen sich sicherer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:06:24.420" end="00:06:27.380">
+        <tt:span style="textWhite">In letzter Zeit gab es</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:06:27.420" end="00:06:31.100">
+        <tt:span style="textWhite">immer mehr Angriffe</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf Mitarbeiter von der Bahn.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:06:31.340" end="00:06:34.660">
+        <tt:span style="textWhite">Die Bahn sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch deshalb ist Alkohol</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:06:34.700" end="00:06:35.780">
+        <tt:span style="textWhite">jetzt verboten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:06:36.260" end="00:06:39.060">
+        <tt:span style="textWhite">Viele Menschen finden das Verbot gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:06:40.100" end="00:06:45.020">
+        <tt:span style="textWhite">Dieser Mann arbeitet für eine Firma</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit Restaurants und Geschäften</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:06:45.060" end="00:06:46.180">
+        <tt:span style="textWhite">im Bahnhof.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:06:46.220" end="00:06:53.180">
+        <tt:span style="textWhite">Er sagt, in manchen Geschäften kaufen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Menschen weniger Getränke.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:06:53.860" end="00:06:56.300">
+        <tt:span style="textWhite">Dadurch verdienen die Geschäfte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">weniger.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:06:56.340" end="00:07:00.060">
+        <tt:span style="textWhite">Aber die Mitarbeiter</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und die Gäste sind sicherer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:07:00.420" end="00:07:02.060">
+        <tt:span style="textWhite">Das ist am wichtigsten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:07:03.540" end="00:07:07.020">
+        <tt:span style="textWhite">Einige befürchten aber,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wenn die Menschen nicht mehr</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:07:07.060" end="00:07:09.420">
+        <tt:span style="textWhite">im Bahnhof Alkohol trinken dürfen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:07:09.460" end="00:07:13.420">
+        <tt:span style="textWhite">dann machen sie es in den Straßen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">um den Bahnhof.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:07:14.380" end="00:07:17.020">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:07:21.100" end="00:07:26.020">
+        <tt:span style="textWhite">Albanien ist ein Land,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">unten rechts im Südosten von Europa.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:07:26.620" end="00:07:29.260">
+        <tt:span style="textWhite">Dort gibt es gerade heftige Proteste.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:07:29.620" end="00:07:33.540">
+        <tt:span style="textWhite">Die Menschen sind nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">unzufrieden mit der Regierung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:07:34.100" end="00:07:36.260">
+        <tt:span style="textWhite">Zuerst haben die Menschen gesagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:07:36.300" end="00:07:39.780">
+        <tt:span style="textWhite">wir wollen bessere Bedingungen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zum Studieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:07:40.180" end="00:07:42.740">
+        <tt:span style="textWhite">Z.B. soll es günstiger werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:07:43.300" end="00:07:46.820">
+        <tt:span style="textWhite">Jetzt sind die Proteste</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aber viel größer geworden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:07:47.660" end="00:07:51.860">
+        <tt:span style="textWhite">Viele Menschen fordern den Rücktritt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vom Chef der Regierung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:07:52.380" end="00:07:53.940">
+        <tt:span style="textWhite">Dazu kommt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:07:55.100" end="00:07:57.460">
+        <tt:span style="textWhite">Bei den Protesten gibt es Gewalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:07:57.780" end="00:08:02.500">
+        <tt:span style="textWhite">Einige Menschen werfen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">brennende Gegenstände und Steine</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:08:02.540" end="00:08:04.220">
+        <tt:span style="textWhite">auch vor dem Parlament.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:08:04.260" end="00:08:07.700">
+        <tt:span style="textWhite">Die Polizei setzt Gas ein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:08:08.020" end="00:08:09.380">
+        <tt:span style="textWhite">Es reizt die Augen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:08:09.860" end="00:08:14.020">
+        <tt:span style="textWhite">Die Proteste und die Gewalt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dauern schon zwei Tage.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:08:15.860" end="00:08:18.220">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub114" style="textCenter" region="bottom" begin="00:08:18.860" end="00:08:19.860">
+        <tt:span style="textWhite">Bundestag.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub115" style="textCenter" region="bottom" begin="00:08:35.100" end="00:08:37.580">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub116" style="textCenter" region="bottom" begin="00:08:38.740" end="00:08:42.580">
+        <tt:span style="textWhite">Zuerst Nebel unten im Süden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und in der Mitte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub117" style="textCenter" region="bottom" begin="00:08:42.900" end="00:08:44.980">
+        <tt:span style="textWhite">Danach sonniges Herbstwetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub118" style="textCenter" region="bottom" begin="00:08:45.780" end="00:08:50.540">
+        <tt:span style="textWhite">Oben links im Nordwesten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mehr Wolken und gegen Abend Regen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub119" style="textCenter" region="bottom" begin="00:08:50.780" end="00:08:53.900">
+        <tt:span style="textWhite">Es werden 11 bis 24 Grad.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub120" style="textCenter" region="bottom" begin="00:08:54.680" end="00:08:57.760">
+        <tt:span style="textWhite">Das war</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub121" style="textCenter" region="bottom" begin="00:08:58.440" end="00:09:00.600">
+        <tt:span style="textWhite">Tschüss, bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub122" style="textCenter" region="bottom" begin="00:09:01.760" end="00:09:03.920">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>

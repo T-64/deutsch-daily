@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-15",
+  "slug": "2026-10-15",
+  "source": "einfach",
+  "source_label": "tagesschau · Einfache Sprache",
+  "level": "A2–B1",
+  "content_kind": "reading",
+  "adaptation": "根据官方新闻整理的简易德语短读，非节目逐字稿；中文译文与学习提示由 AI 生成。",
+  "source_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1468.html",
+  "source_text_sha256": "86433bbb561f4585698105178ede0ad9813584994c967c2683a3d17a0920e06b",
+  "generated_at": "2026-10-21T01:35:37.650414+02:00",
+  "generation_model": "glm-5.3",
+  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1468.html",
+  "embed_url": "",
+  "news": [
+    {
+      "title": "Neue Regeln für Notaufnahmen",
+      "title_zh": "急诊室的新规定",
+      "vocab": [
+        {
+          "lemma": "die Notaufnahme, -n",
+          "key": "notaufnahme",
+          "forms": [
+            "Notaufnahmen"
+          ],
+          "pos": "Substantiv",
+          "zh": "急诊室",
+          "example_de": "Die Notaufnahmen in Deutschland sind sehr voll, viele Menschen warten lange.",
+          "example_zh": "德国的急诊室非常拥挤，很多人要等很久。"
+        },
+        {
+          "lemma": "warten",
+          "key": "warten",
+          "forms": [
+            "warten"
+          ],
+          "pos": "Verb",
+          "zh": "等待",
+          "example_de": "Die Notaufnahmen in Deutschland sind sehr voll, viele Menschen warten lange.",
+          "example_zh": "德国的急诊室非常拥挤，很多人要等很久。"
+        },
+        {
+          "lemma": "beschließen",
+          "key": "beschliessen",
+          "forms": [
+            "beschlossen"
+          ],
+          "pos": "Verb",
+          "zh": "决定、通过",
+          "example_de": "Der Bundestag hat jetzt beschlossen: Krankenhäuser bekommen Notfallzentren.",
+          "example_zh": "联邦议院现在决定：医院将设立急救中心。"
+        },
+        {
+          "lemma": "das Krankenhaus, ¨-er",
+          "key": "krankenhaus",
+          "forms": [
+            "Krankenhäuser"
+          ],
+          "pos": "Substantiv",
+          "zh": "医院",
+          "example_de": "Der Bundestag hat jetzt beschlossen: Krankenhäuser bekommen Notfallzentren.",
+          "example_zh": "联邦议院现在决定：医院将设立急救中心。"
+        },
+        {
+          "lemma": "zusammenarbeiten",
+          "key": "zusammenarbeiten",
+          "forms": [
+            "zusammenarbeiten"
+          ],
+          "pos": "Verb",
+          "zh": "合作",
+          "example_de": "Krankenhäuser, Ärzte und Rettungsdienste sollen besser zusammenarbeiten.",
+          "example_zh": "医院、医生和急救服务应该更好地合作。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "被动语态 wird entschieden",
+          "summary": "被动语态表示动作发生在某人身上，不强调是谁做的。构成：werden/wird + 过去分词，例：Dort wird entschieden（在那里被做出决定）。",
+          "example_de": "Dort wird entschieden, ob jemand zur Notaufnahme oder zu einem anderen Arzt geht.",
+          "example_zh": "在那里决定，一个人是去急诊室还是去看别的医生。"
+        }
+      ],
+      "paragraphs": [
+        "Die Notaufnahmen in Deutschland sind sehr voll, viele Menschen warten lange.",
+        "Der Bundestag hat jetzt beschlossen: Krankenhäuser bekommen Notfallzentren.",
+        "Dort wird entschieden, ob jemand zur Notaufnahme oder zu einem anderen Arzt geht.",
+        "Krankenhäuser, Ärzte und Rettungsdienste sollen besser zusammenarbeiten."
+      ],
+      "translations": [
+        "德国的急诊室非常拥挤，很多人要等很久。",
+        "联邦议院现在决定：医院将设立急救中心。",
+        "在那里决定，一个人是去急诊室还是去看别的医生。",
+        "医院、医生和急救服务应该更好地合作。"
+      ],
+      "background": ""
+    },
+    {
+      "title": "Streit über den EU-Haushalt",
+      "title_zh": "关于欧盟预算的争执",
+      "vocab": [
+        {
+          "lemma": "der Haushalt, -e",
+          "key": "haushalt",
+          "forms": [
+            "Haushalt"
+          ],
+          "pos": "Substantiv",
+          "zh": "预算",
+          "example_de": "Die Chefs von den EU-Ländern treffen sich und sprechen über den Haushalt.",
+          "example_zh": "欧盟各国领导人会面，讨论预算问题。"
+        },
+        {
+          "lemma": "das Treffen, -",
+          "key": "treffen",
+          "forms": [
+            "Treffen"
+          ],
+          "pos": "Substantiv",
+          "zh": "会面、会议",
+          "example_de": "Die Chefs von den EU-Ländern treffen sich und sprechen über den Haushalt.",
+          "example_zh": "欧盟各国领导人会面，讨论预算问题。"
+        },
+        {
+          "lemma": "ausgeben",
+          "key": "ausgeben",
+          "forms": [
+            "ausgegeben"
+          ],
+          "pos": "Verb",
+          "zh": "花费、支出",
+          "example_de": "Der Haushalt regelt, wofür das Geld von der EU ausgegeben wird.",
+          "example_zh": "预算规定欧盟的钱用于什么。"
+        },
+        {
+          "lemma": "der Vorschlag, ¨-e",
+          "key": "vorschlag",
+          "forms": [
+            "Vorschlag"
+          ],
+          "pos": "Substantiv",
+          "zh": "提案、建议",
+          "example_de": "Deutschland sagt: Der Vorschlag für den Haushalt ist zu hoch.",
+          "example_zh": "德国说：预算提案太高了。"
+        },
+        {
+          "lemma": "sich einigen",
+          "key": "sich_einigen",
+          "forms": [
+            "einigt"
+          ],
+          "pos": "Verb",
+          "zh": "达成一致",
+          "example_de": "Bundeskanzler Merz glaubt nicht, dass man sich beim Treffen einigt.",
+          "example_zh": "联邦总理默茨认为这次会议上不会达成一致。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "zu + 形容词",
+          "summary": "zu 放在形容词前表示\"太……\"，例：Der Vorschlag ist zu hoch（提案太高了）。",
+          "example_de": "Deutschland sagt: Der Vorschlag für den Haushalt ist zu hoch.",
+          "example_zh": "德国说：预算提案太高了。"
+        }
+      ],
+      "paragraphs": [
+        "Die Chefs von den EU-Ländern treffen sich und sprechen über den Haushalt.",
+        "Der Haushalt regelt, wofür das Geld von der EU ausgegeben wird.",
+        "Deutschland sagt: Der Vorschlag für den Haushalt ist zu hoch.",
+        "Bundeskanzler Merz glaubt nicht, dass man sich beim Treffen einigt."
+      ],
+      "translations": [
+        "欧盟各国领导人会面，讨论预算问题。",
+        "预算规定欧盟的钱用于什么。",
+        "德国说：预算提案太高了。",
+        "联邦总理默茨认为这次会议上不会达成一致。"
+      ],
+      "background": ""
+    },
+    {
+      "title": "Kein Alkohol an Bahnhöfen",
+      "title_zh": "火车站禁酒",
+      "vocab": [
+        {
+          "lemma": "der Bahnhof, ¨-e",
+          "key": "bahnhof",
+          "forms": [
+            "Bahnhöfen",
+            "Bahnhöfe"
+          ],
+          "pos": "Substantiv",
+          "zh": "火车站",
+          "example_de": "An allen Bahnhöfen in Deutschland ist Alkohol jetzt verboten.",
+          "example_zh": "现在德国所有火车站都禁止饮酒。"
+        },
+        {
+          "lemma": "verboten",
+          "key": "verboten",
+          "forms": [
+            "verboten"
+          ],
+          "pos": "Adjektiv",
+          "zh": "被禁止的",
+          "example_de": "An allen Bahnhöfen in Deutschland ist Alkohol jetzt verboten.",
+          "example_zh": "现在德国所有火车站都禁止饮酒。"
+        },
+        {
+          "lemma": "der Bahnsteig, -e",
+          "key": "bahnsteig",
+          "forms": [
+            "Bahnsteigen"
+          ],
+          "pos": "Substantiv",
+          "zh": "站台",
+          "example_de": "Man darf im Gebäude und auf den Bahnsteigen keinen Alkohol trinken, außer in Restaurants.",
+          "example_zh": "在车站建筑和站台上不许饮酒，但餐厅内除外。"
+        },
+        {
+          "lemma": "sauber",
+          "key": "sauber",
+          "forms": [
+            "sauberer"
+          ],
+          "pos": "Adjektiv",
+          "zh": "干净的",
+          "example_de": "Die Bahn will die Bahnhöfe sauberer und sicherer machen.",
+          "example_zh": "铁路公司想让火车站更干净、更安全。"
+        },
+        {
+          "lemma": "der Müll",
+          "key": "muell",
+          "forms": [
+            "Müll"
+          ],
+          "pos": "Substantiv",
+          "zh": "垃圾",
+          "example_de": "Die Bahn sagt: Mit dem Verbot gibt es weniger Streit und weniger Müll.",
+          "example_zh": "铁路公司说：有了禁令，争吵和垃圾都变少了。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "kein + 名词：否定冠词",
+          "summary": "kein 用来否定带不定冠词或无冠词的名词。Alkohol 是阳性不可数名词，这里作宾语，用第四格 keinen。",
+          "example_de": "Man darf im Gebäude und auf den Bahnsteigen keinen Alkohol trinken, außer in Restaurants.",
+          "example_zh": "在车站建筑和站台上不许饮酒，但餐厅内除外。"
+        }
+      ],
+      "paragraphs": [
+        "An allen Bahnhöfen in Deutschland ist Alkohol jetzt verboten.",
+        "Man darf im Gebäude und auf den Bahnsteigen keinen Alkohol trinken, außer in Restaurants.",
+        "Die Bahn will die Bahnhöfe sauberer und sicherer machen.",
+        "Die Bahn sagt: Mit dem Verbot gibt es weniger Streit und weniger Müll."
+      ],
+      "translations": [
+        "现在德国所有火车站都禁止饮酒。",
+        "在车站建筑和站台上不许饮酒，但餐厅内除外。",
+        "铁路公司想让火车站更干净、更安全。",
+        "铁路公司说：有了禁令，争吵和垃圾都变少了。"
+      ],
+      "background": ""
+    }
+  ],
+  "editorial_review": "德中句对、新闻事实、词形和语法例句已对照来源检查。"
+}

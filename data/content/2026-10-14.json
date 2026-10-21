@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-14",
+  "slug": "2026-10-14",
+  "source": "einfach",
+  "source_label": "tagesschau · Einfache Sprache",
+  "level": "A2–B1",
+  "content_kind": "reading",
+  "adaptation": "根据官方新闻整理的简易德语短读，非节目逐字稿；中文译文与学习提示由 AI 生成。",
+  "source_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1472.html",
+  "source_text_sha256": "004a93227362e5d349d38ddd09a94d5b4d2cceecadd145527f26984e4647f0c3",
+  "generated_at": "2026-10-21T01:23:00.833326+02:00",
+  "generation_model": "glm-5.3",
+  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1472.html",
+  "embed_url": "",
+  "news": [
+    {
+      "title": "Prozess wegen eines Anschlags auf Pipelines",
+      "title_zh": "因管道袭击案男子受审",
+      "vocab": [
+        {
+          "lemma": "das Gericht, -e",
+          "key": "gericht",
+          "forms": [
+            "Gericht"
+          ],
+          "pos": "Substantiv",
+          "zh": "法院",
+          "example_de": "Jetzt ist ein Mann aus der Ukraine vor Gericht in Hamburg.",
+          "example_zh": "现在一名来自乌克兰的男子在汉堡受审。"
+        },
+        {
+          "lemma": "die Pipeline, -s",
+          "key": "pipeline",
+          "forms": [
+            "Pipelines"
+          ],
+          "pos": "Substantiv",
+          "zh": "管道",
+          "example_de": "Vor vier Jahren gab es Explosionen bei Gas-Pipelines in der Ostsee.",
+          "example_zh": "四年前，波罗的海的天然气管道发生了爆炸。"
+        },
+        {
+          "lemma": "die Explosion, -en",
+          "key": "explosion",
+          "forms": [
+            "Explosionen"
+          ],
+          "pos": "Substantiv",
+          "zh": "爆炸",
+          "example_de": "Vor vier Jahren gab es Explosionen bei Gas-Pipelines in der Ostsee.",
+          "example_zh": "四年前，波罗的海的天然气管道发生了爆炸。"
+        },
+        {
+          "lemma": "schuldig",
+          "key": "schuldig",
+          "forms": [
+            "schuldig"
+          ],
+          "pos": "Adjektiv",
+          "zh": "有罪的",
+          "example_de": "Das Gericht muss herausfinden, ob der Mann schuldig ist.",
+          "example_zh": "法院必须查明这名男子是否有罪。"
+        },
+        {
+          "lemma": "herausfinden",
+          "key": "herausfinden",
+          "forms": [
+            "herausfinden"
+          ],
+          "pos": "Verb",
+          "zh": "查明",
+          "example_de": "Das Gericht muss herausfinden, ob der Mann schuldig ist.",
+          "example_zh": "法院必须查明这名男子是否有罪。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "ob从句",
+          "summary": "用ob引导的从句表示一个问题（是否），动词放在从句末尾，如：ob der Mann schuldig ist。",
+          "example_de": "Das Gericht muss herausfinden, ob der Mann schuldig ist.",
+          "example_zh": "法院必须查明这名男子是否有罪。"
+        }
+      ],
+      "paragraphs": [
+        "Vor vier Jahren gab es Explosionen bei Gas-Pipelines in der Ostsee.",
+        "Die Pipelines heißen Nord Stream und haben Russland mit Deutschland verbunden.",
+        "Jetzt ist ein Mann aus der Ukraine vor Gericht in Hamburg.",
+        "Das Gericht muss herausfinden, ob der Mann schuldig ist."
+      ],
+      "translations": [
+        "四年前，波罗的海的天然气管道发生了爆炸。",
+        "这些管道名为北溪，曾连接俄罗斯和德国。",
+        "现在一名来自乌克兰的男子在汉堡受审。",
+        "法院必须查明这名男子是否有罪。"
+      ],
+      "background": ""
+    },
+    {
+      "title": "Papst Leo hat Lungenkrebs",
+      "title_zh": "教宗利奥患肺癌",
+      "vocab": [
+        {
+          "lemma": "die Lunge, -n",
+          "key": "lunge",
+          "forms": [
+            "Lunge"
+          ],
+          "pos": "Substantiv",
+          "zh": "肺",
+          "example_de": "Er hatte einen Knoten in der Lunge und wurde operiert.",
+          "example_zh": "他肺部有一个结节，并接受了手术。"
+        },
+        {
+          "lemma": "die Operation, -en",
+          "key": "operation",
+          "forms": [
+            "Operation",
+            "operiert"
+          ],
+          "pos": "Substantiv",
+          "zh": "手术",
+          "example_de": "Er hatte einen Knoten in der Lunge und wurde operiert.",
+          "example_zh": "他肺部有一个结节，并接受了手术。"
+        },
+        {
+          "lemma": "entfernen",
+          "key": "entfernen",
+          "forms": [
+            "entfernt"
+          ],
+          "pos": "Verb",
+          "zh": "切除、移除",
+          "example_de": "Die Ärzte haben den Knoten und einen Teil von der Lunge entfernt.",
+          "example_zh": "医生切除了结节和一部分肺。"
+        },
+        {
+          "lemma": "der Arzt, ¨-e",
+          "key": "arzt",
+          "forms": [
+            "Ärzte"
+          ],
+          "pos": "Substantiv",
+          "zh": "医生",
+          "example_de": "Die Ärzte haben den Knoten und einen Teil von der Lunge entfernt.",
+          "example_zh": "医生切除了结节和一部分肺。"
+        },
+        {
+          "lemma": "der Knoten, -",
+          "key": "knoten",
+          "forms": [
+            "Knoten"
+          ],
+          "pos": "Substantiv",
+          "zh": "结节",
+          "example_de": "Er hatte einen Knoten in der Lunge und wurde operiert.",
+          "example_zh": "他肺部有一个结节，并接受了手术。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "现在完成时",
+          "summary": "haben加过去分词表示完成的动作，如：haben ... entfernt，表示医生已经切除了结节。",
+          "example_de": "Die Ärzte haben den Knoten und einen Teil von der Lunge entfernt.",
+          "example_zh": "医生切除了结节和一部分肺。"
+        }
+      ],
+      "paragraphs": [
+        "Papst Leo ist der Chef von der katholischen Kirche auf der Welt.",
+        "Er hatte einen Knoten in der Lunge und wurde operiert.",
+        "Die Ärzte haben den Knoten und einen Teil von der Lunge entfernt.",
+        "Nach der Operation sagen die Ärzte: Dem Papst geht es gut."
+      ],
+      "translations": [
+        "教宗利奥是全世界天主教会的领袖。",
+        "他肺部有一个结节，并接受了手术。",
+        "医生切除了结节和一部分肺。",
+        "手术后医生说：教宗情况良好。"
+      ],
+      "background": ""
+    },
+    {
+      "title": "Regierung plant Steuer auf Zucker in Getränken",
+      "title_zh": "政府计划对含糖饮料征税",
+      "vocab": [
+        {
+          "lemma": "die Steuer, -n",
+          "key": "steuer",
+          "forms": [
+            "Steuer"
+          ],
+          "pos": "Substantiv",
+          "zh": "税",
+          "example_de": "Die Regierung will ein Gesetz zur Steuer für Zucker in Getränken machen.",
+          "example_zh": "政府想制定一项针对饮料中糖的税法。"
+        },
+        {
+          "lemma": "das Gesetz, -e",
+          "key": "gesetz",
+          "forms": [
+            "Gesetz"
+          ],
+          "pos": "Substantiv",
+          "zh": "法律",
+          "example_de": "Die Regierung will ein Gesetz zur Steuer für Zucker in Getränken machen.",
+          "example_zh": "政府想制定一项针对饮料中糖的税法。"
+        },
+        {
+          "lemma": "das Getränk, -e",
+          "key": "getraenk",
+          "forms": [
+            "Getränken"
+          ],
+          "pos": "Substantiv",
+          "zh": "饮料",
+          "example_de": "Die Regierung will ein Gesetz zur Steuer für Zucker in Getränken machen.",
+          "example_zh": "政府想制定一项针对饮料中糖的税法。"
+        },
+        {
+          "lemma": "der Preis, -e",
+          "key": "preis",
+          "forms": [
+            "Preis"
+          ],
+          "pos": "Substantiv",
+          "zh": "价格",
+          "example_de": "Eine Steuer ist Extrageld, das man zum normalen Preis dazu bezahlt.",
+          "example_zh": "税是人们在正常价格之外额外支付的钱。"
+        },
+        {
+          "lemma": "entscheiden",
+          "key": "entscheiden",
+          "forms": [
+            "entscheidet"
+          ],
+          "pos": "Verb",
+          "zh": "决定",
+          "example_de": "Der Bundestag entscheidet, ob das Gesetz kommt.",
+          "example_zh": "联邦议院决定这项法律是否通过。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "wollen表示打算",
+          "summary": "情态动词wollen表示打算或计划，动词原形放在句子末尾，如：will ... machen。",
+          "example_de": "Die Regierung will ein Gesetz zur Steuer für Zucker in Getränken machen.",
+          "example_zh": "政府想制定一项针对饮料中糖的税法。"
+        }
+      ],
+      "paragraphs": [
+        "Die Regierung will ein Gesetz zur Steuer für Zucker in Getränken machen.",
+        "Eine Steuer ist Extrageld, das man zum normalen Preis dazu bezahlt.",
+        "Das Extrageld soll den Krankenkassen helfen, sie haben hohe Kosten.",
+        "Der Bundestag entscheidet, ob das Gesetz kommt."
+      ],
+      "translations": [
+        "政府想制定一项针对饮料中糖的税法。",
+        "税是人们在正常价格之外额外支付的钱。",
+        "这笔额外的钱应该帮助医疗保险公司，它们的成本很高。",
+        "联邦议院决定这项法律是否通过。"
+      ],
+      "background": ""
+    }
+  ],
+  "editorial_review": "德中句对、新闻事实、词形和语法例句已对照来源检查。"
+}

@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:00.000" end="00:00:01.000" />
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:02.960" end="00:00:04.240">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:04.440" end="00:00:07.720">
+        <tt:span style="textWhite">Hier ist das Erste Deutsche Fernsehen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit der tagesschau.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:07.800" end="00:00:12.320">
+        <tt:span style="textBlue">Diese Sendung wurde vom NDR</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">live untertitelt (29.08.2026)</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:14.920" end="00:00:17.280">
+        <tt:span style="textWhite">Heute im Studio: Susanne Daubner.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:18.240" end="00:00:21.200">
+        <tt:span style="textWhite">Guten Abend,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ich begrüße Sie zur tagesschau.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:22.680" end="00:00:25.720">
+        <tt:span style="textWhite">Überlebende und Helfer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">kämpfen verzweifelt</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:25.800" end="00:00:28.360">
+        <tt:span style="textWhite">gegen die Schlamm-Massen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und gegen die Zeit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:28.480" end="00:00:31.080">
+        <tt:span style="textWhite">Denn drei Tage</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nach der Sturzflut im Himalaya</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:31.200" end="00:00:33.840">
+        <tt:span style="textWhite">werden noch fast 3000 Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vermisst.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:00:34.000" end="00:00:38.360">
+        <tt:span style="textWhite">Die Zahl der Todesopfer in Nepal</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist auf mindestens 670 gestiegen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:00:38.520" end="00:00:41.720">
+        <tt:span style="textWhite">Die chinesischen Behörden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">melden sieben Tote</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:00:41.800" end="00:00:43.680">
+        <tt:span style="textWhite">in der Autonomen Region Tibet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:00:43.800" end="00:00:46.360">
+        <tt:span style="textWhite">Und es drohen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nach wie vor neue Fluten,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:00:46.440" end="00:00:49.840">
+        <tt:span style="textWhite">weil sich hinter Geröllmassen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Seen aufgestaut haben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:00:51.400" end="00:00:53.760">
+        <tt:span style="textWhite">Ein Land</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zwischen Trauer und Hoffnung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:00:53.840" end="00:00:56.600">
+        <tt:span style="textWhite">Die Zahl der Vermissten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">steigt täglich weiter,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:00:56.680" end="00:00:58.000">
+        <tt:span style="textWhite">die der Toten auch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:00:58.080" end="00:01:01.200">
+        <tt:span style="textWhite">Und während die einen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">schon traurige Gewissheit haben,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:01.280" end="00:01:03.040">
+        <tt:span style="textWhite">hoffen die anderen weiter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:03.200" end="00:01:06.920">
+        <tt:span style="textYellow">Wir haben in Krankenhäusern</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">und in allen Listen nachgesehen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:07.000" end="00:01:09.360">
+        <tt:span style="textYellow">meine Brüder</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">aber nirgendwo gefunden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:11.680" end="00:01:14.480">
+        <tt:span style="textWhite">Am dritten Tag</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nach der verheerenden Sturzflut</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:14.560" end="00:01:17.080">
+        <tt:span style="textWhite">gehen die Rettungsarbeiten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Nepal weiter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:17.160" end="00:01:20.680">
+        <tt:span style="textWhite">Doch immer öfter werden sie,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wie auf tibetischer Seite auch,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:20.760" end="00:01:22.040">
+        <tt:span style="textWhite">zu Bergungsarbeiten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:22.120" end="00:01:25.200">
+        <tt:span style="textWhite">Und die Gefahr weiterer Flutwellen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist nicht gebannt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:01:25.280" end="00:01:28.520">
+        <tt:span style="textWhite">jenseits der Grenze</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">staut sich immer wieder Wasser.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:01:28.760" end="00:01:31.360">
+        <tt:span style="textYellow">Die Flusssysteme</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">und die Hochwasserrisiken</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:01:31.440" end="00:01:33.960">
+        <tt:span style="textYellow">werden kontinuierlich überwacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:01:34.040" end="00:01:38.000">
+        <tt:span style="textYellow">Unsere Systeme</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">sind in höchster Alarmbereitschaft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:01:41.560" end="00:01:44.400">
+        <tt:span style="textWhite">Die Folgen der Zerstörung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">erschüttern das Land.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:01:44.520" end="00:01:46.880">
+        <tt:span style="textWhite">Wie ein Tsunami,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der aus den Bergen kam.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:01:46.960" end="00:01:49.200">
+        <tt:span style="textWhite">Wer überlebt hat,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">steht vor dem Nichts.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:01:49.320" end="00:01:52.600">
+        <tt:span style="textWhite">Nepal ist die Energie geraubt worden,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im wahrsten Sinne:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:01:52.680" end="00:01:54.800">
+        <tt:span style="textWhite">Elf Wasserkraftwerke wurden zerstört,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:01:54.880" end="00:01:57.520">
+        <tt:span style="textWhite">mehr als 900 ihrer Arbeiter</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">werden vermisst.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:01:57.640" end="00:01:59.920">
+        <tt:span style="textWhite">Viele wurden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">beim Tunnelbau verschüttet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:00.040" end="00:02:03.080">
+        <tt:span style="textWhite">Krankenhäuser</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">werden immer öfter zu Leichenhallen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:03.880" end="00:02:08.120">
+        <tt:span style="textYellow">Wir haben all die Orte aufgesucht,</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">in die Leichen gebracht werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:08.200" end="00:02:10.400">
+        <tt:span style="textYellow">Wir haben dort niemanden gefunden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:10.520" end="00:02:12.560">
+        <tt:span style="textYellow">Wir werden morgen weiter suchen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:15.080" end="00:02:17.400">
+        <tt:span style="textWhite">Manchmal zahlt sich die Hoffnung aus:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:02:17.480" end="00:02:21.600">
+        <tt:span style="textWhite">Unter Trümmern und Schlamm</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wurde dieses Mädchen lebend gefunden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:02:21.840" end="00:02:26.240">
+        <tt:span style="textWhite">Dennoch geht die Zeit, Überlebende</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zu finden, langsam zu Ende.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:02:28.400" end="00:02:31.840">
+        <tt:span style="textWhite">Sie können für die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Katastrophengebiet spenden:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:02:51.880" end="00:02:55.440">
+        <tt:span style="textWhite">Es ist eine der verheerendsten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Attacken in der Region Kiew:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:02:55.520" end="00:02:58.560">
+        <tt:span style="textWhite">Bei einem russischen Angriff</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf ein Munitionslager</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:02:58.640" end="00:03:03.120">
+        <tt:span style="textWhite">sind mindestens 37 Menschen getötet</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und mehr als 40 verletzt worden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:03:03.200" end="00:03:06.440">
+        <tt:span style="textWhite">Nach ukrainischen Angaben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wurden benachbarte Wohnhäuser</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:06.520" end="00:03:10.800">
+        <tt:span style="textWhite">und ein Heim für Senioren und</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Menschen mit Behinderung beschädigt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:10.880" end="00:03:12.520">
+        <tt:span style="textWhite">Eigentlich ist es verboten,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:12.640" end="00:03:16.240">
+        <tt:span style="textWhite">Munition in der Nähe von Häusern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder Wohnungen zu lagern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:16.320" end="00:03:18.520">
+        <tt:span style="textWhite">Daher wurde ein Strafverfahren</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:18.600" end="00:03:21.760">
+        <tt:span style="textWhite">wegen "dienstlicher Fahrlässigkeit"</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eingeleitet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:24.200" end="00:03:27.720">
+        <tt:span style="textWhite">Ein Inselstaat im Atlantik,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">geprägt von Vulkanen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:27.800" end="00:03:30.600">
+        <tt:span style="textWhite">wohlhabend</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dank Fischerei und Tourismus:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:30.720" end="00:03:33.760">
+        <tt:span style="textWhite">Island ist stolz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf seine Unabhängigkeit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:03:34.200" end="00:03:38.640">
+        <tt:span style="textWhite">Genau die sieht die isländische</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Regierung aber in Gefahr.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:03:39.160" end="00:03:41.840">
+        <tt:span style="textWhite">Nicht zuletzt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">weil US-Präsident Trump</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:03:41.960" end="00:03:46.000">
+        <tt:span style="textWhite">das benachbarte Grönland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">unter seine Kontrolle bringen möchte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:03:46.120" end="00:03:51.160">
+        <tt:span style="textWhite">Und so rückt ein möglicher Beitritt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Islands zur EU wieder in den Fokus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:03:51.840" end="00:03:56.360">
+        <tt:span style="textWhite">In den 2010er-Jahren waren</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Verhandlungen abgebrochen worden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:03:56.440" end="00:03:58.560">
+        <tt:span style="textWhite">Heute stimmen die Isländer ab,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:03:58.640" end="00:04:02.800">
+        <tt:span style="textWhite">ob die Gespräche mit der EU</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wieder aufgenommen werden sollen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:04:04.000" end="00:04:07.280">
+        <tt:span style="textWhite">Sie hofft auf ein Ja</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zu neuen Verhandlungen mit der EU:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:04:07.360" end="00:04:10.120">
+        <tt:span style="textWhite">Islands Ministerpräsidentin</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gibt ihre Stimme ab.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:04:10.200" end="00:04:13.880">
+        <tt:span style="textWhite">Das Referendum: für sie unabhängig</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vom Ausgang ein Erfolg.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:15.920" end="00:04:18.600">
+        <tt:span style="textYellow">Es hat Diskussionen angeregt</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">über die EU,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:18.760" end="00:04:22.960">
+        <tt:span style="textYellow">Islands Platz in der Welt</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">und unsere geopolitische Lage.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:23.120" end="00:04:26.240">
+        <tt:span style="textYellow">Egal was rauskommt:</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">Ich werde zufrieden sein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:29.640" end="00:04:33.040">
+        <tt:span style="textWhite">Ob es ein Ja oder ein Nein wird:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">völlig offen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:33.160" end="00:04:35.120">
+        <tt:span style="textWhite">Die Meinungen sind gespalten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:37.800" end="00:04:39.680">
+        <tt:span style="textYellow">Es war ein harter Wahlkampf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:04:39.760" end="00:04:42.040">
+        <tt:span style="textYellow">Ich bin total aufgeregt,</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">was rauskommt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:04:42.120" end="00:04:43.480">
+        <tt:span style="textYellow">Ich hoffe auf ein Ja.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:04:45.240" end="00:04:47.400">
+        <tt:span style="textGreen">Wir sollten nicht in die EU gehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:04:47.480" end="00:04:49.840">
+        <tt:span style="textGreen">Wir können diese Sachen</tt:span>
+        <tt:br />
+        <tt:span style="textGreen">selber machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:04:51.640" end="00:04:53.600">
+        <tt:span style="textYellow">Wir arbeiten mit Fischfang.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:04:53.760" end="00:04:56.440">
+        <tt:span style="textYellow">Darüber wollen wir</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">die Kontrolle behalten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:04:56.520" end="00:05:00.000">
+        <tt:span style="textYellow">Es soll nicht in Europa</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">für uns entschieden werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:05:00.560" end="00:05:02.640">
+        <tt:span style="textWhite">So sehen das viele in Island –</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:05:02.720" end="00:05:06.400">
+        <tt:span style="textWhite">vor allem in den kleinen Fischerorten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">fern der Hauptstadt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:05:07.040" end="00:05:09.720">
+        <tt:span style="textYellow">Die Kontrolle über die Fischerei</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">zu behalten,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:09.840" end="00:05:11.760">
+        <tt:span style="textYellow">ist für viele eine rote Linie.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:11.840" end="00:05:14.680">
+        <tt:span style="textYellow">Dann geht es um die Landwirtschaft</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">und die Frage,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:14.800" end="00:05:18.240">
+        <tt:span style="textYellow">wie Island eingebunden würde</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">in die Gemeinsame Agrarpolitik.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:18.360" end="00:05:20.640">
+        <tt:span style="textYellow">Und der Euro ist ein großer Faktor.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:22.000" end="00:05:24.560">
+        <tt:span style="textWhite">Die Befürworter</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind für dessen Einführung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:24.640" end="00:05:25.680">
+        <tt:span style="textWhite">Sie hoffen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:25.800" end="00:05:29.440">
+        <tt:span style="textWhite">so die hohen Zinsen und die Inflation</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in den Griff zu bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:05:29.520" end="00:05:32.680">
+        <tt:span style="textWhite">Das Ergebnis des Referendums</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dürfte morgen feststehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:05:35.520" end="00:05:39.000">
+        <tt:span style="textWhite">Die USA haben eine Vereinbarung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit Venezuela geschlossen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:05:39.080" end="00:05:42.960">
+        <tt:span style="textWhite">die ihnen Zugriff auf einen Großteil</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Ölvorkommen sichert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:05:43.080" end="00:05:45.800">
+        <tt:span style="textWhite">Präsident Trump</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">feierte die Einigung als Deal,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:05:45.920" end="00:05:48.520">
+        <tt:span style="textWhite">der die Benzinpreise</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sinken lassen werde.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:05:48.840" end="00:05:51.960">
+        <tt:span style="textWhite">Sie sind</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">durch den Krieg gegen Iran gestiegen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:05:52.040" end="00:05:55.160">
+        <tt:span style="textWhite">Trump nannte aber</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">keine Einzelheiten zu dem Vertrag.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:05:56.200" end="00:06:00.000">
+        <tt:span style="textWhite">Und wir fragen nach</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei Sandra Ratzow in Washington.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:06:01.520" end="00:06:04.240">
+        <tt:span style="textWhite">Was ist über das Abkommen bekannt?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:06:07.080" end="00:06:11.960">
+        <tt:span style="textCyan">Trump bezeichnet das Abkommen</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">als größten Öl-Deal der Geschichte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:06:12.240" end="00:06:16.720">
+        <tt:span style="textCyan">Die USA will mehr als</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">65 Milliarden Barrel Ölreserven</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:06:17.680" end="00:06:19.920">
+        <tt:span style="textCyan">unter ihre Kontrolle bringen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:20.120" end="00:06:22.720">
+        <tt:span style="textCyan">Das soll 100 Jahre lang anhalten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:22.880" end="00:06:27.120">
+        <tt:span style="textCyan">Schon jetzt sind die USA</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">der größte Ölproduzent der Welt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:27.320" end="00:06:31.800">
+        <tt:span style="textCyan">Nun steigt die Menge des</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">verfügbaren Öls auf das Doppelte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:06:32.640" end="00:06:35.680">
+        <tt:span style="textCyan">Es gibt aber noch</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">viele rechtliche Fragen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:06:36.000" end="00:06:38.560">
+        <tt:span style="textCyan">Die Verfassung von Venezuela besagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:06:38.640" end="00:06:42.000">
+        <tt:span style="textCyan">dass die Ölreserven</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">öffentliches Eigentum sind.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:06:42.160" end="00:06:44.320">
+        <tt:span style="textCyan">Konnte die Übergangsregierung</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:06:44.440" end="00:06:47.600">
+        <tt:span style="textCyan">so ein Abkommen</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">also überhaupt abschließen?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:06:48.960" end="00:06:53.120">
+        <tt:span style="textWhite">Was versprechen sich Venezuela</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und die USA davon?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:06:56.640" end="00:06:59.520">
+        <tt:span style="textCyan">Venezuela steht extrem unter Druck.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:07:00.120" end="00:07:03.760">
+        <tt:span style="textCyan">Das Land ist angewiesen</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">auf das Wohlwollen der USA.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub114" style="textCenter" region="bottom" begin="00:07:03.880" end="00:07:07.720">
+        <tt:span style="textCyan">Venezuela liegt wirtschaftlich</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">und politisch am Boden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub115" style="textCenter" region="bottom" begin="00:07:07.840" end="00:07:09.960">
+        <tt:span style="textCyan">Die Ölindustrie ist marode.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub116" style="textCenter" region="bottom" begin="00:07:10.440" end="00:07:14.640">
+        <tt:span style="textCyan">Die Übergangspräsidentin sagte,</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">das Abkommen sei historisch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub117" style="textCenter" region="bottom" begin="00:07:14.720" end="00:07:17.840">
+        <tt:span style="textCyan">Man erhofft sich Einnahmen</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">und Investitionen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub118" style="textCenter" region="bottom" begin="00:07:17.960" end="00:07:20.360">
+        <tt:span style="textCyan">von über 300 Milliarden Dollar.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub119" style="textCenter" region="bottom" begin="00:07:20.480" end="00:07:22.920">
+        <tt:span style="textCyan">Das braucht Venezuela dringend.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub120" style="textCenter" region="bottom" begin="00:07:23.720" end="00:07:27.040">
+        <tt:span style="textCyan">Trump möchte innenpolitisch</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">das Signal senden:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub121" style="textCenter" region="bottom" begin="00:07:27.160" end="00:07:30.320">
+        <tt:span style="textCyan">Wir kümmern uns</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">um niedrige Energiepreise.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub122" style="textCenter" region="bottom" begin="00:07:30.400" end="00:07:34.320">
+        <tt:span style="textCyan">Gerade vor den wichtigen</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">Zwischenwahlen im November.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub123" style="textCenter" region="bottom" begin="00:07:35.600" end="00:07:39.680">
+        <tt:span style="textCyan">Und als geopolitisches Signal</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">Richtung Russland und China:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub124" style="textCenter" region="bottom" begin="00:07:40.840" end="00:07:45.840">
+        <tt:span style="textCyan">"Venezuela ist unser Hinterhof,</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">da halten sich andere bitte raus!"</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub125" style="textCenter" region="bottom" begin="00:07:47.440" end="00:07:48.960">
+        <tt:span style="textWhite">Danke, Sandra Ratzow.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub126" style="textCenter" region="bottom" begin="00:07:51.680" end="00:07:55.840">
+        <tt:span style="textWhite">Und wir blicken auf</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Reform-Debatte in Deutschland:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub127" style="textCenter" region="bottom" begin="00:07:55.920" end="00:07:59.680">
+        <tt:span style="textWhite">Arbeitsministerin Bas hat die</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Diskussion über eine Attestpflicht</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub128" style="textCenter" region="bottom" begin="00:07:59.760" end="00:08:02.400">
+        <tt:span style="textWhite">ab dem ersten Krankheitstag</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wieder aufgenommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub129" style="textCenter" region="bottom" begin="00:08:02.480" end="00:08:06.040">
+        <tt:span style="textWhite">Der Funke-Mediengruppe sagte Bas,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sie sei zwar koalitionstreu,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub130" style="textCenter" region="bottom" begin="00:08:06.120" end="00:08:10.160">
+        <tt:span style="textWhite">man sollte sich aber noch mal fragen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ob die Maßnahme sinnvoll sei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub131" style="textCenter" region="bottom" begin="00:08:10.240" end="00:08:13.160">
+        <tt:span style="textWhite">Außerdem verwies sie darauf,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dass die Attestpflicht</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub132" style="textCenter" region="bottom" begin="00:08:13.240" end="00:08:17.000">
+        <tt:span style="textWhite">an eine Termingarantie</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei Ärzten gekoppelt sei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub133" style="textCenter" region="bottom" begin="00:08:18.360" end="00:08:22.280">
+        <tt:span style="textWhite">Dafür müsse Gesundheitsminister</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Linnemann nun erst Vorschläge machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub134" style="textCenter" region="bottom" begin="00:08:26.000" end="00:08:29.520">
+        <tt:span style="textWhite">Über mehr Jugendschutz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Social-Media-Apps wie Instagram</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub135" style="textCenter" region="bottom" begin="00:08:29.600" end="00:08:33.560">
+        <tt:span style="textWhite">wird in Deutschland und der EU</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">seit Längerem diskutiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub136" style="textCenter" region="bottom" begin="00:08:33.680" end="00:08:37.680">
+        <tt:span style="textWhite">Die EU-Kommission fordert jetzt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vom US-Mutter-Konzern Meta:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub137" style="textCenter" region="bottom" begin="00:08:37.800" end="00:08:40.960">
+        <tt:span style="textWhite">Er solle in Europa</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">den gleichen Schutz gewährleisten</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub138" style="textCenter" region="bottom" begin="00:08:41.040" end="00:08:42.200">
+        <tt:span style="textWhite">wie in den USA.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub139" style="textCenter" region="bottom" begin="00:08:42.280" end="00:08:45.680">
+        <tt:span style="textWhite">Dort hat Meta</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sich in einem Vergleich verpflichtet,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub140" style="textCenter" region="bottom" begin="00:08:45.800" end="00:08:49.400">
+        <tt:span style="textWhite">die Nutzung für Kinder und</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Jugendliche zeitlich zu begrenzen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub141" style="textCenter" region="bottom" begin="00:08:49.480" end="00:08:52.000">
+        <tt:span style="textWhite">So sollen Suchtgefahren</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">abgemildert werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub142" style="textCenter" region="bottom" begin="00:08:54.280" end="00:08:57.160">
+        <tt:span style="textWhite">U9-Untersuchung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für den fünfjährigen Levi.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub143" style="textCenter" region="bottom" begin="00:08:57.480" end="00:09:00.160">
+        <tt:span style="textWhite">Es geht um Koordination,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Wachstum, Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub144" style="textCenter" region="bottom" begin="00:09:00.240" end="00:09:02.120">
+        <tt:span style="textWhite">Aber auch um Medien-Konsum.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub145" style="textCenter" region="bottom" begin="00:09:03.680" end="00:09:06.440">
+        <tt:span style="textYellow">Wie viel darfst du</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">Fernsehgucken zu Hause?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub146" style="textCenter" region="bottom" begin="00:09:07.600" end="00:09:08.840">
+        <tt:span style="textGreen">Nur abends.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub147" style="textCenter" region="bottom" begin="00:09:11.040" end="00:09:13.080">
+        <tt:span style="textWhite">Und nur eine halbe Stunde.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub148" style="textCenter" region="bottom" begin="00:09:13.800" end="00:09:17.960">
+        <tt:span style="textWhite">Bei Jugendlichen erleben sie</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ganz andere Bildschirmzeiten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub149" style="textCenter" region="bottom" begin="00:09:18.280" end="00:09:21.200">
+        <tt:span style="textYellow">Ich hatte einen,</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">der fünf Stunden Computer spielt</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub150" style="textCenter" region="bottom" begin="00:09:21.320" end="00:09:25.240">
+        <tt:span style="textYellow">und dann noch sechs Stunden</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">Bildschirmzeit vorzuweisen hatte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub151" style="textCenter" region="bottom" begin="00:09:25.320" end="00:09:27.240">
+        <tt:span style="textYellow">Der war selber erschrocken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub152" style="textCenter" region="bottom" begin="00:09:27.320" end="00:09:29.840">
+        <tt:span style="textWhite">Apps von Meta seien daran mit schuld.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub153" style="textCenter" region="bottom" begin="00:09:29.920" end="00:09:34.120">
+        <tt:span style="textWhite">Nach dem milliardenschweren Vergleich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit mehreren US-Bundesstaaten</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub154" style="textCenter" region="bottom" begin="00:09:34.200" end="00:09:37.160">
+        <tt:span style="textWhite">will der Konzern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">den Jugendschutz verbessern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub155" style="textCenter" region="bottom" begin="00:09:37.240" end="00:09:39.280">
+        <tt:span style="textWhite">Aber vorerst nur in den USA.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub156" style="textCenter" region="bottom" begin="00:09:39.360" end="00:09:41.680">
+        <tt:span style="textYellow">Da haben</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">wir ein höheres Schutzniveau</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub157" style="textCenter" region="bottom" begin="00:09:41.800" end="00:09:43.520">
+        <tt:span style="textYellow">in den USA als in Europa.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub158" style="textCenter" region="bottom" begin="00:09:43.640" end="00:09:47.560">
+        <tt:span style="textYellow">Das ist für die EU</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">doch einigermaßen beschämend.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub159" style="textCenter" region="bottom" begin="00:09:49.000" end="00:09:51.800">
+        <tt:span style="textWhite">Die Bundesfamilienministerin</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">drängt nun darauf,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub160" style="textCenter" region="bottom" begin="00:09:51.920" end="00:09:56.080">
+        <tt:span style="textWhite">dass auch die EU Konzerne wie Meta</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zu mehr Jugendschutz zwingt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub161" style="textCenter" region="bottom" begin="00:09:56.280" end="00:09:59.080">
+        <tt:span style="textYellow">Diese Verantwortung</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">auch durchzusetzen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub162" style="textCenter" region="bottom" begin="00:09:59.160" end="00:10:02.240">
+        <tt:span style="textYellow">ist die Aufgabe</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">der europäischen Regulierung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub163" style="textCenter" region="bottom" begin="00:10:02.320" end="00:10:03.840">
+        <tt:span style="textYellow">Das muss auch Inhalt</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub164" style="textCenter" region="bottom" begin="00:10:03.920" end="00:10:08.040">
+        <tt:span style="textYellow">neuer Jugendschutzvorschriften</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">auf europäischer Ebene sein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub165" style="textCenter" region="bottom" begin="00:10:08.320" end="00:10:09.920">
+        <tt:span style="textWhite">Social-Media-Plattformen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub166" style="textCenter" region="bottom" begin="00:10:10.000" end="00:10:13.920">
+        <tt:span style="textWhite">gelten für viele Ärzte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">längst als Gesundheitsrisiko.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub167" style="textCenter" region="bottom" begin="00:10:15.400" end="00:10:18.440">
+        <tt:span style="textYellow">Das ist ähnlich</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">wie Tabakwaren oder Alkohol.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub168" style="textCenter" region="bottom" begin="00:10:18.560" end="00:10:21.280">
+        <tt:span style="textYellow">Einem Zehnjährigen</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">würde ich kein Bier geben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub169" style="textCenter" region="bottom" begin="00:10:21.360" end="00:10:25.680">
+        <tt:span style="textYellow">Ein Kind sollte kein Smartphone mit</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">unbegrenztem Internetzugang haben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub170" style="textCenter" region="bottom" begin="00:10:25.800" end="00:10:28.840">
+        <tt:span style="textWhite">Und wenn, dann nur</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit einem strengeren Jugendschutz –</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub171" style="textCenter" region="bottom" begin="00:10:28.920" end="00:10:29.920">
+        <tt:span style="textWhite">auch in der EU.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub172" style="textCenter" region="bottom" begin="00:10:31.040" end="00:10:33.000">
+        <tt:span style="textWhite">Grunz, peng und kawumm -</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub173" style="textCenter" region="bottom" begin="00:10:33.120" end="00:10:38.520">
+        <tt:span style="textWhite">vor 75 Jahren kam in Deutschland das</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">erste Micky-Maus-Heft auf den Markt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub174" style="textCenter" region="bottom" begin="00:10:38.920" end="00:10:43.520">
+        <tt:span style="textWhite">Für 75 Pfennig gab es bunte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Geschichten von Mäusen und Enten,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub175" style="textCenter" region="bottom" begin="00:10:43.600" end="00:10:47.000">
+        <tt:span style="textWhite">die sich über Sprechblasen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">miteinander unterhalten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub176" style="textCenter" region="bottom" begin="00:10:47.120" end="00:10:48.440">
+        <tt:span style="textWhite">Anfangs belächelt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub177" style="textCenter" region="bottom" begin="00:10:48.520" end="00:10:52.480">
+        <tt:span style="textWhite">entwickelte sich bald ein Hype</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">um die Comic-Hefte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub178" style="textCenter" region="bottom" begin="00:10:52.560" end="00:10:56.040">
+        <tt:span style="textWhite">Auch dank der phantasievollen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">lautmalerischen Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub179" style="textCenter" region="bottom" begin="00:10:56.120" end="00:11:01.640">
+        <tt:span style="textWhite">Manche Hefte erreichten eine Auflage</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von bis zu einer Million Exemplaren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub180" style="textCenter" region="bottom" begin="00:11:04.520" end="00:11:07.760">
+        <tt:span style="textWhite">Wir kommen zum Sport</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und zu einem Traumstart</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub181" style="textCenter" region="bottom" begin="00:11:07.880" end="00:11:11.600">
+        <tt:span style="textWhite">für die SV Elversberg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in ihre erste Bundesliga-Saison.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub182" style="textCenter" region="bottom" begin="00:11:11.680" end="00:11:14.960">
+        <tt:span style="textWhite">Der Aufsteiger aus dem Saarland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">holte mit einem 3:2-Sieg</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub183" style="textCenter" region="bottom" begin="00:11:15.040" end="00:11:19.760">
+        <tt:span style="textWhite">gegen Leverkusen die ersten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">drei Punkte in Liga Eins überhaupt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub184" style="textCenter" region="bottom" begin="00:11:21.600" end="00:11:22.920">
+        <tt:span style="textWhite">Elversbergs Trainer</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub185" style="textCenter" region="bottom" begin="00:11:23.000" end="00:11:26.080">
+        <tt:span style="textWhite">hatte den Aufstieg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit der Mondlandung verglichen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub186" style="textCenter" region="bottom" begin="00:11:26.160" end="00:11:29.880">
+        <tt:span style="textWhite">Sein Team macht heute weiter,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wo es in Liga Zwei aufgehört hatte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub187" style="textCenter" region="bottom" begin="00:11:29.960" end="00:11:33.480">
+        <tt:span style="textWhite">8. Minute, Petkovs Schuss</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">noch leicht abgefälscht, 1:0.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub188" style="textCenter" region="bottom" begin="00:11:33.600" end="00:11:38.400">
+        <tt:span style="textWhite">15 Sekunden später, Fehler Tapsoba,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Campbell mit dem 2:0.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub189" style="textCenter" region="bottom" begin="00:11:42.960" end="00:11:47.320">
+        <tt:span style="textWhite">Der Aufsteiger überrollt die Werkself</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Anfangsphase.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub190" style="textCenter" region="bottom" begin="00:11:47.680" end="00:11:50.480">
+        <tt:span style="textWhite">Die Gäste</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind nur nach Standards gefährlich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub191" style="textCenter" region="bottom" begin="00:11:50.560" end="00:11:53.160">
+        <tt:span style="textWhite">Zur Pause</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">führen die Saarländer mit 2:0.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub192" style="textCenter" region="bottom" begin="00:11:53.240" end="00:11:56.680">
+        <tt:span style="textWhite">28 Sekunden nach Wiederanpfiff</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Mokwa mit dem 3:0.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub193" style="textCenter" region="bottom" begin="00:11:56.760" end="00:11:58.800">
+        <tt:span style="textWhite">Leverkusen droht ein Debakel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub194" style="textCenter" region="bottom" begin="00:11:59.000" end="00:12:02.800">
+        <tt:span style="textWhite">In der 77. Minute</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ein konstruktiver Angriff der Gäste.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub195" style="textCenter" region="bottom" begin="00:12:05.400" end="00:12:07.360">
+        <tt:span style="textWhite">Schick per Hacke zum 3:1.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub196" style="textCenter" region="bottom" begin="00:12:08.520" end="00:12:11.760">
+        <tt:span style="textWhite">In der Schlussphase</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dominiert die Werkself.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub197" style="textCenter" region="bottom" begin="00:12:12.760" end="00:12:15.080">
+        <tt:span style="textWhite">Boniface an die Latte, Kofane, 3:2.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub198" style="textCenter" region="bottom" begin="00:12:15.160" end="00:12:16.920">
+        <tt:span style="textWhite">Zu mehr reicht es aber nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub199" style="textCenter" region="bottom" begin="00:12:17.000" end="00:12:20.240">
+        <tt:span style="textWhite">Elversberg mit beeindruckendem Debüt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Bundesliga.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub200" style="textCenter" region="bottom" begin="00:12:21.600" end="00:12:24.000">
+        <tt:span style="textWhite">Hand drauf auf ein spektakuläres 3:3.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub201" style="textCenter" region="bottom" begin="00:12:24.080" end="00:12:27.560">
+        <tt:span style="textWhite">Die beiden Trainer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sehen ein richtig gutes Spiel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub202" style="textCenter" region="bottom" begin="00:12:27.680" end="00:12:29.360">
+        <tt:span style="textWhite">Die Berliner in Rot.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub203" style="textCenter" region="bottom" begin="00:12:30.240" end="00:12:33.960">
+        <tt:span style="textWhite">Emmanuel Latte Lath</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">köpft ein zum 1:0 in der 3. Minute.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub204" style="textCenter" region="bottom" begin="00:12:34.040" end="00:12:38.240">
+        <tt:span style="textWhite">Sieben Minuten später,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch eine Ecke, Ebnoutalib, 1:1.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub205" style="textCenter" region="bottom" begin="00:12:40.080" end="00:12:42.360">
+        <tt:span style="textWhite">Ebnoutalib bleibt hellwach,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub206" style="textCenter" region="bottom" begin="00:12:43.320" end="00:12:47.080">
+        <tt:span style="textWhite">klaut sich die Kugel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">direkt nach Wiederanstoß.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub207" style="textCenter" region="bottom" begin="00:12:50.200" end="00:12:54.080">
+        <tt:span style="textWhite">Unions Keeper ist noch dran -</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Ball trotzdem drin, 1:2.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub208" style="textCenter" region="bottom" begin="00:12:54.160" end="00:12:56.040">
+        <tt:span style="textWhite">Es geht heiß weiter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub209" style="textCenter" region="bottom" begin="00:12:56.240" end="00:13:01.000">
+        <tt:span style="textWhite">67. Minute, natürlich Ebnoutalib,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Dreierpack des Stürmers.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub210" style="textCenter" region="bottom" begin="00:13:06.840" end="00:13:09.040">
+        <tt:span style="textWhite">Aber die Berliner geben nicht auf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub211" style="textCenter" region="bottom" begin="00:13:09.120" end="00:13:13.120">
+        <tt:span style="textWhite">Querfeld macht sein Fehler aus</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der ersten Hälfte wieder gut, 2:3.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub212" style="textCenter" region="bottom" begin="00:13:13.200" end="00:13:16.920">
+        <tt:span style="textWhite">Und Skarke holt die Hacke raus -</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wunderschön zum 3:3.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub213" style="textCenter" region="bottom" begin="00:13:17.040" end="00:13:18.200">
+        <tt:span style="textWhite">Was für ein Match!</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub214" style="textCenter" region="bottom" begin="00:13:21.360" end="00:13:23.400">
+        <tt:span style="textWhite">Die weiteren Ergebnisse:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub215" style="textCenter" region="bottom" begin="00:13:30.280" end="00:13:33.960">
+        <tt:span style="textWhite">Im Spiel Dortmund gegen Hamburg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">steht es kurz vor Ende 2:0.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub216" style="textCenter" region="bottom" begin="00:13:44.520" end="00:13:47.560">
+        <tt:span style="textWhite">Deutschland steht im Endspiel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Hockey-WM,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub217" style="textCenter" region="bottom" begin="00:13:47.680" end="00:13:50.800">
+        <tt:span style="textWhite">nach einem 2:1 im Halbfinale</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gegen Argentinien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub218" style="textCenter" region="bottom" begin="00:13:50.920" end="00:13:53.840">
+        <tt:span style="textWhite">Morgen geht es gegen Spanien</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">um den Titel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub219" style="textCenter" region="bottom" begin="00:13:55.880" end="00:13:57.680">
+        <tt:span style="textWhite">Bundestrainer Andre Henning</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub220" style="textCenter" region="bottom" begin="00:13:57.760" end="00:14:01.280">
+        <tt:span style="textWhite">hat es mit seinem Team</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">tatsächlich schon wieder geschafft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub221" style="textCenter" region="bottom" begin="00:14:01.360" end="00:14:03.080">
+        <tt:span style="textWhite">WM-Gold - zum Greifen nah.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub222" style="textCenter" region="bottom" begin="00:14:03.160" end="00:14:05.080">
+        <tt:span style="textWhite">Die erste Hälfte bleibt torlos,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub223" style="textCenter" region="bottom" begin="00:14:05.160" end="00:14:08.000">
+        <tt:span style="textWhite">dann kommt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die stärkste Phase der Deutschen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub224" style="textCenter" region="bottom" begin="00:14:08.080" end="00:14:09.640">
+        <tt:span style="textWhite">Weigand - Weltklasse.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub225" style="textCenter" region="bottom" begin="00:14:09.760" end="00:14:11.680">
+        <tt:span style="textWhite">Deutschland führt 1:0.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub226" style="textCenter" region="bottom" begin="00:14:12.200" end="00:14:16.280">
+        <tt:span style="textWhite">33. Minute mit der hohen Rückhand</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">den hoppelnden Ball zu kontrollieren</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub227" style="textCenter" region="bottom" begin="00:14:16.360" end="00:14:17.400">
+        <tt:span style="textWhite">- so stark.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub228" style="textCenter" region="bottom" begin="00:14:17.480" end="00:14:20.760">
+        <tt:span style="textWhite">Das letzte Viertel:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Argentinien gleicht noch mal aus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub229" style="textCenter" region="bottom" begin="00:14:20.840" end="00:14:21.960">
+        <tt:span style="textWhite">Das 1:1 von Domene.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub230" style="textCenter" region="bottom" begin="00:14:22.040" end="00:14:24.880">
+        <tt:span style="textWhite">Acht Minuten später</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Deutschen unbeeindruckt -</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub231" style="textCenter" region="bottom" begin="00:14:24.960" end="00:14:28.720">
+        <tt:span style="textWhite">das 2:1 in der 54. Minute -</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Kaufmann der Torschütze.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub232" style="textCenter" region="bottom" begin="00:14:28.840" end="00:14:32.040">
+        <tt:span style="textWhite">Der Traum von der Titelverteidigung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">lebt weiter -</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub233" style="textCenter" region="bottom" begin="00:14:32.120" end="00:14:33.600">
+        <tt:span style="textWhite">Sonntag gegen Spanien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub234" style="textCenter" region="bottom" begin="00:14:36.720" end="00:14:40.880">
+        <tt:span style="textWhite">Wir beenden die Sendung mit Bildern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Kite-Surf-WM auf Sylt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub235" style="textCenter" region="bottom" begin="00:14:40.960" end="00:14:44.960">
+        <tt:span style="textWhite">wo spektakulärer Sport vor</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">spektakulärer Kulisse geboten wird.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub236" style="textCenter" region="bottom" begin="00:14:45.040" end="00:14:49.720">
+        <tt:span style="textWhite">Und damit zur Wettervorhersage</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für morgen, Sonntag, den 30. August:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub237" style="textCenter" region="bottom" begin="00:14:54.200" end="00:14:57.880">
+        <tt:span style="textWhite">Das Tief, das entlang der Nordsee</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Kurs auf Südschweden nimmt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub238" style="textCenter" region="bottom" begin="00:14:57.960" end="00:15:01.040">
+        <tt:span style="textWhite">sorgt morgen bei uns</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für starke bis stürmische Böen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub239" style="textCenter" region="bottom" begin="00:15:01.120" end="00:15:05.240">
+        <tt:span style="textWhite">In der Nacht im Nordwesten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mitunter auch mal kräftiger Regen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub240" style="textCenter" region="bottom" begin="00:15:05.320" end="00:15:07.400">
+        <tt:span style="textWhite">Von Westen lockert es zunehmend auf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub241" style="textCenter" region="bottom" begin="00:15:07.520" end="00:15:10.280">
+        <tt:span style="textWhite">Am Tag im Südosten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sieben bis elf Sonnenstunden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub242" style="textCenter" region="bottom" begin="00:15:10.360" end="00:15:14.320">
+        <tt:span style="textWhite">im Nordwesten wechselhaft</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit Schauern und einzelnen Gewittern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub243" style="textCenter" region="bottom" begin="00:15:14.800" end="00:15:16.040">
+        <tt:span style="textWhite">Die Temperaturen:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub244" style="textCenter" region="bottom" begin="00:15:23.920" end="00:15:26.000">
+        <tt:span style="textWhite">Auch am Montag vielerorts windig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub245" style="textCenter" region="bottom" begin="00:15:26.120" end="00:15:28.800">
+        <tt:span style="textWhite">Um Süden und Südosten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wird es etwas wolkiger,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub246" style="textCenter" region="bottom" begin="00:15:28.880" end="00:15:31.600">
+        <tt:span style="textWhite">Schauer und Gewitter</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">v.a. im Norden und Westen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub247" style="textCenter" region="bottom" begin="00:15:31.680" end="00:15:36.360">
+        <tt:span style="textWhite">Wechselhaft am Dienstag im Norden,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sonst neben Wolken länger Sonne.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub248" style="textCenter" region="bottom" begin="00:15:36.600" end="00:15:37.960">
+        <tt:span style="textWhite">Ähnlich am Mittwoch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub249" style="textCenter" region="bottom" begin="00:15:41.240" end="00:15:43.880">
+        <tt:span style="textWhite">In den tagesthemen um 21.45 Uhr</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub250" style="textCenter" region="bottom" begin="00:15:43.960" end="00:15:48.680">
+        <tt:span style="textWhite">geht es um das Ölabkommen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zwischen den USA und Venezuela.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub251" style="textCenter" region="bottom" begin="00:15:49.960" end="00:15:51.200">
+        <tt:span style="textWhite">Außerdem:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub252" style="textCenter" region="bottom" begin="00:15:51.320" end="00:15:53.800">
+        <tt:span style="textWhite">Neue Abnehmpille gegen Adipositas -</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub253" style="textCenter" region="bottom" begin="00:15:53.880" end="00:15:58.560">
+        <tt:span style="textWhite">Chancen und Risiken der Pille, die</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ab kommender Woche zugelassen ist.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub254" style="textCenter" region="bottom" begin="00:15:59.560" end="00:16:01.440">
+        <tt:span style="textWhite">Ihnen einen schönen Abend.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub255" style="textCenter" region="bottom" begin="00:16:05.800" end="00:16:07.960">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>

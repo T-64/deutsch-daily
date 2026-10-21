@@ -1,0 +1,854 @@
+{
+  "date": "2026-08-31",
+  "slug": "2026-08-31-20uhr",
+  "source": "20uhr",
+  "video_page": "https://www.tagesschau.de/tagesschau_20_uhr/video-1640516.html",
+  "embed_url": "https://www.tagesschau.de/tagesschau_20_uhr/video-1640516~player.html",
+  "news": [
+    {
+      "title": "Wetterdienst meldet zweitwärmsten Sommer seit Aufzeichnungsbeginn",
+      "title_zh": "气象局：有记录以来第二热的夏天",
+      "paragraphs": [
+        "Hier ist das Erste Deutsche Fernsehen mit der tagesschau. Heute im Studio: Thorsten Schröder. Ich begrüße Sie zur tagesschau. Ein typisches Bild dieses Sommers: Ein Fußgänger mit Schirm zum Schutz vor Sonne und Hitze an einem heißen Tag Ende Juni. Von denen gab es 2026 außergewöhnlich viele, wie der Deutsche Wetterdienst ausgewertet hat. Demnach war dieser Sommer nach vorläufigen Zahlen der zweitwärmste seit Beginn der Aufzeichnungen 1881: Die Temperaturen lagen im Schnitt 3,3 Grad über dem langjährigen Mittel.",
+        "Die Sonne brennt. In Deutschland stiegen die Temperaturen zeitweise auf mehr als 40 Grad. Abkühlung in tropischen Nächten gab es vielerorts nicht. Wir hatten früh eine massive Hitzewelle. Das war historisch. Es ging dann mit vielen Hitzetagen weiter. Im Schnitt gab es in Deutschland 22 Hitzetage in diesem Sommer, also Tage mit mehr als 30 Grad. Auf Helgoland wurde ein Hitzetag gemessen, in Rheinfelden waren es 56 Tage. In den letzten zehn Jahren gab es im Schnitt zwölf Hitzetage. Die meisten Tropennächte mit Temperaturen von mehr als 20 Grad wurden in Stuttgart und Frankfurt am Main gemessen. Hitze und Trockenheit belasten die Landwirtschaft mit Ernteausfällen und geringerer Qualität der Feldfrüchte. Fehlender Niederschlag erhöht die Waldbrandgefahr und lässt Pegelstände in Seen und Flüssen sinken. Von Juni bis August fiel etwa 30 % weniger Niederschlag als im langjährigen Mittel. Im Westen und Südwesten sogar um die 50 % Defizit. Dazu war auch die Verdunstung sehr hoch. Also waren die Böden extrem trocken.",
+        "Wegen des Klimawandels erwartet der DWD, dass Extremtemperaturen zur Normalität werden. Dieser Sommer war exorbitant. Künftig wird er eher gewöhnlich sein. Wenn wir beim Klimaschutz nicht erfolgreich sind, wird es vielleicht eines Tages ein eher kühler Sommer sein.",
+        "Mit knapp 780 Sonnenstunden zählt dieser Sommer zu den fünf sonnenreichsten seit Beginn der Aufzeichnungen."
+      ],
+      "translations": [
+        "这里是德国电视一台，带来今日新闻。今天演播室主持：托尔斯滕·施罗德。欢迎大家收看今日新闻。这个夏天典型的一幕：六月末的炎热一天，一位行人打着伞遮挡阳光和暑气。德国气象局的统计显示，2026年这样的日子异常地多。根据初步数据，这个夏天是1881年有记录以来第二热的夏天：平均气温比多年均值高出3.3度。",
+        "烈日灼人。德国气温一度升到超过40度。许多地方在热带夜里也凉快不下来。我们很早就经历了一轮猛烈的热浪。那是历史性的。之后高温日一个接一个。这个夏天德国平均有22个高温日，也就是气温超过30度的日子。黑尔戈兰岛只测到一个高温日，而莱茵费尔登有56天。过去十年平均只有12个高温日。最多的热带夜——即最低气温超过20度的夜晚——出现在斯图加特和美因河畔法兰克福。高温和干燥给农业带来负担：收成减少，大田作物品质下降。降雨缺失加大了森林火险，也让湖泊河流水位下降。六月到八月的降雨比多年均值少了约30%。西部和西南部甚至有约50%的缺口。蒸发量也非常大。所以土壤极度干燥。",
+        "由于气候变化，德国气象局预计极端气温将成为常态。这个夏天热得离谱。以后这样的夏天反而会很平常。如果我们在气候保护上不成功，也许有一天它会算是一个偏凉的夏天。",
+        "这个夏天日照近780小时，是有记录以来阳光最充足的五个夏天之一。"
+      ],
+      "vocab": [
+        {
+          "lemma": "die Hitzewelle, -n",
+          "key": "hitzewelle",
+          "forms": ["Hitzewelle", "Hitzewellen"],
+          "pos": "Substantiv",
+          "zh": "热浪",
+          "example_de": "Wir hatten früh eine massive Hitzewelle.",
+          "example_zh": "我们很早就经历了一轮猛烈的热浪。"
+        },
+        {
+          "lemma": "der Hitzetag, -e",
+          "key": "hitzetag",
+          "forms": ["Hitzetag", "Hitzetage", "Hitzetagen"],
+          "pos": "Substantiv",
+          "zh": "高温日（最高气温超30度）",
+          "example_de": "Im Schnitt gab es in Deutschland 22 Hitzetage in diesem Sommer, also Tage mit mehr als 30 Grad.",
+          "example_zh": "这个夏天德国平均有22个高温日，也就是气温超过30度的日子。"
+        },
+        {
+          "lemma": "die Tropennacht, ¨-e",
+          "key": "tropennacht",
+          "forms": ["Tropennächte"],
+          "pos": "Substantiv",
+          "zh": "热带夜（整夜不低于20度）",
+          "example_de": "Die meisten Tropennächte mit Temperaturen von mehr als 20 Grad wurden in Stuttgart und Frankfurt am Main gemessen.",
+          "example_zh": "最多的热带夜出现在斯图加特和美因河畔法兰克福。"
+        },
+        {
+          "lemma": "der Niederschlag, ..-e",
+          "key": "niederschlag",
+          "forms": ["Niederschlag"],
+          "pos": "Substantiv",
+          "zh": "降水",
+          "example_de": "Fehlender Niederschlag erhöht die Waldbrandgefahr und lässt Pegelstände in Seen und Flüssen sinken.",
+          "example_zh": "降雨缺失加大了森林火险，也让湖泊河流水位下降。"
+        },
+        {
+          "lemma": "die Verdunstung",
+          "key": "verdunstung",
+          "forms": ["Verdunstung"],
+          "pos": "Substantiv",
+          "zh": "蒸发",
+          "example_de": "Dazu war auch die Verdunstung sehr hoch.",
+          "example_zh": "蒸发量也非常大。"
+        },
+        {
+          "lemma": "die Waldbrandgefahr",
+          "key": "waldbrandgefahr",
+          "forms": ["Waldbrandgefahr"],
+          "pos": "Substantiv",
+          "zh": "森林火险",
+          "example_de": "Fehlender Niederschlag erhöht die Waldbrandgefahr und lässt Pegelstände in Seen und Flüssen sinken.",
+          "example_zh": "降雨缺失加大了森林火险。"
+        },
+        {
+          "lemma": "die Aufzeichnung, -en",
+          "key": "aufzeichnung",
+          "forms": ["Aufzeichnungen"],
+          "pos": "Substantiv",
+          "zh": "记录、记载",
+          "example_de": "Mit knapp 780 Sonnenstunden zählt dieser Sommer zu den fünf sonnenreichsten seit Beginn der Aufzeichnungen.",
+          "example_zh": "这个夏天日照近780小时，是有记录以来阳光最充足的五个夏天之一。"
+        },
+        {
+          "lemma": "exorbitant",
+          "key": "exorbitant",
+          "forms": ["exorbitant"],
+          "pos": "Adjektiv",
+          "zh": "过分的、离谱的",
+          "example_de": "Dieser Sommer war exorbitant.",
+          "example_zh": "这个夏天热得离谱。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "lassen + Infinitiv",
+          "summary": "lassen 后接动词不定式，表示“让／使某物……”。",
+          "example_de": "Fehlender Niederschlag erhöht die Waldbrandgefahr und lässt Pegelstände in Seen und Flüssen sinken.",
+          "example_zh": "降雨缺失让湖泊河流水位下降。"
+        },
+        {
+          "title": "Futur I: werden + Infinitiv",
+          "summary": "werden + 动词不定式表示将来时。",
+          "example_de": "Künftig wird er eher gewöhnlich sein.",
+          "example_zh": "以后这样的夏天反而会很平常。"
+        }
+      ],
+      "background": "德国气象局（DWD）自1881年起有全国气象记录。气象意义上的夏季为6–8月。按本期报道，2026年夏季为史上第二热，最热纪录属于2024年前后。"
+    },
+    {
+      "title": "Merz will Verantwortliche nach Drohnenanschlag auf den Leipziger Flughafen benennen",
+      "title_zh": "默尔茨要点名莱比锡机场无人机袭击的责任方",
+      "paragraphs": [
+        "Im August war am Flughafen Leipzig eine mit Sprengstoff beladene Drohne zwischen ukrainischen Frachtmaschinen entdeckt worden. Sicherheitsexperten vermuten, dass Russland hinter dem Angriff steckt. Laut Kanzler Merz stehen die Ermittlungen kurz vor dem Abschluss. Wie Deutschland reagieren werde, sei innerhalb der Regierung weitgehend geklärt. Welche Schritte erwogen werden, ist noch nicht bekannt.",
+        "Das Russische Haus, in bester Lage, mitten in Berlin. Bei Geheimdienstexperten steht es schon länger im Verdacht, mehr als nur Kulturzentrum zu sein. Die Möglichkeit einer Schließung durch die Bundesregierung wird immer wieder genannt: Als eine Reaktion von Deutschland, NATO und EU. Auf verschiedenen Ebenen, sodass klar ist, dass wir nicht alleine stehen. Als Stoppsignal gegen Aktivitäten auf unserem Territorium.",
+        "Wenn die Bundesregierung Russland verantwortlich macht für den Drohnenangriff am Leipziger Flughafen: Wie hart sollte die Reaktion dann ausfallen? AfD und Linke warnen vor einer weiteren Eskalation. Die Grünen dagegen finden die deutsche Position gegenüber Russland zu zurückhaltend und fordern ein regelmäßiges Lagebild. Es gibt jeden Tag Drohnenüberflüge über Industriegelände, illegitime Zutritte auf kritischer Infrastruktur, große Desinformationskampagnen. All das verschwindet in einem Nebel von \"Hybrid-Irgendwas\".",
+        "Hybride Angriffe in Europa, Krieg gegen die Ukraine. 21 Sanktionspakete gegen Russland hat die EU bislang verabschiedet. Einfuhr- und Ausfuhrverbote, Beschlagnahmung von Vermögen, Maßnahmen gegen Einzelpersonen und Organisationen. Sanktionen sind nur ein Instrument. Dadurch wird Russland diesen Krieg nicht beenden. Es geht darum, dass Russland in seiner Fähigkeit, diesen Krieg zu führen, höhere Kosten zahlen muss.",
+        "Die Bundesregierung ließ sich Zeit mit ihrer Reaktion auf den Drohnenangriff von Leipzig. Vieles spricht dafür, dass es in den nächsten Tagen so weit ist."
+      ],
+      "translations": [
+        "八月，在莱比锡机场，一架装载炸药的无人机在乌克兰货机之间被发现。安全专家怀疑，这次袭击的背后是俄罗斯。据总理默尔茨说，调查已接近尾声。据称德国将如何回应，在政府内部已基本明确。具体会考虑哪些步骤，目前还不得而知。",
+        "“俄罗斯之家”，地段极佳，就在柏林市中心。在情报专家那里，它早就被怀疑不只是个文化中心。联邦政府将其关闭的可能性一再被提起：作为德国、北约和欧盟的共同反应。（默尔茨：）“在各个层面协同，让大家清楚我们不是孤军作战。这是对我们领土上那些活动发出的制止信号。”",
+        "如果联邦政府认定俄罗斯应对莱比锡机场无人机袭击负责：那么回应应该有多强硬？选项党（AfD）和左翼党警告不要进一步升级。绿党则认为德国对俄罗斯的立场太过克制，并要求定期通报安全形势。（绿党：）“每天都有无人机飞越工业区，有对关键基础设施的非法进入，还有大规模的假信息攻势。所有这些都消失在一片“混合—随便什么”的迷雾之中。”",
+        "欧洲的混合攻击，对乌克兰的战争。迄今欧盟已通过对俄21轮制裁方案。进出口禁令、没收财产、针对个人和组织的措施。（默尔茨：）“制裁只是一种工具。靠它俄罗斯不会结束这场战争。关键在于，要让俄罗斯为发动这场战争的能力付出更高代价。”",
+        "对于莱比锡无人机袭击，联邦政府不急于做出回应。多种迹象表明，这几天就会有结果。"
+      ],
+      "vocab": [
+        {
+          "lemma": "die Drohne, -n",
+          "key": "drohne",
+          "forms": ["Drohne", "Drohnen", "Drohnenangriff"],
+          "pos": "Substantiv",
+          "zh": "无人机",
+          "example_de": "Im August war am Flughafen Leipzig eine mit Sprengstoff beladene Drohne zwischen ukrainischen Frachtmaschinen entdeckt worden.",
+          "example_zh": "八月，在莱比锡机场，一架装载炸药的无人机在乌克兰货机之间被发现。"
+        },
+        {
+          "lemma": "der Sprengstoff, -e",
+          "key": "sprengstoff",
+          "forms": ["Sprengstoff"],
+          "pos": "Substantiv",
+          "zh": "炸药",
+          "example_de": "Im August war am Flughafen Leipzig eine mit Sprengstoff beladene Drohne zwischen ukrainischen Frachtmaschinen entdeckt worden.",
+          "example_zh": "一架装载炸药的无人机。"
+        },
+        {
+          "lemma": "die Schließung, -en",
+          "key": "schliessung",
+          "forms": ["Schließung"],
+          "pos": "Substantiv",
+          "zh": "关闭",
+          "example_de": "Die Möglichkeit einer Schließung durch die Bundesregierung wird immer wieder genannt: Als eine Reaktion von Deutschland, NATO und EU.",
+          "example_zh": "联邦政府将其关闭的可能性一再被提起。"
+        },
+        {
+          "lemma": "die Eskalation, -en",
+          "key": "eskalation",
+          "forms": ["Eskalation"],
+          "pos": "Substantiv",
+          "zh": "（冲突）升级",
+          "example_de": "AfD und Linke warnen vor einer weiteren Eskalation.",
+          "example_zh": "选项党和左翼党警告不要进一步升级。"
+        },
+        {
+          "lemma": "die Sanktionen (Pl.)",
+          "key": "sanktionen",
+          "forms": ["Sanktionspakete", "Sanktionen"],
+          "pos": "Substantiv",
+          "zh": "制裁",
+          "example_de": "21 Sanktionspakete gegen Russland hat die EU bislang verabschiedet.",
+          "example_zh": "迄今欧盟已通过对俄21轮制裁方案。"
+        },
+        {
+          "lemma": "die Desinformationskampagne, -n",
+          "key": "desinformationskampagne",
+          "forms": ["Desinformationskampagnen"],
+          "pos": "Substantiv",
+          "zh": "虚假信息运动",
+          "example_de": "Es gibt jeden Tag Drohnenüberflüge über Industriegelände, illegitime Zutritte auf kritischer Infrastruktur, große Desinformationskampagnen.",
+          "example_zh": "还有大规模的假信息攻势。"
+        },
+        {
+          "lemma": "zurückhaltend",
+          "key": "zurueckhaltend",
+          "forms": ["zurückhaltend"],
+          "pos": "Adjektiv",
+          "zh": "克制的、保守的",
+          "example_de": "Die Grünen dagegen finden die deutsche Position gegenüber Russland zu zurückhaltend und fordern ein regelmäßiges Lagebild.",
+          "example_zh": "绿党认为德国对俄罗斯的立场太过克制。"
+        },
+        {
+          "lemma": "vermuten",
+          "key": "vermuten",
+          "forms": ["vermuten"],
+          "pos": "Verb",
+          "zh": "猜测、怀疑",
+          "example_de": "Sicherheitsexperten vermuten, dass Russland hinter dem Angriff steckt.",
+          "example_zh": "安全专家怀疑袭击背后是俄罗斯。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "Indirekte Rede: Konjunktiv I",
+          "summary": "转述他人的话时用第一虚拟式（sei / habe / werde），表示“据称”。",
+          "example_de": "Wie Deutschland reagieren werde, sei innerhalb der Regierung weitgehend geklärt.",
+          "example_zh": "据称德国将如何回应，在政府内部已基本明确。"
+        },
+        {
+          "title": "warnen vor + Dativ",
+          "summary": "warnen（警告）后面用介词 vor + 第三格。",
+          "example_de": "AfD und Linke warnen vor einer weiteren Eskalation.",
+          "example_zh": "选项党和左翼党警告不要进一步升级。"
+        }
+      ],
+      "background": "2026年8月，莱比锡/哈勒机场发现一架装有炸药的无人机停在两架乌克兰货运飞机之间，德国政府视之为俄罗斯“混合战争”的一部分。柏林“俄罗斯之家”（Russki Dom）是俄罗斯官方文化机构，多次被指为情报活动据点。"
+    },
+    {
+      "title": "Zahl der Toten nach Sturzflut im Himalaya steigt auf 955",
+      "title_zh": "喜马拉雅山洪遇难人数升至955",
+      "paragraphs": [
+        "Nach der Sturzflut im Himalaya ist die Zahl der Toten auf 955 gestiegen. Etwa 4000 Menschen werden noch vermisst. Mehr als 600 sind wahrscheinlich in Tunnelsystemen und auf Baustellen von Wasserkraftwerken eingeschlossen. Die Rettungsmannschaften in Nepal werden von Tunnel-Experten aus Tibet unterstützt. Tibet wird als autonome Region von China kontrolliert.",
+        "Überall Schutt und Schlamm. Hier war vor einer Woche noch ein Grenzübergang samt Zollabfertigung. Am fünften Tag nach der Katastrophe graben chinesische Bergungstrupps auf der Suche nach etwa 500 Vermissten auf tibetischer Seite. Die Schlammlawine hatte sich hier durch ein Tal gewälzt, dabei diesen Grenzübergang weggefegt. Aufnahmen der Überwachungskamera zeigen die Wucht. Die Bilder gingen um die Welt, in China sind sie zensiert und nur schwer im Internet zu finden. Das Staatsfernsehen zeigt vor allem Bilder, die suggerieren, dass alles unter Kontrolle sei. Bautrupps legen eine Behelfsstraße zum verschütteten Grenzposten an. Evakuierte aus tibetischen Dörfern oder Angehörige von Vermissten kommen kaum zu Wort. Ausländische Journalisten dürfen nicht nach Tibet, um Angaben zu prüfen. Chinesische Behörden beobachten Seen, die sich im Schutt bilden und überlaufen könnten.",
+        "Wissenschaftler fordern eine engere Zusammenarbeit der Staaten im Himalya-Gebirge, trotz bestehender Spannungen. Es ist technisch schwierig. Und es ist eine Herausforderung, das zwischen mehreren Ländern zu koordinieren. Es gibt viele politische Abwägungen. Diese Hindernisse müssen wir beseitigen, um besser zusammenzuarbeiten.",
+        "Markus Spieker ist in Nepals Hauptstadt Kathmandu. Was wird in dem Land jetzt am dringendsten benötigt? Vor allem technische Hilfe. Etwa Behelfsbrücken. Über 40 Brücken wurden zerstört. Ganze Landstriche sind abgetrennt. Man will auch noch in Tunnelanlagen vordringen. Es wäre allerdings erstaunlich, wenn es dort noch Überlebende gibt. Man braucht auch finanzielle Unterstützung. Nepal ist eins der ärmsten Länder der Welt. Die Schäden werden auf fünf Milliarden Dollar geschätzt. Bisher ist nicht mal ein Hundertstel davon in Aussicht gestellt.",
+        "Sie können für die Menschen im Katastrophengebiet spenden:"
+      ],
+      "translations": [
+        "喜马拉雅山洪暴发后，死亡人数已升至955人。约有4000人仍然失踪。600多人很可能被困在隧道系统和水电站工地里。尼泊尔的救援队伍得到来自西藏的隧道专家支援。西藏作为自治区由中国管辖。",
+        "到处是碎石和泥浆。一周前，这里还是一个边境口岸，连同海关查验设施。灾后第五天，中国救援队正在西藏一侧搜寻约500名失踪者。泥石流曾翻滚着冲过一条山谷，把这个边境口岸整个冲走。监控录像拍下了它的威力。这些画面传遍了世界，但在中国它们遭到审查，在网上很难找到。国家电视台主要播放暗示一切尽在掌握的画面。工程队正在铺设一条通往被掩埋边境哨所的便道。从西藏村庄撤离的人和失踪者的亲属几乎得不到发声的机会。外国记者不得进入西藏核实说法。中国当局正在监测碎石中正在形成、可能漫溢的湖泊。",
+        "科学家呼吁喜马拉雅地区各国加强合作，尽管彼此关系紧张。（科学家：）“这在技术上很难。而且要在多个国家之间协调这件事，也是一个挑战。有很多政治上的权衡。我们必须清除这些障碍，才能更好地合作。”",
+        "马库斯·施皮克在尼泊尔首都加德满都。主持人问：这个国家现在最需要什么？（施皮克：）“首先是技术援助。比如临时便桥。40多座桥梁被毁。整片地区与外界隔绝。救援方还想深入隧道设施。不过如果里面还有幸存者，那会是件惊人的事。资金支持也是需要的。尼泊尔是世界上最穷的国家之一。损失估计达50亿美元。到目前为止，连其中的百分之一都还没有着落。”",
+        "您可以为灾区的人们捐款："
+      ],
+      "vocab": [
+        {
+          "lemma": "die Sturzflut, -en",
+          "key": "sturzflut",
+          "forms": ["Sturzflut"],
+          "pos": "Substantiv",
+          "zh": "山洪暴发",
+          "example_de": "Nach der Sturzflut im Himalaya ist die Zahl der Toten auf 955 gestiegen.",
+          "example_zh": "喜马拉雅山洪暴发后，死亡人数已升至955人。"
+        },
+        {
+          "lemma": "vermisst",
+          "key": "vermisst",
+          "forms": ["vermisst", "Vermissten"],
+          "pos": "Adjektiv",
+          "zh": "失踪的",
+          "example_de": "Etwa 4000 Menschen werden noch vermisst.",
+          "example_zh": "约有4000人仍然失踪。"
+        },
+        {
+          "lemma": "einschließen",
+          "key": "einschliessen",
+          "forms": ["eingeschlossen"],
+          "pos": "Verb",
+          "zh": "围困、困住",
+          "example_de": "Mehr als 600 sind wahrscheinlich in Tunnelsystemen und auf Baustellen von Wasserkraftwerken eingeschlossen.",
+          "example_zh": "600多人很可能被困在隧道系统和水电站工地里。"
+        },
+        {
+          "lemma": "die Schlammlawine, -n",
+          "key": "schlammlawine",
+          "forms": ["Schlammlawine"],
+          "pos": "Substantiv",
+          "zh": "泥石流",
+          "example_de": "Die Schlammlawine hatte sich hier durch ein Tal gewälzt, dabei diesen Grenzübergang weggefegt.",
+          "example_zh": "泥石流曾翻滚着冲过一条山谷。"
+        },
+        {
+          "lemma": "der Grenzübergang, ..-e",
+          "key": "grenzuebergang",
+          "forms": ["Grenzübergang"],
+          "pos": "Substantiv",
+          "zh": "边境口岸",
+          "example_de": "Hier war vor einer Woche noch ein Grenzübergang samt Zollabfertigung.",
+          "example_zh": "一周前，这里还是一个边境口岸，连同海关查验设施。"
+        },
+        {
+          "lemma": "die Behelfsbrücke, -n",
+          "key": "behelfsbruecke",
+          "forms": ["Behelfsbrücken"],
+          "pos": "Substantiv",
+          "zh": "临时便桥",
+          "example_de": "Etwa Behelfsbrücken.",
+          "example_zh": "比如临时便桥。"
+        },
+        {
+          "lemma": "zensieren",
+          "key": "zensieren",
+          "forms": ["zensiert"],
+          "pos": "Verb",
+          "zh": "审查、删禁",
+          "example_de": "Die Bilder gingen um die Welt, in China sind sie zensiert und nur schwer im Internet zu finden.",
+          "example_zh": "这些画面传遍了世界，但在中国它们遭到审查。"
+        },
+        {
+          "lemma": "in Aussicht stellen",
+          "key": "inaussichtstellen",
+          "forms": ["in Aussicht gestellt"],
+          "pos": "Redewendung",
+          "zh": "承诺给予、许诺",
+          "example_de": "Bisher ist nicht mal ein Hundertstel davon in Aussicht gestellt.",
+          "example_zh": "到目前为止，连其中的百分之一都还没有着落。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "Passiv mit werden",
+          "summary": "werden + 第二分词构成被动式，不必说出动作执行者。",
+          "example_de": "Über 40 Brücken wurden zerstört.",
+          "example_zh": "40多座桥梁被毁。"
+        },
+        {
+          "title": "Konjunktiv II mit wäre",
+          "summary": "wäre + 不定式／形容词表示非现实的推测。",
+          "example_de": "Es wäre allerdings erstaunlich, wenn es dort noch Überlebende gibt.",
+          "example_zh": "不过如果里面还有幸存者，那会是件惊人的事。"
+        }
+      ],
+      "background": "2026年8月底，喜马拉雅山区（尼泊尔木斯塘与中国西藏吉隆一带）特大山洪／泥石流冲毁中尼边境口岸。节目末尾的捐款提示为电视直播惯例，具体渠道见 tagesschau 官网。"
+    },
+    {
+      "title": "USA greifen erneut iranische Stellungen an",
+      "title_zh": "美军再次攻击伊朗阵地",
+      "paragraphs": [
+        "Nach etwa einem Monat haben sich die USA und Iran wieder gegenseitig angegriffen. Das US-Militär teilte mit: Es habe an der Straße von Hormus auf der Insel Larak zwei Abschussvorrichtungen für Seeminen zerstört. Aus Teheran hieß es, als Reaktion habe man US-Luftwaffenstützpunkte in Jordanien attackiert.",
+        "Es ist der erste Angriff der USA auf Iran seit vier Wochen. Das Ziel: die Insel Larak im persischen Golf. Laut US-Militär wollte Iran von hier aus neue Seeminen in die Straße von Hormus schießen. Bilder davon gibt es keine. Stattdessen zwei durch KI erstellte Videos, die der US-Präsident postet. So stellt Trump sich offenbar die Lage rund um die Insel Kharg vor. Seine Follower begeistert, politische Gegner entsetzt.",
+        "Er findet das lustig, aber das ist es nicht. Wir geben täglich Milliarden für diesen Krieg aus. Das amerikanische Volk zahlt den Preis in Form steigender Kosten und verschwendeter Steuergelder. Der US-Präsident gibt sich unbeeindruckt. Ich gewinne einfach so, ohne dass ich dafür eine Unterschrift brauche. Er habe kein Interesse an weiteren Gesprächen zwischen den Kriegsparteien. Irans Präsident Pezeshkian kündigt Gegenmaßnahmen an. Iran schießt acht Raketen auf zwei US-Flugstützpunkte in Jordanien. Nach jordanischen Angaben konnten nicht alle Raketen abgefangen werden, aber es gab keine Verletzten.",
+        "Beide Seiten haben großes wirtschaftliches Interesse, schnell eine Lösung zu finden. Doch direkte Gespräche gibt es derzeit nicht. Im Hintergrund bemühen sich Katar und Oman um neue Verhandlungen. Bislang ohne Erfolg. Das Bombardement in der Nacht zeigt: Die Zeichen stehen eher auf Eskalation als auf Annäherung. Der Krieg geht in den siebten Monat."
+      ],
+      "translations": [
+        "时隔约一个月，美国和伊朗再次相互攻击。美军通报称：在霍尔木兹海峡的拉拉克岛上，摧毁了两具水雷发射装置。德黑兰方面表示，作为回应，他们攻击了美军在约旦的空军基地。",
+        "这是四周来美国对伊朗的首次攻击。目标：波斯湾的拉拉克岛。据美军说法，伊朗想从这里向霍尔木兹海峡发射新的水雷。相关画面并不存在。取而代之的是两段由AI生成的视频，由美国总统本人发出。特朗普显然就是这样想象哈尔克岛周边局势的。他的粉丝兴奋，政敌震惊。",
+        "（批评者：）“他觉得这很好玩，但事情并不好玩。我们每天为这场战争支出数十亿。美国人民正在付出代价：不断上涨的开支和被浪费的税款。”美国总统显得不为所动。（特朗普：）“我就是这么赢的，连签字都不用。”据称他对交战各方进一步谈判没有兴趣。伊朗总统佩泽什基安宣布将采取反制措施。伊朗向美军在约旦的两个空军基地发射了八枚火箭弹。据约旦方面消息，并非所有火箭弹都被拦截，但没有人员受伤。",
+        "双方都有巨大的经济利益，希望尽快找到解决方案。但目前没有直接谈判。幕后，卡塔尔和阿曼正在努力促成新的谈判。迄今没有成果。夜里的轰炸表明：局势更趋向升级，而非缓和。这场战争进入第七个月。"
+      ],
+      "vocab": [
+        {
+          "lemma": "die Seemine, -n",
+          "key": "seemine",
+          "forms": ["Seeminen"],
+          "pos": "Substantiv",
+          "zh": "水雷",
+          "example_de": "Laut US-Militär wollte Iran von hier aus neue Seeminen in die Straße von Hormus schießen.",
+          "example_zh": "伊朗想向霍尔木兹海峡发射新的水雷。"
+        },
+        {
+          "lemma": "die Abschussvorrichtung, -en",
+          "key": "abschussvorrichtung",
+          "forms": ["Abschussvorrichtungen"],
+          "pos": "Substantiv",
+          "zh": "发射装置",
+          "example_de": "Das US-Militär teilte mit: Es habe an der Straße von Hormus auf der Insel Larak zwei Abschussvorrichtungen für Seeminen zerstört.",
+          "example_zh": "摧毁了两具水雷发射装置。"
+        },
+        {
+          "lemma": "die Straße von Hormus",
+          "key": "strassevonhormus",
+          "forms": ["Straße von Hormus"],
+          "pos": "Eigenname",
+          "zh": "霍尔木兹海峡",
+          "example_de": "Das US-Militär teilte mit: Es habe an der Straße von Hormus auf der Insel Larak zwei Abschussvorrichtungen für Seeminen zerstört.",
+          "example_zh": "在霍尔木兹海峡的拉拉克岛上。"
+        },
+        {
+          "lemma": "die Rakete, -n",
+          "key": "rakete",
+          "forms": ["Raketen"],
+          "pos": "Substantiv",
+          "zh": "火箭弹、导弹",
+          "example_de": "Iran schießt acht Raketen auf zwei US-Flugstützpunkte in Jordanien.",
+          "example_zh": "伊朗发射了八枚火箭弹。"
+        },
+        {
+          "lemma": "abfangen",
+          "key": "abfangen",
+          "forms": ["abgefangen"],
+          "pos": "Verb",
+          "zh": "拦截",
+          "example_de": "Nach jordanischen Angaben konnten nicht alle Raketen abgefangen werden, aber es gab keine Verletzten.",
+          "example_zh": "并非所有火箭弹都被拦截。"
+        },
+        {
+          "lemma": "die Eskalation, -en",
+          "key": "eskalation2",
+          "forms": ["Eskalation"],
+          "pos": "Substantiv",
+          "zh": "升级",
+          "example_de": "Das Bombardement in der Nacht zeigt: Die Zeichen stehen eher auf Eskalation als auf Annäherung.",
+          "example_zh": "局势更趋向升级，而非缓和。"
+        },
+        {
+          "lemma": "die Annäherung, -en",
+          "key": "annaeherung",
+          "forms": ["Annäherung"],
+          "pos": "Substantiv",
+          "zh": "接近、缓和",
+          "example_de": "Das Bombardement in der Nacht zeigt: Die Zeichen stehen eher auf Eskalation als auf Annäherung.",
+          "example_zh": "局势更趋向升级，而非缓和。"
+        },
+        {
+          "lemma": "die Gegenmaßnahme, -n",
+          "key": "gegenmassnahme",
+          "forms": ["Gegenmaßnahmen"],
+          "pos": "Substantiv",
+          "zh": "反制措施",
+          "example_de": "Irans Präsident Pezeshkian kündigt Gegenmaßnahmen an.",
+          "example_zh": "伊朗总统宣布将采取反制措施。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "Konjunktiv I in der indirekten Rede",
+          "summary": "转述官方表态时动词用第一虚拟式（habe / sei / man habe）。",
+          "example_de": "Aus Teheran hieß es, als Reaktion habe man US-Luftwaffenstützpunkte in Jordanien attackiert.",
+          "example_zh": "德黑兰方面称，作为回应已攻击美军在约旦的空军基地。"
+        },
+        {
+          "title": "ohne dass",
+          "summary": "ohne dass 引导从句，表示“没有……就……”。",
+          "example_de": "Ich gewinne einfach so, ohne dass ich dafür eine Unterschrift brauche.",
+          "example_zh": "我就是这么赢的，根本不需要为此签字。"
+        }
+      ],
+      "background": "按本期报道，美国与伊朗自2026年春起处于直接军事冲突，本轮互袭为约一个月来首次。特朗普在社交媒体发布AI生成视频展示打击设想引发争议。霍尔木兹海峡是全球石油运输咽喉。"
+    },
+    {
+      "title": "Festnahmen nach Fährunglück vor Zypern",
+      "title_zh": "塞浦路斯海域渡轮事故后多人被捕",
+      "paragraphs": [
+        "Einen Tag nach dem Schiffsunglück vor Nordzypern werden noch 20 Menschen vermisst. Rettungskräfte suchen nach ihnen auf dem Meer. Die Fähre war gestern nach dem Auslaufen gekentert, nachdem aus ungeklärter Ursache Wasser eingedrungen war. Mindestens acht der 267 Menschen an Bord ertranken. Kapitän, sieben Besatzungsmitglieder und ein Reederei-Manager wurden festgenommen. Wegen des Vorwurfs der Tötung durch Fahrlässigkeit und Unachtsamkeit."
+      ],
+      "translations": [
+        "北塞浦路斯海域沉船事故一天后，仍有20人失踪。救援力量正在海上搜寻他们。昨天这艘渡轮驶出港口后倾覆，原因不明的大量进水。船上267人中至少8人溺亡。船长、七名船员和一名航运公司经理已被逮捕。罪名涉嫌过失及疏忽致死。"
+      ],
+      "vocab": [
+        {
+          "lemma": "das Schiffsunglück, -e",
+          "key": "schiffsunglueck",
+          "forms": ["Schiffsunglück"],
+          "pos": "Substantiv",
+          "zh": "海难",
+          "example_de": "Einen Tag nach dem Schiffsunglück vor Nordzypern werden noch 20 Menschen vermisst.",
+          "example_zh": "沉船事故一天后，仍有20人失踪。"
+        },
+        {
+          "lemma": "kentern",
+          "key": "kentern",
+          "forms": ["gekentert"],
+          "pos": "Verb",
+          "zh": "（船）倾覆",
+          "example_de": "Die Fähre war gestern nach dem Auslaufen gekentert, nachdem aus ungeklärter Ursache Wasser eingedrungen war.",
+          "example_zh": "昨天这艘渡轮驶出港口后倾覆。"
+        },
+        {
+          "lemma": "die Fähre, -n",
+          "key": "faehre",
+          "forms": ["Fähre"],
+          "pos": "Substantiv",
+          "zh": "渡轮",
+          "example_de": "Die Fähre war gestern nach dem Auslaufen gekentert, nachdem aus ungeklärter Ursache Wasser eingedrungen war.",
+          "example_zh": "渡轮倾覆。"
+        },
+        {
+          "lemma": "die Besatzung, -en",
+          "key": "besatzung",
+          "forms": ["Besatzungsmitglieder"],
+          "pos": "Substantiv",
+          "zh": "全体船员",
+          "example_de": "Kapitän, sieben Besatzungsmitglieder und ein Reederei-Manager wurden festgenommen.",
+          "example_zh": "船长、七名船员和一名航运公司经理已被逮捕。"
+        },
+        {
+          "lemma": "ertrinken",
+          "key": "ertrinken",
+          "forms": ["ertranken"],
+          "pos": "Verb",
+          "zh": "溺亡",
+          "example_de": "Mindestens acht der 267 Menschen an Bord ertranken.",
+          "example_zh": "至少8人溺亡。"
+        },
+        {
+          "lemma": "die Fahrlässigkeit",
+          "key": "fahrlaessigkeit",
+          "forms": ["Fahrlässigkeit"],
+          "pos": "Substantiv",
+          "zh": "过失",
+          "example_de": "Wegen des Vorwurfs der Tötung durch Fahrlässigkeit und Unachtsamkeit.",
+          "example_zh": "罪名涉嫌过失及疏忽致死。"
+        },
+        {
+          "lemma": "die Reederei, -en",
+          "key": "reederei",
+          "forms": ["Reederei-Manager"],
+          "pos": "Substantiv",
+          "zh": "航运公司",
+          "example_de": "Kapitän, sieben Besatzungsmitglieder und ein Reederei-Manager wurden festgenommen.",
+          "example_zh": "一名航运公司经理已被逮捕。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "nachdem + Plusquamperfekt",
+          "summary": "nachdem 从句用过去完成时，表示先于主句发生的动作。",
+          "example_de": "Die Fähre war gestern nach dem Auslaufen gekentert, nachdem aus ungeklärter Ursache Wasser eingedrungen war.",
+          "example_zh": "在原因不明的进水之后，渡轮昨天出港后倾覆了。"
+        },
+        {
+          "title": "Genitivkette",
+          "summary": "多个第二格名词串联作定语：des Vorwurfs（谁的嫌疑）+ der Tötung（什么嫌疑）。",
+          "example_de": "Wegen des Vorwurfs der Tötung durch Fahrlässigkeit und Unachtsamkeit.",
+          "example_zh": "因涉嫌过失致死。"
+        }
+      ],
+      "background": ""
+    },
+    {
+      "title": "Verdächtiger nach tödlichen Schüssen bei Techno-Festival in der Schweiz festgenommen",
+      "title_zh": "瑞士电子音乐节致命枪击后嫌疑人落网",
+      "paragraphs": [
+        "In der Schweiz wurde nach Schüssen bei einem Techno-Festival ein 43-jähriger Schweizer gefasst. Näheres soll am Mittwoch mitgeteilt werden. Bei dem Festival in Aarau wurde in der Nacht zum Sonntag eine Italienerin erschossen. Fünf Personen wurden verletzt, darunter eine Frau aus Deutschland."
+      ],
+      "translations": [
+        "在瑞士，一名43岁的瑞士男子已在电子音乐节的枪击案后被抓获。更多细节将于周三公布。周日夜间，一名意大利女性在阿劳的音乐节上被枪杀。五人受伤，其中包括一名德国女性。"
+      ],
+      "vocab": [
+        {
+          "lemma": "fassen",
+          "key": "fassen",
+          "forms": ["gefasst"],
+          "pos": "Verb",
+          "zh": "抓捕",
+          "example_de": "In der Schweiz wurde nach Schüssen bei einem Techno-Festival ein 43-jähriger Schweizer gefasst.",
+          "example_zh": "一名43岁的瑞士男子已被抓获。"
+        },
+        {
+          "lemma": "erschießen",
+          "key": "erschiessen",
+          "forms": ["erschossen"],
+          "pos": "Verb",
+          "zh": "枪杀",
+          "example_de": "Bei dem Festival in Aarau wurde in der Nacht zum Sonntag eine Italienerin erschossen.",
+          "example_zh": "一名意大利女性被枪杀。"
+        },
+        {
+          "lemma": "verletzen",
+          "key": "verletzen",
+          "forms": ["verletzt"],
+          "pos": "Verb",
+          "zh": "使受伤",
+          "example_de": "Fünf Personen wurden verletzt, darunter eine Frau aus Deutschland.",
+          "example_zh": "五人受伤。"
+        },
+        {
+          "lemma": "in der Nacht zum Sonntag",
+          "key": "indernachtzimsonntag",
+          "forms": ["in der Nacht zum Sonntag"],
+          "pos": "Redewendung",
+          "zh": "周日夜间（周六到周日的夜里）",
+          "example_de": "Bei dem Festival in Aarau wurde in der Nacht zum Sonntag eine Italienerin erschossen.",
+          "example_zh": "周日夜间发生了枪击。"
+        },
+        {
+          "lemma": "mitteilen",
+          "key": "mitteilen",
+          "forms": ["mitgeteilt"],
+          "pos": "Verb",
+          "zh": "通报、告知",
+          "example_de": "Näheres soll am Mittwoch mitgeteilt werden.",
+          "example_zh": "更多细节将于周三公布。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "soll + Infinitiv（报道转述）",
+          "summary": "soll + 不定式表示“据安排／据说”，新闻常用。",
+          "example_de": "Näheres soll am Mittwoch mitgeteilt werden.",
+          "example_zh": "更多情况定于周三公布。"
+        },
+        {
+          "title": "darunter",
+          "summary": "darunter = 在其中，用于列举后补充“其中包括……”。",
+          "example_de": "Fünf Personen wurden verletzt, darunter eine Frau aus Deutschland.",
+          "example_zh": "五人受伤，其中包括一名来自德国的女性。"
+        }
+      ],
+      "background": "事发地为瑞士阿尔高州首府阿劳（Aarau）的电子音乐节。"
+    },
+    {
+      "title": "Langspielplatten feiern 75-jähriges Jubiläum",
+      "title_zh": "黑胶唱片75周年",
+      "paragraphs": [
+        "Im Streaming-Zeitalter mutet das Musikhören per Schallplatte fast altmodisch an. Doch Liebhaber schwören auf den Klang und die Entschleunigung, die das Auflegen von Vinyl mit sich bringt. Vor 75 Jahren kamen in Deutschland die ersten Langspielplatten auf den Markt. Anders als prognostiziert, hat die LP auch die CD überlebt. Heute werden wieder mehr Platten als Silberscheiben verkauft.",
+        "Für Willy Wendt ist das Stöbern nach Schallplatten eine Leidenschaft. Etwa 1000 Stück hat er schon gesammelt. Vor allem das Ritual des Hörens ist für ihn besonders. Wir haben 'ne schnelllebige Gesellschaft. Und sich dann mal 30, 40 Minuten nur mit einem Album zu beschäftigen, ist ein kleiner Luxus. Er ist einer von vielen, die die Leidenschaft für Schallplatten neu entdeckt haben.",
+        "Das beobachtet der Inhaber des Plattenladens in Berlin. Die sagen: Das hab ich früher so oft gehört, dass will ich mir kaufen. Zwischen den 50ern- und 80ern ist die Schallplatte der Standard für Musikliebhaber. Dann wird sie von der CD abgelöst. Doch seit einigen Jahren erlebt die große Scheibe ihr Comeback, verkauft sich besser als alle anderen physischen Tonträger. Das ist auch in diesem Presswerk spürbar. Hier müssen bald 55.000 Platten gepresst werden. Große Plattenfirmen nutzen die Vinyl als Fanartikel. Für DJs ist es das Arbeitsmittel. Und dann gibt es noch die Sammler. All das kombiniert, macht die Vinyl sehr besonders. Die Platten werden, da sie beliebter werden, auch immer teurer."
+      ],
+      "translations": [
+        "在流媒体时代，用黑胶唱片听音乐显得几乎过时。但爱好者们坚信它的音质，以及放黑胶带来的慢节奏生活。75年前，第一批密纹唱片在德国上市。与当初的预测不同，黑胶唱片甚至熬过了CD。如今唱片的销量又超过了银色光盘。",
+        "对威利·文特来说，淘唱片是一种热爱。他已经收藏了大约1000张。尤其是听唱片这件事的仪式感，对他来说很特别。（文特：）“我们生活在一个节奏飞快的社会。能有30、40分钟只专注在一张专辑上，是一种小小的奢侈。”像他这样重新爱上黑胶的人还有许多。",
+        "柏林一家唱片店的老板也观察到了这一点。顾客们说：这个我以前常听，我要把它买下来。从50到80年代，黑胶唱片是音乐爱好者的标准配置。后来它被CD取代。但近几年，这张大唱片迎来复兴，卖得比其他所有实体音乐载体都好。在这家压片厂也能感受到这一点。这里很快要压55000张唱片。大唱片公司把黑胶当粉丝周边卖。对DJ来说它是工作工具。另外还有收藏家。这一切合在一起，让黑胶非常特别。唱片越受欢迎，价格也越来越贵。"
+      ],
+      "vocab": [
+        {
+          "lemma": "die Langspielplatte, -n (LP)",
+          "key": "langspielplatte",
+          "forms": ["Langspielplatten"],
+          "pos": "Substantiv",
+          "zh": "密纹唱片、黑胶",
+          "example_de": "Vor 75 Jahren kamen in Deutschland die ersten Langspielplatten auf den Markt.",
+          "example_zh": "75年前，第一批密纹唱片在德国上市。"
+        },
+        {
+          "lemma": "schwören auf + Akkusativ",
+          "key": "schwoerenauf",
+          "forms": ["schwören"],
+          "pos": "Verb",
+          "zh": "坚信、推崇",
+          "example_de": "Doch Liebhaber schwören auf den Klang und die Entschleunigung, die das Auflegen von Vinyl mit sich bringt.",
+          "example_zh": "爱好者们坚信它的音质。"
+        },
+        {
+          "lemma": "die Entschleunigung",
+          "key": "entschleunigung",
+          "forms": ["Entschleunigung"],
+          "pos": "Substantiv",
+          "zh": "放慢节奏",
+          "example_de": "Doch Liebhaber schwören auf den Klang und die Entschleunigung, die das Auflegen von Vinyl mit sich bringt.",
+          "example_zh": "放黑胶带来的慢节奏生活。"
+        },
+        {
+          "lemma": "der Tonträger, -",
+          "key": "tontraeger",
+          "forms": ["Tonträger"],
+          "pos": "Substantiv",
+          "zh": "音乐载体",
+          "example_de": "Doch seit einigen Jahren erlebt die große Scheibe ihr Comeback, verkauft sich besser als alle anderen physischen Tonträger.",
+          "example_zh": "卖得比其他所有实体音乐载体都好。"
+        },
+        {
+          "lemma": "das Comeback, -s",
+          "key": "comeback",
+          "forms": ["Comeback"],
+          "pos": "Substantiv",
+          "zh": "复兴、东山再起",
+          "example_de": "Doch seit einigen Jahren erlebt die große Scheibe ihr Comeback, verkauft sich besser als alle anderen physischen Tonträger.",
+          "example_zh": "这张大唱片迎来复兴。"
+        },
+        {
+          "lemma": "das Presswerk, -e",
+          "key": "presswerk",
+          "forms": ["Presswerk"],
+          "pos": "Substantiv",
+          "zh": "压片厂",
+          "example_de": "Das ist auch in diesem Presswerk spürbar.",
+          "example_zh": "在这家压片厂也能感受到这一点。"
+        },
+        {
+          "lemma": "stöbern",
+          "key": "stoebern",
+          "forms": ["Stöbern"],
+          "pos": "Verb",
+          "zh": "淘、翻找",
+          "example_de": "Für Willy Wendt ist das Stöbern nach Schallplatten eine Leidenschaft.",
+          "example_zh": "淘唱片是一种热爱。"
+        },
+        {
+          "lemma": "der Sammler, -",
+          "key": "sammler",
+          "forms": ["Sammler"],
+          "pos": "Substantiv",
+          "zh": "收藏家",
+          "example_de": "Und dann gibt es noch die Sammler.",
+          "example_zh": "另外还有收藏家。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "da-Satz（因为）插入主句中间",
+          "summary": "da = 因为，引导的原因从句可以插在主句中间，前后用逗号隔开。",
+          "example_de": "Die Platten werden, da sie beliebter werden, auch immer teurer.",
+          "example_zh": "唱片因为更受欢迎，也越来越贵。"
+        },
+        {
+          "title": "Passiv mit von + Dativ",
+          "summary": "被动句里用 von 引出施动者。",
+          "example_de": "Dann wird sie von der CD abgelöst.",
+          "example_zh": "后来它被CD取代。"
+        }
+      ],
+      "background": "1951年首批密纹唱片（LP, 33⅓转）在当时的联邦德国上市。所谓“热带夜”等词与本条无关。CD于80年代普及后黑胶一度衰落，2010年代起在欧美持续回暖。"
+    },
+    {
+      "title": "Lionel Messi verkündet Ende seiner Karriere in der argentinischen Nationalmannschaft",
+      "title_zh": "梅西宣布结束阿根廷国家队生涯",
+      "paragraphs": [
+        "Er gilt als einer der besten Fußballer der Welt: Lionel Messi. Jetzt hat der Argentinier (39) seinen Rücktritt aus der Nationalmannschaft bekanntgegeben. Mit Argentinien gewann Messi die WM 2022. In diesem Sommer scheiterte die Titelverteidigung erst im Finale gegen Spanien, Messis letztes von 207 Länderspielen. Für seinen Verein Inter Miami bleibt er weiter aktiv."
+      ],
+      "translations": [
+        "他被认为是世界上最好的足球运动员之一：利昂内尔·梅西。现在，这位39岁的阿根廷人宣布退出国家队。梅西曾随阿根廷夺得2022年世界杯冠军。今年夏天，卫冕之旅直到决赛才输给西班牙——那是梅西207场国家队比赛中的最后一场。在俱乐部国际迈阿密，他将继续踢下去。"
+      ],
+      "vocab": [
+        {
+          "lemma": "der Rücktritt, -e",
+          "key": "ruecktritt",
+          "forms": ["Rücktritt"],
+          "pos": "Substantiv",
+          "zh": "退出、辞职",
+          "example_de": "Jetzt hat der Argentinier (39) seinen Rücktritt aus der Nationalmannschaft bekanntgegeben.",
+          "example_zh": "这位阿根廷人宣布退出国家队。"
+        },
+        {
+          "lemma": "die Nationalmannschaft, -en",
+          "key": "nationalmannschaft",
+          "forms": ["Nationalmannschaft"],
+          "pos": "Substantiv",
+          "zh": "国家队",
+          "example_de": "Jetzt hat der Argentinier (39) seinen Rücktritt aus der Nationalmannschaft bekanntgegeben.",
+          "example_zh": "宣布退出国家队。"
+        },
+        {
+          "lemma": "die Titelverteidigung",
+          "key": "titelverteidigung",
+          "forms": ["Titelverteidigung"],
+          "pos": "Substantiv",
+          "zh": "卫冕",
+          "example_de": "In diesem Sommer scheiterte die Titelverteidigung erst im Finale gegen Spanien, Messis letztes von 207 Länderspielen.",
+          "example_zh": "卫冕之旅直到决赛才失败。"
+        },
+        {
+          "lemma": "das Länderspiel, -e",
+          "key": "laenderspiel",
+          "forms": ["Länderspielen"],
+          "pos": "Substantiv",
+          "zh": "国家队比赛",
+          "example_de": "In diesem Sommer scheiterte die Titelverteidigung erst im Finale gegen Spanien, Messis letztes von 207 Länderspielen.",
+          "example_zh": "那是梅西207场国家队比赛中的最后一场。"
+        },
+        {
+          "lemma": "bekanntgeben",
+          "key": "bekanntgeben",
+          "forms": ["bekanntgegeben"],
+          "pos": "Verb",
+          "zh": "宣布",
+          "example_de": "Jetzt hat der Argentinier (39) seinen Rücktritt aus der Nationalmannschaft bekanntgegeben.",
+          "example_zh": "他宣布退出国家队。"
+        },
+        {
+          "lemma": "gelten als",
+          "key": "geltenals",
+          "forms": ["gilt"],
+          "pos": "Redewendung",
+          "zh": "被视为",
+          "example_de": "Er gilt als einer der besten Fußballer der Welt: Lionel Messi.",
+          "example_zh": "他被认为是世界上最好的足球运动员之一。"
+        },
+        {
+          "lemma": "scheitern",
+          "key": "scheitern",
+          "forms": ["scheiterte"],
+          "pos": "Verb",
+          "zh": "失败、（争冠）受挫",
+          "example_de": "In diesem Sommer scheiterte die Titelverteidigung erst im Finale gegen Spanien, Messis letztes von 207 Länderspielen.",
+          "example_zh": "卫冕在决赛失败。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "einer der besten + Genitiv Plural",
+          "summary": "“最……之一”用 einer der besten + 复数第二格表达。",
+          "example_de": "Er gilt als einer der besten Fußballer der Welt: Lionel Messi.",
+          "example_zh": "他被视为世界最好的球员之一。"
+        }
+      ],
+      "background": "梅西2022年随阿根廷夺得卡塔尔世界杯，2026年世界杯决赛负于西班牙（按本期报道），随后宣布结束国家队生涯，仍继续效力美职联国际迈阿密。"
+    },
+    {
+      "title": "Das Wetter",
+      "title_zh": "天气",
+      "paragraphs": [
+        "Die Wettervorhersage für morgen, Dienstag, den 1. September. Im Süden sorgt das Azorenhoch oft für sonniges und sommerlich warmes Wetter. Gen Norden ist es dagegen wechselhaft und windig.",
+        "In der Nacht im Süden meist nur locker bewölkt oder klar und trocken, sonst viele Wolken mit ein paar Schauern. Am Tag scheint südlich von Mosel und Main oft die Sonne. Weiter nördlich neben Sonnenschein auch dichtere Wolken und Schauer, vor allem Richtung Küsten, wo auch einzelne Gewitter dabei sind.",
+        "Mittwoch meist trocken bei Sonne und Wolken. In Küstennähe sowie an den Alpen einzelne Schauer und Gewitter. In den folgenden Tagen im Norden viele Wolken, teils kräftiger Regen und einzelne Gewitter, dazu windig. Richtung Süden oft sonnig und warm."
+      ],
+      "translations": [
+        "明天，也就是周二，9月1日的天气预报。南部受亚速尔高压影响，天气多为晴朗、夏日般的温暖。北部则天气多变、有风。",
+        "夜里南部大多只是零星云或晴朗干燥，其他地方多云，有些阵雨。白天，摩泽尔河与美因河以南常有阳光。更往北，阳光之外还有较厚的云和阵雨，尤其在沿海方向，还伴有零星雷雨。",
+        "周三大部分地区干燥，晴间多云。海岸附近以及阿尔卑斯山一带有零星阵雨和雷雨。之后几天，北部多云，部分地区有较强降雨和零星雷雨，风也大。南部方向则常晴暖。"
+      ],
+      "vocab": [
+        {
+          "lemma": "die Wettervorhersage, -n",
+          "key": "wettervorhersage",
+          "forms": ["Wettervorhersage"],
+          "pos": "Substantiv",
+          "zh": "天气预报",
+          "example_de": "Die Wettervorhersage für morgen, Dienstag, den 1. September.",
+          "example_zh": "明天的天气预报。"
+        },
+        {
+          "lemma": "das Azorenhoch",
+          "key": "azorenhoch",
+          "forms": ["Azorenhoch"],
+          "pos": "Substantiv",
+          "zh": "亚速尔高压",
+          "example_de": "Im Süden sorgt das Azorenhoch oft für sonniges und sommerlich warmes Wetter.",
+          "example_zh": "南部受亚速尔高压影响。"
+        },
+        {
+          "lemma": "wechselhaft",
+          "key": "wechselhaft",
+          "forms": ["wechselhaft"],
+          "pos": "Adjektiv",
+          "zh": "多变的（天气）",
+          "example_de": "Gen Norden ist es dagegen wechselhaft und windig.",
+          "example_zh": "北部则天气多变、有风。"
+        },
+        {
+          "lemma": "der Schauer, -",
+          "key": "schauer",
+          "forms": ["Schauer", "Schauern"],
+          "pos": "Substantiv",
+          "zh": "阵雨",
+          "example_de": "Weiter nördlich neben Sonnenschein auch dichtere Wolken und Schauer, vor allem Richtung Küsten, wo auch einzelne Gewitter dabei sind.",
+          "example_zh": "还有较厚的云和阵雨。"
+        },
+        {
+          "lemma": "das Gewitter, -",
+          "key": "gewitter",
+          "forms": ["Gewitter"],
+          "pos": "Substantiv",
+          "zh": "雷雨",
+          "example_de": "Weiter nördlich neben Sonnenschein auch dichtere Wolken und Schauer, vor allem Richtung Küsten, wo auch einzelne Gewitter dabei sind.",
+          "example_zh": "还伴有零星雷雨。"
+        },
+        {
+          "lemma": "bewölkt",
+          "key": "bewoelkt",
+          "forms": ["bewölkt"],
+          "pos": "Adjektiv",
+          "zh": "多云的",
+          "example_de": "In der Nacht im Süden meist nur locker bewölkt oder klar und trocken, sonst viele Wolken mit ein paar Schauern.",
+          "example_zh": "夜里南部大多只是零星云。"
+        }
+      ],
+      "grammar_points": [],
+      "background": ""
+    }
+  ]
+}

@@ -1,0 +1,1181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.000" end="00:00:04.280">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:04.360" end="00:00:08.240">
+        <tt:span style="textWhite">Hier ist das Erste Deutsche Fernsehen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit der tagesschau.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:08.320" end="00:00:12.680">
+        <tt:span style="textBlue">Diese Sendung wurde vom NDR</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">live untertitelt (23.08.2026)</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:14.920" end="00:00:16.920">
+        <tt:span style="textWhite">Heute im Studio: Jens Riewa.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:17.720" end="00:00:19.840">
+        <tt:span style="textWhite">Ich begrüße Sie zur tagesschau.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:21.240" end="00:00:24.520">
+        <tt:span style="textWhite">In zwei Wochen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist Landtagswahl in Sachsen-Anhalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:24.640" end="00:00:27.800">
+        <tt:span style="textWhite">AfD-Chef Chrupalla</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat den Führungsanspruch der AfD</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:27.880" end="00:00:30.000">
+        <tt:span style="textWhite">in dem Bundesland bekräftigt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:30.080" end="00:00:34.320">
+        <tt:span style="textWhite">Im ARD-Sommerinterview sagte er,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Ziel sei die absolute Mehrheit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:34.640" end="00:00:38.600">
+        <tt:span style="textWhite">Derzeit liegt die AfD</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit über 40 % in Umfragen vorn.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:00:38.720" end="00:00:41.520">
+        <tt:span style="textWhite">Sie könnte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aber nicht allein regieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:00:42.600" end="00:00:46.200">
+        <tt:span style="textWhite">Der Verfassungsschutz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">stuft die Partei in Sachsen-Anhalt</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:00:46.280" end="00:00:48.440">
+        <tt:span style="textWhite">als gesichert rechtsextrem ein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:00:50.280" end="00:00:53.120">
+        <tt:span style="textWhite">Kurz vor Ende</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der parlamentarischen Sommerpause</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:00:53.200" end="00:00:56.280">
+        <tt:span style="textWhite">kommt der AfD-Parteichef</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zum ARD-Sommerinterview.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:00:56.360" end="00:01:00.400">
+        <tt:span style="textWhite">Ein Sommer mit Niedrigwasser,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Waldbränden und Hitzetoten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:00.480" end="00:01:02.960">
+        <tt:span style="textWhite">Tino Chrupalla aber bleibt dabei:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:03.040" end="00:01:05.920">
+        <tt:span style="textWhite">Er zweifelt den</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">menschengemachten Klimawandel an,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:06.000" end="00:01:10.000">
+        <tt:span style="textWhite">trotz wissenschaftlichem Konsens,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und will keinen Klimaschutz:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:10.200" end="00:01:12.880">
+        <tt:span style="textYellow">Für mich war das</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">ein normaler Sommer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:12.960" end="00:01:16.040">
+        <tt:span style="textYellow">Ja, es gab Trocken-,</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">aber auch lange Regenperioden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:16.120" end="00:01:18.560">
+        <tt:span style="textYellow">Wir haben im August</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">normale Temperaturen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:18.640" end="00:01:20.800">
+        <tt:span style="textYellow">Ich sehe da viel Panikmache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:20.880" end="00:01:24.240">
+        <tt:span style="textWhite">Die AfD ist in den Umfragen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bundesweit stärkste Kraft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:24.320" end="00:01:28.080">
+        <tt:span style="textWhite">In Sachsen-Anhalt könnte sie</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">erstmalig eine Regierung stellen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:28.160" end="00:01:30.680">
+        <tt:span style="textYellow">Natürlich ist die Wahl</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">in Sachsen-Anhalt</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:30.760" end="00:01:33.080">
+        <tt:span style="textYellow">eine der herausforderndsten Wahlen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:01:33.160" end="00:01:36.080">
+        <tt:span style="textYellow">Wir stellen die Machtfrage</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">und die Machtoption.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:01:36.160" end="00:01:39.560">
+        <tt:span style="textYellow">Ich hoffe, dass wir dort</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">die erste Regierung stellen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:01:39.760" end="00:01:44.040">
+        <tt:span style="textWhite">Co-Parteichefin Alice Weidel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">geht beim ZDF-Sommerinterview weiter:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:01:44.400" end="00:01:46.600">
+        <tt:span style="textYellow">Wir sind dort auf der Siegerstraße.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:01:46.680" end="00:01:48.880">
+        <tt:span style="textYellow">Wir werden dort</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">die Regierung stellen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:01:49.000" end="00:01:53.120">
+        <tt:span style="textYellow">Die CDU wird bundesweit nie wieder</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">eine Bundestagswahl gewinnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:01:53.440" end="00:01:56.800">
+        <tt:span style="textWhite">Zuletzt ging es bei der AfD</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">immer wieder um die Frage:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:01:56.880" end="00:02:00.160">
+        <tt:span style="textWhite">Wie hält die Partei es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit dem rechtsextremen Vorfeld.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:00.240" end="00:02:03.280">
+        <tt:span style="textWhite">Ehemalige Mitglieder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">etwa der 2009 verbotenen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:03.360" end="00:02:07.360">
+        <tt:span style="textWhite">Heimatreuen Deutschen Jugend</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind Vertraute von Ulrich Siegmund.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:07.440" end="00:02:09.760">
+        <tt:span style="textWhite">Dem Spitzenkandidaten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Sachsen-Anhalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:09.840" end="00:02:13.920">
+        <tt:span style="textWhite">Sein Pressesprecher Patrick Harr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und der Jurist Laurens Nothdurft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:14.000" end="00:02:15.880">
+        <tt:span style="textWhite">Er war, wie Unterlagen zeigen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:15.960" end="00:02:19.040">
+        <tt:span style="textWhite">zweiter Bundesführer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei dem neonazistischen Verband.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:19.120" end="00:02:20.640">
+        <tt:span style="textWhite">Chrupalla wiegelt ab.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:20.720" end="00:02:24.240">
+        <tt:span style="textYellow">Wenn man in Jugendjahren</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">Veranstaltungen besucht hat,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:02:24.320" end="00:02:27.080">
+        <tt:span style="textYellow">das ist ziemlich</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">aus dem Kontext gerissen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:02:27.160" end="00:02:31.400">
+        <tt:span style="textYellow">Ich sehe in der Mitgliedschaft,</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">seit diese Personen in der AfD sind,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:02:31.480" end="00:02:35.280">
+        <tt:span style="textYellow">keine Verstöße, die</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">juristisch geahndet werden mussten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:02:36.920" end="00:02:40.240">
+        <tt:span style="textWhite">Offen ließ Chrupalla,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Ob bei einer Regierungsübernahme</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:02:40.320" end="00:02:43.840">
+        <tt:span style="textWhite">die ehemaligen Neonazis</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wichtige Ämter bekommen könnten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:02:45.560" end="00:02:48.480">
+        <tt:span style="textWhite">Markus Preiß im ARD-Hauptstadtstudio:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:02:49.240" end="00:02:52.160">
+        <tt:span style="textWhite">Was haben wir heute</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für eine AfD erlebt?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:02:53.960" end="00:02:56.640">
+        <tt:span style="textCyan">Eine unglaublich siegesgewisse.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:02:56.800" end="00:02:59.800">
+        <tt:span style="textCyan">Tino Chrupalla</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">geht fest von einem Wahlsieg</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:02:59.960" end="00:03:01.520">
+        <tt:span style="textCyan">in Sachsen-Anhalt aus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:01.960" end="00:03:04.120">
+        <tt:span style="textCyan">Die Machtfrage werde gestellt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:04.960" end="00:03:08.120">
+        <tt:span style="textCyan">Mindestens so deutlich</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">war auch Alice Weidel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:08.960" end="00:03:13.120">
+        <tt:span style="textCyan">Sie sagt, die CDU werde</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">keine Bundestagswahl mehr gewinnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:13.480" end="00:03:17.200">
+        <tt:span style="textCyan">Wie will man in Sachsen-Anhalt</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">eine Regierung bilden?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:18.480" end="00:03:22.760">
+        <tt:span style="textCyan">Ulrich Siegmund möchte das nur</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">mit absoluter Mehrheit machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:03:23.000" end="00:03:27.000">
+        <tt:span style="textCyan">Tino Chrupalla ist da weniger</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">kategorisch, möchte allen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:03:27.080" end="00:03:31.000">
+        <tt:span style="textCyan">"die Hand alles ausstrecken,</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">die mit uns reden wollen".</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:03:31.080" end="00:03:34.520">
+        <tt:span style="textCyan">Den Anschein, dass die AfD</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">eine Brandmauer hätte,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:03:34.680" end="00:03:36.400">
+        <tt:span style="textCyan">will man aber vermeiden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:03:36.960" end="00:03:39.600">
+        <tt:span style="textWhite">Welche inhaltlichen Punkte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">fielen auf?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:03:41.760" end="00:03:44.640">
+        <tt:span style="textCyan">Zum Beispiel,</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">dass Alice Weidel klar sagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:03:44.760" end="00:03:48.400">
+        <tt:span style="textCyan">sie will mit Deutschland</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">raus aus dem Schengen-Raum.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:03:48.600" end="00:03:52.400">
+        <tt:span style="textCyan">In dem Bereich können wir</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">ohne Grenzkontrollen reisen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:03:52.560" end="00:03:56.560">
+        <tt:span style="textCyan">Und auch in den Bundesländern</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">sollte sich einiges ändern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:03:56.680" end="00:04:00.680">
+        <tt:span style="textCyan">Tino Chrupalla hat verteidigt,</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">dass man in Sachsen-Anhalt</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:00.880" end="00:04:03.320">
+        <tt:span style="textCyan">eine freiwillige Bürgerwacht will.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:05.400" end="00:04:09.920">
+        <tt:span style="textCyan">Das lehnen in Sachsen-Anhalt</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">alle drei Polizeigewerkschaften ab.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:12.240" end="00:04:14.080">
+        <tt:span style="textWhite">Vielen Dank, Markus Preiß.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:15.440" end="00:04:18.760">
+        <tt:span style="textWhite">Das ganze Sommerinterview</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">können Sie in der ARD-Mediathek</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:19.640" end="00:04:21.640">
+        <tt:span style="textWhite">und bei tagesschau.de sehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:22.240" end="00:04:26.400">
+        <tt:span style="textWhite">Auf unserer Internetseite</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben wir auch einen Faktencheck.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:04:28.840" end="00:04:31.560">
+        <tt:span style="textWhite">Die Eisenbahn-</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und Verkehrsgewerkschaft EVG</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:04:31.640" end="00:04:35.760">
+        <tt:span style="textWhite">hat gedroht, den Regionalverkehr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ab Januar zu blockieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:04:35.840" end="00:04:37.600">
+        <tt:span style="textWhite">Sie will Druck aufbauen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:04:37.680" end="00:04:41.400">
+        <tt:span style="textWhite">die Strafen für Angriffe</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf Zugpersonal zu verschärfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:04:41.480" end="00:04:44.960">
+        <tt:span style="textWhite">Die Bundesregierung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat einen Gesetzentwurf angekündigt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:04:45.040" end="00:04:47.680">
+        <tt:span style="textWhite">EVG-Chef Burkert fordert mehr Tempo.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:04:47.760" end="00:04:49.640">
+        <tt:span style="textWhite">Ein Fall vor einem halben Jahr</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:04:49.720" end="00:04:54.360">
+        <tt:span style="textWhite">hatte die Diskussion über den Schutz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">des Bahnpersonals neu angestoßen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:04:54.760" end="00:04:56.560">
+        <tt:span style="textWhite">Ein Fahrkartenkontrolleur</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:04:56.640" end="00:04:59.800">
+        <tt:span style="textWhite">erlitt bei einem Angriff</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine tödliche Hirnblutung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:00.440" end="00:05:02.600">
+        <tt:span style="textWhite">Sein Tod hat viele schockiert:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:02.680" end="00:05:06.800">
+        <tt:span style="textWhite">Serkan Calar starb, während er</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">als Zugbegleiter seinen Dienst tat.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:06.880" end="00:05:09.720">
+        <tt:span style="textWhite">Die Politik</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">kündigte schärfere Strafen an.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:09.800" end="00:05:13.520">
+        <tt:span style="textWhite">Die müssten endlich kommen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">fordert die EVG.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:13.600" end="00:05:17.400">
+        <tt:span style="textWhite">Sonst werde man ab Januar</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">den Regionalverkehr lahmlegen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:18.040" end="00:05:22.240">
+        <tt:span style="textYellow">Die Betriebsrätinnen und</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">Betriebsräte haben die Möglichkeit,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:22.800" end="00:05:25.400">
+        <tt:span style="textYellow">bei dieser Belastung</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">Dienstpläne abzulehnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:05:25.480" end="00:05:27.800">
+        <tt:span style="textYellow">Die Sicherheitslage gibt das her.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:05:27.880" end="00:05:31.600">
+        <tt:span style="textYellow">Dann werden Züge nicht besetzt</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">und bleiben stehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:05:33.480" end="00:05:37.760">
+        <tt:span style="textWhite">Zugausfälle, womöglich Stillstand,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aber eben kein echter Streik.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:05:39.760" end="00:05:42.240">
+        <tt:span style="textCyan">Ein Streik wäre nicht zulässig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:05:43.120" end="00:05:45.120">
+        <tt:span style="textCyan">Streiken darf man nur für Ziele,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:05:45.200" end="00:05:48.800">
+        <tt:span style="textCyan">die man mit dem Arbeitgeber</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">in einem Tarifvertrag regeln kann.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:05:48.920" end="00:05:51.520">
+        <tt:span style="textCyan">Vergütung,</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">Arbeitsbedingungen zum Beispiel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:05:51.600" end="00:05:55.520">
+        <tt:span style="textCyan">Hier geht es aber um die</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">Verschärfung eines Strafgesetzes.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:05:56.320" end="00:05:58.480">
+        <tt:span style="textWhite">Offenbar werden Bahn-Mitarbeiter</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:05:58.560" end="00:06:01.680">
+        <tt:span style="textWhite">im Regionalverkehr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">immer häufiger angegriffen:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:06:14.800" end="00:06:18.560">
+        <tt:span style="textWhite">Zum dem Gesetzentwurf</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">teilt das Justiz-Ministerium mit:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:06:37.720" end="00:06:40.720">
+        <tt:span style="textWhite">Für den Fall</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wäre die Drohung der EVG hinfällig</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:40.800" end="00:06:42.600">
+        <tt:span style="textWhite">und die Züge könnten rollen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:44.680" end="00:06:46.520">
+        <tt:span style="textWhite">Wir schauen in die Ukraine:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:46.600" end="00:06:50.720">
+        <tt:span style="textWhite">102 Meter über der Stadt Charkiw</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">weht die ukrainische Flagge.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:06:50.800" end="00:06:52.000">
+        <tt:span style="textWhite">So hoch,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:06:52.080" end="00:06:56.240">
+        <tt:span style="textWhite">dass sie von der 30 km entfernten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Front aus sichtbar sein könnte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:06:56.360" end="00:06:57.840">
+        <tt:span style="textWhite">Nicht ein einziges Mal</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:06:57.920" end="00:07:01.280">
+        <tt:span style="textWhite">seit Kriegsbeginn</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vor 4,5 Jahren wurde sie eingeholt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:07:01.360" end="00:07:04.160">
+        <tt:span style="textWhite">Sie gilt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">als Symbol der Stärke der Stadt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:07:04.720" end="00:07:08.640">
+        <tt:span style="textWhite">Diesen Widerstandswillen Charkiws</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat Außenminister Wadephul</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:07:08.720" end="00:07:11.880">
+        <tt:span style="textWhite">bei seinem ersten Besuch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Frontnähe gelobt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:07:12.520" end="00:07:15.760">
+        <tt:span style="textWhite">Währenddessen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wurde mehrfach Luftalarm ausgelöst.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub114" style="textCenter" region="bottom" begin="00:07:17.240" end="00:07:20.200">
+        <tt:span style="textWhite">Die Autokolonne</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von Außenminister Wadephul.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub115" style="textCenter" region="bottom" begin="00:07:20.280" end="00:07:24.840">
+        <tt:span style="textWhite">Von der russischen Armee zerstörte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Tankstellen auf dem Weg nach Charkiw,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub116" style="textCenter" region="bottom" begin="00:07:25.160" end="00:07:27.720">
+        <tt:span style="textWhite">Eindrücke vom näherrückenden Krieg.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub117" style="textCenter" region="bottom" begin="00:07:29.840" end="00:07:32.080">
+        <tt:span style="textWhite">Alle paar Minuten: Luftalarm.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub118" style="textCenter" region="bottom" begin="00:07:32.240" end="00:07:36.160">
+        <tt:span style="textWhite">Wadephul hat sich entschieden,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in die Nähe der Front zu fahren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub119" style="textCenter" region="bottom" begin="00:07:36.280" end="00:07:39.720">
+        <tt:span style="textWhite">Einen Tag vor dem</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">35. Unabhängigkeitstag der Ukraine</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub120" style="textCenter" region="bottom" begin="00:07:39.800" end="00:07:44.200">
+        <tt:span style="textWhite">will er mehr Aufmerksamkeit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für den anhaltenden Krieg schaffen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub121" style="textCenter" region="bottom" begin="00:07:47.880" end="00:07:50.200">
+        <tt:span style="textYellow">Es ist mir eine Ehre, hier zu sein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub122" style="textCenter" region="bottom" begin="00:07:50.280" end="00:07:51.480">
+        <tt:span style="textWhite">Gedenken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub123" style="textCenter" region="bottom" begin="00:07:51.560" end="00:07:54.240">
+        <tt:span style="textWhite">Am 470. Geburtstag der Stadt Charkiw.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub124" style="textCenter" region="bottom" begin="00:07:55.320" end="00:07:57.960">
+        <tt:span style="textWhite">Das wird ihm hier hoch angerechnet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub125" style="textCenter" region="bottom" begin="00:07:58.560" end="00:08:01.120">
+        <tt:span style="textYellow">Es ist ein sehr wichtiges Signal,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub126" style="textCenter" region="bottom" begin="00:08:01.200" end="00:08:04.320">
+        <tt:span style="textYellow">dass Charkiw lebt,</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">dass die Stadt leben wird.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub127" style="textCenter" region="bottom" begin="00:08:04.400" end="00:08:08.000">
+        <tt:span style="textYellow">Wir brauchen Unterstützung,</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">damit Charkiw bestehen kann.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub128" style="textCenter" region="bottom" begin="00:08:08.400" end="00:08:09.800">
+        <tt:span style="textWhite">Der nächste Termin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub129" style="textCenter" region="bottom" begin="00:08:09.880" end="00:08:13.720">
+        <tt:span style="textWhite">An der Universität bringen sie</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">den Minister in den Untergrund.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub130" style="textCenter" region="bottom" begin="00:08:13.800" end="00:08:16.880">
+        <tt:span style="textWhite">Ab dem kommenden Semester</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wollen sie den Studenten</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub131" style="textCenter" region="bottom" begin="00:08:16.960" end="00:08:19.120">
+        <tt:span style="textWhite">wieder Präsenzunterricht ermöglichen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub132" style="textCenter" region="bottom" begin="00:08:19.200" end="00:08:21.320">
+        <tt:span style="textWhite">In solchen geschützten Kellerräumen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub133" style="textCenter" region="bottom" begin="00:08:21.400" end="00:08:24.240">
+        <tt:span style="textWhite">Wadephul erlebt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Studenten im Kriegsalltag.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub134" style="textCenter" region="bottom" begin="00:08:24.400" end="00:08:28.120">
+        <tt:span style="textYellow">Wir brauchen mehr Schutzräume</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">für Studenten und Lehrende,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub135" style="textCenter" region="bottom" begin="00:08:28.240" end="00:08:30.840">
+        <tt:span style="textYellow">um sicher zu studieren, ohne Risiko.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub136" style="textCenter" region="bottom" begin="00:08:32.760" end="00:08:36.000">
+        <tt:span style="textWhite">Angesichts des Erlebten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und der gesehenen Schäden</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub137" style="textCenter" region="bottom" begin="00:08:36.080" end="00:08:40.680">
+        <tt:span style="textWhite">mahnt der Außenminister noch mal</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">verbündete Staaten zu mehr Hilfe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub138" style="textCenter" region="bottom" begin="00:08:43.200" end="00:08:46.240">
+        <tt:span style="textYellow">Ihr müsst euch alle fragen,</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">wo ihr steht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub139" style="textCenter" region="bottom" begin="00:08:46.320" end="00:08:49.080">
+        <tt:span style="textYellow">Vor einem schwierigen Winter</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">für die Ukraine:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub140" style="textCenter" region="bottom" begin="00:08:49.160" end="00:08:52.920">
+        <tt:span style="textYellow">Was kann man tun, welche</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">zusätzlichen Verteidigungsmittel</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub141" style="textCenter" region="bottom" begin="00:08:53.000" end="00:08:54.960">
+        <tt:span style="textYellow">kann man der Ukraine geben?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub142" style="textCenter" region="bottom" begin="00:08:55.280" end="00:08:59.560">
+        <tt:span style="textCyan">Die Reise von Wadephul nach Charkiw,</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">in der Nähe der Front,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub143" style="textCenter" region="bottom" begin="00:08:59.640" end="00:09:03.560">
+        <tt:span style="textCyan">immer wieder unter Beschuss,</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">hatte symbolischen Charakter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub144" style="textCenter" region="bottom" begin="00:09:03.800" end="00:09:07.480">
+        <tt:span style="textCyan">Er wollte sich ein Bild machen</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">und der Ukraine zeigen:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub145" style="textCenter" region="bottom" begin="00:09:08.080" end="00:09:10.080">
+        <tt:span style="textCyan">Wir vergessen euch nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub146" style="textCenter" region="bottom" begin="00:09:10.160" end="00:09:12.760">
+        <tt:span style="textCyan">Konkrete Hilfe</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">mit Patriot-Abwehrraketen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub147" style="textCenter" region="bottom" begin="00:09:12.840" end="00:09:14.920">
+        <tt:span style="textCyan">konnte er nicht mitbringen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub148" style="textCenter" region="bottom" begin="00:09:15.000" end="00:09:18.480">
+        <tt:span style="textCyan">Nur das Versprechen,</tt:span>
+        <tt:br />
+        <tt:span style="textCyan">sich weiter intensiv zu kümmern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub149" style="textCenter" region="bottom" begin="00:09:20.440" end="00:09:24.760">
+        <tt:span style="textWhite">Die Zoll-Verhandlungen zwischen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">den USA und Kanada sind gescheitert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub150" style="textCenter" region="bottom" begin="00:09:24.840" end="00:09:29.080">
+        <tt:span style="textWhite">Seit letzter Nacht erhebt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die US-Regierung neue Zölle von 50 %</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub151" style="textCenter" region="bottom" begin="00:09:29.160" end="00:09:30.840">
+        <tt:span style="textWhite">auf kanadische Waren:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub152" style="textCenter" region="bottom" begin="00:09:31.840" end="00:09:35.640">
+        <tt:span style="textWhite">Etwa Eishockeyschläger,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Nationalflaggen oder Sperrholz.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub153" style="textCenter" region="bottom" begin="00:09:35.920" end="00:09:40.240">
+        <tt:span style="textWhite">Kanada sei angegriffen worden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und sei "im Krieg" mit den USA,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub154" style="textCenter" region="bottom" begin="00:09:41.000" end="00:09:43.360">
+        <tt:span style="textWhite">sagte Premier Carney wörtlich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub155" style="textCenter" region="bottom" begin="00:09:43.920" end="00:09:47.680">
+        <tt:span style="textWhite">Er kündigte an, die Zölle</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Dollar um Dollar zu erwidern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub156" style="textCenter" region="bottom" begin="00:09:47.880" end="00:09:51.680">
+        <tt:span style="textWhite">Die USA machen Kanada</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für das Scheitern verantwortlich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub157" style="textCenter" region="bottom" begin="00:09:52.840" end="00:09:54.240">
+        <tt:span style="textWhite">Zurück ins Inland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub158" style="textCenter" region="bottom" begin="00:09:54.320" end="00:09:58.160">
+        <tt:span style="textWhite">Nach dem Zweiten Weltkrieg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">lag Deutschland in Trümmern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub159" style="textCenter" region="bottom" begin="00:09:58.240" end="00:10:01.760">
+        <tt:span style="textWhite">Dass später zwei</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">deutsche Staaten gegründet würden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub160" style="textCenter" region="bottom" begin="00:10:01.840" end="00:10:04.000">
+        <tt:span style="textWhite">war zunächst nicht abzusehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub161" style="textCenter" region="bottom" begin="00:10:04.080" end="00:10:06.560">
+        <tt:span style="textWhite">Den Besatzungsmächten ging es darum,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub162" style="textCenter" region="bottom" begin="00:10:06.640" end="00:10:09.400">
+        <tt:span style="textWhite">dezentrale Verwaltungen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">neu aufzubauen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub163" style="textCenter" region="bottom" begin="00:10:09.480" end="00:10:12.200">
+        <tt:span style="textWhite">So schuf</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die britische Militärregierung</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub164" style="textCenter" region="bottom" begin="00:10:12.280" end="00:10:14.720">
+        <tt:span style="textWhite">vor 80 Jahren Schleswig-Holstein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub165" style="textCenter" region="bottom" begin="00:10:15.600" end="00:10:20.120">
+        <tt:span style="textWhite">Dazu gibt es viele Feiern,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">heute dieses Bürgerfest in Nortorf,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub166" style="textCenter" region="bottom" begin="00:10:21.480" end="00:10:24.400">
+        <tt:span style="textWhite">am geografischen Mittelpunkt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">des Landes.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub167" style="textCenter" region="bottom" begin="00:10:24.480" end="00:10:28.680">
+        <tt:span style="textWhite">Der offizielle Festakt mit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Spitzenpolitik folgt am Dienstag.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub168" style="textCenter" region="bottom" begin="00:10:30.640" end="00:10:33.320">
+        <tt:span style="textWhite">Auch NRW wird heute 80 Jahre alt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub169" style="textCenter" region="bottom" begin="00:10:33.720" end="00:10:37.480">
+        <tt:span style="textWhite">Es war damals ebenfalls</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der britischen Besatzungszone.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub170" style="textCenter" region="bottom" begin="00:10:37.560" end="00:10:40.480">
+        <tt:span style="textWhite">Die große Feier</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">steigt am kommenden Wochenende</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub171" style="textCenter" region="bottom" begin="00:10:40.560" end="00:10:42.440">
+        <tt:span style="textWhite">mit dem NRW-Tag in Münster.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub172" style="textCenter" region="bottom" begin="00:10:43.920" end="00:10:48.560">
+        <tt:span style="textWhite">* Am 17. Juli 1946 gab der britische</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Oberbefehlshaber in Deutschland, *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub173" style="textCenter" region="bottom" begin="00:10:48.640" end="00:10:53.920">
+        <tt:span style="textWhite">* Sir Douglas, die Bildung des neuen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Landes Nordrhein-Westfalen bekannt. *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub174" style="textCenter" region="bottom" begin="00:10:55.720" end="00:10:57.200">
+        <tt:span style="textWhite">Heute vor 80 Jahren:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub175" style="textCenter" region="bottom" begin="00:10:57.280" end="00:11:01.960">
+        <tt:span style="textWhite">Die preußischen Provinzen Nordrhein</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und Westfalen werden zusammengelegt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub176" style="textCenter" region="bottom" begin="00:11:02.120" end="00:11:05.200">
+        <tt:span style="textYellow">NRW ist älter</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">als die Bundesrepublik.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub177" style="textCenter" region="bottom" begin="00:11:05.280" end="00:11:07.640">
+        <tt:span style="textYellow">Hier wurde die Grundlage</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub178" style="textCenter" region="bottom" begin="00:11:07.720" end="00:11:10.480">
+        <tt:span style="textYellow">für die deutsche</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">Nachkriegsdemokratie geschaffen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub179" style="textCenter" region="bottom" begin="00:11:10.560" end="00:11:13.960">
+        <tt:span style="textWhite">Operation Marriage nennt das</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die britische Besatzungsmacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub180" style="textCenter" region="bottom" begin="00:11:14.040" end="00:11:15.120">
+        <tt:span style="textWhite">Eine Zweckehe:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub181" style="textCenter" region="bottom" begin="00:11:15.200" end="00:11:18.800">
+        <tt:span style="textWhite">Sie wollten v.a. das Industriezentrum</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Ruhrgebiet kontrollieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub182" style="textCenter" region="bottom" begin="00:11:18.880" end="00:11:21.720">
+        <tt:span style="textWhite">Bis heute</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine der prägendsten Regionen NRWs.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub183" style="textCenter" region="bottom" begin="00:11:21.800" end="00:11:25.680">
+        <tt:span style="textWhite">18 Mio. Einwohner, davon jeder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dritte mit Migrationsgeschichte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub184" style="textCenter" region="bottom" begin="00:11:25.760" end="00:11:29.680">
+        <tt:span style="textWhite">Was macht für sie das Bundesland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">80 Jahre nach Gründung aus?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub185" style="textCenter" region="bottom" begin="00:11:29.760" end="00:11:32.480">
+        <tt:span style="textYellow">Viele Kulturen, unglaublich schön.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub186" style="textCenter" region="bottom" begin="00:11:33.400" end="00:11:37.520">
+        <tt:span style="textGreen">Die Menschen sind offen</tt:span>
+        <tt:br />
+        <tt:span style="textGreen">und freundlich, lebensfroh.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub187" style="textCenter" region="bottom" begin="00:11:39.360" end="00:11:41.560">
+        <tt:span style="textYellow">Dass man 100 km fahren kann</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub188" style="textCenter" region="bottom" begin="00:11:41.640" end="00:11:44.800">
+        <tt:span style="textYellow">und man ist gefühlt</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">in 'ner ganz anderen Welt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub189" style="textCenter" region="bottom" begin="00:11:45.360" end="00:11:47.200">
+        <tt:span style="textWhite">Es gibt auch Probleme:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub190" style="textCenter" region="bottom" begin="00:11:47.280" end="00:11:50.720">
+        <tt:span style="textWhite">Strukturwandel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder ein überlastetes Verkehrsnetz.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub191" style="textCenter" region="bottom" begin="00:11:50.800" end="00:11:52.600">
+        <tt:span style="textWhite">Die Wirtschaftsleistung aber:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub192" style="textCenter" region="bottom" begin="00:11:52.680" end="00:11:56.080">
+        <tt:span style="textWhite">Eine Konstante, trotz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bundesweit schwächelnder Konjunktur.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub193" style="textCenter" region="bottom" begin="00:11:56.160" end="00:12:00.960">
+        <tt:span style="textYellow">Es ist regional die bedeutendste</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">Volkswirtschaft Deutschlands.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub194" style="textCenter" region="bottom" begin="00:12:01.040" end="00:12:05.880">
+        <tt:span style="textYellow">Alleine in Europa wäre es</tt:span>
+        <tt:br />
+        <tt:span style="textYellow">die sechsgrößte Volkswirtschaft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub195" style="textCenter" region="bottom" begin="00:12:07.400" end="00:12:09.080">
+        <tt:span style="textYellow">Ein Kompetenzzentrum.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub196" style="textCenter" region="bottom" begin="00:12:11.400" end="00:12:13.760">
+        <tt:span style="textWhite">Eines,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das schon 80 Jahre anhält.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub197" style="textCenter" region="bottom" begin="00:12:15.800" end="00:12:19.920">
+        <tt:span style="textWhite">Bayern München hat Dortmund</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Supercup mit 2:1 besiegt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub198" style="textCenter" region="bottom" begin="00:12:20.520" end="00:12:24.560">
+        <tt:span style="textWhite">Der Meister und Pokalsieger</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sicherte sich gegen den Vizemeister</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub199" style="textCenter" region="bottom" begin="00:12:24.640" end="00:12:27.080">
+        <tt:span style="textWhite">den ersten Titel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nach der Sommerpause.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub200" style="textCenter" region="bottom" begin="00:12:28.720" end="00:12:31.840">
+        <tt:span style="textWhite">Nach 28 Minuten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">erzielten die Bayern die Führung</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub201" style="textCenter" region="bottom" begin="00:12:31.960" end="00:12:35.240">
+        <tt:span style="textWhite">durch den</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aus Frankfurt verpflichteten Brown.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub202" style="textCenter" region="bottom" begin="00:12:35.840" end="00:12:38.440">
+        <tt:span style="textWhite">Zu diesem Zeitpunkt völlig verdient.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub203" style="textCenter" region="bottom" begin="00:12:38.800" end="00:12:42.160">
+        <tt:span style="textWhite">Der BVB bis dahin</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ohne nennenswerte Möglichkeiten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub204" style="textCenter" region="bottom" begin="00:12:42.240" end="00:12:44.720">
+        <tt:span style="textWhite">In der Nachspielzeit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der ersten Hälfte</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub205" style="textCenter" region="bottom" begin="00:12:44.840" end="00:12:49.400">
+        <tt:span style="textWhite">fiel der zweite Treffer für den</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Doublegewinner der letzten Saison.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub206" style="textCenter" region="bottom" begin="00:12:49.480" end="00:12:53.680">
+        <tt:span style="textWhite">Torschütze diesmal der Franzose Olise</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zum 0:2-Pausenstand.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub207" style="textCenter" region="bottom" begin="00:12:56.320" end="00:13:00.680">
+        <tt:span style="textWhite">Nach dem Wechsel die Borussia</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit deutlicher Leistungssteigerung:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub208" style="textCenter" region="bottom" begin="00:13:00.760" end="00:13:03.960">
+        <tt:span style="textWhite">Eine Viertelstunde</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vor Ende der regulären Spielzeit</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub209" style="textCenter" region="bottom" begin="00:13:04.040" end="00:13:06.720">
+        <tt:span style="textWhite">mit dem Anschlusstreffer durch Silva.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub210" style="textCenter" region="bottom" begin="00:13:08.280" end="00:13:10.240">
+        <tt:span style="textWhite">Für mehr reichte es nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub211" style="textCenter" region="bottom" begin="00:13:10.320" end="00:13:15.120">
+        <tt:span style="textWhite">Die Rote Karte für Bensebaini</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nach dem unnötigem Foul gegen Saibari</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub212" style="textCenter" region="bottom" begin="00:13:15.200" end="00:13:17.840">
+        <tt:span style="textWhite">der unrühmliche Abschluss der Partie.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub213" style="textCenter" region="bottom" begin="00:13:18.200" end="00:13:19.520">
+        <tt:span style="textWhite">Bayern München:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub214" style="textCenter" region="bottom" begin="00:13:19.600" end="00:13:22.560">
+        <tt:span style="textWhite">Franz-Beckenbauer-</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Supercup-Gewinner 2026.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub215" style="textCenter" region="bottom" begin="00:13:24.640" end="00:13:26.680">
+        <tt:span style="textWhite">Der Mexikaner Isaac del Toro</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub216" style="textCenter" region="bottom" begin="00:13:26.760" end="00:13:29.920">
+        <tt:span style="textWhite">hat die 40. Auflage</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Deutschland-Tour gewonnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub217" style="textCenter" region="bottom" begin="00:13:30.000" end="00:13:33.040">
+        <tt:span style="textWhite">Für den 22-Jährigen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist es der vierte Gesamtsieg</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub218" style="textCenter" region="bottom" begin="00:13:33.120" end="00:13:35.680">
+        <tt:span style="textWhite">bei einer Etappenfahrt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in diesem Jahr.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub219" style="textCenter" region="bottom" begin="00:13:35.760" end="00:13:38.640">
+        <tt:span style="textWhite">Die Stimmung bei dem Radrennen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">rund um Heilbronn</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub220" style="textCenter" region="bottom" begin="00:13:38.720" end="00:13:40.880">
+        <tt:span style="textWhite">war auch ohne Heimsieg ausgelassen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub221" style="textCenter" region="bottom" begin="00:13:42.120" end="00:13:46.520">
+        <tt:span style="textWhite">Isaac del Toro, Team UAE, im Blauen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Trikot des Führenden vor dem Start.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub222" style="textCenter" region="bottom" begin="00:13:46.600" end="00:13:48.600">
+        <tt:span style="textWhite">Allen war klar, es würde schwer,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub223" style="textCenter" region="bottom" begin="00:13:48.680" end="00:13:51.720">
+        <tt:span style="textWhite">ihn noch vom Sieg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei der Deutschland-Tour abzuhalten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub224" style="textCenter" region="bottom" begin="00:13:51.800" end="00:13:54.880">
+        <tt:span style="textWhite">Zu stark der Eindruck,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">den der Mexikaner und sein Team</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub225" style="textCenter" region="bottom" begin="00:13:54.960" end="00:13:57.760">
+        <tt:span style="textWhite">bei der Königsetappe</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gestern hinterlassen hatten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub226" style="textCenter" region="bottom" begin="00:13:57.840" end="00:14:01.280">
+        <tt:span style="textWhite">Miguel Heidemann von Rembe-Rad-Net</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gewinnt das Bergtrikot</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub227" style="textCenter" region="bottom" begin="00:14:01.360" end="00:14:04.320">
+        <tt:span style="textWhite">dank cleverer Teamtaktik</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">während der Rundfahrt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub228" style="textCenter" region="bottom" begin="00:14:04.440" end="00:14:07.640">
+        <tt:span style="textWhite">Echtes Tour-de-France-Feeling</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">entlang der Strecke -</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub229" style="textCenter" region="bottom" begin="00:14:07.760" end="00:14:11.000">
+        <tt:span style="textWhite">zahllose Fans</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">machen das Finale zu einem Fest.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub230" style="textCenter" region="bottom" begin="00:14:11.520" end="00:14:13.960">
+        <tt:span style="textWhite">Dann kommt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Attacke vom Führenden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub231" style="textCenter" region="bottom" begin="00:14:14.080" end="00:14:17.960">
+        <tt:span style="textWhite">del Toro setzt sich ab,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Konkurrenten können nicht folgen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub232" style="textCenter" region="bottom" begin="00:14:18.320" end="00:14:21.720">
+        <tt:span style="textWhite">Mit dem Bonussprint</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und den dort gewonnenen Sekunden</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub233" style="textCenter" region="bottom" begin="00:14:21.800" end="00:14:23.400">
+        <tt:span style="textWhite">entscheidet er die Tour.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub234" style="textCenter" region="bottom" begin="00:14:23.480" end="00:14:27.280">
+        <tt:span style="textWhite">Auch wenn die Sprinterteams ihn</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf der Zielgeraden noch einholen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub235" style="textCenter" region="bottom" begin="00:14:27.360" end="00:14:31.040">
+        <tt:span style="textWhite">Paul Magnier, Team Soudal-Quickstep,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gewinnt die Schlussetappe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub236" style="textCenter" region="bottom" begin="00:14:31.120" end="00:14:33.760">
+        <tt:span style="textWhite">Der Gesamtsieger</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bedankt sich bei Nils Politt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub237" style="textCenter" region="bottom" begin="00:14:33.840" end="00:14:35.640">
+        <tt:span style="textWhite">seinem wertvollsten Helfer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub238" style="textCenter" region="bottom" begin="00:14:35.720" end="00:14:39.240">
+        <tt:span style="textWhite">Isaac del Toro</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gewinnt die Deutschland-Tour 2026.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub239" style="textCenter" region="bottom" begin="00:14:39.320" end="00:14:42.200">
+        <tt:span style="textWhite">Der Zweite Louis Barre</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">53 Sekunden dahinter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub240" style="textCenter" region="bottom" begin="00:14:42.280" end="00:14:44.240">
+        <tt:span style="textWhite">Dritter wird Marc Hirschi.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub241" style="textCenter" region="bottom" begin="00:14:44.320" end="00:14:47.840">
+        <tt:span style="textWhite">Bester Deutscher:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Maximilian Schachmann auf Rang neun.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub242" style="textCenter" region="bottom" begin="00:14:50.040" end="00:14:53.680">
+        <tt:span style="textWhite">Die Wettervorhersage für morgen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Montag, den 24. August:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub243" style="textCenter" region="bottom" begin="00:14:55.240" end="00:14:57.600">
+        <tt:span style="textWhite">Hoher Luftdruck</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sorgt für Sonnenschein</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub244" style="textCenter" region="bottom" begin="00:14:57.680" end="00:15:01.000">
+        <tt:span style="textWhite">und mit warmer Luft</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aus Süden steigt die Temperatur.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub245" style="textCenter" region="bottom" begin="00:15:01.080" end="00:15:04.400">
+        <tt:span style="textWhite">Heute Nacht ist es meist klar,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Norden wolkiger.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub246" style="textCenter" region="bottom" begin="00:15:04.480" end="00:15:08.080">
+        <tt:span style="textWhite">Von der Ostsee bis nach Brandenburg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gibt's ein paar Schauer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub247" style="textCenter" region="bottom" begin="00:15:08.200" end="00:15:11.480">
+        <tt:span style="textWhite">Stellenweise bildet sich Nebel,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">v.a. in Gewässernähe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub248" style="textCenter" region="bottom" begin="00:15:11.560" end="00:15:15.080">
+        <tt:span style="textWhite">Am Tag oft sonnig, im Norden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und Osten zeitweise Wolken,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub249" style="textCenter" region="bottom" begin="00:15:15.160" end="00:15:17.280">
+        <tt:span style="textWhite">in Vorpommern einzelne Schauer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub250" style="textCenter" region="bottom" begin="00:15:30.320" end="00:15:33.920">
+        <tt:span style="textWhite">Dienstag von Südwesten unbeständiger</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit Schauern und Gewittern,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub251" style="textCenter" region="bottom" begin="00:15:34.000" end="00:15:35.760">
+        <tt:span style="textWhite">im Norden und Osten sonnig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub252" style="textCenter" region="bottom" begin="00:15:35.840" end="00:15:39.200">
+        <tt:span style="textWhite">Ähnlich in den folgenden Tagen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">an der Ostsee windig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub253" style="textCenter" region="bottom" begin="00:15:43.760" end="00:15:46.520">
+        <tt:span style="textWhite">Die tagesthemen gibt es um 22.45 Uhr.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub254" style="textCenter" region="bottom" begin="00:15:46.600" end="00:15:49.600">
+        <tt:span style="textWhite">Jörg Schönenborn</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">fragt Außenminister Wadephul,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub255" style="textCenter" region="bottom" begin="00:15:49.680" end="00:15:53.640">
+        <tt:span style="textWhite">wie die Ukraine mehr Patriot-</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Flugabwehrraketen bekommen könnte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub256" style="textCenter" region="bottom" begin="00:15:53.720" end="00:15:54.880">
+        <tt:span style="textWhite">Und:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub257" style="textCenter" region="bottom" begin="00:15:54.960" end="00:15:56.280">
+        <tt:span style="textWhite">All American Girls -</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub258" style="textCenter" region="bottom" begin="00:15:56.360" end="00:16:01.240">
+        <tt:span style="textWhite">die USA haben nach Jahrzehnten wieder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine Baseball-Profiliga für Frauen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub259" style="textCenter" region="bottom" begin="00:16:01.360" end="00:16:04.240">
+        <tt:span style="textWhite">Ich wünsche Ihnen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">noch einen schönen Abend.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub260" style="textCenter" region="bottom" begin="00:16:07.360" end="00:16:09.720">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>

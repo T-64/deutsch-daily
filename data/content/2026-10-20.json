@@ -1,0 +1,266 @@
+{
+  "date": "2026-10-20",
+  "slug": "2026-10-20",
+  "source": "einfach",
+  "source_label": "tagesschau · Einfache Sprache",
+  "level": "A2–B1",
+  "content_kind": "reading",
+  "adaptation": "根据官方新闻整理的简易德语短读，非节目逐字稿；中文译文与学习提示由 AI 生成。",
+  "source_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1478.html",
+  "source_text_sha256": "94a2f0f3655e56600d454cb33bd1354598de502ee88846cf308aeb00501c2957",
+  "generated_at": "2026-10-21T01:46:44.679481+02:00",
+  "generation_model": "glm-5.3",
+  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1478.html",
+  "embed_url": "",
+  "news": [
+    {
+      "title": "Treffen für Investoren in Berlin",
+      "title_zh": "柏林投资者会议",
+      "vocab": [
+        {
+          "lemma": "das Treffen, -",
+          "key": "treffen",
+          "forms": [
+            "Treffen"
+          ],
+          "pos": "Substantiv",
+          "zh": "会面、聚会",
+          "example_de": "In Berlin gab es ein großes Treffen von der Wirtschaft.",
+          "example_zh": "柏林举行了一次大型经济会议。"
+        },
+        {
+          "lemma": "die Wirtschaft (经济，无复数)",
+          "key": "wirtschaft",
+          "forms": [
+            "Wirtschaft"
+          ],
+          "pos": "Substantiv",
+          "zh": "经济",
+          "example_de": "In Berlin gab es ein großes Treffen von der Wirtschaft.",
+          "example_zh": "柏林举行了一次大型经济会议。"
+        },
+        {
+          "lemma": "einladen",
+          "key": "einladen",
+          "forms": [
+            "eingeladen"
+          ],
+          "pos": "Verb",
+          "zh": "邀请",
+          "example_de": "Die Bundesregierung hat Investoren aus der ganzen Welt eingeladen.",
+          "example_zh": "联邦政府邀请了来自世界各地的投资者。"
+        },
+        {
+          "lemma": "investieren",
+          "key": "investieren",
+          "forms": [
+            "investieren"
+          ],
+          "pos": "Verb",
+          "zh": "投资",
+          "example_de": "Investoren wollen viele Milliarden Euro in Deutschland investieren.",
+          "example_zh": "投资者想在德国投资数十亿欧元。"
+        },
+        {
+          "lemma": "der Bundeskanzler, -",
+          "key": "bundeskanzler",
+          "forms": [
+            "Bundeskanzler"
+          ],
+          "pos": "Substantiv",
+          "zh": "联邦总理",
+          "example_de": "Der Bundeskanzler sagt: Investoren sind gut für die Wirtschaft.",
+          "example_zh": "联邦总理说：投资者对经济有好处。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "现在完成时（Perfekt）",
+          "summary": "\"hat ... eingeladen\" 用助动词 haben 加过去分词，表示已完成的动作。",
+          "example_de": "Die Bundesregierung hat Investoren aus der ganzen Welt eingeladen.",
+          "example_zh": "联邦政府邀请了来自世界各地的投资者。"
+        }
+      ],
+      "paragraphs": [
+        "In Berlin gab es ein großes Treffen von der Wirtschaft.",
+        "Die Bundesregierung hat Investoren aus der ganzen Welt eingeladen.",
+        "Investoren wollen viele Milliarden Euro in Deutschland investieren.",
+        "Der Bundeskanzler sagt: Investoren sind gut für die Wirtschaft."
+      ],
+      "translations": [
+        "柏林举行了一次大型经济会议。",
+        "联邦政府邀请了来自世界各地的投资者。",
+        "投资者想在德国投资数十亿欧元。",
+        "联邦总理说：投资者对经济有好处。"
+      ],
+      "background": ""
+    },
+    {
+      "title": "EU will mehr Rechte für Reisende",
+      "title_zh": "欧盟想给旅客更多权利",
+      "vocab": [
+        {
+          "lemma": "der Reisende, -n",
+          "key": "reisende",
+          "forms": [
+            "Reisende"
+          ],
+          "pos": "Substantiv",
+          "zh": "旅客",
+          "example_de": "Wenn Bus, Bahn oder Flugzeug zu spät kommen, haben Reisende Rechte.",
+          "example_zh": "当巴士、火车或飞机迟到时，旅客有相应的权利。"
+        },
+        {
+          "lemma": "das Recht, -e",
+          "key": "recht",
+          "forms": [
+            "Rechte"
+          ],
+          "pos": "Substantiv",
+          "zh": "权利",
+          "example_de": "Wenn Bus, Bahn oder Flugzeug zu spät kommen, haben Reisende Rechte.",
+          "example_zh": "当巴士、火车或飞机迟到时，旅客有相应的权利。"
+        },
+        {
+          "lemma": "zurückbekommen",
+          "key": "zurueckbekommen",
+          "forms": [
+            "bekommen",
+            "zurück"
+          ],
+          "pos": "Verb",
+          "zh": "取回、收回",
+          "example_de": "Sie bekommen zum Beispiel Geld für das Ticket zurück.",
+          "example_zh": "例如他们可以拿回票钱。"
+        },
+        {
+          "lemma": "schwierig",
+          "key": "schwierig",
+          "forms": [
+            "schwierig"
+          ],
+          "pos": "Adjektiv",
+          "zh": "困难的",
+          "example_de": "Bislang ist es oft schwierig, an das Geld zu kommen.",
+          "example_zh": "到目前为止，拿到这笔钱往往很困难。"
+        },
+        {
+          "lemma": "der Antrag, Anträge",
+          "key": "antrag",
+          "forms": [
+            "Antrag"
+          ],
+          "pos": "Substantiv",
+          "zh": "申请",
+          "example_de": "Die EU will jetzt einen einfachen Antrag für alle Länder.",
+          "example_zh": "欧盟现在想要一个适用于所有国家的简单申请。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "带 zu 的不定式作主语",
+          "summary": "\"ist es oft schwierig, an das Geld zu kommen\" 中，\"zu + 动词\" 结构作真正的主语。",
+          "example_de": "Bislang ist es oft schwierig, an das Geld zu kommen.",
+          "example_zh": "到目前为止，拿到这笔钱往往很困难。"
+        }
+      ],
+      "paragraphs": [
+        "Wenn Bus, Bahn oder Flugzeug zu spät kommen, haben Reisende Rechte.",
+        "Sie bekommen zum Beispiel Geld für das Ticket zurück.",
+        "Bislang ist es oft schwierig, an das Geld zu kommen.",
+        "Die EU will jetzt einen einfachen Antrag für alle Länder."
+      ],
+      "translations": [
+        "当巴士、火车或飞机迟到时，旅客有相应的权利。",
+        "例如他们可以拿回票钱。",
+        "到目前为止，拿到这笔钱往往很困难。",
+        "欧盟现在想要一个适用于所有国家的简单申请。"
+      ],
+      "background": ""
+    },
+    {
+      "title": "Gemeinsame Spaziergänge gegen Einsamkeit",
+      "title_zh": "共同散步对抗孤独",
+      "vocab": [
+        {
+          "lemma": "sich fühlen",
+          "key": "fuehlen",
+          "forms": [
+            "fühlen"
+          ],
+          "pos": "Verb",
+          "zh": "感觉",
+          "example_de": "In Deutschland fühlen sich viele junge Menschen einsam.",
+          "example_zh": "在德国，很多年轻人感到孤独。"
+        },
+        {
+          "lemma": "einsam",
+          "key": "einsam",
+          "forms": [
+            "einsam"
+          ],
+          "pos": "Adjektiv",
+          "zh": "孤独的",
+          "example_de": "In Deutschland fühlen sich viele junge Menschen einsam.",
+          "example_zh": "在德国，很多年轻人感到孤独。"
+        },
+        {
+          "lemma": "der Spaziergang, Spaziergänge",
+          "key": "spaziergang",
+          "forms": [
+            "Spaziergänge"
+          ],
+          "pos": "Substantiv",
+          "zh": "散步",
+          "example_de": "In Leipzig gibt es gemeinsame Spaziergänge für einsame Menschen.",
+          "example_zh": "在莱比锡有为孤独的人举办的共同散步活动。"
+        },
+        {
+          "lemma": "kennenlernen",
+          "key": "kennenlernen",
+          "forms": [
+            "lernen",
+            "kennen"
+          ],
+          "pos": "Verb",
+          "zh": "结识、认识",
+          "example_de": "Die Menschen lernen sich beim Spazieren kennen.",
+          "example_zh": "人们在散步时互相认识。"
+        },
+        {
+          "lemma": "der Freund, -e",
+          "key": "freund",
+          "forms": [
+            "Freunde"
+          ],
+          "pos": "Substantiv",
+          "zh": "朋友",
+          "example_de": "Manche finden hier neue Freunde oder einen Partner.",
+          "example_zh": "有些人在这里找到了新朋友或伴侣。"
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "反身动词",
+          "summary": "\"fühlen sich ... einsam\" 是反身动词，sich 随主语变化，表示自我感觉。",
+          "example_de": "In Deutschland fühlen sich viele junge Menschen einsam.",
+          "example_zh": "在德国，很多年轻人感到孤独。"
+        }
+      ],
+      "paragraphs": [
+        "In Deutschland fühlen sich viele junge Menschen einsam.",
+        "In Leipzig gibt es gemeinsame Spaziergänge für einsame Menschen.",
+        "Die Menschen lernen sich beim Spazieren kennen.",
+        "Manche finden hier neue Freunde oder einen Partner."
+      ],
+      "translations": [
+        "在德国，很多年轻人感到孤独。",
+        "在莱比锡有为孤独的人举办的共同散步活动。",
+        "人们在散步时互相认识。",
+        "有些人在这里找到了新朋友或伴侣。"
+      ],
+      "background": ""
+    }
+  ],
+  "editorial_review": "德中句对、新闻事实、词形和语法例句已对照来源检查。"
+}

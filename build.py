@@ -524,8 +524,9 @@ def render(doc):
     meta = load_json(META / f"{slug}.json")
     if meta is None and source == "einfach" and slug != date:
         meta = load_json(META / f"{date}.json")
-    cues = load_transcript(slug)
-    if not cues and source == "einfach" and slug != date:
+    reading = doc.get("content_kind") == "reading"
+    cues = [] if reading else load_transcript(slug)
+    if not reading and not cues and source == "einfach" and slug != date:
         cues = load_transcript(date)
     gloss, form_to_key, phrases = word_gloss_map(doc, load_cache())
     news_html = []
@@ -569,11 +570,15 @@ def render(doc):
         "date": date,
         "slug": slug,
         "source": source,
-        "source_label": info["label"],
+        "source_label": doc.get("source_label") or info["label"],
         "source_short": info["short"],
+        "content_kind": doc.get("content_kind") or "video",
+        "level": doc.get("level") or "A2–B1",
+        "adaptation": doc.get("adaptation") or "",
+        "source_url": doc.get("source_url") or doc.get("video_page") or "",
         "video_page": doc.get("video_page") or (meta or {}).get("video_page") or "",
         "embed_url": doc.get("embed_url") or "",
-        "mp4_url": derive_mp4_url(meta),
+        "mp4_url": "" if reading else derive_mp4_url(meta),
         "duration": duration,
         "news": news_html,
         "gloss": gloss,
@@ -590,17 +595,22 @@ def render(doc):
 def build(slug=None, push=False):
     SITE.mkdir(parents=True, exist_ok=True)
     if slug:
+        if parse_slug(slug)[1] != "einfach":
+            raise SystemExit("20:00 edition is retired; only einfach is published")
         if slug in FROZEN_DATES:
             raise SystemExit(f"refusing to rebuild frozen page {slug}")
         slugs = [slug]
     else:
-        slugs = [s for s in content_slugs() if s not in FROZEN_DATES]
+        slugs = [s for s in content_slugs() if s not in FROZEN_DATES and parse_slug(s)[1] == "einfach"]
     for s in slugs:
         doc = json.loads(content_file(s).read_text())
         html = render(doc)
         out_slug = doc_slug(doc, s)
         (SITE / f"{out_slug}.html").write_text(html)
         print(f"[ok] {out_slug}.html ({len(html)} bytes)")
+    # Keep difficult-edition source data archived, but remove its public pages.
+    for page in SITE.glob("*-20uhr.html"):
+        page.unlink()
     build_index()
     return slugs
 
@@ -614,6 +624,8 @@ def build_index(all_slugs=None):
         except FileNotFoundError:
             continue
         source = doc.get("source") or detect_source(doc.get("video_page") or "")
+        if source != "einfach":
+            continue
         info = SOURCES.get(source) or SOURCES["einfach"]
         titles = " · ".join(n["title"] for n in doc["news"][:3])
         slug = doc_slug(doc, s)
@@ -634,6 +646,11 @@ def build_index(all_slugs=None):
             "source_short": info["short"],
             "source_label": info["label"],
             "titles": titles,
+            "titles_zh": " · ".join(n.get("title_zh", "") for n in doc["news"][:3]),
+            "news_titles": [n["title"] for n in doc["news"]],
+            "news_titles_zh": [n.get("title_zh", "") for n in doc["news"]],
+            "content_kind": doc.get("content_kind") or "video",
+            "level": doc.get("level") or "A2–B1",
             "count": len(doc["news"]),
             "urls": urls,
         })

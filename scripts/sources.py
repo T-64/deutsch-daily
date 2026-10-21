@@ -8,7 +8,7 @@ SLUG_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})(?:-(.+))?$")
 SOURCES = {
     "einfach": {
         "id": "einfach",
-        "label": "T-64 · tagesschau in einfacher Sprache",
+        "label": "tagesschau · Einfache Sprache",
         "short": "einfacher Sprache",
         "list_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache",
         "base": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/",

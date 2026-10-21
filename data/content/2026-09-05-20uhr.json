@@ -1,0 +1,1135 @@
+{
+  "date": "2026-09-05",
+  "slug": "2026-09-05-20uhr",
+  "source": "20uhr",
+  "video_page": "https://www.tagesschau.de/tagesschau_20_uhr/video-1643430.html",
+  "embed_url": "https://www.tagesschau.de/tagesschau_20_uhr/video-1643430~player.html",
+  "news": [
+    {
+      "title": "Cyberangriff auf Berliner Landesverwaltung",
+      "title_zh": "柏林州政府遭网络攻击 黑客在暗网公布敏感数据",
+      "paragraphs": [
+        "Nach dem Cyberangriff auf die Berliner Landesverwaltung sind die Folgen nicht absehbar. Hacker hatten gestern sensible Daten im Darknet veröffentlicht, weil der Senat kein Lösegeld zahlen wollte. Das Bundesamt für Sicherheit in der Informationstechnik warnte vor einer erhöhten Bedrohungslage. Die Behörde unterstützt bei den Ermittlungen, ebenso das BKA und das Bundesamt für Verfassungsschutz.",
+        "Kaum lief das Ultimatum ab, erschien die Nachricht von der kriminellen Hackergruppe Rhysida: 5,26 Terrabyte, 1,4 Millionen Dateien seien nun im Netz, behauptet sie. Seit einer Woche lief der Erpressungsversuch: 2 Millionen Euro oder Veröffentlichung. Die Reaktion: Das Land Berlin wird sich nicht erpressen lassen. Nun sind sie im Darknet: Daten der Bau-, Verkehrs- und Umweltverwaltung, Telefonnummern, Scans von Ausweisen, Mails. Informationen über kritische Infrastruktur.",
+        "In Berlin - Versuche der Schadensbegrenzung. Wenn sich herausstellt, dass Bürger und Beschäftigte betroffen sind, werden sie schnellstmöglich informiert. Womöglich merkt manch einer ziemlich schnell, dass seine Daten abgegriffen wurden. Ganz wichtig ist, dass man in der nächsten Zeit achtsam ist, wer einen kontaktiert. Ob komische Menschen anrufen, komische Mails geschickt werden, komische Anfragen kommen.",
+        "Es gibt heftige Kritik an Berlin: Ausgerechnet bei der IT-Sicherheit wurde gespart, Sicherheitsstandards wurden offenbar missachtet. Ich bin sprachlos, dass man es schafft, geheimschutzrelevante Daten lapidar zu speichern. Und nicht abgeschottet abzusichern, so, wie es die Vorgaben sind. Man hat Baupläne von Justizvollzugsanstalten im Netz. Man hat sogar die für einen Verteidigungsfall relevanten kritischen Infrastrukturen veröffentlicht. Terroristen werden sich freuen. Berlin muss sein Sicherheitssystem im großen Stil verändern, so der Chaos Computer Club."
+      ],
+      "translations": [
+        "柏林州政府遭网络攻击后，后果仍无法预料。由于参议院拒绝支付赎金，黑客昨天已在暗网公布了敏感数据。联邦信息技术安全局警告威胁等级升高。该局正协助调查，联邦刑警局和联邦宪法保卫局也参与其中。",
+        "最后通牒刚一到期，犯罪黑客组织 Rhysida 的消息就来了：他们声称，5.26 TB、140 万份文件现已挂到网上。这场勒索已持续一周：要么 200 万欧元，要么公开数据。柏林州的回应是：柏林州不会被勒索。现在这些数据已在暗网：建筑、交通和环保部门的数据，电话号码、证件扫描件、邮件。还有关于关键基础设施的信息。",
+        "柏林正在设法控制损失。一旦查明有市民和公务人员受影响，将尽快通知他们本人。也许有些人很快就会发现，自己的数据被人窃取了。接下来这段时间非常重要的是，留心是谁来联系你。会不会有可疑的人打来电话、发来奇怪的邮件、提出奇怪的要求。",
+        "柏林正遭到猛烈批评：偏偏在 IT 安全面上省钱，安全标准显然被无视。我简直无言以对，涉及机密保护的数据竟被如此漫不经心地存储。也没有按照规范要求隔离开来、加以保护。监狱的建筑图纸已经流到了网上。甚至连国防紧急情况下至关重要的关键基础设施也被公开了。恐怖分子会喜闻乐见。混沌计算机俱乐部说，柏林必须大刀阔斧地改造它的安全体系。"
+      ],
+      "vocab": [
+        {
+          "lemma": "die Landesverwaltung, -en",
+          "key": "landesverwaltung",
+          "forms": ["Landesverwaltung"],
+          "pos": "Substantiv",
+          "zh": "州政府、州行政机关",
+          "example_de": "Nach dem Cyberangriff auf die Berliner Landesverwaltung sind die Folgen nicht absehbar.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "das Lösegeld, -er",
+          "key": "loesegeld",
+          "forms": ["Lösegeld"],
+          "pos": "Substantiv",
+          "zh": "赎金",
+          "example_de": "Hacker hatten gestern sensible Daten im Darknet veröffentlicht, weil der Senat kein Lösegeld zahlen wollte.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Bedrohungslage",
+          "key": "bedrohungslage",
+          "forms": ["Bedrohungslage"],
+          "pos": "Substantiv",
+          "zh": "威胁态势",
+          "example_de": "Das Bundesamt für Sicherheit in der Informationstechnik warnte vor einer erhöhten Bedrohungslage.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "das Ultimatum, Ultimaten",
+          "key": "ultimatum",
+          "forms": ["Ultimatum"],
+          "pos": "Substantiv",
+          "zh": "最后通牒",
+          "example_de": "Kaum lief das Ultimatum ab, erschien die Nachricht von der kriminellen Hackergruppe Rhysida: 5,26 Terrabyte, 1,4 Millionen Dateien seien nun im Netz, behauptet sie.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Schadensbegrenzung, -en",
+          "key": "schadensbegrenzung",
+          "forms": ["Schadensbegrenzung"],
+          "pos": "Substantiv",
+          "zh": "损失控制",
+          "example_de": "In Berlin - Versuche der Schadensbegrenzung.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "achtsam",
+          "key": "achtsam",
+          "forms": ["achtsam"],
+          "pos": "Adjektiv",
+          "zh": "警惕留心的、谨慎的",
+          "example_de": "Ganz wichtig ist, dass man in der nächsten Zeit achtsam ist, wer einen kontaktiert.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "abgreifen",
+          "key": "abgreifen",
+          "forms": ["abgegriffen"],
+          "pos": "Verb",
+          "zh": "窃取、捞取",
+          "example_de": "Womöglich merkt manch einer ziemlich schnell, dass seine Daten abgegriffen wurden.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "geheimschutzrelevant",
+          "key": "geheimschutzrelevant",
+          "forms": ["geheimschutzrelevante"],
+          "pos": "Adjektiv",
+          "zh": "涉及机密保护的",
+          "example_de": "Ich bin sprachlos, dass man es schafft, geheimschutzrelevante Daten lapidar zu speichern.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Justizvollzugsanstalt, -en",
+          "key": "justizvollzugsanstalt",
+          "forms": ["Justizvollzugsanstalten"],
+          "pos": "Substantiv",
+          "zh": "监狱、刑罚执行机构",
+          "example_de": "Man hat Baupläne von Justizvollzugsanstalten im Netz.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "im großen Stil",
+          "key": "im-grossen-stil",
+          "forms": ["im großen Stil"],
+          "pos": "Redewendung",
+          "zh": "大规模地、大刀阔斧地",
+          "example_de": "Berlin muss sein Sicherheitssystem im großen Stil verändern, so der Chaos Computer Club.",
+          "example_zh": ""
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "Konjunktiv I 间接引语",
+          "summary": "新闻转述他人说法时用第一虚拟式：sein 的第三人称复数形式是 seien。本句转述黑客组织的声明。",
+          "example_de": "5,26 Terrabyte, 1,4 Millionen Dateien seien nun im Netz, behauptet sie.",
+          "example_zh": "该组织声称，5.26 TB、140 万份文件现已上网。"
+        },
+        {
+          "title": "kaum ... erschien（kaum + 倒装）",
+          "summary": "kaum（刚一……就）占句首时动词紧随其后，表示两件事几乎同时发生。",
+          "example_de": "Kaum lief das Ultimatum ab, erschien die Nachricht von der kriminellen Hackergruppe Rhysida: 5,26 Terrabyte, 1,4 Millionen Dateien seien nun im Netz, behauptet sie.",
+          "example_zh": "最后通牒刚一到期，犯罪黑客组织 Rhysida 的消息就来了。"
+        }
+      ],
+      "background": "背景：攻击柏林州政府的是勒索软件组织 Rhysida。柏林拒绝支付约 200 万欧元赎金后，该组织在暗网分批公开窃取的数据，涉及建筑、交通、环保部门和市民个人信息，联邦信息安全局（BSI）与联邦刑警局均已介入。引语来自州政府官员与反对党政治家；Chaos Computer Club（混沌计算机俱乐部）是欧洲最著名的黑客组织，常批评政府 IT 安全漏洞。"
+    },
+    {
+      "title": "Fahndung nach Stromnetz-Saboteur",
+      "title_zh": "电网破坏案 警方锁定一名嫌疑人",
+      "paragraphs": [
+        "Die Polizei sucht nach einem Mann, der für Sabotage-Versuche gegen das Stromnetz verantwortlich sein soll. Er hatte in zwei Bekennerbriefen seinen richtigen Absender angegeben und geschrieben, er wolle gegen fossile Energieträger protestieren. Nach den Anschlagsversuchen in Brandenburg und NRW wurden auch in Sachsen Sprengvorrichtungen in der Nähe von Umspannwerken entdeckt.",
+        "Fragen wir nach bei Michael Götschenberg in Berlin. Gibt es einen Zusammenhang zwischen den Sabotagevorfällen der vergangenen Tage? Es gibt nach meinen Informationen für die Ermittler keinen Zweifel, dass die Tatorte miteinander in Verbindung stehen. Sie werden alle in beiden Bekennerschreiben genannt. Ein Mann (48) aus Nordrhein-Westfalen steht im Fokus der Ermittlungen. Die Schreiben enthalten sehr viel exklusives Täterwissen. In seiner Wohnung wurden gestern Sprengstoffspuren gefunden. Man kann aber noch nicht mit letzter Sicherheit sagen, ob noch weitere Personen beteiligt gewesen sein könnten.",
+        "Wie gefährlich sind diese Sabotageaktionen? Der Plan, durch Kurzschlüsse die Stromversorgung regional zum Erliegen zu bringen, dieser Plan ist nicht aufgegangen. Das ist ein neuer Modus Operandi, den die Ermittler so noch nicht kannten. In der Vergangenheit hatten wir Brandanschläge auf die Stromversorgung immer wieder gesehen. Sie wurden mutmaßlich verübt durch linksextremistische Gruppen. Dieses Sicherheitsrisiko ist seit vielen Jahren bekannt. Dementsprechend ist die Diskussion erneut in Gang gekommen, inwieweit das Stromnetz besser geschützt werden kann und muss. Klar ist aber auch, dass sich das Risiko nicht gänzlich wird ausschließen lassen. Vielen Dank, Michael Götschenberg in Berlin."
+      ],
+      "translations": [
+        "警方正在搜寻一名男子，他据称应对针对电网的一系列破坏企图负责。他在两封认罪声明信里写下了真实署名，并写道他想抗议化石能源。继勃兰登堡州和北威州的袭击未遂之后，萨克森州也在变电站附近发现了爆炸装置。",
+        "我们来连线柏林的 Michael Götschenberg。过去这几天的破坏事件之间有关联吗？据我了解，调查人员毫不怀疑这些作案地点相互关联。它们在两封认罪声明信里全都被提到。一名来自北威州的 48 岁男子是调查焦点。这些信件包含大量只有作案者才掌握的内情。昨天在他的住所里发现了炸药痕迹。但目前还无法完全确定，是否曾有其他人员参与。",
+        "这些破坏行动有多危险？想通过短路让区域供电陷入瘫痪——这个计划没有得逞。这是一种调查人员此前从未见过的作案手法。过去我们一再看到针对供电设施的纵火袭击。据推测是左翼极端团体所为。这一安全风险多年来人尽皆知。因此，电网应该且能够得到怎样的更好保护，讨论再度兴起。但同样清楚的是，这个风险无法完全排除。谢谢柏林的 Michael Götschenberg。"
+      ],
+      "vocab": [
+        {
+          "lemma": "die Sabotage, -n",
+          "key": "sabotage",
+          "forms": ["Sabotage-Versuche", "Sabotageaktionen", "Sabotagevorfällen"],
+          "pos": "Substantiv",
+          "zh": "破坏（行动）",
+          "example_de": "Die Polizei sucht nach einem Mann, der für Sabotage-Versuche gegen das Stromnetz verantwortlich sein soll.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Bekennerbrief, -e",
+          "key": "bekennerbrief",
+          "forms": ["Bekennerbriefen", "Bekennerschreiben"],
+          "pos": "Substantiv",
+          "zh": "认罪声明信、宣称负责的信",
+          "example_de": "Er hatte in zwei Bekennerbriefen seinen richtigen Absender angegeben und geschrieben, er wolle gegen fossile Energieträger protestieren.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der fossile Energieträger",
+          "key": "fossiler-energietraeger",
+          "forms": ["fossile Energieträger"],
+          "pos": "Substantiv",
+          "zh": "化石能源",
+          "example_de": "Er hatte in zwei Bekennerbriefen seinen richtigen Absender angegeben und geschrieben, er wolle gegen fossile Energieträger protestieren.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Sprengvorrichtung, -en",
+          "key": "sprengvorrichtung",
+          "forms": ["Sprengvorrichtungen"],
+          "pos": "Substantiv",
+          "zh": "爆炸装置",
+          "example_de": "Nach den Anschlagsversuchen in Brandenburg und NRW wurden auch in Sachsen Sprengvorrichtungen in der Nähe von Umspannwerken entdeckt.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "das Umspannwerk, -e",
+          "key": "umspannwerk",
+          "forms": ["Umspannwerken"],
+          "pos": "Substantiv",
+          "zh": "变电站",
+          "example_de": "Nach den Anschlagsversuchen in Brandenburg und NRW wurden auch in Sachsen Sprengvorrichtungen in der Nähe von Umspannwerken entdeckt.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "im Fokus der Ermittlungen stehen",
+          "key": "im-fokus-stehen",
+          "forms": ["steht im Fokus der Ermittlungen"],
+          "pos": "Redewendung",
+          "zh": "是调查的焦点",
+          "example_de": "Ein Mann (48) aus Nordrhein-Westfalen steht im Fokus der Ermittlungen.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Sprengstoffspur, -en",
+          "key": "sprengstoffspur",
+          "forms": ["Sprengstoffspuren"],
+          "pos": "Substantiv",
+          "zh": "炸药痕迹",
+          "example_de": "In seiner Wohnung wurden gestern Sprengstoffspuren gefunden.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "zum Erliegen bringen",
+          "key": "zum-erliegen-bringen",
+          "forms": ["zum Erliegen zu bringen"],
+          "pos": "Redewendung",
+          "zh": "使……陷入停顿、使瘫痪",
+          "example_de": "Der Plan, durch Kurzschlüsse die Stromversorgung regional zum Erliegen zu bringen, dieser Plan ist nicht aufgegangen.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Modus Operandi",
+          "key": "modus-operandi",
+          "forms": ["Modus Operandi"],
+          "pos": "Substantiv",
+          "zh": "作案手法（拉丁语借词）",
+          "example_de": "Das ist ein neuer Modus Operandi, den die Ermittler so noch nicht kannten.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "verüben",
+          "key": "verueben",
+          "forms": ["verübt"],
+          "pos": "Verb",
+          "zh": "实施、干（罪行）",
+          "example_de": "Sie wurden mutmaßlich verübt durch linksextremistische Gruppen.",
+          "example_zh": ""
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "sollen（传闻转述）",
+          "summary": "情态动词 sollen 在新闻中表示“据称、据说”，转述尚未证实的说法：verantwortlich sein soll = 据称应负责。",
+          "example_de": "Die Polizei sucht nach einem Mann, der für Sabotage-Versuche gegen das Stromnetz verantwortlich sein soll.",
+          "example_zh": "警方正在搜寻一名据称应对电网破坏企图负责的男子。"
+        },
+        {
+          "title": "in Gang kommen",
+          "summary": "固定搭配“启动、开展起来”：die Diskussion ist erneut in Gang gekommen = 讨论再度兴起。",
+          "example_de": "Dementsprechend ist die Diskussion erneut in Gang gekommen, inwieweit das Stromnetz besser geschützt werden kann und muss.",
+          "example_zh": "电网应该且能够得到怎样的更好保护，讨论再度兴起。"
+        }
+      ],
+      "background": "背景：德国多地电网设施接连遭到人为破坏，嫌疑人在认罪信中留下真实姓名地址，动机据称是抗议化石能源。本段是演播室与驻柏林记者 Michael Götschenberg 的连线问答。Modus Operandi 为拉丁语借词，新闻和司法语境常用。"
+    },
+    {
+      "title": "UN stimmt für neue Weltkarte",
+      "title_zh": "联合国投票决定换用新的世界地图",
+      "paragraphs": [
+        "Die UN-Generalversammlung hat für eine neue Darstellung der Weltkarte gestimmt. Bisher wurde die \"Mercator-Projektion\" verwendet. Sie stammt aus dem 16. Jahrhundert. Künftig sollen Weltkarten stärker die Größenverhältnisse zeigen. Afrika etwa wird dann präziser und größer dargestellt. Gegen diese Änderung stimmten nur die USA."
+      ],
+      "translations": [
+        "联合国大会投票决定采用新的世界地图呈现方式。此前使用的一直是“墨卡托投影”。它诞生于 16 世纪。今后世界地图将更加突出真实的面积比例。比如非洲届时会被呈现得更精确、也更大。对这一变更投反对票的只有美国。"
+      ],
+      "vocab": [
+        {
+          "lemma": "die UN-Generalversammlung",
+          "key": "un-generalversammlung",
+          "forms": ["UN-Generalversammlung"],
+          "pos": "Substantiv",
+          "zh": "联合国大会",
+          "example_de": "Die UN-Generalversammlung hat für eine neue Darstellung der Weltkarte gestimmt.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Darstellung, -en",
+          "key": "darstellung",
+          "forms": ["Darstellung", "dargestellt"],
+          "pos": "Substantiv",
+          "zh": "呈现、表示方式",
+          "example_de": "Die UN-Generalversammlung hat für eine neue Darstellung der Weltkarte gestimmt.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Projektion, -en",
+          "key": "projektion",
+          "forms": ["Mercator-Projektion"],
+          "pos": "Substantiv",
+          "zh": "投影、投影法",
+          "example_de": "Bisher wurde die \"Mercator-Projektion\" verwendet.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Größenverhältnisse",
+          "key": "groessenverhaeltnisse",
+          "forms": ["Größenverhältnisse"],
+          "pos": "Substantiv",
+          "zh": "大小比例、面积比例",
+          "example_de": "Künftig sollen Weltkarten stärker die Größenverhältnisse zeigen.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "gegen etwas stimmen",
+          "key": "gegen-stimmen",
+          "forms": ["stimmten"],
+          "pos": "Redewendung",
+          "zh": "投票反对某事",
+          "example_de": "Gegen diese Änderung stimmten nur die USA.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "präzise",
+          "key": "praezise",
+          "forms": ["präziser"],
+          "pos": "Adjektiv",
+          "zh": "精确的",
+          "example_de": "Afrika etwa wird dann präziser und größer dargestellt.",
+          "example_zh": ""
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "künftig sollen ... zeigen",
+          "summary": "sollen 表计划或要求：“今后应更突出面积比例”。副词 künftig（今后）提在句首加强规划语气。",
+          "example_de": "Künftig sollen Weltkarten stärker die Größenverhältnisse zeigen.",
+          "example_zh": "今后世界地图应更加突出真实的面积比例。"
+        }
+      ],
+      "background": "背景：16 世纪佛兰德地图学家墨卡托（Mercator）发明的投影法便于航海，但严重夸大高纬度地区面积——格陵兰看起来与非洲相当，实际非洲面积约是它的 14 倍。联合国大会此次决定改用更忠实面积比例的地图，仅美国投了反对票。"
+    },
+    {
+      "title": "US-Vermittlung in Moskau",
+      "title_zh": "美国特使赴莫斯科斡旋乌克兰战争",
+      "paragraphs": [
+        "Die USA versuchen erneut, im Krieg zwischen der Ukraine und Russland zu vermitteln. Dafür reisten die Sondergesandten Kushner und Witkoff nach Moskau. In diesen Minuten legen sie ihren Plan zur Beendigung des vier Jahre andauernden Krieges Russlands Präsident Putin vor. Morgen reisen die Unterhändler in die Ukraine weiter."
+      ],
+      "translations": [
+        "美国再次尝试在俄乌战争中斡旋。为此，特使 Kushner 和 Witkoff 前往莫斯科。就在此刻，他们正向俄罗斯总统普京提交结束这场已持续四年的战争的计划。明天谈判代表们将接着前往乌克兰。"
+      ],
+      "vocab": [
+        {
+          "lemma": "vermitteln",
+          "key": "vermitteln",
+          "forms": ["vermitteln"],
+          "pos": "Verb",
+          "zh": "斡旋、调解",
+          "example_de": "Die USA versuchen erneut, im Krieg zwischen der Ukraine und Russland zu vermitteln.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Sondergesandte, -n",
+          "key": "sondergesandte",
+          "forms": ["Sondergesandten"],
+          "pos": "Substantiv",
+          "zh": "特使",
+          "example_de": "Dafür reisten die Sondergesandten Kushner und Witkoff nach Moskau.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Beendigung, -en",
+          "key": "beendigung",
+          "forms": ["Beendigung"],
+          "pos": "Substantiv",
+          "zh": "结束、终止",
+          "example_de": "In diesen Minuten legen sie ihren Plan zur Beendigung des vier Jahre andauernden Krieges Russlands Präsident Putin vor.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "andauern",
+          "key": "andauern",
+          "forms": ["andauernden"],
+          "pos": "Verb",
+          "zh": "持续、延续",
+          "example_de": "In diesen Minuten legen sie ihren Plan zur Beendigung des vier Jahre andauernden Krieges Russlands Präsident Putin vor.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Unterhändler, -",
+          "key": "unterhaendler",
+          "forms": ["Unterhändler"],
+          "pos": "Substantiv",
+          "zh": "谈判代表",
+          "example_de": "Morgen reisen die Unterhändler in die Ukraine weiter.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "vorlegen",
+          "key": "vorlegen",
+          "forms": ["legen ... vor"],
+          "pos": "Verb",
+          "zh": "提交、呈递（方案）",
+          "example_de": "In diesen Minuten legen sie ihren Plan zur Beendigung des vier Jahre andauernden Krieges Russlands Präsident Putin vor.",
+          "example_zh": ""
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "zur Beendigung（zu + 名词化）",
+          "summary": "名词化介词短语 zur Beendigung des Krieges（以结束……）替代目的从句，新闻德语高频。",
+          "example_de": "In diesen Minuten legen sie ihren Plan zur Beendigung des vier Jahre andauernden Krieges Russlands Präsident Putin vor.",
+          "example_zh": "他们正向普京提交结束这场持续四年的战争的计划。"
+        }
+      ],
+      "background": "背景：美国特使 Steve Witkoff 与 Jared Kushner 此行意在向普京递交停火方案。俄罗斯全面入侵乌克兰自 2022 年 2 月起，至 2026 年已进入第五个年头，故称“已持续四年的战争”。"
+    },
+    {
+      "title": "Getreide-Exporte stocken bei Odessa",
+      "title_zh": "俄袭敖德萨 乌克兰粮食出口受阻",
+      "paragraphs": [
+        "Die Ukraine gilt als die Kornkammer Europas. Verschifft wird das Getreide über Odessa. Die Hafenstadt ist aber wie viele weitere Großstädte im Land immer wieder Ziel massiver russischer Luftangriffe. Damit macht Russland den Getreideexport nahezu unmöglich, der Schiffsverkehr in Odessa ist fast zum Erliegen gekommen.",
+        "Die Ernte ist gut in diesem Jahr, doch für Landwirt Jewhen wird gerade das zum Problem. Rund 600 Tonnen Weizen lagern auf seinem Hof im Süden der Region Odessa. Dazu Gerste, Erbsen und Sonnenblumenkerne. Verkaufen will er nur das Nötigste. Wir verkaufen nur einen kleinen Teil, um Pacht und Diesel zu bezahlen, damit wir arbeiten können. Wir können nicht mehr verkaufen, weil es keine guten Preise gibt.",
+        "Die Preise für seine Ernte seien eingebrochen: Bei Weizen um rund ein Viertel, bei Sonnenblumen sogar um fast 40 Prozent. Der wichtigste Weg auf den Weltmarkt funktioniert kaum noch. Wegen russischer Angriffe auf Schiffe und Hafenanlagen ist der Schiffsverkehr bei Odessa fast zum Erliegen gekommen. Die Reeder, Kapitäne und Besatzungsmitglieder fürchten um ihr Leben. Es geht darum, ob sie überleben werden oder ob sie von russischen Drohnen und Raketen getötet werden.",
+        "Deshalb muss mehr Getreide über die Donauhäfen Ismajil und Reni raus. Doch die können Odessa nicht ersetzen. Niedrige Wasserstände begrenzen zusätzlich die Größe der Frachter. Auch die Donauhäfen stehen fast täglich unter heftigem Beschuss. Vor Ismajil warten Lkw voller Getreide kilometerweit am Straßenrand. Wiktor stehe seit drei Tagen hier, Kollegen von ihm seit Wochen. Früher habe die Abfertigung meist nur einen Tag gedauert. Wir warten darauf, dass wir in den Hafen fahren können und kein Luftalarm mehr ist. Es gibt so viele Alarme, die den Betrieb lahmlegen. Niemand weiß Bescheid. Es geht nur sehr langsam voran. Und die nächste Ernte steht bevor. Im Herbst wird Mais eingebracht. Dann könnten auch die Lagerhallen nicht mehr ausreichen. Während sich bei Landwirten das Getreide stapelt und die Preise fallen, wird es auf dem Weltmarkt teurer."
+      ],
+      "translations": [
+        "乌克兰被视为欧洲的粮仓。粮食经敖德萨港海运出口。但这座港口城市和国内许多大城市一样，一再成为俄军大规模空袭的目标。俄罗斯以此让粮食出口几乎无法进行，敖德萨的航运已濒临停摆。",
+        "今年收成很好，但对农民 Jewhen 来说，这恰恰成了问题。他位于敖德萨州南部的农场上存放着约 600 吨小麦。还有大麦、豌豆和葵花籽。他只想卖掉最必需的那部分。我们只卖一小部分，用来付地租和柴油钱，好让农场能继续运转。再多就卖不动了，因为没有好价钱。",
+        "据他所述，他的收成价格已经崩了：小麦跌了约四分之一，葵花籽甚至跌了近 40%。通往世界市场最重要的这条通道几乎失灵了。由于俄军袭击船只和港口设施，敖德萨的航运已濒临停摆。船东、船长和船员们都在为性命担忧。问题在于：他们能不能活下来，还是会被俄国的无人机和导弹打死。",
+        "因此更多粮食必须经由多瑙河港 Ismajil 和 Reni 运出去。但这两个港口替代不了敖德萨。低水位还额外限制了货船的吨位。多瑙河各港也几乎每天都在遭受猛烈炮击。Ismajil 港外，满载粮食的卡车沿着路边排出去好几公里。据说 Wiktor 在这里已经等了三天，他的同事们已经等了好几周。以前办完装卸手续通常只要一天。我们就在等着能进港，等着空袭警报解除。警报太多了，整个运转都被拖瘫了。谁也说不准情况。一切只能非常缓慢地推进。而下一次收获已经临近。秋天就要收玉米了。到那时连仓库都可能不够用。农民手里粮食越堆越高、价格一路下滑的同时，世界市场上的粮价却在上涨。"
+      ],
+      "vocab": [
+        {
+          "lemma": "die Kornkammer",
+          "key": "kornkammer",
+          "forms": ["Kornkammer"],
+          "pos": "Substantiv",
+          "zh": "粮仓（比喻粮食丰产之地）",
+          "example_de": "Die Ukraine gilt als die Kornkammer Europas.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "verschiffen",
+          "key": "verschiffen",
+          "forms": ["Verschifft"],
+          "pos": "Verb",
+          "zh": "船运、海运发出",
+          "example_de": "Verschifft wird das Getreide über Odessa.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Landwirt, -e",
+          "key": "landwirt",
+          "forms": ["Landwirt", "Landwirten"],
+          "pos": "Substantiv",
+          "zh": "农民、农场主",
+          "example_de": "Die Ernte ist gut in diesem Jahr, doch für Landwirt Jewhen wird gerade das zum Problem.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Pacht, -en",
+          "key": "pacht",
+          "forms": ["Pacht"],
+          "pos": "Substantiv",
+          "zh": "地租、租金",
+          "example_de": "Wir verkaufen nur einen kleinen Teil, um Pacht und Diesel zu bezahlen, damit wir arbeiten können.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "einbrechen (Preise)",
+          "key": "einbrechen",
+          "forms": ["eingebrochen"],
+          "pos": "Verb",
+          "zh": "暴跌、崩溃（价格）",
+          "example_de": "Die Preise für seine Ernte seien eingebrochen: Bei Weizen um rund ein Viertel, bei Sonnenblumen sogar um fast 40 Prozent.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Reeder, -",
+          "key": "reeder",
+          "forms": ["Reeder"],
+          "pos": "Substantiv",
+          "zh": "船东、航运公司主",
+          "example_de": "Die Reeder, Kapitäne und Besatzungsmitglieder fürchten um ihr Leben.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Beschuss",
+          "key": "beschuss",
+          "forms": ["Beschuss"],
+          "pos": "Substantiv",
+          "zh": "炮击、射击",
+          "example_de": "Auch die Donauhäfen stehen fast täglich unter heftigem Beschuss.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Abfertigung, -en",
+          "key": "abfertigung",
+          "forms": ["Abfertigung"],
+          "pos": "Substantiv",
+          "zh": "（货物）通关、装卸办理",
+          "example_de": "Früher habe die Abfertigung meist nur einen Tag gedauert.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "lahmlegen",
+          "key": "lahmlegen",
+          "forms": ["lahmlegen"],
+          "pos": "Verb",
+          "zh": "使瘫痪、使停摆",
+          "example_de": "Es gibt so viele Alarme, die den Betrieb lahmlegen.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "bevorstehen",
+          "key": "bevorstehen",
+          "forms": ["steht bevor"],
+          "pos": "Verb",
+          "zh": "即将来临、就在眼前",
+          "example_de": "Und die nächste Ernte steht bevor.",
+          "example_zh": ""
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "gilt als（被视为）",
+          "summary": "gelten + als + 表语：被视为、公认为。新闻固定句式。",
+          "example_de": "Die Ukraine gilt als die Kornkammer Europas.",
+          "example_zh": "乌克兰被视为欧洲的粮仓。"
+        },
+        {
+          "title": "Konjunktiv I 转述（seien / habe / stehe）",
+          "summary": "影片旁白转述当事人原话时用第一虚拟式：seien eingebrochen、habe gedauert、stehe seit drei Tagen hier，表示“据其所述”。",
+          "example_de": "Wiktor stehe seit drei Tagen hier, Kollegen von ihm seit Wochen.",
+          "example_zh": "据说 Wiktor 在这里已经等了三天，他的同事们已经等了好几周。"
+        }
+      ],
+      "background": "背景：敖德萨是乌克兰最主要的粮食外运港口。俄军持续打击港口与粮船，迫使出口转向多瑙河小港（Ismajil、Reni），但运力有限且同样遭袭。国内粮价崩跌、全球粮价上涨，两端挤压农民。"
+    },
+    {
+      "title": "Weiterer Überlebender in Nepal gefunden",
+      "title_zh": "尼泊尔洪灾十日后又寻获幸存者",
+      "paragraphs": [
+        "Vor zehn Tagen riss eine Sturzflut in Nepal ganze Dörfer mit sich. Noch immer finden Helfer Überlebende. Heute konnten im Grenzgebiet zwischen Nepal und China zwei weitere Menschen in Sicherheit gebracht werden. Ein Mann wurde aus einem verschütteten Tunnel gerettet, eine Frau aus den Trümmern eines zerstörten Hauses. Inzwischen melden die Behörden mindestens 1300 Todesopfer. 5000 Menschen werden noch vermisst."
+      ],
+      "translations": [
+        "十天前，一场山洪在尼泊尔卷走了整座整座的村庄。救援人员仍在不断找到幸存者。今天，在尼泊尔与中国的边境地区，又有两人被转移到了安全地带。一名男子从被掩埋的隧道中获救，一名妇女从被毁房屋的废墟中获救。到现在，官方通报的遇难者至少有 1300 人。还有 5000 人下落不明。"
+      ],
+      "vocab": [
+        {
+          "lemma": "die Sturzflut, -en",
+          "key": "sturzflut",
+          "forms": ["Sturzflut"],
+          "pos": "Substantiv",
+          "zh": "山洪暴发、骤发洪水",
+          "example_de": "Vor zehn Tagen riss eine Sturzflut in Nepal ganze Dörfer mit sich.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "mit sich reißen",
+          "key": "mit-sich-reissen",
+          "forms": ["riss ... mit sich"],
+          "pos": "Redewendung",
+          "zh": "卷走、裹挟而去",
+          "example_de": "Vor zehn Tagen riss eine Sturzflut in Nepal ganze Dörfer mit sich.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "verschüttet",
+          "key": "verschuetter",
+          "forms": ["verschütteten"],
+          "pos": "Adjektiv",
+          "zh": "被掩埋的",
+          "example_de": "Ein Mann wurde aus einem verschütteten Tunnel gerettet, eine Frau aus den Trümmern eines zerstörten Hauses.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Trümmer",
+          "key": "truemmer",
+          "forms": ["Trümmern"],
+          "pos": "Substantiv",
+          "zh": "废墟、瓦砾",
+          "example_de": "Ein Mann wurde aus einem verschütteten Tunnel gerettet, eine Frau aus den Trümmern eines zerstörten Hauses.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "das Todesopfer, -",
+          "key": "todesopfer",
+          "forms": ["Todesopfer"],
+          "pos": "Substantiv",
+          "zh": "遇难者",
+          "example_de": "Inzwischen melden die Behörden mindestens 1300 Todesopfer.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "vermissen",
+          "key": "vermissen",
+          "forms": ["vermisst"],
+          "pos": "Verb",
+          "zh": "（被动）下落不明、失踪",
+          "example_de": "5000 Menschen werden noch vermisst.",
+          "example_zh": ""
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "in Sicherheit bringen",
+          "summary": "固定搭配“送至安全地带”。können + 被动态：konnten ... in Sicherheit gebracht werden。",
+          "example_de": "Heute konnten im Grenzgebiet zwischen Nepal und China zwei weitere Menschen in Sicherheit gebracht werden.",
+          "example_zh": "今天在尼中边境地区又有两人被送往安全地带。"
+        }
+      ],
+      "background": "背景：8 月底尼泊尔靠近中国边境地区遭遇特大山洪，多座村庄被毁。救援持续十余日仍不断救出生还者，官方统计遇难人数仍在上升，数千人失踪。"
+    },
+    {
+      "title": "Magdeburg: Demonstration für Vielfalt",
+      "title_zh": "马格德堡选前万人集会 声援多元",
+      "paragraphs": [
+        "Einen Tag vor der Landtagswahl in Sachsen-Anhalt haben in Magdeburg Tausende Teilnehmer für Vielfalt und Zusammenhalt demonstriert. Ein überparteiliches Bündnis aus Kirchen, Gewerkschaften und Vereinen hatte zum \"Demokratie-Festival\" aufgerufen. Die Veranstalter sprachen von bis zu 20.000 Teilnehmern. Laut Polizei waren es in Magdeburg etwa 10.000 Menschen."
+      ],
+      "translations": [
+        "萨克森-安哈尔特州议会选举前一天，数千人在马格德堡游行，声援多元与团结。一个由教会、工会和协会组成的跨党派联盟发起了这场“民主节”。主办方称参加者多达两万人。据警方消息，马格德堡现场约有一万人。"
+      ],
+      "vocab": [
+        {
+          "lemma": "die Landtagswahl, -en",
+          "key": "landtagswahl",
+          "forms": ["Landtagswahl"],
+          "pos": "Substantiv",
+          "zh": "州议会选举",
+          "example_de": "Einen Tag vor der Landtagswahl in Sachsen-Anhalt haben in Magdeburg Tausende Teilnehmer für Vielfalt und Zusammenhalt demonstriert.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Vielfalt",
+          "key": "vielfalt",
+          "forms": ["Vielfalt"],
+          "pos": "Substantiv",
+          "zh": "多样性、多元",
+          "example_de": "Einen Tag vor der Landtagswahl in Sachsen-Anhalt haben in Magdeburg Tausende Teilnehmer für Vielfalt und Zusammenhalt demonstriert.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Zusammenhalt",
+          "key": "zusammenhalt",
+          "forms": ["Zusammenhalt"],
+          "pos": "Substantiv",
+          "zh": "团结、凝聚力",
+          "example_de": "Einen Tag vor der Landtagswahl in Sachsen-Anhalt haben in Magdeburg Tausende Teilnehmer für Vielfalt und Zusammenhalt demonstriert.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "überparteilich",
+          "key": "ueberparteilich",
+          "forms": ["überparteiliches"],
+          "pos": "Adjektiv",
+          "zh": "跨党派的、无党派的",
+          "example_de": "Ein überparteiliches Bündnis aus Kirchen, Gewerkschaften und Vereinen hatte zum \"Demokratie-Festival\" aufgerufen.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "das Bündnis, -se",
+          "key": "buendnis",
+          "forms": ["Bündnis"],
+          "pos": "Substantiv",
+          "zh": "联盟、联合",
+          "example_de": "Ein überparteiliches Bündnis aus Kirchen, Gewerkschaften und Vereinen hatte zum \"Demokratie-Festival\" aufgerufen.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "aufrufen zu",
+          "key": "aufrufen",
+          "forms": ["aufgerufen"],
+          "pos": "Verb",
+          "zh": "号召、发起",
+          "example_de": "Ein überparteiliches Bündnis aus Kirchen, Gewerkschaften und Vereinen hatte zum \"Demokratie-Festival\" aufgerufen.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Gewerkschaft, -en",
+          "key": "gewerkschaft",
+          "forms": ["Gewerkschaften"],
+          "pos": "Substantiv",
+          "zh": "工会",
+          "example_de": "Ein überparteiliches Bündnis aus Kirchen, Gewerkschaften und Vereinen hatte zum \"Demokratie-Festival\" aufgerufen.",
+          "example_zh": ""
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "Plusquamperfekt 过去完成时",
+          "summary": "hatte aufgerufen（在此之前已发起）：叙述中先于主句动作完成的动作用过去完成时。",
+          "example_de": "Ein überparteiliches Bündnis aus Kirchen, Gewerkschaften und Vereinen hatte zum \"Demokratie-Festival\" aufgerufen.",
+          "example_zh": "一个跨党派联盟此前已发起这场“民主节”。"
+        }
+      ],
+      "background": "背景：马格德堡是萨克森-安哈尔特州首府，2025 年 12 月该市圣诞市场曾发生驾车袭击惨案，此后当地公民社会多次组织大型集会。明天（9 月 6 日）该州举行州议会选举，本次“民主节”被视为选前反对右翼势力的明确信号。"
+    },
+    {
+      "title": "Protest gegen steigende Mieten",
+      "title_zh": "柏林万人抗议房租上涨",
+      "paragraphs": [
+        "In Berlin haben zahlreiche Menschen gegen steigende Mieten protestiert. Unter dem Motto \"Her mit den Wohnungen - Runter mit den Mieten\" versammelten sich laut Veranstalter 11.000 Menschen vor dem Rathaus. Die Polizei nannte keine Zahlen, ging aber von deutlich weniger Teilnehmenden aus. Zum Protest aufgerufen hatte ein Bündnis aus Initiativen. Sie fordern einen Mietendeckel und die Enteignung großer Immobilienkonzerne."
+      ],
+      "translations": [
+        "在柏林，大批民众抗议不断上涨的房租。在“把房子拿出来——把房租降下去”的口号下，据主办方称有一万一千人聚集在市政厅前。警方没有公布数字，但估计参加者明显少于这个数。发起这次抗议的是一个由多个倡议组织组成的联盟。他们要求设定房租上限，并把大型房地产集团收归公有。"
+      ],
+      "vocab": [
+        {
+          "lemma": "die Miete, -n",
+          "key": "miete",
+          "forms": ["Mieten"],
+          "pos": "Substantiv",
+          "zh": "房租",
+          "example_de": "In Berlin haben zahlreiche Menschen gegen steigende Mieten protestiert.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "das Motto, -s",
+          "key": "motto",
+          "forms": ["Motto"],
+          "pos": "Substantiv",
+          "zh": "口号、标语",
+          "example_de": "Unter dem Motto \"Her mit den Wohnungen - Runter mit den Mieten\" versammelten sich laut Veranstalter 11.000 Menschen vor dem Rathaus.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "sich versammeln",
+          "key": "versammeln",
+          "forms": ["versammelten sich"],
+          "pos": "Verb",
+          "zh": "聚集、集合",
+          "example_de": "Unter dem Motto \"Her mit den Wohnungen - Runter mit den Mieten\" versammelten sich laut Veranstalter 11.000 Menschen vor dem Rathaus.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "das Rathaus, ¨-er",
+          "key": "rathaus",
+          "forms": ["Rathaus"],
+          "pos": "Substantiv",
+          "zh": "市政厅",
+          "example_de": "Unter dem Motto \"Her mit den Wohnungen - Runter mit den Mieten\" versammelten sich laut Veranstalter 11.000 Menschen vor dem Rathaus.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Mietendeckel",
+          "key": "mietendeckel",
+          "forms": ["Mietendeckel"],
+          "pos": "Substantiv",
+          "zh": "房租上限、租金封顶",
+          "example_de": "Sie fordern einen Mietendeckel und die Enteignung großer Immobilienkonzerne.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Enteignung, -en",
+          "key": "enteignung",
+          "forms": ["Enteignung"],
+          "pos": "Substantiv",
+          "zh": "征收、收归公有",
+          "example_de": "Sie fordern einen Mietendeckel und die Enteignung großer Immobilienkonzerne.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Immobilienkonzern, -e",
+          "key": "immobilienkonzern",
+          "forms": ["Immobilienkonzerne"],
+          "pos": "Substantiv",
+          "zh": "房地产集团",
+          "example_de": "Sie fordern einen Mietendeckel und die Enteignung großer Immobilienkonzerne.",
+          "example_zh": ""
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "von ... ausgehen（估计、认定）",
+          "summary": "von etwas ausgehen = 以……为判断基础：Die Polizei ging von weniger Teilnehmenden aus 警方估计人数更少。",
+          "example_de": "Die Polizei nannte keine Zahlen, ging aber von deutlich weniger Teilnehmenden aus.",
+          "example_zh": "警方没有公布数字，但估计参加者明显更少。"
+        }
+      ],
+      "background": "背景：柏林房租近年持续上涨，住房短缺严重。“征收大型房产集团”的诉求源自 2021 年柏林公投“Deutsche Wohnen & Co enteignen”，多数选民赞成但至今未落实。2020 年柏林曾立法设房租上限，2021 年被联邦宪法法院推翻。"
+    },
+    {
+      "title": "Tod von Michael Mendl",
+      "title_zh": "演员 Michael Mendl 逝世 享年 82 岁",
+      "paragraphs": [
+        "Er prägte die deutsche Film- und Fernsehlandschaft über Jahrzehnte: Michael Mendl. Jetzt ist der Schauspieler im Alter von 82 Jahren gestorben. Mendl spielte in mehr als 200 Produktionen. Für seine Darstellung des Bundeskanzlers Willy Brandt in \"Im Schatten der Macht\" gewann er die Goldene Kamera.",
+        "Zum Film kommt Michael Mendl erst mit Mitte 40. Er spielt im Tatort einen Verdächtigen. Es ist selten, dass sich einer den Namen merkt. Die Rolle des Undurchdringlichen, Bösen, Ehrgeizigen: Immer wieder verkörpert er mysteriöse Gestalten. Da musste ich aufpassen, dass ich nicht dauernd die Schurken spielte. Ich war natürlich auch kein blonder Liebhaber, der Held, sondern ich war halt der Charakterkopf. Geboren als unehelicher Sohn eines katholischen Pfarrers in Lünen, nimmt er später den Namen seines Adoptivvaters an. Die Theaterkarriere beginnt mit 14. Vom Statisten arbeitet er sich hoch zum Hauptdarsteller. Mit markanter Stimme spielt er nicht nur Bundeskanzler Brandt, er wird quasi zu ihm. Ich weiß noch, als ich es gedreht habe, meine Lebensgefährtin sagte: \"Hör doch mal auf, immer wie Brandt zu sprechen.\" Ich konnte es nicht ablegen, hatte den so inhaliert. Mit seiner Krebserkrankung geht er sehr offen um. Früher hatte ich Mitesser, hab das ausgedrückt. Und dann war es der Krebs, ist auch ein Mitesser im übergeordneten Sinn. Wenn er bei mir als Untermieter wohnt, kann ich ihn nicht rausschmeißen.",
+        "Nun ist Michael Mendl im Alter von 82 Jahren gestorben."
+      ],
+      "translations": [
+        "他数十年来深刻塑造了德国影视界的面貌：Michael Mendl。这位演员如今去世了，享年 82 岁。Mendl 出演过 200 多部作品。凭借在《权力的阴影》中饰演联邦总理 Willy Brandt，他赢得了金摄影机奖。",
+        "（接下来是一段影片。）Michael Mendl 直到四十五岁上下才接触电影。他在《Tatort》罪案剧里演一个嫌疑人。能让观众记住名字的，并不多见。难以看透的、邪恶的、野心勃勃的角色：他一再化身神秘人物。我当时得留神，别一不小心老演反派。我当然也不是什么金发情人、英雄专业户，我就是个性格派面孔。他出生在 Lünen，是一位天主教神父的私生子，后来改随养父的姓。戏剧生涯从 14 岁开始。他从群众演员一路干到主演。凭着辨识度极高的嗓音，他演总理 Brandt 时不只是在演，简直就成了 Brandt 本人。我还记得拍那部戏的时候，我的生活伴侣说：“别再整天用 Brandt 的腔调说话了。”我改不掉，已经把那个人吸进骨子里了。对自己的癌症，他态度非常坦然。以前我长黑头粉刺，把它们挤掉就是了。后来是癌症，从更高的意义上说，也不过是个“寄生的家伙”。既然它在我这儿当二房客住下了，我也没法把它撵出去。",
+        "如今 Michael Mendl 去世了，享年 82 岁。"
+      ],
+      "vocab": [
+        {
+          "lemma": "prägen",
+          "key": "praegen",
+          "forms": ["prägte"],
+          "pos": "Verb",
+          "zh": "塑造、深刻影响",
+          "example_de": "Er prägte die deutsche Film- und Fernsehlandschaft über Jahrzehnte: Michael Mendl.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Goldene Kamera",
+          "key": "goldene-kamera",
+          "forms": ["Goldene Kamera"],
+          "pos": "Substantiv",
+          "zh": "金摄影机奖（德国电视奖）",
+          "example_de": "Für seine Darstellung des Bundeskanzlers Willy Brandt in \"Im Schatten der Macht\" gewann er die Goldene Kamera.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Darstellung, -en",
+          "key": "darstellung-mendl",
+          "forms": ["Darstellung"],
+          "pos": "Substantiv",
+          "zh": "演绎、饰演",
+          "example_de": "Für seine Darstellung des Bundeskanzlers Willy Brandt in \"Im Schatten der Macht\" gewann er die Goldene Kamera.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Verdächtige, -n",
+          "key": "verdaechtige",
+          "forms": ["Verdächtigen"],
+          "pos": "Substantiv",
+          "zh": "嫌疑人",
+          "example_de": "Er spielt im Tatort einen Verdächtigen.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "verkörpern",
+          "key": "verkoerpern",
+          "forms": ["verkörpert"],
+          "pos": "Verb",
+          "zh": "饰演、化身",
+          "example_de": "Immer wieder verkörpert er mysteriöse Gestalten.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Schurke, -n",
+          "key": "schurke",
+          "forms": ["Schurken"],
+          "pos": "Substantiv",
+          "zh": "反派、恶棍",
+          "example_de": "Da musste ich aufpassen, dass ich nicht dauernd die Schurken spielte.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Charakterkopf, ¨-e",
+          "key": "charakterkopf",
+          "forms": ["Charakterkopf"],
+          "pos": "Substantiv",
+          "zh": "性格派演员、有辨识度的面孔",
+          "example_de": "Ich war natürlich auch kein blonder Liebhaber, der Held, sondern ich war halt der Charakterkopf.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Lebensgefährtin, -nen",
+          "key": "lebensgefaehrtin",
+          "forms": ["Lebensgefährtin"],
+          "pos": "Substantiv",
+          "zh": "生活伴侣",
+          "example_de": "Ich weiß noch, als ich es gedreht habe, meine Lebensgefährtin sagte: \"Hör doch mal auf, immer wie Brandt zu sprechen.\"",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Mitesser, -",
+          "key": "mitesser",
+          "forms": ["Mitesser"],
+          "pos": "Substantiv",
+          "zh": "黑头粉刺；此处双关“寄生的家伙”",
+          "example_de": "Früher hatte ich Mitesser, hab das ausgedrückt.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Untermieter, -",
+          "key": "untermieter",
+          "forms": ["Untermieter"],
+          "pos": "Substantiv",
+          "zh": "二房客、转租客",
+          "example_de": "Wenn er bei mir als Untermieter wohnt, kann ich ihn nicht rausschmeißen.",
+          "example_zh": ""
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "Geboren als ..., nimmt er ... an（分词短语开头）",
+          "summary": "过去分词短语 Geboren als unehelicher Sohn... 作状语置于句首，主句正常语序，传记体常用。",
+          "example_de": "Geboren als unehelicher Sohn eines katholischen Pfarrers in Lünen, nimmt er später den Namen seines Adoptivvaters an.",
+          "example_zh": "他出生时是一位天主教神父的私生子，后来改随养父的姓。"
+        }
+      ],
+      "background": "背景：Michael Mendl（1944–2026），德国性格演员，出演 200 余部影视作品，以饰演前总理 Willy Brandt 闻名。《Tatort》是德国最长青的罪案剧系列；《Im Schatten der Macht》（权力的阴影）讲述 Brandt 1974 年辞职工位。他晚年公开谈论癌症，把它幽默地比作“赶不走的二房客”。"
+    },
+    {
+      "title": "Bundesliga: BVB dreht Spiel in Hoffenheim",
+      "title_zh": "德甲 多特客场 3:2 逆转霍芬海姆",
+      "paragraphs": [
+        "Zum Sport und der Fußball-Bundesliga: Vizemeister Dortmund hat sich am zweiten Spieltag den zweiten Saisonsieg mühsam erkämpft. Gegen Hoffenheim drehte der BvB einen Zwei-Tore-Rückstand noch zu einem 3:2-Auswärtssieg.",
+        "Der Dortmunder Jubel beim Schlusspfiff in Sinsheim: Eine Mischung aus Freude, Fassungslosigkeit und Stolz. Der BvB sah bei der TSG Hoffenheim lange wie der klare Verlierer aus. Per Distanzschuss von Avdullahu kurz vor der Pause gingen die Gastgeber in Führung, um nach der Pause gleich nachzulegen. Lemperles von Anton abgefälschtes 2:0 in der 54. Minute war eine von vielen Großchancen der TSG nach Wiederanpfiff. Der BvB konnte mit einer der bis dahin wenigen gefährlichen Aktionen durch Guirassy auf 2:1 verkürzen, 61 Minuten waren gespielt. Fünf Minuten später war Guirassy erneut beteiligt. Exzellente Vorarbeit für den eingewechselten Fabio Silva - 2:2. Schon ein Unentschieden wäre für Dortmund glücklich gewesen. Es kam noch besser, weil Hoffenheims Hajdari in der 86. Minute ein Nwaneri-Zuspiel ins eigene Tor beförderte. Zweites Spiel, zweite Niederlage für Hoffenheim, zweiter Sieg für Dortmund.",
+        "Vincent Wagner und Elversberg sorgen für den nächsten Paukenschlag. Dabei geht die Borussia aus Mönchengladbach früh in Führung. 11. Minute, 1:0, Hugo Bolin. Dann Konter Elversberg, Mokwa auf und davon. Cooler Abschluss, 1:1, Turneinlage inklusive. Ein Einwurf für Gladbach leitet Sekunden vor der Pause das 2:1 ein. Der Schwede Bolin, sein zweites Tor und SVE-Trainer Wagner bekommt zur Pause Gelb-Rot. Von der Tribüne sieht er das Gladbacher 3:1 durch Skelly. Trotzdem macht Elversberg immer weiter. Krattenmacher, gerade eingewechselt, 3:2. Zehn Minuten noch, Freistoß Keidel, der Ausgleich. Weil die Borussia zu passiv bleibt, gelingt auch noch das 4:3. Wieder Krattenmacher. Polanskis Borussia noch abgefangen. Die weiteren Ergebnisse:"
+      ],
+      "translations": [
+        "体育和德甲方面：上赛季亚军多特蒙德在第二轮联赛艰难拼下赛季第二场胜利。面对霍芬海姆，多特蒙德把两球落后的局面硬生生逆转成 3:2 的客场胜局。",
+        "终场哨响时辛斯海姆的多特狂欢：喜悦、难以置信和骄傲混在一起。在霍芬海姆身上，多特蒙德很长时间看上去就是那个十足的输家。中场休息前 Avdullahu 的远射让主队领先，下半场一开场又马上再下一城。第 54 分钟 Lemperle 那记被 Anton 折射入网的 2:0，只是重新开球后霍芬海姆众多绝佳机会之一。多特蒙德凭此前为数不多的威胁进攻之一，由 Guirassy 扳成 2:1，此时是第 61 分钟。五分钟后 Guirassy 又一次参与进攻。他为替补登场的 Fabio Silva 送出绝妙做球——2:2。对多特来说，就算踢平都算运气好了。结果更好：第 86 分钟，霍芬海姆的 Hajdari 把 Nwaneri 的传球撞进了自家球门。霍芬海姆两战两负，多特两战两胜。",
+        "Vincent Wagner 和他的埃尔沃斯堡又制造了一声惊雷。这场门兴格拉德巴赫倒是早早取得领先。第 11 分钟，1:0，Hugo Bolin。然后埃尔沃斯堡打反击，Mokwa 摆脱防守扬长而去。冷静施射，1:1，还顺带翻了跟头庆祝。半场结束前几秒，门兴的一次界外球策动了 2:1。瑞典人 Bolin 梅开二度，而埃尔沃斯堡主帅 Wagner 中场休息时吃到黄红牌被罚下。他从看台上目睹了门兴 Skelly 打进的 3:1。尽管如此埃尔沃斯堡还在继续猛追。刚刚替补上场的 Krattenmacher，3:2。还剩十分钟，Keidel 任意球，扳平了。门兴踢得太被动，又被对方打进 4:3。又是 Krattenmacher。Polanski 的门兴再次被掀翻在地。其余比赛的结果："
+      ],
+      "vocab": [
+        {
+          "lemma": "der Vizemeister, -",
+          "key": "vizemeister",
+          "forms": ["Vizemeister"],
+          "pos": "Substantiv",
+          "zh": "联赛亚军",
+          "example_de": "Vizemeister Dortmund hat sich am zweiten Spieltag den zweiten Saisonsieg mühsam erkämpft.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "sich erkämpfen",
+          "key": "erkämpfen",
+          "forms": ["erkämpft"],
+          "pos": "Verb",
+          "zh": "奋力争取到、拼下来",
+          "example_de": "Vizemeister Dortmund hat sich am zweiten Spieltag den zweiten Saisonsieg mühsam erkämpft.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Rückstand, ¨-e",
+          "key": "rueckstand",
+          "forms": ["Rückstand"],
+          "pos": "Substantiv",
+          "zh": "落后（比分）",
+          "example_de": "Gegen Hoffenheim drehte der BvB einen Zwei-Tore-Rückstand noch zu einem 3:2-Auswärtssieg.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Schlusspfiff",
+          "key": "schlusspfiff",
+          "forms": ["Schlusspfiff"],
+          "pos": "Substantiv",
+          "zh": "终场哨",
+          "example_de": "Der Dortmunder Jubel beim Schlusspfiff in Sinsheim: Eine Mischung aus Freude, Fassungslosigkeit und Stolz.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Fassungslosigkeit",
+          "key": "fassungslosigkeit",
+          "forms": ["Fassungslosigkeit"],
+          "pos": "Substantiv",
+          "zh": "难以置信",
+          "example_de": "Der Dortmunder Jubel beim Schlusspfiff in Sinsheim: Eine Mischung aus Freude, Fassungslosigkeit und Stolz.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "nachlegen",
+          "key": "nachlegen",
+          "forms": ["nachzulegen"],
+          "pos": "Verb",
+          "zh": "再进一球、追加",
+          "example_de": "Per Distanzschuss von Avdullahu kurz vor der Pause gingen die Gastgeber in Führung, um nach der Pause gleich nachzulegen.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "abfälschen",
+          "key": "abfaelschen",
+          "forms": ["abgefälschtes"],
+          "pos": "Verb",
+          "zh": "折射、变线",
+          "example_de": "Lemperles von Anton abgefälschtes 2:0 in der 54. Minute war eine von vielen Großchancen der TSG nach Wiederanpfiff.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "verkürzen auf",
+          "key": "verkuerzen",
+          "forms": ["verkürzen"],
+          "pos": "Verb",
+          "zh": "扳回一球",
+          "example_de": "Der BvB konnte mit einer der bis dahin wenigen gefährlichen Aktionen durch Guirassy auf 2:1 verkürzen, 61 Minuten waren gespielt.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "ins eigene Tor befördern",
+          "key": "eigene-tor",
+          "forms": ["ins eigene Tor beförderte"],
+          "pos": "Redewendung",
+          "zh": "撞进自家球门（乌龙）",
+          "example_de": "Es kam noch besser, weil Hoffenheims Hajdari in der 86. Minute ein Nwaneri-Zuspiel ins eigene Tor beförderte.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Paukenschlag, ¨-e",
+          "key": "paukenschlag",
+          "forms": ["Paukenschlag"],
+          "pos": "Substantiv",
+          "zh": "惊雷、轰动事件",
+          "example_de": "Vincent Wagner und Elversberg sorgen für den nächsten Paukenschlag.",
+          "example_zh": ""
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "um ... nachzulegen（um + zu 表紧跟的意图）",
+          "summary": "主句后接 um ... zu 不定式，说明紧接着的动作意图：领先之后随即再下一城。",
+          "example_de": "Per Distanzschuss von Avdullahu kurz vor der Pause gingen die Gastgeber in Führung, um nach der Pause gleich nachzulegen.",
+          "example_zh": "主队凭 Avdullahu 的远射领先，下半场开场随即再进一球。"
+        }
+      ],
+      "background": "背景：2026/27 赛季德甲第二轮。多特蒙德客场 3:2 逆转霍芬海姆（第 86 分钟乌龙球绝杀）；升班马埃尔沃斯堡（SV Elversberg）客场 4:3 掀翻门兴格拉德巴赫，是本轮最大冷门。BvB = 多特蒙德，TSG = 霍芬海姆，SVE = 埃尔沃斯堡。"
+    },
+    {
+      "title": "Basketballerinnen bewahren WM-Chance",
+      "title_zh": "德国女篮主场击败日本 保住世界杯出线希望",
+      "paragraphs": [
+        "Bei der WM im eigenen Land haben die deutschen Basketballerinnen ihre Chance auf das Weiterkommen gewahrt: Gegen Japan gewann die DBB-Auswahl in Berlin mit 74:58. Zum Auftakt hatte das deutsche Team gegen Spanien verloren. Am Montag steht das nächste Gruppenspiel gegen Mali an."
+      ],
+      "translations": [
+        "在本土举办的世界杯上，德国女篮保住了晋级希望：在柏林以 74:58 战胜日本。揭幕战德国队输给了西班牙。周一将迎来下一场小组赛，对手是马里。"
+      ],
+      "vocab": [
+        {
+          "lemma": "das Weiterkommen",
+          "key": "weiterkommen",
+          "forms": ["Weiterkommen"],
+          "pos": "Substantiv",
+          "zh": "晋级、出线",
+          "example_de": "Bei der WM im eigenen Land haben die deutschen Basketballerinnen ihre Chance auf das Weiterkommen gewahrt: Gegen Japan gewann die DBB-Auswahl in Berlin mit 74:58.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "wahren",
+          "key": "wahren",
+          "forms": ["gewahrt"],
+          "pos": "Verb",
+          "zh": "保住、维护",
+          "example_de": "Bei der WM im eigenen Land haben die deutschen Basketballerinnen ihre Chance auf das Weiterkommen gewahrt: Gegen Japan gewann die DBB-Auswahl in Berlin mit 74:58.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Auswahl, -en",
+          "key": "auswahl",
+          "forms": ["DBB-Auswahl"],
+          "pos": "Substantiv",
+          "zh": "国家队、选拔队",
+          "example_de": "Gegen Japan gewann die DBB-Auswahl in Berlin mit 74:58.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Auftakt, ¨-e",
+          "key": "auftakt",
+          "forms": ["Auftakt"],
+          "pos": "Substantiv",
+          "zh": "开端、揭幕战",
+          "example_de": "Zum Auftakt hatte das deutsche Team gegen Spanien verloren.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "anstehen",
+          "key": "anstehen",
+          "forms": ["steht ... an"],
+          "pos": "Verb",
+          "zh": "即将进行、等待着",
+          "example_de": "Am Montag steht das nächste Gruppenspiel gegen Mali an.",
+          "example_zh": ""
+        }
+      ],
+      "grammar_points": [],
+      "background": "背景：2026 年女篮世界杯在德国举办，柏林承办部分小组赛。DBB = Deutscher Basketball Bund，德国篮球协会。德国女篮首战负于西班牙，次战胜日本，保留小组出线希望。"
+    },
+    {
+      "title": "Das Wetter",
+      "title_zh": "天气预报",
+      "paragraphs": [
+        "Die Wettervorhersage für morgen, Sonntag, den 6. September: Hoher Luftdruck sorgt morgen für viel Sonnenschein. In der kühlen Meeresluft wird die Nacht teils recht frisch, beginnt im Nordosten mit Schauern, dazu windig. An der Ostsee Sturmböen, sonst locker bewölkt oder klar. Am Tag scheint verbreitet die Sonne. Im Norden und Nordosten ist es zeitweise wolkig, auch dort bleibt es trocken.",
+        "Montag erwartet uns ein Mix aus Sonne und Wolken, dazu sommerlich warm. Im Westen einzelne Schauer, im Süden auch Gewitter. Ab Dienstag wird es unbeständig und kühler."
+      ],
+      "translations": [
+        "明天，9 月 6 日星期日的天气预报：高气压明天带来充沛日照。在清凉的海上气团里，夜间部分地区相当凉，东北部以阵雨开场，风也不小。波罗的海沿岸有风暴阵风，其他地区少云或晴朗。白天普遍阳光普照。北部和东北部时段性多云，但那里同样保持干燥。",
+        "周一天气是阳光与云的混合，而且暖得有夏天味道。西部零星阵雨，南部还会打雷下雨。周二起天气转不稳定，也会降温。"
+      ],
+      "vocab": [
+        {
+          "lemma": "der Luftdruck",
+          "key": "luftdruck",
+          "forms": ["Luftdruck"],
+          "pos": "Substantiv",
+          "zh": "气压",
+          "example_de": "Hoher Luftdruck sorgt morgen für viel Sonnenschein.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "die Sturmbö, -n",
+          "key": "sturmboe",
+          "forms": ["Sturmböen"],
+          "pos": "Substantiv",
+          "zh": "风暴阵风",
+          "example_de": "An der Ostsee Sturmböen, sonst locker bewölkt oder klar.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "locker bewölkt",
+          "key": "locker-bewoelkt",
+          "forms": ["locker bewölkt"],
+          "pos": "Redewendung",
+          "zh": "少云的、云量稀疏的",
+          "example_de": "An der Ostsee Sturmböen, sonst locker bewölkt oder klar.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "verbreitet",
+          "key": "verbreitet",
+          "forms": ["verbreitet"],
+          "pos": "Adjektiv",
+          "zh": "普遍地、广泛地",
+          "example_de": "Am Tag scheint verbreitet die Sonne.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "der Schauer, -",
+          "key": "schauer",
+          "forms": ["Schauern", "Schauer"],
+          "pos": "Substantiv",
+          "zh": "阵雨",
+          "example_de": "Im Westen einzelne Schauer, im Süden auch Gewitter.",
+          "example_zh": ""
+        },
+        {
+          "lemma": "unbeständig",
+          "key": "unbestaendig",
+          "forms": ["unbeständig"],
+          "pos": "Adjektiv",
+          "zh": "不稳定的（天气）",
+          "example_de": "Ab Dienstag wird es unbeständig und kühler.",
+          "example_zh": ""
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "sorgen für（带来、促成）",
+          "summary": "jemand/etwas sorgt für etwas = 带来、引起某种结果，天气播报高频句式。",
+          "example_de": "Hoher Luftdruck sorgt morgen für viel Sonnenschein.",
+          "example_zh": "高气压明天带来充沛日照。"
+        }
+      ],
+      "background": ""
+    }
+  ]
+}

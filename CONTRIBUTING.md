@@ -12,7 +12,7 @@ node tests/test_studio.js
 python3 -m py_compile build.py scripts/*.py tests/*.py
 bash -n scripts/*.sh
 python3 scripts/validate-content.py --all
-python3 build.py 2026-08-20-20uhr
+python3 build.py
 ```
 
 本地预览：

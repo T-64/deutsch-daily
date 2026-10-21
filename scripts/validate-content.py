@@ -6,6 +6,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -47,7 +48,7 @@ def main(argv: list[str]) -> int:
         if not paths:
             print("FAIL: no current-schema content files found", file=sys.stderr)
             return 1
-        return int(any(main([argv[0], str(path)]) for path in paths))
+        return int(any([main([argv[0], str(path)]) for path in paths]))
     path = load_path(argv[1])
     errors: list[str] = []
     try:
@@ -77,6 +78,26 @@ def main(argv: list[str]) -> int:
     if not isinstance(news, list) or not news:
         errors.append("news must be a non-empty list")
         news = []
+    reading = doc.get("content_kind") == "reading"
+    if reading:
+        if doc.get("source") != "einfach" or doc.get("level") != "A2–B1":
+            errors.append("readings must be einfach at A2–B1")
+        if len(news) != 3:
+            errors.append("readings must contain exactly 3 short stories")
+        if not re.fullmatch(r"[0-9a-f]{64}", str(doc.get("source_text_sha256") or "")):
+            errors.append("reading requires SHA-256 of the source text")
+        source_url = urlparse(str(doc.get("source_url") or ""))
+        sources = json.loads((ROOT / "config/reading-sources.json").read_text())["sources"]
+        if not any(s["enabled"] and source_url.scheme == "https" and source_url.hostname == s["allowed_host"]
+                   and source_url.path.startswith(s["allowed_path"]) and not source_url.username
+                   and not source_url.password and source_url.port in (None, 443) for s in sources):
+            errors.append("reading source_url is outside the active whitelist")
+        if not doc.get("adaptation") or doc.get("embed_url"):
+            errors.append("readings require an adaptation disclosure and no embedded player")
+        words = sum(len(re.findall(r"[A-Za-zÄÖÜäöüß]+", p)) for n in news if isinstance(n, dict)
+                    for p in (n.get("paragraphs") or []) if isinstance(p, str))
+        if not 90 <= words <= 180:
+            errors.append(f"reading length {words} words is outside 90–180")
 
     for i, item in enumerate(news):
         prefix = f"news[{i}]"
@@ -95,11 +116,18 @@ def main(argv: list[str]) -> int:
         elif len(paras) < 1:
             errors.append(f"{prefix} has no paragraphs")
         else:
+            if reading and not 3 <= len(paras) <= 4:
+                errors.append(f"{prefix} reading needs 3–4 sentence pairs")
             for j, (de, zh) in enumerate(zip(paras, trans)):
+                if not isinstance(de, str) or not isinstance(zh, str):
+                    errors.append(f"{prefix} paragraph/translation must be strings at {j}")
+                    continue
                 if not str(de).strip() or not str(zh).strip():
                     errors.append(f"{prefix} empty paragraph or translation at {j}")
                     continue
                 source_sentences = split_de_sents(str(de))
+                if reading and len(source_sentences) != 1:
+                    errors.append(f"{prefix} reading item {j} must hold exactly one sentence")
                 pairs = pair_sentences(str(de), str(zh))
                 if len(pairs) != len(source_sentences) or any(not p.get("zh") for p in pairs):
                     errors.append(
@@ -124,6 +152,8 @@ def main(argv: list[str]) -> int:
                         errors.append(f"{vp} missing {field}")
                 if not isinstance(v.get("forms"), list) or not v.get("forms"):
                     errors.append(f"{vp} forms must be a non-empty list")
+                elif reading and any(not isinstance(form, str) or not form or form.casefold() not in " ".join(paras).casefold() for form in v["forms"]):
+                    errors.append(f"{vp} forms must occur in the reading")
                 if "," in str(v.get("lemma") or "") and "forms" in v:
                     pass
                 example = str(v.get("example_de") or "").strip()

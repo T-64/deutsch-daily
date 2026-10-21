@@ -1,0 +1,14 @@
+{
+  "level": "A2–B1",
+  "sources": [
+    {
+      "id": "einfach",
+      "label": "tagesschau · Einfache Sprache",
+      "list_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache",
+      "allowed_host": "www.tagesschau.de",
+      "allowed_path": "/tagesschau_in_einfacher_sprache/",
+      "extractor": "official_subtitles",
+      "enabled": true
+    }
+  ]
+}

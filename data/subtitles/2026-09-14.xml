@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.000" end="00:00:04.000">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:04.680" end="00:00:07.400">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:10.480" end="00:00:13.360">
+        <tt:span style="textWhite">Willkommen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zur tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:13.520" end="00:00:16.880">
+        <tt:span style="textWhite">Ich bin Susanne Holst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:32.240" end="00:00:34.320">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:38.920" end="00:00:43.480">
+        <tt:span style="textWhite">In dem Bundesland Niedersachsen gab</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">es am Sonntag Kommunalwahlen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:44.120" end="00:00:48.280">
+        <tt:span style="textWhite">Die Kommunalwahlen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind nur für die Städte und Gemeinden</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:48.320" end="00:00:49.760">
+        <tt:span style="textWhite">in einem Bundesland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:49.960" end="00:00:53.200">
+        <tt:span style="textWhite">Welche Politik soll</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in meinem Wohnort gemacht werden?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:53.240" end="00:00:57.040">
+        <tt:span style="textWhite">Das entscheiden die Bürger</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei den Kommunalwahlen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:00:57.400" end="00:01:00.320">
+        <tt:span style="textWhite">Sie wählen z.B. neue Bürgermeister.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:01:01.120" end="00:01:03.520">
+        <tt:span style="textWhite">Bei den Kommunalwahlen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Niedersachsen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:03.560" end="00:01:06.640">
+        <tt:span style="textWhite">hat jetzt die Partei CDU gewonnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:06.920" end="00:01:10.240">
+        <tt:span style="textWhite">Die CDU hatte nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die meisten Stimmen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:11.000" end="00:01:17.160">
+        <tt:span style="textWhite">Auf Platz zwei ist die Partei SPD</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und auf Platz drei die Partei AfD.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:17.680" end="00:01:21.240">
+        <tt:span style="textWhite">Die Partei Die Grünen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist auf Platz vier</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:21.280" end="00:01:24.920">
+        <tt:span style="textWhite">und die Partei</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Die Linke auf Platz fünf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:26.000" end="00:01:28.560">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:33.880" end="00:01:35.400">
+        <tt:span style="textWhite">Für Deutschland gibt es</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:35.440" end="00:01:37.920">
+        <tt:span style="textWhite">einen neuen Bericht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zu dem Thema Bildung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:37.960" end="00:01:40.120">
+        <tt:span style="textWhite">Der Bericht untersucht,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:40.400" end="00:01:44.240">
+        <tt:span style="textWhite">wie gut sind die Chancen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für eine gute Bildung in Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:44.280" end="00:01:47.840">
+        <tt:span style="textWhite">Und wie gut sind die Schulen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und die Kindergärten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:48.680" end="00:01:50.600">
+        <tt:span style="textWhite">Das Ergebnis von dem Bericht,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:50.640" end="00:01:55.200">
+        <tt:span style="textWhite">in dem Bundesland Sachsen sind</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Chancen für eine gute Bildung</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:55.240" end="00:01:56.240">
+        <tt:span style="textWhite">am besten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:56.680" end="00:01:59.040">
+        <tt:span style="textWhite">Dazu zeigen wir jetzt einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:01:59.840" end="00:02:04.280">
+        <tt:span style="textWhite">Das ist ein Kindergarten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in dem Bundesland Sachsen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:02:05.000" end="00:02:08.120">
+        <tt:span style="textWhite">Die Kinder backen zusammen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit der Erzieherin</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:02:08.160" end="00:02:10.640">
+        <tt:span style="textWhite">von dem Kindergarten einen Kuchen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:02:11.400" end="00:02:13.920">
+        <tt:span style="textWhite">Die Kinder dürfen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zusammen mit den Erziehern</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:13.960" end="00:02:16.840">
+        <tt:span style="textWhite">selbst entscheiden,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">was sie machen wollen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:16.880" end="00:02:20.240">
+        <tt:span style="textWhite">Das geht nicht in allen Kindergärten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:20.280" end="00:02:23.720">
+        <tt:span style="textWhite">Die Leiterin</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von dem Kindergarten sagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:24.120" end="00:02:29.800">
+        <tt:span style="textWhite">unsere Erzieher sind gut ausgebildet</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und sie haben sehr viel Erfahrung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:31.320" end="00:02:35.480">
+        <tt:span style="textWhite">Im Kindergarten lernen die Kinder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">viele verschiedene Dinge.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:36.200" end="00:02:38.760">
+        <tt:span style="textWhite">Und in Sachsen können viele Kinder</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:38.800" end="00:02:41.960">
+        <tt:span style="textWhite">sogar den ganzen Tag im Kindergarten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bleiben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:42.720" end="00:02:47.120">
+        <tt:span style="textWhite">In anderen Bundesländern gibt es aber</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch Probleme mit der Bildung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:47.160" end="00:02:50.400">
+        <tt:span style="textWhite">Der Leiter von dem Bericht sagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:50.680" end="00:02:55.760">
+        <tt:span style="textWhite">viele Kinder in den Kindergärten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und Schulen sprechen kein Deutsch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:56.520" end="00:02:59.640">
+        <tt:span style="textWhite">Deshalb sind die Chancen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für gute Bildung</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:59.680" end="00:03:03.040">
+        <tt:span style="textWhite">in einigen Bundesländern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">schlechter geworden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:03:03.880" end="00:03:07.480">
+        <tt:span style="textWhite">Die Frau links ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Bildungsministerin Prien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:03:07.880" end="00:03:12.040">
+        <tt:span style="textWhite">Sie sagt, wir müssen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei den ganz jungen Kindern schauen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:03:12.120" end="00:03:14.360">
+        <tt:span style="textWhite">ob sie gut Deutsch sprechen können.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:03:14.400" end="00:03:17.640">
+        <tt:span style="textWhite">Wenn Kinder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nicht gut Deutsch sprechen können,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:03:18.520" end="00:03:21.040">
+        <tt:span style="textWhite">dann müssen wir ihnen dabei helfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:03:22.600" end="00:03:25.040">
+        <tt:span style="textWhite">Der Kindergarten in Sachsen zeigt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:03:25.120" end="00:03:29.200">
+        <tt:span style="textWhite">der Weg zu einer guten Bildung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">beginnt schon ganz früh.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:31.240" end="00:03:33.440">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:37.080" end="00:03:41.440">
+        <tt:span style="textWhite">Die Arktis ist ein Gebiet</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ganz oben im Norden von der Erde.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:41.960" end="00:03:43.880">
+        <tt:span style="textWhite">Dort gibt es ganz viel Eis.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:44.160" end="00:03:46.560">
+        <tt:span style="textWhite">Zur Arktis zeigen wir jetzt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine Karte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:46.680" end="00:03:50.680">
+        <tt:span style="textWhite">Die Arktis ist direkt am Nordpol</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Erde.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:51.400" end="00:03:54.360">
+        <tt:span style="textWhite">Und die Arktis gehört</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zu mehreren Ländern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:55.120" end="00:03:58.760">
+        <tt:span style="textWhite">Z.B. zu Kanada, den USA und Russland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:59.480" end="00:04:02.400">
+        <tt:span style="textWhite">In der Arktis gibt es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">viele Rohstoffe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:04:02.800" end="00:04:04.720">
+        <tt:span style="textWhite">Z.B. Öl oder Gas.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:04:05.400" end="00:04:07.200">
+        <tt:span style="textWhite">Deswegen gibt es Streit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:04:07.920" end="00:04:11.720">
+        <tt:span style="textWhite">Einige Länder wollen nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mehr Macht in der Arktis.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:04:12.040" end="00:04:14.440">
+        <tt:span style="textWhite">Z.B. Russland oder die USA.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:04:15.240" end="00:04:19.000">
+        <tt:span style="textWhite">In Finnland gibt es jetzt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ein Treffen zur Arktis.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:04:19.560" end="00:04:22.720">
+        <tt:span style="textWhite">Bei dem Treffen sind viele Länder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der EU.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:04:23.040" end="00:04:24.800">
+        <tt:span style="textWhite">Die Länder sprechen darüber,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:04:24.840" end="00:04:27.720">
+        <tt:span style="textWhite">wie schützen wir</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Arktis vor anderen Ländern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:04:27.760" end="00:04:32.400">
+        <tt:span style="textWhite">Auch Bundeskanzler Friedrich Merz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist bei dem Treffen dabei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:04:33.000" end="00:04:36.840">
+        <tt:span style="textWhite">Was Merz sagt, dazu zeigen wir jetzt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einen kurzen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:37.640" end="00:04:41.920">
+        <tt:span style="textWhite">Das ist Kanzler Merz bei dem Treffen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Finnland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:41.960" end="00:04:46.800">
+        <tt:span style="textWhite">Er sagt, die EU muss die Arktis</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">besser schützen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:47.520" end="00:04:49.640">
+        <tt:span style="textWhite">Wir müssen dafür noch viel mehr tun.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:49.680" end="00:04:53.960">
+        <tt:span style="textWhite">Das ist wichtig</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für die Sicherheit in der EU.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:54.880" end="00:04:57.960">
+        <tt:span style="textWhite">Und das ist auch wichtig</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für die Wirtschaft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:58.800" end="00:05:02.640">
+        <tt:span style="textWhite">In der Arktis gibt es nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">viele wichtige Rohstoffe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:05:03.320" end="00:05:06.560">
+        <tt:span style="textWhite">Wir müssen auch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit anderen Ländern zusammenarbeiten,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:05:06.600" end="00:05:08.520">
+        <tt:span style="textWhite">die nicht in der EU sind.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:05:08.560" end="00:05:14.200">
+        <tt:span style="textWhite">Z.B. mit Island, Norwegen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Kanada und England.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:05:15.240" end="00:05:18.680">
+        <tt:span style="textWhite">Wir müssen alles tun,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">um die Arktis zu schützen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:05:20.200" end="00:05:22.400">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:05:26.120" end="00:05:30.040">
+        <tt:span style="textWhite">In den USA gibt es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einen wichtigen Wettbewerb im Tennis.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:05:30.440" end="00:05:32.800">
+        <tt:span style="textWhite">Der Wettbewerb heißt US Open.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:05:32.840" end="00:05:38.000">
+        <tt:span style="textWhite">Bei den US Open spielen Tennisspieler</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aus der ganzen Welt gegeneinander.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:05:38.520" end="00:05:42.680">
+        <tt:span style="textWhite">Der Mann auf dem Foto ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Tennisspieler Alexander Zverev</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:05:42.720" end="00:05:43.880">
+        <tt:span style="textWhite">aus Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:44.320" end="00:05:46.840">
+        <tt:span style="textWhite">Er hat die US Open jetzt gewonnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:47.640" end="00:05:52.000">
+        <tt:span style="textWhite">Der Sieg bei den US Open von Zverev</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist etwas ganz Besonderes.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:52.160" end="00:05:54.000">
+        <tt:span style="textWhite">Das hat vor ihm</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nämlich bisher</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:54.040" end="00:05:57.600">
+        <tt:span style="textWhite">nur ein deutscher Tennisspieler</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei den Männern geschafft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:58.280" end="00:06:00.640">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:06:15.680" end="00:06:17.800">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:06:18.800" end="00:06:22.200">
+        <tt:span style="textWhite">Morgen gibt es in der Mitte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von Deutschland Nebel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:06:22.240" end="00:06:25.800">
+        <tt:span style="textWhite">Später gibt es dann viel Sonne</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und ein paar Wolken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:06:26.120" end="00:06:28.480">
+        <tt:span style="textWhite">Es werden 20 bis 30 Grad.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:06:30.000" end="00:06:33.000">
+        <tt:span style="textWhite">Und das war die tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:06:33.040" end="00:06:35.200">
+        <tt:span style="textWhite">Tschüss, bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:06:39.520" end="00:06:41.680">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>

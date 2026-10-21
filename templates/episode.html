@@ -399,6 +399,47 @@
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
   }
+  /* Reading editions: text is the primary surface; no player or seek affordance. */
+  body.reading { --bg:#fff; --ink:#193e38; --ink-soft:#5d7471; --accent:#245d4c; --accent-strong:#193e38; --accent-soft:#eff5f1; --line:#d8e3df; --shadow:none; --shadow-soft:none; }
+  [data-theme="dark"] body.reading { --bg:#111c18; --surface:#111c18; --surface-2:#1b2c24; --ink:#edf4ef; --ink-soft:#b0c4b7; --accent:#9bcbb0; --accent-strong:#c1e2ce; --accent-soft:#1e352a; --line:#385245; }
+  .reading .app { width:min(1408px,calc(100% - 80px)); padding-top:0; }
+  .reading .topbar { min-height:82px; border-bottom:1px solid var(--line); margin-bottom:32px; }
+  .reading .brand { font:700 31px Georgia,serif; gap:18px; }
+  .reading .brand-mark { width:46px; height:46px; border-radius:4px; font:24px Georgia,serif; }
+  .reading .text-btn,.reading .archive-link,.reading .icon-btn { border:0; border-radius:4px; background:transparent; font-size:18px; color:var(--ink); }
+  .reading .hero { margin-bottom:28px; }
+  .reading .hero h1 { max-width:none; font-size:clamp(32px,4.6vw,66px); line-height:1.2; }
+  .reading .eyebrow { margin:8px 0 12px; font:22px/1.5 Georgia,serif; text-transform:none; letter-spacing:0; color:var(--ink); }
+  .reading .hero-meta { display:block; font-size:17px; margin-top:10px; }
+  .reading #vlink { color:var(--accent); text-underline-offset:4px; }
+  .reading #adaptation { margin-top:8px; font-size:16px; line-height:1.7; color:var(--ink-soft); }
+  .reading #story-count,.reading .legend,.reading #video-card { display:none; }
+  .reading .study-grid { grid-template-columns:360px minmax(0,1fr); gap:48px; }
+  .reading .rail { border:0; border-radius:5px; padding:20px 18px; background:var(--accent-soft); box-shadow:none; }
+  .reading .controls button { min-height:48px; padding:8px 24px; border-radius:7px; font-size:18px; }
+  .reading .topic { border:0; }
+  .reading .topic>a { grid-template-columns:32px minmax(0,1fr); gap:12px; padding:16px 14px; border-left:4px solid transparent; }
+  .reading .topic.on>a { border-color:var(--accent); background:color-mix(in srgb,var(--accent) 6%,transparent); }
+  .reading .topic>a span { font:22px/1.3 Georgia,serif; padding:0; }
+  .reading .topic b { background:transparent; color:var(--ink-soft); width:26px; height:28px; font:22px Georgia,serif; }
+  .reading .topic.on b { background:transparent; color:var(--ink); }
+  .reading .reading-study { display:block; border-top:1px solid var(--line); margin-top:24px; padding-top:16px; }
+  .reading .stab { background:transparent; border:0; border-radius:0; font-size:17px; min-height:42px; }
+  .reading .stab.on { border-bottom:3px solid var(--accent); }
+  .reading .vrow .vw { font:21px/1.4 Georgia,serif; } .reading .vrow .vz { color:var(--ink-soft); font-size:16px; }
+  .reading article { padding:20px 0 30px; border:0; border-radius:0; border-bottom:1px solid var(--line); margin-bottom:0; box-shadow:none; }
+  .reading article:first-child { padding-top:20px; }
+  .reading .n-head { grid-template-columns:74px minmax(0,1fr); gap:32px; margin-bottom:28px; }
+  .reading .n-idx { width:74px; height:74px; border-radius:4px; font:700 36px Georgia,serif; }
+  .reading .n-head h2 { font:700 clamp(28px,3vw,44px)/1.2 Georgia,serif; padding-top:4px; }
+  .reading .n-head .h-zh { font:400 26px/1.5 system-ui,sans-serif; color:var(--ink); margin-top:5px; }
+  .reading .de { font-size:var(--reading-size,25px); line-height:1.65; }
+  .reading .zh { margin-top:4px; color:var(--ink-soft); font-size:18px; line-height:1.65; }
+  .reading .para { margin-bottom:20px; } .reading .sent { margin-bottom:0; }
+  .reading #basket-btn { border-radius:9px; font-size:17px; }
+  @media(max-width:1100px) { .reading .study-grid { grid-template-columns:270px minmax(0,1fr); gap:32px; } .reading .topic>a span { font-size:20px; } .reading .n-head { gap:18px; grid-template-columns:54px minmax(0,1fr); } .reading .n-idx { width:54px; height:54px; font-size:28px; } }
+  @media(max-width:840px) { .reading .app { width:calc(100% - 40px); padding:0 0 90px; } .reading .topbar { min-height:74px; } .reading .brand { font-size:24px; gap:10px; } .reading .brand-mark { width:34px; height:34px; font-size:19px; } .reading .text-btn,.reading .archive-link,.reading .icon-btn { font-size:14px; } .reading .study-grid { display:block; } .reading .hero h1 { font-size:38px; } .reading .eyebrow { font-size:18px; } .reading .side { margin-bottom:0; } .reading .rail { margin:0 0 20px; padding:10px; position:static; } .reading .controls button { min-height:40px; font-size:16px; } .reading .de { font-size:var(--reading-size,22px); } .reading .zh { font-size:16px; } .reading .n-head .h-zh { font-size:21px; } }
+  @media(max-width:560px) { .reading .app { width:calc(100% - 32px); } .reading .brand span:last-child { display:none; } .reading .brand { gap:0; } .reading .top-actions { gap:2px; } .reading .text-btn { padding:0 9px; } .reading .archive-link { font-size:14px; width:auto; padding:0 8px; } .reading .hero { padding:0; } .reading .hero h1 { font-size:33px; } .reading .eyebrow { font-size:16px; } .reading #adaptation { font-size:13px; } .reading .n-head { gap:14px; grid-template-columns:40px minmax(0,1fr); margin-bottom:24px; } .reading .n-idx { width:40px; height:44px; font-size:24px; } .reading .n-head h2 { font-size:28px; } .reading .de { font-size:var(--reading-size,21px); } }
 </style>
 </head>
 <body>
@@ -419,13 +460,14 @@
   </header>
 
   <section class="hero">
-    <div class="eyebrow" id="source-label">Tagesschau</div>
     <h1 id="hdate"></h1>
+    <div class="eyebrow" id="source-label">Tagesschau</div>
     <div class="hero-meta">
       <span id="story-count"></span>
       <a id="vlink" target="_blank" rel="noopener">在 tagesschau.de 打开 ↗</a>
       <span class="legend">实线是重点词，虚线是词典结果</span>
     </div>
+    <p id="adaptation" hidden></p>
   </section>
 
   <div class="study-grid">
@@ -509,6 +551,8 @@ const basketData = loadStored(BK_KEY, []);
 let basket = Array.isArray(basketData) ? basketData.map(migrateBasketItem) : [];
 let userGloss = loadStored(GLOSS_KEY, {});
 const prefs = loadStored(PREF_KEY, { theme: 'light', fontStep: 0, zh: true });
+const isReading = DATA.content_kind === 'reading';
+if (isReading) document.body.classList.add('reading');
 let editingKey = null;
 let popWord = null;
 
@@ -524,6 +568,7 @@ function getGloss(key) {
 function applyPrefs() {
   document.documentElement.dataset.theme = prefs.theme === 'dark' ? 'dark' : 'light';
   document.body.style.setProperty('--reader-size', `${18.5 + (prefs.fontStep || 0)}px`);
+  if (isReading) document.body.style.setProperty('--reading-size', `${(innerWidth <= 840 ? 21 : 25) + (prefs.fontStep || 0)}px`);
   document.body.classList.toggle('hide-zh', prefs.zh === false);
 }
 applyPrefs();
@@ -534,7 +579,7 @@ saveStored(RECENT_KEY, {
   title: DATA.news[0]?.title || ''
 });
 const firstRun = document.getElementById('first-run');
-if (!loadStored(ONBOARD_KEY, false)) firstRun.hidden = false;
+if (!isReading && !loadStored(ONBOARD_KEY, false)) firstRun.hidden = false;
 document.getElementById('first-run-close').onclick = () => {
   firstRun.hidden = true;
   saveStored(ONBOARD_KEY, true);
@@ -595,9 +640,17 @@ document.getElementById('hdate').textContent = fmtDate(DATA.date);
 document.getElementById('story-count').textContent = DATA.news.length + ' Themen';
 document.title = 'Deutsch Daily — ' + fmtDate(DATA.date);
 if (DATA.source_label) document.getElementById('source-label').textContent = DATA.source_label;
+if (isReading) {
+  document.getElementById('source-label').textContent = DATA.level + ' · ' + DATA.source_label;
+  document.getElementById('btn-zh').textContent = '中文对照';
+  const note = document.getElementById('adaptation');
+  note.textContent = DATA.adaptation;
+  note.hidden = !DATA.adaptation;
+}
 mountPlayer();
 const vlink = document.getElementById('vlink');
-if (DATA.video_page) vlink.href = DATA.video_page;
+if (DATA.source_url || DATA.video_page) vlink.href = DATA.source_url || DATA.video_page;
+if (isReading) vlink.textContent = '查看新闻原文 ↗';
 else vlink.style.display = 'none';
 
 function storyExtras(n, compact) {
@@ -647,12 +700,18 @@ DATA.news.forEach((n, i) => {
     `<article id="story-${i + 1}" data-idx="${i}"><div class="n-head"><span class="n-idx">${String(i+1).padStart(2,'0')}</span><div><h2>${esc(n.title)}</h2>${n.title_zh ? `<div class="zh h-zh">${esc(n.title_zh)}</div>` : ''}</div></div>${paras}<div class="article-extras">${storyExtras(n)}</div></article>`);
 });
 document.getElementById('topic-list').innerHTML = DATA.news.map((n, i) =>
-  `<div class="topic" data-idx="${i}"><a href="#story-${i + 1}" data-idx="${i}"><b>${String(i + 1).padStart(2, '0')}</b><span>${esc(n.title)}</span></a><div class="topic-study">${storyExtras(n, true)}</div></div>`
-).join('');
+  `<div class="topic" data-idx="${i}"><a href="#story-${i + 1}" data-idx="${i}"><b>${String(i + 1).padStart(2, '0')}</b><span>${esc(n.title)}</span></a>${isReading ? '' : `<div class="topic-study">${storyExtras(n, true)}</div>`}</div>`
+).join('') + (isReading ? '<div class="topic-study reading-study" id="reading-study"></div>' : '');
 
 let activeStory = -1;
 function setActiveStory(i, scroll) {
   if (i < 0 || i >= DATA.news.length) return;
+  if (isReading && activeStory !== i) {
+    const study = document.getElementById('reading-study');
+    study.innerHTML = storyExtras(DATA.news[i], true);
+    study.querySelector('.stab')?.classList.add('on');
+    study.querySelector('.spane')?.classList.add('on');
+  }
   activeStory = i;
   document.querySelectorAll('#topic-list .topic').forEach((el, idx) => el.classList.toggle('on', idx === i));
   if (scroll) document.getElementById('story-' + (i + 1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -693,6 +752,7 @@ function fmtClock(sec) {
   return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
 }
 function mountPlayer() {
+  if (isReading) return;
   const box = document.getElementById('player');
   const fallback = () => {
     if (!DATA.embed_url) {

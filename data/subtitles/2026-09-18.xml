@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.000" end="00:00:04.000">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:05.000" end="00:00:07.400">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:10.800" end="00:00:13.880">
+        <tt:span style="textWhite">Willkommen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zur tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:14.000" end="00:00:17.400">
+        <tt:span style="textWhite">Ich bin Susanne Holst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:32.200" end="00:00:34.440">
+        <tt:span style="textWhite">Und nun zur 1. Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:37.680" end="00:00:41.120">
+        <tt:span style="textWhite">In Deutschland gibt es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">16 Bundesländer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:41.400" end="00:00:44.400">
+        <tt:span style="textWhite">Jedes Bundesland hat</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ein eigenes Parlament.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:44.960" end="00:00:48.880">
+        <tt:span style="textWhite">Das Parlament wählt die Regierung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von dem Bundesland und entscheidet</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:48.920" end="00:00:49.920">
+        <tt:span style="textWhite">über Gesetze.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:50.480" end="00:00:53.800">
+        <tt:span style="textWhite">In den Bundesländern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Mecklenburg-Vorpommern und Berlin</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:00:53.840" end="00:00:56.920">
+        <tt:span style="textWhite">wird am Sonntag</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ein neues Parlament gewählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:00:57.240" end="00:00:58.840">
+        <tt:span style="textWhite">Wer sind die Kandidaten?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:00:58.920" end="00:01:00.880">
+        <tt:span style="textWhite">Wer hat Chancen, zu gewinnen?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:00.960" end="00:01:03.400">
+        <tt:span style="textWhite">Dazu zeigen wir jetzt einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:04.000" end="00:01:08.240">
+        <tt:span style="textWhite">Das Land Mecklenburg-Vorpommern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">liegt im Osten von Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:08.280" end="00:01:10.080">
+        <tt:span style="textWhite">Direkt an der Ostsee.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:10.680" end="00:01:12.640">
+        <tt:span style="textWhite">Manuela Schwesig ist im Moment</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:12.680" end="00:01:15.960">
+        <tt:span style="textWhite">die Chefin von der Regierung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Mecklenburg-Vorpommern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:16.000" end="00:01:17.880">
+        <tt:span style="textWhite">Sie ist von der Partei SPD.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:18.520" end="00:01:22.600">
+        <tt:span style="textWhite">Sie sagt, ich will wieder Chefin</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Regierung werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:23.120" end="00:01:25.840">
+        <tt:span style="textWhite">Auch dieser Mann will</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Chef von der Regierung</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:25.880" end="00:01:28.040">
+        <tt:span style="textWhite">in Mecklenburg-Vorpommern werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:28.080" end="00:01:29.920">
+        <tt:span style="textWhite">Er heißt Leif-Erik Holm.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:30.200" end="00:01:32.120">
+        <tt:span style="textWhite">Er ist von der Partei AfD.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:32.920" end="00:01:37.120">
+        <tt:span style="textWhite">Wahrscheinlich gewinnt entweder Holm</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder Schwesig die Wahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:37.160" end="00:01:39.760">
+        <tt:span style="textWhite">Die anderen Parteien</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bekommen vermutlich nicht</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:39.800" end="00:01:43.160">
+        <tt:span style="textWhite">genug Stimmen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">um die neue Regierung anzuführen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:01:44.080" end="00:01:46.760">
+        <tt:span style="textWhite">In Berlin wird am Sonntag</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch gewählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:01:46.840" end="00:01:49.280">
+        <tt:span style="textWhite">Dort ist die Situation ganz anders.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:01:49.320" end="00:01:52.120">
+        <tt:span style="textWhite">In Berlin gibt es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">drei oder vier Parteien,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:01:52.160" end="00:01:54.200">
+        <tt:span style="textWhite">die bei der Wahl gewinnen können.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:01:54.400" end="00:01:55.800">
+        <tt:span style="textWhite">Die Linke,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:01:56.400" end="00:01:57.800">
+        <tt:span style="textWhite">die CDU,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:01.200" end="00:02:03.000">
+        <tt:span style="textWhite">die AfD und</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:04.400" end="00:02:05.800">
+        <tt:span style="textWhite">die Grünen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:06.840" end="00:02:11.640">
+        <tt:span style="textWhite">Im Moment ist Kai Wegner von der CDU</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Chef von der Regierung in Berlin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:11.680" end="00:02:14.640">
+        <tt:span style="textWhite">Er hört nach der Wahl aber</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf jeden Fall auf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:14.680" end="00:02:17.840">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:22.080" end="00:02:25.440">
+        <tt:span style="textWhite">In Deutschland ist Tanken gerade</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sehr teuer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:26.080" end="00:02:29.160">
+        <tt:span style="textWhite">Benzin und Diesel kosten so viel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wie noch nie.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:29.200" end="00:02:31.840">
+        <tt:span style="textWhite">Das liegt an dem Krieg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Nahen Osten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:31.960" end="00:02:35.440">
+        <tt:span style="textWhite">Die Regierung sagt, wir</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wollen den Menschen helfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:35.520" end="00:02:40.200">
+        <tt:span style="textWhite">Die Partei CDU schlägt vor, Sprit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">soll ab Oktober bis zu 25 Cent</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:02:40.240" end="00:02:42.040">
+        <tt:span style="textWhite">billiger werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:02:43.040" end="00:02:46.360">
+        <tt:span style="textWhite">Was sie dafür tun will,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat die Regierung</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:02:46.400" end="00:02:48.280">
+        <tt:span style="textWhite">aber noch nicht entschieden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:02:48.320" end="00:02:51.040">
+        <tt:span style="textWhite">Vielleicht kommt der Tankrabatt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wieder.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:02:51.080" end="00:02:53.440">
+        <tt:span style="textWhite">Den gab es schon im Mai und Juni.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:02:53.480" end="00:02:56.880">
+        <tt:span style="textWhite">Dadurch wurde der Sprit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">um einige Cent günstiger.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:02:56.920" end="00:03:00.360">
+        <tt:span style="textWhite">Die SPD sagt, wir wollen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">uns schnell entscheiden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:01.200" end="00:03:03.560">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:07.520" end="00:03:10.680">
+        <tt:span style="textWhite">In Russland bestimmt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">seit mehr als 25 Jahren</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:10.720" end="00:03:12.320">
+        <tt:span style="textWhite">Wladimir Putin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:12.720" end="00:03:15.960">
+        <tt:span style="textWhite">Er ist Präsident</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und herrscht autoritär.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:16.360" end="00:03:20.040">
+        <tt:span style="textWhite">Das bedeutet, er</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">lässt keine anderen Meinungen zu.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:20.920" end="00:03:23.840">
+        <tt:span style="textWhite">Viele Gegner von Putin</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind im Gefängnis,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:24.040" end="00:03:26.600">
+        <tt:span style="textWhite">im Ausland oder nicht mehr am Leben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:27.360" end="00:03:31.080">
+        <tt:span style="textWhite">Journalisten dürfen in Russland nicht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">frei berichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:03:31.280" end="00:03:33.600">
+        <tt:span style="textWhite">Trotzdem wird in Russland gewählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:03:33.640" end="00:03:36.280">
+        <tt:span style="textWhite">Z.B. jetzt bei der Parlamentswahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:03:36.680" end="00:03:40.200">
+        <tt:span style="textWhite">Auf dem Foto ist eine Frau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in einem Wahllokal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:03:40.240" end="00:03:44.080">
+        <tt:span style="textWhite">Bei der Wahl dürfen aber nicht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">alle Parteien mitmachen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:03:44.440" end="00:03:45.840">
+        <tt:span style="textWhite">Wenn z.B.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:03:45.880" end="00:03:50.000">
+        <tt:span style="textWhite">eine Partei den Krieg von Russland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Ukraine kritisiert,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:03:50.080" end="00:03:52.240">
+        <tt:span style="textWhite">dann darf sie nicht mitmachen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:03:52.280" end="00:03:55.520">
+        <tt:span style="textWhite">Wir zeigen jetzt einen Film</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über die Parlamentswahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:03:56.560" end="00:03:59.160">
+        <tt:span style="textWhite">Dieser Mann ist Grigory Grishin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:03:59.360" end="00:04:03.440">
+        <tt:span style="textWhite">Er ist gegen Präsident Putin</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und den Krieg in der Ukraine.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:03.720" end="00:04:05.800">
+        <tt:span style="textWhite">Seine Partei heißt Jabloko.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:06.400" end="00:04:09.280">
+        <tt:span style="textWhite">Die Partei darf bei der Wahl</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nicht mitmachen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:09.320" end="00:04:12.840">
+        <tt:span style="textWhite">Als einzelner Kandidat darf Grishin</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aber antreten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:13.760" end="00:04:15.960">
+        <tt:span style="textWhite">Er sagt, die Leute wissen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:16.200" end="00:04:18.680">
+        <tt:span style="textWhite">meine Partei will</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Frieden in der Ukraine.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:18.720" end="00:04:21.200">
+        <tt:span style="textWhite">Das wollen auch viele Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Moskau.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:04:21.240" end="00:04:24.240">
+        <tt:span style="textWhite">Sie zwinkern mir zu oder geben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mir die Hand.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:04:24.760" end="00:04:28.120">
+        <tt:span style="textWhite">Nur wenige Menschen in Russland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">trauen sich, gegen Putin</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:04:28.200" end="00:04:29.800">
+        <tt:span style="textWhite">zu protestieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:04:29.840" end="00:04:32.680">
+        <tt:span style="textWhite">Vor allem junge Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind gegen den Krieg.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:04:32.720" end="00:04:35.640">
+        <tt:span style="textWhite">Sie helfen Grishin beim Wahlkampf</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Stadt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:04:37.080" end="00:04:39.880">
+        <tt:span style="textWhite">Grishin wählt mit seinem Sohn</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Moskau.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:04:39.920" end="00:04:43.880">
+        <tt:span style="textWhite">Er rechnet nicht damit, einen Sitz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Parlament zu bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:04:43.920" end="00:04:45.440">
+        <tt:span style="textWhite">Trotzdem tritt er an.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:04:47.720" end="00:04:52.360">
+        <tt:span style="textWhite">Er sagt, am Montag weiß ich, ob ich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bald im Parlament sitze oder nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:04:52.440" end="00:04:54.080">
+        <tt:span style="textWhite">Egal, wie es ausgeht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:04:54.160" end="00:04:57.360">
+        <tt:span style="textWhite">Ich habe das Gefühl,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hier etwas Wichtiges zu machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:04:57.400" end="00:04:59.520">
+        <tt:span style="textWhite">Grishin ist es wichtig zu zeigen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:04:59.560" end="00:05:03.600">
+        <tt:span style="textWhite">In Russland gibt es noch Menschen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die anders denken als Putin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:04.680" end="00:05:06.880">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:11.000" end="00:05:13.600">
+        <tt:span style="textWhite">Malaria ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine gefährliche Krankheit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:13.640" end="00:05:16.360">
+        <tt:span style="textWhite">Menschen können an Malaria sterben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:17.120" end="00:05:19.960">
+        <tt:span style="textWhite">Die Krankheit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bekommen Menschen durch den Stich</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:05:20.000" end="00:05:21.560">
+        <tt:span style="textWhite">von bestimmten Mücken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:05:21.800" end="00:05:24.000">
+        <tt:span style="textWhite">Auf dem Foto ist so eine Mücke.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:05:24.600" end="00:05:28.600">
+        <tt:span style="textWhite">Bei dem Mückenstich kommt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ein winziges Lebewesen in den Körper.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:05:28.640" end="00:05:31.520">
+        <tt:span style="textWhite">Dieses Lebewesen löst Malaria aus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:05:32.640" end="00:05:36.480">
+        <tt:span style="textWhite">Normalerweise gibt es Malaria</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nur in sehr warmen Ländern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:05:36.520" end="00:05:40.280">
+        <tt:span style="textWhite">Jetzt ist die Krankheit aber</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch in der Stadt Frankfurt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:05:40.320" end="00:05:44.520">
+        <tt:span style="textWhite">Acht Menschen sind krank, drei</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind an Malaria gestorben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:05:44.960" end="00:05:45.960">
+        <tt:span style="textWhite">Warum?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:05:46.160" end="00:05:48.080">
+        <tt:span style="textWhite">Dazu zeigen wir einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:05:48.960" end="00:05:53.560">
+        <tt:span style="textWhite">Am Flughafen in Frankfurt kommen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">jeden Tag sehr viele Flugzeuge an.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:05:53.640" end="00:05:56.560">
+        <tt:span style="textWhite">Auch aus Ländern,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in denen es Malaria gibt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:05:56.640" end="00:06:00.000">
+        <tt:span style="textWhite">Die Behörden sagen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wahrscheinlich ist eine Malaria-Mücke</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:00.040" end="00:06:02.760">
+        <tt:span style="textWhite">in einem Koffer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit nach Frankfurt gekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:02.800" end="00:06:05.720">
+        <tt:span style="textWhite">Dort hat sie</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dann mehrere Menschen gestochen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:05.800" end="00:06:09.680">
+        <tt:span style="textWhite">Manche Menschen in der Nähe</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vom Flughafen haben jetzt Angst.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:06:10.240" end="00:06:12.600">
+        <tt:span style="textWhite">Diese Frau sagt, wir machen uns</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:06:12.640" end="00:06:15.600">
+        <tt:span style="textWhite">große Sorgen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und passen gerade besonders auf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:06:15.640" end="00:06:17.840">
+        <tt:span style="textWhite">Andere Menschen sind entspannt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:06:18.160" end="00:06:21.560">
+        <tt:span style="textWhite">Dieser Mann sagt, ich habe</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">keine Angst vor Malaria.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:06:21.600" end="00:06:25.880">
+        <tt:span style="textWhite">Die Behörden beantworten am Telefon</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gerade viele Fragen zur Krankheit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:06:26.240" end="00:06:29.960">
+        <tt:span style="textWhite">Eine Mitarbeiterin erzählt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Menschen wollen wissen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:06:30.240" end="00:06:33.840">
+        <tt:span style="textWhite">wie erkenne ich Malaria,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">muss ich mir Sorgen machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:06:33.920" end="00:06:38.200">
+        <tt:span style="textWhite">Wir beruhigen und sagen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das ist ein sehr seltenes Ereignis.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub114" style="textCenter" region="bottom" begin="00:06:38.400" end="00:06:42.280">
+        <tt:span style="textWhite">Ein Mitarbeiter von der Stadt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Frankfurt spricht mit Ärzten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub115" style="textCenter" region="bottom" begin="00:06:42.320" end="00:06:43.720">
+        <tt:span style="textWhite">Er sagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub116" style="textCenter" region="bottom" begin="00:06:43.760" end="00:06:47.520">
+        <tt:span style="textWhite">vor allem bei Menschen mit Fieber</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und Durchfall sollen die Ärzte</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub117" style="textCenter" region="bottom" begin="00:06:47.560" end="00:06:49.360">
+        <tt:span style="textWhite">einen Test machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub118" style="textCenter" region="bottom" begin="00:06:49.400" end="00:06:51.280">
+        <tt:span style="textWhite">Dafür nehmen sie Blut ab.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub119" style="textCenter" region="bottom" begin="00:06:51.720" end="00:06:54.280">
+        <tt:span style="textWhite">Er sagt, es gibt gute Medikamente.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub120" style="textCenter" region="bottom" begin="00:06:54.320" end="00:06:59.280">
+        <tt:span style="textWhite">Wenn die Krankheit früh erkannt wird,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">muss kein Mensch an Malaria sterben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub121" style="textCenter" region="bottom" begin="00:07:00.920" end="00:07:04.320">
+        <tt:span style="textWhite">Rund um den Flughafen gibt es jetzt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Fallen für Mücken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub122" style="textCenter" region="bottom" begin="00:07:04.400" end="00:07:07.640">
+        <tt:span style="textWhite">Bisher ist dort</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">keine Mücke gefunden worden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub123" style="textCenter" region="bottom" begin="00:07:07.680" end="00:07:09.920">
+        <tt:span style="textWhite">die Malaria übertragen kann.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub124" style="textCenter" region="bottom" begin="00:07:28.120" end="00:07:30.000">
+        <tt:span style="textWhite">Jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub125" style="textCenter" region="bottom" begin="00:07:30.400" end="00:07:33.200">
+        <tt:span style="textWhite">Oben im Norden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gibt es Wind und Regen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub126" style="textCenter" region="bottom" begin="00:07:33.240" end="00:07:35.760">
+        <tt:span style="textWhite">Unten im Süden scheint die Sonne.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub127" style="textCenter" region="bottom" begin="00:07:39.760" end="00:07:42.640">
+        <tt:span style="textWhite">Das war die tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub128" style="textCenter" region="bottom" begin="00:07:43.040" end="00:07:44.880">
+        <tt:span style="textWhite">Tschüss, bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub129" style="textCenter" region="bottom" begin="00:07:51.880" end="00:07:53.880">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>

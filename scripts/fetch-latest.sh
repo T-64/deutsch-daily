@@ -1,6 +1,6 @@
 #!/bin/bash
 # 纯管道（无AI）：抓最新一期
-#   bash scripts/fetch-latest.sh            # 默认 20:00 正片
+#   bash scripts/fetch-latest.sh            # 默认简易德语
 #   bash scripts/fetch-latest.sh 20uhr
 #   bash scripts/fetch-latest.sh einfach    # 简易德语
 # 日期以 Europe/Berlin 的媒体文件日（TV-YYYYMMDD）为准。
@@ -14,13 +14,10 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 DATA="$ROOT/data"
-PROXY="http://127.0.0.1:7890"
-export http_proxy="$PROXY" https_proxy="$PROXY" HTTP_PROXY="$PROXY" HTTPS_PROXY="$PROXY"
-
-SOURCE="${1:-20uhr}"
+SOURCE="${1:-einfach}"
 case "$SOURCE" in
   einfach|einfache|tse) SOURCE=einfach ;;
-  20uhr|tagesschau|ts|20) SOURCE=20uhr ;;
+  20uhr|tagesschau|ts|20) echo "20:00 edition is retired; use einfach" >&2; exit 1 ;;
   *)
     echo "usage: fetch-latest.sh [einfach|20uhr]" >&2
     exit 1
@@ -38,7 +35,7 @@ else
 fi
 
 echo "[1/3] Fetching $SOURCE episode list..." >&2
-LIST_HTML=$(curl -sS --max-time 30 -x "$PROXY" "$LIST_URL")
+LIST_HTML=$(curl -fsS --max-time 45 "$LIST_URL")
 EPISODE_PATH=$(echo "$LIST_HTML" | grep -o "$EPISODE_GREP" | head -1)
 
 if [ -z "$EPISODE_PATH" ]; then
@@ -52,7 +49,7 @@ echo "  Episode: $EPISODE_PATH" >&2
 echo "[2/3] Fetching episode page..." >&2
 TMP=$(mktemp)
 trap 'rm -f "$TMP"' EXIT
-curl -sS --max-time 30 -x "$PROXY" "$EPISODE_URL" -o "$TMP"
+curl -fsS --max-time 45 "$EPISODE_URL" -o "$TMP"
 if [ ! -s "$TMP" ]; then
   echo "ERROR: empty episode page" >&2
   exit 1

@@ -3,153 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="把真实德语视频变成逐句对译、可查词、可导出 Anki 的学习材料。">
-<title>Deutsch Daily — 用真实视频学德语</title>
+<meta name="description" content="适合 A2–B1 的简易德语新闻：德中对照、重点词汇、语法提示和个人生词本。">
+<title>Deutsch Daily — 每天一点，读懂德语</title>
 <style>
-  :root {
-    --bg: #eef2f0; --surface: #fff; --surface-2: #f7f9f8; --ink: #172127;
-    --muted: #647077; --line: #dce4e1; --accent: #176b72; --accent-soft: #dceeed;
-    --warm: #d98f39; --shadow: 0 18px 50px rgba(20,46,47,.09);
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-  body {
-    min-height: 100vh; padding: 24px; background:
-      radial-gradient(circle at 85% 5%, rgba(23,107,114,.12), transparent 32rem),
-      radial-gradient(circle at 5% 55%, rgba(217,143,57,.10), transparent 28rem), var(--bg);
-    color: var(--ink); font: 16px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, "Noto Sans SC", sans-serif;
-  }
-  .wrap { width: min(1040px, 100%); margin: 0 auto; padding-bottom: 70px; }
-  nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: clamp(48px, 7vw, 82px); }
-  .brand { display: inline-flex; align-items: center; gap: 10px; color: inherit; font-weight: 800; letter-spacing: -.02em; text-decoration: none; }
-  .brand-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--accent); color: #fff; font: 800 12px/1 ui-monospace, monospace; }
-  .nav-links { display: flex; gap: 18px; align-items: center; }
-  .nav-links a { color: var(--muted); font-size: 13px; font-weight: 700; text-decoration: none; }
-  .nav-links a:hover { color: var(--accent); }
-  header { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: end; margin-bottom: 28px; }
-  h1 { max-width: 680px; font: 750 clamp(40px, 6.5vw, 68px)/1.04 ui-serif, Georgia, serif; letter-spacing: -.055em; }
-  h1 span { display: block; white-space: nowrap; }
-  .sub { max-width: 390px; color: var(--muted); font-size: 15px; }
-  .import-card { margin-bottom: 54px; padding: clamp(20px, 4vw, 34px); border: 1px solid var(--line); border-radius: 24px; background: rgba(255,255,255,.88); box-shadow: var(--shadow); }
-  .import-card h2 { margin-bottom: 6px; font: 750 clamp(21px, 3vw, 28px)/1.25 ui-serif, Georgia, serif; letter-spacing: -.025em; }
-  .import-card p { margin-bottom: 18px; color: var(--muted); font-size: 14px; }
-  .url-form { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; }
-  .url-form input { min-width: 0; height: 52px; padding: 0 16px; border: 1px solid #cbd8d4; border-radius: 14px; background: var(--surface); color: var(--ink); font: 500 15px/1 ui-sans-serif, system-ui; outline: none; }
-  .url-form input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(23,107,114,.13); }
-  .url-form button { min-height: 52px; padding: 0 22px; border: 0; border-radius: 14px; background: var(--accent); color: #fff; cursor: pointer; font: 800 14px/1 ui-sans-serif, system-ui; }
-  .url-form button:hover { background: #125b61; }
-  .url-error { min-height: 22px; padding-top: 8px; color: #a33d32; font-size: 13px; }
-  .import-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--muted); font-size: 12px; }
-  .import-meta b { color: var(--accent); }
-  .import-meta a { color: var(--accent); font-weight: 750; }
-  .continue { display: none; margin: -26px 0 42px; }
-  .continue.on { display: block; }
-  .continue a { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 14px; align-items: center; padding: 15px 17px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.8); color: inherit; text-decoration: none; }
-  .continue b { color: var(--accent); font-size: 13px; }
-  .continue span { min-width: 0; overflow: hidden; color: var(--muted); font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
-  .section-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin: 0 3px 14px; }
-  .section-head h2 { font: 750 24px/1.2 ui-serif, Georgia, serif; letter-spacing: -.025em; }
-  .section-head p, .section-head span { color: var(--muted); font-size: 13px; }
-  .series { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-bottom: 42px; }
-  a.series-card { display: grid; gap: 10px; min-height: 168px; padding: 22px; border-radius: 24px; background: var(--ink); color: #eff6f4; text-decoration: none; box-shadow: var(--shadow); }
-  a.series-card.einfach { background: #1c3d40; }
-  .series-kicker { color: #9fd3d0; font: 800 11px/1.4 ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
-  .series-name { font: 750 22px/1.25 ui-serif, Georgia, serif; letter-spacing: -.03em; }
-  .series-meta { color: #9fd3d0; font-size: 13px; }
-  .series-titles { color: #d7e8e6; font-size: 14px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-  .days { display: grid; gap: 10px; }
-  .day { display: grid; grid-template-columns: 88px minmax(0,1fr); gap: 16px; align-items: start; padding: 16px 18px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.78); }
-  .day-date b { display: block; color: var(--accent); font: 800 25px/1 ui-serif, Georgia, serif; }
-  .day-date span { color: var(--muted); font: 700 10px/1.4 ui-monospace, monospace; text-transform: uppercase; }
-  .day-shows { display: grid; gap: 8px; }
-  a.show { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; align-items: center; padding: 8px 0; color: inherit; text-decoration: none; }
-  a.show + a.show { border-top: 1px dashed var(--line); padding-top: 10px; }
-  .show-name { color: var(--accent); font: 800 11px/1.3 ui-monospace, monospace; letter-spacing: .06em; }
-  .show-titles { color: var(--muted); font-size: 13px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-  .show .arrow { color: var(--accent); font-size: 18px; }
-  footer { display: flex; justify-content: space-between; gap: 24px; margin-top: 44px; padding: 22px 3px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
-  footer a { color: inherit; }
-  @media (max-width: 700px) { body { padding: 16px 12px; } nav { margin-bottom: 46px; } header { display: block; } .sub { margin-top: 16px; } .url-form { grid-template-columns: 1fr; } .url-form button { width: 100%; } .series { grid-template-columns: 1fr; } .day { grid-template-columns: 66px minmax(0,1fr); } }
-  @media (max-width: 430px) { h1 { font-size: 42px; } .nav-links a:first-child { display: none; } .series-name { font-size: 19px; } footer { display: block; } }
+:root { --bg:#fff; --ink:#193e38; --muted:#5d7471; --accent:#245d4c; --soft:#eff5f1; --line:#d8e3df; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body { background:var(--bg); color:var(--ink); font:16px/1.65 system-ui,-apple-system,"Noto Sans CJK SC",sans-serif; }
+a { color:inherit; } button,input { font:inherit; } a:focus-visible,input:focus-visible { outline:3px solid #a5c8b6; outline-offset:4px; }
+.wrap { width:min(1408px,calc(100% - 80px)); margin:auto; }
+nav { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:74px; border-bottom:1px solid var(--line); }
+.brand { display:inline-flex; align-items:center; gap:16px; text-decoration:none; font:700 31px/1.2 Georgia,serif; letter-spacing:-.035em; }
+.mark { display:grid; place-items:center; width:40px; height:40px; background:var(--accent); color:#fff; font:20px Georgia,serif; }
+.links { display:flex; gap:40px; } .links a { text-decoration:none; font-size:17px; font-weight:650; } .links a:hover { text-decoration:underline; }
+header { padding:35px 0 25px; } h1 { font:700 clamp(34px,5.2vw,76px)/1.35 ui-serif,"Noto Serif CJK SC",Georgia,serif; letter-spacing:-.035em; }
+.sub { margin-top:7px; color:var(--muted); font-size:clamp(15px,1.8vw,25px); }
+.latest { padding:32px 44px; border-radius:12px; background:var(--soft); }
+.latest-meta { display:flex; flex-wrap:wrap; align-items:center; gap:20px; color:var(--muted); font-size:19px; }
+.latest-meta b { padding-right:22px; border-right:1px solid #bbcfc5; color:var(--accent); font-weight:650; }
+.latest h2 { margin:14px 0 6px; font:700 clamp(28px,4.6vw,66px)/1.2 Georgia,"Noto Serif",serif; letter-spacing:-.04em; }
+.latest p { color:var(--muted); font-size:clamp(16px,1.8vw,25px); }
+.latest-actions { display:flex; flex-wrap:wrap; gap:25px 40px; align-items:center; margin-top:22px; }
+.primary { display:inline-flex; align-items:center; justify-content:center; gap:16px; min-height:56px; padding:10px 40px; border-radius:10px; background:var(--accent); color:#fff; text-decoration:none; font-size:20px; font-weight:650; }
+.primary:hover { background:#194637; } .latest-actions span { font-size:18px; color:var(--muted); }
+.continue { margin-top:18px; } .continue[hidden] { display:none; } .continue a { display:flex; flex-wrap:wrap; gap:8px 20px; text-decoration:none; border-bottom:1px solid var(--line); padding:10px 0; } .continue span { color:var(--muted); }
+.columns { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(300px,1fr); gap:34px; margin:34px 0 20px; align-items:start; }
+.section-head { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px; margin-bottom:15px; } h3 { font:700 clamp(26px,2.6vw,36px)/1.4 ui-serif,"Noto Serif CJK SC",Georgia,serif; letter-spacing:-.03em; }
+.search { width:min(355px,100%); height:50px; padding:0 18px; border:1px solid var(--line); border-radius:10px; color:var(--ink); background:#fff; font-size:17px; } .search::placeholder { color:var(--muted); }
+.lesson { display:grid; grid-template-columns:140px minmax(0,1fr) 24px; align-items:start; gap:18px; padding:18px 7px; border-top:1px solid var(--line); text-decoration:none; }
+.lesson:hover { background:var(--soft); } .lesson time { padding-top:2px; color:var(--muted); font-size:16px; }
+.lesson h4 { font:700 25px/1.3 Georgia,serif; letter-spacing:-.02em; } .lesson p { margin-top:6px; color:var(--muted); font-size:16px; } .arrow { padding-top:5px; font-size:24px; }
+.empty { padding:24px 0; color:var(--muted); } .empty[hidden] { display:none; }
+.more { display:block; margin-top:12px; padding:10px 0; border:0; background:transparent; color:var(--accent); text-decoration:underline; text-underline-offset:4px; font:600 15px/1.5 system-ui,sans-serif; cursor:pointer; } .more[hidden] { display:none; }
+.guide { padding-left:34px; border-left:1px solid var(--line); } .guide ol { list-style:none; margin-top:10px; }
+.guide li { display:grid; grid-template-columns:56px 1fr; gap:26px; align-items:start; padding:18px 0; } .guide li+li { border-top:1px solid var(--line); }
+.num { display:grid; place-items:center; width:54px; height:54px; background:var(--soft); border-radius:50%; font:24px Georgia,serif; }
+.guide b { display:block; font-size:19px; font-weight:650; } .guide p { color:var(--muted); font-size:16px; } .source { margin-top:4px; color:var(--muted); font-size:14px; }
+footer { display:flex; justify-content:space-between; gap:20px; margin-top:18px; padding:18px 0 24px; border-top:1px solid var(--line); color:var(--muted); font-size:16px; } footer a { text-decoration:none; } footer a:hover { text-decoration:underline; }
+.sr { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+@media(max-width:900px) { .columns { grid-template-columns:1fr; } .guide { border-left:0; border-top:1px solid var(--line); padding:24px 0 0; } .guide ol { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; } .guide li { display:block; } .guide li+li { border-top:0; } .num { margin-bottom:12px; } .latest { padding:28px; } .brand { font-size:26px; } }
+@media(max-width:560px) { .wrap { width:calc(100% - 36px); } nav { min-height:76px; } .brand { gap:9px; font-size:22px; } .mark { width:30px; height:30px; font-size:15px; } .links { gap:16px; } .links a { font-size:13px; } .links a:first-child { display:none; } header { padding:30px 0 24px; } h1 { font-size:32px; } .latest { padding:24px 20px; } .latest h2 { font-size:34px; overflow-wrap:break-word; } .latest-meta { gap:12px; font-size:14px; } .latest-meta b { padding-right:12px; } .latest-actions { gap:14px; margin-top:20px; } .primary { min-height:50px; padding:10px 25px; font-size:17px; } .latest-actions span { font-size:14px; } .columns { margin-top:28px; } .section-head { gap:12px; } .search { width:100%; font-size:16px; } .lesson { grid-template-columns:1fr 22px; gap:5px 12px; padding:18px 0; } .lesson time { grid-column:1; font-size:13px; } .lesson .text { grid-column:1; } .lesson h4 { font-size:23px; } .lesson p { font-size:14px; } .arrow { grid-column:2; grid-row:1 / 3; align-self:center; } .guide ol { display:block; } .guide li { display:grid; gap:16px; } .guide li+li { border-top:1px solid var(--line); } .num { margin-bottom:0; } footer { font-size:13px; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <nav>
-    <a class="brand" href="index.html"><span class="brand-mark">DD</span><span>Deutsch Daily</span></a>
-    <div class="nav-links"><a href="about.html">使用说明</a><a href="https://github.com/T-64/deutsch-daily" target="_blank" rel="noopener">开源代码</a></div>
-  </nav>
-  <header>
-    <h1><span>把真实德语，</span><span>变成今天的一课</span></h1>
-    <p class="sub">逐句听、逐句读、随手查词。你可以从一个视频链接开始，也可以直接学习每天整理好的新闻。</p>
-  </header>
-  <section class="import-card" aria-labelledby="import-title">
-    <h2 id="import-title">打开一个视频</h2>
-    <p>粘贴链接；已支持的内容会直接进入逐句学习页。</p>
-    <form class="url-form" id="url-form" novalidate>
-      <label for="video-url" style="position:absolute;left:-9999px">视频链接</label>
-      <input id="video-url" name="url" type="url" inputmode="url" autocomplete="url" placeholder="https://www.tagesschau.de/…" aria-describedby="url-error">
-      <button type="submit">用这个视频学习</button>
-    </form>
-    <div class="url-error" id="url-error" role="alert" aria-live="polite"></div>
-    <div class="import-meta"><span><b>当前支持</b> 已收录的 Tagesschau</span><a href="studio.html">有字幕？创建本地课程</a><span>无需登录</span><span>生词保存在本机</span></div>
-  </section>
-  <section class="continue" id="continue"><a id="continue-link"><b>继续上次学习</b><span id="continue-title"></span><span aria-hidden="true">→</span></a></section>
-  <section id="today" aria-labelledby="today-title">
-    <div class="section-head"><div><h2 id="today-title">今日精选</h2><p>不想找视频，就从今天的一条新闻开始。</p></div></div>
-    <div class="series" id="series"></div>
-  </section>
-  <div class="section-head"><h2>往期</h2><span id="total"></span></div>
-  <div class="days" id="days"></div>
-  <footer><span>一个开源的真实语料学习实验。</span><span><a href="about.html">使用、隐私与内容边界</a> · <a href="https://github.com/T-64/deutsch-daily/issues" target="_blank" rel="noopener">反馈问题</a></span></footer>
+<nav aria-label="主导航"><a class="brand" href="index.html"><span class="mark">DD</span>Deutsch Daily</a><div class="links"><a href="#archive">往期阅读</a><a href="about.html">使用说明</a></div></nav>
+<header><h1>每天一点，读懂德语。</h1><p class="sub">A2–B1 简易新闻 · 德中对照 · 点词收藏</p></header>
+<section class="latest" id="latest" aria-labelledby="latest-title"></section>
+<section class="continue" id="continue" hidden><a id="continue-link"><b>继续上次学习 →</b><span id="continue-title"></span></a></section>
+<div class="columns">
+<section id="archive" aria-labelledby="archive-title"><div class="section-head"><h3 id="archive-title">往期阅读</h3><label class="sr" for="search">搜索主题或日期</label><input class="search" id="search" type="search" placeholder="搜索主题或日期" autocomplete="off" aria-controls="lessons"></div><div id="lessons"></div><p class="empty" id="empty" hidden>没有找到相关内容，试试其他主题或日期。</p><button type="button" class="more" id="more">加载更早的阅读 ↓</button><span class="sr" id="result-count" role="status" aria-live="polite"></span></section>
+<aside class="guide" aria-labelledby="guide-title"><h3 id="guide-title">按自己的节奏学</h3><ol><li><span class="num">01</span><div><b>先读德语</b><p>先尝试阅读原文，培养语感，了解大意。</p></div></li><li><span class="num">02</span><div><b>展开中文对照</b><p>遇到不懂的地方，再查看中文翻译，逐步理解。</p></div></li><li><span class="num">03</span><div><b>收藏今天的生词</b><p>将有用的词汇加入收藏，反复复习，加深记忆。</p></div></li></ol><p class="source">原文来源：tagesschau · Einfache Sprache</p></aside>
+</div>
+<footer><span>真实来源，轻松阅读。</span><a href="about.html">内容与隐私</a></footer>
 </div>
 <script>
 const ITEMS = __ITEMS__;
-const ORDER = ['20uhr', 'einfach'];
+const esc = s => String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const latest = ITEMS[0];
+const dateOf = (date, options) => new Date(date+'T12:00:00').toLocaleDateString('de-DE', options);
+if (latest) {
+ document.getElementById('latest').innerHTML = `<div class="latest-meta"><b>最新一期</b><time datetime="${esc(latest.date)}">${dateOf(latest.date,{day:'numeric',month:'long',year:'numeric'})}</time></div><h2 id="latest-title" lang="de">Nachrichten in einfacher Sprache</h2><p>从今天的新闻开始，读一小段真实德语。</p><div class="latest-actions"><a class="primary" href="${esc(latest.slug)}.html">开始阅读 <span aria-hidden="true" style="color:inherit">→</span></a><span>德中对照 · 词汇 · 语法</span></div>`;
+} else { document.getElementById('latest').innerHTML='<h2 id="latest-title">第一篇阅读正在准备中</h2>'; }
 try {
-  const recent = JSON.parse(localStorage.getItem('dd-recent-lesson') || 'null');
-  if (recent?.slug && ITEMS.some(item => item.slug === recent.slug)) {
-    document.getElementById('continue-link').href = recent.slug + '.html';
-    document.getElementById('continue-title').textContent = recent.title || recent.sourceLabel || recent.date;
-    document.getElementById('continue').classList.add('on');
-  }
+ const recent = JSON.parse(localStorage.getItem('dd-recent-lesson') || 'null');
+ if (recent?.slug && ITEMS.some(item=>item.slug===recent.slug)) {
+  document.getElementById('continue-link').href=recent.slug+'.html';
+  document.getElementById('continue-title').textContent=recent.title || recent.date;
+  document.getElementById('continue').hidden=false;
+ }
 } catch {}
-function hrefOf(it) { return (it.slug || it.date) + '.html'; }
-function labelOf(it) { return it.source_label || (it.source === '20uhr' ? 'T-64 · tagesschau 20:00 Uhr' : 'T-64 · tagesschau in einfacher Sprache'); }
-function latestOf(src) { return ITEMS.find(it => (it.source || 'einfach') === src); }
-
-document.getElementById('url-form').addEventListener('submit', event => {
-  event.preventDefault();
-  const field = document.getElementById('video-url');
-  const error = document.getElementById('url-error');
-  try {
-    const url = new URL(field.value.trim());
-    if (!['http:', 'https:'].includes(url.protocol)) throw new Error('protocol');
-    error.textContent = '';
-    location.href = 'open.html#' + encodeURIComponent(url.href);
-  } catch {
-    error.textContent = '请粘贴一个以 http:// 或 https:// 开头的完整视频链接。';
-    field.focus();
-  }
-});
-
-document.getElementById('series').innerHTML = ORDER.map(src => {
-  const it = latestOf(src);
-  if (!it) return '';
-  return `<a class="series-card ${src}" href="${hrefOf(it)}"><div class="series-kicker">最新一期 · ${formatLong(it.date)}</div><div class="series-name">${esc(labelOf(it))}</div><div class="series-meta">${it.count} Themen</div><div class="series-titles">${esc(it.titles)}</div></a>`;
-}).join('');
-
-const byDate = {};
-ITEMS.forEach(it => { (byDate[it.date] ||= []).push(it); });
-const dates = Object.keys(byDate).sort().reverse();
-document.getElementById('total').textContent = `${ITEMS.length} 期`;
-document.getElementById('days').innerHTML = dates.map(iso => {
-  const d = new Date(iso + 'T12:00:00');
-  const shows = byDate[iso].slice().sort((a, b) => ORDER.indexOf(a.source || 'einfach') - ORDER.indexOf(b.source || 'einfach'));
-  return `<div class="day"><div class="day-date"><b>${String(d.getDate()).padStart(2, '0')}</b><span>${d.toLocaleDateString('de-DE', { month: 'short' })}</span></div><div class="day-shows">${shows.map(it => `<a class="show" href="${hrefOf(it)}"><div><div class="show-name">${esc(labelOf(it))}</div><div class="show-titles">${esc(it.titles)}${it.count > 3 ? ' …' : ''}</div></div><span class="arrow" aria-hidden="true">→</span></a>`).join('')}</div></div>`;
-}).join('');
-
-function formatLong(iso) { return new Date(iso + 'T12:00:00').toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }); }
-function esc(s) { return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+let visibleCount=3;
+function showLessons() {
+ const query=document.getElementById('search').value.trim().toLocaleLowerCase('de');
+ const matches=ITEMS.filter(it=>[it.date,dateOf(it.date),it.titles,it.titles_zh].join(' ').toLocaleLowerCase('de').includes(query));
+ const archive=query ? matches : ITEMS.slice(1);
+ const items=query ? archive : archive.slice(0,visibleCount);
+ document.getElementById('lessons').innerHTML=items.map(it=>{
+  const titles=it.news_titles || [it.titles];
+  const translations=it.news_titles_zh || [it.titles_zh];
+  const hit=query ? titles.findIndex((title,i)=>[title,translations[i]].join(' ').toLocaleLowerCase('de').includes(query)) : 0;
+  const index=hit<0 ? 0 : hit;
+  return `<a class="lesson" href="${esc(it.slug)}.html" title="${esc(it.titles)}"><time datetime="${esc(it.date)}">${dateOf(it.date)}</time><div class="text"><h4 lang="de">${esc(titles[index])}</h4><p>${esc(translations[index] || '简易德语新闻')}</p></div><span class="arrow" aria-hidden="true">›</span></a>`;
+ }).join('');
+ document.getElementById('empty').hidden=items.length>0;
+ document.getElementById('more').hidden=Boolean(query) || items.length>=archive.length;
+ document.getElementById('result-count').textContent=query ? `找到 ${items.length} 期阅读` : `显示 ${items.length} 期往期阅读`;
+}
+document.getElementById('search').addEventListener('input',()=>{visibleCount=3;showLessons();});
+document.getElementById('more').addEventListener('click',()=>{visibleCount+=6;showLessons();});
+showLessons();
 </script>
 </body>
 </html>

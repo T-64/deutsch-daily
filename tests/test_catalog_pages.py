@@ -11,7 +11,7 @@ class CatalogPageTests(unittest.TestCase):
             previous_site = build.SITE
             build.SITE = Path(tmp)
             try:
-                build.build_index(["2026-08-20-20uhr"])
+                build.build_index(["2026-09-18", "2026-08-20-20uhr"])
                 home = (build.SITE / "index.html").read_text()
                 opener = (build.SITE / "open.html").read_text()
                 about = (build.SITE / "about.html").read_text()
@@ -20,13 +20,25 @@ class CatalogPageTests(unittest.TestCase):
             finally:
                 build.SITE = previous_site
 
-        self.assertIn("打开一个视频", home)
-        self.assertIn("open.html#", about)
-        self.assertIn("2026-08-20-20uhr", opener)
+        self.assertIn("每天一点，读懂德语。", home)
+        self.assertIn("搜索主题或日期", home)
+        self.assertIn("2026-09-18", opener)
+        self.assertNotIn("2026-08-20-20uhr", opener + home)
+        self.assertNotIn("打开一个视频", home)
         self.assertIn("创建本地课程", studio)
         self.assertIn("parseTimedText", studio_js)
-        self.assertIn("studio.html", home + opener + about)
+        self.assertIn("studio.html", opener + about)
         self.assertNotIn("__ITEMS__", home + opener)
+
+    def test_difficult_edition_is_not_buildable(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            previous = build.SITE
+            build.SITE = Path(tmp)
+            try:
+                with self.assertRaises(SystemExit):
+                    build.build("2026-08-20-20uhr")
+            finally:
+                build.SITE = previous
 
 
 if __name__ == "__main__":

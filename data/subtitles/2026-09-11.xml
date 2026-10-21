@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:00.000" end="00:00:01.920" />
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:02.960" end="00:00:03.960">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:04.300" end="00:00:07.020">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2025</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:10.340" end="00:00:13.260">
+        <tt:span style="textWhite">Willkommen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zur tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:13.340" end="00:00:17.140">
+        <tt:span style="textWhite">Ich bin Susanne Holst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:29.660" end="00:00:31.620">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:36.860" end="00:00:41.580">
+        <tt:span style="textWhite">In den USA gab es vor 25 Jahren</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einen großen Terroranschlag.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:42.820" end="00:00:45.980">
+        <tt:span style="textWhite">Terroristen haben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mehrere Flugzeuge entführt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:46.660" end="00:00:50.220">
+        <tt:span style="textWhite">Zwei Flugzeuge sind</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in die Stadt New York geflogen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:51.260" end="00:00:55.420">
+        <tt:span style="textWhite">Dort sind die Flugzeuge</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in das World Trade Center gestürzt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:00:55.940" end="00:00:57.380">
+        <tt:span style="textWhite">Das zeigt das Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:00:57.820" end="00:01:02.340">
+        <tt:span style="textWhite">World Trade Center ist englisch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und bedeutet Welthandelszentrum.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:03.660" end="00:01:07.460">
+        <tt:span style="textWhite">Zum World Trade Center</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gehörten zwei große Hochhäuser.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:08.260" end="00:01:12.100">
+        <tt:span style="textWhite">Die Flugzeuge haben die Hochhäuser</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sehr kaputt gemacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:12.260" end="00:01:14.820">
+        <tt:span style="textWhite">Deshalb</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind die Hochhäuser eingestürzt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:14.980" end="00:01:17.420">
+        <tt:span style="textWhite">Fast 3000 Menschen sind gestorben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:17.820" end="00:01:20.340">
+        <tt:span style="textWhite">Zu dem Terroranschlag</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">kommt jetzt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:21.620" end="00:01:25.060">
+        <tt:span style="textWhite">So sah die Stadt New York</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vor dem Terroranschlag aus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:25.500" end="00:01:28.060">
+        <tt:span style="textWhite">Die beiden Hochhäuser</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">waren sehr bekannt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:28.260" end="00:01:31.500">
+        <tt:span style="textWhite">Sie waren besonders hoch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und überall zu sehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:31.740" end="00:01:34.100">
+        <tt:span style="textWhite">Dann passierte der Terroranschlag.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:34.220" end="00:01:37.660">
+        <tt:span style="textWhite">Zuerst ist ein Flugzeug</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in ein Hochhaus geflogen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:37.900" end="00:01:42.180">
+        <tt:span style="textWhite">Danach gab es ein großes Loch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in dem Hochhaus und viel Rauch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:44.900" end="00:01:47.420">
+        <tt:span style="textWhite">Dann kam plötzlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ein zweites Flugzeug.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:47.580" end="00:01:49.980">
+        <tt:span style="textWhite">Es ist in das andere Hochhaus</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">geflogen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:50.100" end="00:01:52.940">
+        <tt:span style="textWhite">Dadurch gab es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine sehr große Explosion.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:54.220" end="00:01:57.260">
+        <tt:span style="textWhite">Beide Hochhäuser</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">waren stark beschädigt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:01:57.500" end="00:01:58.980">
+        <tt:span style="textWhite">Es gab große Feuer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:01:59.860" end="00:02:02.420">
+        <tt:span style="textWhite">Viele Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">waren in den Hochhäusern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:02:02.500" end="00:02:04.380">
+        <tt:span style="textWhite">Sie haben dort gearbeitet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:02:06.900" end="00:02:08.700">
+        <tt:span style="textWhite">Zum Beispiel dieser Mann.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:08.820" end="00:02:09.820">
+        <tt:span style="textWhite">Er sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:09.940" end="00:02:12.500">
+        <tt:span style="textWhite">Ich war weit oben in einem Hochhaus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:12.740" end="00:02:14.900">
+        <tt:span style="textWhite">Dann hörte ich eine Explosion.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:15.180" end="00:02:17.580">
+        <tt:span style="textWhite">Viele Sachen im Büro gingen kaputt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:17.620" end="00:02:19.860">
+        <tt:span style="textWhite">Wir sind schnell die Treppe runter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:19.900" end="00:02:22.380">
+        <tt:span style="textWhite">Auf dem Weg habe ich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine Stimme gehört.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:22.420" end="00:02:24.460">
+        <tt:span style="textWhite">Es war eine Frau im Rollstuhl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:24.500" end="00:02:26.460">
+        <tt:span style="textWhite">Ich habe sie runtergetragen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:26.500" end="00:02:27.900">
+        <tt:span style="textWhite">Es war totales Chaos.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:29.220" end="00:02:31.900">
+        <tt:span style="textWhite">Die Hochhäuser</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben lange Zeit gebrannt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:32.300" end="00:02:35.060">
+        <tt:span style="textWhite">Dann stürzte ein Haus plötzlich ein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:35.620" end="00:02:38.780">
+        <tt:span style="textWhite">Das ganze Hochhaus</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">fiel runter auf den Boden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:02:39.900" end="00:02:42.900">
+        <tt:span style="textWhite">Es bildete sich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine große Wolke aus Staub.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:02:43.060" end="00:02:45.220">
+        <tt:span style="textWhite">Sie bewegte sich sehr schnell.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:02:45.700" end="00:02:47.620">
+        <tt:span style="textWhite">Die Menschen rannten weg.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:02:48.060" end="00:02:49.980">
+        <tt:span style="textWhite">Doch der Staub war schneller.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:02:50.020" end="00:02:51.940">
+        <tt:span style="textWhite">Er war überall in der Luft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:02:54.580" end="00:02:57.500">
+        <tt:span style="textWhite">Dann stürzte auch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das zweite Hochhaus ein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:02:57.780" end="00:03:00.340">
+        <tt:span style="textWhite">Es gab wieder eine große Staubwolke.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:00.580" end="00:03:03.260">
+        <tt:span style="textWhite">Beide Hochhäuser waren einfach weg.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:05.260" end="00:03:06.500">
+        <tt:span style="textWhite">Dieser Mann sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:06.540" end="00:03:10.420">
+        <tt:span style="textWhite">Die Hochhäuser sind eingestürzt.</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Ich habe es gesehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:10.620" end="00:03:12.140">
+        <tt:span style="textWhite">Alles ist explodiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:12.580" end="00:03:15.540">
+        <tt:span style="textWhite">Dann bin ich gelaufen.</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">So schnell ich kann.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:15.700" end="00:03:17.500">
+        <tt:span style="textWhite">Ich bin 69 Jahre alt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:17.820" end="00:03:20.380">
+        <tt:span style="textWhite">Aber ich kann zum Glück noch rennen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:21.220" end="00:03:22.940">
+        <tt:span style="textWhite">Die Zerstörung war groß.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:03:23.060" end="00:03:24.580">
+        <tt:span style="textWhite">Überall lagen Sachen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:03:25.540" end="00:03:27.740">
+        <tt:span style="textWhite">Helfer suchten nach Menschen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:03:27.940" end="00:03:29.460">
+        <tt:span style="textWhite">Doch viele waren tot.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:03:29.620" end="00:03:32.060">
+        <tt:span style="textWhite">Fast 3000 Menschen sind gestorben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:03:35.060" end="00:03:37.260">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:03:39.900" end="00:03:42.860">
+        <tt:span style="textWhite">Der Terroranschlag war vor 25 Jahren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:03:43.100" end="00:03:45.460">
+        <tt:span style="textWhite">Viele Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind noch immer traurig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:03:45.500" end="00:03:48.100">
+        <tt:span style="textWhite">Sie haben jemanden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aus der Familie verloren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:03:48.180" end="00:03:51.020">
+        <tt:span style="textWhite">Oder Freunde.</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Oder Kollegen von der Arbeit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:03:51.220" end="00:03:53.660">
+        <tt:span style="textWhite">An die Toten wurde jetzt erinnert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:03:54.020" end="00:03:56.940">
+        <tt:span style="textWhite">Dafür gab es in New York</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine große Feier.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:03:57.100" end="00:04:00.020">
+        <tt:span style="textWhite">Die Namen von den Toten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wurden vorgelesen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:00.140" end="00:04:01.940">
+        <tt:span style="textWhite">Und es wurde getrauert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:02.220" end="00:04:04.060">
+        <tt:span style="textWhite">Dazu kommt jetzt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:05.420" end="00:04:09.740">
+        <tt:span style="textWhite">So sieht es 25 Jahre nach</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dem Terroranschlag in New York aus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:10.660" end="00:04:13.820">
+        <tt:span style="textWhite">Zwei große Löcher</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">erinnern an die Hochhäuser.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:04:13.940" end="00:04:17.140">
+        <tt:span style="textWhite">Die Löcher sind dort,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wo die Hochhäuser waren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:04:17.820" end="00:04:20.460">
+        <tt:span style="textWhite">In den Löchern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">fließt Wasser herunter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:04:21.500" end="00:04:24.140">
+        <tt:span style="textWhite">Am Rand sind die Namen von den Toten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:04:25.100" end="00:04:28.820">
+        <tt:span style="textWhite">Neben den Löchern gibt es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ein neues, großes Hochhaus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:04:30.180" end="00:04:32.100">
+        <tt:span style="textWhite">Dort war jetzt die Feier.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:04:32.540" end="00:04:34.580">
+        <tt:span style="textWhite">Viele Menschen sind gekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:04:34.620" end="00:04:38.220">
+        <tt:span style="textWhite">Politiker, Angehörige</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und Helfer von damals.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:04:40.420" end="00:04:42.460">
+        <tt:span style="textWhite">Dann ist es ganz still.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:04:42.820" end="00:04:44.340">
+        <tt:span style="textWhite">Eine Glocke läutet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:04:46.140" end="00:04:50.780">
+        <tt:span style="textWhite">In dem Moment flog vor 25 Jahren</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das erste Flugzeug in das Hochhaus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:04:52.020" end="00:04:55.300">
+        <tt:span style="textWhite">Auf der Bühne werden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">viele Namen vorgelesen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:04:55.420" end="00:04:57.500">
+        <tt:span style="textWhite">Es sind die Namen von den Toten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:04:57.740" end="00:05:00.900">
+        <tt:span style="textWhite">Sie alle starben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei dem großen Terroranschlag.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:01.340" end="00:05:02.900">
+        <tt:span style="textWhite">An sie wird erinnert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:05.260" end="00:05:07.460">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:10.980" end="00:05:14.300">
+        <tt:span style="textWhite">In der Schweiz hat es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einen schweren Unfall gegeben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:14.380" end="00:05:16.940">
+        <tt:span style="textWhite">Ein Bus mit Touristen ist umgekippt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:05:17.500" end="00:05:19.780">
+        <tt:span style="textWhite">Mehrere Menschen sind gestorben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:05:19.940" end="00:05:23.820">
+        <tt:span style="textWhite">Außerdem wurden Menschen verletzt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und mussten ins Krankenhaus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:05:23.860" end="00:05:26.020">
+        <tt:span style="textWhite">Dazu zeigen wir einen kurzen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:05:26.460" end="00:05:29.620">
+        <tt:span style="textWhite">Der Bus lag nach dem Unfall</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">neben der Straße.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:05:30.100" end="00:05:32.940">
+        <tt:span style="textWhite">Helfer haben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">deshalb große Geräte geholt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:05:33.380" end="00:05:37.580">
+        <tt:span style="textWhite">Die Geräte haben den Bus</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hochgezogen und wieder hingestellt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:05:37.860" end="00:05:39.220">
+        <tt:span style="textWhite">Er ist sehr kaputt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:05:39.540" end="00:05:44.180">
+        <tt:span style="textWhite">Experten wollen jetzt herausfinden,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wieso ist der Unfall passiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:05:46.300" end="00:05:48.660">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:06:00.220" end="00:06:02.140">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:06:02.660" end="00:06:04.820">
+        <tt:span style="textWhite">Unten im Süden scheint die Sonne.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:06:04.940" end="00:06:06.940">
+        <tt:span style="textWhite">Oben im Norden kann es regnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:12.060" end="00:06:14.700">
+        <tt:span style="textWhite">Das war die tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:14.820" end="00:06:16.980">
+        <tt:span style="textWhite">Tschüss, bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:20.980" end="00:06:23.140">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>

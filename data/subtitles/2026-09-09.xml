@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.080" end="00:00:04.240">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:04.480" end="00:00:07.200">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:10.620" end="00:00:13.780">
+        <tt:span style="textWhite">Willkommen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zur tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:13.820" end="00:00:17.400">
+        <tt:span style="textWhite">Ich bin Susanne Holst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:33.240" end="00:00:35.040">
+        <tt:span style="textWhite">Nun zur ersten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:39.400" end="00:00:42.000">
+        <tt:span style="textWhite">Im Bundestag, im deutschen Parlament,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:42.040" end="00:00:45.500">
+        <tt:span style="textWhite">reden die Politiker</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gerade über den neuen Haushalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:46.920" end="00:00:50.840">
+        <tt:span style="textWhite">D.h. sie besprechen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wofür soll der Staat Geld ausgeben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:51.880" end="00:00:55.680">
+        <tt:span style="textWhite">Die größte Gruppe in der Opposition</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">darf zuerst reden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:56.460" end="00:00:59.940">
+        <tt:span style="textWhite">In der Opposition sind die Parteien,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die nicht regieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:00:59.980" end="00:01:03.460">
+        <tt:span style="textWhite">Die größte Gruppe</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Opposition ist die AfD,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:01:04.020" end="00:01:05.940">
+        <tt:span style="textWhite">die Alternative für Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:06.720" end="00:01:10.760">
+        <tt:span style="textWhite">Die Chefin heißt Alice Weidel.</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Sie ist die Frau auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:10.900" end="00:01:12.540">
+        <tt:span style="textWhite">Sie hat zuerst geredet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:13.000" end="00:01:16.340">
+        <tt:span style="textWhite">Danach hat der Bundeskanzler</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Friedrich Merz geredet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:16.440" end="00:01:18.360">
+        <tt:span style="textWhite">Er ist der Mann auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:18.440" end="00:01:22.080">
+        <tt:span style="textWhite">Beide haben über die Arbeit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Regierung geredet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:22.160" end="00:01:25.160">
+        <tt:span style="textWhite">Was sie gesagt haben,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das zeigen wir jetzt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:27.240" end="00:01:29.520">
+        <tt:span style="textWhite">Das ist Alice Weidel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der AfD.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:31.200" end="00:01:35.840">
+        <tt:span style="textWhite">Sie sagt, die Regierung macht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">schlechte Arbeit bei der Wirtschaft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:37.180" end="00:01:39.580">
+        <tt:span style="textWhite">Viele Menschen sind ohne Arbeit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:39.940" end="00:01:42.460">
+        <tt:span style="textWhite">Und das werden immer mehr Menschen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:42.940" end="00:01:44.580">
+        <tt:span style="textWhite">Viele Firmen schließen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:44.940" end="00:01:48.620">
+        <tt:span style="textWhite">Und viele deutsche Firmen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gehen ins Ausland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:49.520" end="00:01:52.080">
+        <tt:span style="textWhite">Die Regierung gibt zu viel Geld aus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:52.960" end="00:01:56.120">
+        <tt:span style="textWhite">Sie gibt z.B. zu viel Geld</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für Migranten aus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:58.020" end="00:02:02.340">
+        <tt:span style="textWhite">Die Regierung ist schuld, dass es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Deutschland schlecht geht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:02:03.860" end="00:02:08.060">
+        <tt:span style="textWhite">Dann redet</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Bundeskanzler Friedrich Merz.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:02:08.540" end="00:02:11.940">
+        <tt:span style="textWhite">Er sagt, die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wollen Sicherheit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:02:12.420" end="00:02:15.060">
+        <tt:span style="textWhite">Sie wollen sicher</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sein in Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:02:15.500" end="00:02:18.220">
+        <tt:span style="textWhite">Sie wollen auch Schutz vor Krieg.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:18.300" end="00:02:21.220">
+        <tt:span style="textWhite">Und sie wollen Schutz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vor dem Klimawandel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:21.900" end="00:02:25.060">
+        <tt:span style="textWhite">Sicherheit und Schutz kosten Geld.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:25.760" end="00:02:28.480">
+        <tt:span style="textWhite">Deshalb muss</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Wirtschaft stark sein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:29.140" end="00:02:30.700">
+        <tt:span style="textWhite">Und sie ist stark.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:31.100" end="00:02:34.180">
+        <tt:span style="textWhite">Sie ist stärker,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">als viele Menschen denken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:34.900" end="00:02:38.060">
+        <tt:span style="textWhite">Die Regierung hat</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nämlich richtig entschieden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:38.100" end="00:02:41.140">
+        <tt:span style="textWhite">wie die Wirtschaft</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wieder stärker wird.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:41.900" end="00:02:43.820">
+        <tt:span style="textWhite">Aber das reicht noch nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:44.380" end="00:02:47.740">
+        <tt:span style="textWhite">Wir brauchen die Reformen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Regierung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:48.180" end="00:02:50.860">
+        <tt:span style="textWhite">Wir brauchen diese Veränderungen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:51.780" end="00:02:53.980">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:58.900" end="00:03:03.300">
+        <tt:span style="textWhite">WHO ist das kurze Wort</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für World Health Organisation.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:03:03.940" end="00:03:08.740">
+        <tt:span style="textWhite">Das ist Englisch und heißt auf</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Deutsch: Weltgesundheitsorganisation.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:03:09.380" end="00:03:13.020">
+        <tt:span style="textWhite">In der WHO sind fast alle Länder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Welt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:03:13.540" end="00:03:17.460">
+        <tt:span style="textWhite">Die WHO kümmert sich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">um die Gesundheit von den Menschen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:03:17.900" end="00:03:20.740">
+        <tt:span style="textWhite">Jetzt hat die WHO</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einen Bericht geschrieben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:03:20.780" end="00:03:23.860">
+        <tt:span style="textWhite">Darin steht,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wer ein Kind bekommen will,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:03:23.980" end="00:03:26.540">
+        <tt:span style="textWhite">der hört besser mit dem Rauchen auf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:03:26.700" end="00:03:29.500">
+        <tt:span style="textWhite">Rauchen kann nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">unfruchtbar machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:29.880" end="00:03:34.320">
+        <tt:span style="textWhite">Das bedeutet, Frauen können</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">schlechter oder kein Kind bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:34.760" end="00:03:36.680">
+        <tt:span style="textWhite">Wir zeigen einen Film dazu.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:37.560" end="00:03:39.080">
+        <tt:span style="textWhite">Das ist Nicole Gabor.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:40.460" end="00:03:45.460">
+        <tt:span style="textWhite">Sie hat früher geraucht,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">manchmal 15 Zigaretten am Tag.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:46.060" end="00:03:50.260">
+        <tt:span style="textWhite">Dann hat sie damit aufgehört</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und ist schwanger geworden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:51.040" end="00:03:54.040">
+        <tt:span style="textWhite">Nicole Gabor sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ich habe damals gedacht,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:55.920" end="00:04:00.360">
+        <tt:span style="textWhite">mein Kind soll nicht in dem Körper</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von einer Raucherin wachsen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:04:02.120" end="00:04:04.800">
+        <tt:span style="textWhite">Die WHO hat herausgefunden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:04:04.920" end="00:04:09.000">
+        <tt:span style="textWhite">Raucherinnen sind öfter unfruchtbar</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">als Nichtraucherinnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:04:11.560" end="00:04:14.840">
+        <tt:span style="textWhite">Diese Expertin von der WHO sagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:04:15.520" end="00:04:19.240">
+        <tt:span style="textWhite">wenn Frauen rauchen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dann haben sie weniger Eizellen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:04:21.600" end="00:04:25.520">
+        <tt:span style="textWhite">Nicole Gabor raucht schon</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">seit vielen Jahren nicht mehr.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:04:25.940" end="00:04:31.020">
+        <tt:span style="textWhite">Jetzt hilft sie anderen Frauen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit dem Rauchen aufzuhören.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:04:31.380" end="00:04:34.260">
+        <tt:span style="textWhite">Mit Online-Videos und Kursen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:04:35.060" end="00:04:38.820">
+        <tt:span style="textWhite">Nicole Gabor sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zu mir kommen viele Frauen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:04:39.060" end="00:04:43.020">
+        <tt:span style="textWhite">Sie wollen schwanger werden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und mit dem Rauchen aufhören.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:04:43.320" end="00:04:45.600">
+        <tt:span style="textWhite">Sie machen sich sehr viel Druck.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:04:46.140" end="00:04:48.860">
+        <tt:span style="textWhite">Ich versuche, den Druck rauszunehmen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:49.960" end="00:04:52.760">
+        <tt:span style="textWhite">Wenn Frauen mit dem Rauchen aufhören,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:52.800" end="00:04:56.220">
+        <tt:span style="textWhite">dann können sie wieder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">besser schwanger werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:57.860" end="00:05:00.060">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:05:03.360" end="00:05:04.480">
+        <tt:span style="textWhite">In Deutschland</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:05:04.600" end="00:05:08.240">
+        <tt:span style="textWhite">sind mehr als eine Million Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">blind oder sehbehindert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:05:08.840" end="00:05:10.960">
+        <tt:span style="textWhite">Für sie gibt es eine neue App,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:05:11.120" end="00:05:14.560">
+        <tt:span style="textWhite">ein kleines Computerprogramm,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">z.B. auf dem Handy.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:05:15.500" end="00:05:17.940">
+        <tt:span style="textWhite">Die App heißt Be My Eyes.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:05:18.180" end="00:05:21.220">
+        <tt:span style="textWhite">Das ist Englisch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und heißt auf Deutsch:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:05:21.260" end="00:05:22.500">
+        <tt:span style="textWhite">Sei meine Augen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:05:22.740" end="00:05:25.940">
+        <tt:span style="textWhite">Mit der App können Blinde</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">andere Menschen anrufen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:05:25.980" end="00:05:30.020">
+        <tt:span style="textWhite">Die Menschen können sehen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">was die Blinden auf dem Handy zeigen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:05:30.060" end="00:05:31.140">
+        <tt:span style="textWhite">wie auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:05:31.360" end="00:05:35.080">
+        <tt:span style="textWhite">Dann können sie den Blinden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">helfen, z.B. im Haushalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:05:35.360" end="00:05:37.200">
+        <tt:span style="textWhite">Dazu kommt jetzt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:05:38.300" end="00:05:40.220">
+        <tt:span style="textWhite">Das ist Karin Strecker.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:40.740" end="00:05:41.860">
+        <tt:span style="textWhite">Sie ist blind.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:42.740" end="00:05:45.660">
+        <tt:span style="textWhite">Sie lebt allein in der Stadt Berlin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:46.480" end="00:05:50.640">
+        <tt:span style="textWhite">In der App fragt sie z.B.</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist hier ein Fleck auf der Decke?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:52.580" end="00:05:57.740">
+        <tt:span style="textWhite">In der App antwortet eine Frau,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nein, das sieht gut aus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:58.580" end="00:06:00.340">
+        <tt:span style="textWhite">Karin Strecker sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:06:01.480" end="00:06:04.560">
+        <tt:span style="textWhite">Ich nutze Be My Eyes jeden Tag,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">z.B. im Bad.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:06:07.880" end="00:06:11.720">
+        <tt:span style="textWhite">Ich frage, was ist für die Haare</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und was ist die Seife?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:06:14.360" end="00:06:17.360">
+        <tt:span style="textWhite">Künstliche Intelligenz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hilft in der App,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:06:17.700" end="00:06:19.980">
+        <tt:span style="textWhite">aber auch echte Menschen helfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:06:20.380" end="00:06:24.980">
+        <tt:span style="textWhite">Sie machen das freiwillig,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">d.h. sie bekommen kein Geld dafür.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:06:26.080" end="00:06:27.880">
+        <tt:span style="textWhite">Sie bekommen einen Anruf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:06:28.040" end="00:06:33.240">
+        <tt:span style="textWhite">Der Erste, der kann, geht ans Telefon</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und spricht mit dem blinden Menschen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:06:34.760" end="00:06:38.040">
+        <tt:span style="textWhite">und schaut z.B.,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ob die Kleidung zusammenpasst.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:06:40.260" end="00:06:44.700">
+        <tt:span style="textWhite">Zehn Mio. Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben sich bei der App gemeldet,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:06:44.820" end="00:06:46.580">
+        <tt:span style="textWhite">um Blinden zu helfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:06:46.960" end="00:06:50.160">
+        <tt:span style="textWhite">Mareike ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine von den freiwilligen Helfern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:06:51.600" end="00:06:56.120">
+        <tt:span style="textWhite">Sie sagt: Wenn ich angerufen werde,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">helfe ich z.B. in der Küche.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:06:58.600" end="00:07:03.620">
+        <tt:span style="textWhite">Ich erkläre, wie die Mikrowelle</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">funktioniert oder ich lese vor,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:07:03.900" end="00:07:07.300">
+        <tt:span style="textWhite">was auf der Verpackung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von einem Essen steht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:07:09.680" end="00:07:11.840">
+        <tt:span style="textWhite">Die Oma von Mareike ist blind.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:07:12.900" end="00:07:16.700">
+        <tt:span style="textWhite">Mareike sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ich finde die App sehr gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:07:16.900" end="00:07:19.580">
+        <tt:span style="textWhite">Ich habe auch eine blinde Tochter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:07:20.140" end="00:07:22.580">
+        <tt:span style="textWhite">Deshalb finde ich die App wichtig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:07:22.900" end="00:07:24.460">
+        <tt:span style="textWhite">Ich finde es schön.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:07:24.700" end="00:07:26.700">
+        <tt:span style="textWhite">Ich kann anderen helfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:07:27.340" end="00:07:31.100">
+        <tt:span style="textWhite">Menschen helfen anderen Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei Problemen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:07:32.500" end="00:07:37.580">
+        <tt:span style="textWhite">Für Karin Strecker ist die App</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine große Hilfe im Alltag.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:07:38.420" end="00:07:41.580">
+        <tt:span style="textWhite">Sie sagt, mit der App</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bin ich selbstständig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:07:41.700" end="00:07:45.100">
+        <tt:span style="textWhite">Ich brauche nicht mehr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei den Nachbarn zu klingeln,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:07:45.200" end="00:07:46.840">
+        <tt:span style="textWhite">und um Hilfe zu bitten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub114" style="textCenter" region="bottom" begin="00:07:47.860" end="00:07:50.380">
+        <tt:span style="textWhite">Sie freut sich sehr über die Hilfe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub115" style="textCenter" region="bottom" begin="00:07:51.220" end="00:07:54.940">
+        <tt:span style="textWhite">Und Mareike freut sich,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dass sie anderen helfen kann.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub116" style="textCenter" region="bottom" begin="00:07:55.980" end="00:07:58.180">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub117" style="textCenter" region="bottom" begin="00:08:02.180" end="00:08:06.420">
+        <tt:span style="textWhite">König Harald V. war viele Jahre lang</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der König von Norwegen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub118" style="textCenter" region="bottom" begin="00:08:07.100" end="00:08:09.620">
+        <tt:span style="textWhite">Vor einigen Tagen ist er gestorben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub119" style="textCenter" region="bottom" begin="00:08:09.660" end="00:08:11.260">
+        <tt:span style="textWhite">Er war 89 Jahre alt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub120" style="textCenter" region="bottom" begin="00:08:12.180" end="00:08:14.740">
+        <tt:span style="textWhite">Jetzt war die Beisetzung von Harald.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub121" style="textCenter" region="bottom" begin="00:08:15.020" end="00:08:20.020">
+        <tt:span style="textWhite">Beisetzung bedeutet, der Sarg wird</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">an einen bestimmten Ort gebracht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub122" style="textCenter" region="bottom" begin="00:08:20.380" end="00:08:21.820">
+        <tt:span style="textWhite">Dort bleibt er dann.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub123" style="textCenter" region="bottom" begin="00:08:22.160" end="00:08:26.600">
+        <tt:span style="textWhite">Zuerst wurde der Sarg durch die</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">norwegische Hauptstadt Oslo gefahren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub124" style="textCenter" region="bottom" begin="00:08:26.700" end="00:08:28.020">
+        <tt:span style="textWhite">Davon ist das Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub125" style="textCenter" region="bottom" begin="00:08:28.060" end="00:08:30.420">
+        <tt:span style="textWhite">Jetzt zeigen wir einen Film dazu.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub126" style="textCenter" region="bottom" begin="00:08:31.060" end="00:08:36.260">
+        <tt:span style="textWhite">Hinter dem Sarg geht der neue König</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von Norwegen, Haakon.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub127" style="textCenter" region="bottom" begin="00:08:36.540" end="00:08:38.900">
+        <tt:span style="textWhite">Er ist der Sohn von Harald.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub128" style="textCenter" region="bottom" begin="00:08:39.500" end="00:08:42.220">
+        <tt:span style="textWhite">Viele Menschen wollen den Sarg sehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub129" style="textCenter" region="bottom" begin="00:08:42.460" end="00:08:45.180">
+        <tt:span style="textWhite">Das Militär begleitet den Sarg.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub130" style="textCenter" region="bottom" begin="00:08:45.700" end="00:08:48.060">
+        <tt:span style="textWhite">Er wird zu einer Kirche gebracht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub131" style="textCenter" region="bottom" begin="00:08:48.780" end="00:08:52.540">
+        <tt:span style="textWhite">Dort ist die Trauerfeier</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit vielen Gästen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub132" style="textCenter" region="bottom" begin="00:08:52.580" end="00:08:56.540">
+        <tt:span style="textWhite">Könige aus anderen Ländern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind gekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub133" style="textCenter" region="bottom" begin="00:08:57.200" end="00:09:00.040">
+        <tt:span style="textWhite">Z.B. der König von Schweden,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Karl Gustav.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub134" style="textCenter" region="bottom" begin="00:09:01.620" end="00:09:04.540">
+        <tt:span style="textWhite">Und auch wichtige Politiker</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind gekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub135" style="textCenter" region="bottom" begin="00:09:04.820" end="00:09:09.180">
+        <tt:span style="textWhite">Z.B. der Präsident</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Ukraine, Selensky.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub136" style="textCenter" region="bottom" begin="00:09:10.020" end="00:09:14.500">
+        <tt:span style="textWhite">Nach der Trauerfeier wird der Sarg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aus der Kirche gebracht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub137" style="textCenter" region="bottom" begin="00:09:14.540" end="00:09:17.380">
+        <tt:span style="textWhite">Durch die Hauptstadt Oslo.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub138" style="textCenter" region="bottom" begin="00:09:18.140" end="00:09:21.020">
+        <tt:span style="textWhite">Er wird zu einer Burg gebracht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub139" style="textCenter" region="bottom" begin="00:09:22.020" end="00:09:24.860">
+        <tt:span style="textWhite">Dort bleibt der Sarg von Harald dann.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub140" style="textCenter" region="bottom" begin="00:09:26.100" end="00:09:28.540">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub141" style="textCenter" region="bottom" begin="00:09:44.080" end="00:09:45.720">
+        <tt:span style="textWhite">Jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub142" style="textCenter" region="bottom" begin="00:09:46.320" end="00:09:48.120">
+        <tt:span style="textWhite">Es gibt Sonne und Wolken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub143" style="textCenter" region="bottom" begin="00:09:48.420" end="00:09:51.220">
+        <tt:span style="textWhite">Am meisten Sonne</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gibt es unten im Süden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub144" style="textCenter" region="bottom" begin="00:09:51.760" end="00:09:53.560">
+        <tt:span style="textWhite">Es werden 15 bis 24 Grad.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub145" style="textCenter" region="bottom" begin="00:09:55.940" end="00:09:58.820">
+        <tt:span style="textWhite">Das war die tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub146" style="textCenter" region="bottom" begin="00:09:58.860" end="00:10:01.020">
+        <tt:span style="textWhite">Tschüss, bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub147" style="textCenter" region="bottom" begin="00:10:05.600" end="00:10:07.760">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>

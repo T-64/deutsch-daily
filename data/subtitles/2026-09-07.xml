@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.000" end="00:00:04.000">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:04.480" end="00:00:07.200">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:10.520" end="00:00:13.800">
+        <tt:span style="textWhite">Willkommen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zur tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:13.840" end="00:00:15.400">
+        <tt:span style="textWhite">Ich bin Susanne Holst.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:15.540" end="00:00:19.460">
+        <tt:span style="textWhite">In dieser Sendung geht es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">um die Wahl in Sachsen-Anhalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:24.440" end="00:00:28.440">
+        <tt:span style="textWhite">Sachsen-Anhalt ist ein Bundesland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Osten von Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:28.820" end="00:00:32.780">
+        <tt:span style="textWhite">Die Menschen in Sachsen-Anhalt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben ein neues Parlament gewählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:33.480" end="00:00:36.320">
+        <tt:span style="textWhite">Die Partei</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Alternative für Deutschland</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:36.360" end="00:00:37.920">
+        <tt:span style="textWhite">hat die Wahl gewonnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:38.880" end="00:00:43.360">
+        <tt:span style="textWhite">Das kurze Wort für</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Alternative für Deutschland ist AfD.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:00:44.860" end="00:00:49.100">
+        <tt:span style="textWhite">Die Farbe der AfD ist Blau,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wie auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:00:49.420" end="00:00:54.300">
+        <tt:span style="textWhite">Die AfD in Sachsen-Anhalt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist eine rechtsextreme Partei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:00:54.820" end="00:00:57.100">
+        <tt:span style="textWhite">Rechtsextreme sagen zum Beispiel:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:00:57.600" end="00:01:00.520">
+        <tt:span style="textWhite">Ausländer sind weniger wert</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">als Deutsche.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:01.140" end="00:01:02.380">
+        <tt:span style="textWhite">Die AfD sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:02.920" end="00:01:06.640">
+        <tt:span style="textWhite">Viele Ausländer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sollen Deutschland verlassen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:06.880" end="00:01:11.040">
+        <tt:span style="textWhite">In Sachsen-Anhalt sind</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch andere Parteien gewählt worden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:11.200" end="00:01:14.360">
+        <tt:span style="textWhite">Sie haben aber viel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">weniger Stimmen bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:14.800" end="00:01:16.720">
+        <tt:span style="textWhite">Dazu zeigen wir einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:17.480" end="00:01:21.120">
+        <tt:span style="textWhite">Hier sehen wir,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">welche Parteien gewählt worden sind.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:21.400" end="00:01:23.600">
+        <tt:span style="textWhite">Jeder Balken zeigt eine Partei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:24.560" end="00:01:26.640">
+        <tt:span style="textWhite">Der blaue Balken ist die AfD.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:27.760" end="00:01:30.400">
+        <tt:span style="textWhite">Sie hat die meisten Stimmen bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:30.500" end="00:01:33.380">
+        <tt:span style="textWhite">Der schwarze Balken ist die CDU.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:33.740" end="00:01:36.220">
+        <tt:span style="textWhite">Sie hatte früher die meisten Stimmen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:36.880" end="00:01:39.760">
+        <tt:span style="textWhite">Der rote Balken ist die SPD.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:40.180" end="00:01:43.220">
+        <tt:span style="textWhite">Der grüne Balken ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Partei die Grünen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:01:43.660" end="00:01:46.380">
+        <tt:span style="textWhite">Der rosa Balken ist die Linkspartei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:01:47.600" end="00:01:53.440">
+        <tt:span style="textWhite">SPD, Grüne und Linkspartei</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben fast gleich viele Stimmen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:01:54.080" end="00:01:59.120">
+        <tt:span style="textWhite">Der lila Balken ist die Partei</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Bündnis Sahra Wagenknecht,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:01:59.380" end="00:02:00.940">
+        <tt:span style="textWhite">kurz BSW.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:01.300" end="00:02:06.220">
+        <tt:span style="textWhite">Das BSW ist zum ersten Mal</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Parlament von Sachsen-Anhalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:07.620" end="00:02:10.460">
+        <tt:span style="textWhite">Die AfD hat die Wahl gewonnen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:10.740" end="00:02:14.020">
+        <tt:span style="textWhite">weil sehr viele Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sie gewählt haben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:14.440" end="00:02:18.520">
+        <tt:span style="textWhite">Die AfD hat nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">doppelt so viele Stimmen bekommen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:18.580" end="00:02:20.380">
+        <tt:span style="textWhite">wie bei der letzten Wahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:20.440" end="00:02:22.880">
+        <tt:span style="textWhite">Sie ist der große Sieger der Wahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:24.920" end="00:02:28.280">
+        <tt:span style="textWhite">Die CDU dagegen hat</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sehr viele Stimmen verloren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:29.180" end="00:02:33.980">
+        <tt:span style="textWhite">Sie hat nur halb so viele Stimmen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bekommen wie bei der letzten Wahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:34.100" end="00:02:38.100">
+        <tt:span style="textWhite">Die CDU ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der große Verlierer der Wahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:38.560" end="00:02:40.400">
+        <tt:span style="textWhite">Dazu kommt jetzt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:41.620" end="00:02:44.620">
+        <tt:span style="textWhite">Die AfD feiert ihren Sieg.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:44.720" end="00:02:48.760">
+        <tt:span style="textWhite">Auf der Bühne</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">steht Ulrich Siegmund von der AfD.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:02:49.040" end="00:02:52.840">
+        <tt:span style="textWhite">Er will neuer Regierungschef</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Sachsen-Anhalt werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:02:52.960" end="00:02:54.280">
+        <tt:span style="textWhite">Siegmund sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:02:54.560" end="00:02:59.000">
+        <tt:span style="textWhite">Die Menschen in Sachsen-Anhalt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wollen, dass die AfD regiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:02:59.160" end="00:03:01.360">
+        <tt:span style="textWhite">Ich brauche aber Unterstützung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:03:01.520" end="00:03:05.240">
+        <tt:span style="textWhite">Ich werde mit allen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Parlament sprechen und fragen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:03:05.280" end="00:03:07.440">
+        <tt:span style="textWhite">wer unterstützt meine Politik.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:03:08.600" end="00:03:11.160">
+        <tt:span style="textWhite">Hier sind die Politiker von der CDU.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:11.760" end="00:03:13.280">
+        <tt:span style="textWhite">Sie sind erschrocken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:13.840" end="00:03:16.840">
+        <tt:span style="textWhite">Die CDU hat viele Stimmen verloren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:17.200" end="00:03:18.720">
+        <tt:span style="textWhite">Das ist Sven Schulze.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:18.840" end="00:03:20.920">
+        <tt:span style="textWhite">Er ist bisher Regierungschef.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:21.000" end="00:03:22.200">
+        <tt:span style="textWhite">Schulze sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:23.000" end="00:03:24.560">
+        <tt:span style="textWhite">Manche Menschen sagen:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:24.680" end="00:03:27.880">
+        <tt:span style="textWhite">Heute ist ein trauriger Tag</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Sachsen-Anhalt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:28.160" end="00:03:32.360">
+        <tt:span style="textWhite">weil eine rechtsextreme Partei</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Wahl gewonnen hat.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:03:32.480" end="00:03:34.200">
+        <tt:span style="textWhite">Aber das ist Demokratie.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:03:34.840" end="00:03:38.840">
+        <tt:span style="textWhite">Wir und auch die anderen Parteien</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">müssen jetzt überlegen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:03:38.880" end="00:03:40.480">
+        <tt:span style="textWhite">was machen wir.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:03:45.760" end="00:03:50.040">
+        <tt:span style="textWhite">Die AfD hat von den Wählerinnen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und Wählern in Sachsen-Anhalt</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:03:50.120" end="00:03:52.200">
+        <tt:span style="textWhite">die meisten Stimmen bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:03:52.820" end="00:03:55.820">
+        <tt:span style="textWhite">Etwa die Hälfte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Wählerinnen und Wähler</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:03:55.860" end="00:03:57.900">
+        <tt:span style="textWhite">haben die AfD aber nicht gewählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:03:58.440" end="00:04:03.560">
+        <tt:span style="textWhite">Am Tag nach der Wahl haben wir</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Sachsen-Anhalt Menschen gefragt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:04:03.600" end="00:04:06.060">
+        <tt:span style="textWhite">wie sie den Sieg der AfD finden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:04:06.160" end="00:04:07.880">
+        <tt:span style="textWhite">Und es hat sich gezeigt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:08.040" end="00:04:10.680">
+        <tt:span style="textWhite">Manche Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben große Hoffnungen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:10.720" end="00:04:12.880">
+        <tt:span style="textWhite">und andere haben große Sorgen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:13.440" end="00:04:15.360">
+        <tt:span style="textWhite">Dazu zeigen wir einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:16.220" end="00:04:17.340">
+        <tt:span style="textWhite">Die Frau sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:17.360" end="00:04:20.320">
+        <tt:span style="textWhite">Ich freue mich,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dass die AfD gewonnen hat.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:20.880" end="00:04:22.320">
+        <tt:span style="textWhite">Und diese Frau sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:04:22.440" end="00:04:24.960">
+        <tt:span style="textWhite">Ich hoffe, jetzt ändert sich etwas.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:04:25.680" end="00:04:27.240">
+        <tt:span style="textWhite">Dieser Mann sagt aber:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:04:27.520" end="00:04:28.880">
+        <tt:span style="textWhite">Ich bin enttäuscht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:04:29.360" end="00:04:31.080">
+        <tt:span style="textWhite">Ich habe nicht erwartet,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:04:31.160" end="00:04:34.160">
+        <tt:span style="textWhite">dass so viele Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hier die AfD wählen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:04:35.860" end="00:04:37.540">
+        <tt:span style="textWhite">Und dieser Mann sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:04:37.580" end="00:04:39.420">
+        <tt:span style="textWhite">Ich fühle mich unsicher.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:04:39.480" end="00:04:42.360">
+        <tt:span style="textWhite">Ich weiß nicht,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">was bringt die Zukunft?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:04:42.640" end="00:04:47.040">
+        <tt:span style="textWhite">Alles, an das ich geglaubt habe,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wurde mit Füßen getreten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:04:47.800" end="00:04:48.920">
+        <tt:span style="textWhite">Diese Frau sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:04:49.200" end="00:04:51.280">
+        <tt:span style="textWhite">Die AfD verdient eine Chance.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:04:51.760" end="00:04:53.040">
+        <tt:span style="textWhite">Sie soll regieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:04:53.920" end="00:04:55.080">
+        <tt:span style="textWhite">Diese Frau sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:04:55.360" end="00:04:58.560">
+        <tt:span style="textWhite">Ich möchte nicht,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dass die AfD allein regiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:04:59.180" end="00:05:05.220">
+        <tt:span style="textWhite">Ich möchte, dass die AfD gemeinsam</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit einer anderen Partei regiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:06.720" end="00:05:12.200">
+        <tt:span style="textWhite">Die AfD braucht zum Regieren deshalb</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mindestens eine andere Partei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:12.640" end="00:05:14.440">
+        <tt:span style="textWhite">Das wird aber schwierig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:05:14.520" end="00:05:18.080">
+        <tt:span style="textWhite">Die AfD in Sachsen-Anhalt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist nämlich rechtsextrem.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:05:19.180" end="00:05:21.000">
+        <tt:span style="textWhite">Die Partei sagt nicht nur:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:05:21.040" end="00:05:23.960">
+        <tt:span style="textWhite">Viele Ausländer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sollen Deutschland verlassen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:05:24.000" end="00:05:25.240">
+        <tt:span style="textWhite">Sie sagt auch:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:05:25.520" end="00:05:29.320">
+        <tt:span style="textWhite">Kinder mit Behinderung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sollen eigene Schulen bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:05:29.360" end="00:05:33.040">
+        <tt:span style="textWhite">Sie sollen nicht mit Kindern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ohne Behinderung lernen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:05:33.080" end="00:05:34.360">
+        <tt:span style="textWhite">Die AfD sagt auch:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:05:35.120" end="00:05:38.400">
+        <tt:span style="textWhite">Viele soziale Projekte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">erhalten kein Geld mehr.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:05:39.000" end="00:05:43.520">
+        <tt:span style="textWhite">Keine andere Partei will deshalb</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gemeinsam mit der AfD regieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:05:44.560" end="00:05:46.200">
+        <tt:span style="textWhite">Es ist deshalb unklar:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:05:46.520" end="00:05:50.080">
+        <tt:span style="textWhite">Wann gibt es eine neue Regierung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Sachsen-Anhalt?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:05:51.020" end="00:05:54.540">
+        <tt:span style="textWhite">Das war unsere Sendung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zur Wahl in Sachsen-Anhalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:05:54.940" end="00:05:56.540">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:05:57.200" end="00:06:01.840">
+        <tt:span style="textWhite">Im Süden und Osten viel Sonnenschein,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sonst zeitweise auch Wolken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:02.560" end="00:06:06.400">
+        <tt:span style="textWhite">Im Nordwesten mehr Wolken</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und teilweise Regen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:06:06.920" end="00:06:09.160">
+        <tt:span style="textWhite">Es werden 19 bis 33 Grad.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:06:11.720" end="00:06:14.800">
+        <tt:span style="textWhite">Das war</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:06:14.940" end="00:06:17.100">
+        <tt:span style="textWhite">Tschüss, bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:06:20.520" end="00:06:22.680">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>
