@@ -13,7 +13,7 @@ fi
 if ! git diff --cached --quiet; then
   echo "publish: index contains other staged work; refusing to include it" >&2; exit 1
 fi
-paths=(docs/index.html docs/open.html docs/about.html docs/studio.html docs/assets/studio.js)
+paths=(docs/index.html docs/open.html docs/about.html docs/studio.html docs/assets)
 for day in "$@"; do
   if [[ ! "$day" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
     echo "publish: only simple editions (YYYY-MM-DD) are enabled" >&2; exit 1

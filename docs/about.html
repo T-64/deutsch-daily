@@ -1,12 +1,60 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>使用说明 — Deutsch Daily</title><style>
-:root{color-scheme:light;--ink:#193e38;--muted:#5d7471;--line:#d8e3df;--accent:#245d4c}*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font:17px/1.8 system-ui,"Noto Sans CJK SC",sans-serif}.wrap{width:min(860px,calc(100% - 40px));margin:auto;padding-bottom:60px}nav{display:flex;justify-content:space-between;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}a{color:var(--accent);text-underline-offset:4px}.brand{text-decoration:none;font:700 25px Georgia,serif}h1{margin:40px 0 15px;font:700 clamp(30px,5vw,46px)/1.4 ui-serif,"Noto Serif CJK SC",serif}h2{font-size:23px;margin:0}section{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}p,li{color:var(--muted)}li+li{margin-top:12px}code{overflow-wrap:anywhere}.primary{display:inline-block;margin-top:16px;padding:10px 24px;background:var(--accent);color:white;border-radius:8px;text-decoration:none}
-</style></head><body><div class="wrap"><nav><a class="brand" href="index.html">Deutsch Daily</a><a href="index.html">返回阅读</a></nav><main>
-<h1>一点新闻，一点进步。</h1><p>为 A2–B1 学习者准备的简易德语阅读。用真实新闻练习理解，不必一次读完一整篇长报道。</p>
-<section><h2>三步开始</h2><ol><li>打开最新一期，先读德语。每篇由几个短句组成；点击“中文对照”可以显示或隐藏译文。</li><li>点击德语单词查看释义。重点词汇和简短语法提示可辅助理解；手机上在每条新闻下展开。</li><li>把常用词加入生词本，之后可以复制文本或导出 Anki。字号与深浅色可随时调整。</li></ol><a class="primary" href="index.html">开始阅读 →</a></section>
-<section><h2>来源与更新</h2><p>当前启用的文字来源是 <a href="https://www.tagesschau.de/tagesschau_in_einfacher_sprache" target="_blank" rel="noopener">tagesschau · Einfache Sprache</a>。新阅读根据官方文字整理为 A2–B1 短读，并提供中文翻译、词汇和语法提示；它不是节目逐字稿。每期保留原文链接，学习整理由 AI 生成，可能有误。</p><p>按来源实际发布日更新。周末或节假日没有新节目时，继续阅读最近一期；不会把旧内容改成新日期。20 点困难版已停止更新和展示，之前的简单版仍可阅读。</p></section>
-<section><h2>查找往期</h2><p>首页可以按德语主题、中文主题或日期搜索。重新打开网站时，可以从“继续上次学习”返回最近的课程。</p></section>
-<section><h2>隐私与生词备份</h2><p>本站没有账户和行为分析。主题、字号、生词本和最近课程保存在当前浏览器 localStorage 中，不会上传到 Deutsch Daily，也不会自动跨设备同步。清理浏览器数据前请先复制生词或导出 Anki；导出 Anki 时才会从 jsDelivr 加载 sql.js。</p><p>历史视频课仍可能连接原媒体平台；新文字短读不加载外部播放器。查看新闻原文时会访问来源网站。</p></section>
-<section><h2>其他工具</h2><p>原有的 <a href="studio.html">本地课程工坊</a> 和 <a href="open.html">历史视频链接入口</a> 保留给需要的人。本地媒体只在当前标签页读取，字幕保存在浏览器；公共阅读无需上传文件、无需登录。</p></section>
-<section><h2>内容与反馈</h2><p>新闻与原始字幕的权利归原权利人所有。短读为学习整理，不代表原媒体提供或审核其中文译文。代码开源于 <a href="https://github.com/T-64/deutsch-daily">GitHub</a>，可在 <a href="https://github.com/T-64/deutsch-daily/issues">问题反馈</a> 中报告错译或功能问题。</p></section>
-</main></div></body></html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<script>try{var p=JSON.parse(localStorage.getItem('dd-prefs-v2')||'null')||{},l=JSON.parse(localStorage.getItem('dd-preferences')||'null')||{},t=p.theme||(l.theme==='dark'?'dark':'');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="assets/site.css?v=8a702a1e50">
+<title>关于 — Deutsch Daily</title>
+<meta name="description" content="Deutsch Daily：为 A2–B1 学习者准备的简易德语新闻短读。先读德语，再看中文。">
+<style>
+  .about { padding: 56px 0 0; }
+  .about .kicker { margin-bottom: 14px; }
+  .about .lead { margin-bottom: 8px; }
+  .steps { counter-reset: step; list-style: none; padding: 0 !important; gap: 14px !important; }
+  .steps li { counter-increment: step; display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 4px 12px; }
+  .steps li::before { content: counter(step); display: grid; place-items: center; width: 24px; height: 24px; margin-top: 2px; border-radius: 50%; background: var(--surface-2); color: var(--ink-2); font: 600 12px/1 var(--sans); }
+  .about .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .about .note { margin-top: 14px; }
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap bar-in">
+  <a class="brand" href="index.html">Deutsch Daily</a>
+  <nav class="bar-nav"><a class="btn-quiet" href="index.html">往期</a><button class="btn-icon" type="button" data-settings aria-label="阅读设置" aria-expanded="false">Aa</button></nav>
+</div></header>
+<main class="wrap">
+  <article class="prose about">
+    <p class="kicker"><b>关于</b> · A2–B1 简易德语短读</p>
+    <h1>一点新闻，一点进步。</h1>
+    <p class="lead">为中文母语的 A2–B1 学习者准备的德语阅读。每天三条真实新闻，每条只有几个短句：先读德语，再看中文。</p>
+
+    <h2>怎么读</h2>
+    <ol class="steps">
+      <li><span>打开最新一期，先只读德语。译文默认隐藏，点句子旁的“译”只显示这一句，也可以一键显示全部。</span></li>
+      <li><span>点击任意德语词查看释义。本期重点词带细下划线，其余词来自离线词典；查不到时可以自己补充释义。</span></li>
+      <li><span>把想记住的词加入生词本，之后可以复制文本，或在浏览器里直接导出 Anki 牌组。</span></li>
+    </ol>
+    <div class="actions"><a class="btn" href="index.html">开始阅读</a><a class="btn secondary" href="studio.html">创建本地课程</a></div>
+
+    <h2>来源与更新</h2>
+    <p>当前唯一启用的文字来源是 <a href="https://www.tagesschau.de/tagesschau_in_einfacher_sprache" target="_blank" rel="noopener">tagesschau · Einfache Sprache</a>。每期根据官方文字整理为 A2–B1 短读，附逐句中文、重点词汇和语法提示；它不是节目逐字稿，每期都保留原文链接。学习整理由 AI 生成，可能有误。</p>
+    <p>按来源实际发布日更新。周末或节假日没有新节目时，就继续读最近一期；不会把旧内容改成新日期。20 点困难版已经停止更新和展示，之前的简易德语视频课仍可阅读。</p>
+
+    <h2>隐私与备份</h2>
+    <p>本站没有账户，也没有行为分析。外观、字号、生词本、最近课程和本地课程字幕都只保存在当前浏览器的 localStorage 中，不会上传到 Deutsch Daily，也不会自动跨设备同步。</p>
+    <p class="note">清理浏览器数据前，请先复制生词或导出 Anki。导出 Anki 时才会从 jsDelivr 加载 sql.js；历史视频课会直接连接原媒体平台，打开原文时会访问来源网站。</p>
+
+    <h2>其他工具</h2>
+    <p><a href="studio.html">本地课程工坊</a>：用你有权使用的视频或音频，加上德语 SRT/WebVTT 字幕和可选的逐句译文，在浏览器里做成可跳播、可查词的课程。媒体文件只在当前标签页读取，不会上传。</p>
+    <p><a href="open.html">视频链接入口</a>：粘贴一个视频页面链接，已收录的内容会直接打开；其他来源会说明当前能做什么，不承诺拿不到的字幕。</p>
+
+    <h2>内容与反馈</h2>
+    <p>新闻、视频与原始字幕的权利归原权利人所有。短读是学习整理，不代表原媒体提供或审核了其中的中文译文。代码开源于 <a href="https://github.com/T-64/deutsch-daily" rel="noopener">GitHub</a>，错译和功能问题可以在 <a href="https://github.com/T-64/deutsch-daily/issues" rel="noopener">问题反馈</a> 中提交。</p>
+  </article>
+</main>
+<footer class="foot"><div class="wrap"><span>Deutsch Daily · 简易德语新闻精读</span><nav><a href="index.html">往期</a><a href="open.html">用视频链接学习</a><a href="studio.html">本地课程工坊</a><a href="about.html">关于</a><a href="https://github.com/T-64/deutsch-daily" rel="noopener">GitHub</a></nav></div></footer>
+<script src="assets/core.js?v=8a702a1e50"></script>
+</body>
+</html>

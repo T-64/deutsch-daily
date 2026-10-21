@@ -43,6 +43,10 @@ python3 scripts/update_readings.py --env-file ~/.hermes/.env --publish
 
 项目移动后应修改包装脚本中的绝对目录，并修复 Hermes skill 的符号链接。流程与故障处理见 `SKILL.md`。
 
+## 界面
+
+安静阅读风：德语衬线正文、默认隐藏译文（逐句点「译」或按 `T`）、点词查义、桌面双栏（正文 + 目录/词汇/生词本侧栏）、手机底部抽屉；跟随系统深浅色，可手动切换。零依赖：系统字体 + 原生 HTML/CSS/JS。结构、设计令牌、组件与本地存储键见 [`DESIGN.md`](DESIGN.md)。
+
 ## 本地开发
 
 ```bash
@@ -50,7 +54,7 @@ python3 build.py
 python3 -m http.server 4185 --bind 127.0.0.1 -d docs
 ```
 
-页面修改写到 `templates/`，不要手写生成的 `docs/*.html`。全站构建恢复全部已有简单版课程、刷新入口并移除困难版公开页面。三个旧期（7/31、8/3、8/11）保留冻结页面。
+页面结构写到 `templates/`，样式与交互写到 `static/`（构建时复制到 `docs/assets/`），不要手写生成的 `docs/*.html`；CI 会重建并检查 `docs/` 是否同步。全站构建恢复全部已有简单版课程、刷新入口并移除困难版公开页面。三个旧期（7/31、8/3、8/11）保留冻结页面。
 
 ```bash
 python3 -m unittest discover -s tests -v

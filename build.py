@@ -10,10 +10,10 @@ data/content/YYYY-MM-DD.json + templates/ → docs/YYYY-MM-DD.html (+index.html)
 
 用法:
   python3 build.py               # 渲染全部 content → docs/
-  python3 build.py 2026-08-13    # 渲染简易一期
-  python3 build.py 2026-08-19-20uhr  # 渲染 20:00 一期
+  python3 build.py 2026-08-13    # 渲染一期（+ 入口页与 assets）
   python3 build.py --dict        # 用本地词典重填 dict-cache（离线，无限流）
 """
+import hashlib
 import json
 import re
 import shutil
@@ -44,6 +44,20 @@ DE_NON_TERMINALS = {
     "bzw.", "ca.", "d.h.", "dr.", "etc.", "nr.", "prof.",
     "u.a.", "u.s.w.", "usw.", "z.b.",
 }
+# Shared page partials. Templates use __HEAD__ / __CORE__ / __FOOT__; see DESIGN.md.
+THEME_BOOT = (
+    "<script>try{var p=JSON.parse(localStorage.getItem('dd-prefs-v2')||'null')"
+    "||{},l=JSON.parse(localStorage.getItem('dd-preferences')||'null')||{},"
+    "t=p.theme||(l.theme==='dark'?'dark':'');if(t==='light'||t==='dark')"
+    "document.documentElement.dataset.theme=t}catch(e){}</script>"
+)
+FOOTER = (
+    '<footer class="foot"><div class="wrap"><span>Deutsch Daily · 简易德语新闻精读</span><nav>'
+    '<a href="index.html">往期</a><a href="open.html">用视频链接学习</a>'
+    '<a href="studio.html">本地课程工坊</a><a href="about.html">关于</a>'
+    '<a href="https://github.com/T-64/deutsch-daily" rel="noopener">GitHub</a></nav></div></footer>'
+)
+
 SKIP_CUE = re.compile(r"(gong|untertitel|norddeutscher rundfunk|willkommen zur tagesschau|"
                       r"ich bin |das waren unsere nachrichten|das war die tagesschau)", re.I)
 
@@ -585,14 +599,51 @@ def render(doc):
         "form_to_key": form_to_key,
         "phrases": phrases,
     }
-    tpl = (TEMPLATES / "episode.html").read_text()
-    return (
-        tpl.replace("__DATE__", date)
-        .replace("__PAYLOAD__", json.dumps(payload, ensure_ascii=False).replace("</", "<\\/"))
-    )
+    return page("episode.html", __DATE__=date, __PAYLOAD__=to_script_json(payload))
 
 
-def build(slug=None, push=False):
+def to_script_json(value):
+    return json.dumps(value, ensure_ascii=False).replace("</", "<\\/")
+
+
+def asset_version():
+    digest = hashlib.sha256()
+    for path in sorted(STATIC.iterdir()):
+        if path.is_file():
+            digest.update(path.name.encode())
+            digest.update(path.read_bytes())
+    return digest.hexdigest()[:10]
+
+
+def page(name, **replacements):
+    """Fill a template: shared partials first, then page-specific placeholders."""
+    v = asset_version()
+    html = (TEMPLATES / name).read_text()
+    html = html.replace("__HEAD__", (
+        '<meta charset="UTF-8">\n'
+        '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">\n'
+        '<meta name="color-scheme" content="light dark">\n'
+        f'{THEME_BOOT}\n<link rel="stylesheet" href="assets/site.css?v={v}">'
+    ))
+    html = html.replace("__CORE__", f'<script src="assets/core.js?v={v}"></script>')
+    html = html.replace("__FOOT__", FOOTER).replace("__V__", v)
+    for key, value in replacements.items():
+        html = html.replace(key, value)
+    return html
+
+
+def copy_assets():
+    assets = SITE / "assets"
+    assets.mkdir(parents=True, exist_ok=True)
+    wanted = {p.name for p in STATIC.iterdir() if p.is_file()}
+    for stale in assets.iterdir():
+        if stale.is_file() and stale.name not in wanted:
+            stale.unlink()
+    for name in sorted(wanted):
+        shutil.copy2(STATIC / name, assets / name)
+
+
+def build(slug=None):
     SITE.mkdir(parents=True, exist_ok=True)
     if slug:
         if parse_slug(slug)[1] != "einfach":
@@ -654,21 +705,17 @@ def build_index(all_slugs=None):
             "count": len(doc["news"]),
             "urls": urls,
         })
-    payload = json.dumps(items, ensure_ascii=False).replace("</", "<\\/")
-    tpl = (TEMPLATES / "index.html").read_text()
-    html = tpl.replace("__ITEMS__", payload)
-    (SITE / "index.html").write_text(html)
-    open_tpl = (TEMPLATES / "open.html").read_text()
-    (SITE / "open.html").write_text(open_tpl.replace("__ITEMS__", payload))
-    (SITE / "about.html").write_text((TEMPLATES / "about.html").read_text())
-    (SITE / "studio.html").write_text((TEMPLATES / "studio.html").read_text())
-    assets = SITE / "assets"
-    assets.mkdir(exist_ok=True)
-    shutil.copy2(STATIC / "studio.js", assets / "studio.js")
+    payload = to_script_json(items)
+    (SITE / "index.html").write_text(page("index.html", __ITEMS__=payload))
+    (SITE / "open.html").write_text(page("open.html", __ITEMS__=payload))
+    (SITE / "about.html").write_text(page("about.html"))
+    (SITE / "studio.html").write_text(page("studio.html"))
+    copy_assets()
     print(f"[ok] index.html ({len(items)} 期)")
     print(f"[ok] open.html ({len(items)} 个可识别课程)")
     print("[ok] about.html")
     print("[ok] studio.html")
+    print("[ok] assets/")
 
 
 if __name__ == "__main__":

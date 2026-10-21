@@ -17,6 +17,7 @@ class CatalogPageTests(unittest.TestCase):
                 about = (build.SITE / "about.html").read_text()
                 studio = (build.SITE / "studio.html").read_text()
                 studio_js = (build.SITE / "assets" / "studio.js").read_text()
+                assets = sorted(x.name for x in (build.SITE / "assets").iterdir())
             finally:
                 build.SITE = previous_site
 
@@ -29,6 +30,23 @@ class CatalogPageTests(unittest.TestCase):
         self.assertIn("parseTimedText", studio_js)
         self.assertIn("studio.html", opener + about)
         self.assertNotIn("__ITEMS__", home + opener)
+        for html in (home, opener, about, studio):
+            for placeholder in ("__HEAD__", "__CORE__", "__FOOT__", "__V__"):
+                self.assertNotIn(placeholder, html)
+            self.assertIn("assets/site.css?v=", html)
+            self.assertIn('data-settings', html)
+        for name in ("site.css", "core.js", "reader.css", "reader.js", "anki.js", "studio.js"):
+            self.assertIn(name, assets)
+
+    def test_episode_page_uses_shared_assets_and_blind_reading(self):
+        import json
+        doc = json.loads((build.CONTENT / "2026-10-20.json").read_text())
+        html = build.render(doc)
+        self.assertIn("assets/reader.js?v=", html)
+        self.assertIn('id="zh-toggle"', html)
+        self.assertNotIn("__PAYLOAD__", html)
+        payload = json.loads(html.split("const DATA = ", 1)[1].split(";\n", 1)[0])
+        self.assertEqual(payload["slug"], "2026-10-20")
 
     def test_difficult_edition_is_not_buildable(self):
         with tempfile.TemporaryDirectory() as tmp:

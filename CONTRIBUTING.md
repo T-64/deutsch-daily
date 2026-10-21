@@ -13,6 +13,7 @@ python3 -m py_compile build.py scripts/*.py tests/*.py
 bash -n scripts/*.sh
 python3 scripts/validate-content.py --all
 python3 build.py
+git status --short -- docs   # 必须为空：提交的 docs/ 要与构建结果一致，CI 会检查
 ```
 
 本地预览：
