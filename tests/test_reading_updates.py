@@ -66,13 +66,43 @@ class ReadingUpdateTests(unittest.TestCase):
         self.assertEqual(doc['video_page'], self.FIELDS['video_page'])
         updates.validate(doc)
 
-    def test_translation_count_mismatch_is_rejected(self):
+    def test_translation_that_never_fills_every_sentence_is_rejected(self):
         cues = [{'start': i, 'end': i + 0.5, 'text': f'Satz {i}.'} for i in range(4)]
+        # A 3-item list for 4 sentences can't be aligned, so it is discarded and re-asked; it never completes.
         reply = {'zh': ['一', '二', '三'], 'stories': [{'title': 'A', 'title_zh': '甲', 'from': 0, 'to': 3}]}
         with patch.dict(updates.os.environ, {'GLM_API_KEY': 'unit-test-placeholder'}), \
-                patch.object(updates.urllib.request, 'urlopen', return_value=self.ai_reply(reply)):
-            with self.assertRaisesRegex(ValueError, 'expected 4 Chinese translations, got 3'):
+                patch.object(updates.urllib.request, 'urlopen', side_effect=lambda *a, **k: self.ai_reply(reply)) as call:
+            with self.assertRaisesRegex(ValueError, '4 of 4 sentences still untranslated'):
                 updates.generate(self.FIELDS, cues)
+        self.assertEqual(call.call_count, 4)  # combined call + 3 refill rounds
+
+    def test_missing_translations_are_refilled_without_regenerating_the_day(self):
+        cues = [{'start': i, 'end': i + 0.5, 'text': f'Satz {i}.'} for i in range(4)]
+        first = {'zh': {'0': '第零句。', '1': '第一句。', '3': '第三句。', '9': '多余'},
+                 'stories': [{'title': 'A', 'title_zh': '甲', 'from': 0, 'to': 3}]}
+        asked = []
+
+        def fake_urlopen(req, timeout):
+            body = json.loads(json.loads(req.data)['messages'][1]['content'])
+            asked.append([x['i'] for x in body['sentences']])
+            return self.ai_reply(first if len(asked) == 1 else {'zh': {'2': '第二句。'}})
+
+        with patch.dict(updates.os.environ, {'GLM_API_KEY': 'unit-test-placeholder'}), \
+                patch.object(updates.urllib.request, 'urlopen', side_effect=fake_urlopen):
+            doc = updates.generate(self.FIELDS, cues)
+        self.assertEqual(asked, [[0, 1, 2, 3], [2]])
+        self.assertEqual([x['zh'] for x in doc['sentences']], ['第零句。', '第一句。', '第二句。', '第三句。'])
+
+    def test_misplaced_vocab_is_repointed_or_dropped_instead_of_failing_the_day(self):
+        sentences = [{'de': 'Guten Abend.'}, {'de': 'Die Regierung plant ein Gesetz.'}, {'de': 'Das Gesetz kommt bald.'}]
+        stories = [{'title': 'A', 'title_zh': '甲', 'from': 0, 'to': 0, 'vocab': [], 'grammar_points': []},
+                   {'title': 'B', 'title_zh': '乙', 'from': 1, 'to': 2, 'grammar_points': [{'title': 'g', 'summary': 's', 'sentence': 0}],
+                    'vocab': [{'lemma': 'das Gesetz, -e', 'key': 'gesetz', 'forms': ['Gesetz'], 'pos': 'S', 'zh': '法律', 'sentence': 0},
+                              {'lemma': 'bald', 'key': 'bald', 'forms': ['bald', 'demnächst'], 'pos': 'A', 'zh': '很快', 'sentence': 1},
+                              {'lemma': 'die Wahl, -en', 'key': 'wahl', 'forms': ['Wahl'], 'pos': 'S', 'zh': '选举', 'sentence': 1}]}]
+        out = updates.repair_stories(stories, sentences)[1]
+        self.assertEqual([(v['key'], v['sentence'], v['forms']) for v in out['vocab']], [('gesetz', 1, ['Gesetz']), ('bald', 2, ['bald'])])
+        self.assertEqual(out['grammar_points'], [])  # cited a sentence outside its story
 
     def test_long_broadcasts_are_translated_in_chunks(self):
         n = updates.COMBINED_LIMIT + 31
