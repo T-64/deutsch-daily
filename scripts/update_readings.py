@@ -190,14 +190,14 @@ present in the indexed sentence, explained briefly in Chinese. Never call an act
 """
 
 COMBINED_SHAPE = """Return ONLY JSON:
-{"zh": ["中文…", "…one string per sentence, same order, same count…"],
+{"zh": {"0": "中文…", "1": "…": one entry per numbered sentence, keyed by its "i"},
  "stories": [{"title": "Begrüßung", "title_zh": "欢迎", "from": 0, "to": 2, "vocab": [], "grammar_points": []},
              {"title": "Treffen für Investoren", "title_zh": "投资者会议", "from": 3, "to": 9,
               "vocab": [{"lemma": "das Treffen, -", "key": "treffen", "forms": ["Treffen"], "pos": "Substantiv", "zh": "会面", "sentence": 4}],
               "grammar_points": [{"title": "现在完成时", "summary": "简短中文解释。", "sentence": 5}]}]}
 """
 
-ZH_SHAPE = """Return ONLY JSON: {"zh": ["中文…", "…one string per numbered sentence, same order, same count…"]}"""
+ZH_SHAPE = """Return ONLY JSON: {"zh": {"<i>": "中文…"}} with one entry for EVERY numbered sentence, keyed by its "i"."""
 STORIES_SHAPE = """Return ONLY JSON: {"stories": [...]} where each story is
 {"title", "title_zh", "from", "to", "vocab": [{"lemma","key","forms","pos","zh","sentence"}], "grammar_points": [{"title","summary","sentence"}]}"""
 
@@ -247,13 +247,64 @@ def numbered(sentences: list[dict], offset: int = 0) -> list[dict]:
     return [{"i": offset + k, "de": s["de"]} for k, s in enumerate(sentences)]
 
 
-def checked_zh(value, count: int, label: str) -> list[str]:
-    if not isinstance(value, list) or len(value) != count:
-        got = len(value) if isinstance(value, list) else type(value).__name__
-        raise ValueError(f"{label}: expected {count} Chinese translations, got {got}")
-    if any(not isinstance(z, str) or not z.strip() for z in value):
-        raise ValueError(f"{label}: every translation must be a non-empty string")
-    return [z.strip() for z in value]
+def keyed_zh(value, indices: list[int]) -> dict[int, str]:
+    """Translations the model returned for these sentence indices; missing or empty ones are left out.
+
+    Keyed output lets us re-ask for just the gaps. A plain list is only trusted when its length
+    matches exactly, because one dropped line would shift every later translation.
+    """
+    if isinstance(value, list):
+        value = dict(zip(map(str, indices), value)) if len(value) == len(indices) else {}
+    if not isinstance(value, dict):
+        return {}
+    out = {}
+    for i in indices:
+        z = value.get(str(i), value.get(i))
+        if isinstance(z, str) and z.strip():
+            out[i] = z.strip()
+    return out
+
+
+def translate(sentences: list[dict], base: dict, have: dict[int, str]) -> list[str]:
+    """Fill every missing translation in chunks, re-asking at most twice for whatever is still missing."""
+    for _ in range(3):
+        missing = [i for i in range(len(sentences)) if i not in have]
+        if not missing:
+            break
+        for at in range(0, len(missing), CHUNK):
+            part = missing[at:at + CHUNK]
+            got = ai_json(LESSON_RULES + TRANSLATE_RULES + ZH_SHAPE,
+                          {**base, "sentences": [{"i": i, "de": sentences[i]["de"]} for i in part]}, 9000)
+            have.update(keyed_zh(got.get("zh"), part))
+    missing = [i for i in range(len(sentences)) if i not in have]
+    if missing:
+        raise ValueError(f"translation: {len(missing)} of {len(sentences)} sentences still untranslated ({missing[:5]})")
+    return [have[i] for i in range(len(sentences))]
+
+
+def repair_stories(stories: list[dict], sentences: list[dict]) -> list[dict]:
+    """Point each vocab item at a sentence of its story that really contains its forms; drop what can't be placed.
+
+    One misplaced word should cost that word, not the whole day's lesson. Story ranges themselves are
+    not repaired here: a bad range still fails validation and triggers a regeneration.
+    """
+    for st in stories:
+        lo, hi = st.get("from"), st.get("to")
+        if not (isinstance(lo, int) and isinstance(hi, int) and 0 <= lo <= hi < len(sentences)):
+            continue
+        texts = {i: sentences[i]["de"].casefold() for i in range(lo, hi + 1)}
+        fits = lambda forms, i: forms and all(f.casefold() in texts[i] for f in forms)
+        vocab = []
+        for v in st["vocab"]:
+            idx, forms = v.get("sentence"), v["forms"]
+            if not (isinstance(idx, int) and idx in texts and fits(forms, idx)):
+                forms = [f for f in forms if any(f.casefold() in t for t in texts.values())]
+                idx = next((i for i in texts if fits(forms, i)), None)
+            if idx is not None:
+                vocab.append({**v, "forms": forms, "sentence": idx})
+        st["vocab"] = vocab[:5]
+        st["grammar_points"] = [g for g in st["grammar_points"] if isinstance(g.get("sentence"), int) and g["sentence"] in texts][:1]
+    return stories
 
 
 def clean_stories(stories) -> list[dict]:
@@ -287,16 +338,11 @@ def generate(fields: dict, cues: list[dict], feedback: str = "") -> dict:
     if count <= COMBINED_LIMIT:
         out = ai_json(LESSON_RULES + TRANSLATE_RULES + STORY_RULES + COMBINED_SHAPE,
                       {**base, "sentences": numbered(sentences)}, 16000)
-        zh = checked_zh(out.get("zh"), count, "translation")
+        zh = translate(sentences, base, keyed_zh(out.get("zh"), list(range(count))))
         stories = out.get("stories")
     else:
-        zh = []
-        for at in range(0, count, CHUNK):
-            part = sentences[at:at + CHUNK]
-            # Indices stay absolute so the model sees where the chunk sits in the broadcast.
-            got = ai_json(LESSON_RULES + TRANSLATE_RULES + ZH_SHAPE,
-                          {**base, "sentences": numbered(part, at)}, 9000)
-            zh += checked_zh(got.get("zh"), len(part), f"translation of sentences {at}-{at + len(part) - 1}")
+        # Chunked with absolute indices so the model sees where each chunk sits in the broadcast.
+        zh = translate(sentences, base, {})
         stories = ai_json(LESSON_RULES + STORY_RULES + STORIES_SHAPE,
                           {**base, "sentences": numbered(sentences)}, 9000).get("stories")
     return {"schema": 2, "content_kind": "broadcast", "date": fields["date"], "slug": fields["date"],
@@ -305,7 +351,7 @@ def generate(fields: dict, cues: list[dict], feedback: str = "") -> dict:
         "source_text_sha256": fields["text_sha256"],
         "generated_at": datetime.now(BERLIN).isoformat(), "generation_model": ai_model(),
         "sentences": [{**s, "zh": z} for s, z in zip(sentences, zh)],
-        "stories": clean_stories(stories)}
+        "stories": repair_stories(clean_stories(stories), sentences)}
 
 
 def validate(doc: dict) -> None:
