@@ -49,7 +49,8 @@ class AppPageTests(unittest.TestCase):
         self.assertEqual(covered, list(range(len(lesson["sentences"]))))
 
     def test_old_short_reading_shows_the_broadcast_not_the_rewrite(self):
-        doc = json.loads((build.CONTENT / "2026-10-20.json").read_text())
+        # Frozen copy of an Oct 2026 short reading (the live file has since been regenerated).
+        doc = json.loads((Path(__file__).parent / "fixtures" / "reading-2026-10-20.json").read_text())
         lesson = page_data(build.render(doc))["lesson"]
         texts = " ".join(s["de"] for s in lesson["sentences"])
         self.assertIn("Willkommen zur tagesschau", texts)
