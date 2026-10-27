@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.000" end="00:00:04.120">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:05.280" end="00:00:08.000">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:10.600" end="00:00:13.360">
+        <tt:span style="textWhite">Willkommen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zur tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:13.400" end="00:00:17.800">
+        <tt:span style="textWhite">Ich bin Michael Paweletz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:19.570" end="00:00:20.650">
+        <tt:span style="textWhite">Brasilien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:20.890" end="00:00:23.690">
+        <tt:span style="textWhite">Lula gewinnt Wahl zum Präsidenten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:24.410" end="00:00:25.410">
+        <tt:span style="textWhite">Serbien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:25.730" end="00:00:27.850">
+        <tt:span style="textWhite">Studentenliste gewinnt Wahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:29.050" end="00:00:30.210">
+        <tt:span style="textWhite">Neues Gesetz.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:30.570" end="00:00:32.450">
+        <tt:span style="textWhite">Bauen soll billiger werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:00:33.410" end="00:00:35.330">
+        <tt:span style="textWhite">Unfall.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:00:35.810" end="00:00:38.610">
+        <tt:span style="textWhite">Kreuzfahrtschiff rammt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Containerschiffe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:00:38.720" end="00:00:40.800">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:00:41.450" end="00:00:42.450">
+        <tt:span style="textWhite">Brasilien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:00:42.730" end="00:00:45.770">
+        <tt:span style="textWhite">Lula gewinnt Wahl zum Präsidenten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:00:46.330" end="00:00:49.810">
+        <tt:span style="textWhite">Der Mann auf dem Foto</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">heißt Lula da Silva</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:00:49.850" end="00:00:51.810">
+        <tt:span style="textWhite">oder einfach Lula.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:00:52.530" end="00:00:56.210">
+        <tt:span style="textWhite">Brasilien ist ein großes Land</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Südamerika.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:00:57.090" end="00:01:00.530">
+        <tt:span style="textWhite">Lula ist gerade zum 4. Mal</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:00.570" end="00:01:03.730">
+        <tt:span style="textWhite">zum Präsidenten von Brasilien</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gewählt worden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:04.130" end="00:01:06.810">
+        <tt:span style="textWhite">Lula ist ein linker Politiker.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:07.520" end="00:01:11.760">
+        <tt:span style="textWhite">Er ist z.B. für Sozialprogramme</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und für Klimaschutz.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:12.890" end="00:01:16.930">
+        <tt:span style="textWhite">Die Wahl zum Präsidenten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">war eine Stichwahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:16.970" end="00:01:20.730">
+        <tt:span style="textWhite">Das heißt:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Es gab nur zwei Kandidaten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:21.410" end="00:01:25.850">
+        <tt:span style="textWhite">Auf diesem Foto ist der Kandidat,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der verloren hat.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:26.090" end="00:01:28.010">
+        <tt:span style="textWhite">Flavio Bolsonaro.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:28.770" end="00:01:32.010">
+        <tt:span style="textWhite">Bolsonaro ist ein rechter Politiker.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:01:32.490" end="00:01:35.490">
+        <tt:span style="textWhite">Sein Vater war auch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">schon mal Präsident.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:01:36.170" end="00:01:40.690">
+        <tt:span style="textWhite">Vor der Stichwahl lag Bolsonaro</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vor Lula.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:01:40.730" end="00:01:45.130">
+        <tt:span style="textWhite">Das Wahlergebnis</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist eine Überraschung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:01:45.770" end="00:01:47.690">
+        <tt:span style="textWhite">Dazu zeigen wir einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:01:48.530" end="00:01:51.090">
+        <tt:span style="textWhite">Diese Menschen haben Lula gewählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:01:51.410" end="00:01:53.010">
+        <tt:span style="textWhite">Sie sind erleichtert</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:01:53.050" end="00:01:55.810">
+        <tt:span style="textWhite">und feiern ihren Sieg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf den Straßen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:01:55.850" end="00:01:59.130">
+        <tt:span style="textWhite">Auch viele junge Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben Lula gewählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:01:59.170" end="00:02:02.690">
+        <tt:span style="textWhite">Und sie haben im Internet</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Werbung für ihn gemacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:03.290" end="00:02:04.850">
+        <tt:span style="textWhite">Diese junge Frau sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:05.370" end="00:02:09.170">
+        <tt:span style="textWhite">Viele Menschen in Brasilien</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wollen eine linke Politik.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:09.650" end="00:02:13.530">
+        <tt:span style="textWhite">Hier sieht man Lula und sein Team</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nach dem Wahlsieg.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:14.170" end="00:02:18.210">
+        <tt:span style="textWhite">Lula sagt: Ich danke</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">den jungen Menschen in Brasilien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:18.970" end="00:02:23.690">
+        <tt:span style="textWhite">Sie haben sich eingebracht und sie</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben die Demokratie verteidigt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:24.290" end="00:02:26.890">
+        <tt:span style="textWhite">Diese Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben Bolsonaro gewählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:26.930" end="00:02:31.490">
+        <tt:span style="textWhite">Sie sind enttäuscht und sagen:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Die Wahl war nicht fair.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:02:32.370" end="00:02:36.490">
+        <tt:span style="textWhite">Einige Wahllokale waren nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">länger offen als andere.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:02:37.290" end="00:02:39.530">
+        <tt:span style="textWhite">Das ist Bolsonaro.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:02:40.210" end="00:02:44.050">
+        <tt:span style="textWhite">Er sagt: Ich akzeptiere das Ergebnis</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Wahl nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:02:44.370" end="00:02:46.450">
+        <tt:span style="textWhite">Ich werde vor Gericht klagen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:02:46.730" end="00:02:49.010">
+        <tt:span style="textWhite">Die Wahl soll wiederholt werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:02:49.410" end="00:02:52.490">
+        <tt:span style="textWhite">Ein Gericht muss</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nun darüber entscheiden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:02:53.050" end="00:02:55.530">
+        <tt:span style="textWhite">Für Lula wird es nicht leicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:02:55.930" end="00:02:59.010">
+        <tt:span style="textWhite">Er muss nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zusammen mit dem Parlament regieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:02:59.050" end="00:03:02.970">
+        <tt:span style="textWhite">Im Parlament sind</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">viele rechte Politiker.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:03.800" end="00:03:07.120">
+        <tt:span style="textWhite">Lula hofft, die jungen Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">machen weiter Druck.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:07.970" end="00:03:12.650">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über eine Wahl in Europa.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:13.250" end="00:03:14.250">
+        <tt:span style="textWhite">Serbien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:14.570" end="00:03:16.570">
+        <tt:span style="textWhite">Studentenliste gewinnt Wahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:16.930" end="00:03:22.690">
+        <tt:span style="textWhite">Serbien ist ein kleines Land,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">unten rechts im Südosten von Europa.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:23.450" end="00:03:28.490">
+        <tt:span style="textWhite">Die Menschen in Serbien</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben ein neues Parlament gewählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:03:28.730" end="00:03:32.450">
+        <tt:span style="textWhite">Die Studentenliste</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat die Wahl gewonnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:03:33.170" end="00:03:36.970">
+        <tt:span style="textWhite">Die Studentenliste</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gibt es seit zwei Jahren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:03:37.120" end="00:03:41.960">
+        <tt:span style="textWhite">Damals ist nämlich ein Dach an einem</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Bahnhof in Serbien eingestürzt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:03:43.090" end="00:03:45.250">
+        <tt:span style="textWhite">Viele Menschen sind gestorben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:03:45.530" end="00:03:49.810">
+        <tt:span style="textWhite">Die Studenten haben deshalb</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gegen die Regierung protestiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:03:49.850" end="00:03:53.970">
+        <tt:span style="textWhite">Sie haben gesagt:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Die Regierung ist schlecht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:03:54.250" end="00:03:56.970">
+        <tt:span style="textWhite">Sie kümmert sich nicht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">um die Menschen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:03:57.330" end="00:04:00.890">
+        <tt:span style="textWhite">Viele andere Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben dann auch protestiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:04:01.250" end="00:04:04.290">
+        <tt:span style="textWhite">So ist die Studentenliste entstanden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:04:05.090" end="00:04:06.970">
+        <tt:span style="textWhite">Bei der Liste machen auch</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:07.010" end="00:04:10.890">
+        <tt:span style="textWhite">Lehrer, Professoren,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Ärzte und Schauspieler mit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:10.970" end="00:04:12.890">
+        <tt:span style="textWhite">Dazu kommt jetzt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:14.570" end="00:04:18.410">
+        <tt:span style="textWhite">Feuerwerk über Belgrad,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Hauptstadt von Serbien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:19.170" end="00:04:20.970">
+        <tt:span style="textWhite">Tausende Menschen feiern</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:21.010" end="00:04:24.690">
+        <tt:span style="textWhite">den Sieg der Studentenliste</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei der Parlamentswahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:25.490" end="00:04:29.050">
+        <tt:span style="textWhite">Diese junge Frau sagt:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Es ist unglaublich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:04:29.330" end="00:04:30.970">
+        <tt:span style="textWhite">Wir haben es geschafft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:04:31.610" end="00:04:33.130">
+        <tt:span style="textWhite">Jetzt wird alles gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:04:33.650" end="00:04:34.850">
+        <tt:span style="textWhite">Serbien ist frei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:04:35.930" end="00:04:39.170">
+        <tt:span style="textWhite">Dieser Mann sagt:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Es ist wie in einem Traum.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:04:39.690" end="00:04:41.570">
+        <tt:span style="textWhite">Aber es ist wirklich passiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:04:41.610" end="00:04:43.250">
+        <tt:span style="textWhite">Wir haben die Wahl gewonnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:04:44.450" end="00:04:49.130">
+        <tt:span style="textWhite">Und diese Frau sagt:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Ich bin sehr glücklich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:04:49.610" end="00:04:52.170">
+        <tt:span style="textWhite">Ich habe so gehofft, dass es klappt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:04:53.200" end="00:04:56.320">
+        <tt:span style="textWhite">Jubel auch auf der Wahlparty</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Studentenliste.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:04:56.850" end="00:05:01.450">
+        <tt:span style="textWhite">Dieser Mann sagt: Wir waren mutig</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und wir haben gewonnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:01.490" end="00:05:03.690">
+        <tt:span style="textWhite">Ich danke euch allen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:03.930" end="00:05:05.610">
+        <tt:span style="textWhite">Ihr habt gezeigt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:05.970" end="00:05:11.850">
+        <tt:span style="textWhite">die Zukunft von Serbien gehört</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nicht nur einigen wenigen Menschen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:12.250" end="00:05:15.770">
+        <tt:span style="textWhite">Die Zukunft gehört</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">allen Menschen in Serbien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:16.690" end="00:05:20.050">
+        <tt:span style="textWhite">Das ist Alexander Vucic.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:20.690" end="00:05:24.530">
+        <tt:span style="textWhite">Er ist seit vielen Jahren</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Präsident in Serbien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:25.090" end="00:05:27.650">
+        <tt:span style="textWhite">Vucic hat die Wahl verloren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:05:28.090" end="00:05:30.210">
+        <tt:span style="textWhite">Er gibt seine Niederlage zu.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:05:30.850" end="00:05:35.970">
+        <tt:span style="textWhite">Vucic sagt: Es ist ganz klar,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wir haben die Wahl verloren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:05:36.170" end="00:05:39.770">
+        <tt:span style="textWhite">Die Studentenliste</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat die Wahl gewonnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:05:39.810" end="00:05:44.410">
+        <tt:span style="textWhite">Die Studentenliste muss jetzt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine Regierung bilden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:05:44.930" end="00:05:47.090">
+        <tt:span style="textWhite">Das wird eine Herausforderung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:05:47.290" end="00:05:49.290">
+        <tt:span style="textWhite">Die Menschen auf der Liste</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:05:49.330" end="00:05:54.850">
+        <tt:span style="textWhite">sind nämlich bisher Ärzte oder Lehrer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und keine Berufspolitiker.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:05:55.370" end="00:05:58.010">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:05:58.410" end="00:05:59.410">
+        <tt:span style="textWhite">Neues Gesetz.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:05:59.770" end="00:06:02.010">
+        <tt:span style="textWhite">Bauen soll billiger werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:06:02.450" end="00:06:04.450">
+        <tt:span style="textWhite">In Deutschland fehlen Wohnungen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:06:04.490" end="00:06:09.690">
+        <tt:span style="textWhite">Viele Menschen suchen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine neue Wohnung, finden aber keine.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:10.210" end="00:06:13.610">
+        <tt:span style="textWhite">Und wenn die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine neue Wohnung finden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:14.210" end="00:06:16.330">
+        <tt:span style="textWhite">dann ist sie oft sehr teuer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:17.090" end="00:06:18.970">
+        <tt:span style="textWhite">Die Bundesregierung will,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:06:19.010" end="00:06:22.650">
+        <tt:span style="textWhite">dass mehr neue Wohnungen und Häuser</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gebaut werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:06:23.490" end="00:06:28.650">
+        <tt:span style="textWhite">Das Ministerium für Bauen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">schlägt dafür ein neues Gesetz vor.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:06:29.410" end="00:06:32.690">
+        <tt:span style="textWhite">Es soll Bauen einfacher</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und billiger machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:06:33.410" end="00:06:36.410">
+        <tt:span style="textWhite">In dem Gesetz steht z.B.:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:06:36.690" end="00:06:39.890">
+        <tt:span style="textWhite">Die Wohnungen brauchen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">weniger Steckdosen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:06:40.370" end="00:06:44.330">
+        <tt:span style="textWhite">Die Wände zwischen zwei Wohnungen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dürfen dünner sein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:06:44.640" end="00:06:48.080">
+        <tt:span style="textWhite">Oder das Treppenhaus</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">braucht keine Heizung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:06:49.050" end="00:06:54.530">
+        <tt:span style="textWhite">Die Bundesregierung hofft, wenn Bauen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einfacher und billiger wird,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub114" style="textCenter" region="bottom" begin="00:06:55.130" end="00:06:58.650">
+        <tt:span style="textWhite">dann werden mehr neue Wohnungen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und Häuser gebaut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub115" style="textCenter" region="bottom" begin="00:06:59.010" end="00:07:01.410">
+        <tt:span style="textWhite">Dazu zeigen wir einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub116" style="textCenter" region="bottom" begin="00:07:02.490" end="00:07:04.210">
+        <tt:span style="textWhite">Dieses Haus in München</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub117" style="textCenter" region="bottom" begin="00:07:04.250" end="00:07:07.330">
+        <tt:span style="textWhite">ist einfacher gebaut</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">als andere Häuser.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub118" style="textCenter" region="bottom" begin="00:07:07.730" end="00:07:12.330">
+        <tt:span style="textWhite">Der Architekt sagt: Wir haben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">z.B. bei der Heizung gespart.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub119" style="textCenter" region="bottom" begin="00:07:12.730" end="00:07:14.730">
+        <tt:span style="textWhite">Die Heizkörper sind kleiner.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub120" style="textCenter" region="bottom" begin="00:07:15.170" end="00:07:17.010">
+        <tt:span style="textWhite">Das merkt man aber gar nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub121" style="textCenter" region="bottom" begin="00:07:17.050" end="00:07:20.130">
+        <tt:span style="textWhite">Die Wohnungen werden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">trotzdem warm genug.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub122" style="textCenter" region="bottom" begin="00:07:22.770" end="00:07:26.970">
+        <tt:span style="textWhite">Das Haus in München</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist ein Gebäudetyp E.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub123" style="textCenter" region="bottom" begin="00:07:27.010" end="00:07:28.250">
+        <tt:span style="textWhite">E steht für einfach.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub124" style="textCenter" region="bottom" begin="00:07:29.290" end="00:07:31.610">
+        <tt:span style="textWhite">Die Bundesregierung möchte:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub125" style="textCenter" region="bottom" begin="00:07:31.650" end="00:07:35.410">
+        <tt:span style="textWhite">In Zukunft sollen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">viele Häuser so gebaut werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub126" style="textCenter" region="bottom" begin="00:07:35.650" end="00:07:40.050">
+        <tt:span style="textWhite">Das soll die Baukosten senken</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und Wohnen billiger machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub127" style="textCenter" region="bottom" begin="00:07:40.090" end="00:07:42.850">
+        <tt:span style="textWhite">Die Käufer können</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aber entscheiden:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub128" style="textCenter" region="bottom" begin="00:07:42.890" end="00:07:46.050">
+        <tt:span style="textWhite">Wollen sie den Gebäudetyp E</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub129" style="textCenter" region="bottom" begin="00:07:46.810" end="00:07:49.370">
+        <tt:span style="textWhite">Diese Frau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">arbeitet in der Bauwirtschaft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub130" style="textCenter" region="bottom" begin="00:07:49.410" end="00:07:54.370">
+        <tt:span style="textWhite">Sie sagt: Der Gebäudetyp E ist gut,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">er sollte zur Regel werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub131" style="textCenter" region="bottom" begin="00:07:54.610" end="00:07:58.410">
+        <tt:span style="textWhite">Die Käufer sollen nicht denken,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wenn sie Gebäudetyp E wählen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub132" style="textCenter" region="bottom" begin="00:07:58.450" end="00:08:00.640">
+        <tt:span style="textWhite">dann sind die Wohnungen schlechter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub133" style="textCenter" region="bottom" begin="00:08:00.800" end="00:08:02.400">
+        <tt:span style="textWhite">Es wird aber noch dauern,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub134" style="textCenter" region="bottom" begin="00:08:02.480" end="00:08:06.360">
+        <tt:span style="textWhite">bis es viele Gebäude</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wie dieses Haus in München gibt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub135" style="textCenter" region="bottom" begin="00:08:07.050" end="00:08:09.570">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub136" style="textCenter" region="bottom" begin="00:08:09.770" end="00:08:10.770">
+        <tt:span style="textWhite">Unfall.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub137" style="textCenter" region="bottom" begin="00:08:11.490" end="00:08:14.290">
+        <tt:span style="textWhite">Kreuzfahrtschiff rammt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Containerschiffe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub138" style="textCenter" region="bottom" begin="00:08:14.810" end="00:08:18.010">
+        <tt:span style="textWhite">Bremerhaven ist eine Stadt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Norddeutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub139" style="textCenter" region="bottom" begin="00:08:18.210" end="00:08:20.250">
+        <tt:span style="textWhite">Bremerhaven liegt an der Nordsee.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub140" style="textCenter" region="bottom" begin="00:08:21.010" end="00:08:26.290">
+        <tt:span style="textWhite">Im Hafen von Bremerhaven</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat es einen Unfall gegeben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub141" style="textCenter" region="bottom" begin="00:08:26.930" end="00:08:30.850">
+        <tt:span style="textWhite">Ein Kreuzfahrtschiff</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat zwei Containerschiffe gerammt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub142" style="textCenter" region="bottom" begin="00:08:31.250" end="00:08:33.050">
+        <tt:span style="textWhite">Der Unfall ist passiert,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub143" style="textCenter" region="bottom" begin="00:08:33.330" end="00:08:37.570">
+        <tt:span style="textWhite">als das Kreuzfahrtschiff</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aus dem Hafen losfahren wollte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub144" style="textCenter" region="bottom" begin="00:08:37.850" end="00:08:39.770">
+        <tt:span style="textWhite">Dazu kommt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub145" style="textCenter" region="bottom" begin="00:08:40.530" end="00:08:44.370">
+        <tt:span style="textWhite">Dieses Video von einem Passagier</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zeigt den Moment,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub146" style="textCenter" region="bottom" begin="00:08:44.890" end="00:08:49.210">
+        <tt:span style="textWhite">als das Kreuzfahrtschiff an einem</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Containerschiff vorbeischrammt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub147" style="textCenter" region="bottom" begin="00:08:49.850" end="00:08:53.450">
+        <tt:span style="textWhite">Starker Wind ist der Grund</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für den Unfall.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub148" style="textCenter" region="bottom" begin="00:08:53.810" end="00:08:56.170">
+        <tt:span style="textWhite">Alle Schiffe haben Schäden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub149" style="textCenter" region="bottom" begin="00:08:56.730" end="00:08:58.970">
+        <tt:span style="textWhite">Kein Mensch wurde verletzt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub150" style="textCenter" region="bottom" begin="00:09:00.170" end="00:09:02.690">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub151" style="textCenter" region="bottom" begin="00:09:03.730" end="00:09:04.730">
+        <tt:span style="textWhite">Brasilien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub152" style="textCenter" region="bottom" begin="00:09:04.770" end="00:09:07.450">
+        <tt:span style="textWhite">Lula gewinnt Wahl zum Präsidenten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub153" style="textCenter" region="bottom" begin="00:09:08.210" end="00:09:09.210">
+        <tt:span style="textWhite">Serbien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub154" style="textCenter" region="bottom" begin="00:09:09.850" end="00:09:11.970">
+        <tt:span style="textWhite">Studentenliste gewinnt Wahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub155" style="textCenter" region="bottom" begin="00:09:12.930" end="00:09:14.250">
+        <tt:span style="textWhite">Neues Gesetz.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub156" style="textCenter" region="bottom" begin="00:09:14.650" end="00:09:16.570">
+        <tt:span style="textWhite">Bauen soll billiger werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub157" style="textCenter" region="bottom" begin="00:09:17.370" end="00:09:18.370">
+        <tt:span style="textWhite">Unfall.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub158" style="textCenter" region="bottom" begin="00:09:18.410" end="00:09:21.610">
+        <tt:span style="textWhite">Kreuzfahrtschiff rammt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Containerschiffe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub159" style="textCenter" region="bottom" begin="00:09:22.210" end="00:09:24.970">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub160" style="textCenter" region="bottom" begin="00:09:26.410" end="00:09:28.450">
+        <tt:span style="textWhite">Im Südwesten wird es sonnig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub161" style="textCenter" region="bottom" begin="00:09:28.890" end="00:09:32.530">
+        <tt:span style="textWhite">Später auch im übrigen Teil</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">des Landes Sonnenschein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub162" style="textCenter" region="bottom" begin="00:09:32.930" end="00:09:35.010">
+        <tt:span style="textWhite">Im Westen etwas Regen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub163" style="textCenter" region="bottom" begin="00:09:35.730" end="00:09:39.010">
+        <tt:span style="textWhite">Höchstwerte 11 bis 21 Grad.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub164" style="textCenter" region="bottom" begin="00:09:40.480" end="00:09:43.520">
+        <tt:span style="textWhite">Das war die tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub165" style="textCenter" region="bottom" begin="00:09:44.370" end="00:09:45.370">
+        <tt:span style="textWhite">Tschüss.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub166" style="textCenter" region="bottom" begin="00:09:45.450" end="00:09:46.970">
+        <tt:span style="textWhite">Bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub167" style="textCenter" region="bottom" begin="00:09:47.080" end="00:09:49.240">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>
