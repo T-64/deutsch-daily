@@ -64,7 +64,8 @@ web/（Vite + React + TS）── npm run build ──▶ docs/app/（提交进�
 | `lib/anki.ts` | `.apkg` 导出（按需加载 sql.js） |
 | `features/lesson/*` | Player（含环境光）、Transport、Transcript（歌词式字幕）、WordCard（查词弹层）、Study（本段词汇语法 + 生词本） |
 | `components/ui/*` | shadcn 风格基础组件（Radix + cva）：Button、Tabs、Segmented、Slider、Tooltip、Drawer（vaul） |
-| `components/shell.tsx` | 顶栏、Logo、设置菜单（主题/字号）、页脚 |
+| `components/shell.tsx` | 顶栏、Logo、设置菜单（主题/字号）、GitHub Star 按钮（首页，无实时计数）、页脚 |
+| `components/Backdrop.tsx` | 全站固定背景 |
 
 ---
 
@@ -93,6 +94,14 @@ web/（Vite + React + TS）── npm run build ──▶ docs/app/（提交进�
 | `--lyric-dim` | 0.34 | 0.40 | 非当前句透明度 |
 
 全局只有一个强调色。新颜色必须做成令牌并给两套主题。
+
+### 背景「On Air」
+
+所有页面共用一层固定背景（`components/Backdrop.tsx`，样式在 `styles.css` 的 `.dd-backdrop`）：两三团极大的柔光（琥珀 `--glow-a`、墨蓝 `--glow-b`、淡玫瑰 `--glow-c`）缓慢漂移，中间一层渐隐点阵，加胶片颗粒和暗角。只用渐变 + transform，没有 blur 滤镜；`prefers-reduced-motion` 下静止。
+
+- 页面容器保持透明，不要再给大块区域铺 `bg-bg`，否则会盖住背景。
+- 吸顶元素用 `.dd-stick`：平时透明，真正吸住时（`lib/stuck.ts` 打上 `data-stuck`）才出现磨砂底。常驻的浮层（手机底部播放条）用 `.dd-frost`。
+- 首页 Hero 的静音视频用 `mask-image` 淡出到背景里，不用不透明渐变遮罩。
 
 ### 字体
 

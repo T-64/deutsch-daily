@@ -1,7 +1,7 @@
 import { ArrowUpRight, Play, Search } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Footer, Logo, SettingsMenu, TopBar } from '@/components/shell';
+import { Footer, GitHubStar, Logo, SettingsMenu, TopBar } from '@/components/shell';
 import type { CatalogItem } from '@/lib/data';
 import { cn, de, minutes } from '@/lib/utils';
 
@@ -27,7 +27,7 @@ function HeroVideo({ src }: { src: string }) {
       playsInline
       preload="none"
       aria-hidden
-      className={cn('absolute inset-0 h-full w-full object-cover transition-opacity duration-[2400ms]', on ? 'opacity-30' : 'opacity-0')}
+      className={cn('absolute inset-0 h-full w-full object-cover transition-opacity duration-[2400ms] [mask-image:radial-gradient(85%_75%_at_72%_38%,black_20%,transparent_78%)]', on ? 'opacity-30' : 'opacity-0')}
     />
   );
 }
@@ -38,9 +38,8 @@ function Latest({ it }: { it: CatalogItem }) {
   const y = useTransform(scrollYProgress, [0, 1], [0, 90]);
   const fade = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
   return (
-    <section ref={ref} className="relative isolate -mt-14 overflow-hidden pt-14 grain">
+    <section ref={ref} className="relative isolate -mt-14 overflow-hidden pt-14">
       {it.mp4 && <HeroVideo src={it.mp4} />}
-      <div className="absolute inset-0 -z-0 bg-[linear-gradient(to_bottom,transparent,var(--bg)_92%),radial-gradient(90%_70%_at_20%_40%,transparent,var(--bg))]" />
       <motion.a
         href={`${it.slug}.html`}
         style={{ y, opacity: fade }}
@@ -169,7 +168,7 @@ export function HomePage({ items }: { items: CatalogItem[] }) {
     <>
       <TopBar transparent>
         <Logo />
-        <div className="ml-auto"><SettingsMenu /></div>
+        <div className="ml-auto flex items-center gap-2"><GitHubStar /><SettingsMenu /></div>
       </TopBar>
       <main>
         {items[0] && <Latest it={items[0]} />}

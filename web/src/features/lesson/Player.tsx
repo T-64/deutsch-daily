@@ -148,7 +148,7 @@ function Chapters({ duration }: { duration: number }) {
               type="button"
               aria-label={st.title}
               onClick={() => playFrom(st.from + i)}
-              className="pointer-events-auto absolute top-0 h-3 w-[3px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-bg ring-1 ring-bg transition hover:h-4 hover:bg-accent"
+              className="pointer-events-auto absolute top-0 h-3 w-[3px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--bg-2)] ring-1 ring-[var(--bg-2)] transition hover:h-4 hover:bg-accent"
               style={{ left: `${(t / duration) * 100}%` }}
             />
           </Tip>

@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Toaster } from 'sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
+import { Backdrop } from '@/components/Backdrop';
 import { usePrefsEffects } from '@/components/shell';
 import { readPage } from '@/lib/data';
 import { usePrefs } from '@/lib/store';
@@ -20,6 +21,7 @@ function App() {
   const toastTheme = theme === 'system' ? 'system' : theme;
   return (
     <TooltipProvider delayDuration={350}>
+      <Backdrop />
       {page.page === 'home' && <HomePage items={page.items} />}
       {page.page === 'lesson' && <LessonPage lesson={page.lesson} />}
       {page.page === 'open' && <OpenPage items={page.items} />}

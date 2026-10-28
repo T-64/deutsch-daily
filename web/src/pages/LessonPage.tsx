@@ -11,6 +11,7 @@ import type { Lesson } from '@/lib/data';
 import { usePlayer } from '@/lib/player';
 import { recent, usePrefs, type PlayMode, type ZhMode } from '@/lib/store';
 import { cn, de } from '@/lib/utils';
+import { trackStuck } from '@/lib/stuck';
 import { LessonProvider, useLesson } from '@/features/lesson/context';
 import { Player, Transport } from '@/features/lesson/Player';
 import { Study } from '@/features/lesson/Study';
@@ -165,18 +166,19 @@ function Mobile() {
     if (!el) return;
     const ro = new ResizeObserver(() => document.documentElement.style.setProperty('--media-h', `${el.offsetHeight}px`));
     ro.observe(el);
-    return () => ro.disconnect();
+    const untrack = trackStuck(window, '[data-media]');
+    return () => { ro.disconnect(); untrack(); };
   }, []);
   return (
     <>
       <div className="px-4 pb-4 pt-5"><Masthead /></div>
-      <div ref={media} className="sticky top-14 z-20 bg-bg px-3 pb-2 pt-1">
+      <div ref={media} data-media className="dd-stick sticky top-14 z-20 px-3 pb-2 pt-1">
         <Player />
       </div>
       <div className="px-4 pb-40 [--sticky-top:calc(56px+var(--media-h,0px))] [&_header.sticky]:top-[var(--sticky-top)]">
         <Transcript scroller={doc} />
       </div>
-      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-[color-mix(in_oklch,var(--bg)_86%,transparent)] px-3 pb-[calc(10px+env(safe-area-inset-bottom))] pt-2.5 backdrop-blur-xl">
+      <div className="fixed inset-x-0 bottom-0 z-30 dd-frost border-t border-line px-3 pb-[calc(10px+env(safe-area-inset-bottom))] pt-2.5 backdrop-blur-xl">
         <div className="mx-auto flex max-w-xl items-center gap-1">
           <Button variant="ghost" size="icon" aria-label="Zurück" onClick={() => p.step(-1)} disabled={!p.el}><SkipBack /></Button>
           <Button size="icon-lg" aria-label={p.playing ? 'Pause' : 'Abspielen'} onClick={p.toggle} disabled={!p.el || p.failed}>
