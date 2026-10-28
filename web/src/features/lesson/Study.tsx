@@ -134,7 +134,7 @@ function SortableWord({ w, onEdit }: { w: Word; onEdit: (w: Word) => void }) {
     <li
       ref={setNodeRef}
       style={{ transform: CSS.Transform.toString(transform), transition }}
-      className={cn('group relative flex items-start gap-2 rounded-xl bg-bg py-3 pr-1', isDragging && 'z-10 shadow-[var(--shadow)] ring-1 ring-line-2')}
+      className={cn('group relative flex items-start gap-2 rounded-xl py-3 pr-1', isDragging && 'z-10 bg-surface shadow-[var(--shadow)] ring-1 ring-line-2')}
     >
       <button type="button" aria-label="Verschieben" className="mt-1 cursor-grab touch-none rounded p-0.5 text-faint opacity-40 transition hover:text-fg group-hover:opacity-100 active:cursor-grabbing" {...attributes} {...listeners}>
         <GripVertical className="size-4" />

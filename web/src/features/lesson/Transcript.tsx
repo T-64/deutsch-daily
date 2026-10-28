@@ -6,6 +6,7 @@ import type { Sentence } from '@/lib/data';
 import { usePlayer } from '@/lib/player';
 import { useNotebook, usePrefs } from '@/lib/store';
 import { clock, cn } from '@/lib/utils';
+import { trackStuck } from '@/lib/stuck';
 import { useLesson } from './context';
 import { useWordCard } from './WordCard';
 
@@ -155,6 +156,12 @@ export function Transcript({ scroller }: { scroller: React.RefObject<HTMLElement
   useEffect(() => {
     const box = scroller.current;
     if (!box) return;
+    return trackStuck(box === document.scrollingElement ? window : box, 'header.dd-stick', box);
+  }, [scroller]);
+
+  useEffect(() => {
+    const box = scroller.current;
+    if (!box) return;
     const target: HTMLElement | Window = box === document.scrollingElement ? window : box;
     const onScroll = () => {
       if (Date.now() - programmatic.current < 900) return;
@@ -201,7 +208,7 @@ export function Transcript({ scroller }: { scroller: React.RefObject<HTMLElement
     <div onClick={onClick} onKeyDown={onKey} className="relative">
       {lesson.stories.map((story, k) => (
         <section key={k} id={`story-${k + 1}`} aria-labelledby={`story-h-${k}`} className="scroll-mt-28 pb-6">
-          <header className="sticky top-0 z-10 -mx-1 mb-1 bg-bg px-1 pb-3 pt-6 after:pointer-events-none after:absolute after:inset-x-0 after:top-full after:h-8 after:bg-gradient-to-b after:from-[var(--bg)] after:to-transparent">
+          <header className="dd-stick sticky top-0 z-10 -mx-3 mb-1 rounded-b-2xl px-3 pb-3 pt-6">
             <div className="flex items-baseline gap-3">
               <span className="font-mono text-[11px] tabular text-accent">{String(k + 1).padStart(2, '0')}</span>
               <h2 id={`story-h-${k}`} lang="de" className="font-serif text-[28px] leading-tight tracking-[-0.01em] text-fg">{story.title}</h2>

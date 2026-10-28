@@ -1,5 +1,5 @@
 import * as Dropdown from '@radix-ui/react-dropdown-menu';
-import { Check, Github, Minus, Monitor, Moon, Plus, Sun, Type } from 'lucide-react';
+import { Check, Github, Minus, Monitor, Moon, Plus, Star, Sun, Type } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { SCALES, applyTheme, usePrefs, type Theme } from '@/lib/store';
@@ -80,6 +80,25 @@ export function SettingsMenu() {
         </Dropdown.Content>
       </Dropdown.Portal>
     </Dropdown.Root>
+  );
+}
+
+const REPO = 'T-64/deutsch-daily';
+
+/* Star call-to-action for the open-source repo (no live count). */
+export function GitHubStar() {
+  return (
+    <a
+      href={`https://github.com/${REPO}`}
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Star on GitHub"
+      className="group inline-flex h-8 items-center gap-2 rounded-full border border-line-2 bg-surface/40 pl-2.5 pr-3 text-[13px] text-fg-2 backdrop-blur transition hover:border-accent hover:text-fg"
+    >
+      <Github className="size-4" />
+      <Star className="size-3.5 transition-colors group-hover:fill-accent group-hover:text-accent" />
+      <span>Star</span>
+    </a>
   );
 }
 
