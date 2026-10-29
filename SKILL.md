@@ -20,7 +20,7 @@ python3 scripts/update_readings.py --env-file ~/.hermes/.env --publish
 默认按 Europe/Berlin 昨天向前检查 7 天，只处理官方实际发布期数。
 需要特定时间窗口时使用 `--since YYYY-MM-DD --until YYYY-MM-DD`；源字幕没变也要重生成时加 `--force`。
 
-同一脚本也由 GitHub Actions 每天运行（`.github/workflows/update-lessons.yml`，UTC 05:17，可在 Actions 页手动触发并填 since/until/force）。
+同一脚本也由 GitHub Actions 每天运行（`.github/workflows/update-lessons.yml`，UTC 05:17，14:43 补跑，可在 Actions 页手动触发并填 since/until/force）。
 密钥放在仓库 Secrets 的 `GLM_API_KEY`（可选 `GLM_BASE_URL`、变量 `DEUTSCH_AI_MODEL`），只注入生成那一步。Hermes 与 Actions 任选其一或并用：
 同一天源字幕不变时第二次运行只校验并重推，不会重复调用 AI。
 
