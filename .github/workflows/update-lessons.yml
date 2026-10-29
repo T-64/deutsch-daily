@@ -4,7 +4,10 @@ name: Update lessons
 # Secrets are only exposed to the single generation step; no PR/issue triggers.
 on:
   schedule:
+    # GitHub often starts scheduled runs hours late or drops them; the afternoon
+    # run is a backup. Days already published are skipped, so it is a no-op normally.
     - cron: "17 5 * * *"
+    - cron: "43 14 * * *"
   workflow_dispatch:
     inputs:
       since:

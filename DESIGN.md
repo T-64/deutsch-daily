@@ -17,7 +17,7 @@ config/reading-sources.json   来源白名单
         │
 scripts/update_readings.py    抓节目页 + 官方字幕 → 切句（subtitle_sentences.py）→ AI 逐句中文/分段/词汇/语法
         │                     → validate-content.py → 原子写入；逐日隔离失败
-        │   运行：GitHub Actions（update-lessons.yml，每天 05:17 UTC，密钥在 Secrets）或本机 Hermes
+        │   运行：GitHub Actions（update-lessons.yml，每天 05:17 UTC + 14:43 UTC 补跑，密钥在 Secrets）或本机 Hermes
         ▼
 data/content/YYYY-MM-DD.json  schema 2 "broadcast"（唯一真源）
 data/meta|transcripts|subtitles  来源身份与证据
