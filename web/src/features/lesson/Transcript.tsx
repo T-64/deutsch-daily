@@ -1,6 +1,6 @@
 import { ArrowDown, Languages } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
-import { memo, useCallback, useEffect, useRef, useState } from 'react';
+import { memo, useCallback, useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import type { Sentence } from '@/lib/data';
 import { usePlayer } from '@/lib/player';
@@ -130,27 +130,40 @@ export function Transcript({ scroller }: { scroller: React.RefObject<HTMLElement
   const openWord = useWordCard(s => s.open);
   const [revealed, setRevealed] = useState<Set<number>>(() => new Set());
   const [detached, setDetached] = useState(false);
-  const programmatic = useRef(0);
   const saved = new Set(words.map(w => w.key));
   const timed = hasVideo;
 
   const onReveal = useCallback((i: number) => setRevealed(r => new Set(r).add(i)), []);
 
-  /* keep the active line in the upper third, Apple-Music style */
+  /* Keep the active line in the middle of what is actually visible, Apple-Music style. */
   const center = useCallback((smooth = true) => {
     const box = scroller.current;
     const el = box?.querySelector<HTMLElement>(`[data-i="${usePlayer.getState().active}"]`);
     if (!box || !el) return;
     const isWindow = box === document.scrollingElement;
-    const boxTop = isWindow ? 0 : box.getBoundingClientRect().top;
-    const offset = el.getBoundingClientRect().top - boxTop - box.clientHeight * (isWindow ? 0.42 : 0.32);
-    programmatic.current = Date.now();
+    let top: number, bottom: number;
+    if (isWindow) {
+      // Phone: below the top bar + sticky video, above the bottom transport bar.
+      const media = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--media-h')) || 0;
+      top = 56 + media;
+      bottom = window.innerHeight - 76;
+    } else {
+      const r = box.getBoundingClientRect();
+      top = r.top + 72; // room for the pinned story header
+      bottom = r.bottom;
+    }
+    const r = el.getBoundingClientRect();
+    const offset = r.top + r.height / 2 - (top + bottom) / 2;
+    if (Math.abs(offset) < 4) return;
     (isWindow ? window : box).scrollBy({ top: offset, behavior: smooth ? 'smooth' : 'auto' });
   }, [scroller]);
 
+  /* Follow the playhead; re-centre once more after the translation line has animated in. */
   useEffect(() => {
     if (active < 0 || !follow || detached || !started) return;
     center();
+    const t = setTimeout(() => center(), 340);
+    return () => clearTimeout(t);
   }, [active, follow, detached, started, center]);
 
   useEffect(() => {
@@ -159,22 +172,36 @@ export function Transcript({ scroller }: { scroller: React.RefObject<HTMLElement
     return trackStuck(box === document.scrollingElement ? window : box, 'header.dd-stick', box);
   }, [scroller]);
 
+  /* Only real user input pauses following (scroll events also come from layout shifts and our own
+     smooth scrolling). Following resumes by itself after a short pause, or at once via the button. */
   useEffect(() => {
     const box = scroller.current;
     if (!box) return;
     const target: HTMLElement | Window = box === document.scrollingElement ? window : box;
-    const onScroll = () => {
-      if (Date.now() - programmatic.current < 900) return;
-      if (usePlayer.getState().playing) setDetached(true);
+    let resume = 0;
+    const pause = () => {
+      if (!usePlayer.getState().started) return;
+      setDetached(true);
+      clearTimeout(resume);
+      resume = window.setTimeout(() => setDetached(false), 4000);
     };
-    const onUser = () => { programmatic.current = 0; };
-    target.addEventListener('scroll', onScroll, { passive: true });
-    target.addEventListener('wheel', onUser, { passive: true });
-    target.addEventListener('touchmove', onUser, { passive: true });
+    const onKey = (e: KeyboardEvent) => {
+      if (['PageUp', 'PageDown', 'Home', 'End'].includes(e.key)) pause();
+    };
+    const onPointer = (e: PointerEvent) => {
+      // grabbing the scrollbar of the transcript panel
+      if (target !== window && e.offsetX > (box as HTMLElement).clientWidth) pause();
+    };
+    target.addEventListener('wheel', pause, { passive: true });
+    target.addEventListener('touchmove', pause, { passive: true });
+    target.addEventListener('pointerdown', onPointer as EventListener);
+    window.addEventListener('keydown', onKey);
     return () => {
-      target.removeEventListener('scroll', onScroll);
-      target.removeEventListener('wheel', onUser);
-      target.removeEventListener('touchmove', onUser);
+      clearTimeout(resume);
+      target.removeEventListener('wheel', pause);
+      target.removeEventListener('touchmove', pause);
+      target.removeEventListener('pointerdown', onPointer as EventListener);
+      window.removeEventListener('keydown', onKey);
     };
   }, [scroller]);
 
