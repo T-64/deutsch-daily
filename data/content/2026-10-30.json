@@ -1,0 +1,825 @@
+{
+  "schema": 2,
+  "content_kind": "broadcast",
+  "date": "2026-10-30",
+  "slug": "2026-10-30",
+  "source": "einfach",
+  "source_label": "tagesschau in Einfacher Sprache",
+  "level": "A2–B1",
+  "source_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1484.html",
+  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1675268.html",
+  "source_text_sha256": "1b3e5a05872bbe7020b5388c51403eec8a81ba117776de878cf0aafb131c719e",
+  "generated_at": "2026-10-31T11:54:39.692584+01:00",
+  "generation_model": "glm-5.3",
+  "sentences": [
+    {
+      "de": "Willkommen zur tagesschau in Einfacher Sprache.",
+      "start": 10.73,
+      "end": 13.77,
+      "zh": "欢迎收看简易德语每日新闻。"
+    },
+    {
+      "de": "Ich bin Susanne Holst und das sind unsere Nachrichten:",
+      "start": 13.85,
+      "end": 17.13,
+      "zh": "我是苏珊娜·霍尔斯特，以下是我们的新闻："
+    },
+    {
+      "de": "Und nun zur ersten Nachricht.",
+      "start": 33.69,
+      "end": 35.69,
+      "zh": "现在来看第一条新闻。"
+    },
+    {
+      "de": "In Israel hat es eine Wahl gegeben.",
+      "start": 40.89,
+      "end": 43.41,
+      "zh": "以色列举行了一场选举。"
+    },
+    {
+      "de": "Die Menschen dort haben ein neues Parlament gewählt.",
+      "start": 43.93,
+      "end": 47.57,
+      "zh": "那里的人们选出了新的议会。"
+    },
+    {
+      "de": "Jetzt sind alle Stimmen ausgezählt.",
+      "start": 48.13,
+      "end": 50.65,
+      "zh": "现在所有选票都已统计完毕。"
+    },
+    {
+      "de": "Die meisten Stimmen hat die Partei Likud bekommen.",
+      "start": 51.29,
+      "end": 54.49,
+      "zh": "利库德集团获得的选票最多。"
+    },
+    {
+      "de": "Der Chef von der Regierung, Benjamin Netanjahu, ist von der Likud-Partei.",
+      "start": 55.21,
+      "end": 60.89,
+      "zh": "政府首脑本雅明·内塔尼亚胡来自利库德党。"
+    },
+    {
+      "de": "Aber ob Netanyahu Chef bleiben kann, ist nicht sicher.",
+      "start": 61.61,
+      "end": 65.41,
+      "zh": "但内塔尼亚胡能否继续担任首脑，还不确定。"
+    },
+    {
+      "de": "Seine Partei muss andere Parteien für eine Koalition finden.",
+      "start": 65.89,
+      "end": 70.33,
+      "zh": "他的政党必须找到其他政党组成联合政府。"
+    },
+    {
+      "de": "Alleine regieren kann die Likud nämlich nicht.",
+      "start": 71.17,
+      "end": 74.37,
+      "zh": "因为利库德无法单独执政。"
+    },
+    {
+      "de": "Aber auch Gadi Eisenkot von der Partei Yashar will Chef von der Regierung werden.",
+      "start": 75.13,
+      "end": 80.57,
+      "zh": "但“诚实”党的加迪·艾森科特也想成为政府首脑。"
+    },
+    {
+      "de": "Bis es eine neue Regierung in Israel gibt, könnte es deshalb lange dauern.",
+      "start": 81.49,
+      "end": 86.69,
+      "zh": "因此，以色列成立新政府可能需要很长时间。"
+    },
+    {
+      "de": "Dazu zeigen wir jetzt einen Film.",
+      "start": 87.21,
+      "end": 89.57,
+      "zh": "现在我们来看一段影片。"
+    },
+    {
+      "de": "Mehrere Tage haben die Helfer die Stimmen gezählt.",
+      "start": 90.81,
+      "end": 94.33,
+      "zh": "工作人员花了几天时间统计选票。"
+    },
+    {
+      "de": "Das Ergebnis: Es gibt keinen klaren Gewinner.",
+      "start": 95.33,
+      "end": 98.77,
+      "zh": "结果是：没有明显的赢家。"
+    },
+    {
+      "de": "Netanjahu und die Likud-Partei haben die meisten Stimmen.",
+      "start": 100.41,
+      "end": 104.41,
+      "zh": "内塔尼亚胡和利库德党获得了最多的选票。"
+    },
+    {
+      "de": "Aber es reicht nicht zum Regieren.",
+      "start": 105.77,
+      "end": 108.21,
+      "zh": "但这不足以执政。"
+    },
+    {
+      "de": "Eisenkot und die Yashar-Partei sind auf dem zweiten Platz.",
+      "start": 109.73,
+      "end": 113.81,
+      "zh": "艾森科特和“诚实”党位居第二。"
+    },
+    {
+      "de": "Das reicht auch nicht zum Regieren.",
+      "start": 114.85,
+      "end": 117.37,
+      "zh": "这也不足以执政。"
+    },
+    {
+      "de": "Beide Parteien müssen mit anderen Parteien reden und fragen: Wollt ihr bei der Regierung mitmachen?",
+      "start": 118.77,
+      "end": 125.93,
+      "zh": "两个政党都必须与其他政党商谈，问：你们想参与执政吗？"
+    },
+    {
+      "de": "Der Präsident von Israel, Isaac Herzog, muss jetzt entscheiden:",
+      "start": 127.09,
+      "end": 131.53,
+      "zh": "以色列总统伊萨克·赫尔佐格现在必须决定："
+    },
+    {
+      "de": "Wer darf mit den Gesprächen anfangen.",
+      "start": 132.01,
+      "end": 134.65,
+      "zh": "谁可以开始组阁谈判。"
+    },
+    {
+      "de": "Netanjahu oder Eisenkot?",
+      "start": 135.17,
+      "end": 137.17,
+      "zh": "是内塔尼亚胡还是艾森科特？"
+    },
+    {
+      "de": "Eisenkot könnte dann auch mit den arabischen Parteien reden.",
+      "start": 138.81,
+      "end": 143.01,
+      "zh": "艾森科特之后也可以与阿拉伯政党谈判。"
+    },
+    {
+      "de": "Diese Parteien kümmern sich um die Interessen von arabischen Menschen.",
+      "start": 143.73,
+      "end": 148.29,
+      "zh": "这些政党关心阿拉伯人的利益。"
+    },
+    {
+      "de": "Das sind zum Beispiel Palästinenser.",
+      "start": 148.65,
+      "end": 151.21,
+      "zh": "比如巴勒斯坦人。"
+    },
+    {
+      "de": "Netanjahu will nicht mit den arabischen Parteien reden.",
+      "start": 152.77,
+      "end": 156.61,
+      "zh": "内塔尼亚胡不想与阿拉伯政党谈判。"
+    },
+    {
+      "de": "Er sagt sogar:",
+      "start": 157.33,
+      "end": 158.53,
+      "zh": "他甚至说："
+    },
+    {
+      "de": "die arabischen Parteien haben zu viele Stimmen bekommen.",
+      "start": 159.01,
+      "end": 162.85,
+      "zh": "阿拉伯政党获得了太多选票。"
+    },
+    {
+      "de": "Das war bestimmt Betrug.",
+      "start": 162.93,
+      "end": 164.85,
+      "zh": "那一定是舞弊。"
+    },
+    {
+      "de": "Wie es jetzt in Israel weitergeht, weiß noch niemand.",
+      "start": 166.73,
+      "end": 170.45,
+      "zh": "以色列接下来会怎样，目前没有人知道。"
+    },
+    {
+      "de": "Es gibt viele Möglichkeiten.",
+      "start": 171.53,
+      "end": 173.53,
+      "zh": "有很多种可能性。"
+    },
+    {
+      "de": "Wenn sich die Parteien nicht einig werden, dann gibt es vielleicht sogar neue Wahlen.",
+      "start": 173.97,
+      "end": 180.17,
+      "zh": "如果各政党无法达成一致，甚至可能重新选举。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 182.41,
+      "end": 184.61,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "In Italien sind die Menschen unzufrieden.",
+      "start": 189.01,
+      "end": 191.85,
+      "zh": "在意大利，人们感到不满。"
+    },
+    {
+      "de": "Sie sagen:",
+      "start": 192.49,
+      "end": 193.69,
+      "zh": "他们说："
+    },
+    {
+      "de": "Die Mieten sind zu teuer, Schulen sind kaputt.",
+      "start": 193.77,
+      "end": 196.97,
+      "zh": "房租太贵，学校破旧不堪。"
+    },
+    {
+      "de": "Wir verdienen nicht genug Geld.",
+      "start": 197.37,
+      "end": 199.57,
+      "zh": "我们挣的钱不够。"
+    },
+    {
+      "de": "Deshalb gab es jetzt in vielen italienischen Städten Proteste.",
+      "start": 200.29,
+      "end": 204.45,
+      "zh": "因此，现在意大利许多城市发生了抗议活动。"
+    },
+    {
+      "de": "Viele Menschen sind auf die Straßen gegangen.",
+      "start": 205.57,
+      "end": 208.73,
+      "zh": "许多人走上街头。"
+    },
+    {
+      "de": "Dazu zeigen wir jetzt einen Film.",
+      "start": 208.89,
+      "end": 211.25,
+      "zh": "现在我们来看一段影片。"
+    },
+    {
+      "de": "Auch in der Stadt Rom waren viele Menschen auf der Straße.",
+      "start": 212.29,
+      "end": 216.37,
+      "zh": "在罗马也有很多人走上街头。"
+    },
+    {
+      "de": "Vor allem junge Menschen.",
+      "start": 216.73,
+      "end": 218.53,
+      "zh": "尤其是年轻人。"
+    },
+    {
+      "de": "Dieser Mann sagt: Alles ist viel zu teuer.",
+      "start": 219.41,
+      "end": 222.33,
+      "zh": "这位男士说：一切都太贵了。"
+    },
+    {
+      "de": "Und die Regierung macht nichts dagegen.",
+      "start": 222.77,
+      "end": 225.13,
+      "zh": "而政府对此什么也不做。"
+    },
+    {
+      "de": "Diese Frau sagt:",
+      "start": 226.13,
+      "end": 227.41,
+      "zh": "这位女士说："
+    },
+    {
+      "de": "Krankenhäuser haben nicht genug Geld.",
+      "start": 227.57,
+      "end": 230.21,
+      "zh": "医院没有足够的钱。"
+    },
+    {
+      "de": "Schulen und Universitäten gehen kaputt.",
+      "start": 230.81,
+      "end": 233.53,
+      "zh": "学校和大学越来越破败。"
+    },
+    {
+      "de": "Das erschreckt mich.",
+      "start": 233.81,
+      "end": 235.25,
+      "zh": "这让我感到震惊。"
+    },
+    {
+      "de": "Die Regierung in Italien hat jetzt versprochen:",
+      "start": 236.49,
+      "end": 239.77,
+      "zh": "意大利政府现在承诺："
+    },
+    {
+      "de": "Wir machen es besser.",
+      "start": 239.89,
+      "end": 241.41,
+      "zh": "我们会改善这一切。"
+    },
+    {
+      "de": "Die Chefin von der Regierung, Giorgia Meloni, sagt, junge Menschen sollen günstiger wohnen können.",
+      "start": 242.41,
+      "end": 249.65,
+      "zh": "政府首脑焦尔吉娅·梅洛尼说，年轻人应该能住得更便宜。"
+    },
+    {
+      "de": "Das müssen wir machen, damit junge Menschen nicht aus Italien weggehen.",
+      "start": 249.81,
+      "end": 254.97,
+      "zh": "我们必须这样做，以免年轻人离开意大利。"
+    },
+    {
+      "de": "Auch in anderen Ländern gibt es gerade Proteste.",
+      "start": 256.45,
+      "end": 259.81,
+      "zh": "其他国家目前也有抗议活动。"
+    },
+    {
+      "de": "Zum Beispiel in Frankreich und Spanien.",
+      "start": 260.09,
+      "end": 262.81,
+      "zh": "比如在法国和西班牙。"
+    },
+    {
+      "de": "Manchmal sogar mit Gewalt.",
+      "start": 263.73,
+      "end": 265.81,
+      "zh": "有时甚至发生暴力。"
+    },
+    {
+      "de": "Auch in Deutschland sind Proteste angekündigt.",
+      "start": 267.57,
+      "end": 270.77,
+      "zh": "德国也宣布将有抗议活动。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 273.09,
+      "end": 275.29,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "Auf dem Foto ist der Schauspieler Patrick Stewart.",
+      "start": 279.17,
+      "end": 282.69,
+      "zh": "照片上的是演员帕特里克·斯图尔特。"
+    },
+    {
+      "de": "Auf der ganzen Welt sind jetzt Menschen traurig.",
+      "start": 283.33,
+      "end": 286.33,
+      "zh": "现在全世界的人都感到悲伤。"
+    },
+    {
+      "de": "Patrick Stewart ist nämlich gestorben.",
+      "start": 286.57,
+      "end": 289.21,
+      "zh": "因为帕特里克·斯图尔特去世了。"
+    },
+    {
+      "de": "Er wurde 86 Jahre alt.",
+      "start": 289.65,
+      "end": 291.45,
+      "zh": "他享年86岁。"
+    },
+    {
+      "de": "Wir zeigen jetzt einige Bilder von ihm.",
+      "start": 292.25,
+      "end": 294.73,
+      "zh": "我们现在展示一些他的照片。"
+    },
+    {
+      "de": "Stewart war sehr bekannt, weil er in Serien und Filmen mitgespielt hat.",
+      "start": 295.13,
+      "end": 300.13,
+      "zh": "斯图尔特非常有名，因为他参演过电视剧和电影。"
+    },
+    {
+      "de": "Er war Captain Jean-Luc Picard in der Serie Star Trek.",
+      "start": 300.49,
+      "end": 304.57,
+      "zh": "他在电视剧《星际迷航》中扮演让-吕克·皮卡德舰长。"
+    },
+    {
+      "de": "Und auch Professor Xavier in dem Film X-Men.",
+      "start": 306.33,
+      "end": 309.41,
+      "zh": "还在电影《X战警》中扮演X教授。"
+    },
+    {
+      "de": "Stewart war auch Aktivist.",
+      "start": 310.65,
+      "end": 312.49,
+      "zh": "斯图尔特也是一名社会活动家。"
+    },
+    {
+      "de": "Er hat anderen Menschen geholfen.",
+      "start": 312.81,
+      "end": 314.97,
+      "zh": "他帮助过其他人。"
+    },
+    {
+      "de": "Zum Beispiel Frauen und Flüchtlingen.",
+      "start": 315.01,
+      "end": 317.41,
+      "zh": "比如女性和难民。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 319.65,
+      "end": 321.85,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "Alexander Zverev ist ein deutscher Sportler.",
+      "start": 326.29,
+      "end": 329.37,
+      "zh": "亚历山大·兹维列夫是一名德国运动员。"
+    },
+    {
+      "de": "Er spielt Tennis.",
+      "start": 330.01,
+      "end": 331.21,
+      "zh": "他打网球。"
+    },
+    {
+      "de": "Zverev ist auf dem Foto.",
+      "start": 331.45,
+      "end": 333.17,
+      "zh": "照片上是兹维列夫。"
+    },
+    {
+      "de": "Im Tennis gibt es eine Weltrangliste.",
+      "start": 334.21,
+      "end": 336.85,
+      "zh": "网球有一份世界排名。"
+    },
+    {
+      "de": "Auf dieser Liste stehen die besten Spieler der Welt.",
+      "start": 337.93,
+      "end": 341.57,
+      "zh": "名单上列着世界上最优秀的选手。"
+    },
+    {
+      "de": "Zverev ist jetzt auf dem ersten Platz.",
+      "start": 341.89,
+      "end": 344.53,
+      "zh": "兹维列夫现在排名第一。"
+    },
+    {
+      "de": "Das heißt, er ist im Moment der beste Tennisspieler auf der Welt.",
+      "start": 345.41,
+      "end": 349.97,
+      "zh": "也就是说，他目前是世界上最好的网球选手。"
+    },
+    {
+      "de": "Das waren unsere Nachrichten.",
+      "start": 351.65,
+      "end": 353.73,
+      "zh": "以上就是我们的新闻。"
+    },
+    {
+      "de": "Und jetzt kommt das Wetter.",
+      "start": 369.85,
+      "end": 371.77,
+      "zh": "现在播报天气。"
+    },
+    {
+      "de": "Meistens gibt es viele Wolken.",
+      "start": 372.69,
+      "end": 374.85,
+      "zh": "大部分地区多云。"
+    },
+    {
+      "de": "Links im Osten auch Regen.",
+      "start": 375.29,
+      "end": 377.13,
+      "zh": "东边（图左）也有雨。"
+    },
+    {
+      "de": "Und rechts im Südwesten scheint manchmal die Sonne.",
+      "start": 377.89,
+      "end": 381.45,
+      "zh": "西南边（图右）有时会出太阳。"
+    },
+    {
+      "de": "Es werden 6 bis 13 Grad.",
+      "start": 382.17,
+      "end": 383.89,
+      "zh": "气温为6至13度。"
+    },
+    {
+      "de": "Das war die tagesschau in Einfacher Sprache.",
+      "start": 386.29,
+      "end": 388.89,
+      "zh": "以上就是简易德语每日新闻。"
+    },
+    {
+      "de": "Tschüss. Bis zum nächsten Mal.",
+      "start": 388.97,
+      "end": 390.97,
+      "zh": "再见，下次见。"
+    }
+  ],
+  "stories": [
+    {
+      "title": "Begrüßung",
+      "title_zh": "欢迎",
+      "from": 0,
+      "to": 2,
+      "vocab": [],
+      "grammar_points": []
+    },
+    {
+      "title": "Ergebnis von der Wahl in Israel",
+      "title_zh": "以色列选举结果",
+      "from": 3,
+      "to": 33,
+      "vocab": [
+        {
+          "lemma": "die Wahl, -en",
+          "key": "wahl",
+          "forms": [
+            "Wahl"
+          ],
+          "pos": "Substantiv",
+          "zh": "选举",
+          "sentence": 3
+        },
+        {
+          "lemma": "die Stimme, -n",
+          "key": "stimme",
+          "forms": [
+            "Stimmen"
+          ],
+          "pos": "Substantiv",
+          "zh": "选票；声音",
+          "sentence": 5
+        },
+        {
+          "lemma": "die Partei, -en",
+          "key": "partei",
+          "forms": [
+            "Partei"
+          ],
+          "pos": "Substantiv",
+          "zh": "政党",
+          "sentence": 6
+        },
+        {
+          "lemma": "die Regierung, -en",
+          "key": "regierung",
+          "forms": [
+            "Regierung"
+          ],
+          "pos": "Substantiv",
+          "zh": "政府",
+          "sentence": 7
+        },
+        {
+          "lemma": "aus/zählen",
+          "key": "auszaehlen",
+          "forms": [
+            "ausgezählt"
+          ],
+          "pos": "Verb",
+          "zh": "清点，统计",
+          "sentence": 5
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "被动语态（状态被动）",
+          "summary": "„sind ... ausgezählt\" 表示选票\"已被统计完\"的状态，用 sein + 过去分词描述已完成的状态。",
+          "sentence": 5
+        }
+      ]
+    },
+    {
+      "title": "Proteste in Italien",
+      "title_zh": "意大利的抗议活动",
+      "from": 34,
+      "to": 57,
+      "vocab": [
+        {
+          "lemma": "der Protest, -e",
+          "key": "protest",
+          "forms": [
+            "Proteste"
+          ],
+          "pos": "Substantiv",
+          "zh": "抗议",
+          "sentence": 39
+        },
+        {
+          "lemma": "unzufrieden",
+          "key": "unzufrieden",
+          "forms": [
+            "unzufrieden"
+          ],
+          "pos": "Adjektiv",
+          "zh": "不满的",
+          "sentence": 35
+        },
+        {
+          "lemma": "die Miete, -n",
+          "key": "miete",
+          "forms": [
+            "Mieten"
+          ],
+          "pos": "Substantiv",
+          "zh": "房租",
+          "sentence": 37
+        },
+        {
+          "lemma": "versprechen",
+          "key": "versprechen",
+          "forms": [
+            "versprochen"
+          ],
+          "pos": "Verb",
+          "zh": "承诺",
+          "sentence": 50
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "现在完成时",
+          "summary": "„sind ... gegangen\" 用 sein + gegangen 表示\"走上（街头）\"这一已完成的动作。",
+          "sentence": 40
+        }
+      ]
+    },
+    {
+      "title": "Schauspieler Patrick Stewart gestorben",
+      "title_zh": "演员帕特里克·斯图尔特去世",
+      "from": 58,
+      "to": 69,
+      "vocab": [
+        {
+          "lemma": "der Schauspieler, -",
+          "key": "schauspieler",
+          "forms": [
+            "Schauspieler"
+          ],
+          "pos": "Substantiv",
+          "zh": "演员",
+          "sentence": 59
+        },
+        {
+          "lemma": "der Tod / gestorben",
+          "key": "sterben",
+          "forms": [
+            "gestorben"
+          ],
+          "pos": "Verb",
+          "zh": "去世",
+          "sentence": 61
+        },
+        {
+          "lemma": "die Serie, -n",
+          "key": "serie",
+          "forms": [
+            "Serien"
+          ],
+          "pos": "Substantiv",
+          "zh": "电视剧",
+          "sentence": 64
+        },
+        {
+          "lemma": "der Flüchtling, -e",
+          "key": "fluechtling",
+          "forms": [
+            "Flüchtlingen"
+          ],
+          "pos": "Substantiv",
+          "zh": "难民",
+          "sentence": 69
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "weil 从句",
+          "summary": "„weil er ... mitgespielt hat\"：weil 引导原因从句，动词（或完成时的助动词）放在句末。",
+          "sentence": 64
+        }
+      ]
+    },
+    {
+      "title": "Tennisspieler Zverev auf Platz eins",
+      "title_zh": "网球选手兹维列夫排名第一",
+      "from": 70,
+      "to": 77,
+      "vocab": [
+        {
+          "lemma": "der Sportler, -",
+          "key": "sportler",
+          "forms": [
+            "Sportler"
+          ],
+          "pos": "Substantiv",
+          "zh": "运动员",
+          "sentence": 71
+        },
+        {
+          "lemma": "die Weltrangliste, -n",
+          "key": "weltrangliste",
+          "forms": [
+            "Weltrangliste"
+          ],
+          "pos": "Substantiv",
+          "zh": "世界排名",
+          "sentence": 74
+        },
+        {
+          "lemma": "der Platz, ¨-e",
+          "key": "platz",
+          "forms": [
+            "Platz"
+          ],
+          "pos": "Substantiv",
+          "zh": "名次，位置",
+          "sentence": 76
+        },
+        {
+          "lemma": "der Spieler, -",
+          "key": "spieler",
+          "forms": [
+            "Spieler"
+          ],
+          "pos": "Substantiv",
+          "zh": "选手",
+          "sentence": 75
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "序数词与介词 auf",
+          "summary": "„auf dem ersten Platz\" 表示\"在第一名\"，序数词 ersten 前用定冠词并加词尾。",
+          "sentence": 76
+        }
+      ]
+    },
+    {
+      "title": "Das Wetter",
+      "title_zh": "天气",
+      "from": 78,
+      "to": 83,
+      "vocab": [
+        {
+          "lemma": "die Wolke, -n",
+          "key": "wolke",
+          "forms": [
+            "Wolken"
+          ],
+          "pos": "Substantiv",
+          "zh": "云",
+          "sentence": 80
+        },
+        {
+          "lemma": "der Regen",
+          "key": "regen",
+          "forms": [
+            "Regen"
+          ],
+          "pos": "Substantiv",
+          "zh": "雨",
+          "sentence": 81
+        },
+        {
+          "lemma": "scheinen",
+          "key": "scheinen",
+          "forms": [
+            "scheint"
+          ],
+          "pos": "Verb",
+          "zh": "照耀（太阳）",
+          "sentence": 82
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "无主语 es 的天气表达",
+          "summary": "„Es werden 6 bis 13 Grad\"：用 es + werden 表达气温变化，意为\"气温将是6到13度\"。",
+          "sentence": 83
+        }
+      ]
+    },
+    {
+      "title": "Verabschiedung",
+      "title_zh": "告别",
+      "from": 84,
+      "to": 85,
+      "vocab": [],
+      "grammar_points": []
+    }
+  ]
+}
