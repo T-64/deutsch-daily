@@ -113,14 +113,20 @@ def note_failure(failures: list[tuple[str, str]], label: str, exc, verb: str = "
     print(f"{verb}: {label} · {reason}", flush=True)
 
 
-def discover(source: dict, since: date, until: date, failures: list[tuple[str, str]] | None = None) -> list[tuple[dict, bytes]]:
-    """Verified editions in range; per-day problems go to `failures` instead of aborting."""
+def discover(source: dict, since: date, until: date, failures: list[tuple[str, str]] | None = None,
+             today: date | None = None) -> list[tuple[dict, bytes]]:
+    """Verified editions in range; per-day problems go to `failures` instead of aborting.
+
+    Today's edition may simply not be out yet (the evening runs poll for it), so a problem with
+    `today` is reported as pending rather than as a failure.
+    """
     failures = [] if failures is None else failures
+    today = today or datetime.now(BERLIN).date()
     html = source_bytes(source["list_url"], source, listing=True).decode("utf-8")
     paths = list(dict.fromkeys(re.findall(r"tse-\d+\.html", html)))
     if not paths:
         raise ValueError("No simple-news episodes in the source listing")
-    found, conflicts, skipped = {}, set(), len(failures)
+    found, conflicts, skipped, pending = {}, set(), len(failures), False
     # CMS ordering isn't chronological: inspect every visible episode, then sort.
     listed_dates = dict(re.findall(r'href="[^"<>]*/(tse-\d+\.html)"[^>]*>(?:(?!</a>).)*?class="teaser__date"[^>]*>\s*(\d{2}\.\d{2}\.\d{4})', html, re.S))
     for path in paths[:20]:
@@ -147,7 +153,11 @@ def discover(source: dict, since: date, until: date, failures: list[tuple[str, s
             if len(cues) < 8 or not transcript_matches_synopsis(cues, fields["synopsis"]):
                 raise ValueError("official text does not match the episode")
         except DAY_ERRORS as exc:
-            note_failure(failures, label, exc)
+            if label == today.isoformat():
+                pending = True
+                print(f"pending: {label} · {' '.join(str(exc).split())[:200]}", flush=True)
+            else:
+                note_failure(failures, label, exc)
             continue
         fields["text_sha256"] = hashlib.sha256(xml).hexdigest()
         if day in found and found[day][0]["text_sha256"] != fields["text_sha256"]:
@@ -165,7 +175,7 @@ def discover(source: dict, since: date, until: date, failures: list[tuple[str, s
             for day in days:
                 del found[day]
                 note_failure(failures, day.isoformat(), "source text reused by " + " / ".join(d.isoformat() for d in sorted(days)))
-    if not found and len(failures) == skipped:
+    if not found and len(failures) == skipped and not pending:
         raise ValueError("No source editions found in the requested date range")
     return [found[day] for day in sorted(found)]
 
@@ -224,9 +234,16 @@ def ai_json(system: str, payload: dict, max_tokens: int) -> dict:
                 result = json.load(response)
             break
         except urllib.error.HTTPError as exc:
-            if exc.code not in (429, 500, 502, 503, 504) or attempt == 2:
-                raise
-            time.sleep(2 ** (attempt + 1))
+            if exc.code in (429, 500, 502, 503, 504) and attempt < 2:
+                time.sleep(2 ** (attempt + 1))
+                continue
+            # Keep the provider's explanation (e.g. a content-filter code); error bodies don't echo
+            # request headers, so the API key can't leak here. ValueError lets the caller retry.
+            try:
+                detail = " ".join(exc.read().decode("utf-8", "replace").split())[:300]
+            except Exception:
+                detail = ""
+            raise ValueError(f"AI request failed: HTTP {exc.code} {detail}".strip()) from None
         except (urllib.error.URLError, TimeoutError, http.client.HTTPException):
             if attempt == 2:
                 raise
@@ -432,8 +449,9 @@ def update(args) -> list[str]:
     load_env(args.env_file)
     config = json.loads((ROOT / "config/reading-sources.json").read_text())
     source = next(s for s in config["sources"] if s["id"] == "einfach" and s["enabled"])
-    until = args.until or datetime.now(BERLIN).date() - timedelta(days=1)
-    since = args.since or until - timedelta(days=6)
+    # Include today: the broadcast airs in the evening and the evening runs pick it up.
+    until = args.until or datetime.now(BERLIN).date()
+    since = args.since or until - timedelta(days=7)
     if since > until:
         raise ValueError("--since must not be after --until")
     failures: list[tuple[str, str]] = []
