@@ -32,7 +32,7 @@
 tagesschau.de ─▶ 官方字幕 ─▶ 切句 + 时间轴 ─▶ AI 逐句中文 · 分段 · 词汇 · 语法 ─▶ 校验 ─▶ GitHub Pages
 ```
 
-每天由 [GitHub Actions](.github/workflows/update-lessons.yml) 自动运行（05:17 UTC，14:43 UTC 补跑）。德语原文与时间只取自官方字幕，AI 不改写；单日失败不影响其他日期。
+每天由 [GitHub Actions](.github/workflows/update-lessons.yml) 自动运行：柏林傍晚播出后每小时检查一次，保证次日 08:00（柏林）前上线；外部定时触发见 [`SCHEDULE.md`](.github/SCHEDULE.md)。德语原文与时间只取自官方字幕，AI 不改写；单日失败不影响其他日期。
 
 ## Develop
 

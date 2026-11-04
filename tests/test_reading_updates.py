@@ -185,6 +185,16 @@ class ReadingUpdateTests(unittest.TestCase):
         self.assertEqual([f['date'] for f, _ in editions], ['2026-10-20'])
         self.assertEqual(failures, [('2026-10-19', 'official text is not available yet')])
 
+    def test_todays_edition_without_subtitles_is_pending_not_a_failure(self):
+        base = SOURCE['list_url'] + '/'
+        index_html = b'<a href="/x/tse-1.html">Di</a>'
+        fields = {'date': '2026-11-03', 'subtitle_url': '', 'synopsis': 'Wahl', 'episode_id': 'tse-1'}
+        failures = []
+        with patch.object(updates, 'source_bytes', side_effect=lambda url, source, listing=False: index_html if listing else b'page'), \
+                patch.object(updates, 'parse_fields', return_value=fields):
+            editions = updates.discover(SOURCE, date(2026, 10, 27), date(2026, 11, 3), failures, today=date(2026, 11, 3))
+        self.assertEqual((editions, failures), ([], []))
+
     def test_unchanged_source_skips_ai_but_retries_publish(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
