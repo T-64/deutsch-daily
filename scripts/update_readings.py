@@ -33,6 +33,7 @@ from zoneinfo import ZoneInfo
 
 from ingest_episode import ebu_to_cues, parse_fields, transcript_matches_synopsis
 from subtitle_sentences import cue_sentences
+import audio_sync
 
 ROOT = Path(__file__).resolve().parent.parent
 BERLIN = ZoneInfo("Europe/Berlin")
@@ -369,12 +370,36 @@ def validate(doc: dict) -> None:
             raise ValueError(report.getvalue().strip())
 
 
+def sync_audio(fields: dict, cues: list[dict], meta_path: Path) -> None:
+    """Record how far the published video's audio is shifted against the subtitles (build.py applies it).
+
+    Re-uses the previous measurement while the video is the same; a failed measurement is simply
+    left out and retried on the next run.
+    """
+    old = json.loads(meta_path.read_text()) if meta_path.exists() else {}
+    if "audio_offset" in old and old.get("m3u8") == fields.get("m3u8"):
+        fields["audio_offset"] = old["audio_offset"]
+        return
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from build import derive_mp4_url  # build.py lives one level up
+    url = derive_mp4_url(fields)
+    got = audio_sync.measure(url, cues) if url else None
+    if got is None:
+        print(f"sync: {fields['date']} · not measured", flush=True)
+        return
+    fields["audio_offset"], agreement = got
+    print(f"sync: {fields['date']} · audio {got[0]:+.2f}s vs subtitles ({agreement:.0%} agreement)", flush=True)
+
+
 def refresh(fields: dict, xml: bytes, fetch_only: bool, force: bool = False) -> bool:
     """Save one day's evidence and (re)generate its lesson; True when the day can be published."""
     day = fields["date"]
+    cues = ebu_to_cues(xml)
+    sync_audio(fields, cues, ROOT / f"data/meta/{day}.json")
     # Persist independently fetched evidence even if the AI step fails.
     atomic_json(ROOT / f"data/meta/{day}.json", fields)
-    atomic_json(ROOT / f"data/transcripts/{day}.json", ebu_to_cues(xml))
+    atomic_json(ROOT / f"data/transcripts/{day}.json", cues)
     sub = ROOT / f"data/subtitles/{day}.xml"
     sub.parent.mkdir(parents=True, exist_ok=True)
     sub.write_bytes(xml)

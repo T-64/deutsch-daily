@@ -44,6 +44,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install ffmpeg (audio/subtitle sync measurement)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
       - name: Generate, validate and publish
         env:
           GLM_API_KEY: ${{ secrets.GLM_API_KEY }}

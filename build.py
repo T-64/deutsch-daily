@@ -520,6 +520,7 @@ def word_gloss_map(vocab_items, texts, cache):
 
 
 SHOW = "tagesschau in Einfacher Sprache"
+AUDIO_SHIFT_MIN = 0.15  # seconds; below this the measured offset is noise
 PENDING_NOTE = ""
 
 
@@ -617,6 +618,14 @@ def lesson_payload(doc, fallback_slug=""):
         if any(len(n.get("paragraphs") or []) != len(n.get("translations") or []) for n in doc["news"]):
             raise SystemExit(f"{slug}: paragraphs 与 translations 数量不一致")
         sentences, stories, note = _legacy_video(doc, slug, date, source)
+    # Some published videos are cut differently from the broadcast the subtitles were timed on;
+    # scripts/audio_sync.py measures that per episode. Small measured shifts are left alone.
+    shift = float(meta.get("audio_offset") or 0)
+    if abs(shift) >= AUDIO_SHIFT_MIN:
+        for x in sentences:
+            for k in ("start", "end"):
+                if x[k] is not None:
+                    x[k] = round(max(0.0, x[k] + shift), 2)
     vocab_items = [v for st in stories for v in st["vocab"]]
     gloss, form_to_key, phrases = word_gloss_map(vocab_items, [x["de"] for x in sentences], load_cache())
     for st in stories:
