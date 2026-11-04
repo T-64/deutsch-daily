@@ -53,6 +53,10 @@ web/（Vite + React + TS）── npm run build ──▶ docs/app/（提交进�
 
 `Lesson = { slug, date, show, level, kind, note, source_url, video{mp4,embed,page}, duration, sentences[{de,zh,start,end}], stories[{title,title_zh,from,to,vocab[],grammar[],background}], gloss, form_to_key, phrases }`。`stories` 的 `from..to` 连续覆盖全部句子。
 
+### 音画同步
+
+有的期次发布的视频和字幕所依据的播出版本剪辑不同（2026-11-02：每句声音都比字幕晚 2.3 秒）。`scripts/audio_sync.py` 在日更时用 ffmpeg 找出说话区间，逐分钟和字幕显示区间比对；多数分钟一致时把偏移写进 `data/meta/<日>.json` 的 `audio_offset`（视频不变就复用，测不准就不写、下次再测）。`build.lesson_payload` 把 |偏移| ≥ 0.15 秒的平移到每句时间上，更小的当作噪声。
+
 ### 前端模块（`web/src`）
 
 | 路径 | 职责 |
