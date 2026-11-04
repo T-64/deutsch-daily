@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.000" end="00:00:04.000">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:04.880" end="00:00:07.600">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:11.120" end="00:00:14.360">
+        <tt:span style="textWhite">Willkommen zur</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:14.480" end="00:00:18.280">
+        <tt:span style="textWhite">Ich bin Susanne Holst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:35.960" end="00:00:38.720">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:42.800" end="00:00:46.920">
+        <tt:span style="textWhite">Die Menschen in den USA</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wählen ein neues Parlament.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:48.000" end="00:00:51.440">
+        <tt:span style="textWhite">Das Parlament in den USA</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">heißt Kongress.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:51.560" end="00:00:55.440">
+        <tt:span style="textWhite">Das Gebäude vom Kongress</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist auf dem Foto zu sehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:56.400" end="00:00:59.120">
+        <tt:span style="textWhite">Zwei Parteien</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">treten bei den Wahlen an.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:59.320" end="00:01:03.600">
+        <tt:span style="textWhite">Die Republikanische Partei,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">kurz die Republikaner,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:01:03.800" end="00:01:05.120">
+        <tt:span style="textWhite">mit der Farbe Rot.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:01:05.160" end="00:01:10.400">
+        <tt:span style="textWhite">Und die Demokratische Partei,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">kurz die Demokraten,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:10.720" end="00:01:12.080">
+        <tt:span style="textWhite">mit der Farbe Blau.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:12.680" end="00:01:15.560">
+        <tt:span style="textWhite">Jetzt zeigen wir</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einen Film zu den Wahlen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:15.600" end="00:01:18.760">
+        <tt:span style="textWhite">Der Kongress in den USA</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat zwei Teile.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:18.960" end="00:01:21.520">
+        <tt:span style="textWhite">Ein Teil ist das Repräsentantenhaus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:21.800" end="00:01:23.640">
+        <tt:span style="textWhite">Es ist links auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:24.040" end="00:01:26.200">
+        <tt:span style="textWhite">Der andere Teil ist der Senat.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:26.320" end="00:01:28.240">
+        <tt:span style="textWhite">Er ist rechts auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:28.760" end="00:01:33.080">
+        <tt:span style="textWhite">Das Repräsentantenhaus und der Senat</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind im gleichen Gebäude.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:33.120" end="00:01:35.040">
+        <tt:span style="textWhite">Das Gebäude heißt Kapitol.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:35.080" end="00:01:38.640">
+        <tt:span style="textWhite">Es steht in Washington,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Hauptstadt von den USA.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:39.480" end="00:01:43.160">
+        <tt:span style="textWhite">Im Repräsentantenhaus</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind 435 Politiker.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:43.520" end="00:01:45.160">
+        <tt:span style="textWhite">Sie heißen Abgeordnete.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:45.800" end="00:01:48.280">
+        <tt:span style="textWhite">Die Republikaner mit der roten Farbe</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:48.320" end="00:01:51.640">
+        <tt:span style="textWhite">haben bisher</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Mehrheit im Repräsentantenhaus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:51.720" end="00:01:54.280">
+        <tt:span style="textWhite">Alle Abgeordneten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Repräsentantenhaus</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:01:54.320" end="00:01:56.600">
+        <tt:span style="textWhite">werden bei der Wahl neu gewählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:01:57.120" end="00:01:59.920">
+        <tt:span style="textWhite">Im Senat sind 100 Politiker.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:02:00.240" end="00:02:01.880">
+        <tt:span style="textWhite">Sie heißen Senatoren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:02:03.200" end="00:02:06.720">
+        <tt:span style="textWhite">Die Republikaner haben bisher</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Senat auch die Mehrheit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:07.240" end="00:02:11.520">
+        <tt:span style="textWhite">Nur einige Senatoren im Senat</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">werden bei der Wahl neu gewählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:11.560" end="00:02:15.120">
+        <tt:span style="textWhite">Im Bild sind das die schwarzen Punkte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Mitte.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:16.040" end="00:02:17.680">
+        <tt:span style="textWhite">Wir bleiben beim Thema:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:22.160" end="00:02:26.320">
+        <tt:span style="textWhite">Auf dem Foto ist der Präsident</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von den USA, Donald Trump.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:26.720" end="00:02:30.240">
+        <tt:span style="textWhite">Die Wahlen zum Kongress</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind für ihn sehr wichtig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:30.840" end="00:02:33.920">
+        <tt:span style="textWhite">Die Partei von Trump,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Republikaner,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:34.240" end="00:02:38.680">
+        <tt:span style="textWhite">haben bisher nämlich in beiden Teilen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vom Kongress die Mehrheit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:38.720" end="00:02:43.320">
+        <tt:span style="textWhite">Trump bekommt deshalb für seine</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Politik Unterstützung vom Kongress.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:43.360" end="00:02:45.520">
+        <tt:span style="textWhite">Viele Menschen in den USA</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:45.560" end="00:02:49.640">
+        <tt:span style="textWhite">finden die Politik von Trump</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aber gerade nicht gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:50.000" end="00:02:54.920">
+        <tt:span style="textWhite">Die Menschen ärgern sich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über hohe Preise für Benzin,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:55.200" end="00:02:56.840">
+        <tt:span style="textWhite">Strom und Lebensmittel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:02:57.680" end="00:03:01.560">
+        <tt:span style="textWhite">Die Republikaner verlieren</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">deshalb vielleicht die Wahlen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:03:01.600" end="00:03:03.520">
+        <tt:span style="textWhite">und die Demokraten gewinnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:03:04.120" end="00:03:08.360">
+        <tt:span style="textWhite">Dann haben die Demokraten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in einem oder beiden Teilen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:03:08.400" end="00:03:09.720">
+        <tt:span style="textWhite">vom Kongress die Mehrheit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:03:09.760" end="00:03:13.440">
+        <tt:span style="textWhite">Für Trump wird</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das Regieren dann schwerer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:03:14.000" end="00:03:15.920">
+        <tt:span style="textWhite">Dazu zeigen wir einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:03:16.640" end="00:03:19.600">
+        <tt:span style="textWhite">Donald Trump</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat in den vergangenen Wochen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:19.640" end="00:03:23.600">
+        <tt:span style="textWhite">viel Werbung für</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Republikanische Partei gemacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:24.200" end="00:03:28.200">
+        <tt:span style="textWhite">Trumps letzter Auftritt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist in der Hauptstadt Washington.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:29.000" end="00:03:30.320">
+        <tt:span style="textWhite">Trump sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:30.960" end="00:03:35.680">
+        <tt:span style="textWhite">Diese Wahlen zum Kongress sind die</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wichtigsten Wahlen zum Kongress,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:36.280" end="00:03:38.560">
+        <tt:span style="textWhite">die es je in den USA gegeben hat.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:38.960" end="00:03:42.520">
+        <tt:span style="textWhite">Ich hoffe,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Menschen tun das Richtige.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:43.240" end="00:03:48.920">
+        <tt:span style="textWhite">Viele Menschen in den USA haben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">schon vor dem Wahltermin abgestimmt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:48.960" end="00:03:53.840">
+        <tt:span style="textWhite">Das zeigt, wie wichtig</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Wahl für die Menschen ist.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:03:54.720" end="00:03:56.040">
+        <tt:span style="textWhite">Dieser Mann sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:03:56.080" end="00:03:57.880">
+        <tt:span style="textWhite">Ich wähle die Demokraten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:03:58.360" end="00:04:00.640">
+        <tt:span style="textWhite">Ich finde die Republikaner mies.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:04:00.720" end="00:04:02.080">
+        <tt:span style="textWhite">Das sage ich offen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:04:02.680" end="00:04:05.320">
+        <tt:span style="textWhite">Sie haben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">den Menschen nicht geholfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:04:07.200" end="00:04:08.600">
+        <tt:span style="textWhite">Dieser Mann sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:04:08.640" end="00:04:10.720">
+        <tt:span style="textWhite">Ich wähle die Republikaner.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:04:10.800" end="00:04:14.040">
+        <tt:span style="textWhite">Ich finde ihre Politik</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für die Wirtschaft gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:04:16.920" end="00:04:21.760">
+        <tt:span style="textWhite">Es dauert Tage,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bis alle Stimmzettel ausgezählt sind.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:04:22.240" end="00:04:25.160">
+        <tt:span style="textWhite">In Umfragen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">liegen die Demokraten vorn.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:25.560" end="00:04:29.480">
+        <tt:span style="textWhite">Der Abstand zu den Republikanern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist aber klein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:29.960" end="00:04:32.000">
+        <tt:span style="textWhite">Das Kapitol ist abgesperrt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:32.680" end="00:04:33.760">
+        <tt:span style="textWhite">Aus Angst.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:34.040" end="00:04:36.960">
+        <tt:span style="textWhite">Vielleicht gibt es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nach der Wahl Proteste.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:37.320" end="00:04:39.520">
+        <tt:span style="textWhite">Das ist nämlich schon passiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:41.440" end="00:04:43.640">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:04:48.000" end="00:04:51.200">
+        <tt:span style="textWhite">Auf dem Foto sind</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Bundeskanzler Friedrich Merz</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:04:51.480" end="00:04:55.400">
+        <tt:span style="textWhite">und der Präsident von der Ukraine,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Volodymyr Selenskyj.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:04:56.040" end="00:04:58.480">
+        <tt:span style="textWhite">Selenskyj ist zu Besuch in Berlin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:04:59.160" end="00:05:01.920">
+        <tt:span style="textWhite">Merz und Selenskyj</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben darüber gesprochen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:05:01.960" end="00:05:07.160">
+        <tt:span style="textWhite">wie Deutschland der Ukraine im Winter</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Krieg gegen Russland helfen kann.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:05:07.560" end="00:05:10.840">
+        <tt:span style="textWhite">Merz und Selenskyj</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben auch über ein Treffen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:05:10.880" end="00:05:14.680">
+        <tt:span style="textWhite">zwischen der Ukraine,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Russland und den USA gesprochen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:05:15.480" end="00:05:20.240">
+        <tt:span style="textWhite">Politiker von den Ländern wollen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nächste Woche darüber reden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:05:20.280" end="00:05:22.640">
+        <tt:span style="textWhite">ob es ein Ende vom Krieg gibt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:05:23.080" end="00:05:24.520">
+        <tt:span style="textWhite">Dazu kommt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:25.320" end="00:05:28.760">
+        <tt:span style="textWhite">Selenskyj und Merz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">treten gemeinsam vor die Kameras.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:29.000" end="00:05:30.160">
+        <tt:span style="textWhite">Merz sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:31.000" end="00:05:32.520">
+        <tt:span style="textWhite">Ich finde es gut,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:32.560" end="00:05:35.840">
+        <tt:span style="textWhite">wenn es Gespräche</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über ein Ende vom Krieg gibt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:36.280" end="00:05:40.440">
+        <tt:span style="textWhite">Russland muss aber beweisen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dass es wirklich Frieden will.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:40.600" end="00:05:45.560">
+        <tt:span style="textWhite">Und Europa muss bei Verhandlungen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über Frieden dabei sein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:45.640" end="00:05:48.600">
+        <tt:span style="textWhite">Das ist wichtig</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das weiß Russland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:05:50.240" end="00:05:52.440">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:05:57.800" end="00:06:00.880">
+        <tt:span style="textWhite">Auf dem Foto</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist ein Supermarkt in Schweden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:06:01.400" end="00:06:06.360">
+        <tt:span style="textWhite">Mitarbeiter holen Lebensmittel aus</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einem Kühlregal und werfen sie weg.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:06:06.880" end="00:06:09.440">
+        <tt:span style="textWhite">Die Lebensmittel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind schlecht geworden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:06:09.480" end="00:06:11.560">
+        <tt:span style="textWhite">Man nennt das auch verdorben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:06:12.320" end="00:06:16.600">
+        <tt:span style="textWhite">Die Lebensmittel sind verdorben,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">weil sie warm geworden sind.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:06:17.160" end="00:06:20.920">
+        <tt:span style="textWhite">Jemand hat die Kühlregale</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit Absicht ausgeschaltet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:06:21.560" end="00:06:25.520">
+        <tt:span style="textWhite">In vielen Supermärkten in Deutschland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und in anderen Ländern</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:06:25.560" end="00:06:27.080">
+        <tt:span style="textWhite">ist das auch passiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:06:27.320" end="00:06:28.360">
+        <tt:span style="textWhite">Die Kühlregale</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:06:28.400" end="00:06:32.480">
+        <tt:span style="textWhite">sind aber nicht in den Supermärkten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">abgeschaltet worden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:06:32.560" end="00:06:35.200">
+        <tt:span style="textWhite">Jemand hat das aus der Ferne gemacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:35.920" end="00:06:40.400">
+        <tt:span style="textWhite">Es gibt nämlich eine Firma,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die sich um die Kühlanlagen kümmert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:40.440" end="00:06:42.720">
+        <tt:span style="textWhite">Die Polizei vermutet,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:43.480" end="00:06:47.160">
+        <tt:span style="textWhite">jemand hat das Computerprogramm</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Firma angegriffen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:06:47.200" end="00:06:51.720">
+        <tt:span style="textWhite">Und die Kühlregale auf eine</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sehr warme Temperatur gestellt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:06:51.760" end="00:06:55.480">
+        <tt:span style="textWhite">Große Mengen Lebensmittel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">werden jetzt weggeworfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:06:56.560" end="00:06:58.960">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:07:17.600" end="00:07:19.600">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:07:20.720" end="00:07:25.160">
+        <tt:span style="textWhite">Teilweise gibt es Sonnenschein,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">teilweise ist es trüb und grau.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:07:30.160" end="00:07:33.240">
+        <tt:span style="textWhite">Das war die</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:07:33.280" end="00:07:35.440">
+        <tt:span style="textWhite">Tschüss, bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:07:38.200" end="00:07:40.360">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>
