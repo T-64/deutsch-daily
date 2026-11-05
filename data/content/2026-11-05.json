@@ -1,0 +1,789 @@
+{
+  "schema": 2,
+  "content_kind": "broadcast",
+  "date": "2026-11-05",
+  "slug": "2026-11-05",
+  "source": "einfach",
+  "source_label": "tagesschau in Einfacher Sprache",
+  "level": "A2–B1",
+  "source_url": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1500.html",
+  "video_page": "https://www.tagesschau.de/tagesschau_in_einfacher_sprache/video-1678738.html",
+  "source_text_sha256": "d043b68619c5e4ad99150be9ce0cf010a08454e647516b8025f7cc0ed403c979",
+  "generated_at": "2026-11-05T23:45:32.535317+01:00",
+  "generation_model": "glm-5.3",
+  "sentences": [
+    {
+      "de": "Willkommen zur tagesschau in Einfacher Sprache.",
+      "start": 10.4,
+      "end": 13.44,
+      "zh": "欢迎收看《简单语言新闻》。"
+    },
+    {
+      "de": "Ich bin Susanne Holst und das sind unsere Nachrichten.",
+      "start": 13.48,
+      "end": 16.94,
+      "zh": "我是Susanne Holst，以下是我们的新闻。"
+    },
+    {
+      "de": "Und nun zur ersten Nachricht.",
+      "start": 28.4,
+      "end": 30.48,
+      "zh": "现在来看第一条新闻。"
+    },
+    {
+      "de": "Auf dem Foto ist Hubert Aiwanger.",
+      "start": 35.16,
+      "end": 37.52,
+      "zh": "照片上的是Hubert Aiwanger。"
+    },
+    {
+      "de": "Er war ein bekannter Politiker aus dem Bundesland Bayern.",
+      "start": 38.0,
+      "end": 42.0,
+      "zh": "他曾是巴伐利亚州的一位知名政治家。"
+    },
+    {
+      "de": "Er war der Chef von der Partei Freie Wähler.",
+      "start": 42.4,
+      "end": 45.48,
+      "zh": "他曾是自由选民党的领导人。"
+    },
+    {
+      "de": "Er war auch Minister für Wirtschaft in Bayern.",
+      "start": 46.6,
+      "end": 49.8,
+      "zh": "他还曾担任巴伐利亚的经济部长。"
+    },
+    {
+      "de": "Jetzt ist Aiwanger gestorben.",
+      "start": 50.44,
+      "end": 52.52,
+      "zh": "现在Aiwanger去世了。"
+    },
+    {
+      "de": "Dazu zeigen wir einen Film.",
+      "start": 52.76,
+      "end": 54.68,
+      "zh": "为此我们播放一段影片。"
+    },
+    {
+      "de": "Aiwanger ist in Berlin gestorben.",
+      "start": 55.28,
+      "end": 57.64,
+      "zh": "Aiwanger在柏林去世。"
+    },
+    {
+      "de": "Er wollte zu einer Veranstaltung von seiner Partei gehen.",
+      "start": 58.64,
+      "end": 62.64,
+      "zh": "他本来要参加自己政党的一场活动。"
+    },
+    {
+      "de": "Aber dann hat er gesagt:",
+      "start": 63.12,
+      "end": 65.08,
+      "zh": "但他当时说："
+    },
+    {
+      "de": "Es geht mir nicht gut. Ich bleibe im Hotel.",
+      "start": 65.12,
+      "end": 68.54,
+      "zh": "我身体不舒服，我留在酒店里。"
+    },
+    {
+      "de": "Dort hat ihn jemand gefunden.",
+      "start": 69.24,
+      "end": 71.32,
+      "zh": "有人在酒店里发现了他。"
+    },
+    {
+      "de": "Aiwanger war aber schon tot.",
+      "start": 71.62,
+      "end": 73.62,
+      "zh": "但那时Aiwanger已经去世了。"
+    },
+    {
+      "de": "Der Chef von der Regierung in Bayern, Markus Söder, ist jetzt sehr traurig.",
+      "start": 74.12,
+      "end": 79.4,
+      "zh": "巴伐利亚的政府领导人Markus Söder现在非常悲伤。"
+    },
+    {
+      "de": "Söder sagt: Ich bin geschockt. Ich wollte es nicht glauben.",
+      "start": 80.6,
+      "end": 85.46,
+      "zh": "Söder说：我很震惊，我简直不敢相信。"
+    },
+    {
+      "de": "Aiwanger fehlt uns jetzt in der bayerischen Regierung.",
+      "start": 86.04,
+      "end": 89.84,
+      "zh": "Aiwanger的离去让我们巴伐利亚政府感到缺憾。"
+    },
+    {
+      "de": "Viele Menschen vermissen ihn.",
+      "start": 90.32,
+      "end": 92.4,
+      "zh": "很多人会想念他。"
+    },
+    {
+      "de": "Ärzte untersuchen jetzt den Körper von Aiwanger.",
+      "start": 93.04,
+      "end": 96.4,
+      "zh": "医生们现在正在检查Aiwanger的遗体。"
+    },
+    {
+      "de": "Sie wollen herausfinden, warum ist Aiwanger gestorben.",
+      "start": 96.88,
+      "end": 100.68,
+      "zh": "他们想查明Aiwanger为什么会去世。"
+    },
+    {
+      "de": "Er war nämlich erst 55 Jahre alt.",
+      "start": 101.64,
+      "end": 104.0,
+      "zh": "因为他才55岁。"
+    },
+    {
+      "de": "Vielleicht war Aiwanger krank.",
+      "start": 105.4,
+      "end": 107.56,
+      "zh": "也许Aiwanger生病了。"
+    },
+    {
+      "de": "Das müssen die Ärzte jetzt herausfinden.",
+      "start": 107.88,
+      "end": 110.68,
+      "zh": "这一点必须由医生来查明。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 112.12,
+      "end": 114.32,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "Die Regierung von Deutschland hat ein neues Gesetz gemacht.",
+      "start": 118.32,
+      "end": 122.56,
+      "zh": "德国政府制定了一部新法律。"
+    },
+    {
+      "de": "Das ist das Pflegegesetz.",
+      "start": 122.6,
+      "end": 124.36,
+      "zh": "这就是护理法。"
+    },
+    {
+      "de": "Pflege ist Hilfe vom Staat, wenn Menschen sich nicht mehr alleine versorgen können.",
+      "start": 124.52,
+      "end": 130.28,
+      "zh": "护理是国家提供的帮助，针对无法再自理生活的人。"
+    },
+    {
+      "de": "Das kostet viel Geld.",
+      "start": 130.8,
+      "end": 132.32,
+      "zh": "这需要很多钱。"
+    },
+    {
+      "de": "Deshalb geben Menschen mit einem Job einen Teil vom Lohn an den Staat.",
+      "start": 132.92,
+      "end": 137.84,
+      "zh": "因此，有工作的人要把工资的一部分交给国家。"
+    },
+    {
+      "de": "Und der Staat benutzt das Geld dann für die Pflege.",
+      "start": 138.24,
+      "end": 141.8,
+      "zh": "然后国家把这些钱用于护理。"
+    },
+    {
+      "de": "Beim neuen Pflegegesetz geht es um dieses Geld.",
+      "start": 142.16,
+      "end": 145.44,
+      "zh": "新的护理法就是关于这笔钱的。"
+    },
+    {
+      "de": "Jetzt hat auch der Bundestag über das Gesetz gesprochen.",
+      "start": 145.96,
+      "end": 149.88,
+      "zh": "现在联邦议院也讨论了这部法律。"
+    },
+    {
+      "de": "Der Minister für Gesundheit, Carsten Linnemann, sagt:",
+      "start": 150.12,
+      "end": 153.84,
+      "zh": "卫生部长Carsten Linnemann说："
+    },
+    {
+      "de": "Der Staat gibt zu viel Geld für die Pflege aus.",
+      "start": 153.92,
+      "end": 157.2,
+      "zh": "国家在护理上花的钱太多了。"
+    },
+    {
+      "de": "Das wollen wir ändern.",
+      "start": 157.32,
+      "end": 158.88,
+      "zh": "我们想改变这一点。"
+    },
+    {
+      "de": "Was Linnemann noch gesagt hat, zeigen wir jetzt.",
+      "start": 159.04,
+      "end": 162.2,
+      "zh": "Linnemann还说了什么，我们马上播放。"
+    },
+    {
+      "de": "Linnemann sagt:",
+      "start": 163.32,
+      "end": 164.4,
+      "zh": "Linnemann说："
+    },
+    {
+      "de": "Wer Hilfe braucht, der soll Hilfe bekommen.",
+      "start": 164.96,
+      "end": 167.96,
+      "zh": "谁需要帮助，谁就应该得到帮助。"
+    },
+    {
+      "de": "Aber wir müssen sparen.",
+      "start": 168.88,
+      "end": 170.52,
+      "zh": "但我们必须节省开支。"
+    },
+    {
+      "de": "Sonst reicht das Geld nicht mehr.",
+      "start": 171.08,
+      "end": 173.44,
+      "zh": "否则钱就不够了。"
+    },
+    {
+      "de": "Die Menschen in Deutschland müssen einen größeren Teil vom Lohn abgeben.",
+      "start": 174.44,
+      "end": 179.44,
+      "zh": "德国人必须上交工资中更大的一部分。"
+    },
+    {
+      "de": "Deshalb brauchen wir das neue Gesetz.",
+      "start": 179.76,
+      "end": 182.4,
+      "zh": "所以我们需要这部新法律。"
+    },
+    {
+      "de": "Wir wollen noch mehr machen, damit die Pflege besser wird.",
+      "start": 183.32,
+      "end": 187.4,
+      "zh": "我们还想做更多的事情，让护理变得更好。"
+    },
+    {
+      "de": "Dafür brauchen wir aber noch etwas Zeit.",
+      "start": 187.48,
+      "end": 190.28,
+      "zh": "但这我们还需要一些时间。"
+    },
+    {
+      "de": "Und nun zur nächsten Nachricht.",
+      "start": 192.84,
+      "end": 195.04,
+      "zh": "现在来看下一条新闻。"
+    },
+    {
+      "de": "In Frankreich gibt es wieder Proteste.",
+      "start": 198.8,
+      "end": 201.44,
+      "zh": "法国又出现了抗议活动。"
+    },
+    {
+      "de": "Viele Menschen sind nämlich unzufrieden.",
+      "start": 202.24,
+      "end": 205.04,
+      "zh": "因为许多人不满意。"
+    },
+    {
+      "de": "Die Menschen sagen:",
+      "start": 205.16,
+      "end": 206.52,
+      "zh": "人们说："
+    },
+    {
+      "de": "Alles ist teuer. Wir brauchen mehr Geld.",
+      "start": 206.76,
+      "end": 210.06,
+      "zh": "什么都贵，我们需要更多的钱。"
+    },
+    {
+      "de": "Aber die Regierung will sparen.",
+      "start": 211.04,
+      "end": 213.24,
+      "zh": "但政府想要节省开支。"
+    },
+    {
+      "de": "Das finden wir nicht gut.",
+      "start": 213.64,
+      "end": 215.44,
+      "zh": "我们觉得这不好。"
+    },
+    {
+      "de": "Bei den Protesten sind auch Schüler und Studenten dabei.",
+      "start": 216.24,
+      "end": 219.72,
+      "zh": "参加抗议的还有中小学生和大学生。"
+    },
+    {
+      "de": "Den jungen Menschen geht es nämlich besonders schlecht.",
+      "start": 220.84,
+      "end": 224.6,
+      "zh": "因为这些年轻人的处境特别糟糕。"
+    },
+    {
+      "de": "Sie haben schon öfter protestiert.",
+      "start": 224.64,
+      "end": 226.96,
+      "zh": "他们已经多次抗议过。"
+    },
+    {
+      "de": "Bei den Protesten hat es auch Gewalt gegeben.",
+      "start": 227.8,
+      "end": 230.96,
+      "zh": "抗议活动中也发生了暴力。"
+    },
+    {
+      "de": "Deshalb ist in den Städten viel Polizei.",
+      "start": 232.0,
+      "end": 234.8,
+      "zh": "因此城市里部署了很多警察。"
+    },
+    {
+      "de": "Dazu zeigen wir jetzt einen Film.",
+      "start": 235.92,
+      "end": 238.28,
+      "zh": "为此我们现在播放一段影片。"
+    },
+    {
+      "de": "In der Hauptstadt Paris haben Schüler ihre Schule blockiert.",
+      "start": 239.24,
+      "end": 243.44,
+      "zh": "在首都巴黎，一些学生封锁了他们的学校。"
+    },
+    {
+      "de": "Sie haben Sachen vor die Tür gestellt.",
+      "start": 244.16,
+      "end": 246.8,
+      "zh": "他们把东西堆在了门口。"
+    },
+    {
+      "de": "Niemand kam in die Schule rein.",
+      "start": 247.04,
+      "end": 249.24,
+      "zh": "没有人能进学校。"
+    },
+    {
+      "de": "Die Polizei hat die Sachen dann weggeräumt.",
+      "start": 249.8,
+      "end": 252.8,
+      "zh": "警察随后把东西清走了。"
+    },
+    {
+      "de": "Diese Schülerin sagt: Die Regierung will mit uns reden.",
+      "start": 253.12,
+      "end": 256.96,
+      "zh": "这名女学生说：政府想和我们谈话。"
+    },
+    {
+      "de": "Aber sie soll nicht nur reden, sondern auch handeln.",
+      "start": 257.24,
+      "end": 260.88,
+      "zh": "但它不应该只谈话，还要采取行动。"
+    },
+    {
+      "de": "Und dieser Mann sagt:",
+      "start": 261.48,
+      "end": 263.0,
+      "zh": "这名男子说："
+    },
+    {
+      "de": "Die Regierung muss die Forderungen der jungen Menschen hören.",
+      "start": 263.2,
+      "end": 267.52,
+      "zh": "政府必须听取年轻人的诉求。"
+    },
+    {
+      "de": "Das geht nur mit Protesten.",
+      "start": 267.56,
+      "end": 269.48,
+      "zh": "这只有通过抗议才能实现。"
+    },
+    {
+      "de": "In der Stadt Nantes waren viele Menschen auf der Straße.",
+      "start": 270.16,
+      "end": 274.08,
+      "zh": "在南特市，很多人走上了街头。"
+    },
+    {
+      "de": "Diese Frau sagt: Die jungen Menschen haben es besonders schwer.",
+      "start": 274.6,
+      "end": 279.04,
+      "zh": "这名女子说：年轻人的日子特别难。"
+    },
+    {
+      "de": "Sie können die Miete nicht mehr zahlen oder Essen kaufen.",
+      "start": 279.76,
+      "end": 283.76,
+      "zh": "他们付不起房租，也买不起食物。"
+    },
+    {
+      "de": "So können sie auch nicht mehr gut studieren.",
+      "start": 283.84,
+      "end": 286.68,
+      "zh": "这样他们也无法好好地学习。"
+    },
+    {
+      "de": "Das ist schlecht für die Zukunft.",
+      "start": 286.72,
+      "end": 288.84,
+      "zh": "这对未来很不利。"
+    },
+    {
+      "de": "In der Stadt Marseille gab es auch Proteste.",
+      "start": 289.12,
+      "end": 292.2,
+      "zh": "在马赛市也发生了抗议。"
+    },
+    {
+      "de": "Dieser Mann sagt: Viele Menschen in Frankreich sind wütend.",
+      "start": 292.68,
+      "end": 296.84,
+      "zh": "这名男子说：法国有很多人很愤怒。"
+    },
+    {
+      "de": "Sie verdienen nämlich nicht mehr genug Geld.",
+      "start": 297.52,
+      "end": 300.6,
+      "zh": "因为他们挣的钱已经不够了。"
+    },
+    {
+      "de": "Jetzt kommen alle zusammen auf die Straße.",
+      "start": 300.8,
+      "end": 303.72,
+      "zh": "现在所有人都一起走上街头。"
+    },
+    {
+      "de": "Das ist eine gute Sache.",
+      "start": 303.96,
+      "end": 305.68,
+      "zh": "这是一件好事。"
+    },
+    {
+      "de": "Und dieser Mann sagt:",
+      "start": 306.36,
+      "end": 308.08,
+      "zh": "这名男子说："
+    },
+    {
+      "de": "Es wird noch mehr Proteste geben. Da bin ich mir sicher.",
+      "start": 308.12,
+      "end": 312.52,
+      "zh": "还会有更多的抗议，我对此很确定。"
+    },
+    {
+      "de": "Die Regierung hört uns nämlich nicht zu.",
+      "start": 312.96,
+      "end": 315.76,
+      "zh": "因为政府不听我们的。"
+    },
+    {
+      "de": "Und das waren unsere Nachrichten.",
+      "start": 317.04,
+      "end": 319.08,
+      "zh": "以上就是我们的新闻。"
+    },
+    {
+      "de": "Und jetzt kommt das Wetter.",
+      "start": 329.92,
+      "end": 331.84,
+      "zh": "现在来看天气。"
+    },
+    {
+      "de": "Oben im Norden und rechts im Osten viele Wolken.",
+      "start": 332.44,
+      "end": 336.56,
+      "zh": "北边和东边有很多云。"
+    },
+    {
+      "de": "Links im Westen und unten im Süden gibt es auch Sonne.",
+      "start": 337.48,
+      "end": 341.28,
+      "zh": "西边和南边也有太阳。"
+    },
+    {
+      "de": "Es werden 3 bis 12 Grad.",
+      "start": 342.52,
+      "end": 344.24,
+      "zh": "气温为3到12度。"
+    },
+    {
+      "de": "Das war die tagesschau in Einfacher Sprache.",
+      "start": 346.84,
+      "end": 349.72,
+      "zh": "以上就是《简单语言新闻》。"
+    },
+    {
+      "de": "Tschüss, bis zum nächsten Mal.",
+      "start": 349.76,
+      "end": 351.7,
+      "zh": "再见，下次见。"
+    }
+  ],
+  "stories": [
+    {
+      "title": "Begrüßung",
+      "title_zh": "欢迎",
+      "from": 0,
+      "to": 2,
+      "vocab": [],
+      "grammar_points": []
+    },
+    {
+      "title": "Hubert Aiwanger gestorben",
+      "title_zh": "Hubert Aiwanger去世",
+      "from": 3,
+      "to": 23,
+      "vocab": [
+        {
+          "lemma": "der Politiker, -",
+          "key": "politiker",
+          "forms": [
+            "Politiker"
+          ],
+          "pos": "Substantiv",
+          "zh": "政治家",
+          "sentence": 4
+        },
+        {
+          "lemma": "sterben, starb, ist gestorben",
+          "key": "sterben",
+          "forms": [
+            "gestorben"
+          ],
+          "pos": "Verb",
+          "zh": "去世",
+          "sentence": 7
+        },
+        {
+          "lemma": "die Veranstaltung, -en",
+          "key": "veranstaltung",
+          "forms": [
+            "Veranstaltung"
+          ],
+          "pos": "Substantiv",
+          "zh": "活动",
+          "sentence": 10
+        },
+        {
+          "lemma": "vermissen",
+          "key": "vermissen",
+          "forms": [
+            "vermissen"
+          ],
+          "pos": "Verb",
+          "zh": "想念",
+          "sentence": 18
+        },
+        {
+          "lemma": "herausfinden",
+          "key": "herausfinden",
+          "forms": [
+            "herausfinden"
+          ],
+          "pos": "Verb",
+          "zh": "查明",
+          "sentence": 20
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "现在完成时（sein）",
+          "summary": "表示移动或状态变化的动词用sein构成完成时，如 \"ist gestorben\"（去世了）、\"ist ... gegangen\"。",
+          "sentence": 7
+        }
+      ]
+    },
+    {
+      "title": "Bundestag debattiert über Pflegegesetz",
+      "title_zh": "联邦议院讨论护理法",
+      "from": 24,
+      "to": 44,
+      "vocab": [
+        {
+          "lemma": "das Gesetz, -e",
+          "key": "gesetz",
+          "forms": [
+            "Gesetz"
+          ],
+          "pos": "Substantiv",
+          "zh": "法律",
+          "sentence": 25
+        },
+        {
+          "lemma": "die Pflege",
+          "key": "pflege",
+          "forms": [
+            "Pflege",
+            "Pflegegesetz",
+            "Pflege"
+          ],
+          "pos": "Substantiv",
+          "zh": "护理",
+          "sentence": 26
+        },
+        {
+          "lemma": "versorgen",
+          "key": "versorgen",
+          "forms": [
+            "versorgen"
+          ],
+          "pos": "Verb",
+          "zh": "照顾、供养",
+          "sentence": 27
+        },
+        {
+          "lemma": "der Lohn, -e",
+          "key": "lohn",
+          "forms": [
+            "Lohn"
+          ],
+          "pos": "Substantiv",
+          "zh": "工资",
+          "sentence": 29
+        },
+        {
+          "lemma": "sparen",
+          "key": "sparen",
+          "forms": [
+            "sparen"
+          ],
+          "pos": "Verb",
+          "zh": "节省",
+          "sentence": 39
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "情态动词 sollen",
+          "summary": "\"soll\" 表示应该、应当，如 \"der soll Hilfe bekommen\"（他应该得到帮助）。",
+          "sentence": 38
+        }
+      ]
+    },
+    {
+      "title": "Generalstreik in Frankreich",
+      "title_zh": "法国总罢工",
+      "from": 45,
+      "to": 79,
+      "vocab": [
+        {
+          "lemma": "der Protest, -e",
+          "key": "protest",
+          "forms": [
+            "Proteste",
+            "Protesten"
+          ],
+          "pos": "Substantiv",
+          "zh": "抗议",
+          "sentence": 52
+        },
+        {
+          "lemma": "unzufrieden",
+          "key": "unzufrieden",
+          "forms": [
+            "unzufrieden"
+          ],
+          "pos": "Adjektiv",
+          "zh": "不满意的",
+          "sentence": 47
+        },
+        {
+          "lemma": "blockieren",
+          "key": "blockieren",
+          "forms": [
+            "blockiert"
+          ],
+          "pos": "Verb",
+          "zh": "封锁",
+          "sentence": 58
+        },
+        {
+          "lemma": "die Miete, -n",
+          "key": "miete",
+          "forms": [
+            "Miete"
+          ],
+          "pos": "Substantiv",
+          "zh": "房租",
+          "sentence": 69
+        },
+        {
+          "lemma": "wütend",
+          "key": "wütend",
+          "forms": [
+            "wütend"
+          ],
+          "pos": "Adjektiv",
+          "zh": "愤怒的",
+          "sentence": 73
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "zu + 动词不定式",
+          "summary": "\"nicht nur reden, sondern auch handeln\" 与 \"Es wird noch mehr Proteste geben\" 中，用 \"zu\" 连接不定式或用 werden 构成将来时，如 \"hören zu\"（倾听）。",
+          "sentence": 79
+        }
+      ]
+    },
+    {
+      "title": "Das Wetter",
+      "title_zh": "天气",
+      "from": 80,
+      "to": 84,
+      "vocab": [
+        {
+          "lemma": "die Wolke, -n",
+          "key": "wolke",
+          "forms": [
+            "Wolken"
+          ],
+          "pos": "Substantiv",
+          "zh": "云",
+          "sentence": 82
+        },
+        {
+          "lemma": "der Grad, -e",
+          "key": "grad",
+          "forms": [
+            "Grad"
+          ],
+          "pos": "Substantiv",
+          "zh": "度（温度）",
+          "sentence": 84
+        }
+      ],
+      "grammar_points": [
+        {
+          "title": "es gibt",
+          "summary": "\"es gibt + 第四格\" 表示“有…”，如 \"gibt es auch Sonne\"（也有太阳）。",
+          "sentence": 83
+        }
+      ]
+    },
+    {
+      "title": "Verabschiedung",
+      "title_zh": "告别",
+      "from": 85,
+      "to": 86,
+      "vocab": [],
+      "grammar_points": []
+    }
+  ]
+}
