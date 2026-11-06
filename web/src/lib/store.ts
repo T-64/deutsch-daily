@@ -136,3 +136,20 @@ export const recent = {
   get: () => read<{ slug: string; date: string; title: string; t?: number } | null>('dd-recent-lesson', null),
   set: (v: { slug: string; date: string; title: string; t?: number }) => write('dd-recent-lesson', v),
 };
+
+/* ---------- per-lesson subtitle offset chosen by the viewer (seconds, + = subtitles later) ---------- */
+interface SyncState { offsets: Record<string, number>; setOffset: (slug: string, d: number) => void }
+export const useSync = create<SyncState>()(
+  persist(
+    set => ({
+      offsets: {},
+      setOffset: (slug, d) => set(s => {
+        const offsets = { ...s.offsets };
+        if (Math.abs(d) < 0.001) delete offsets[slug];
+        else offsets[slug] = Math.round(d * 100) / 100;
+        return { offsets };
+      }),
+    }),
+    { name: 'dd-sync-v1', storage: safeStorage, partialize: ({ offsets }) => ({ offsets }) as SyncState },
+  ),
+);

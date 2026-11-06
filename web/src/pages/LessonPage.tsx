@@ -1,4 +1,4 @@
-import { ArrowLeft, BookOpen, Captions, ExternalLink, EyeOff, Languages, Pause, Play, Repeat1, SkipBack, SkipForward, StepForward } from 'lucide-react';
+import { ArrowLeft, BookOpen, Captions, ExternalLink, EyeOff, Languages, Maximize, Pause, Play, Repeat1, SkipBack, SkipForward, StepForward } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
@@ -9,7 +9,7 @@ import { Segmented } from '@/components/ui/segmented';
 import { Tip } from '@/components/ui/tooltip';
 import type { Lesson } from '@/lib/data';
 import { usePlayer } from '@/lib/player';
-import { recent, usePrefs, type PlayMode, type ZhMode } from '@/lib/store';
+import { recent, usePrefs, useSync, type PlayMode, type ZhMode } from '@/lib/store';
 import { cn, de } from '@/lib/utils';
 import { trackStuck } from '@/lib/stuck';
 import { LessonProvider, useLesson } from '@/features/lesson/context';
@@ -30,7 +30,7 @@ function useIsDesktop() {
   return d;
 }
 
-function useKeyboard() {
+function useKeyboard(slug: string) {
   const zh = usePrefs(p => p.zh);
   const set = usePrefs(p => p.set);
   useEffect(() => {
@@ -44,10 +44,16 @@ function useKeyboard() {
       else if (e.key === 'ArrowRight') { e.preventDefault(); p.step(1); }
       else if (e.key === 'r' || e.key === 'R') p.replay();
       else if (e.key === 't' || e.key === 'T') set({ zh: order[(order.indexOf(zh) + 1) % order.length] });
+      else if (e.key === 'f' || e.key === 'F') { set({ audioOnly: false }); p.toggleFullscreen(); }
+      else if (e.key === '[' || e.key === ']') {
+        const sync = useSync.getState();
+        const d = (sync.offsets[slug] ?? 0) + (e.key === ']' ? 0.25 : -0.25);
+        sync.setOffset(slug, Math.max(-10, Math.min(10, d)));
+      }
     };
     window.addEventListener('keydown', on);
     return () => window.removeEventListener('keydown', on);
-  }, [zh, set]);
+  }, [zh, set, slug]);
 }
 
 function ZhToggle({ size = 'md' }: { size?: 'sm' | 'md' }) {
@@ -194,7 +200,8 @@ function Mobile() {
           >
             {modes.find(m => m.v === prefs.mode)?.icon}
           </Button>
-          <Button variant="secondary" size="icon" className="ml-auto" aria-label="Wörter" onClick={() => setDrawer('story')}><BookOpen /></Button>
+          <Button variant="ghost" size="icon" className="ml-auto" aria-label="Vollbild" onClick={() => { prefs.set({ audioOnly: false }); p.toggleFullscreen(); }} disabled={!p.el || p.failed}><Maximize /></Button>
+          <Button variant="secondary" size="icon" aria-label="Wörter" onClick={() => setDrawer('story')}><BookOpen /></Button>
         </div>
       </div>
       <Drawer open={!!drawer} onOpenChange={o => setDrawer(o ? drawer ?? 'story' : null)} title="Lektion">
@@ -212,9 +219,12 @@ function Body() {
   const { lesson } = useLesson();
   const desktop = useIsDesktop();
   const setSentences = usePlayer(s => s.setSentences);
+  const setShift = usePlayer(s => s.setShift);
+  const offset = useSync(s => s.offsets[lesson.slug] ?? 0);
   const close = useWordCard(s => s.close);
-  useKeyboard();
+  useKeyboard(lesson.slug);
   useEffect(() => setSentences(lesson.sentences), [lesson, setSentences]);
+  useEffect(() => setShift(offset), [offset, setShift]);
   useEffect(() => {
     recent.set({ slug: lesson.slug, date: lesson.date, title: lesson.stories.find(s => s.vocab.length)?.title || lesson.stories[0]?.title || '' });
     document.title = `${de(lesson.date, { day: 'numeric', month: 'long' })} — Deutsch Daily`;

@@ -1,12 +1,12 @@
-import { AudioLines, ExternalLink, Pause, Play, Repeat1, RotateCcw, SkipBack, SkipForward, StepForward, Video } from 'lucide-react';
+import { AudioLines, ExternalLink, Maximize, Minimize, Minus, Pause, Play, Plus, Repeat1, RotateCcw, SkipBack, SkipForward, StepForward, Timer, Video } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Segmented } from '@/components/ui/segmented';
 import { Slider } from '@/components/ui/slider';
 import { Tip } from '@/components/ui/tooltip';
 import { usePlayer } from '@/lib/player';
-import { usePrefs, type PlayMode } from '@/lib/store';
+import { usePrefs, useSync, type PlayMode } from '@/lib/store';
 import { clock, cn } from '@/lib/utils';
 import { useLesson } from './context';
 
@@ -59,22 +59,33 @@ function AudioCard() {
 export function Player() {
   const { lesson } = useLesson();
   const attach = usePlayer(s => s.attach);
+  const setStage = usePlayer(s => s.setStage);
   const el = usePlayer(s => s.el);
   const failed = usePlayer(s => s.failed);
+  const fullscreen = usePlayer(s => s.fullscreen);
   const audioOnly = usePrefs(p => p.audioOnly);
   const toggle = usePlayer(s => s.toggle);
   const ref = useRef<HTMLVideoElement>(null);
+  const stage = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     attach(ref.current);
-    return () => attach(null);
-  }, [attach]);
+    setStage(stage.current);
+    return () => { attach(null); setStage(null); };
+  }, [attach, setStage]);
 
   if (!lesson.video.mp4) return null;
   return (
     <div className="relative isolate">
       {!failed && !audioOnly && <Ambient video={el} />}
-      <div className={cn('relative overflow-hidden rounded-[22px] bg-black shadow-[var(--shadow)] ring-1 ring-white/10', audioOnly && 'hidden', failed && 'hidden')}>
+      <div
+        ref={stage}
+        className={cn(
+          'group/stage relative overflow-hidden rounded-[22px] bg-black shadow-[var(--shadow)] ring-1 ring-white/10',
+          '[&:fullscreen]:flex [&:fullscreen]:items-center [&:fullscreen]:rounded-none [&:fullscreen]:ring-0',
+          audioOnly && !fullscreen && 'hidden', failed && 'hidden',
+        )}
+      >
         <video
           ref={ref}
           src={lesson.video.mp4}
@@ -82,9 +93,10 @@ export function Player() {
           preload="metadata"
           crossOrigin={undefined}
           onClick={toggle}
-          className="block aspect-video w-full cursor-pointer bg-black object-contain"
+          className="block aspect-video w-full cursor-pointer bg-black object-contain group-[:fullscreen]/stage:h-full group-[:fullscreen]/stage:aspect-auto"
         />
         <BigPlay />
+        {fullscreen && <KinoBar />}
       </div>
       {audioOnly && !failed && <AudioCard />}
       {failed && (
@@ -158,6 +170,74 @@ function Chapters({ duration }: { duration: number }) {
   );
 }
 
+/* Controls shown over the video in fullscreen; they fade out while the pointer rests. */
+function KinoBar() {
+  const p = usePlayer();
+  const [awake, setAwake] = useState(true);
+  useEffect(() => {
+    let t = 0;
+    const wake = () => { setAwake(true); clearTimeout(t); t = window.setTimeout(() => setAwake(false), 2500); };
+    wake();
+    const stage = usePlayer.getState().stage;
+    stage?.addEventListener('pointermove', wake);
+    window.addEventListener('keydown', wake);
+    return () => { clearTimeout(t); stage?.removeEventListener('pointermove', wake); window.removeEventListener('keydown', wake); };
+  }, []);
+  const show = awake || !p.playing;
+  return (
+    <div
+      className={cn(
+        'absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-6 pb-6 pt-16 text-white transition-opacity duration-500',
+        show ? 'opacity-100' : 'pointer-events-none opacity-0',
+      )}
+      style={{ cursor: show ? undefined : 'none' }}
+    >
+      <Slider
+        value={[p.duration ? (p.time / p.duration) * 1000 : 0]}
+        max={1000}
+        step={1}
+        buffered={p.buffered}
+        onValueChange={([v]) => p.seekRatio(v / 1000)}
+        aria-label="Position"
+        className="[&_[data-orientation]]:bg-white/25 [&_span[data-orientation]>span]:bg-white"
+      />
+      <div className="mt-3 flex items-center gap-1">
+        <Button variant="ghost" size="icon" aria-label="Zurück" onClick={() => p.step(-1)} className="text-white hover:bg-white/15 hover:text-white"><SkipBack /></Button>
+        <Button size="icon-lg" aria-label={p.playing ? 'Pause' : 'Abspielen'} onClick={p.toggle} className="mx-1 bg-white text-black hover:bg-white">
+          {p.playing ? <Pause className="size-5 fill-current" /> : <Play className="ml-0.5 size-5 fill-current" />}
+        </Button>
+        <Button variant="ghost" size="icon" aria-label="Weiter" onClick={() => p.step(1)} className="text-white hover:bg-white/15 hover:text-white"><SkipForward /></Button>
+        <span className="ml-3 font-mono text-xs tabular text-white/80">{clock(p.time)} / {clock(p.duration || 0)}</span>
+        <Button variant="ghost" size="icon" aria-label="Vollbild beenden" onClick={p.toggleFullscreen} className="ml-auto text-white hover:bg-white/15 hover:text-white"><Minimize /></Button>
+      </div>
+    </div>
+  );
+}
+
+/* Viewer's own subtitle offset for this lesson, in 0.25 s steps ([ and ] on the keyboard). */
+export function SyncControl() {
+  const { lesson } = useLesson();
+  const d = useSync(s => s.offsets[lesson.slug] ?? 0);
+  const setOffset = useSync(s => s.setOffset);
+  const nudge = (by: number) => setOffset(lesson.slug, Math.max(-10, Math.min(10, d + by)));
+  return (
+    <div className="inline-flex items-center rounded-full bg-surface-2 p-1" role="group" aria-label="Untertitel-Versatz">
+      <Tip label="Untertitel früher" kbd="["><Button variant="ghost" size="icon-sm" className="size-7" aria-label="Untertitel früher" onClick={() => nudge(-0.25)}><Minus /></Button></Tip>
+      <Tip label={d ? 'Zurücksetzen' : 'Untertitel-Versatz'}>
+        <button
+          type="button"
+          onClick={() => setOffset(lesson.slug, 0)}
+          className={cn('inline-flex h-7 min-w-[4.25rem] items-center justify-center gap-1 rounded-full px-1.5 font-mono text-xs tabular', d ? 'text-accent' : 'text-muted')}
+          aria-label={`Untertitel-Versatz ${d.toFixed(2)} Sekunden, zurücksetzen`}
+        >
+          <Timer className="size-3.5" />{d > 0 ? '+' : ''}{d.toFixed(2)}s
+        </button>
+      </Tip>
+      <Tip label="Untertitel später" kbd="]"><Button variant="ghost" size="icon-sm" className="size-7" aria-label="Untertitel später" onClick={() => nudge(0.25)}><Plus /></Button></Tip>
+    </div>
+  );
+}
+
 export function Transport({ compact = false }: { compact?: boolean }) {
   const p = usePlayer();
   const prefs = usePrefs();
@@ -206,6 +286,7 @@ export function Transport({ compact = false }: { compact?: boolean }) {
             onChange={v => prefs.set({ rate: Number(v) })}
             options={['0.75', '0.9', '1'].map(v => ({ value: v, label: `${v}×` }))}
           />
+          <SyncControl />
           <Tip label={prefs.audioOnly ? 'Video' : 'Nur Audio'}>
             <Button
               variant={prefs.audioOnly ? 'secondary' : 'ghost'}
@@ -216,6 +297,11 @@ export function Transport({ compact = false }: { compact?: boolean }) {
               className={cn('ml-auto', prefs.audioOnly && 'text-accent')}
             >
               <AudioLines />
+            </Button>
+          </Tip>
+          <Tip label="Vollbild" kbd="F">
+            <Button variant="ghost" size="icon-sm" aria-label="Vollbild" onClick={() => { prefs.set({ audioOnly: false }); p.toggleFullscreen(); }}>
+              <Maximize />
             </Button>
           </Tip>
         </div>
