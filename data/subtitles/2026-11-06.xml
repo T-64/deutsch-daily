@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.000" end="00:00:04.640">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:06.240" end="00:00:09.160">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:10.520" end="00:00:13.480">
+        <tt:span style="textWhite">Willkommen zur tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:13.560" end="00:00:16.920">
+        <tt:span style="textWhite">Ich bin Susanne Holst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:33.690" end="00:00:35.810">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:40.690" end="00:00:44.130">
+        <tt:span style="textWhite">Der Bundespräsident</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist der Chef von Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:44.650" end="00:00:47.730">
+        <tt:span style="textWhite">Er ist noch wichtiger</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">als der Bundeskanzler.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:48.170" end="00:00:51.970">
+        <tt:span style="textWhite">Er vertritt Deutschland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in anderen Ländern auf der Welt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:52.160" end="00:00:55.840">
+        <tt:span style="textWhite">Und er muss jedes Gesetz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Deutschland unterschreiben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:56.010" end="00:00:58.010">
+        <tt:span style="textWhite">Sonst gilt das Gesetz nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:00:58.650" end="00:01:02.450">
+        <tt:span style="textWhite">Im Moment ist Frank-Walter</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Steinmeier Bundespräsident.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:01:02.760" end="00:01:04.360">
+        <tt:span style="textWhite">Aber nicht mehr lange.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:04.730" end="00:01:06.850">
+        <tt:span style="textWhite">Dann gibt es eine Wahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:07.010" end="00:01:10.410">
+        <tt:span style="textWhite">Die Parteien</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">stellen dazu Kandidaten auf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:11.090" end="00:01:15.010">
+        <tt:span style="textWhite">Der Bundespräsident kann ein Mann</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder eine Frau sein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:15.330" end="00:01:17.690">
+        <tt:span style="textWhite">Jetzt könnte es eine Frau werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:18.090" end="00:01:20.010">
+        <tt:span style="textWhite">Die CDU sagt nämlich,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:20.450" end="00:01:23.930">
+        <tt:span style="textWhite">wir wollen Ilse Aigner</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">als Bundespräsidentin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:24.570" end="00:01:26.290">
+        <tt:span style="textWhite">Aigner ist auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:26.730" end="00:01:29.850">
+        <tt:span style="textWhite">Sie ist eine Politikerin</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aus dem Bundesland Bayern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:29.890" end="00:01:34.170">
+        <tt:span style="textWhite">Vor einigen Jahren war sie</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Ministerin in der Bundesregierung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:34.650" end="00:01:38.850">
+        <tt:span style="textWhite">Die Kandidaten der anderen Parteien</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind noch nicht bekannt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:40.120" end="00:01:41.960">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:46.970" end="00:01:51.250">
+        <tt:span style="textWhite">Manchmal tun Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">anderen Menschen besondere Gewalt an.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:51.680" end="00:01:55.960">
+        <tt:span style="textWhite">Z.B. betäubt der Täter</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das Opfer und hat dann Sex.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:56.930" end="00:02:00.530">
+        <tt:span style="textWhite">Betäubung ist wie Schlafen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aber aufwachen geht nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:02:01.360" end="00:02:05.480">
+        <tt:span style="textWhite">Für die Betäubung benutzen Täter oft</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">K.o.-Tropfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:02:05.930" end="00:02:08.770">
+        <tt:span style="textWhite">Das sind Medikamente oder Drogen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:02:09.330" end="00:02:12.330">
+        <tt:span style="textWhite">Sie werden z.B. in Getränke gemischt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:02:12.890" end="00:02:14.850">
+        <tt:span style="textWhite">Das Opfer sieht das nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:02:15.120" end="00:02:17.520">
+        <tt:span style="textWhite">Der Täter macht das nämlich heimlich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:18.000" end="00:02:20.680">
+        <tt:span style="textWhite">K.o.-Tropfen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben auch keinen Geschmack</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:20.760" end="00:02:21.960">
+        <tt:span style="textWhite">oder Geruch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:22.250" end="00:02:26.810">
+        <tt:span style="textWhite">Der Bundestag hat jetzt beschlossen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wer K.o.-Tropfen benutzt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:26.970" end="00:02:28.970">
+        <tt:span style="textWhite">muss härter bestraft werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:29.330" end="00:02:31.250">
+        <tt:span style="textWhite">Dazu zeigen wir einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:31.930" end="00:02:36.610">
+        <tt:span style="textWhite">Der Bundestag hat erst einmal</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über die härteren Strafen diskutiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:37.760" end="00:02:43.920">
+        <tt:span style="textWhite">Diese Politikerin von der SPD sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">K.o.-Tropfen sind gefährlich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:44.410" end="00:02:46.570">
+        <tt:span style="textWhite">Wenn ein Opfer betäubt ist,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:46.810" end="00:02:49.450">
+        <tt:span style="textWhite">kann sich das Opfer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nicht mehr wehren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:49.810" end="00:02:52.290">
+        <tt:span style="textWhite">Der Täter nutzt das aus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:53.120" end="00:02:56.000">
+        <tt:span style="textWhite">Deshalb brauchen wir härtere Strafen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:57.330" end="00:03:01.250">
+        <tt:span style="textWhite">Niemand weiß, wie viele Opfer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von K.o.-Tropfen es gibt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:03:02.200" end="00:03:06.680">
+        <tt:span style="textWhite">Viele gehen nach der Tat</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nicht zum Arzt oder zur Polizei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:03:07.610" end="00:03:11.330">
+        <tt:span style="textWhite">Oft können sich die Opfer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch nicht mehr erinnern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:03:13.080" end="00:03:17.840">
+        <tt:span style="textWhite">Der Bundestag hat jetzt beschlossen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Täter werden härter bestraft.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:03:18.650" end="00:03:23.130">
+        <tt:span style="textWhite">Wer K.o.-Tropfen benutzt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">muss jetzt länger ins Gefängnis.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:03:24.120" end="00:03:27.520">
+        <tt:span style="textWhite">Und K.o.-Tropfen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gelten jetzt als Waffe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:03:28.600" end="00:03:32.720">
+        <tt:span style="textWhite">Dieser Politiker von der Partei</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Die Linke sagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:03:32.760" end="00:03:34.960">
+        <tt:span style="textWhite">härtere Strafen sind gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:35.730" end="00:03:37.890">
+        <tt:span style="textWhite">Aber wir müssen noch mehr tun.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:38.170" end="00:03:41.970">
+        <tt:span style="textWhite">Wir müssen besser</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über K.o.-Tropfen informieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:42.770" end="00:03:46.090">
+        <tt:span style="textWhite">Jeder muss wissen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wo bekomme ich Hilfe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:46.810" end="00:03:51.970">
+        <tt:span style="textWhite">Und die Polizei muss sich auch besser</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit K.o.-Tropfen auskennen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:53.850" end="00:03:56.090">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:59.920" end="00:04:03.200">
+        <tt:span style="textWhite">In der Stadt Düsseldorf</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat ein Prozess begonnen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:04:03.450" end="00:04:05.730">
+        <tt:span style="textWhite">Mehrere Menschen sind angeklagt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:04:05.890" end="00:04:08.050">
+        <tt:span style="textWhite">Davon zeigen wir jetzt Bilder.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:04:08.170" end="00:04:12.610">
+        <tt:span style="textWhite">Das Gericht sagt, die Männer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">waren in einer kriminellen Gruppe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:04:13.410" end="00:04:16.210">
+        <tt:span style="textWhite">Die Gruppe heißt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Königreich Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:04:17.050" end="00:04:20.730">
+        <tt:span style="textWhite">Einer von ihnen nennt sich sogar</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">König von Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:04:20.970" end="00:04:23.010">
+        <tt:span style="textWhite">Er ist der Chef von der Gruppe.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:04:23.720" end="00:04:27.520">
+        <tt:span style="textWhite">Die Mitglieder von der Gruppe</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nennt man auch Reichsbürger.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:04:28.090" end="00:04:29.930">
+        <tt:span style="textWhite">Sie lehnen den Staat ab.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:04:30.410" end="00:04:33.010">
+        <tt:span style="textWhite">Sie halten sich nicht an die Gesetze.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:04:33.050" end="00:04:35.730">
+        <tt:span style="textWhite">Reichsbürger</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wollen ihre eigenen Regeln machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:04:36.130" end="00:04:37.890">
+        <tt:span style="textWhite">Das ist aber verboten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:04:38.130" end="00:04:40.650">
+        <tt:span style="textWhite">Deshalb gibt es jetzt eine Anklage.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:42.810" end="00:04:44.690">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:48.330" end="00:04:51.210">
+        <tt:span style="textWhite">Paraguay ist ein Land in Südamerika.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:51.970" end="00:04:54.130">
+        <tt:span style="textWhite">Dort gibt es jetzt eine Krise.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:54.210" end="00:04:58.930">
+        <tt:span style="textWhite">Die Krise betrifft die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Paraguay und auch die Regierung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:59.680" end="00:05:02.320">
+        <tt:span style="textWhite">Angefangen hat alles mit einer Bank.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:05:03.050" end="00:05:06.050">
+        <tt:span style="textWhite">Eine Bank ist eine Firma für Geld.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:05:06.530" end="00:05:09.050">
+        <tt:span style="textWhite">Die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bringen ihr Geld dorthin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:05:09.090" end="00:05:11.290">
+        <tt:span style="textWhite">Die Bank passt dann darauf auf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:05:12.050" end="00:05:16.490">
+        <tt:span style="textWhite">Außerdem verleiht eine Bank Geld</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">an Menschen und andere Firmen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:05:16.850" end="00:05:19.490">
+        <tt:span style="textWhite">Auch der Staat</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hatte viel von seinem Geld</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:05:19.530" end="00:05:20.810">
+        <tt:span style="textWhite">zur Bank gebracht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:05:21.130" end="00:05:23.130">
+        <tt:span style="textWhite">Aber jetzt gibt es Probleme.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:05:23.370" end="00:05:24.690">
+        <tt:span style="textWhite">Die Bank ist zu.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:05:25.290" end="00:05:27.930">
+        <tt:span style="textWhite">Die Menschen bekommen kein Geld mehr.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:05:28.210" end="00:05:30.850">
+        <tt:span style="textWhite">Sie sagen, der Präsident ist schuld.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:05:31.170" end="00:05:33.010">
+        <tt:span style="textWhite">Er hätte aufpassen müssen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:33.250" end="00:05:35.010">
+        <tt:span style="textWhite">Wir wollen unser Geld zurück.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:35.890" end="00:05:38.370">
+        <tt:span style="textWhite">Dazu zeigen wir jetzt einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:39.170" end="00:05:42.530">
+        <tt:span style="textWhite">Viele Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Paraguay sind wütend.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:42.810" end="00:05:46.770">
+        <tt:span style="textWhite">Sie sagen, der Präsident hat</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">schlechte Arbeit gemacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:47.010" end="00:05:50.690">
+        <tt:span style="textWhite">Er ist ein Verbrecher</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und muss ins Gefängnis.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:51.570" end="00:05:53.130">
+        <tt:span style="textWhite">Das ist der Präsident.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:53.570" end="00:05:55.770">
+        <tt:span style="textWhite">Er heißt Santiago Peña.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:05:56.170" end="00:05:58.810">
+        <tt:span style="textWhite">Er sagt, ich entschuldige mich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:05:59.050" end="00:06:00.490">
+        <tt:span style="textWhite">Ich habe versagt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:06:00.930" end="00:06:02.810">
+        <tt:span style="textWhite">Deshalb trete ich zurück.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:06:04.850" end="00:06:09.650">
+        <tt:span style="textWhite">Aber das Parlament sagt jetzt, nein,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wir wollen den Rücktritt nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:06:09.890" end="00:06:13.730">
+        <tt:span style="textWhite">Wir wollen den Präsidenten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">lieber selbst rausschmeißen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:06:14.050" end="00:06:15.050">
+        <tt:span style="textWhite">Warum?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:06:15.250" end="00:06:19.890">
+        <tt:span style="textWhite">Wenn Peña zurücktritt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dann könnte er Immunität bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:06:20.810" end="00:06:24.690">
+        <tt:span style="textWhite">D.h. die Behörden dürfen nicht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gegen ihn ermitteln.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:06:25.130" end="00:06:27.810">
+        <tt:span style="textWhite">Peña kann dann nicht bestraft werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:06:28.570" end="00:06:31.210">
+        <tt:span style="textWhite">Das Parlament will aber Ermittlungen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:06:31.410" end="00:06:33.890">
+        <tt:span style="textWhite">Die Behörden sollen herausfinden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:06:33.930" end="00:06:37.970">
+        <tt:span style="textWhite">ist der Präsident</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">an den Problemen bei der Bank schuld.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:38.770" end="00:06:42.570">
+        <tt:span style="textWhite">Wann die Bank wieder aufmachen kann,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist unklar.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:42.970" end="00:06:46.770">
+        <tt:span style="textWhite">Niemand weiß, ob die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ihr Geld wiederbekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:48.760" end="00:06:51.160">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:07:07.320" end="00:07:09.400">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:07:10.370" end="00:07:14.010">
+        <tt:span style="textWhite">Rechts im Osten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und auch links im Westen viel Sonne.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:07:14.330" end="00:07:17.010">
+        <tt:span style="textWhite">Sonst bewölkt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und nur manchmal sonnig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:07:21.410" end="00:07:24.210">
+        <tt:span style="textWhite">Das war die tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:07:24.250" end="00:07:26.410">
+        <tt:span style="textWhite">Tschüss, bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:07:27.240" end="00:07:29.400">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>
