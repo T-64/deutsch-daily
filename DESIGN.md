@@ -129,6 +129,8 @@ web/（Vite + React + TS）── npm run build ──▶ docs/app/（提交进�
 | ← / → | 上一句 / 下一句 |
 | R | 重听当前句 |
 | T | 中文：盲听 → 当前句 → 全部 |
+| [ / ] | 字幕提前 / 延后 0.25 秒（每期分别记住，点数值归零） |
+| F | 全屏只看视频（叠加播放条，静止 2.5 秒自动隐藏；iPhone 用系统播放器） |
 | 点时间码 | 从这句播放 |
 | 点单词 / Enter | 查词卡片（释义、来源、原句高亮、加入生词本、改释义） |
 | 首页 `/` 或 ⌘K | 搜索往期 |
@@ -142,6 +144,7 @@ web/（Vite + React + TS）── npm run build ──▶ docs/app/（提交进�
 | `dd-user-gloss` | 用户自填释义 |
 | `dd-recent-lesson` | 最近打开的课程（首页「继续」） |
 | `dd-prefs-v3` | Zustand persist：`{theme, scale, zh, mode, rate, audioOnly, follow}` |
+| `dd-sync-v1` | 每期用户自调的字幕偏移 `{offsets: {slug: 秒}}`，叠加在自动测量的偏移之上 |
 | `dd-lesson-split` | 桌面分栏比例（react-resizable-panels） |
 | `dd-local-lessons-v1` | 本地课程工坊 |
 

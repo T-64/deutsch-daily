@@ -6,6 +6,8 @@ const keys: [string, string][] = [
   ['← →', 'Satz zurück · weiter'],
   ['R', 'Satz wiederholen'],
   ['T', 'Übersetzung: aus · aktuell · alle'],
+  ['[ ]', 'Untertitel früher · später (0,25 s)'],
+  ['F', 'Vollbild – nur Video'],
   ['/', 'Archiv durchsuchen'],
 ];
 

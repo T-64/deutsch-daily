@@ -19,8 +19,14 @@ interface PlayerState {
   active: number; // sentence index under the playhead (-1 = none)
   target: number; // sentence the stepped modes stop after
   started: boolean;
+  shift: number; // user's subtitle offset in seconds (+ = subtitles later)
+  stage: HTMLElement | null; // element that goes fullscreen (video + overlay controls)
+  fullscreen: boolean;
   attach: (el: HTMLVideoElement | null) => void;
   setSentences: (s: Sentence[]) => void;
+  setShift: (d: number) => void;
+  setStage: (el: HTMLElement | null) => void;
+  toggleFullscreen: () => void;
   toggle: () => void;
   playFrom: (i: number) => void;
   step: (d: number) => void;
@@ -40,6 +46,11 @@ const segByIndex = (segs: Seg[], i: number) => segs.find(s => s.i === i);
 
 export const usePlayer = create<PlayerState>()((set, get) => {
   let detach: (() => void) | null = null;
+  let base: Sentence[] = [];
+  const build = (sentences: Sentence[], shift: number) => sentences
+    .map((s, i) => ({ i, a: (s.start ?? NaN) + shift, b: (s.end ?? s.start ?? NaN) + shift }))
+    .filter(s => Number.isFinite(s.a))
+    .sort((x, y) => x.a - y.a);
 
   function onTime() {
     const { el, segs, target } = get();
@@ -61,7 +72,7 @@ export const usePlayer = create<PlayerState>()((set, get) => {
 
   return {
     el: null, segs: [], time: 0, duration: 0, buffered: 0, playing: false, ready: false, failed: false,
-    active: -1, target: -1, started: false,
+    active: -1, target: -1, started: false, shift: 0, stage: null, fullscreen: false,
 
     attach: el => {
       detach?.();
@@ -84,11 +95,24 @@ export const usePlayer = create<PlayerState>()((set, get) => {
     },
 
     setSentences: sentences => {
-      const segs = sentences
-        .map((s, i) => ({ i, a: s.start ?? NaN, b: s.end ?? s.start ?? NaN }))
-        .filter(s => Number.isFinite(s.a))
-        .sort((x, y) => x.a - y.a);
-      set({ segs });
+      base = sentences;
+      set({ segs: build(base, get().shift) });
+    },
+
+    setShift: d => {
+      const shift = Math.round(d * 100) / 100;
+      set({ shift, segs: build(base, shift) });
+      onTime(); // re-evaluate the active sentence at once, even while paused
+    },
+
+    setStage: el => set({ stage: el }),
+
+    toggleFullscreen: () => {
+      const { stage, el } = get();
+      if (document.fullscreenElement) { document.exitFullscreen().catch(() => {}); return; }
+      if (stage?.requestFullscreen) { stage.requestFullscreen().catch(() => {}); return; }
+      // iPhone Safari can't fullscreen a div; its own video player is the fallback.
+      (el as HTMLVideoElement & { webkitEnterFullscreen?: () => void } | null)?.webkitEnterFullscreen?.();
     },
 
     toggle: () => {
@@ -137,6 +161,13 @@ export const usePlayer = create<PlayerState>()((set, get) => {
     },
   };
 });
+
+if (typeof document !== 'undefined') {
+  document.addEventListener('fullscreenchange', () => {
+    const { stage } = usePlayer.getState();
+    usePlayer.setState({ fullscreen: !!stage && document.fullscreenElement === stage });
+  });
+}
 
 usePrefs.subscribe(s => {
   const el = usePlayer.getState().el;
