@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.000" end="00:00:04.120">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:05.240" end="00:00:07.960">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:10.520" end="00:00:13.800">
+        <tt:span style="textWhite">Willkommen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zur Tagesschau in einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:13.930" end="00:00:17.730">
+        <tt:span style="textWhite">Ich bin Susanne Holst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:34.080" end="00:00:36.160">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:41.530" end="00:00:44.970">
+        <tt:span style="textWhite">Die Bundeswehr ist die Armee</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:45.690" end="00:00:50.050">
+        <tt:span style="textWhite">Der Chef von der Bundeswehr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist der Minister für Verteidigung,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:50.090" end="00:00:51.250">
+        <tt:span style="textWhite">Boris Pistorius.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:51.490" end="00:00:52.930">
+        <tt:span style="textWhite">Er ist auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:53.450" end="00:00:56.970">
+        <tt:span style="textWhite">Die Bundeswehr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat jetzt eine neue Studie gemacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:00:57.650" end="00:00:59.770">
+        <tt:span style="textWhite">Damit will sie herausfinden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:00:59.810" end="00:01:03.290">
+        <tt:span style="textWhite">gibt es sexualisierte Gewalt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Bundeswehr?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:03.440" end="00:01:05.600">
+        <tt:span style="textWhite">Sexualisierte Gewalt bedeutet,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:06.770" end="00:01:10.730">
+        <tt:span style="textWhite">ein Mensch macht etwas Sexuelles</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit einem anderen Menschen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:10.770" end="00:01:13.570">
+        <tt:span style="textWhite">obwohl der andere Mensch</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das nicht will.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:13.650" end="00:01:17.210">
+        <tt:span style="textWhite">Z.B. ein Mann fasst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">eine Frau an den Po.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:17.490" end="00:01:19.570">
+        <tt:span style="textWhite">Aber die Frau will das nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:19.880" end="00:01:23.120">
+        <tt:span style="textWhite">Sexualisierte Gewalt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist manchmal aber nicht sofort</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:23.200" end="00:01:24.360">
+        <tt:span style="textWhite">zu erkennen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:25.000" end="00:01:28.280">
+        <tt:span style="textWhite">Z.B.</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wenn ein Mensch Bemerkungen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über den Körper</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:28.360" end="00:01:30.720">
+        <tt:span style="textWhite">von einem anderen Menschen macht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:31.050" end="00:01:35.090">
+        <tt:span style="textWhite">Dann ist das auch eine Form</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von sexualisierter Gewalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:35.850" end="00:01:37.690">
+        <tt:span style="textWhite">Nämlich Gewalt mit Worten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:38.410" end="00:01:41.730">
+        <tt:span style="textWhite">Für die Studie haben die Soldaten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Bundeswehr</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:41.770" end="00:01:43.370">
+        <tt:span style="textWhite">viele Fragen bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:44.090" end="00:01:47.010">
+        <tt:span style="textWhite">Die Fragen konnten sie anonym</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">beantworten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:01:47.490" end="00:01:50.650">
+        <tt:span style="textWhite">D.h. sie mussten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ihren Namen nicht nennen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:01:52.000" end="00:01:56.200">
+        <tt:span style="textWhite">Jetzt hat Pistorius das Ergebnis</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Studie vorgestellt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:01:57.010" end="00:01:58.930">
+        <tt:span style="textWhite">Dazu zeigen wir einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:02:00.570" end="00:02:04.690">
+        <tt:span style="textWhite">Pistorius sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Bundeswehr gibt es</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:02:04.730" end="00:02:06.250">
+        <tt:span style="textWhite">sexualisierte Gewalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:07.090" end="00:02:10.490">
+        <tt:span style="textWhite">Es gibt sogar mehr Fälle</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von sexualisierter Gewalt</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:10.530" end="00:02:12.290">
+        <tt:span style="textWhite">als bislang gedacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:13.450" end="00:02:18.170">
+        <tt:span style="textWhite">Junge Frauen sind besonders oft</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Opfer von sexualisierter Gewalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:18.210" end="00:02:21.730">
+        <tt:span style="textWhite">Die Täter sind meistens Männer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:23.090" end="00:02:27.330">
+        <tt:span style="textWhite">Und es gibt auch viele Fälle</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von Gewalt mit Worten</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:27.370" end="00:02:28.650">
+        <tt:span style="textWhite">in der Bundeswehr.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:29.890" end="00:02:33.050">
+        <tt:span style="textWhite">Die Studie hat noch etwas gezeigt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:34.090" end="00:02:37.810">
+        <tt:span style="textWhite">Wenn Frauen oder Männer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sexualisierte Gewalt erleben,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:38.490" end="00:02:40.770">
+        <tt:span style="textWhite">dann erzählen sie das oft nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:41.290" end="00:02:43.890">
+        <tt:span style="textWhite">Das heißt keiner erfährt davon.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:45.370" end="00:02:47.970">
+        <tt:span style="textWhite">Ich werde das nicht akzeptieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:48.770" end="00:02:52.930">
+        <tt:span style="textWhite">Ich will sexualisierte Gewalt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Bundeswehr verhindern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:02:53.570" end="00:02:57.570">
+        <tt:span style="textWhite">Deshalb habe ich einen Plan</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit vielen Maßnahmen gemacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:02:58.610" end="00:03:00.530">
+        <tt:span style="textWhite">Mit dem Plan gibt es dann</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:03:00.570" end="00:03:04.770">
+        <tt:span style="textWhite">strengere Regeln und mehr Schutz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gegen sexualisierte Gewalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:03:05.410" end="00:03:08.370">
+        <tt:span style="textWhite">Und dann machen wir eine neue Studie.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:03:09.330" end="00:03:12.690">
+        <tt:span style="textWhite">Damit prüfen wir,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ob die Maßnahmen gewirkt haben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:03:14.960" end="00:03:17.160">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:03:21.450" end="00:03:24.530">
+        <tt:span style="textWhite">In Deutschland gibt es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Wirtschaftsweisen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:24.570" end="00:03:26.130">
+        <tt:span style="textWhite">Sie sind auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:26.330" end="00:03:30.530">
+        <tt:span style="textWhite">Die Wirtschaftsweisen sind Experten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für die Wirtschaft und beraten</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:30.570" end="00:03:32.370">
+        <tt:span style="textWhite">auch die Bundesregierung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:32.530" end="00:03:36.490">
+        <tt:span style="textWhite">Jetzt haben die Wirtschaftsweisen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einen neuen Bericht vorgestellt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:36.530" end="00:03:42.490">
+        <tt:span style="textWhite">In dem Bericht steht, die Wirtschaft</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von Deutschland soll das erste Mal</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:42.530" end="00:03:45.170">
+        <tt:span style="textWhite">seit langer Zeit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wieder stark wachsen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:45.490" end="00:03:49.130">
+        <tt:span style="textWhite">Wenn die Wirtschaft wächst,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dann bedeutet das,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:49.610" end="00:03:52.010">
+        <tt:span style="textWhite">die Unternehmen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">stellen mehr Produkte her</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:03:52.050" end="00:03:54.570">
+        <tt:span style="textWhite">und bieten mehr Dienstleistungen an.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:03:54.610" end="00:04:00.450">
+        <tt:span style="textWhite">Dadurch gibt es dann z.B. mehr Jobs</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und die Menschen verdienen mehr Geld.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:04:01.090" end="00:04:03.690">
+        <tt:span style="textWhite">Die Wirtschaftsweisen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sagen aber auch,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:04:03.730" end="00:04:07.570">
+        <tt:span style="textWhite">die Regierung darf nicht mehr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">so viele Schulden machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:04:07.730" end="00:04:11.090">
+        <tt:span style="textWhite">Sonst ist das Wachstum</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Wirtschaft bald schon</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:04:11.120" end="00:04:12.280">
+        <tt:span style="textWhite">wieder vorbei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:04:14.440" end="00:04:16.640">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:04:20.890" end="00:04:23.810">
+        <tt:span style="textWhite">In der Ukraine ist schon lange Krieg.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:04:24.450" end="00:04:27.610">
+        <tt:span style="textWhite">Russland hat die Ukraine</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nämlich angegriffen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:04:27.810" end="00:04:31.650">
+        <tt:span style="textWhite">Viele Menschen sind in dem Krieg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">jetzt schon gestorben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:32.090" end="00:04:36.810">
+        <tt:span style="textWhite">Jetzt haben die Ukraine und Russland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das erste Mal seit langer Zeit</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:36.850" end="00:04:39.010">
+        <tt:span style="textWhite">wieder miteinander gesprochen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:39.290" end="00:04:43.570">
+        <tt:span style="textWhite">Zwei Tage lang haben sie</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über ein Ende von dem Krieg geredet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:44.130" end="00:04:48.290">
+        <tt:span style="textWhite">Die USA sind auch dabei</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und wollen bei einer Lösung helfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:49.370" end="00:04:51.730">
+        <tt:span style="textWhite">Jetzt sind die Gespräche zu Ende.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:52.170" end="00:04:56.370">
+        <tt:span style="textWhite">Auf einen Frieden haben sich Russland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und die Ukraine noch nicht geeinigt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:04:56.410" end="00:04:58.930">
+        <tt:span style="textWhite">Aber sie wollen Gefangene</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">austauschen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:04:58.970" end="00:05:01.770">
+        <tt:span style="textWhite">die beide Länder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Krieg gemacht haben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:05:02.130" end="00:05:05.330">
+        <tt:span style="textWhite">Die Ukraine sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Gespräche waren gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:05:05.370" end="00:05:09.730">
+        <tt:span style="textWhite">Vielleicht gibt es bis zum Ende</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von diesem Jahr eine Lösung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:05:10.650" end="00:05:13.810">
+        <tt:span style="textWhite">Die Verhandlungen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zwischen der Ukraine und Russland</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:05:13.850" end="00:05:15.210">
+        <tt:span style="textWhite">sollen weitergehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:05:17.370" end="00:05:19.730">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:05:23.930" end="00:05:26.930">
+        <tt:span style="textWhite">Heute kann man in vielen Städten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Deutschland</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:05:26.970" end="00:05:28.970">
+        <tt:span style="textWhite">etwas ganz Besonderes sehen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:05:29.610" end="00:05:31.890">
+        <tt:span style="textWhite">Es beginnt nämlich der Karneval.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:31.930" end="00:05:33.850">
+        <tt:span style="textWhite">Das ist ein großes Fest.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:33.890" end="00:05:37.370">
+        <tt:span style="textWhite">Viele Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">verkleiden sich mit bunten Kostümen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:37.410" end="00:05:39.690">
+        <tt:span style="textWhite">und Masken, so wie auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:39.890" end="00:05:43.090">
+        <tt:span style="textWhite">Sie feiern auf der Straße,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">tanzen und singen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:43.970" end="00:05:47.530">
+        <tt:span style="textWhite">Besonders beliebt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist Karneval in den Städten Köln,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:47.610" end="00:05:49.130">
+        <tt:span style="textWhite">Düsseldorf und Mainz.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:49.370" end="00:05:53.170">
+        <tt:span style="textWhite">Der Karneval</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">beginnt jedes Jahr am 11. November</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:05:53.210" end="00:05:54.490">
+        <tt:span style="textWhite">um 11.11 Uhr.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:05:55.050" end="00:05:57.410">
+        <tt:span style="textWhite">Dazu zeigen wir jetzt einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:05:58.570" end="00:06:01.330">
+        <tt:span style="textWhite">In Köln warten die Menschen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:06:01.370" end="00:06:04.810">
+        <tt:span style="textWhite">schon gespannt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf den Anfang vom Karneval.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:06:05.090" end="00:06:08.490">
+        <tt:span style="textWhite">Sie sind bunt verkleidet</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und freuen sich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:06:09.370" end="00:06:14.010">
+        <tt:span style="textWhite">Dann zählen die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die letzten Sekunden bis zum Beginn.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:06:14.810" end="00:06:18.650">
+        <tt:span style="textWhite">Und pünktlich um 11.11 Uhr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist es soweit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:06:22.210" end="00:06:25.090">
+        <tt:span style="textWhite">Die Menschen rufen Kölle Alaaf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:06:26.010" end="00:06:28.970">
+        <tt:span style="textWhite">Das bedeutet Köln über alles.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:06:29.010" end="00:06:34.690">
+        <tt:span style="textWhite">Damit feiern die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ihre Stadt und den Karneval.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:06:35.610" end="00:06:40.490">
+        <tt:span style="textWhite">Für viele Menschen ist das</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die schönste Zeit im Jahr.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:06:43.730" end="00:06:47.650">
+        <tt:span style="textWhite">Viele Menschen bereiten sich lange</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf den Karneval vor.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:48.290" end="00:06:54.890">
+        <tt:span style="textWhite">Sie nähen z.B. ihre Kostüme, üben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Tänze oder lernen neue Lieder.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:57.290" end="00:07:00.210">
+        <tt:span style="textWhite">Die Karnevalszeit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dauert mehrere Monate</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:07:00.250" end="00:07:03.170">
+        <tt:span style="textWhite">bis zum Aschermittwoch im Februar.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:07:03.330" end="00:07:06.490">
+        <tt:span style="textWhite">An den Tagen vor Aschermittwoch</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:07:06.530" end="00:07:09.250">
+        <tt:span style="textWhite">wird noch einmal richtig doll</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gefeiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:07:09.810" end="00:07:13.570">
+        <tt:span style="textWhite">Dann gehen die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit bunt geschmückten Wagen</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:07:13.610" end="00:07:14.890">
+        <tt:span style="textWhite">durch die Straßen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:07:15.450" end="00:07:19.610">
+        <tt:span style="textWhite">Von den Wagen werfen sie Süßigkeiten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in die Menschenmenge.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:07:20.330" end="00:07:23.290">
+        <tt:span style="textWhite">Dann ist der Karneval wieder zu Ende.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:07:23.330" end="00:07:28.250">
+        <tt:span style="textWhite">Bis dahin wollen die Menschen aber</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">noch viel feiern,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:07:28.450" end="00:07:30.690">
+        <tt:span style="textWhite">singen und Spaß haben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub114" style="textCenter" region="bottom" begin="00:07:35.890" end="00:07:38.250">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub115" style="textCenter" region="bottom" begin="00:07:54.250" end="00:07:56.170">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub116" style="textCenter" region="bottom" begin="00:07:56.570" end="00:07:59.810">
+        <tt:span style="textWhite">In der Mitte von Deutschland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und unten im Süden</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub117" style="textCenter" region="bottom" begin="00:07:59.850" end="00:08:04.010">
+        <tt:span style="textWhite">gibt es an manchen Orten Regen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sonst viele Wolken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub118" style="textCenter" region="bottom" begin="00:08:04.650" end="00:08:07.650">
+        <tt:span style="textWhite">Oben im Norden kann es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch Gewitter geben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub119" style="textCenter" region="bottom" begin="00:08:12.000" end="00:08:15.080">
+        <tt:span style="textWhite">Das war die</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub120" style="textCenter" region="bottom" begin="00:08:15.200" end="00:08:16.480">
+        <tt:span style="textWhite">Tschüss.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub121" style="textCenter" region="bottom" begin="00:08:19.680" end="00:08:21.840">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>
