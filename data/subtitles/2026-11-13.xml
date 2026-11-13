@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.000" end="00:00:04.000">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:04.160" end="00:00:06.880">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:10.400" end="00:00:13.080">
+        <tt:span style="textWhite">Willkommen zur</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:13.400" end="00:00:16.920">
+        <tt:span style="textWhite">Ich bin Susanne Holst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:35.240" end="00:00:37.560">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:42.680" end="00:00:46.200">
+        <tt:span style="textWhite">Der Haushalt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist der Geldplan für Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:46.920" end="00:00:52.440">
+        <tt:span style="textWhite">Im Haushalt ist zum Beispiel Geld</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für Schulen, Straßen und Renten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:53.440" end="00:00:58.000">
+        <tt:span style="textWhite">Das Geld kommt vor allem aus Steuern</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von den Menschen und Firmen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:58.520" end="00:01:01.880">
+        <tt:span style="textWhite">Jetzt gab es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ein wichtiges Treffen zum Haushalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:01:02.040" end="00:01:03.560">
+        <tt:span style="textWhite">Das ist auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:01:04.200" end="00:01:07.280">
+        <tt:span style="textWhite">Politiker haben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei dem Treffen entschieden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:01:07.440" end="00:01:11.520">
+        <tt:span style="textWhite">so viel Geld darf Deutschland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im nächsten Jahr ausgeben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:11.880" end="00:01:14.680">
+        <tt:span style="textWhite">Das Treffen hat sehr lange gedauert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:14.920" end="00:01:19.640">
+        <tt:span style="textWhite">Es gibt nämlich Streit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zwischen den Parteien CDU und SPD.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:20.320" end="00:01:23.840">
+        <tt:span style="textWhite">Die CDU will nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bestimmte Steuern senken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:24.880" end="00:01:28.400">
+        <tt:span style="textWhite">Und sie will ärmere Familien</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">weniger unterstützen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:29.480" end="00:01:31.560">
+        <tt:span style="textWhite">Das findet die SPD nicht gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:31.800" end="00:01:34.160">
+        <tt:span style="textWhite">Dazu zeigen wir jetzt einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:35.800" end="00:01:37.960">
+        <tt:span style="textWhite">In Berlin ist es schon dunkel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:38.480" end="00:01:42.120">
+        <tt:span style="textWhite">Aber die Politiker verhandeln</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">immer noch über den Haushalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:42.480" end="00:01:44.120">
+        <tt:span style="textWhite">Es gibt nämlich Streit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:44.760" end="00:01:48.560">
+        <tt:span style="textWhite">Die CDU sagt, wir wollen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Steuern für Strom senken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:49.080" end="00:01:52.000">
+        <tt:span style="textWhite">Dann müssen die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">weniger bezahlen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:52.600" end="00:01:56.400">
+        <tt:span style="textWhite">Und wir wollen weniger Geld</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Sozialbereich ausgeben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:56.840" end="00:02:00.680">
+        <tt:span style="textWhite">Zum Beispiel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für Hilfen für ärmere Familien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:02:01.480" end="00:02:04.360">
+        <tt:span style="textWhite">Das findet die SPD nicht gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:02:04.600" end="00:02:06.960">
+        <tt:span style="textWhite">Sie sagt, Familien mit wenig Geld</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:02:07.000" end="00:02:10.480">
+        <tt:span style="textWhite">müssen weiter</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">genug Hilfe vom Staat bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:02:11.240" end="00:02:13.960">
+        <tt:span style="textWhite">Doch am Ende</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einigen sich die Parteien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:02:14.480" end="00:02:17.000">
+        <tt:span style="textWhite">Die Stromsteuer wird nicht gesenkt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:02:17.160" end="00:02:20.680">
+        <tt:span style="textWhite">Und die Hilfen für ärmere Familien</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bleiben gleich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:21.520" end="00:02:26.520">
+        <tt:span style="textWhite">Diese Frau von der SPD sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wir sind froh über die Entscheidung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:26.840" end="00:02:29.840">
+        <tt:span style="textWhite">Ärmere Familien</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bekommen weiter genug Geld.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:30.080" end="00:02:32.080">
+        <tt:span style="textWhite">Zum Beispiel für die Miete.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:32.480" end="00:02:34.680">
+        <tt:span style="textWhite">Oder Schulsachen für Kinder.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:35.680" end="00:02:37.480">
+        <tt:span style="textWhite">Das ist uns sehr wichtig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:38.960" end="00:02:42.360">
+        <tt:span style="textWhite">Dieser Politiker von der CDU</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sieht das anders.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:42.960" end="00:02:45.680">
+        <tt:span style="textWhite">Er sagt, wir sind sehr enttäuscht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:46.160" end="00:02:49.320">
+        <tt:span style="textWhite">Die Steuer für Strom</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wird noch nicht gesenkt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:49.560" end="00:02:51.360">
+        <tt:span style="textWhite">Aber wir geben nicht auf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:52.320" end="00:02:55.960">
+        <tt:span style="textWhite">Vielleicht können wir</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Steuer später noch senken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:02:56.520" end="00:02:58.720">
+        <tt:span style="textWhite">Der Streit ist erst mal vorbei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:02:59.040" end="00:03:01.760">
+        <tt:span style="textWhite">Und der Haushalt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist jetzt beschlossen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:03:01.920" end="00:03:05.600">
+        <tt:span style="textWhite">Deutschland darf</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">so viel Geld ausgeben wie noch nie.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:03:07.440" end="00:03:09.360">
+        <tt:span style="textWhite">Nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:03:13.560" end="00:03:16.720">
+        <tt:span style="textWhite">Microsoft</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist eine große Firma in den USA.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:03:17.480" end="00:03:20.880">
+        <tt:span style="textWhite">Sie entwickelt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Programme für den Computer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:03:21.640" end="00:03:24.720">
+        <tt:span style="textWhite">Viele Menschen auf der Welt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">benutzen die Programme.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:03:25.160" end="00:03:28.040">
+        <tt:span style="textWhite">Jetzt gibt es bei Microsoft</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">aber eine Störung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:03:28.640" end="00:03:31.840">
+        <tt:span style="textWhite">Zum Beispiel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei dem Programm für E-Mails.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:32.560" end="00:03:33.920">
+        <tt:span style="textWhite">Es heißt Outlook.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:34.760" end="00:03:36.480">
+        <tt:span style="textWhite">Viele Menschen auf der Welt</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:36.520" end="00:03:40.400">
+        <tt:span style="textWhite">können deshalb heute</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">keine E-Mails lesen oder verschicken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:40.560" end="00:03:44.160">
+        <tt:span style="textWhite">Auch bei dem Programm Teams</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gibt es eine Störung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:44.560" end="00:03:45.920">
+        <tt:span style="textWhite">Mit dem Programm</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:03:46.000" end="00:03:49.200">
+        <tt:span style="textWhite">können sich die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">kurze Nachrichten schreiben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:03:49.640" end="00:03:52.720">
+        <tt:span style="textWhite">Microsoft sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wir suchen nach dem Problem.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:03:53.120" end="00:03:56.400">
+        <tt:span style="textWhite">Die Programme</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sollen bald wieder funktionieren.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:03:58.440" end="00:04:00.640">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:04:06.200" end="00:04:09.920">
+        <tt:span style="textWhite">Künstliche Intelligenz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist eine Technik für Computer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:04:10.400" end="00:04:12.560">
+        <tt:span style="textWhite">Das kurze Wort dafür ist KI.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:04:13.320" end="00:04:15.360">
+        <tt:span style="textWhite">Mit KI kann ein Computer</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:04:15.440" end="00:04:19.760">
+        <tt:span style="textWhite">so ähnlich denken und lernen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wie das Gehirn von Menschen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:04:20.200" end="00:04:23.520">
+        <tt:span style="textWhite">Damit KI funktioniert,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">braucht man Chips.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:04:23.800" end="00:04:26.960">
+        <tt:span style="textWhite">Das sind sehr kleine Teile</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in einem Computer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:04:27.320" end="00:04:31.040">
+        <tt:span style="textWhite">Eine bekannte Firma</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für diese Chips heißt Nvidia.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:04:31.920" end="00:04:33.280">
+        <tt:span style="textWhite">Sie ist in den USA.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:04:34.200" end="00:04:38.320">
+        <tt:span style="textWhite">Jetzt hat der Chef von Nvidia,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Jensen Huang, aufgehört.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:38.400" end="00:04:39.840">
+        <tt:span style="textWhite">Er ist auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:40.160" end="00:04:41.920">
+        <tt:span style="textWhite">Die USA sagen nämlich,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:42.200" end="00:04:45.440">
+        <tt:span style="textWhite">Huang hatte eine Affäre</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit einer Frau aus China.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:46.080" end="00:04:48.000">
+        <tt:span style="textWhite">Und die Frau ist ein Spion.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:04:49.000" end="00:04:51.800">
+        <tt:span style="textWhite">Ein Spion</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">arbeitet für ein anderes Land.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:04:52.520" end="00:04:55.520">
+        <tt:span style="textWhite">Er sammelt heimlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wichtige Informationen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:04:55.760" end="00:05:00.280">
+        <tt:span style="textWhite">Zum Beispiel über die Regierung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder das Militär von einem Land.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:05:00.440" end="00:05:01.600">
+        <tt:span style="textWhite">Die USA sagen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:05:02.280" end="00:05:07.200">
+        <tt:span style="textWhite">vielleicht hat der Spion in den USA</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Informationen für China gesammelt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:05:07.600" end="00:05:09.760">
+        <tt:span style="textWhite">Dazu zeigen wir jetzt einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:05:10.920" end="00:05:12.640">
+        <tt:span style="textWhite">Das ist Jensen Huang.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:05:13.680" end="00:05:15.760">
+        <tt:span style="textWhite">Die Bilder sind schon älter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:05:16.280" end="00:05:19.960">
+        <tt:span style="textWhite">Und die Frau im rosa Kleid</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">soll der Spion sein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:05:20.560" end="00:05:23.720">
+        <tt:span style="textWhite">Das sagt die Polizei von den USA.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:05:24.800" end="00:05:28.640">
+        <tt:span style="textWhite">Huang hat die Firma Nvidia</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vor vielen Jahren gegründet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:05:29.360" end="00:05:32.720">
+        <tt:span style="textWhite">Jetzt hat er sehr viel Macht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und ist sehr reich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:33.680" end="00:05:37.240">
+        <tt:span style="textWhite">Viele Computer auf der Welt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben Chips von Nvidia.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:38.680" end="00:05:42.400">
+        <tt:span style="textWhite">Dieser Experte sagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Huang hat die KI besser gemacht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:43.400" end="00:05:47.320">
+        <tt:span style="textWhite">Deshalb benutzen Firmen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf der ganzen Welt seine Chips.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:48.200" end="00:05:51.920">
+        <tt:span style="textWhite">Ohne Nvidia können viele Firmen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gar nicht arbeiten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:52.200" end="00:05:55.200">
+        <tt:span style="textWhite">Und deshalb hat Huang so viel Macht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:56.240" end="00:05:59.320">
+        <tt:span style="textWhite">Die Regierung von den USA</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">macht sich Sorgen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:05:59.840" end="00:06:03.760">
+        <tt:span style="textWhite">Hat Huang Geheimnisse von den USA</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">an den Spion verraten?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:06:05.320" end="00:06:07.080">
+        <tt:span style="textWhite">Dieser Politiker sagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:06:07.680" end="00:06:11.680">
+        <tt:span style="textWhite">wir wollen von Huang wissen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">was hat er der Frau erzählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:06:12.120" end="00:06:15.040">
+        <tt:span style="textWhite">Und wir müssen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">unsere Sicherheit verbessern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:06:15.080" end="00:06:18.520">
+        <tt:span style="textWhite">Wir brauchen strengere Regeln</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für die Firmen von KI.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:06:20.400" end="00:06:23.120">
+        <tt:span style="textWhite">Eine Zeitung in den USA schreibt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:06:23.160" end="00:06:26.320">
+        <tt:span style="textWhite">Der Präsident von den USA,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Donald Trump,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:06:26.400" end="00:06:29.400">
+        <tt:span style="textWhite">wusste von Huangs Affäre</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit dem Spion.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:06:30.400" end="00:06:34.840">
+        <tt:span style="textWhite">Die Polizei hat Trump davon nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">schon vor längerer Zeit erzählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:06:36.080" end="00:06:39.920">
+        <tt:span style="textWhite">Trump sagt dazu,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ich habe von der Affäre gehört.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:06:40.320" end="00:06:43.240">
+        <tt:span style="textWhite">Aber Huang hat mir gesagt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das stimmt nicht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:06:43.600" end="00:06:45.440">
+        <tt:span style="textWhite">Und ich habe ihm geglaubt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:06:46.320" end="00:06:48.320">
+        <tt:span style="textWhite">Ich denke, Huang ist okay.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:49.560" end="00:06:52.480">
+        <tt:span style="textWhite">Aber was wusste Trump</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über Huang wirklich?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:52.800" end="00:06:56.160">
+        <tt:span style="textWhite">Das fragen sich jetzt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">viele Menschen in den USA.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:58.360" end="00:07:00.280">
+        <tt:span style="textWhite">Nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:07:04.520" end="00:07:07.680">
+        <tt:span style="textWhite">In Deutschland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gibt es die Pressefreiheit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:07:07.840" end="00:07:11.200">
+        <tt:span style="textWhite">Das heißt,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Journalisten dürfen frei entscheiden,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:07:11.280" end="00:07:13.480">
+        <tt:span style="textWhite">was sie sagen und schreiben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:07:13.720" end="00:07:16.560">
+        <tt:span style="textWhite">Und der Staat</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">darf ihnen das nicht verbieten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:07:17.000" end="00:07:20.800">
+        <tt:span style="textWhite">Pressefreiheit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gibt es aber nicht in allen Ländern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:07:21.320" end="00:07:23.040">
+        <tt:span style="textWhite">Zum Beispiel in Ägypten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:07:23.240" end="00:07:27.080">
+        <tt:span style="textWhite">Dort kontrolliert der Staat</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Journalisten und ihre Arbeit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:07:27.200" end="00:07:31.320">
+        <tt:span style="textWhite">Viele Journalisten dürfen ihre Arbeit</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Ägypten nicht mehr machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub114" style="textCenter" region="bottom" begin="00:07:31.480" end="00:07:34.120">
+        <tt:span style="textWhite">So wie die Journalistin Lina Attalah.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub115" style="textCenter" region="bottom" begin="00:07:34.200" end="00:07:35.720">
+        <tt:span style="textWhite">Sie ist auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub116" style="textCenter" region="bottom" begin="00:07:35.880" end="00:07:38.600">
+        <tt:span style="textWhite">Zu Attalah</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zeigen wir jetzt einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub117" style="textCenter" region="bottom" begin="00:07:39.640" end="00:07:43.880">
+        <tt:span style="textWhite">Attalah ist die Chefin</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Nachrichtenseite Mada Masr</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub118" style="textCenter" region="bottom" begin="00:07:43.960" end="00:07:45.200">
+        <tt:span style="textWhite">in Ägypten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub119" style="textCenter" region="bottom" begin="00:07:45.560" end="00:07:49.760">
+        <tt:span style="textWhite">Mit ihren Mitarbeitern schreibt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sie Nachrichten im Internet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub120" style="textCenter" region="bottom" begin="00:07:50.560" end="00:07:54.680">
+        <tt:span style="textWhite">Aber Attalah und ihr Team</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dürfen gerade nicht arbeiten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub121" style="textCenter" region="bottom" begin="00:07:55.720" end="00:07:58.520">
+        <tt:span style="textWhite">Ein Gericht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat es ihr nämlich verboten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub122" style="textCenter" region="bottom" begin="00:07:59.480" end="00:08:00.720">
+        <tt:span style="textWhite">Das Gericht sagt,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub123" style="textCenter" region="bottom" begin="00:08:00.760" end="00:08:05.000">
+        <tt:span style="textWhite">Attalah hat keine Erlaubnis,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Nachrichten im Internet zu schreiben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub124" style="textCenter" region="bottom" begin="00:08:05.600" end="00:08:08.160">
+        <tt:span style="textWhite">Und sie schreibt nicht die Wahrheit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub125" style="textCenter" region="bottom" begin="00:08:08.600" end="00:08:12.080">
+        <tt:span style="textWhite">Vielleicht muss sie deshalb</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ein Jahr ins Gefängnis.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub126" style="textCenter" region="bottom" begin="00:08:13.160" end="00:08:16.160">
+        <tt:span style="textWhite">Sie sagt, ich habe Angst</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vor dem Gefängnis,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub127" style="textCenter" region="bottom" begin="00:08:16.600" end="00:08:18.440">
+        <tt:span style="textWhite">aber ich bin Journalistin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub128" style="textCenter" region="bottom" begin="00:08:18.920" end="00:08:23.560">
+        <tt:span style="textWhite">Keiner sollte deswegen eine Strafe</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bekommen und im Gefängnis sein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub129" style="textCenter" region="bottom" begin="00:08:24.320" end="00:08:29.160">
+        <tt:span style="textWhite">Die Regierung von Ägypten überwacht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">viele Zeitungen und das Internet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub130" style="textCenter" region="bottom" begin="00:08:29.600" end="00:08:32.520">
+        <tt:span style="textWhite">Wenn die Regierung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">etwas nicht gut findet,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub131" style="textCenter" region="bottom" begin="00:08:32.560" end="00:08:35.880">
+        <tt:span style="textWhite">dann dürfen die Journalisten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">es nicht schreiben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub132" style="textCenter" region="bottom" begin="00:08:36.000" end="00:08:39.080">
+        <tt:span style="textWhite">Und dann kommt ein Verbot</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von einem Gericht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub133" style="textCenter" region="bottom" begin="00:08:39.200" end="00:08:40.680">
+        <tt:span style="textWhite">Dieser Experte sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub134" style="textCenter" region="bottom" begin="00:08:40.720" end="00:08:42.320">
+        <tt:span style="textWhite">Die meisten Journalisten</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub135" style="textCenter" region="bottom" begin="00:08:42.360" end="00:08:44.880">
+        <tt:span style="textWhite">dürfen nicht schreiben,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">was sie wollen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub136" style="textCenter" region="bottom" begin="00:08:44.960" end="00:08:47.880">
+        <tt:span style="textWhite">Mada Masr ist</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die letzte Nachrichtenseite,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub137" style="textCenter" region="bottom" begin="00:08:48.000" end="00:08:50.080">
+        <tt:span style="textWhite">die noch frei schreiben darf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub138" style="textCenter" region="bottom" begin="00:08:50.240" end="00:08:52.680">
+        <tt:span style="textWhite">Aber das ist jetzt auch vorbei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub139" style="textCenter" region="bottom" begin="00:08:53.640" end="00:08:57.200">
+        <tt:span style="textWhite">Attalah und ihr Team</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wehren sich gegen das Gericht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub140" style="textCenter" region="bottom" begin="00:08:57.320" end="00:09:01.120">
+        <tt:span style="textWhite">Sie sagen, das Gericht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">soll seine Entscheidung ändern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub141" style="textCenter" region="bottom" begin="00:09:01.480" end="00:09:04.120">
+        <tt:span style="textWhite">Wir hören nicht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit dem Schreiben auf.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub142" style="textCenter" region="bottom" begin="00:09:06.200" end="00:09:08.560">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub143" style="textCenter" region="bottom" begin="00:09:25.280" end="00:09:27.480">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub144" style="textCenter" region="bottom" begin="00:09:27.680" end="00:09:30.280">
+        <tt:span style="textWhite">Oben im Norden regnet es manchmal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub145" style="textCenter" region="bottom" begin="00:09:30.440" end="00:09:33.720">
+        <tt:span style="textWhite">Sonst gibt es überall</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mal Wolken und mal Sonne.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub146" style="textCenter" region="bottom" begin="00:09:33.960" end="00:09:35.960">
+        <tt:span style="textWhite">Es werden 1 bis 10 Grad.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub147" style="textCenter" region="bottom" begin="00:09:38.160" end="00:09:40.960">
+        <tt:span style="textWhite">Das war</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub148" style="textCenter" region="bottom" begin="00:09:41.000" end="00:09:42.920">
+        <tt:span style="textWhite">Tschüss, bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub149" style="textCenter" region="bottom" begin="00:09:45.960" end="00:09:48.120">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>
