@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:00.000" end="00:00:01.000" />
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:02.960" end="00:00:03.960">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:04.200" end="00:00:06.920">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:10.920" end="00:00:14.200">
+        <tt:span style="textWhite">Willkommen zur tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:14.720" end="00:00:18.800">
+        <tt:span style="textWhite">Ich bin Susanne Stichler,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:39.080" end="00:00:41.160">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:46.640" end="00:00:50.280">
+        <tt:span style="textWhite">In dem Haus auf dem Foto</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">arbeitet der Bundeskanzler.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:51.400" end="00:00:54.120">
+        <tt:span style="textWhite">Das ist das Bundeskanzleramt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Berlin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:00:54.960" end="00:00:56.360">
+        <tt:span style="textWhite">Dort haben gestern</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:00:56.520" end="00:01:00.240">
+        <tt:span style="textWhite">die wichtigsten Politiker</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Regierung beraten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:01:01.040" end="00:01:02.880">
+        <tt:span style="textWhite">Und sie haben entschieden:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:01:03.040" end="00:01:07.600">
+        <tt:span style="textWhite">Im nächsten Jahr müssen die Menschen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">weniger für Strom bezahlen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:08.560" end="00:01:12.160">
+        <tt:span style="textWhite">Die Regierung will nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Stromsteuer senken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:13.400" end="00:01:18.840">
+        <tt:span style="textWhite">So kann eine Familie</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ungefähr 100 Euro im Jahr sparen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:19.600" end="00:01:22.000">
+        <tt:span style="textWhite">Dazu zeigen wir jetzt einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:22.600" end="00:01:26.240">
+        <tt:span style="textWhite">In diesen Autos sitzen die Politiker</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Regierung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:26.360" end="00:01:29.360">
+        <tt:span style="textWhite">Sie haben in der Nacht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">acht Stunden verhandelt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:29.400" end="00:01:33.800">
+        <tt:span style="textWhite">Dann steht fest: Die Stromsteuer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wird im nächsten Jahr gesenkt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:34.200" end="00:01:36.840">
+        <tt:span style="textWhite">Diese Frau ist Franziska Hoppermann.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:01:37.040" end="00:01:40.160">
+        <tt:span style="textWhite">Sie ist die Generalsekretärin</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der CDU.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:01:40.400" end="00:01:43.560">
+        <tt:span style="textWhite">Sie sagt:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Es waren intensive Verhandlungen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:01:43.760" end="00:01:47.200">
+        <tt:span style="textWhite">Es hat so lange gedauert,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">weil es um viel Geld geht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:01:47.400" end="00:01:50.040">
+        <tt:span style="textWhite">Aber wir wollen den Menschen helfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:01:50.440" end="00:01:54.840">
+        <tt:span style="textWhite">Die Politiker von CDU, CSU und SPD</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben außerdem entschieden:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:01:55.440" end="00:01:58.440">
+        <tt:span style="textWhite">Bald soll es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einen Spritpreisdeckel geben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:01:58.880" end="00:02:03.720">
+        <tt:span style="textWhite">Dann kann die Regierung entscheiden,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wie teuer Benzin und Diesel sind.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:02:03.880" end="00:02:08.280">
+        <tt:span style="textWhite">Das will sie aber nur machen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wenn der Sprit besonders teuer ist.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:02:09.080" end="00:02:11.320">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:02:16.320" end="00:02:18.280">
+        <tt:span style="textWhite">Das BSW ist eine Partei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:02:19.200" end="00:02:22.280">
+        <tt:span style="textWhite">Sie wurde von Sahra Wagenknecht</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gegründet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:02:22.800" end="00:02:25.040">
+        <tt:span style="textWhite">Wagenknecht ist auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:25.720" end="00:02:28.680">
+        <tt:span style="textWhite">Das BSW ist Teil</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von mehreren Parlamenten</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:28.880" end="00:02:30.200">
+        <tt:span style="textWhite">in Bundesländern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:02:30.680" end="00:02:34.240">
+        <tt:span style="textWhite">Aber das BSW</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist nicht Teil vom Bundestag.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:02:35.760" end="00:02:37.920">
+        <tt:span style="textWhite">Bei der Bundestagswahl 2025</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:02:38.920" end="00:02:42.640">
+        <tt:span style="textWhite">hat das BSW nämlich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nicht genug Stimmen bekommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:02:43.640" end="00:02:45.480">
+        <tt:span style="textWhite">Es war aber sehr knapp.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:02:46.640" end="00:02:49.800">
+        <tt:span style="textWhite">Das BSW sagt:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">es sind Fehler passiert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:02:50.720" end="00:02:54.520">
+        <tt:span style="textWhite">Wir müssen alle Stimmen von der Wahl</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mal noch zählen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:02:54.760" end="00:02:58.120">
+        <tt:span style="textWhite">Dann haben wir</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vielleicht doch genug Stimmen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:02:58.560" end="00:03:01.080">
+        <tt:span style="textWhite">Das BSW hat deshalb geklagt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:03:02.800" end="00:03:06.440">
+        <tt:span style="textWhite">Jetzt hat das</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Bundesverfassungsgericht entschieden:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:03:06.760" end="00:03:10.480">
+        <tt:span style="textWhite">Es gibt keine Hinweise</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf Fehler bei der Wahl.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:03:11.320" end="00:03:14.280">
+        <tt:span style="textWhite">Deshalb wird</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nicht mal noch ausgezählt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:03:15.760" end="00:03:17.920">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:03:23.360" end="00:03:25.120">
+        <tt:span style="textWhite">In China gibt es gerade</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:03:25.360" end="00:03:28.560">
+        <tt:span style="textWhite">ein großes Treffen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von wichtigen Politikern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:03:29.240" end="00:03:33.520">
+        <tt:span style="textWhite">Mit dabei sind unter anderem</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">diese drei Männer auf dem Foto.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:03:34.520" end="00:03:37.160">
+        <tt:span style="textWhite">Der Präsident von den USA, Trump.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:03:37.800" end="00:03:39.880">
+        <tt:span style="textWhite">Russlands Präsident Putin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:40.560" end="00:03:42.760">
+        <tt:span style="textWhite">Und Chinas Präsident Xi.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:43.760" end="00:03:47.960">
+        <tt:span style="textWhite">Die drei Politiker sind Teilnehmer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei einem APEC-Treffen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:49.160" end="00:03:52.080">
+        <tt:span style="textWhite">APEC ist eine Gruppe von 21 Ländern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:03:53.480" end="00:03:57.840">
+        <tt:span style="textWhite">Auch die USA, Russland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und China gehören zur APEC.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:03:59.640" end="00:04:04.200">
+        <tt:span style="textWhite">Die 21 APEC-Länder</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">arbeiten bei der Wirtschaft zusammen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:04:05.120" end="00:04:07.720">
+        <tt:span style="textWhite">Was ist von dem Treffen zu erwarten?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:04:07.800" end="00:04:09.720">
+        <tt:span style="textWhite">Dazu zeigen wir einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:04:11.000" end="00:04:12.800">
+        <tt:span style="textWhite">Trump, Xi und Putin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:04:13.400" end="00:04:17.720">
+        <tt:span style="textWhite">Auf diese drei Politiker schauen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">viele Menschen beim APEC-Treffen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:04:17.880" end="00:04:21.160">
+        <tt:span style="textWhite">Sie sind die Präsidenten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von den mächtigsten Ländern</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:04:21.240" end="00:04:22.400">
+        <tt:span style="textWhite">auf der Erde.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:04:22.600" end="00:04:25.560">
+        <tt:span style="textWhite">In China wollen sie</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über mehrere Themen sprechen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:04:25.640" end="00:04:28.560">
+        <tt:span style="textWhite">Zum Beispiel</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über den Krieg in der Ukraine.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:04:28.640" end="00:04:31.040">
+        <tt:span style="textWhite">Trump hat vor dem Treffen gesagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:04:31.120" end="00:04:34.520">
+        <tt:span style="textWhite">Die Ukraine verliert durch den Krieg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Teile vom Land.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:04:34.640" end="00:04:37.840">
+        <tt:span style="textWhite">Russland verliert durch den Krieg</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">viele Soldaten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:04:37.920" end="00:04:40.960">
+        <tt:span style="textWhite">Darüber will ich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit Putin und Xi sprechen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:04:42.440" end="00:04:46.480">
+        <tt:span style="textWhite">Putin und Xi sind Verbündete,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">also politische Freunde.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:04:47.120" end="00:04:51.520">
+        <tt:span style="textWhite">Auch beim APEC-Treffen haben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die beiden miteinander gesprochen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:04:51.600" end="00:04:53.240">
+        <tt:span style="textWhite">China will sich bisher</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:04:53.280" end="00:04:57.280">
+        <tt:span style="textWhite">nicht in den Krieg von Russland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Ukraine einmischen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:04:57.360" end="00:05:01.000">
+        <tt:span style="textWhite">Am Donnerstag treffen sich</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Trump, Xi und Putin zu dritt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:05:01.080" end="00:05:03.320">
+        <tt:span style="textWhite">Dann geht es auch um andere Themen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:05:03.400" end="00:05:04.960">
+        <tt:span style="textWhite">Dieser Experte sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:05:05.000" end="00:05:09.000">
+        <tt:span style="textWhite">Trump will einen großen Auftritt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit mächtigen Politikern.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:05:09.160" end="00:05:12.040">
+        <tt:span style="textWhite">Damit will er zeigen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wie wichtig er ist.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:05:12.200" end="00:05:16.640">
+        <tt:span style="textWhite">Beobachter sagen, Trump, Xi und Putin</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">wollen unterschiedliche Dinge.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:05:16.760" end="00:05:19.240">
+        <tt:span style="textWhite">Es wird schwer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für die drei Politiker,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:05:19.320" end="00:05:20.680">
+        <tt:span style="textWhite">sich zu einigen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:05:21.120" end="00:05:23.360">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:05:27.720" end="00:05:30.560">
+        <tt:span style="textWhite">Auf dem Foto</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist der Petersdom in Rom.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:05:31.520" end="00:05:35.120">
+        <tt:span style="textWhite">Der Petersdom</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist die größte Kirche der Welt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:05:35.840" end="00:05:38.400">
+        <tt:span style="textWhite">Vor 400 Jahren wurde er geweiht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:05:39.160" end="00:05:43.520">
+        <tt:span style="textWhite">Das heißt, es gab</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">den ersten Gottesdienst im Petersdom.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:05:44.400" end="00:05:46.920">
+        <tt:span style="textWhite">Warum ist die Kirche so besonders?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:05:47.200" end="00:05:49.720">
+        <tt:span style="textWhite">Dazu zeigen wir jetzt einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:05:50.640" end="00:05:53.200">
+        <tt:span style="textWhite">Der Petersdom steht mitten in Rom.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:05:53.320" end="00:05:56.360">
+        <tt:span style="textWhite">Jedes Jahr kommen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">viele Millionen Menschen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:05:56.400" end="00:05:58.680">
+        <tt:span style="textWhite">um sich die Kirche anzuschauen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:05:58.760" end="00:06:00.720">
+        <tt:span style="textWhite">Diese Frau aus England sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:06:00.800" end="00:06:04.200">
+        <tt:span style="textWhite">Ich bin begeistert,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">so viel Kunst, so viel Gold!</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:06:04.320" end="00:06:06.560">
+        <tt:span style="textWhite">Und dieser Mann aus Deutschland sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:06:06.680" end="00:06:08.640">
+        <tt:span style="textWhite">Ich gehe nicht oft in Kirchen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:06:08.720" end="00:06:12.440">
+        <tt:span style="textWhite">Aber der Petersdom</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">war eine ganz besondere Erfahrung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:06:12.520" end="00:06:15.840">
+        <tt:span style="textWhite">Viele Künstler</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben an der Kirche mitgearbeitet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:06:15.920" end="00:06:19.160">
+        <tt:span style="textWhite">Zum Beispiel Raffael,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Michelangelo oder Bernini.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:06:19.600" end="00:06:22.920">
+        <tt:span style="textWhite">Die Künstler haben die Wände</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und Decken bemalt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:06:23.040" end="00:06:26.160">
+        <tt:span style="textWhite">Und sie haben</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einzelne Kunstwerke geschaffen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:06:26.280" end="00:06:28.720">
+        <tt:span style="textWhite">Wie diese Säulen mit einem Dach.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:06:30.040" end="00:06:33.680">
+        <tt:span style="textWhite">Dieser Experte</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">kennt sich gut aus mit dem Petersdom.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:06:33.720" end="00:06:34.880">
+        <tt:span style="textWhite">Er sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:06:34.920" end="00:06:38.840">
+        <tt:span style="textWhite">Es hat 120 Jahre gedauert,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bis der Petersdom fertig war.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:06:38.920" end="00:06:40.240">
+        <tt:span style="textWhite">Deshalb konnten</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:06:40.320" end="00:06:43.600">
+        <tt:span style="textWhite">sehr viele verschiedene</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Künstler mitarbeiten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:06:44.400" end="00:06:47.880">
+        <tt:span style="textWhite">Im Petersdom gibt es</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auch weiterhin Gottesdienste.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:06:48.000" end="00:06:49.640">
+        <tt:span style="textWhite">Die Kirche ist beides:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:06:49.720" end="00:06:53.280">
+        <tt:span style="textWhite">Ein Ort für Gläubige</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und ein Ort für Touristen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:06:55.440" end="00:06:57.800">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:07:14.440" end="00:07:16.720">
+        <tt:span style="textWhite">Und jetzt kommt noch das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:07:17.240" end="00:07:21.040">
+        <tt:span style="textWhite">Überall in Deutschland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gibt es viele Wolken und Wind.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:07:21.400" end="00:07:25.760">
+        <tt:span style="textWhite">Unten im Süden und links im Westen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">regnet es außerdem stark.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:07:26.120" end="00:07:29.840">
+        <tt:span style="textWhite">Auch oben im Norden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und rechts im Osten ist es nass.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:07:30.320" end="00:07:32.360">
+        <tt:span style="textWhite">Es werden 4 bis 14 Grad.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:07:34.120" end="00:07:37.240">
+        <tt:span style="textWhite">Das war die tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub114" style="textCenter" region="bottom" begin="00:07:37.320" end="00:07:39.800">
+        <tt:span style="textWhite">Tschüss und bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub115" style="textCenter" region="bottom" begin="00:07:43.800" end="00:07:45.960">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>
