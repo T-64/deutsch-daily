@@ -231,19 +231,44 @@ def ebu_to_cues(xml_bytes: bytes) -> list[dict]:
     return cues
 
 
-def first_topic_tokens(synopsis: str) -> list[str]:
-    first = (synopsis or "").split(",")[0]
-    words = re.findall(r"[A-Za-zÄÖÜäöüß]{4,}", first)
-    return [w.lower() for w in words if w.lower() not in STOP]
+def synopsis_topics(synopsis: str) -> list[list[str]]:
+    """Content tokens per topic of the synopsis ("A, B, C, Das Wetter")."""
+    topics = []
+    for part in re.split(r",\s+", synopsis or ""):
+        words = [w.lower().replace("ß", "ss") for w in re.findall(r"[A-Za-zÄÖÜäöüß]{4,}", part)]
+        words = [w for w in words if w not in STOP]
+        if words:
+            topics.append(words)
+    return topics
 
 
-def transcript_matches_synopsis(cues: list[dict], synopsis: str) -> bool:
-    tokens = first_topic_tokens(synopsis)
-    if not tokens:
+def synopsis_score(text: str, synopsis: str) -> float | None:
+    """Share of the synopsis' content words found in `text`, averaged per topic."""
+    topics = synopsis_topics(synopsis)
+    if not topics:
+        return None
+    blob = text.lower().replace("ß", "ss")
+    return sum(sum(w in blob for w in t) / len(t) for t in topics) / len(topics)
+
+
+def cues_text(cues: list[dict]) -> str:
+    return " ".join((c.get("text") or "") for c in cues)
+
+
+MIN_SCORE, MARGIN = 0.25, 0.1
+
+
+def transcript_matches_synopsis(cues: list[dict], synopsis: str, others: list[str] = ()) -> bool:
+    """Guard against the CMS attaching another day's subtitles.
+
+    Headlines are reworded and recurring words ("Ukraine", "Wahl") also appear on other
+    days, so the test is relative: these subtitles must cover the synopsis clearly better
+    than other recent episodes do (`others`: their texts)."""
+    score = synopsis_score(cues_text(cues), synopsis)
+    if score is None:
         return True
-    blob = " ".join((c.get("text") or "") for c in cues).lower()
-    blob = blob.replace("ß", "ss")
-    return any(tok.replace("ß", "ss") in blob for tok in tokens)
+    rivals = [r for r in (synopsis_score(o, synopsis) for o in others) if r is not None]
+    return score >= MIN_SCORE and all(score >= r + MARGIN for r in rivals)
 
 
 def fetch_bytes(url: str) -> bytes:
@@ -315,8 +340,8 @@ def write_episode(fields: dict, xml_bytes: bytes, xml_path: Path, trans_path: Pa
         return 1
     if not transcript_matches_synopsis(cues, fields["synopsis"]):
         print(
-            "ERROR: subtitle text does not contain the lead story from synopsis "
-            f"({first_topic_tokens(fields['synopsis'])}); refusing to store as {date}",
+            "ERROR: subtitle text does not match the synopsis "
+            f"(score {synopsis_score(cues_text(cues), fields['synopsis']) or 0:.2f}); refusing to store as {date}",
             file=sys.stderr,
         )
         return 1
