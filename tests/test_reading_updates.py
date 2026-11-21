@@ -169,6 +169,18 @@ class ReadingUpdateTests(unittest.TestCase):
             self.assertEqual([day for day, _ in caught.exception.failures], ['2026-10-19'])
             self.assertIn('bad translation', str(caught.exception))
 
+    def test_synopsis_check_tolerates_rewording_but_rejects_another_days_text(self):
+        from ingest_episode import transcript_matches_synopsis
+        synopsis = "Angriff auf Krim-Brücke in der Ukraine, EU-Plan: Asyl-Bewerber nach Ruanda, Fußball: Deutschland besiegt Niederlande, Das Wetter"
+        # the lead story is reworded, the others are told plainly
+        today = [{"text": t} for t in ("Die Brücke zur Krim wurde angegriffen.", "Die EU will Asyl-Bewerber nach Ruanda bringen.",
+                                       "Im Fußball hat Deutschland die Niederlande besiegt.")]
+        yesterday = "In der Ukraine ist Winter. Deutschland spielt heute gegen die Niederlande."
+        self.assertTrue(transcript_matches_synopsis(today, synopsis, [yesterday]))
+        # yesterday's subtitles attached to today's page share words but cover far less
+        self.assertFalse(transcript_matches_synopsis([{"text": yesterday}], synopsis, [yesterday]))
+        self.assertTrue(transcript_matches_synopsis(today, "tagesschau in Einfacher Sprache 19:00 Uhr"))
+
     def test_discover_skips_a_day_without_official_text(self):
         base = SOURCE['list_url'] + '/'
         index_html = b'<a href="/x/tse-1.html">Mo</a> <a href="/x/tse-2.html">Di</a>'

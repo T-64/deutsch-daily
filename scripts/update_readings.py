@@ -31,7 +31,7 @@ from urllib.parse import urljoin, urlparse
 from xml.etree.ElementTree import ParseError
 from zoneinfo import ZoneInfo
 
-from ingest_episode import ebu_to_cues, parse_fields, transcript_matches_synopsis
+from ingest_episode import cues_text, ebu_to_cues, parse_fields, synopsis_score, transcript_matches_synopsis
 from subtitle_sentences import cue_sentences
 import audio_sync
 
@@ -113,6 +113,23 @@ def note_failure(failures: list[tuple[str, str]], label: str, exc, verb: str = "
     print(f"{verb}: {label} · {reason}", flush=True)
 
 
+def stored_texts(day: date, n: int = 7) -> list[str]:
+    """German text of the latest `n` stored episodes other than `day`."""
+    texts = []
+    for path in sorted((ROOT / "data/content").glob("????-??-??.json"), reverse=True):
+        if path.stem == day.isoformat():
+            continue
+        try:
+            doc = json.loads(path.read_text())
+        except (OSError, ValueError):
+            continue
+        if doc.get("schema") == 2:
+            texts.append(" ".join(s.get("de", "") for s in doc.get("sentences", [])))
+        if len(texts) >= n:
+            break
+    return texts
+
+
 def discover(source: dict, since: date, until: date, failures: list[tuple[str, str]] | None = None,
              today: date | None = None) -> list[tuple[dict, bytes]]:
     """Verified editions in range; per-day problems go to `failures` instead of aborting.
@@ -150,8 +167,15 @@ def discover(source: dict, since: date, until: date, failures: list[tuple[str, s
                 raise ValueError("official text is not available yet")
             xml = source_bytes(fields["subtitle_url"], source)
             cues = ebu_to_cues(xml)
-            if len(cues) < 8 or not transcript_matches_synopsis(cues, fields["synopsis"]):
-                raise ValueError("official text does not match the episode")
+            if len(cues) < 8:
+                raise ValueError(f"official text is incomplete ({len(cues)} lines)")
+            others = stored_texts(day)
+            if not transcript_matches_synopsis(cues, fields["synopsis"], others):
+                score = synopsis_score(cues_text(cues), fields["synopsis"])
+                rival = max((synopsis_score(o, fields["synopsis"]) or 0 for o in others), default=0)
+                raise ValueError(f"official text does not match the episode "
+                                 f"(score {score:.2f} vs {rival:.2f}; synopsis: {fields['synopsis'][:160]!r}; "
+                                 f"subtitles open: {cues_text(cues[:3])[:120]!r})")
         except DAY_ERRORS as exc:
             if label == today.isoformat():
                 pending = True
