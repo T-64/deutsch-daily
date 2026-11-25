@@ -113,6 +113,14 @@ def note_failure(failures: list[tuple[str, str]], label: str, exc, verb: str = "
     print(f"{verb}: {label} · {reason}", flush=True)
 
 
+def is_stale(label: str, today: date) -> bool:
+    """True for a day older than yesterday: the morning-after deadline for it has passed."""
+    try:
+        return date.fromisoformat(label) < today - timedelta(days=1)
+    except ValueError:
+        return False
+
+
 def stored_texts(day: date, n: int = 7) -> list[str]:
     """German text of the latest `n` stored episodes other than `day`."""
     texts = []
@@ -135,7 +143,9 @@ def discover(source: dict, since: date, until: date, failures: list[tuple[str, s
     """Verified editions in range; per-day problems go to `failures` instead of aborting.
 
     Today's edition may simply not be out yet (the evening runs poll for it), so a problem with
-    `today` is reported as pending rather than as a failure.
+    `today` is reported as pending rather than as a failure. A source problem with yesterday's
+    edition fails the run (the 08:00 deadline); one that persists for older days is only reported
+    as unavailable, so a single broken upstream file doesn't turn every run red for a week.
     """
     failures = [] if failures is None else failures
     today = today or datetime.now(BERLIN).date()
@@ -177,9 +187,15 @@ def discover(source: dict, since: date, until: date, failures: list[tuple[str, s
                                  f"(score {score:.2f} vs {rival:.2f}; synopsis: {fields['synopsis'][:160]!r}; "
                                  f"subtitles open: {cues_text(cues[:3])[:120]!r})")
         except DAY_ERRORS as exc:
+            reason = " ".join(str(exc).split())[:200]
             if label == today.isoformat():
                 pending = True
-                print(f"pending: {label} · {' '.join(str(exc).split())[:200]}", flush=True)
+                print(f"pending: {label} · {reason}", flush=True)
+            elif is_stale(label, today):
+                # The source itself has been unusable for days (e.g. tagesschau published a
+                # truncated subtitle file); keep checking it, but don't fail every run over it.
+                pending = True
+                print(f"unavailable: {label} · {reason}", flush=True)
             else:
                 note_failure(failures, label, exc)
             continue
