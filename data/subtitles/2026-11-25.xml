@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Profile: EBU-TT-D-Basic-DE-->
+<tt:tt xmlns:tt="http://www.w3.org/ns/ttml" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ebuttm="urn:ebu:tt:metadata" ttp:timeBase="media" ttp:cellResolution="50 30" xml:lang="de-DE">
+  <tt:head>
+    <tt:metadata>
+      <ebuttm:documentMetadata>
+        <ebuttm:documentEbuttVersion>v1.0</ebuttm:documentEbuttVersion>
+      </ebuttm:documentMetadata>
+    </tt:metadata>
+    <tt:styling>
+      <tt:style xml:id="defaultStyle" tts:fontFamily="Verdana,Arial,Tiresias" tts:fontSize="160%" tts:lineHeight="125%" />
+      <tt:style xml:id="textBlack" tts:color="#000000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textRed" tts:color="#FF0000" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textGreen" tts:color="#00FF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textYellow" tts:color="#FFFF00" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textBlue" tts:color="#0000FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textMagenta" tts:color="#FF00FF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCyan" tts:color="#00FFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textWhite" tts:color="#FFFFFF" tts:backgroundColor="#000000c2" />
+      <tt:style xml:id="textCenter" tts:textAlign="center" />
+      <tt:style xml:id="textLeft" tts:textAlign="left" />
+      <tt:style xml:id="textRight" tts:textAlign="right" />
+    </tt:styling>
+    <tt:layout>
+      <tt:region xml:id="top" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before" />
+      <tt:region xml:id="bottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after" />
+    </tt:layout>
+  </tt:head>
+  <tt:body>
+    <tt:div style="defaultStyle">
+      <tt:p xml:id="sub0" style="textCenter" region="bottom" begin="00:00:03.000" end="00:00:04.320">
+        <tt:span style="textWhite">* Gong *</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub1" style="textCenter" region="bottom" begin="00:00:04.520" end="00:00:07.240">
+        <tt:span style="textBlue">Untertitel:</tt:span>
+        <tt:br />
+        <tt:span style="textBlue">Norddeutscher Rundfunk 2026</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub2" style="textCenter" region="bottom" begin="00:00:11.010" end="00:00:14.130">
+        <tt:span style="textWhite">Willkommen zur tagesschau</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub3" style="textCenter" region="bottom" begin="00:00:14.170" end="00:00:18.730">
+        <tt:span style="textWhite">Ich bin Michail Paweletz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und das sind unsere Nachrichten:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub4" style="textCenter" region="bottom" begin="00:00:20.440" end="00:00:23.600">
+        <tt:span style="textWhite">tagesschau in Einfacher Sprache</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf WhatsApp.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub5" style="textCenter" region="bottom" begin="00:00:44.410" end="00:00:47.810">
+        <tt:span style="textWhite">Und nun zur ersten Nachricht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub6" style="textCenter" region="bottom" begin="00:00:48.930" end="00:00:52.970">
+        <tt:span style="textWhite">tagesschau in Einfacher Sprache</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf WhatsApp.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub7" style="textCenter" region="bottom" begin="00:00:54.210" end="00:01:00.330">
+        <tt:span style="textWhite">Die tagesschau in Einfacher Sprache</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gibt es jetzt auch auf WhatsApp.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub8" style="textCenter" region="bottom" begin="00:01:00.850" end="00:01:03.530">
+        <tt:span style="textWhite">Die App kostet kein Geld.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub9" style="textCenter" region="bottom" begin="00:01:03.570" end="00:01:09.650">
+        <tt:span style="textWhite">Man kann sie auf das Handy</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder das Tablet herunterladen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub10" style="textCenter" region="bottom" begin="00:01:10.410" end="00:01:17.690">
+        <tt:span style="textWhite">Die tagesschau in Einfacher Sprache</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat einen eigenen Kanal bei WhatsApp.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub11" style="textCenter" region="bottom" begin="00:01:17.730" end="00:01:27.090">
+        <tt:span style="textWhite">Sie finden diesen Kanal</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">bei tagesschau.de/einfach.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub12" style="textCenter" region="bottom" begin="00:01:27.890" end="00:01:30.730">
+        <tt:span style="textWhite">So wie es unter dem Foto steht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub13" style="textCenter" region="bottom" begin="00:01:31.770" end="00:01:36.170">
+        <tt:span style="textWhite">Auf WhatsApp</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sind von montags bis freitags</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub14" style="textCenter" region="bottom" begin="00:01:36.210" end="00:01:41.810">
+        <tt:span style="textWhite">drei Nachrichten von</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub15" style="textCenter" region="bottom" begin="00:01:41.850" end="00:01:48.050">
+        <tt:span style="textWhite">Unter den Nachrichten</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist der Link zu der ganzen Sendung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub16" style="textCenter" region="bottom" begin="00:01:50.330" end="00:01:52.690">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub17" style="textCenter" region="bottom" begin="00:01:57.560" end="00:01:58.920">
+        <tt:span style="textWhite">Die Bundesregierung</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub18" style="textCenter" region="bottom" begin="00:01:58.960" end="00:02:02.370">
+        <tt:span style="textWhite">will im nächsten Jahr</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">viel Geld ausgeben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub19" style="textCenter" region="bottom" begin="00:02:02.810" end="00:02:05.810">
+        <tt:span style="textWhite">Und sie will viele Schulden machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub20" style="textCenter" region="bottom" begin="00:02:06.810" end="00:02:12.090">
+        <tt:span style="textWhite">Im Bundestag reden die Politiker</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in dieser Woche darüber.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub21" style="textCenter" region="bottom" begin="00:02:13.240" end="00:02:15.080">
+        <tt:span style="textWhite">Dabei gibt es auch Streit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub22" style="textCenter" region="bottom" begin="00:02:16.800" end="00:02:22.880">
+        <tt:span style="textWhite">In der Bundesregierung sind</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Parteien CDU/CSU und SPD.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub23" style="textCenter" region="bottom" begin="00:02:24.690" end="00:02:27.090">
+        <tt:span style="textWhite">Politiker von anderen Parteien</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub24" style="textCenter" region="bottom" begin="00:02:27.130" end="00:02:30.490">
+        <tt:span style="textWhite">finden die Pläne</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">der Bundesregierung schlecht.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub25" style="textCenter" region="bottom" begin="00:02:31.050" end="00:02:35.970">
+        <tt:span style="textWhite">Sie sagen: Die Bundesregierung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">soll weniger Schulden machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub26" style="textCenter" region="bottom" begin="00:02:36.610" end="00:02:41.930">
+        <tt:span style="textWhite">Und sie sagen: Die Bundesregierung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">macht keine gute Arbeit.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub27" style="textCenter" region="bottom" begin="00:02:42.490" end="00:02:44.530">
+        <tt:span style="textWhite">Dazu kommt jetzt ein Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub28" style="textCenter" region="bottom" begin="00:02:46.250" end="00:02:49.010">
+        <tt:span style="textWhite">Diese Politikerin</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">heißt Britta Haßelmann.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub29" style="textCenter" region="bottom" begin="00:02:49.050" end="00:02:51.490">
+        <tt:span style="textWhite">Sie ist von der Partei Die Grünen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub30" style="textCenter" region="bottom" begin="00:02:51.730" end="00:02:55.170">
+        <tt:span style="textWhite">Haßelmann sagt:</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Die Bundesregierung streitet zu viel.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub31" style="textCenter" region="bottom" begin="00:02:55.210" end="00:02:57.170">
+        <tt:span style="textWhite">Das sieht man an der Stromsteuer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub32" style="textCenter" region="bottom" begin="00:02:57.210" end="00:03:01.410">
+        <tt:span style="textWhite">So viele Worte und trotzdem sinkt</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">die Stromsteuer nur für ein Jahr.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub33" style="textCenter" region="bottom" begin="00:03:01.450" end="00:03:04.170">
+        <tt:span style="textWhite">Bundeskanzler Merz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">spricht auch im Bundestag.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub34" style="textCenter" region="bottom" begin="00:03:04.480" end="00:03:05.680">
+        <tt:span style="textWhite">Er sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub35" style="textCenter" region="bottom" begin="00:03:05.880" end="00:03:09.320">
+        <tt:span style="textWhite">Die letzten Wochen waren chaotisch,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das weiß ich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub36" style="textCenter" region="bottom" begin="00:03:09.480" end="00:03:10.920">
+        <tt:span style="textWhite">Das war nicht schön.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub37" style="textCenter" region="bottom" begin="00:03:11.040" end="00:03:13.880">
+        <tt:span style="textWhite">Die Bundesregierung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat lange gestritten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub38" style="textCenter" region="bottom" begin="00:03:13.960" end="00:03:16.680">
+        <tt:span style="textWhite">Soll die Stromsteuer sinken</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder nicht?</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub39" style="textCenter" region="bottom" begin="00:03:16.770" end="00:03:18.770">
+        <tt:span style="textWhite">Jetzt sinkt die Stromsteuer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub40" style="textCenter" region="bottom" begin="00:03:18.930" end="00:03:21.410">
+        <tt:span style="textWhite">Das ist aber teuer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für die Bundesregierung.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub41" style="textCenter" region="bottom" begin="00:03:21.450" end="00:03:23.530">
+        <tt:span style="textWhite">Und Geld fehlt sowieso schon.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub42" style="textCenter" region="bottom" begin="00:03:23.680" end="00:03:27.960">
+        <tt:span style="textWhite">Kanzler Merz sagt: Deutschland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist in einer schwierigen Lage.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub43" style="textCenter" region="bottom" begin="00:03:28.250" end="00:03:29.930">
+        <tt:span style="textWhite">Aber es geht aufwärts.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub44" style="textCenter" region="bottom" begin="00:03:30.160" end="00:03:33.800">
+        <tt:span style="textWhite">Die Wirtschaft wächst ein bisschen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">das ist ein gutes Zeichen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub45" style="textCenter" region="bottom" begin="00:03:34.520" end="00:03:37.240">
+        <tt:span style="textWhite">Das ist Heidi Reichinnek</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von der Linkspartei.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub46" style="textCenter" region="bottom" begin="00:03:37.360" end="00:03:38.720">
+        <tt:span style="textWhite">Sie sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub47" style="textCenter" region="bottom" begin="00:03:38.770" end="00:03:41.250">
+        <tt:span style="textWhite">Die Bundesregierung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">spart bei Menschen,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub48" style="textCenter" region="bottom" begin="00:03:41.290" end="00:03:43.050">
+        <tt:span style="textWhite">die sowieso kein Geld haben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub49" style="textCenter" region="bottom" begin="00:03:43.760" end="00:03:46.400">
+        <tt:span style="textWhite">Tino Chrupalla</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist von der Partei AfD.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub50" style="textCenter" region="bottom" begin="00:03:46.880" end="00:03:50.960">
+        <tt:span style="textWhite">Er sagt: Die Bundesregierung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">macht viel zu viele Schulden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub51" style="textCenter" region="bottom" begin="00:03:51.480" end="00:03:54.120">
+        <tt:span style="textWhite">Wir werden</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">gegen die Regierung klagen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub52" style="textCenter" region="bottom" begin="00:03:54.760" end="00:03:58.920">
+        <tt:span style="textWhite">Der Bundestag stimmt diese Woche</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">über die Pläne ab.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub53" style="textCenter" region="bottom" begin="00:04:00.570" end="00:04:02.930">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub54" style="textCenter" region="bottom" begin="00:04:08.010" end="00:04:10.410">
+        <tt:span style="textWhite">Es passiert immer wieder.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub55" style="textCenter" region="bottom" begin="00:04:10.610" end="00:04:13.610">
+        <tt:span style="textWhite">Medikamente fehlen in der Apotheke.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub56" style="textCenter" region="bottom" begin="00:04:14.090" end="00:04:18.810">
+        <tt:span style="textWhite">Die meisten Medikamente</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">kommen nämlich aus dem Ausland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub57" style="textCenter" region="bottom" begin="00:04:19.130" end="00:04:21.250">
+        <tt:span style="textWhite">Zum Beispiel aus Asien.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub58" style="textCenter" region="bottom" begin="00:04:21.480" end="00:04:25.320">
+        <tt:span style="textWhite">Die Medikamente können manchmal</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nicht geliefert werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub59" style="textCenter" region="bottom" begin="00:04:25.600" end="00:04:28.040">
+        <tt:span style="textWhite">Kranke Menschen haben dann Sorgen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub60" style="textCenter" region="bottom" begin="00:04:28.920" end="00:04:30.720">
+        <tt:span style="textWhite">Die EU will jetzt helfen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub61" style="textCenter" region="bottom" begin="00:04:31.440" end="00:04:34.960">
+        <tt:span style="textWhite">Das EU-Parlament</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat dafür ein Gesetz beschlossen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub62" style="textCenter" region="bottom" begin="00:04:35.760" end="00:04:39.200">
+        <tt:span style="textWhite">Mehr Medikamente</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">sollen in Europa gekauft werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub63" style="textCenter" region="bottom" begin="00:04:40.320" end="00:04:44.880">
+        <tt:span style="textWhite">Und es soll einfacher werden,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Medikamente in Europa herzustellen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub64" style="textCenter" region="bottom" begin="00:04:49.080" end="00:04:51.280">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub65" style="textCenter" region="bottom" begin="00:04:56.050" end="00:05:00.690">
+        <tt:span style="textWhite">Auf dem Foto</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist ein Lager für Atommüll.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub66" style="textCenter" region="bottom" begin="00:05:00.890" end="00:05:04.370">
+        <tt:span style="textWhite">Es ist in Finnland,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">im Norden von Europa.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub67" style="textCenter" region="bottom" begin="00:05:04.410" end="00:05:07.290">
+        <tt:span style="textWhite">Es ist tief unten in der Erde.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub68" style="textCenter" region="bottom" begin="00:05:07.480" end="00:05:10.120">
+        <tt:span style="textWhite">Atommüll ist nämlich sehr gefährlich.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub69" style="textCenter" region="bottom" begin="00:05:10.480" end="00:05:13.000">
+        <tt:span style="textWhite">Er sendet unsichtbare Strahlen aus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub70" style="textCenter" region="bottom" begin="00:05:13.720" end="00:05:15.080">
+        <tt:span style="textWhite">Sie sind sehr stark</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub71" style="textCenter" region="bottom" begin="00:05:15.120" end="00:05:20.370">
+        <tt:span style="textWhite">und können Menschen,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Tiere und Pflanzen krank machen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub72" style="textCenter" region="bottom" begin="00:05:20.410" end="00:05:25.530">
+        <tt:span style="textWhite">Ein Lager für Atommüll</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">muss deshalb sehr sicher sein.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub73" style="textCenter" region="bottom" begin="00:05:25.600" end="00:05:28.600">
+        <tt:span style="textWhite">Es dürfen keine Strahlen</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">nach außen kommen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub74" style="textCenter" region="bottom" begin="00:05:28.840" end="00:05:32.000">
+        <tt:span style="textWhite">Atommüll kommt aus Atomkraftwerken.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub75" style="textCenter" region="bottom" begin="00:05:33.040" end="00:05:37.760">
+        <tt:span style="textWhite">Viele Länder haben Atomkraftwerke</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">oder hatten früher welche,</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub76" style="textCenter" region="bottom" begin="00:05:37.920" end="00:05:39.080">
+        <tt:span style="textWhite">wie Deutschland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub77" style="textCenter" region="bottom" begin="00:05:40.200" end="00:05:43.920">
+        <tt:span style="textWhite">Diese Länder müssen deshalb</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">Lager für Atommüll bauen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub78" style="textCenter" region="bottom" begin="00:05:44.720" end="00:05:48.160">
+        <tt:span style="textWhite">Das Lager in Finnland</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">ist das erste auf der Welt.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub79" style="textCenter" region="bottom" begin="00:05:49.480" end="00:05:51.840">
+        <tt:span style="textWhite">Dazu zeigen wir jetzt einen Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub80" style="textCenter" region="bottom" begin="00:05:53.360" end="00:05:56.800">
+        <tt:span style="textWhite">So sieht das Endlager für Atommüll</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">von außen aus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub81" style="textCenter" region="bottom" begin="00:05:58.000" end="00:06:00.280">
+        <tt:span style="textWhite">Es steht im Westen von Finnland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub82" style="textCenter" region="bottom" begin="00:06:00.400" end="00:06:03.920">
+        <tt:span style="textWhite">Die Menschen in der Nachbarschaft</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">haben keine Angst.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub83" style="textCenter" region="bottom" begin="00:06:04.000" end="00:06:06.200">
+        <tt:span style="textWhite">Diese Frau sagt: Ich bin stolz.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub84" style="textCenter" region="bottom" begin="00:06:06.480" end="00:06:09.760">
+        <tt:span style="textWhite">Finnland ist das erste Land</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">mit einem Endlager.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub85" style="textCenter" region="bottom" begin="00:06:09.920" end="00:06:10.920">
+        <tt:span style="textWhite">Das ist gut.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub86" style="textCenter" region="bottom" begin="00:06:11.920" end="00:06:13.440">
+        <tt:span style="textWhite">Und dieser Mann sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub87" style="textCenter" region="bottom" begin="00:06:13.560" end="00:06:17.360">
+        <tt:span style="textWhite">Der Müll aus den Atomkraftwerken</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">muss ja irgendwo hin.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub88" style="textCenter" region="bottom" begin="00:06:18.570" end="00:06:24.130">
+        <tt:span style="textWhite">In diesen Rohren soll der Müll</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">unter der Erde gelagert werden.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub89" style="textCenter" region="bottom" begin="00:06:24.280" end="00:06:26.640">
+        <tt:span style="textWhite">Wann es losgeht, ist aber unklar.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub90" style="textCenter" region="bottom" begin="00:06:27.880" end="00:06:30.080">
+        <tt:span style="textWhite">Der Chef von dem Endlager sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub91" style="textCenter" region="bottom" begin="00:06:30.120" end="00:06:33.960">
+        <tt:span style="textWhite">Wir sind mit der Planung</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">noch nicht ganz fertig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub92" style="textCenter" region="bottom" begin="00:06:35.160" end="00:06:38.000">
+        <tt:span style="textWhite">So sieht das Endlager</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">unter der Erde aus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub93" style="textCenter" region="bottom" begin="00:06:38.840" end="00:06:42.920">
+        <tt:span style="textWhite">Es gibt viele Gänge und viel Platz</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für Rohre mit Atommüll.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub94" style="textCenter" region="bottom" begin="00:06:44.840" end="00:06:48.600">
+        <tt:span style="textWhite">Die Wände sind aus Stein</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und sehr fest.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub95" style="textCenter" region="bottom" begin="00:06:49.720" end="00:06:50.920">
+        <tt:span style="textWhite">Dieser Mann sagt:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub96" style="textCenter" region="bottom" begin="00:06:50.960" end="00:06:56.160">
+        <tt:span style="textWhite">Wenn das Lager irgendwann voll ist,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">dann schütten wir Beton in die Gänge.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub97" style="textCenter" region="bottom" begin="00:06:57.320" end="00:07:00.960">
+        <tt:span style="textWhite">Der Atommüll ist dann</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">unter der Erde eingeschlossen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub98" style="textCenter" region="bottom" begin="00:07:02.120" end="00:07:05.400">
+        <tt:span style="textWhite">In das Endlager</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">darf nur Atommüll aus Finnland.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub99" style="textCenter" region="bottom" begin="00:07:07.520" end="00:07:12.480">
+        <tt:span style="textWhite">Er soll mindestens 100.000 Jahre</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">unter der Erde bleiben.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub100" style="textCenter" region="bottom" begin="00:07:14.600" end="00:07:16.800">
+        <tt:span style="textWhite">Und nun zur nächsten Nachricht:</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub101" style="textCenter" region="bottom" begin="00:07:20.810" end="00:07:23.890">
+        <tt:span style="textWhite">Auf dem Foto sind drei Raumfahrer.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub102" style="textCenter" region="bottom" begin="00:07:24.040" end="00:07:29.360">
+        <tt:span style="textWhite">Sie sind mit einer Rakete aus China</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">zur Raumstation Tiangong geflogen.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub103" style="textCenter" region="bottom" begin="00:07:30.050" end="00:07:33.050">
+        <tt:span style="textWhite">Sie ist im All</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und fliegt um die Erde.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub104" style="textCenter" region="bottom" begin="00:07:33.520" end="00:07:35.440">
+        <tt:span style="textWhite">Dazu kommt ein kurzer Film.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub105" style="textCenter" region="bottom" begin="00:07:36.680" end="00:07:39.760">
+        <tt:span style="textWhite">Hier sind die drei Raumfahrer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">vor dem Start.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub106" style="textCenter" region="bottom" begin="00:07:40.040" end="00:07:43.200">
+        <tt:span style="textWhite">Zwei sind aus China,</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">einer aus Pakistan.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub107" style="textCenter" region="bottom" begin="00:07:43.280" end="00:07:47.520">
+        <tt:span style="textWhite">Die Rakete ist in der Wüste Gobi</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in China gestartet.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub108" style="textCenter" region="bottom" begin="00:07:48.730" end="00:07:51.730">
+        <tt:span style="textWhite">Der Flug ins All</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">hat vier Stunden gedauert.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub109" style="textCenter" region="bottom" begin="00:07:52.410" end="00:07:56.850">
+        <tt:span style="textWhite">Hier kommen die Raumfahrer</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">in der Raumstation an.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub110" style="textCenter" region="bottom" begin="00:07:58.090" end="00:08:01.810">
+        <tt:span style="textWhite">China gibt gerade viel Geld</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">für Raketen aus.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub111" style="textCenter" region="bottom" begin="00:08:02.490" end="00:08:07.330">
+        <tt:span style="textWhite">China möchte nämlich im All</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">so wichtig werden wie die USA.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub112" style="textCenter" region="bottom" begin="00:08:09.040" end="00:08:11.400">
+        <tt:span style="textWhite">Und das waren unsere Nachrichten.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub113" style="textCenter" region="bottom" begin="00:08:12.680" end="00:08:16.440">
+        <tt:span style="textWhite">tagesschau in Einfacher Sprache</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">auf WhatsApp.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub114" style="textCenter" region="bottom" begin="00:08:35.530" end="00:08:37.690">
+        <tt:span style="textWhite">Und jetzt kommt das Wetter.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub115" style="textCenter" region="bottom" begin="00:08:39.120" end="00:08:42.360">
+        <tt:span style="textWhite">Es gibt viele Wolken</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">und nur wenig Sonne.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub116" style="textCenter" region="bottom" begin="00:08:42.610" end="00:08:44.210">
+        <tt:span style="textWhite">Es ist sehr windig.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub117" style="textCenter" region="bottom" begin="00:08:44.890" end="00:08:47.450">
+        <tt:span style="textWhite">Ganz unten im Süden schneit es auch.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub118" style="textCenter" region="bottom" begin="00:08:53.290" end="00:08:56.810">
+        <tt:span style="textWhite">Das war die</tt:span>
+        <tt:br />
+        <tt:span style="textWhite">tagesschau in Einfacher Sprache.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub119" style="textCenter" region="bottom" begin="00:08:57.160" end="00:08:58.320">
+        <tt:span style="textWhite">Tschüss.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub120" style="textCenter" region="bottom" begin="00:08:58.370" end="00:08:59.890">
+        <tt:span style="textWhite">Bis zum nächsten Mal.</tt:span>
+      </tt:p>
+      <tt:p xml:id="sub121" style="textCenter" region="bottom" begin="00:09:04.760" end="00:09:06.920">
+        <tt:span style="textBlue">Copyright Untertitel: NDR 2026</tt:span>
+      </tt:p>
+    </tt:div>
+  </tt:body>
+</tt:tt>
